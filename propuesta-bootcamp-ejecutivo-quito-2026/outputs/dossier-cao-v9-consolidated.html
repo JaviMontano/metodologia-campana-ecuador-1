@@ -3100,9 +3100,10 @@
       m.setAttribute('aria-modal', 'true');
       const title = m.querySelector('h3');
       if (title) {
-        const id = 'aria-' + m.id;
-        title.id = id;
-        m.setAttribute('aria-labelledby', id);
+        if (!title.id) {
+          title.id = 'aria-' + m.id;
+        }
+        m.setAttribute('aria-labelledby', title.id);
       }
     });
     // Nav
