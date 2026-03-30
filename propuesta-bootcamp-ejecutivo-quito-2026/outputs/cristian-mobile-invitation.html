@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MetodologIA Ecuador">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)">
+  <title>Cristian Jarrín — Co-Fundador MetodologIA Ecuador</title>
+  <meta name="description" content="Invitación personal de co-fundador para MetodologIA Ecuador. 51% equity. Operación en Quito.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='10' fill='%230A122A'/><path d='M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z' fill='white'/><circle cx='18' cy='8' r='2' fill='%23FFD700'/></svg>" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            navy: { DEFAULT: '#020617', light: '#0F172A' },
+            gold: { DEFAULT: '#FFD700', dark: '#FFA000', light: '#B8860B' },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --bg-primary: #020617;
+      --bg-secondary: #0F172A;
+      --bg-card: rgba(15, 23, 42, 0.7);
+      --text-primary: #F0F4F8;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --border-color: rgba(255, 215, 0, 0.12);
+      --glass-bg: rgba(15, 23, 42, 0.6);
+      --glass-border: rgba(255, 215, 0, 0.1);
+      --gold: #FFD700;
+      --gold-dark: #FFA000;
+      --shadow-glow: 0 0 30px rgba(255, 215, 0, 0.06);
+    }
+    html.light {
+      --bg-primary: #F8FAFC;
+      --bg-secondary: #EEF2F7;
+      --bg-card: rgba(255, 255, 255, 0.7);
+      --text-primary: #020617;
+      --text-secondary: #2C4A6E;
+      --text-muted: #64748B;
+      --border-color: rgba(2, 6, 23, 0.08);
+      --glass-bg: rgba(255, 255, 255, 0.6);
+      --glass-border: rgba(2, 6, 23, 0.06);
+      --shadow-glow: 0 0 30px rgba(2, 6, 23, 0.04);
+      --gold: #B8860B;
+      --gold-dark: #8B6914;
+    }
+    html.light body { font-weight: 500; }
+    html.light h1, html.light h2, html.light h3, html.light h4 { font-weight: 800; }
+    html.light .gold-text {
+      background: linear-gradient(135deg, #B8860B, #8B6914);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    html.light .btn-gold { background: linear-gradient(135deg, #D4A017, #B8860B); }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-overflow-scrolling: touch; font-size: 16px; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+      touch-action: manipulation;
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+    h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+    .gold-text {
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 1rem;
+      box-shadow: var(--shadow-glow);
+    }
+    .gold-divider {
+      width: 48px; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      border-radius: 2px; margin: 0.75rem auto;
+    }
+    .glow-border {
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 24px rgba(255, 215, 0, 0.1);
+    }
+    .btn-gold {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 0.875rem 1.75rem; min-height: 48px; border-radius: 9999px;
+      font-size: 0.9375rem; font-weight: 700;
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      color: #020617; border: none; cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      -webkit-tap-highlight-color: transparent; text-decoration: none;
+    }
+    .btn-gold:active { transform: scale(0.97); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 0.875rem 1.75rem; min-height: 48px; border-radius: 9999px;
+      font-size: 0.9375rem; font-weight: 700;
+      background: transparent; color: var(--gold); border: 1px solid var(--gold);
+      cursor: pointer; transition: transform 0.2s ease;
+      -webkit-tap-highlight-color: transparent; text-decoration: none;
+    }
+    .btn-ghost:active { transform: scale(0.97); }
+    .mobile-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      padding: env(safe-area-inset-top) 1rem 0 1rem;
+      height: calc(56px + env(safe-area-inset-top));
+      display: flex; align-items: center;
+    }
+    .mobile-nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; height: 56px;
+    }
+    .nav-btn {
+      width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+      background: none; border: none; cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #scroll-progress {
+      position: fixed; top: calc(56px + env(safe-area-inset-top)); left: 0; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      z-index: 101; width: 0%; transition: width 0.1s linear;
+    }
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .equity-bar {
+      display: flex; border-radius: 9999px; overflow: hidden; height: 12px;
+    }
+    .timeline-dot {
+      width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    }
+    .timeline-line {
+      width: 2px; background: var(--glass-border); margin-left: 5px;
+    }
+    @media (min-width: 428px) { .section-px { padding-left: 1.5rem; padding-right: 1.5rem; } }
+    @media (min-width: 640px) { .section-px { padding-left: 2rem; padding-right: 2rem; } }
+    @supports (-webkit-touch-callout: none) {
+      body { -webkit-overflow-scrolling: touch; }
+      input, select, textarea { font-size: 16px !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+
+  <!-- NAV -->
+  <nav class="mobile-nav">
+    <div class="mobile-nav-inner">
+      <a href="#carta" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;">
+        <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+          <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+          <rect width="36" height="36" rx="10" fill="url(#lg)"/>
+          <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+          <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+        </svg>
+        <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">Metodolog<span class="gold-text">IA</span></span>
+      </a>
+      <div style="display:flex;align-items:center;gap:0.25rem;">
+        <button class="nav-btn" onclick="toggleTheme()" aria-label="Cambiar tema">
+          <i data-lucide="sun-moon" class="w-5 h-5" style="color:var(--gold);"></i>
+        </button>
+        <a href="mailto:contacto@metodologia.info?subject=Confirmaci%C3%B3n%20Co-Fundador%20MetodologIA%20Ecuador%20%E2%80%94%20Cristian%20Jarr%C3%ADn"
+           class="btn-gold" style="padding:0.5rem 1rem;min-height:40px;font-size:0.8rem;">
+          <i data-lucide="check-circle" class="w-4 h-4"></i> Confirmar
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- S1: CARTA PERSONAL -->
+  <section id="carta" style="padding:calc(72px + env(safe-area-inset-top)) 0 2rem;background:var(--bg-primary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="glass p-6 reveal" style="border-color:rgba(255,215,0,0.08);">
+        <p class="text-xs uppercase tracking-widest font-bold mb-1" style="color:var(--gold);">Invitación Personal</p>
+        <h1 class="font-heading font-bold mb-4" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">Cristian, esto es para ti</h1>
+        <div class="text-sm leading-relaxed space-y-3" style="color:var(--text-secondary);">
+          <p style="color:var(--text-primary);font-weight:600;">Llevas meses evaluando. La ventana no se abre &mdash; se cierra.</p>
+          <p>No es una inversión de riesgo. Es tu asiento en la mesa de fundadores.</p>
+          <p><strong style="color:var(--text-primary);">51% es tuyo.</strong> La mayoría. Ecuador es tu operación. Yo pongo el método, la marca y la red. Tú pones la ejecución en territorio.</p>
+          <p>He construido MetodologIA con 27 asistentes GPT, 7 Gems, un agente Open Source, 180+ prompts. Todo eso es tuyo en la franquicia.</p>
+          <p style="color:var(--text-primary);font-weight:600;">$2,900 no es un gasto. Es el capital semilla de tu operación como co-fundador.</p>
+        </div>
+        <div class="mt-5 flex items-center gap-3">
+          <img src="https://github.com/ejemplo-deo-repo/img/blob/main/javier-montano.webp?raw=true" alt="Javier Montaño" class="w-12 h-12 rounded-full object-cover" style="border:2px solid var(--gold);" loading="lazy">
+          <div>
+            <p class="text-sm font-bold" style="color:var(--text-primary);">Javier Montaño</p>
+            <p class="text-xs" style="color:var(--text-muted);">MetodologIA &middot; contacto@metodologia.info</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S2: QUOTE -->
+  <section style="padding:2rem 0;background:var(--bg-secondary);">
+    <div class="section-px" style="padding:0 1.5rem;max-width:640px;margin:0 auto;text-align:center;">
+      <div class="reveal">
+        <p class="font-heading text-lg font-light italic leading-relaxed" style="color:var(--text-secondary);">
+          &ldquo;No es hacer más cosas. Es hacer que las cosas que haces, importen.&rdquo;
+        </p>
+        <p class="text-xs mt-3 uppercase tracking-widest font-bold" style="color:var(--gold);">&mdash; Intención sobre Intensidad &mdash; MetodologIA</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3: LA OPORTUNIDAD -->
+  <section id="oportunidad" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Ecuador</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">La Oportunidad</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="space-y-3">
+        <div class="glass p-4 reveal flex items-start gap-3">
+          <i data-lucide="map-pin" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+          <p class="text-sm" style="color:var(--text-secondary);">Ecuador no tiene un operador serio de IA ejecutiva. El que se posicione primero, define las reglas.</p>
+        </div>
+        <div class="glass p-4 reveal flex items-start gap-3">
+          <i data-lucide="users" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+          <p class="text-sm" style="color:var(--text-secondary);">Directivos en Quito ya están en el radar. Falta el facilitador con piel en el juego.</p>
+        </div>
+        <div class="glass p-4 reveal flex items-start gap-3">
+          <i data-lucide="trending-up" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+          <p class="text-sm" style="color:var(--text-secondary);">La adopción de IA en Latam se duplica cada 6 meses. Ecuador está rezagado &mdash; eso es una ventaja para quien llegue primero.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4: ESTRUCTURA EQUITY -->
+  <section id="estructura" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Estructura</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">Tu Participación</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <!-- Equity bar -->
+      <div class="glass p-5 reveal mb-3">
+        <div class="equity-bar mb-4">
+          <div style="width:51%;background:linear-gradient(135deg,#FFD700,#FFA000);"></div>
+          <div style="width:19%;background:linear-gradient(135deg,#60A5FA,#3B82F6);"></div>
+          <div style="width:30%;background:linear-gradient(135deg,#A78BFA,#7C3AED);"></div>
+        </div>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#020617;">51%</span>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Cristian Jarrín</p>
+              <p class="text-xs" style="color:var(--text-secondary);">Operación, territorio, relaciones. La mayoría es tuya porque tú ejecutas en Ecuador.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style="background:linear-gradient(135deg,#60A5FA,#3B82F6);color:#020617;">19%</span>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Javier Montaño</p>
+              <p class="text-xs" style="color:var(--text-secondary);">Método, facilitación, marca personal. El facilitador principal de los primeros ciclos.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style="background:linear-gradient(135deg,#A78BFA,#7C3AED);color:#fff;">30%</span>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">MetodologIA</p>
+              <p class="text-xs" style="color:var(--text-secondary);">IP, know-how, soporte técnico. Todo el ecosistema: 27 GPTs, 7 Gems, Pristino, 180+ prompts, metodologías.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5: LA INVERSIÓN -->
+  <section id="inversion" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Inversión</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">$2,900 USD por persona</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="glass p-5 glow-border reveal">
+        <div class="space-y-3 mb-4">
+          <div class="flex items-start gap-3">
+            <i data-lucide="server" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+            <p class="text-sm" style="color:var(--text-secondary);">Hosting para agentes y ecosistema agéntico</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <i data-lucide="terminal" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+            <p class="text-sm" style="color:var(--text-secondary);">Cuentas corporativas de Claude Code</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <i data-lucide="cpu" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+            <p class="text-sm" style="color:var(--text-secondary);">Infraestructura AI-native auto-alojada</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <i data-lucide="graduation-cap" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+            <p class="text-sm" style="color:var(--text-secondary);">Formación dedicada: domingos 2h/sesión, prioridad máxima</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <i data-lucide="handshake" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+            <p class="text-sm" style="color:var(--text-secondary);">Acceso a aceleradores y soporte de fundadores (Germán, Daniel)</p>
+          </div>
+        </div>
+        <div class="pt-4" style="border-top:1px solid var(--glass-border);">
+          <div class="grid grid-cols-3 gap-2 text-center">
+            <div class="glass p-3 rounded-lg">
+              <p class="font-heading font-bold gold-text text-lg">$2,900</p>
+              <p class="text-xs" style="color:var(--text-muted);">1 persona</p>
+            </div>
+            <div class="glass p-3 rounded-lg">
+              <p class="font-heading font-bold gold-text text-lg">$5,800</p>
+              <p class="text-xs" style="color:var(--text-muted);">2 personas</p>
+            </div>
+            <div class="glass p-3 rounded-lg">
+              <p class="font-heading font-bold gold-text text-lg">$8,700</p>
+              <p class="text-xs" style="color:var(--text-muted);">3 personas</p>
+            </div>
+          </div>
+          <p class="text-xs mt-3 text-center" style="color:var(--text-secondary);">Es menos de lo que cuesta un mes de consultoría tradicional. Pero lo que compras es un negocio, no un servicio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6: QUÉ RECIBE — FRANQUICIA -->
+  <section id="franquicia" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Lo que operas</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">Franquicia Completa</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="space-y-3">
+        <!-- Taller -->
+        <div class="glass p-5 reveal">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">1</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Taller &middot; 3 horas</span>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-1" style="color:var(--text-primary);">&ldquo;De Ocupado a Productivo&rdquo;</h3>
+          <p class="text-sm" style="color:var(--text-secondary);">Facilita talleres Zero Risk en Ecuador. Puerta de entrada para directivos. Sin inversión económica para el asistente.</p>
+        </div>
+        <!-- CAO -->
+        <div class="glass p-5 reveal glow-border">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#020617;">2</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--gold);">CAO Bootcamp</span>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-1" style="color:var(--text-primary);">Opera ciclos de 13 ejecutivos</h3>
+          <p class="text-sm" style="color:var(--text-secondary);">20h en 4-10 semanas. 13 asistentes, agente Pristino, segundo cerebro digital. $1,490 USD por ejecutivo.</p>
+        </div>
+        <!-- Empoderamiento -->
+        <div class="glass p-5 reveal">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">3</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Empoderamiento</span>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-1" style="color:var(--text-primary);">Programa de Empoderamiento</h3>
+          <p class="text-sm" style="color:var(--text-secondary);">Lleva adopción IA a equipos tácticos. Gerentes y mandos medios. 16 semanas.</p>
+        </div>
+      </div>
+      <!-- Plus -->
+      <div class="glass p-4 mt-4 reveal">
+        <p class="text-xs font-semibold mb-2" style="color:var(--gold);">Además incluye:</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Marca MetodologIA Ecuador</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Pristino (agente)</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">27 GPTs</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">7 Gems</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">180+ prompts</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Campus virtual</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7: PRISTINO -->
+  <section id="pristino" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="glass p-6 reveal text-center">
+        <img src="https://github.com/ejemplo-deo-repo/img/blob/main/Pristino.png?raw=true" alt="Pristino" class="w-24 h-24 rounded-2xl object-cover mx-auto mb-4" style="box-shadow:0 0 30px rgba(0,200,255,0.12), 0 0 60px rgba(255,215,0,0.06);" loading="lazy">
+        <h3 class="font-heading text-xl font-bold mb-2" style="color:var(--text-primary);">Pristino</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color:var(--text-secondary);">
+          Este agente también será tuyo. Lo operas, lo personalizas, lo ofreces a tus clientes. Open Source, auditable, sin cajas negras.
+        </p>
+        <div class="flex flex-wrap justify-center gap-2">
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Open Source</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Local</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Auditable</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Tuyo para siempre</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S8: ROADMAP -->
+  <section id="roadmap" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Roadmap</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">El Camino</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="space-y-0 reveal">
+        <!-- Phase items -->
+        <div class="flex gap-3">
+          <div class="flex flex-col items-center"><div class="timeline-dot mt-1"></div><div class="timeline-line flex-1"></div></div>
+          <div class="pb-5">
+            <p class="text-xs font-bold uppercase" style="color:var(--gold);">Fase 0 &mdash; Ahora</p>
+            <p class="text-sm" style="color:var(--text-secondary);">Confirmar + inversión &rarr; setup infraestructura</p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div class="flex flex-col items-center"><div class="timeline-dot mt-1"></div><div class="timeline-line flex-1"></div></div>
+          <div class="pb-5">
+            <p class="text-xs font-bold uppercase" style="color:var(--gold);">Fase 1 &mdash; Abril</p>
+            <p class="text-sm" style="color:var(--text-secondary);">Formación domingos 2h &rarr; certificación facilitador</p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div class="flex flex-col items-center"><div class="timeline-dot mt-1"></div><div class="timeline-line flex-1"></div></div>
+          <div class="pb-5">
+            <p class="text-xs font-bold uppercase" style="color:var(--gold);">Fase 2 &mdash; Sábado de Pascua</p>
+            <p class="text-sm" style="color:var(--text-secondary);">Primer Taller &ldquo;De Ocupado a Productivo&rdquo; en Quito</p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div class="flex flex-col items-center"><div class="timeline-dot mt-1"></div><div class="timeline-line flex-1"></div></div>
+          <div class="pb-5">
+            <p class="text-xs font-bold uppercase" style="color:var(--gold);">Fase 3 &mdash; Mayo-Julio</p>
+            <p class="text-sm" style="color:var(--text-secondary);">Primer ciclo CAO Bootcamp (3-5 ejecutivos) &rarr; 13 directivos &times; $1,490 = <strong style="color:var(--text-primary);">$4,470-$7,450</strong></p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div class="flex flex-col items-center"><div class="timeline-dot mt-1"></div><div class="timeline-line flex-1"></div></div>
+          <div class="pb-5">
+            <p class="text-xs font-bold uppercase" style="color:var(--gold);">Fase 4 &mdash; Q3</p>
+            <p class="text-sm" style="color:var(--text-secondary);">Programa de Empoderamiento &rarr; segundo flujo de revenue</p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div class="flex flex-col items-center"><div class="timeline-dot mt-1"></div></div>
+          <div class="pb-2">
+            <p class="text-xs font-bold uppercase" style="color:var(--gold);">Fase 5 &mdash; Q4</p>
+            <p class="text-sm" style="color:var(--text-secondary);">Escala &rarr; segundo ciclo + otras ciudades (Guayaquil, Cuenca)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S9: ROI -->
+  <section id="roi" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="glass p-5 glow-border text-center reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--gold);">Business Case</p>
+        <div class="grid grid-cols-2 gap-3 mb-4">
+          <div class="glass p-3 rounded-lg">
+            <p class="text-xs" style="color:var(--text-muted);">Inversión (solo)</p>
+            <p class="font-heading font-bold text-lg" style="color:var(--text-primary);">$2,900</p>
+          </div>
+          <div class="glass p-3 rounded-lg">
+            <p class="text-xs" style="color:var(--text-muted);">Revenue 1er ciclo</p>
+            <p class="font-heading font-bold text-lg gold-text">$4,470-$7,450</p>
+          </div>
+          <div class="glass p-3 rounded-lg">
+            <p class="text-xs" style="color:var(--text-muted);">Margen</p>
+            <p class="font-heading font-bold text-lg gold-text">~70-80%</p>
+          </div>
+          <div class="glass p-3 rounded-lg">
+            <p class="text-xs" style="color:var(--text-muted);">Breakeven</p>
+            <p class="font-heading font-bold text-lg gold-text">1er ciclo</p>
+          </div>
+        </div>
+        <div class="glass p-3 rounded-lg mb-3">
+          <p class="text-xs" style="color:var(--text-muted);">Revenue anual proyectado</p>
+          <p class="font-heading font-black text-2xl gold-text">$25,000-$40,000+</p>
+          <p class="text-xs" style="color:var(--text-muted);">2 ciclos CAO + 1 Empoderamiento + talleres</p>
+        </div>
+        <p class="text-xs" style="color:var(--text-muted);">(proyección ilustrativa — resultados dependen de ejecución</p>
+        <div class="glass p-4 rounded-xl mt-4" style="border-color:rgba(255,215,0,0.15);">
+          <p class="text-xs font-bold uppercase tracking-wider mb-2" style="color:var(--gold);">Modelo de retención</p>
+          <p class="text-xs mb-2" style="color:var(--text-secondary);">Ratio CAC vs LTV esperado: <strong style="color:var(--text-primary);">10x</strong>. Quien entra, tiende a repetir: Asistentes a Medida ($347 c/u, techo 10), Empoderamiento para su equipo, segundo ciclo, o voz a voz con colegas.</p>
+          <p class="text-xs" style="color:var(--text-secondary);">Ciclos iniciales de <strong style="color:var(--text-primary);">3-5 personas</strong>. Alta profundidad, atención máxima. Escala natural por referidos, no por volumen.</p>
+        </div>
+        <p class="hidden)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- S10: COST OF INACTION -->
+  <section style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Costo de la Inacción</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.25rem, 5vw, 1.75rem);">Cada mes sin operar...</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="space-y-3">
+        <div class="glass p-4 reveal flex items-start gap-3">
+          <i data-lucide="alert-triangle" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#F59E0B;"></i>
+          <p class="text-sm" style="color:var(--text-secondary);">Otro facilitador se posiciona en Quito</p>
+        </div>
+        <div class="glass p-4 reveal flex items-start gap-3">
+          <i data-lucide="alert-triangle" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#F59E0B;"></i>
+          <p class="text-sm" style="color:var(--text-secondary);">Los 13 directivos convocados buscan alternativas</p>
+        </div>
+        <div class="glass p-4 reveal flex items-start gap-3">
+          <i data-lucide="alert-triangle" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#F59E0B;"></i>
+          <p class="text-sm" style="color:var(--text-secondary);">La ventaja de primer movedor se evapora</p>
+        </div>
+        <div class="glass p-4 reveal flex items-start gap-3">
+          <i data-lucide="alert-triangle" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:#F59E0B;"></i>
+          <p class="text-sm font-semibold" style="color:var(--text-primary);">$0 invertido hoy = $0 revenue mañana</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S11: CTA FINAL -->
+  <section id="final" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="text-center reveal">
+        <h2 class="font-heading font-bold mb-3" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">Cristian, la decisión es tuya.</h2>
+        <div class="gold-divider"></div>
+        <p class="text-sm mb-6 mt-3" style="color:var(--text-secondary);">51% de MetodologIA Ecuador. $2,900. Domingos de formación. Y un mercado virgen esperando.</p>
+        <div class="flex flex-col gap-3">
+          <a href="mailto:contacto@metodologia.info?subject=Confirmaci%C3%B3n%20Co-Fundador%20MetodologIA%20Ecuador%20%E2%80%94%20Cristian%20Jarr%C3%ADn"
+             class="btn-gold w-full" style="padding:1rem 2rem;">
+            <i data-lucide="check-circle" class="w-5 h-5"></i> Confirmar como Co-Fundador
+          </a>
+          <a href="mailto:contacto@metodologia.info?subject=Preguntas%20Co-Fundador%20MetodologIA%20Ecuador"
+             class="btn-ghost w-full" style="padding:1rem 2rem;">
+            <i data-lucide="message-circle" class="w-5 h-5"></i> Tengo preguntas
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="padding:2rem 0 calc(2rem + env(safe-area-inset-bottom));background:var(--bg-secondary);border-top:1px solid var(--border-color);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;text-align:center;">
+      <div class="flex items-center justify-center gap-2 mb-3">
+        <svg width="24" height="24" viewBox="0 0 36 36" fill="none">
+          <defs><linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+          <rect width="36" height="36" rx="10" fill="url(#lg2)"/>
+          <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+          <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+        </svg>
+        <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">Metodolog<span class="gold-text">IA</span></span>
+      </div>
+      <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-4">
+        <a href="https://metodologia.info/vision.html" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="eye" class="w-3 h-3"></i> Visión
+        </a>
+        <a href="https://metodologia.info/ruta/" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="route" class="w-3 h-3"></i> Ruta
+        </a>
+        <a href="mailto:contacto@metodologia.info" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="mail" class="w-3 h-3"></i> Contacto
+        </a>
+      </div>
+      <p class="text-xs leading-relaxed" style="color:var(--text-muted);">
+        Documento confidencial. Preparado exclusivamente para Cristian Jarrín. MetodologIA &copy; 2026. Todos los precios en USD.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    if (html.classList.contains('dark')) { html.classList.remove('dark'); html.classList.add('light'); }
+    else { html.classList.remove('light'); html.classList.add('dark'); }
+  }
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.add('light');
+  }
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = h > 0 ? (window.scrollY / h) * 100 : 0;
+    document.getElementById('scroll-progress').style.width = pct + '%';
+  }, { passive: true });
+  function observeReveals() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+  }
+  document.addEventListener('DOMContentLoaded', () => { lucide.createIcons(); observeReveals(); });
+  </script>
+
+</body>
+</html>
