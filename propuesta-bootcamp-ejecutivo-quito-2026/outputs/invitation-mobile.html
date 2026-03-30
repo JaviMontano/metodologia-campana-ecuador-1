@@ -9,8 +9,9 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)">
-  <title>CAO Bootcamp — Chief Agentic Officer | MétodologIA</title>
-  <meta name="description" content="Bootcamp Ejecutivo Modular para directivos. Edición Creyentes, solo 5 plazas en Quito 2026.">
+  <title>CAO Bootcamp — Chief Agentic Officer | MetodologIA</title>
+  <meta name="description" content="Bootcamp Ejecutivo Modular para directivos. Edicion Creyentes, Quito 2026.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='10' fill='%230A122A'/><path d='M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z' fill='white'/><circle cx='18' cy='8' r='2' fill='%23FFD700'/></svg>" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -34,9 +35,6 @@
     };
   </script>
   <style>
-    /* ============================================================
-       CSS CUSTOM PROPERTIES — DARK (default)
-       ============================================================ */
     :root {
       --bg-primary: #020617;
       --bg-secondary: #0F172A;
@@ -52,41 +50,12 @@
       --shadow-glow: 0 0 30px rgba(255, 215, 0, 0.06);
     }
 
-    /* ============================================================
-       CSS CUSTOM PROPERTIES — LIGHT
-       ============================================================ */
-    @media (prefers-color-scheme: light) {
-      html:not(.dark) {
-        --bg-primary: #F8FAFC;
-        --bg-secondary: #EEF2F7;
-        --bg-card: rgba(255, 255, 255, 0.7);
-        --text-primary: #020617;
-        --text-secondary: #334155;
-        --text-muted: #64748B;
-        --border-color: rgba(2, 6, 23, 0.08);
-        --glass-bg: rgba(255, 255, 255, 0.6);
-        --glass-border: rgba(2, 6, 23, 0.06);
-        --shadow-glow: 0 0 30px rgba(2, 6, 23, 0.04);
-        --gold: #B8860B;
-        --gold-dark: #8B6914;
-      }
-      html:not(.dark) .gold-text {
-        background: linear-gradient(135deg, #B8860B, #8B6914);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      html:not(.dark) .btn-gold {
-        background: linear-gradient(135deg, #D4A017, #B8860B);
-      }
-    }
-
     html.light {
       --bg-primary: #F8FAFC;
       --bg-secondary: #EEF2F7;
       --bg-card: rgba(255, 255, 255, 0.7);
       --text-primary: #020617;
-      --text-secondary: #334155;
+      --text-secondary: #2C4A6E;
       --text-muted: #64748B;
       --border-color: rgba(2, 6, 23, 0.08);
       --glass-bg: rgba(255, 255, 255, 0.6);
@@ -95,19 +64,16 @@
       --gold: #B8860B;
       --gold-dark: #8B6914;
     }
+    html.light body { font-weight: 500; }
+    html.light h1, html.light h2, html.light h3, html.light h4 { font-weight: 800; }
     html.light .gold-text {
       background: linear-gradient(135deg, #B8860B, #8B6914);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    html.light .btn-gold {
-      background: linear-gradient(135deg, #D4A017, #B8860B);
-    }
+    html.light .btn-gold { background: linear-gradient(135deg, #D4A017, #B8860B); }
 
-    /* ============================================================
-       RESET & BASE — MOBILE FIRST
-       ============================================================ */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     html {
@@ -132,9 +98,6 @@
 
     h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
 
-    /* ============================================================
-       UTILITIES
-       ============================================================ */
     .gold-text {
       background: linear-gradient(135deg, #FFD700, #FFA000);
       -webkit-background-clip: text;
@@ -169,17 +132,8 @@
       opacity: 0.5;
     }
 
-    /* ============================================================
-       SECTION SNAP
-       ============================================================ */
-    section {
-      scroll-snap-align: start;
-      min-height: auto;
-    }
+    section { scroll-snap-align: start; }
 
-    /* ============================================================
-       BUTTONS — 44px min touch target
-       ============================================================ */
     .btn-gold {
       display: inline-flex;
       align-items: center;
@@ -198,7 +152,6 @@
       -webkit-tap-highlight-color: transparent;
       text-decoration: none;
     }
-
     .btn-gold:active { transform: scale(0.97); }
 
     .btn-ghost {
@@ -219,12 +172,8 @@
       -webkit-tap-highlight-color: transparent;
       text-decoration: none;
     }
-
     .btn-ghost:active { transform: scale(0.97); }
 
-    /* ============================================================
-       NAV — MOBILE
-       ============================================================ */
     .mobile-nav {
       position: fixed;
       top: 0;
@@ -249,9 +198,9 @@
       height: 56px;
     }
 
-    .hamburger {
-      width: 48px;
-      height: 48px;
+    .nav-btn {
+      width: 44px;
+      height: 44px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -261,40 +210,30 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 99;
-      background: var(--bg-primary);
-      padding: calc(72px + env(safe-area-inset-top)) 1.5rem 2rem;
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .mobile-menu.open { transform: translateX(0); }
-
-    .mobile-menu a {
-      display: flex;
+    .toggle-pill {
+      display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
-      padding: 1rem 0;
-      font-size: 1.125rem;
+      gap: 0.15rem;
+      padding: 0.2rem;
+      border-radius: 9999px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      font-size: 0.7rem;
+      cursor: pointer;
+    }
+    .toggle-pill span {
+      padding: 0.2rem 0.5rem;
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+    .toggle-pill span.active {
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      color: #020617;
       font-weight: 600;
-      color: var(--text-primary);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border-color);
-      min-height: 52px;
-      -webkit-tap-highlight-color: transparent;
     }
 
-    /* ============================================================
-       ACCORDION
-       ============================================================ */
     .accordion-trigger {
       display: flex;
       align-items: center;
@@ -308,73 +247,19 @@
       text-align: left;
       -webkit-tap-highlight-color: transparent;
     }
-
     .accordion-content {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.4s ease;
     }
-
     .accordion-trigger .chevron {
       transition: transform 0.3s ease;
       flex-shrink: 0;
     }
-
     .accordion-trigger.open .chevron {
       transform: rotate(180deg);
     }
 
-    /* ============================================================
-       RANGE SLIDER — MOBILE FRIENDLY
-       ============================================================ */
-    input[type="range"] {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 100%;
-      height: 8px;
-      border-radius: 4px;
-      background: var(--border-color);
-      outline: none;
-    }
-
-    input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #FFD700, #FFA000);
-      cursor: pointer;
-      border: 2px solid var(--bg-primary);
-    }
-
-    input[type="range"]::-moz-range-thumb {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #FFD700, #FFA000);
-      cursor: pointer;
-      border: 2px solid var(--bg-primary);
-    }
-
-    /* ============================================================
-       KPI CARD
-       ============================================================ */
-    .kpi-value {
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(1.5rem, 6vw, 2rem);
-      font-weight: 800;
-      line-height: 1;
-    }
-
-    .kpi-label {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 0.25rem;
-    }
-
-    /* ============================================================
-       SCROLL PROGRESS
-       ============================================================ */
     #scroll-progress {
       position: fixed;
       top: calc(56px + env(safe-area-inset-top));
@@ -386,9 +271,6 @@
       transition: width 0.1s linear;
     }
 
-    /* ============================================================
-       REVEAL ANIMATION
-       ============================================================ */
     .reveal {
       opacity: 0;
       transform: translateY(24px);
@@ -399,132 +281,84 @@
       transform: translateY(0);
     }
 
-    /* ============================================================
-       VIDEO THUMBNAIL
-       ============================================================ */
-    .video-thumb {
-      position: relative;
-      padding-bottom: 56.25%;
-      border-radius: 0.75rem;
-      overflow: hidden;
-      background: var(--bg-secondary);
-      cursor: pointer;
-    }
-    .video-thumb img {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      opacity: 0.85;
-    }
-    .video-thumb .play-btn {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 56px; height: 56px;
-      background: rgba(255, 215, 0, 0.9);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* ============================================================
-       RESPONSIVE SCALE-UP
-       ============================================================ */
     @media (min-width: 428px) {
       .section-px { padding-left: 1.5rem; padding-right: 1.5rem; }
     }
-
     @media (min-width: 640px) {
       .section-px { padding-left: 2rem; padding-right: 2rem; }
-      .kpi-grid { grid-template-columns: repeat(4, 1fr); }
     }
-
     @media (min-width: 768px) {
       .journey-grid { grid-template-columns: repeat(3, 1fr); }
-      .mod-grid { grid-template-columns: repeat(3, 1fr); }
-      .coi-grid { grid-template-columns: repeat(3, 1fr); }
     }
-
     @media (min-width: 1024px) {
       .mobile-nav { display: none; }
-      .mobile-menu { display: none; }
       #scroll-progress { top: 0; }
       body { padding-top: 0; }
+    }
+
+    @supports (-webkit-touch-callout: none) {
+      body { -webkit-overflow-scrolling: touch; }
+      input, select, textarea { font-size: 16px !important; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Scroll Progress -->
   <div id="scroll-progress"></div>
 
   <!-- ================================================================
-       NAV — MOBILE
+       NAV
        ================================================================ -->
   <nav class="mobile-nav">
     <div class="mobile-nav-inner">
-      <a href="#hero" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;">
-        <svg width="32" height="32" viewBox="0 0 36 36" fill="none">
+      <a href="#carta" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;">
+        <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
           <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
           <rect width="36" height="36" rx="10" fill="url(#lg)"/>
           <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
           <circle cx="18" cy="8" r="2" fill="#FFD700"/>
         </svg>
-        <span class="font-heading font-bold text-base" style="color:var(--text-primary);">Métodolog<span class="gold-text">IA</span></span>
+        <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">Metodolog<span class="gold-text">IA</span></span>
       </a>
       <div style="display:flex;align-items:center;gap:0.25rem;">
-        <button class="hamburger" onclick="toggleTheme()" aria-label="Cambiar tema" style="width:44px;height:44px;">
+        <div class="toggle-pill" onclick="switchLang(currentLang==='es'?'en':'es')">
+          <span id="lang-es" class="active">ES</span>
+          <span id="lang-en">EN</span>
+        </div>
+        <button class="nav-btn" onclick="toggleTheme()" aria-label="Cambiar tema">
           <i data-lucide="sun-moon" class="w-5 h-5" style="color:var(--gold);"></i>
         </button>
-        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu" id="menu-btn">
-          <i data-lucide="menu" class="w-6 h-6" style="color:var(--text-primary);" id="menu-icon"></i>
-        </button>
+        <a href="mailto:contacto@metodologia.info?subject=Reserva%20CAO%20Bootcamp%20—%20Edición%20Creyentes%20Quito%202026"
+           class="btn-gold" style="padding:0.5rem 1rem;min-height:40px;font-size:0.8rem;" data-i18n="nav.cta">
+          <i data-lucide="mail" class="w-4 h-4"></i> <span data-i18n="nav.cta">Reservar</span>
+        </a>
       </div>
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu">
-    <a href="#carta" onclick="closeMenu()"><i data-lucide="mail-open" class="w-5 h-5" style="color:var(--gold);"></i> Convocatoria</a>
-    <a href="#hero" onclick="closeMenu()"><i data-lucide="rocket" class="w-5 h-5" style="color:var(--gold);"></i> CAO Bootcamp</a>
-    <a href="#journey" onclick="closeMenu()"><i data-lucide="route" class="w-5 h-5" style="color:var(--gold);"></i> Journey</a>
-    <a href="#modulos" onclick="closeMenu()"><i data-lucide="layers" class="w-5 h-5" style="color:var(--gold);"></i> 9 Modulos</a>
-    <a href="#modalidades" onclick="closeMenu()"><i data-lucide="users" class="w-5 h-5" style="color:var(--gold);"></i> Modalidades</a>
-    <a href="#roi" onclick="closeMenu()"><i data-lucide="trending-up" class="w-5 h-5" style="color:var(--gold);"></i> ROI</a>
-    <a href="#objeciones" onclick="closeMenu()"><i data-lucide="message-circle-question" class="w-5 h-5" style="color:var(--gold);"></i> Objeciones</a>
-    <a href="#coi" onclick="closeMenu()"><i data-lucide="alert-triangle" class="w-5 h-5" style="color:var(--gold);"></i> Cost of Inaction</a>
-    <a href="#workshop" onclick="closeMenu()"><i data-lucide="calendar-plus" class="w-5 h-5" style="color:var(--gold);"></i> Workshop Zero Risk</a>
-    <div style="padding:1.5rem 0;">
-      <a href="mailto:contacto@métodologia.info?subject=Reserva%20CAO%20Bootcamp%20Creyentes%20%E2%80%94%20Quito%202026&body=Hola%20Javier%20y%20Cristian%2C%0A%0AQuiero%20formalizar%20mi%20plaza%20en%20el%20CAO%20Bootcamp%20Edicion%20Creyentes.%0A%0AMi%20motivación%3A%20%5BCOMPLETAR%5D%0AModalidad%20preferida%3A%20%5BSolo%20%2F%20Dupla%20%2F%20Terna%5D%0ASi%20dupla%20o%20terna%2C%20participan%3A%20%5BNOMBRES%5D%0A%0AAdjunto%20mi%20CV%20y%20documentacion%20relevante.%0A%0AQuedo%20atento%20a%20la%20confirmación."
-         class="btn-gold w-full" style="text-decoration:none;display:flex;">
-        <i data-lucide="mail" class="w-5 h-5"></i> Reservar Plaza
-      </a>
-    </div>
-  </div>
-
   <!-- ================================================================
-       CARTA — Convocatoria Creyentes
+       S1: CARTA
        ================================================================ -->
   <section id="carta" style="padding:calc(72px + env(safe-area-inset-top)) 0 2rem;background:var(--bg-primary);">
     <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
       <div class="glass p-6 reveal" style="border-color:rgba(255,215,0,0.08);">
-        <p class="text-xs uppercase tracking-widest font-bold mb-1" style="color:var(--gold);">Convocatoria Creyentes</p>
-        <p class="font-heading text-base font-bold mb-4" style="color:var(--text-primary);">1 de 13 convocados</p>
-        <div class="text-sm leading-relaxed space-y-3" style="color:var(--text-secondary);">
-          <p style="color:var(--text-primary);font-weight:600;">Le escribimos desde MétodologIA para invitarle al inicio de una ola de (R)Evolucion Digital que esta por empezar en Quito. Buscamos 13 directivos para una convocatoria exclusiva. El primer paso: un taller Zero Risk de 3 horas. Sin inversión económica.</p>
-          <p>La brecha entre directivos que operan con IA y los que no se amplia cada trimestre. Este programa la cierra instalando un sistema agéntico personal &mdash; agente propio + 13 asistentes + segundo cerebro digital &mdash; en 9 sesiones de co-creación.</p>
-          <p style="color:var(--text-primary);font-weight:600;">Solo 5 de los 13 convocados accederan a la Edición Creyentes ($1,192 USD en lugar de $1,992). Cuando se confirmen los primeros 5, se cerrara esta convocatoria.</p>
+        <p class="text-xs uppercase tracking-widest font-bold mb-1" style="color:var(--gold);" data-i18n="carta.badge">Convocatoria Creyentes</p>
+        <p class="font-heading text-base font-bold mb-4" style="color:var(--text-primary);" data-i18n="carta.count">1 de 13 convocados</p>
+        <div class="text-sm leading-relaxed space-y-3" style="color:var(--text-secondary);" data-i18n-html="carta.body">
+          <p style="color:var(--text-primary);font-weight:600;">Le escribimos desde MetodologIA para invitarle al inicio de una ola de (R)Evolucion Digital que esta por empezar en Quito. Buscamos 13 directivos para una convocatoria exclusiva. El primer paso: un taller Zero Risk de 3 horas. Sin inversion economica.</p>
+          <p>La brecha entre directivos que operan con IA y los que no se amplia cada trimestre. Este programa la cierra instalando un sistema agentico personal &mdash; agente propio + 13 asistentes + segundo cerebro digital &mdash; en 9 sesiones de co-creacion.</p>
+          <p>No le pedimos mas horas. Le devolvemos las que hoy consume lo operativo. El taller <strong style="color:var(--text-primary);">Zero Risk</strong> demuestra esto en 3 horas, con su contexto laboral real. Sabado de Pascua 2026.</p>
+          <p style="color:var(--text-primary);font-weight:600;">Solo 5 de los 13 convocados accederan a la Edicion Creyentes ($1,490 USD en lugar de $1,990). Cuando se confirmen los primeros 5 (agendando un espacio de romper el hielo), se cerrara esta convocatoria y habra que esperar a julio, por otro valor.</p>
+          <p>En paralelo, el Programa de Empoderamiento ya esta en convocatoria para su equipo tactico &mdash; gerentes y mandos medios. Edicion Creyentes tambien disponible.</p>
         </div>
         <div class="mt-5 flex items-center gap-3">
           <div class="flex -space-x-2">
-            <img src="https://github.com/ejemplo-deo-repo/img/blob/main/javier-montano.webp?raw=true" alt="Javier" class="w-10 h-10 rounded-full object-cover" style="border:2px solid var(--gold);z-index:1;position:relative;" loading="lazy">
-            <img src="https://github.com/ejemplo-deo-repo/img/blob/main/Gemini_Generated_Image_dywmsidywmsidywm.png?raw=true" alt="Cristian" class="w-10 h-10 rounded-full object-cover" style="border:2px solid var(--gold);" loading="lazy">
+            <img src="https://github.com/ejemplo-deo-repo/img/blob/main/javier-montano.webp?raw=true" alt="Javier Montano" class="w-10 h-10 rounded-full object-cover" style="border:2px solid var(--gold);z-index:1;position:relative;" loading="lazy">
+            <img src="https://github.com/ejemplo-deo-repo/img/blob/main/Gemini_Generated_Image_dywmsidywmsidywm.png?raw=true" alt="Cristhian Jarrin" class="w-10 h-10 rounded-full object-cover" style="border:2px solid var(--gold);" loading="lazy">
           </div>
           <div>
-            <p class="text-sm font-bold" style="color:var(--text-primary);">Javier Montaño & Cristhian Jarrín</p>
-            <p class="text-xs" style="color:var(--text-muted);">MétodologIA</p>
+            <p class="text-sm font-bold" style="color:var(--text-primary);">Javier Montano & Cristhian Jarrin</p>
+            <p class="text-xs" style="color:var(--text-muted);">MetodologIA &middot; contacto@metodologia.info</p>
           </div>
         </div>
       </div>
@@ -532,112 +366,29 @@
   </section>
 
   <!-- ================================================================
-       HERO
+       S2: QUOTE
        ================================================================ -->
-  <section id="hero" style="padding:2.5rem 0 3rem;background:var(--bg-primary);">
-    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+  <section style="padding:2rem 0;background:var(--bg-secondary);">
+    <div class="section-px" style="padding:0 1.5rem;max-width:640px;margin:0 auto;text-align:center;">
       <div class="reveal">
-        <!-- Badge -->
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4"
-          style="background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.2);color:var(--gold);">
-          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
-          Edición Creyentes &middot; 5 Plazas &middot; Quito
-        </div>
-
-        <p class="text-xs font-semibold uppercase tracking-widest mb-2" style="color:var(--gold);">Bootcamp Ejecutivo Modular</p>
-
-        <h1 class="font-heading font-black leading-tight mb-1" style="font-size:clamp(2.5rem, 10vw, 3.5rem);">
-          <span style="color:var(--text-primary)">C</span><span class="gold-text">A</span><span style="color:var(--text-primary)">O</span>
-          <span class="gold-text"> Bootcamp</span>
-        </h1>
-        <p class="font-heading text-lg font-medium mb-4" style="color:var(--text-secondary);">Chief Agentic Officer</p>
-
-        <div class="gold-divider" style="margin:0 0 1rem 0;"></div>
-
-        <p class="text-base leading-relaxed mb-6" style="color:var(--text-secondary);">
-          Su semana esta llena de reuniones, reportes, seguimiento y correos. La IA puede ejecutar el 60% de eso por usted. Este bootcamp no le ensena IA &mdash; le instala un sistema operativo agéntico personal, diseñado a su medida, que trabaja mientras usted decide, negocia y lidera.
+        <p class="font-heading text-lg font-light italic leading-relaxed" style="color:var(--text-secondary);" data-i18n="quote.text">
+          "No es hacer mas cosas. Es hacer que las cosas que haces, importen."
         </p>
-
-        <!-- KPIs -->
-        <div class="grid grid-cols-2 gap-3 mb-6 kpi-grid">
-          <div class="glass p-3 text-center">
-            <div class="kpi-value gold-text">20h</div>
-            <div class="kpi-label">Contenido intensivo</div>
-          </div>
-          <div class="glass p-3 text-center">
-            <div class="kpi-value gold-text">13</div>
-            <div class="kpi-label">Asistentes IA</div>
-          </div>
-          <div class="glass p-3 text-center">
-            <div class="kpi-value gold-text">1</div>
-            <div class="kpi-label">Agente Propio</div>
-          </div>
-          <div class="glass p-3 text-center">
-            <div class="kpi-value gold-text">3-6</div>
-            <div class="kpi-label">Semanas</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Price Card -->
-      <div class="glass glow-border p-6 mb-6 reveal">
-        <p class="text-xs uppercase tracking-widest font-semibold mb-3" style="color:var(--gold);">Su sistema agéntico a medida</p>
-        <div class="flex items-baseline gap-2 mb-1">
-          <span class="font-heading text-xl font-bold price-strike" style="color:var(--text-muted);">$1,992 USD</span>
-        </div>
-        <div class="flex items-baseline gap-2 mb-1">
-          <span class="font-heading font-black gold-text" style="font-size:clamp(2.5rem, 10vw, 3rem);">$1,192</span>
-          <span class="text-sm font-semibold" style="color:var(--gold);">USD</span>
-        </div>
-        <p class="text-xs mb-5" style="color:var(--text-muted);">(tasa indicativa, sujeta a variación)</p>
-
-        <ul class="space-y-2.5 mb-6">
-          <li class="flex items-start gap-2.5 text-sm" style="color:var(--text-secondary);">
-            <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>
-            9 talleres x 2h (20h de contenido)
-          </li>
-          <li class="flex items-start gap-2.5 text-sm" style="color:var(--text-secondary);">
-            <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>
-            13 asistentes IA personalizados
-          </li>
-          <li class="flex items-start gap-2.5 text-sm" style="color:var(--text-secondary);">
-            <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>
-            1 agente Pristino propio
-          </li>
-          <li class="flex items-start gap-2.5 text-sm" style="color:var(--text-secondary);">
-            <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>
-            Networking Q3 ejecutivos Quito
-          </li>
-          <li class="flex items-start gap-2.5 text-sm" style="color:var(--text-secondary);">
-            <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>
-            Valor separado: $4,511+ USD
-          </li>
-        </ul>
-
-        <a href="mailto:contacto@métodologia.info?subject=Reserva%20CAO%20Bootcamp%20Creyentes%20%E2%80%94%20Quito%202026&body=Hola%20Javier%20y%20Cristian%2C%0A%0AQuiero%20formalizar%20mi%20plaza%20en%20el%20CAO%20Bootcamp%20Edicion%20Creyentes.%0A%0AMi%20motivación%3A%20%5BCOMPLETAR%5D%0AModalidad%20preferida%3A%20%5BSolo%20%2F%20Dupla%20%2F%20Terna%5D%0ASi%20dupla%20o%20terna%2C%20participan%3A%20%5BNOMBRES%5D%0A%0AAdjunto%20mi%20CV%20y%20documentacion%20relevante.%0A%0AQuedo%20atento%20a%20la%20confirmación."
-           class="btn-gold w-full">
-          <i data-lucide="mail" class="w-4 h-4"></i> Reservar Ahora
-        </a>
-      </div>
-
-      <!-- CTAs -->
-      <div class="flex flex-col gap-3 reveal">
-        <a href="https://calendar.app.google/oN2DYh55GDfsAyPS6" target="_blank" rel="noopener" class="btn-ghost w-full">
-          <i data-lucide="calendar" class="w-4 h-4"></i> Agendar Conversacion
-        </a>
+        <p class="text-xs mt-3 uppercase tracking-widest font-bold" style="color:var(--gold);" data-i18n="quote.attr">&mdash; Intencion sobre Intensidad &mdash; MetodologIA</p>
       </div>
     </div>
   </section>
 
   <!-- ================================================================
-       JOURNEY — 3 Cards
+       S3: JOURNEY — 3 Products
        ================================================================ -->
-  <section id="journey" style="padding:3rem 0;background:var(--bg-secondary);">
+  <section id="journey" style="padding:3rem 0;background:var(--bg-primary);">
     <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
       <div class="text-center mb-6 reveal">
-        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Su Camino</p>
-        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">2 Momentos + 1 Upgrade</h2>
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);" data-i18n="journey.hook">Su Camino</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);" data-i18n="journey.title">3 Componentes. 1 Transformacion.</h2>
         <div class="gold-divider"></div>
+        <p class="text-sm mt-2" style="color:var(--text-secondary);" data-i18n="journey.subtitle">Grupos cerrados de hasta 13 personas. Cada uno cierra una brecha distinta.</p>
       </div>
 
       <div class="grid gap-4 journey-grid">
@@ -645,37 +396,36 @@
         <div class="glass p-5 reveal">
           <div class="flex items-center gap-2 mb-3">
             <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">0</span>
-            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Exploracion</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);" data-i18n="journey.l0.tag">Taller &middot; 3 horas</span>
           </div>
-          <h3 class="font-heading text-base font-bold mb-1" style="color:var(--text-primary);">Workshop Zero Risk</h3>
-          <p class="text-sm font-medium mb-1" style="color:rgb(16,185,129);">Sin inversión económica</p>
-          <p class="text-sm mb-3" style="color:var(--text-secondary);">3 horas. Sabado de Pascua 2026. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM.</p>
-          <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40métodologia.info"
-             target="_blank" rel="noopener" class="btn-ghost w-full text-sm" style="min-height:44px;">
-            Inscribirse
+          <h3 class="font-heading text-base font-bold mb-1" style="color:var(--text-primary);" data-i18n="journey.l0.title">De Ocupado a Productivo</h3>
+          <p class="text-sm font-medium mb-1" style="color:rgb(16,185,129);" data-i18n="journey.l0.price">Sin inversion economica</p>
+          <p class="text-sm mb-3" style="color:var(--text-secondary);" data-i18n="journey.l0.desc">3 horas. Sabado de Pascua 2026. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM. 13 plazas.</p>
+          <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40metodologia.info"
+             target="_blank" rel="noopener" class="btn-ghost w-full text-sm" data-i18n="journey.l0.cta">
+            <i data-lucide="calendar-plus" class="w-4 h-4"></i> Inscribirse
           </a>
         </div>
 
         <!-- CAO Bootcamp -->
         <div class="glass p-5 reveal glow-border" style="position:relative;">
           <div style="position:absolute;top:12px;right:12px;">
-            <span class="px-2.5 py-1 rounded-full text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#020617;">Recomendado</span>
+            <span class="px-2.5 py-1 rounded-full text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#020617;" data-i18n="journey.l2.badge">Recomendado</span>
           </div>
           <div class="flex items-center gap-2 mb-3">
             <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#020617;">1</span>
-            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--gold);">Su Sistema Agentico</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--gold);" data-i18n="journey.l2.tag">CAO Bootcamp</span>
           </div>
-          <h3 class="font-heading text-base font-bold mb-1" style="color:var(--text-primary);">Edición Creyentes</h3>
+          <h3 class="font-heading text-base font-bold mb-1" style="color:var(--text-primary);" data-i18n="journey.l2.title2">Edicion Creyentes</h3>
           <div class="flex items-baseline gap-2 mb-1">
-            <span class="text-base font-heading font-bold price-strike" style="color:var(--text-muted);">$1,992</span>
-            <span class="text-2xl font-heading font-black gold-text">$1,192</span>
+            <span class="text-base font-heading font-bold price-strike" style="color:var(--text-muted);">$1,990</span>
+            <span class="text-2xl font-heading font-black gold-text">$1,490</span>
             <span class="text-xs" style="color:var(--text-muted);">USD</span>
           </div>
-          <p class="text-xs mb-3" style="color:var(--text-muted);">(tasa indicativa, sujeta a variación)</p>
-          <p class="text-sm mb-3" style="color:var(--text-secondary);">9 talleres x 2h. 13 asistentes, agente Pristino, segundo cerebro digital, networking Q3.</p>
-          <a href="mailto:contacto@métodologia.info?subject=Reserva%20CAO%20Bootcamp%20Creyentes%20%E2%80%94%20Quito%202026&body=Hola%20Javier%20y%20Cristian%2C%0A%0AQuiero%20formalizar%20mi%20plaza%20en%20el%20CAO%20Bootcamp%20Edicion%20Creyentes.%0A%0AMi%20motivación%3A%20%5BCOMPLETAR%5D%0AModalidad%20preferida%3A%20%5BSolo%20%2F%20Dupla%20%2F%20Terna%5D%0ASi%20dupla%20o%20terna%2C%20participan%3A%20%5BNOMBRES%5D%0A%0AAdjunto%20mi%20CV%20y%20documentacion%20relevante.%0A%0AQuedo%20atento%20a%20la%20confirmación."
-             class="btn-gold w-full text-sm" style="min-height:44px;">
-            Reservar Plaza
+          <p class="text-sm mb-3" style="color:var(--text-secondary);" data-i18n="journey.l2.desc">20h en 4-10 semanas. 13 asistentes, agente Pristino, segundo cerebro digital, networking Q3. Grupo cerrado de hasta 13 ejecutivos.</p>
+          <a href="mailto:contacto@metodologia.info?subject=Reserva%20CAO%20Bootcamp%20—%20Edición%20Creyentes%20Quito%202026"
+             class="btn-gold w-full text-sm" data-i18n="journey.l2.cta">
+            <i data-lucide="rocket" class="w-4 h-4"></i> Reservar Plaza
           </a>
         </div>
 
@@ -683,145 +433,73 @@
         <div class="glass p-5 reveal">
           <div class="flex items-center gap-2 mb-3">
             <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">
-              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+              <i data-lucide="users" class="w-3.5 h-3.5"></i>
             </span>
-            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Si elige el camino CAO</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);" data-i18n="journey.l3.tag">Empoderamiento</span>
           </div>
-          <h3 class="font-heading text-base font-bold mb-1" style="color:var(--text-primary);">Programa Completo</h3>
+          <h3 class="font-heading text-base font-bold mb-1" style="color:var(--text-primary);" data-i18n="journey.l3.title">Programa de Empoderamiento</h3>
+          <p class="text-xs font-semibold mb-1" style="color:var(--gold);" data-i18n="journey.l3.tagline">Adopcion IA para su equipo tactico</p>
           <div class="flex items-baseline gap-2 mb-1">
-            <span class="text-base font-heading font-bold price-strike" style="color:var(--text-muted);">$1,897</span>
-            <span class="text-xl font-heading font-black gold-text">$1,497</span>
+            <span class="text-base font-heading font-bold price-strike" style="color:var(--text-muted);">$1,990</span>
+            <span class="text-xl font-heading font-black gold-text">$1,490</span>
             <span class="text-xs" style="color:var(--text-muted);">USD</span>
           </div>
-          <p class="text-xs mb-3" style="color:var(--text-muted);">(tasa indicativa, sujeta a variación) con 20% desc. CAO</p>
-          <p class="text-sm" style="color:var(--text-secondary);">16 semanas. Inicia 3ra semana de mayo. 13 plazas.</p>
+          <p class="text-sm mb-1" style="color:var(--text-secondary);" data-i18n="journey.l3.desc">16 semanas desde mayo. Puerta cerrada (in-company) o publico abierto. Gerentes y mandos medios. 13 plazas.</p>
+          <span class="inline-block px-2.5 py-1 rounded-full text-xs font-bold mt-1" style="background:rgba(255,215,0,0.1);color:var(--gold);" data-i18n="journey.l3.badge">Ed. Creyentes</span>
         </div>
       </div>
 
       <!-- Asistentes note -->
       <div class="glass p-4 mt-4 flex items-center gap-3 reveal">
         <i data-lucide="puzzle" class="w-5 h-5 flex-shrink-0" style="color:var(--gold);"></i>
-        <p class="text-xs" style="color:var(--text-secondary);"><strong style="color:var(--text-primary);">Asistentes a Medida:</strong> $347 USD c/u (tasa indicativa, sujeta a variación). Los 13 asistentes base ya estan incluidos en el bootcamp.</p>
+        <p class="text-xs" style="color:var(--text-secondary);" data-i18n="journey.asistentes"><strong style="color:var(--text-primary);">Asistentes a Medida:</strong> $347 USD c/u. Los 13 asistentes base ya estan incluidos en el bootcamp.</p>
       </div>
     </div>
   </section>
 
   <!-- ================================================================
-       9 MODULOS — Accordion
+       S4: PRISTINO
        ================================================================ -->
-  <section id="modulos" style="padding:3rem 0;background:var(--bg-primary);">
+  <section id="pristino" style="padding:3rem 0;background:var(--bg-secondary);">
     <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
-      <div class="text-center mb-6 reveal">
-        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Programa</p>
-        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">9 Casos de Uso Ejecutivos</h2>
-        <div class="gold-divider"></div>
+      <div class="glass p-6 reveal" style="text-align:center;">
+        <img src="https://github.com/ejemplo-deo-repo/img/blob/main/Pristino.png?raw=true" alt="Pristino" class="w-24 h-24 rounded-2xl object-cover mx-auto mb-4" style="box-shadow:0 0 30px rgba(0,200,255,0.12), 0 0 60px rgba(255,215,0,0.06);" loading="lazy">
+        <h3 class="font-heading text-xl font-bold mb-2" style="color:var(--text-primary);">Pristino</h3>
+        <p class="text-sm leading-relaxed mb-4" style="color:var(--text-secondary);" data-i18n="pristino.desc">
+          Open Source, auditable, sin cajas negras. Corre en local. Suyo para siempre. Se instala en el Workshop Zero Risk y se personaliza a profundidad en el CAO Bootcamp. Lee sus documentos, prepara reportes, ejecuta analisis &mdash; todo bajo su control.
+        </p>
+        <div class="flex flex-wrap justify-center gap-2">
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Open Source</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Local</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);" data-i18n="pristino.tag3">Auditable</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);" data-i18n="pristino.tag4">Suyo para siempre</span>
+        </div>
       </div>
-
-      <div class="space-y-2" id="modules-accordion"></div>
     </div>
   </section>
 
   <!-- ================================================================
-       MODALIDADES
-       ================================================================ -->
-  <section id="modalidades" style="padding:3rem 0;background:var(--bg-secondary);">
-    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
-      <div class="text-center mb-6 reveal">
-        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Modalidades</p>
-        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">Elija Como Participar</h2>
-        <div class="gold-divider"></div>
-      </div>
-
-      <div class="grid gap-4 mod-grid">
-        <!-- Solo -->
-        <div class="glass p-5 text-center reveal">
-          <div class="w-12 h-12 mx-auto rounded-full flex items-center justify-center mb-3" style="background:rgba(255,215,0,0.1);">
-            <i data-lucide="user" class="w-6 h-6" style="color:var(--gold);"></i>
-          </div>
-          <h3 class="font-heading text-lg font-bold mb-1" style="color:var(--text-primary);">Solo (1:1)</h3>
-          <p class="text-sm mb-2" style="color:var(--text-secondary);">Maxima profundidad. Ritmo personal. Foco total.</p>
-          <p class="text-xs" style="color:var(--text-muted);">Mismo precio en todas las modalidades</p>
-        </div>
-
-        <!-- Dupla -->
-        <div class="glass p-5 text-center reveal glow-border" style="position:relative;">
-          <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);">
-            <span class="px-2.5 py-1 rounded-full text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#020617;">Recomendado</span>
-          </div>
-          <div class="w-12 h-12 mx-auto rounded-full flex items-center justify-center mb-3" style="background:rgba(255,215,0,0.15);">
-            <i data-lucide="users" class="w-6 h-6" style="color:var(--gold);"></i>
-          </div>
-          <h3 class="font-heading text-lg font-bold mb-1" style="color:var(--text-primary);">Dupla</h3>
-          <p class="text-sm mb-2" style="color:var(--text-secondary);">Consolida cambios operativos con quien ejecuta a su lado.</p>
-          <p class="text-xs" style="color:var(--text-muted);">Mismo precio. Trabajan juntos en una de las empresas del ejecutivo.</p>
-        </div>
-
-        <!-- Terna -->
-        <div class="glass p-5 text-center reveal">
-          <div class="w-12 h-12 mx-auto rounded-full flex items-center justify-center mb-3" style="background:rgba(255,215,0,0.1);">
-            <i data-lucide="users-round" class="w-6 h-6" style="color:var(--gold);"></i>
-          </div>
-          <h3 class="font-heading text-lg font-bold mb-1" style="color:var(--text-primary);">Terna</h3>
-          <p class="text-sm mb-2" style="color:var(--text-secondary);">(R)Evolucion sincronizada. 3 personas = momentum.</p>
-          <p class="text-xs" style="color:var(--text-muted);">Mismo precio. Trabajan juntos en una de las empresas del ejecutivo.</p>
-        </div>
-      </div>
-
-      <p class="text-center text-sm mt-4 glass p-3 rounded-xl reveal" style="color:var(--text-secondary);">La dupla y la terna no reducen profundidad. La multiplican.</p>
-    </div>
-  </section>
-
-  <!-- ================================================================
-       ROI CALCULATOR
+       S5: ROI MINI
        ================================================================ -->
   <section id="roi" style="padding:3rem 0;background:var(--bg-primary);">
     <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
-      <div class="text-center mb-6 reveal">
-        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Retorno</p>
-        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">Calculadora de ROI</h2>
-        <div class="gold-divider"></div>
-      </div>
-
-      <!-- Sliders -->
-      <div class="glass p-5 mb-4 reveal">
-        <div class="mb-6">
-          <div class="flex justify-between mb-2">
-            <label class="text-sm font-medium" style="color:var(--text-secondary);">Horas/semana en operativo</label>
-            <span class="text-sm font-bold gold-text" id="roi-hours-val">15</span>
+      <div class="glass p-5 glow-border text-center reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--gold);" data-i18n="roi.hook">Retorno</p>
+        <div class="font-heading font-black gold-text mb-1" style="font-size:clamp(2rem, 8vw, 3rem);">$4,800<span class="text-base font-semibold" style="color:var(--text-muted);-webkit-text-fill-color:var(--text-muted);">/mes</span></div>
+        <p class="text-sm mb-3" style="color:var(--text-secondary);" data-i18n="roi.formula">15h/semana &times; $80/h = $4,800/mes recuperados</p>
+        <p class="text-xs" style="color:var(--text-muted);" data-i18n="roi.note">(proyeccion ilustrativa &mdash; resultados varian segun perfil)</p>
+        <div class="grid grid-cols-3 gap-3 mt-4">
+          <div>
+            <div class="font-heading font-bold text-lg gold-text">15h</div>
+            <p class="text-xs" style="color:var(--text-muted);" data-i18n="roi.k1">horas/semana</p>
           </div>
-          <input type="range" id="roi-hours" min="5" max="30" value="15" oninput="calcROI()">
-          <div class="flex justify-between text-xs mt-1" style="color:var(--text-muted);"><span>5h</span><span>30h</span></div>
-        </div>
-        <div>
-          <div class="flex justify-between mb-2">
-            <label class="text-sm font-medium" style="color:var(--text-secondary);">Valor de su hora (USD)</label>
-            <span class="text-sm font-bold gold-text" id="roi-rate-val">$80</span>
+          <div>
+            <div class="font-heading font-bold text-lg gold-text">~2</div>
+            <p class="text-xs" style="color:var(--text-muted);" data-i18n="roi.k2">semanas payback</p>
           </div>
-          <input type="range" id="roi-rate" min="20" max="200" value="80" step="5" oninput="calcROI()">
-          <div class="flex justify-between text-xs mt-1" style="color:var(--text-muted);"><span>$20</span><span>$200</span></div>
-        </div>
-      </div>
-
-      <!-- Results -->
-      <div class="glass p-5 glow-border reveal">
-        <h3 class="font-heading text-lg font-bold mb-1" style="color:var(--text-primary);">Su Proyeccion</h3>
-        <p class="text-xs mb-4" style="color:var(--text-muted);">(proyección ilustrativa &mdash; resultados varian segun perfil)</p>
-        <div class="space-y-4">
-          <div class="flex justify-between items-center pb-3" style="border-bottom:1px solid var(--border-color);">
-            <span class="text-sm" style="color:var(--text-secondary);">Horas recuperadas/mes</span>
-            <span class="font-heading text-xl font-bold gold-text" id="roi-hours-month">30</span>
-          </div>
-          <div class="flex justify-between items-center pb-3" style="border-bottom:1px solid var(--border-color);">
-            <span class="text-sm" style="color:var(--text-secondary);">Valor recuperado/mes</span>
-            <span class="font-heading text-xl font-bold gold-text" id="roi-value-month">$2,400</span>
-          </div>
-          <div class="flex justify-between items-center pb-3" style="border-bottom:1px solid var(--border-color);">
-            <span class="text-sm" style="color:var(--text-secondary);">Semanas de payback</span>
-            <span class="font-heading text-xl font-bold gold-text" id="roi-payback">2.5</span>
-          </div>
-          <div class="flex justify-between items-center">
-            <span class="text-sm" style="color:var(--text-secondary);">Valor anual (USD)</span>
-            <span class="font-heading text-2xl font-black gold-text" id="roi-annual">$28,800</span>
+          <div>
+            <div class="font-heading font-bold text-lg gold-text">$57k</div>
+            <p class="text-xs" style="color:var(--text-muted);" data-i18n="roi.k3">valor anual</p>
           </div>
         </div>
       </div>
@@ -829,70 +507,56 @@
   </section>
 
   <!-- ================================================================
-       OBJECIONES — Accordion
+       S6: OBJECIONES — Top 3 Accordion
        ================================================================ -->
   <section id="objeciones" style="padding:3rem 0;background:var(--bg-secondary);">
     <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
       <div class="text-center mb-6 reveal">
-        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Transparencia</p>
-        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">Lo que probablemente esta pensando</h2>
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);" data-i18n="obj.hook">Transparencia</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);" data-i18n="obj.title">Lo que probablemente esta pensando</h2>
         <div class="gold-divider"></div>
       </div>
 
       <div class="space-y-2">
-        <!-- Objection 1 -->
+        <!-- Obj 1: Time -->
         <div class="glass rounded-xl overflow-hidden reveal">
           <button class="accordion-trigger" onclick="toggleAcc(this)">
             <span class="flex items-center gap-2 font-heading font-semibold text-sm" style="color:var(--text-primary);">
               <i data-lucide="clock" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i>
-              "No tengo tiempo"
+              <span data-i18n="obj.1.q">"No tengo tiempo"</span>
             </span>
             <i data-lucide="chevron-down" class="w-4 h-4 chevron" style="color:var(--gold);"></i>
           </button>
           <div class="accordion-content">
-            <div class="px-5 pb-4 text-sm leading-relaxed" style="color:var(--text-secondary);">Son 2 horas por semana donde construimos su sistema EN VIVO. No hay trabajo extra: usted llega, co-creamos, y lo que se construye en sesión es lo que opera despues. Si no tuviera tiempo, seria exactamente la persona que mas lo necesita.</div>
+            <div class="px-5 pb-4 text-sm leading-relaxed" style="color:var(--text-secondary);" data-i18n="obj.1.a">Son 2 horas por semana donde construimos su sistema EN VIVO. No hay trabajo extra: usted llega, co-creamos, y lo que se construye en sesion es lo que opera despues. Si no tuviera tiempo, seria exactamente la persona que mas lo necesita.</div>
           </div>
         </div>
 
-        <!-- Objection 2 -->
+        <!-- Obj 2: Already tried AI -->
         <div class="glass rounded-xl overflow-hidden reveal">
           <button class="accordion-trigger" onclick="toggleAcc(this)">
             <span class="flex items-center gap-2 font-heading font-semibold text-sm" style="color:var(--text-primary);">
               <i data-lucide="refresh-ccw" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i>
-              "Ya probe IA y no funciono"
+              <span data-i18n="obj.2.q">"Ya probe IA y no funciono"</span>
             </span>
             <i data-lucide="chevron-down" class="w-4 h-4 chevron" style="color:var(--gold);"></i>
           </button>
           <div class="accordion-content">
-            <div class="px-5 pb-4 text-sm leading-relaxed" style="color:var(--text-secondary);">La mayoria de ejecutivos prueban herramientas aisladas. El CAO Bootcamp no le da herramientas &mdash; le instala un sistema integrado donde 13 asistentes + 1 agente + 1 segundo cerebro trabajan coordinados con su contexto real.</div>
+            <div class="px-5 pb-4 text-sm leading-relaxed" style="color:var(--text-secondary);" data-i18n="obj.2.a">La mayoria de ejecutivos prueban herramientas aisladas. El CAO Bootcamp no le da herramientas &mdash; le instala un sistema integrado donde 13 asistentes + 1 agente + 1 segundo cerebro trabajan coordinados con su contexto real.</div>
           </div>
         </div>
 
-        <!-- Objection 3 -->
+        <!-- Obj 3: Not technical -->
         <div class="glass rounded-xl overflow-hidden reveal">
           <button class="accordion-trigger" onclick="toggleAcc(this)">
             <span class="flex items-center gap-2 font-heading font-semibold text-sm" style="color:var(--text-primary);">
               <i data-lucide="shield-question" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i>
-              "No soy tecnico"
+              <span data-i18n="obj.3.q">"No soy tecnico"</span>
             </span>
             <i data-lucide="chevron-down" class="w-4 h-4 chevron" style="color:var(--gold);"></i>
           </button>
           <div class="accordion-content">
-            <div class="px-5 pb-4 text-sm leading-relaxed" style="color:var(--text-secondary);">Este programa esta diseñado para directivos, no para ingenieros. Si sabe usar correo electrónico y participar en una videollamada, tiene las habilidades tecnicas suficientes.</div>
-          </div>
-        </div>
-
-        <!-- Objection 4 -->
-        <div class="glass rounded-xl overflow-hidden reveal">
-          <button class="accordion-trigger" onclick="toggleAcc(this)">
-            <span class="flex items-center gap-2 font-heading font-semibold text-sm" style="color:var(--text-primary);">
-              <i data-lucide="banknote" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i>
-              "Es mucho dinero"
-            </span>
-            <i data-lucide="chevron-down" class="w-4 h-4 chevron" style="color:var(--gold);"></i>
-          </button>
-          <div class="accordion-content">
-            <div class="px-5 pb-4 text-sm leading-relaxed" style="color:var(--text-secondary);">Tres datos: garantía de devolucion del 100% antes de las primeras 4 horas. El Workshop Zero Risk le permite experimentar sin invertir un centavo. Y con los valores por defecto de la calculadora de ROI, la inversion se recupera en aproximadamente 2 semanas (proyección ilustrativa).</div>
+            <div class="px-5 pb-4 text-sm leading-relaxed" style="color:var(--text-secondary);" data-i18n="obj.3.a">Este programa esta disenado para directivos, no para ingenieros. Si sabe usar correo electronico y participar en una videollamada, tiene las habilidades tecnicas suficientes.</div>
           </div>
         </div>
       </div>
@@ -900,41 +564,9 @@
   </section>
 
   <!-- ================================================================
-       COST OF INACTION
+       S7: WORKSHOP CTA
        ================================================================ -->
-  <section id="coi" style="padding:3rem 0;background:var(--bg-primary);">
-    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
-      <div class="text-center mb-6 reveal">
-        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Cost of Inaction</p>
-        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">Quedarse quieto tiene un precio</h2>
-        <div class="gold-divider"></div>
-      </div>
-
-      <div class="glass p-5 mb-4 reveal" style="border-color:rgba(255,215,0,0.12);">
-        <p class="text-sm leading-relaxed mb-4" style="color:var(--text-secondary);">En la era de la IA, equivocarse con ella es considerablemente menos doloroso que no hacer nada. El costo de experimentar es tiempo. El costo de no actuar es relevancia.</p>
-
-        <div class="grid gap-3 coi-grid">
-          <div class="glass p-4 rounded-xl text-center">
-            <div class="font-heading font-black text-2xl mb-1" style="color:var(--gold);">12-18h</div>
-            <p class="text-xs" style="color:var(--text-secondary);">horas semanales en operativo que un agente ejecutaria por usted.</p>
-          </div>
-          <div class="glass p-4 rounded-xl text-center">
-            <div class="font-heading font-black text-2xl mb-1" style="color:var(--gold);">6 meses</div>
-            <p class="text-xs" style="color:var(--text-secondary);">de espera si se llenan las 5 plazas. Siguiente ciclo: julio, a precio regular.</p>
-          </div>
-          <div class="glass p-4 rounded-xl text-center">
-            <div class="font-heading font-black text-2xl mb-1" style="color:var(--gold);">$0</div>
-            <p class="text-xs" style="color:var(--text-secondary);">cuesta el taller Zero Risk. El unico recurso que invierte es tiempo.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================================
-       WORKSHOP CTA
-       ================================================================ -->
-  <section id="workshop" style="padding:3rem 0;background:var(--bg-secondary);">
+  <section id="workshop" style="padding:3rem 0;background:var(--bg-primary);">
     <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
       <div class="glass p-6 text-center glow-border reveal">
         <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4"
@@ -943,72 +575,62 @@
           Zero Risk
         </div>
 
-        <h2 class="font-heading font-bold mb-3" style="color:var(--text-primary);font-size:clamp(1.25rem, 5vw, 1.75rem);">De Ocupado a Productivo con Agentes de IA</h2>
+        <h2 class="font-heading font-bold mb-3" style="color:var(--text-primary);font-size:clamp(1.25rem, 5vw, 1.75rem);" data-i18n="ws.title">De Ocupado a Productivo con Agentes de IA</h2>
         <div class="gold-divider"></div>
 
-        <p class="text-sm mb-4 mt-3" style="color:var(--text-secondary);">Zero Risk significa exactamente eso: cero exposición económica para usted. Solo 3 horas de su tiempo donde construimos algo real con IA &mdash; juntos.</p>
-
-        <!-- Video Thumbnail -->
-        <div class="video-thumb mb-5" id="yt-container"
-             onclick="this.innerHTML='<iframe src=\'https://www.youtube-nocookie.com/embed/rUu1o7iKUMM?autoplay=1&playsinline=1\' style=\'position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:0.75rem;\' allow=\'accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture\' allowfullscreen></iframe>'">
-          <img src="https://img.youtube.com/vi/rUu1o7iKUMM/hqdefault.jpg" alt="De Ocupado a Productivo" loading="lazy">
-          <div class="play-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#020617"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        </div>
+        <p class="text-sm mb-4 mt-3" style="color:var(--text-secondary);" data-i18n="ws.desc">Zero Risk significa exactamente eso: cero exposicion economica para usted. Solo 3 horas donde construimos algo real con IA &mdash; juntos.</p>
 
         <div class="flex flex-wrap justify-center gap-3 mb-5 text-xs" style="color:var(--text-secondary);">
-          <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5" style="color:var(--gold);"></i> Sabado de Pascua 2026</span>
+          <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5" style="color:var(--gold);"></i> <span data-i18n="ws.date">Sabado de Pascua 2026</span></span>
           <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5" style="color:var(--gold);"></i> 3h</span>
-          <span class="flex items-center gap-1"><i data-lucide="users" class="w-3.5 h-3.5" style="color:var(--gold);"></i> 13 plazas</span>
+          <span class="flex items-center gap-1"><i data-lucide="users" class="w-3.5 h-3.5" style="color:var(--gold);"></i> <span data-i18n="ws.seats">13 plazas</span></span>
         </div>
 
-        <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40métodologia.info"
-           target="_blank" rel="noopener" class="btn-gold w-full mb-3">
+        <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40metodologia.info"
+           target="_blank" rel="noopener" class="btn-gold w-full mb-3" data-i18n="ws.cta">
           <i data-lucide="calendar-plus" class="w-4 h-4"></i> Confirmar mi asistencia
         </a>
 
-        <a href="https://calendar.app.google/oN2DYh55GDfsAyPS6"
-           target="_blank" rel="noopener"
+        <a href="mailto:contacto@metodologia.info?subject=Pregunta%20Workshop%20Zero%20Risk"
            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold min-h-[44px]"
-           style="background:rgba(255,215,0,0.1);color:var(--gold);border:1px solid rgba(255,215,0,0.2);text-decoration:none;">
-          <i data-lucide="calendar" class="w-4 h-4"></i> Agendar Conversacion
+           style="background:rgba(255,215,0,0.1);color:var(--gold);border:1px solid rgba(255,215,0,0.2);text-decoration:none;" data-i18n="ws.question">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> Tengo una pregunta
         </a>
       </div>
     </div>
   </section>
 
   <!-- ================================================================
-       FINAL CTA
+       S8: FINAL CTA
        ================================================================ -->
-  <section id="final" style="padding:3rem 0;background:var(--bg-primary);">
-    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;text-center;">
+  <section id="final" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
       <div class="text-center reveal">
         <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--gold);">Quito 2026</p>
-        <h2 class="font-heading font-bold mb-3" style="color:var(--text-primary);font-size:clamp(1.75rem, 7vw, 2.5rem);">
+        <h2 class="font-heading font-bold mb-3" style="color:var(--text-primary);font-size:clamp(1.75rem, 7vw, 2.5rem);" data-i18n-html="final.title">
           5 directivos.<br>1 (r)evolucion.<br>Quito 2026.
         </h2>
         <div class="gold-divider"></div>
-        <p class="text-base mb-6 mt-3" style="color:var(--text-secondary);">El primer paso no cuesta nada. Solo requiere que se presente.</p>
+        <p class="text-base mb-6 mt-3" style="color:var(--text-secondary);" data-i18n="final.body">El primer paso no cuesta nada. Solo requiere que se presente.</p>
 
         <div class="flex flex-col gap-3">
-          <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40métodologia.info"
-             target="_blank" rel="noopener" class="btn-gold w-full" style="padding:1rem 2rem;">
+          <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40metodologia.info"
+             target="_blank" rel="noopener" class="btn-gold w-full" style="padding:1rem 2rem;" data-i18n="final.cta2">
             <i data-lucide="play-circle" class="w-5 h-5"></i> Asistir al Taller
           </a>
-          <a href="mailto:contacto@métodologia.info?subject=Reserva%20CAO%20Bootcamp%20Creyentes%20%E2%80%94%20Quito%202026&body=Hola%20Javier%20y%20Cristian%2C%0A%0AQuiero%20formalizar%20mi%20plaza%20en%20el%20CAO%20Bootcamp%20Edicion%20Creyentes.%0A%0AMi%20motivación%3A%20%5BCOMPLETAR%5D%0AModalidad%20preferida%3A%20%5BSolo%20%2F%20Dupla%20%2F%20Terna%5D%0ASi%20dupla%20o%20terna%2C%20participan%3A%20%5BNOMBRES%5D%0A%0AAdjunto%20mi%20CV%20y%20documentacion%20relevante.%0A%0AQuedo%20atento%20a%20la%20confirmación."
-             class="btn-ghost w-full" style="padding:1rem 2rem;">
+          <a href="mailto:contacto@metodologia.info?subject=Reserva%20CAO%20Bootcamp%20—%20Edición%20Creyentes%20Quito%202026"
+             class="btn-ghost w-full" style="padding:1rem 2rem;" data-i18n="final.cta1">
             <i data-lucide="rocket" class="w-5 h-5"></i> Reservar Plaza
           </a>
         </div>
 
         <!-- Payment info -->
         <div class="glass p-4 mt-6 text-left rounded-xl">
-          <p class="text-xs font-semibold mb-2" style="color:var(--gold);">Formas de Pago</p>
+          <p class="text-xs font-semibold mb-2" style="color:var(--gold);" data-i18n="pay.title">Formas de Pago</p>
           <div class="space-y-1.5 text-xs" style="color:var(--text-secondary);">
-            <p>50% despues de 4h + 50% al cierre. 10% descuento pago on front.</p>
-            <p>PayPal o acuerdo puntual.</p>
-            <p style="color:var(--text-primary);font-weight:600;">Garantía: Devolución del 100% si el servicio no cumple expectativas antes de completar las primeras 4 horas. Unica condición: 1 hora de retroalimentación estructurada.</p>
+            <p data-i18n="pay.split">50% despues de 4h + 50% al cierre. 10% descuento pago on front.</p>
+            <p data-i18n="pay.method">PayPal o acuerdo puntual.</p>
+            <p style="color:var(--text-primary);font-weight:600;" data-i18n="pay.guarantee">Garantia: Devolucion del 100% si el servicio no cumple expectativas antes de completar las primeras 4 horas. Unica condicion: 1 hora de retroalimentacion estructurada.</p>
           </div>
         </div>
       </div>
@@ -1018,7 +640,7 @@
   <!-- ================================================================
        FOOTER
        ================================================================ -->
-  <footer style="padding:2rem 0 calc(2rem + env(safe-area-inset-bottom));background:var(--bg-secondary);border-top:1px solid var(--border-color);">
+  <footer style="padding:2rem 0 calc(2rem + env(safe-area-inset-bottom));background:var(--bg-primary);border-top:1px solid var(--border-color);">
     <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;text-align:center;">
       <div class="flex items-center justify-center gap-2 mb-3">
         <svg width="24" height="24" viewBox="0 0 36 36" fill="none">
@@ -1027,23 +649,38 @@
           <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
           <circle cx="18" cy="8" r="2" fill="#FFD700"/>
         </svg>
-        <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">Métodolog<span class="gold-text">IA</span></span>
+        <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">Metodolog<span class="gold-text">IA</span></span>
       </div>
 
       <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-4">
-        <a href="https://métodologia.info" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
-          <i data-lucide="external-link" class="w-3 h-3"></i> métodologia.info
+        <a href="https://metodologia.info/vision.html" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="eye" class="w-3 h-3"></i> Vision
         </a>
-        <a href="https://métodologia.info/recursos/" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+        <a href="https://metodologia.info/ruta/" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="route" class="w-3 h-3"></i> Ruta
+        </a>
+        <a href="https://metodologia.info/recursos/" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
           <i data-lucide="book-open" class="w-3 h-3"></i> Recursos
         </a>
-        <a href="mailto:contacto@métodologia.info" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+        <a href="https://metodologia.info/recursos/asistentes-gpt/" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="bot" class="w-3 h-3"></i> GPT
+        </a>
+        <a href="https://metodologia.info/recursos/asistentes-gemini/" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="sparkles" class="w-3 h-3"></i> Gemini
+        </a>
+        <a href="https://metodologia.info/personas/" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="user" class="w-3 h-3"></i> Personas
+        </a>
+        <a href="https://metodologia.info/empresas/" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="building-2" class="w-3 h-3"></i> Empresas
+        </a>
+        <a href="mailto:contacto@metodologia.info" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
           <i data-lucide="mail" class="w-3 h-3"></i> Contacto
         </a>
       </div>
 
-      <p class="text-xs leading-relaxed" style="color:var(--text-muted);">
-        Innovation Mode: este documento fue generado con asistencia de IA y revisado por humanos. Los precios y condiciónes estan sujetos a confirmación final. Todos los precios en USD (tasa indicativa, sujeta a variación).
+      <p class="text-xs leading-relaxed" style="color:var(--text-muted);" data-i18n="footer.disclaimer">
+        Innovation Mode: este documento fue generado con asistencia de IA y revisado por humanos. Los precios y condiciones estan sujetos a confirmacion final. Todos los precios en USD.
       </p>
     </div>
   </footer>
@@ -1052,122 +689,160 @@
        JAVASCRIPT
        ================================================================ -->
   <script>
-  /* ==================================================================
-     MODULES DATA
-     ================================================================== */
-  const modules = [
-    { num: '01', phase: 'Fase 1: Aprender', title: 'Aprenda a aprender con IA', method: 'Active Learning + Knowledge Extraction', work: 'Consuma libros, podcasts, papers, reuniones. Extraiga conocimiento accionable en minutos.', deliverable: 'Sistema de Aprendizaje Acelerado', icon: 'graduation-cap' },
-    { num: '02', phase: 'Fase 1: Aprender', title: 'Prompts para hacer cualquier cosa', method: 'Prompt Engineering Framework', work: 'Desde analizar un contrato hasta preparar una negociacion. Framework replicable.', deliverable: 'Pack de 50+ Prompts Calibrados', icon: 'message-square-code' },
-    { num: '03', phase: 'Fase 1: Aprender', title: 'Segundo cerebro: Su ecosistema digital', method: 'Google Ecosystem integrado', work: 'Tasks + Notes + Drive + Gmail + Gemini Gems + NotebookLM en un sistema cohesivo.', deliverable: 'Segundo Cerebro Digital', icon: 'database' },
-    { num: '04', phase: 'Fase 2: Organizar', title: 'Automatice correos, agenda y seguimiento', method: 'Lean Personal + GTD', work: 'Agente clasifica, prioriza, responde borradores, hace follow-up. Libere 5+ horas/semana.', deliverable: 'Sistema de Gestion de Comunicaciones', icon: 'mail' },
-    { num: '05', phase: 'Fase 2: Organizar', title: 'KYC con IA: Conozca a su cliente', method: 'KYC + BMC + Market Research', work: 'Perfile clientes, segmentos, mercados. Canvas de modelo de negocio. Identifique gaps y oportunidades.', deliverable: 'KYC Dashboard + BMC Digital', icon: 'scan-line' },
-    { num: '06', phase: 'Fase 2: Organizar', title: 'Due Diligence con IA', method: 'Due Diligence + Competitive Intelligence', work: 'Evaluar proveedores, aliados, mercados y competencia en horas, no semanas.', deliverable: 'Dossier de Due Diligence', icon: 'search' },
-    { num: '07', phase: 'Fase 3: Operar', title: 'Dashboards: Finanzas, proyectos, estrategia', method: 'Financial Analysis + Dashboard Design', work: 'Dashboards vivos de finanzas, proyectos y unidades de negocio. Sin Excel manual.', deliverable: 'Dashboard Ejecutivo', icon: 'bar-chart-3' },
-    { num: '08', phase: 'Fase 3: Operar', title: 'Asistentes de IA a su medida', method: 'Agent Design + Prompt Engineering', work: 'Configure 13 asistentes con su contexto, su tono, sus reglas. Agente Pristino personalizado.', deliverable: 'Suite de 13 Asistentes Operativos', icon: 'bot' },
-    { num: '09', phase: 'Fase 3: Operar', title: 'Visibilidad y networking amplificado', method: 'Personal Branding + Content Strategy', work: 'Marca personal con IA. Genere contenido, conecte estrategicamente, mida impacto.', deliverable: 'Estrategia GTM Personal', icon: 'eye' }
-  ];
+  let currentLang = 'es';
 
   /* ==================================================================
-     RENDER MODULES ACCORDION
+     i18n DICTIONARY
      ================================================================== */
-  function renderModules() {
-    const container = document.getElementById('modules-accordion');
-    let currentPhase = '';
-    let html = '';
+  const i18n = {
+    es: {
+      'nav.cta': 'Reservar',
+      'carta.badge': 'Convocatoria Creyentes',
+      'carta.count': '1 de 13 convocados',
+      'quote.text': '"No es hacer mas cosas. Es hacer que las cosas que haces, importen."',
+      'quote.attr': '— Intencion sobre Intensidad — MetodologIA',
+      'journey.hook': 'Su Camino',
+      'journey.title': '3 Componentes. 1 Transformacion.',
+      'journey.subtitle': 'Grupos cerrados de hasta 13 personas. Cada uno cierra una brecha distinta.',
+      'journey.l0.tag': 'Taller \u00b7 3 horas',
+      'journey.l0.title': 'De Ocupado a Productivo',
+      'journey.l0.price': 'Sin inversion economica',
+      'journey.l0.desc': '3 horas. Sabado de Pascua 2026. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM. 13 plazas.',
+      'journey.l0.cta': 'Inscribirse',
+      'journey.l2.badge': 'Recomendado',
+      'journey.l2.tag': 'CAO Bootcamp',
+      'journey.l2.title2': 'Edicion Creyentes',
+      'journey.l2.desc': '20h en 4-10 semanas. 13 asistentes, agente Pristino, segundo cerebro digital, networking Q3. Grupo cerrado de hasta 13 ejecutivos.',
+      'journey.l2.cta': 'Reservar Plaza',
+      'journey.l3.tag': 'Empoderamiento',
+      'journey.l3.title': 'Programa de Empoderamiento',
+      'journey.l3.tagline': 'Adopcion IA para su equipo tactico',
+      'journey.l3.desc': '16 semanas desde mayo. Puerta cerrada (in-company) o publico abierto. Gerentes y mandos medios. 13 plazas.',
+      'journey.l3.badge': 'Ed. Creyentes',
+      'journey.asistentes': '<strong style="color:var(--text-primary);">Asistentes a Medida:</strong> $347 USD c/u. Los 13 asistentes base ya estan incluidos en el bootcamp.',
+      'pristino.desc': 'Open Source, auditable, sin cajas negras. Corre en local. Suyo para siempre. Se instala en el Workshop Zero Risk y se personaliza a profundidad en el CAO Bootcamp. Lee sus documentos, prepara reportes, ejecuta analisis \u2014 todo bajo su control.',
+      'pristino.tag3': 'Auditable',
+      'pristino.tag4': 'Suyo para siempre',
+      'roi.hook': 'Retorno',
+      'roi.formula': '15h/semana \u00d7 $80/h = $4,800/mes recuperados',
+      'roi.note': '(proyeccion ilustrativa \u2014 resultados varian segun perfil)',
+      'roi.k1': 'horas/semana',
+      'roi.k2': 'semanas payback',
+      'roi.k3': 'valor anual',
+      'obj.hook': 'Transparencia',
+      'obj.title': 'Lo que probablemente esta pensando',
+      'obj.1.q': '"No tengo tiempo"',
+      'obj.1.a': 'Son 2 horas por semana donde construimos su sistema EN VIVO. No hay trabajo extra: usted llega, co-creamos, y lo que se construye en sesion es lo que opera despues. Si no tuviera tiempo, seria exactamente la persona que mas lo necesita.',
+      'obj.2.q': '"Ya probe IA y no funciono"',
+      'obj.2.a': 'La mayoria de ejecutivos prueban herramientas aisladas. El CAO Bootcamp no le da herramientas \u2014 le instala un sistema integrado donde 13 asistentes + 1 agente + 1 segundo cerebro trabajan coordinados con su contexto real.',
+      'obj.3.q': '"No soy tecnico"',
+      'obj.3.a': 'Este programa esta disenado para directivos, no para ingenieros. Si sabe usar correo electronico y participar en una videollamada, tiene las habilidades tecnicas suficientes.',
+      'ws.title': 'De Ocupado a Productivo con Agentes de IA',
+      'ws.desc': 'Zero Risk significa exactamente eso: cero exposicion economica para usted. Solo 3 horas donde construimos algo real con IA \u2014 juntos.',
+      'ws.date': 'Sabado de Pascua 2026',
+      'ws.seats': '13 plazas',
+      'ws.cta': 'Confirmar mi asistencia',
+      'ws.question': 'Tengo una pregunta',
+      'final.body': 'El primer paso no cuesta nada. Solo requiere que se presente.',
+      'final.cta1': 'Reservar Plaza',
+      'final.cta2': 'Asistir al Taller',
+      'pay.title': 'Formas de Pago',
+      'pay.split': '50% despues de 4h + 50% al cierre. 10% descuento pago on front.',
+      'pay.method': 'PayPal o acuerdo puntual.',
+      'pay.guarantee': 'Garantia: Devolucion del 100% si el servicio no cumple expectativas antes de completar las primeras 4 horas. Unica condicion: 1 hora de retroalimentacion estructurada.',
+      'footer.disclaimer': 'Innovation Mode: este documento fue generado con asistencia de IA y revisado por humanos. Los precios y condiciones estan sujetos a confirmacion final. Todos los precios en USD.'
+    },
+    en: {
+      'nav.cta': 'Reserve',
+      'carta.badge': 'Believers Call',
+      'carta.count': '1 of 13 invited',
+      'quote.text': '"It\'s not about doing more. It\'s about making what you do, matter."',
+      'quote.attr': '— Intention over Intensity — MetodologIA',
+      'journey.hook': 'Your Path',
+      'journey.title': '3 Components. 1 Transformation.',
+      'journey.subtitle': 'Closed groups of up to 13 people. Each closes a different gap.',
+      'journey.l0.tag': 'Workshop \u00b7 3 hours',
+      'journey.l0.title': 'From Busy to Productive',
+      'journey.l0.price': 'No financial investment',
+      'journey.l0.desc': '3 hours. Easter Saturday 2026. We build an agent with your real work context, paired with Gemini Gems + NotebookLM. 13 seats.',
+      'journey.l0.cta': 'Sign Up',
+      'journey.l2.badge': 'Recommended',
+      'journey.l2.tag': 'CAO Bootcamp',
+      'journey.l2.title2': 'Believers Edition',
+      'journey.l2.desc': '20h in 4-10 weeks. 13 assistants, Pristino agent, digital second brain, Q3 networking. Closed group of up to 13 executives.',
+      'journey.l2.cta': 'Reserve Seat',
+      'journey.l3.tag': 'Empowerment',
+      'journey.l3.title': 'Empowerment Program',
+      'journey.l3.tagline': 'AI adoption for your tactical team',
+      'journey.l3.desc': '16 weeks from May. Closed-door (in-company) or open program. Managers and mid-level leaders. 13 seats.',
+      'journey.l3.badge': 'Believers Ed.',
+      'journey.asistentes': '<strong style="color:var(--text-primary);">Custom Assistants:</strong> $347 USD each. The 13 base assistants are already included in the bootcamp.',
+      'pristino.desc': 'Open Source, auditable, no black boxes. Runs locally. Yours forever. Installed at the Zero Risk Workshop and deeply customized in the CAO Bootcamp. Reads your documents, prepares reports, runs analyses \u2014 all under your control.',
+      'pristino.tag3': 'Auditable',
+      'pristino.tag4': 'Yours forever',
+      'roi.hook': 'Return',
+      'roi.formula': '15h/week \u00d7 $80/h = $4,800/month recovered',
+      'roi.note': '(illustrative projection \u2014 results vary by profile)',
+      'roi.k1': 'hours/week',
+      'roi.k2': 'weeks payback',
+      'roi.k3': 'annual value',
+      'obj.hook': 'Transparency',
+      'obj.title': 'What you\'re probably thinking',
+      'obj.1.q': '"I don\'t have time"',
+      'obj.1.a': 'It\'s 2 hours per week where we build your system LIVE. No extra work: you show up, we co-create, and what\'s built in session is what operates afterward. If you don\'t have time, you\'re exactly the person who needs it most.',
+      'obj.2.q': '"I\'ve tried AI and it didn\'t work"',
+      'obj.2.a': 'Most executives try isolated tools. The CAO Bootcamp doesn\'t give you tools \u2014 it installs an integrated system where 13 assistants + 1 agent + 1 second brain work coordinated with your real context.',
+      'obj.3.q': '"I\'m not technical"',
+      'obj.3.a': 'This program is designed for executives, not engineers. If you can use email and join a video call, you have enough technical skills.',
+      'ws.title': 'From Busy to Productive with AI Agents',
+      'ws.desc': 'Zero Risk means exactly that: zero financial exposure for you. Just 3 hours where we build something real with AI \u2014 together.',
+      'ws.date': 'Easter Saturday 2026',
+      'ws.seats': '13 seats',
+      'ws.cta': 'Confirm my attendance',
+      'ws.question': 'I have a question',
+      'final.body': 'The first step costs nothing. It only requires you to show up.',
+      'final.cta1': 'Reserve Seat',
+      'final.cta2': 'Attend Workshop',
+      'pay.title': 'Payment Options',
+      'pay.split': '50% after 4h + 50% at closing. 10% discount for upfront payment.',
+      'pay.method': 'PayPal or punctual agreement.',
+      'pay.guarantee': 'Guarantee: 100% refund if the service does not meet expectations before completing the first 4 hours. Only condition: 1 hour of structured feedback.',
+      'footer.disclaimer': 'Innovation Mode: this document was generated with AI assistance and reviewed by humans. Prices and conditions subject to final confirmation. All prices in USD.'
+    }
+  };
 
-    modules.forEach(m => {
-      if (m.phase !== currentPhase) {
-        currentPhase = m.phase;
-        html += `<p class="text-xs uppercase tracking-wider font-bold mt-4 mb-2 reveal" style="color:var(--gold);">${currentPhase}</p>`;
-      }
-      html += `
-        <div class="glass rounded-xl overflow-hidden reveal">
-          <button class="accordion-trigger" onclick="toggleAcc(this)">
-            <span class="flex items-center gap-2.5">
-              <span class="w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">${m.num}</span>
-              <span class="font-heading font-semibold text-sm text-left" style="color:var(--text-primary);">${m.title}</span>
-            </span>
-            <i data-lucide="chevron-down" class="w-4 h-4 chevron" style="color:var(--gold);"></i>
-          </button>
-          <div class="accordion-content">
-            <div class="px-5 pb-4 space-y-2">
-              <p class="text-xs font-semibold" style="color:var(--gold);">${m.method}</p>
-              <p class="text-sm" style="color:var(--text-secondary);">${m.work}</p>
-              <div class="flex items-start gap-2 mt-2">
-                <i data-lucide="package" class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>
-                <span class="text-xs font-semibold" style="color:var(--text-primary);">${m.deliverable}</span>
-              </div>
-            </div>
-          </div>
-        </div>`;
+  const i18nHtml = {
+    es: {
+      'final.title': '5 directivos.<br>1 (r)evolucion.<br>Quito 2026.',
+      'carta.body': '<p style="color:var(--text-primary);font-weight:600;">Le escribimos desde MetodologIA para invitarle al inicio de una ola de (R)Evolucion Digital que esta por empezar en Quito. Buscamos 13 directivos para una convocatoria exclusiva. El primer paso: un taller Zero Risk de 3 horas. Sin inversion economica.</p><p>La brecha entre directivos que operan con IA y los que no se amplia cada trimestre. Este programa la cierra instalando un sistema agentico personal &mdash; agente propio + 13 asistentes + segundo cerebro digital &mdash; en 9 sesiones de co-creacion.</p><p>No le pedimos mas horas. Le devolvemos las que hoy consume lo operativo. El taller <strong style="color:var(--text-primary);">Zero Risk</strong> demuestra esto en 3 horas, con su contexto laboral real. Sabado de Pascua 2026.</p><p style="color:var(--text-primary);font-weight:600;">Solo 5 de los 13 convocados accederan a la Edicion Creyentes ($1,490 USD en lugar de $1,990). Cuando se confirmen los primeros 5 (agendando un espacio de romper el hielo), se cerrara esta convocatoria y habra que esperar a julio, por otro valor.</p><p>En paralelo, el Programa de Empoderamiento ya esta en convocatoria para su equipo tactico &mdash; gerentes y mandos medios. Edicion Creyentes tambien disponible.</p>'
+    },
+    en: {
+      'final.title': '5 executives.<br>1 (r)evolution.<br>Quito 2026.',
+      'carta.body': '<p style="color:var(--text-primary);font-weight:600;">We write from MetodologIA to invite you to the start of a Digital (R)Evolution wave about to begin in Quito. We\'re looking for 13 executives for an exclusive call. The first step: a 3-hour Zero Risk workshop. No financial investment.</p><p>The gap between executives who operate with AI and those who don\'t widens every quarter. This program closes it by installing a personal agentic system &mdash; your own agent + 13 assistants + digital second brain &mdash; in 9 co-creation sessions.</p><p>We\'re not asking for more hours. We\'re giving back the ones operations consume today. The <strong style="color:var(--text-primary);">Zero Risk</strong> workshop demonstrates this in 3 hours, with your real work context. Easter Saturday 2026.</p><p style="color:var(--text-primary);font-weight:600;">Only 5 of the 13 invited will access the Believers Edition ($1,490 USD instead of $1,990). Once the first 5 confirm (scheduling an icebreaker session), this call closes and the next cycle starts in July, at regular price.</p><p>In parallel, the Empowerment Program is already open for your tactical team &mdash; managers and mid-level leaders. Believers Edition also available.</p>'
+    }
+  };
+
+  /* ==================================================================
+     LANGUAGE SWITCHER
+     ================================================================== */
+  function switchLang(lang) {
+    currentLang = lang;
+    document.getElementById('lang-es').classList.toggle('active', lang === 'es');
+    document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+
+    const dict = i18n[lang];
+    const dictHtml = i18nHtml[lang];
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
     });
 
-    container.innerHTML = html;
-    lucide.createIcons();
-    observeReveals();
-  }
-
-  /* ==================================================================
-     ACCORDION TOGGLE
-     ================================================================== */
-  function toggleAcc(btn) {
-    const content = btn.nextElementSibling;
-    const isOpen = btn.classList.contains('open');
-
-    // Close all others in same parent
-    const parent = btn.closest('section') || btn.closest('.space-y-2');
-    if (parent) {
-      parent.querySelectorAll('.accordion-trigger.open').forEach(other => {
-        if (other !== btn) {
-          other.classList.remove('open');
-          other.nextElementSibling.style.maxHeight = '0';
-        }
-      });
-    }
-
-    if (isOpen) {
-      btn.classList.remove('open');
-      content.style.maxHeight = '0';
-    } else {
-      btn.classList.add('open');
-      content.style.maxHeight = content.scrollHeight + 'px';
-    }
-  }
-
-  /* ==================================================================
-     ROI CALCULATOR
-     ================================================================== */
-  function calcROI() {
-    const hours = parseInt(document.getElementById('roi-hours').value);
-    const rate = parseInt(document.getElementById('roi-rate').value);
-    const savings = 0.5; // 50% recovery rate
-
-    const hoursMonth = Math.round(hours * savings * 4);
-    const valueMonth = hoursMonth * rate;
-    const payback = (1192 / (hoursMonth * rate / 4)).toFixed(1);
-    const annual = valueMonth * 12;
-
-    document.getElementById('roi-hours-val').textContent = hours;
-    document.getElementById('roi-rate-val').textContent = '$' + rate;
-    document.getElementById('roi-hours-month').textContent = hoursMonth;
-    document.getElementById('roi-value-month').textContent = '$' + valueMonth.toLocaleString();
-    document.getElementById('roi-payback').textContent = payback;
-    document.getElementById('roi-annual').textContent = '$' + annual.toLocaleString();
-  }
-
-  /* ==================================================================
-     MOBILE MENU
-     ================================================================== */
-  let menuOpen = false;
-  function toggleMenu() {
-    menuOpen = !menuOpen;
-    document.getElementById('mobile-menu').classList.toggle('open', menuOpen);
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
-  }
-  function closeMenu() {
-    menuOpen = false;
-    document.getElementById('mobile-menu').classList.remove('open');
-    document.body.style.overflow = '';
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dictHtml && dictHtml[key] !== undefined) el.innerHTML = dictHtml[key];
+    });
   }
 
   /* ==================================================================
@@ -1184,24 +859,46 @@
     }
   }
 
-  // Auto-detect system preference
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
     document.documentElement.classList.remove('dark');
     document.documentElement.classList.add('light');
   }
 
   /* ==================================================================
+     ACCORDION
+     ================================================================== */
+  function toggleAcc(btn) {
+    const content = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    const parent = btn.closest('.space-y-2');
+    if (parent) {
+      parent.querySelectorAll('.accordion-trigger.open').forEach(other => {
+        if (other !== btn) {
+          other.classList.remove('open');
+          other.nextElementSibling.style.maxHeight = '0';
+        }
+      });
+    }
+    if (isOpen) {
+      btn.classList.remove('open');
+      content.style.maxHeight = '0';
+    } else {
+      btn.classList.add('open');
+      content.style.maxHeight = content.scrollHeight + 'px';
+    }
+  }
+
+  /* ==================================================================
      SCROLL PROGRESS
      ================================================================== */
   window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    document.getElementById('scroll-progress').style.width = progress + '%';
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = h > 0 ? (window.scrollY / h) * 100 : 0;
+    document.getElementById('scroll-progress').style.width = pct + '%';
   }, { passive: true });
 
   /* ==================================================================
-     SCROLL REVEAL (IntersectionObserver)
+     SCROLL REVEAL
      ================================================================== */
   function observeReveals() {
     const observer = new IntersectionObserver((entries) => {
@@ -1212,7 +909,6 @@
         }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
     document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
   }
 
@@ -1220,8 +916,6 @@
      INIT
      ================================================================== */
   document.addEventListener('DOMContentLoaded', () => {
-    renderModules();
-    calcROI();
     lucide.createIcons();
     observeReveals();
   });
