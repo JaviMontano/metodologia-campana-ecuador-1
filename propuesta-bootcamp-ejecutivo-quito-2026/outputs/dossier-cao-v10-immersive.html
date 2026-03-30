@@ -136,6 +136,18 @@
     .glass:hover {
       border-color: rgba(255, 215, 0, 0.25);
       box-shadow: 0 0 60px rgba(255, 215, 0, 0.12);
+      transform: translateY(-2px);
+    }
+
+    /* Micro-interactions */
+    .glass { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .punchline a { border-bottom: 1px solid transparent; transition: border-color 0.3s ease; }
+    .punchline a:hover { border-bottom-color: var(--gold); }
+    button[title*="informacion"], button[title*="incluido"], button[title*="detalles"], button[title*="entregables"] {
+      transition: transform 0.2s ease;
+    }
+    button[title*="informacion"]:hover, button[title*="incluido"]:hover, button[title*="detalles"]:hover, button[title*="entregables"]:hover {
+      transform: scale(1.15);
     }
 
     /* ============================================================
@@ -2094,32 +2106,30 @@
        ==================================================================== -->
   <section class="section-pad view-immersive">
     <div class="max-w-4xl mx-auto px-6">
-      <div class="glass p-10 md:p-14 rounded-2xl reveal" style="border-color:rgba(255,215,0,0.15);">
-        <div class="lg:grid lg:grid-cols-2 gap-10 items-center">
-          <!-- Video embed -->
-          <div class="mb-8 lg:mb-0">
-            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
-              <iframe src="https://www.youtube.com/embed/rUu1o7iKUMM"
-                      style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:12px;"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen loading="lazy"></iframe>
-            </div>
+      <div class="glass p-8 md:p-12 rounded-2xl reveal" style="border-color:rgba(255,215,0,0.15);">
+        <!-- Video embed — full width, prominent -->
+        <div class="text-center mb-8">
+          <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Zero Risk</p>
+          <h3 class="font-heading text-2xl md:text-3xl font-bold mb-6" style="color:var(--text-primary);">
+            El taller que no le pide nada. Solo que se presente.
+          </h3>
+        </div>
+        <div class="max-w-2xl mx-auto mb-8">
+          <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 8px 40px rgba(255,215,0,0.08);">
+            <iframe src="https://www.youtube.com/embed/rUu1o7iKUMM"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:16px;"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen loading="lazy"></iframe>
           </div>
-          <!-- Text -->
-          <div>
-            <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Zero Risk</p>
-            <h3 class="font-heading text-2xl md:text-3xl font-bold mb-4" style="color:var(--text-primary);">
-              El taller que no le pide nada. Solo que se presente.
-            </h3>
-            <p class="text-sm leading-relaxed mb-4" style="color:var(--text-secondary);">
-              Zero Risk significa exactamente eso: cero exposicion para usted. No hay inversion economica. No hay compromiso de compra. No hay letra pequena. Solo 3 horas de su tiempo donde construimos algo real con IA — juntos.
-            </p>
-            <p class="text-sm leading-relaxed mb-4" style="color:var(--text-secondary);">
-              La finalidad es simple: que usted <strong style="color:var(--text-primary);">experimente en primera persona</strong> como opera un sistema agentico. No con slides. No con demos grabadas. Con su contexto laboral real, en vivo, co-creando un agente funcional con Gemini Gems y NotebookLM.
-            </p>
-            <p class="text-sm leading-relaxed mb-6" style="color:var(--text-secondary);">
-              Al terminar, usted decide. Si quiere profundizar, hablamos del CAO Bootcamp. Si no es el momento, nos vemos mas adelante. Esperamos seriedad y asistencia. Su plaza ocupa el lugar de otro directivo.
-            </p>
+        </div>
+        <!-- Text below video -->
+        <div class="max-w-xl mx-auto">
+          <p class="text-sm leading-relaxed mb-4" style="color:var(--text-secondary);">
+            Zero Risk significa exactamente eso: cero exposicion economica para usted. Solo 3 horas de su tiempo donde construimos algo real con IA — juntos. Con su contexto laboral, en vivo, co-creando un agente funcional con Gemini Gems y NotebookLM.
+          </p>
+          <p class="text-sm leading-relaxed mb-6" style="color:var(--text-secondary);">
+            Al terminar, usted decide. Si quiere profundizar, hablamos del CAO Bootcamp. Si no es el momento, nos vemos mas adelante. Esperamos seriedad y asistencia — su plaza ocupa el lugar de otro directivo.
+          </p>
             <div class="flex flex-col sm:flex-row gap-3">
               <button onclick="openModal('workshop')" class="btn-gold text-sm justify-center">
                 <i data-lucide="calendar-plus" class="w-4 h-4"></i>
@@ -2787,7 +2797,7 @@
       title_en: 'About the Investment',
       body_es: `<p class="mb-4"><strong style="color:var(--text-primary);">Desglose de valor incluido:</strong></p>
         <ul class="list-disc pl-5 mb-4 space-y-1">
-          <li>13 asistentes de productividad (valor individual: $4,511 USD)</li>
+          <li>13 asistentes de productividad (13 x $347 c/u = $4,511 USD en valor total)</li>
           <li>Agente Pristino Open Source (configurado, personalizado, suyo)</li>
           <li>Segundo cerebro digital (Google Tasks + Notes + Drive + Gmail + Gemini Gems + NotebookLM)</li>
           <li>Exoesqueleto IDE configurado (Antigravity, Codex o VS Code)</li>
@@ -2800,7 +2810,7 @@
         <p><strong style="color:var(--text-primary);">Garantia:</strong> Devolucion del 100% si el servicio no cumple expectativas antes de completar las primeras 4 horas. Unica condicion: 1 hora de retroalimentacion estructurada.</p>`,
       body_en: `<p class="mb-4"><strong style="color:var(--text-primary);">Included value breakdown:</strong></p>
         <ul class="list-disc pl-5 mb-4 space-y-1">
-          <li>13 productivity assistants (individual value: $4,511 USD)</li>
+          <li>13 productivity assistants (13 x $347 each = $4,511 USD total value)</li>
           <li>Pristino Open Source Agent (configured, personalized, yours)</li>
           <li>Digital second brain (Google Tasks + Notes + Drive + Gmail + Gemini Gems + NotebookLM)</li>
           <li>Configured IDE exoskeleton (Antigravity, Codex or VS Code)</li>
