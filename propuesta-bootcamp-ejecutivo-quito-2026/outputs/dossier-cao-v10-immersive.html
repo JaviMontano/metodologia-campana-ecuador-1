@@ -2208,31 +2208,115 @@
        ==================================================================== -->
 
   <!-- Reserve Modal -->
+  <!-- Reserve Flow: 3-step modal -->
   <div class="modal-overlay" id="modal-reserve">
-    <div class="modal-content">
-      <div class="flex justify-between items-center mb-6">
-        <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);" data-i18n="modal.reserve.title">Reservar Plaza</h3>
+    <div class="modal-content" style="max-width:560px;">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);">Reservar su Plaza</h3>
         <button onclick="closeModal('reserve')" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-yellow-400/10 transition">
           <i data-lucide="x" class="w-5 h-5" style="color:var(--text-muted);"></i>
         </button>
       </div>
-      <p class="text-sm mb-6" style="color:var(--text-secondary);">
-        La experiencia es autogestionada. Haga click, registrese con su Google, y listo. El calendario hace el resto.
-      </p>
-      <div class="space-y-4">
-        <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40metodologia.info"
-           target="_blank" rel="noopener"
-           class="btn-gold w-full justify-center text-sm">
-          <i data-lucide="calendar-plus" class="w-5 h-5"></i>
-          Reservar en Google Calendar
-        </a>
-        <a href="mailto:contacto@metodologia.info?subject=CAO%20Bootcamp%20Creyentes%20—%20Quito%202026&body=Quiero%20reservar%20mi%20plaza."
-           class="btn-ghost w-full justify-center text-sm">
-          <i data-lucide="mail" class="w-4 h-4"></i>
-          Prefiero escribir un email
-        </a>
+
+      <!-- Step indicator -->
+      <div class="flex items-center gap-2 mb-6">
+        <div class="flex items-center gap-1" id="res-step-ind">
+          <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" id="res-dot-1" style="background:var(--gold);color:#0B2545;">1</span>
+          <div class="w-8 h-0.5" style="background:var(--border-color);"></div>
+          <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" id="res-dot-2" style="background:var(--border-color);color:var(--text-muted);">2</span>
+          <div class="w-8 h-0.5" style="background:var(--border-color);"></div>
+          <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" id="res-dot-3" style="background:var(--border-color);color:var(--text-muted);">3</span>
+        </div>
       </div>
-      <p class="text-xs text-center mt-4" style="color:var(--text-muted);">Solo 5 plazas. Las inscripciones se cierran con el 5to inscrito. Segundo ciclo: finales de septiembre 2026.</p>
+
+      <!-- Step 1: Explica el proceso -->
+      <div id="res-step-1">
+        <div class="glass p-5 rounded-xl mb-5" style="border-color:rgba(255,215,0,0.15);">
+          <p class="text-sm font-semibold mb-3" style="color:var(--text-primary);"><i data-lucide="info" class="w-4 h-4 inline mr-2" style="color:var(--gold);"></i>Como funciona la reserva</p>
+          <div class="space-y-3 text-sm" style="color:var(--text-secondary);">
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style="background:rgba(255,215,0,0.15);color:var(--gold);">1</span>
+              <p><strong style="color:var(--text-primary);">Envie un correo de formalizacion</strong> — le preparamos un mail con su motivacion, modalidad preferida (solo, dupla o terna) y espacio para adjuntar CV o documentacion relevante.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style="background:rgba(255,215,0,0.15);color:var(--gold);">2</span>
+              <p><strong style="color:var(--text-primary);">Confirmamos en 24h</strong> — revisamos su perfil y confirmamos la plaza por email.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0" style="background:rgba(255,215,0,0.15);color:var(--gold);">3</span>
+              <p><strong style="color:var(--text-primary);">Agende su primera conversacion</strong> — enlace de autoservicio para hablar sobre su ruta de (R)Evolucion personal.</p>
+            </div>
+          </div>
+        </div>
+        <button onclick="showResStep(2)" class="btn-gold w-full justify-center text-sm">
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          Entendido, quiero formalizar
+        </button>
+      </div>
+
+      <!-- Step 2: Enviar el correo -->
+      <div id="res-step-2" style="display:none;">
+        <p class="text-sm mb-4" style="color:var(--text-secondary);">Al hacer click, se abrira su cliente de correo (Gmail, Outlook, Mail) con un mensaje pre-redactado. Solo complete los campos marcados y envie.</p>
+        <div class="glass p-4 rounded-xl mb-4" style="border-color:rgba(255,215,0,0.1);">
+          <p class="text-xs font-bold mb-2" style="color:var(--gold);">Vista previa del correo:</p>
+          <p class="text-xs" style="color:var(--text-muted);">Para: contacto@metodologia.info</p>
+          <p class="text-xs" style="color:var(--text-muted);">Asunto: Reserva CAO Bootcamp Creyentes — Quito 2026</p>
+          <div class="text-xs mt-2 p-3 rounded-lg" style="color:var(--text-secondary);background:rgba(255,255,255,0.03);">
+            Hola Javier y Cristian,<br><br>
+            Quiero formalizar mi plaza en el CAO Bootcamp Edicion Creyentes.<br><br>
+            Mi motivacion: [COMPLETAR]<br>
+            Modalidad preferida: [Solo / Dupla / Terna]<br>
+            Si dupla o terna, participan: [NOMBRES]<br><br>
+            Adjunto mi CV y documentacion relevante.<br><br>
+            Quedo atento a la confirmacion.
+          </div>
+        </div>
+        <div class="glass p-3 rounded-lg mb-4 flex items-start gap-2" style="background:rgba(255,215,0,0.05);border-color:rgba(255,215,0,0.15);">
+          <i data-lucide="smartphone" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+          <p class="text-xs" style="color:var(--text-secondary);"><strong style="color:var(--text-primary);">Desde celular:</strong> se abrira Gmail o su app de correo predeterminada. <strong style="color:var(--text-primary);">Desde computador:</strong> se abrira su cliente de correo (Outlook, Mail, Thunderbird) o Gmail si es su predeterminado.</p>
+        </div>
+        <a href="mailto:contacto@metodologia.info?subject=Reserva%20CAO%20Bootcamp%20Creyentes%20—%20Quito%202026&body=Hola%20Javier%20y%20Cristian%2C%0A%0AQuiero%20formalizar%20mi%20plaza%20en%20el%20CAO%20Bootcamp%20Edicion%20Creyentes.%0A%0AMi%20motivacion%3A%20%5BCOMPLETAR%5D%0AModalidad%20preferida%3A%20%5BSolo%20%2F%20Dupla%20%2F%20Terna%5D%0ASi%20dupla%20o%20terna%2C%20participan%3A%20%5BNOMBRES%5D%0A%0AAdjunto%20mi%20CV%20y%20documentacion%20relevante.%0A%0AQuedo%20atento%20a%20la%20confirmacion."
+           class="btn-gold w-full justify-center text-sm" onclick="setTimeout(()=>showResStep(3),500)">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          Abrir mi correo y enviar
+        </a>
+        <button onclick="showResStep(1)" class="text-xs text-center w-full mt-3 hover:underline" style="color:var(--text-muted);background:none;border:none;cursor:pointer;">
+          <i data-lucide="arrow-left" class="w-3 h-3 inline"></i> Volver
+        </button>
+      </div>
+
+      <!-- Step 3: Confirmar con calendario -->
+      <div id="res-step-3" style="display:none;">
+        <div class="text-center mb-6">
+          <div class="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center" style="background:rgba(16,185,129,0.15);">
+            <i data-lucide="check-circle" class="w-8 h-8" style="color:rgb(16,185,129);"></i>
+          </div>
+          <h4 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);">Correo enviado</h4>
+          <p class="text-sm" style="color:var(--text-secondary);">Revisaremos su perfil y confirmaremos su plaza en menos de 24 horas.</p>
+        </div>
+        <p class="text-sm mb-4" style="color:var(--text-secondary);">Mientras tanto, agende una conversacion para hablar de su ruta de (R)Evolucion personal:</p>
+        <a href="https://calendar.app.google/oN2DYh55GDfsAyPS6"
+           target="_blank" rel="noopener"
+           class="btn-gold w-full justify-center text-sm mb-3">
+          <i data-lucide="calendar" class="w-5 h-5"></i>
+          Agendar mi conversacion
+        </a>
+        <p class="text-xs text-center" style="color:var(--text-muted);">Enlace de autoservicio — elija el horario que mejor le funcione.</p>
+        <div class="glass p-4 rounded-xl mt-4 flex items-start gap-3" style="border-color:rgba(255,215,0,0.1);">
+          <i data-lucide="brain" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+          <div>
+            <p class="text-xs font-semibold mb-1" style="color:var(--text-primary);">Tiene preguntas sobre la metodologia?</p>
+            <p class="text-xs mb-2" style="color:var(--text-secondary);">Nuestro NotebookLM esta entrenado con todo el contenido del programa. Preguntele directamente:</p>
+            <a href="https://notebooklm.google.com/notebook/743d07a0-93f5-415c-8988-e119b4426d4c" target="_blank" rel="noopener" class="text-xs font-bold inline-flex items-center gap-1 hover:underline" style="color:var(--gold);">
+              <i data-lucide="external-link" class="w-3 h-3"></i> Consultar el NotebookLM de MetodologIA
+            </a>
+          </div>
+        </div>
+        <div class="mt-5 pt-4" style="border-top:1px solid var(--border-color);">
+          <p class="text-xs text-center" style="color:var(--text-muted);">Solo 5 plazas Creyentes a $1,197 USD. Las inscripciones se cierran con el 5to inscrito.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -3363,7 +3447,21 @@
   function openModal(name) {
     document.getElementById('modal-' + name).classList.add('active');
     document.body.style.overflow = 'hidden';
-    if (name === 'reserve') fireConfetti();
+    if (name === 'reserve') { fireConfetti(); showResStep(1); }
+  }
+
+  /* Reserve flow: 3-step progression */
+  function showResStep(n) {
+    [1,2,3].forEach(i => {
+      const step = document.getElementById('res-step-' + i);
+      const dot = document.getElementById('res-dot-' + i);
+      if (step) step.style.display = i === n ? 'block' : 'none';
+      if (dot) {
+        dot.style.background = i <= n ? 'var(--gold)' : 'var(--border-color)';
+        dot.style.color = i <= n ? '#0B2545' : 'var(--text-muted)';
+      }
+    });
+    lucide.createIcons();
   }
 
   function closeModal(name) {
