@@ -2012,6 +2012,53 @@
   </section>
 
   <!-- ====================================================================
+       IMMERSIVE: ZERO RISK VIDEO HOOK
+       ==================================================================== -->
+  <section class="section-pad view-immersive">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="glass p-10 md:p-14 rounded-2xl reveal" style="border-color:rgba(255,215,0,0.15);">
+        <div class="lg:grid lg:grid-cols-2 gap-10 items-center">
+          <!-- Video embed -->
+          <div class="mb-8 lg:mb-0">
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
+              <iframe src="https://www.youtube.com/embed/rUu1o7iKUMM"
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:12px;"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <!-- Text -->
+          <div>
+            <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Zero Risk</p>
+            <h3 class="font-heading text-2xl md:text-3xl font-bold mb-4" style="color:var(--text-primary);">
+              El taller que no le pide nada. Solo que se presente.
+            </h3>
+            <p class="text-sm leading-relaxed mb-4" style="color:var(--text-secondary);">
+              Zero Risk significa exactamente eso: cero exposicion para usted. No hay inversion economica. No hay compromiso de compra. No hay letra pequena. Solo 3 horas de su tiempo donde construimos algo real con IA — juntos.
+            </p>
+            <p class="text-sm leading-relaxed mb-4" style="color:var(--text-secondary);">
+              La finalidad es simple: que usted <strong style="color:var(--text-primary);">experimente en primera persona</strong> como opera un sistema agentico. No con slides. No con demos grabadas. Con su contexto laboral real, en vivo, co-creando un agente funcional con Gemini Gems y NotebookLM.
+            </p>
+            <p class="text-sm leading-relaxed mb-6" style="color:var(--text-secondary);">
+              Al terminar, usted decide. Si quiere profundizar, hablamos del CAO Bootcamp. Si no es el momento, nos vemos mas adelante. Sin presion, sin seguimiento agresivo. Solo profesionales respetando el tiempo del otro.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button onclick="openModal('workshop')" class="btn-gold text-sm justify-center">
+                <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+                Confirmar mi asistencia
+              </button>
+              <a href="https://youtu.be/rUu1o7iKUMM" target="_blank" rel="noopener" class="btn-ghost text-sm justify-center">
+                <i data-lucide="play" class="w-4 h-4"></i>
+                Ver el video completo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
        SECTION 14: WORKSHOP GRATUITO (always visible)
        ==================================================================== -->
   <section id="workshop-section" class="section-pad">
