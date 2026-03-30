@@ -2,7 +2,7 @@
 <html lang="es" class="dark" data-view="resumen">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
   <title>CAO Bootcamp — Chief Agentic Officer | MetodologIA</title>
   <meta name="description" content="Bootcamp Ejecutivo Modular para directivos. Edición Creyentes, solo 5 plazas en Quito 2026." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%230A122A'/%3E%3Cstop offset='100%25' stop-color='%231E293B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='36' height='36' rx='10' fill='url(%23g)'/%3E%3Cpath d='M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z' fill='%23fff'/%3E%3Ccircle cx='18' cy='8' r='2' fill='%23FFD700'/%3E%3C/svg%3E">
@@ -603,6 +603,93 @@
       background: linear-gradient(90deg, var(--gold), var(--gold-dark));
       border-radius: 2px;
       margin: 1rem auto;
+    }
+
+    /* ============================================================
+       MOBILE-FIRST RESPONSIVE (iPhone/Safari optimized)
+       ============================================================ */
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+        touch-action: manipulation;
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        -webkit-text-size-adjust: 100%;
+      }
+      /* Nav: compact mobile */
+      nav { padding: 0.5rem 1rem !important; }
+      nav .hidden.sm\:inline-flex { display: none !important; }
+      nav .flex.items-center.gap-2 > a { display: none; }
+      nav .toggle-pill { display: none !important; }
+      .section-pad { padding: 3rem 0 !important; }
+      /* Typography: scale down for mobile */
+      h1 { font-size: 2rem !important; }
+      h2 { font-size: 1.6rem !important; }
+      h3 { font-size: 1.1rem !important; }
+      /* Cards: stack on mobile */
+      .grid.lg\:grid-cols-3 { grid-template-columns: 1fr !important; }
+      .grid.md\:grid-cols-2 { grid-template-columns: 1fr !important; }
+      .grid.md\:grid-cols-3 { grid-template-columns: 1fr !important; }
+      /* Glass cards: reduce padding */
+      .glass { padding: 1.25rem !important; border-radius: 1rem !important; }
+      .glass.p-7 { padding: 1.5rem !important; }
+      .glass.p-8 { padding: 1.5rem !important; }
+      .glass.p-10 { padding: 1.5rem !important; }
+      /* Buttons: touch target min 44px */
+      button, .btn-gold, .btn-ghost, a[href] {
+        min-height: 44px;
+      }
+      .btn-gold, .btn-ghost {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.875rem !important;
+      }
+      /* Hero card: stack vertically */
+      .flex.flex-col.lg\:flex-row { flex-direction: column !important; }
+      /* Pricing card sticky: not sticky on mobile */
+      .lg\:sticky { position: static !important; }
+      /* KPI grid: 2 cols on mobile */
+      .grid.grid-cols-2.md\:grid-cols-4 { grid-template-columns: repeat(2, 1fr) !important; }
+      /* Modals: full-screen on mobile */
+      .modal-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+        max-height: 100% !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+      }
+      /* Configurator: stack */
+      .grid.lg\:grid-cols-5 { grid-template-columns: 1fr !important; }
+      /* Punchline: smaller */
+      .punchline { font-size: 0.875rem !important; }
+      /* Footer: stack */
+      .flex.flex-col.md\:flex-row { flex-direction: column !important; align-items: center !important; text-align: center !important; }
+      /* Quote blocks */
+      blockquote, .text-2xl.italic { font-size: 1.1rem !important; }
+      /* Price display: scale */
+      .text-3xl.font-heading { font-size: 1.75rem !important; }
+      .text-5xl { font-size: 2rem !important; }
+      /* Pristino section: stack */
+      .flex.flex-col.md\:flex-row.items-center { flex-direction: column !important; text-align: center !important; }
+      /* Accordion: touch-friendly */
+      .accordion-content .px-5 { padding-left: 1rem !important; padding-right: 1rem !important; }
+      button[onclick*="toggleAccordion"] { padding: 1rem !important; min-height: 48px; }
+      /* Scroll progress bar */
+      #progress-bar { height: 3px !important; }
+    }
+
+    @media (max-width: 380px) {
+      h1 { font-size: 1.6rem !important; }
+      h2 { font-size: 1.3rem !important; }
+      .glass { padding: 1rem !important; }
+      .text-3xl.font-heading { font-size: 1.5rem !important; }
+    }
+
+    /* Safari/iOS specific */
+    @supports (-webkit-touch-callout: none) {
+      body { -webkit-overflow-scrolling: touch; }
+      .modal-overlay { -webkit-overflow-scrolling: touch; }
+      input, select, textarea { font-size: 16px !important; }
     }
   </style>
 </head>
