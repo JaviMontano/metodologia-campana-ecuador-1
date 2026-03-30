@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACC — BPMN Process Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <style>
+    :root {
+      --primary: #122562;
+      --accent: #FFD700;
+      --secondary: #137DC5;
+      --dark: #1F2833;
+      --gray: #808080;
+      --white: #FFFFFF;
+      --light: #F8F9FC;
+      --danger: #C0392B;
+      --success: #27AE60;
+      --warning: #E67E22;
+      --sidebar-w: 280px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Trebuchet MS', Arial, sans-serif; color: var(--dark); background: var(--light); display: flex; min-height: 100vh; }
+
+    /* Sidebar */
+    .sidebar { width: var(--sidebar-w); background: var(--primary); color: var(--white); position: fixed; top: 0; left: 0; height: 100vh; overflow-y: auto; z-index: 10; }
+    .sidebar-header { padding: 24px 20px 16px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .sidebar-header h1 { font-family: Arial, sans-serif; font-size: 18px; }
+    .sidebar-header h1 span { color: var(--accent); }
+    .sidebar-header p { font-size: 12px; opacity: 0.6; margin-top: 4px; }
+    .sidebar-search { padding: 12px 16px; }
+    .sidebar-search input { width: 100%; padding: 8px 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: var(--white); font-size: 13px; outline: none; }
+    .sidebar-search input::placeholder { color: rgba(255,255,255,0.4); }
+    .sidebar-search input:focus { border-color: var(--accent); background: rgba(255,255,255,0.12); }
+    .nav-section { padding: 8px 0; }
+    .nav-section-title { padding: 8px 20px; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.4); }
+    .nav-item { display: flex; align-items: center; gap: 10px; padding: 10px 20px; cursor: pointer; transition: background 150ms; font-size: 13px; border-left: 3px solid transparent; }
+    .nav-item:hover { background: rgba(255,255,255,0.06); }
+    .nav-item.active { background: rgba(255,255,255,0.1); border-left-color: var(--accent); }
+    .nav-item .num { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,0.1); font-size: 11px; font-weight: 600; flex-shrink: 0; }
+    .nav-item.active .num { background: var(--accent); color: var(--primary); }
+    .nav-item .label { flex: 1; }
+    .nav-item .tag { font-size: 9px; padding: 2px 6px; border-radius: 9999px; background: rgba(255,255,255,0.1); }
+
+    /* Main */
+    .main { margin-left: var(--sidebar-w); flex: 1; padding: 0; }
+
+    /* Top bar */
+    .topbar { background: var(--white); padding: 16px 32px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0,0,0,0.06); position: sticky; top: 0; z-index: 5; }
+    .topbar h2 { font-family: Arial, sans-serif; font-size: 20px; color: var(--primary); }
+    .topbar .meta { font-size: 12px; color: var(--gray); display: flex; gap: 16px; }
+    .topbar .invoke-btn { background: var(--accent); color: var(--primary); border: none; padding: 8px 20px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer; font-family: Arial, sans-serif; }
+    .topbar .invoke-btn:hover { background: #E6C200; }
+
+    /* Content */
+    .content { padding: 32px; }
+    .flow-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .info-card { background: var(--white); border-radius: 8px; padding: 16px; border-left: 4px solid var(--accent); }
+    .info-card .info-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); margin-bottom: 4px; }
+    .info-card .info-value { font-size: 15px; font-weight: 600; color: var(--primary); }
+    .info-card .info-value code { background: var(--light); padding: 2px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 13px; }
+
+    /* Diagram */
+    .diagram-container { background: var(--white); border-radius: 8px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); margin-bottom: 24px; overflow-x: auto; }
+    .diagram-container h3 { font-family: Arial, sans-serif; font-size: 16px; color: var(--primary); margin-bottom: 16px; border-bottom: 2px solid var(--accent); padding-bottom: 8px; display: inline-block; }
+    .mermaid { text-align: center; }
+
+    /* Steps */
+    .steps { background: var(--white); border-radius: 8px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .steps h3 { font-family: Arial, sans-serif; font-size: 16px; color: var(--primary); margin-bottom: 16px; }
+    .step { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.04); }
+    .step:last-child { border-bottom: none; }
+    .step-num { width: 28px; height: 28px; border-radius: 50%; background: var(--primary); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; flex-shrink: 0; }
+    .step-content { flex: 1; }
+    .step-title { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+    .step-desc { font-size: 13px; color: var(--gray); }
+    .step-cmd { font-family: 'Courier New', monospace; font-size: 12px; background: var(--light); padding: 2px 8px; border-radius: 4px; color: var(--secondary); margin-top: 4px; display: inline-block; cursor: pointer; }
+    .step-cmd:hover { background: #E8EDFF; }
+
+    /* Copy toast */
+    .toast { position: fixed; bottom: 24px; right: 24px; background: var(--primary); color: var(--white); padding: 12px 24px; border-radius: 8px; font-size: 13px; opacity: 0; transition: opacity 300ms; z-index: 100; }
+    .toast.show { opacity: 1; }
+
+    @media (max-width: 900px) {
+      .sidebar { display: none; }
+      .main { margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <h1>Metodolog<span>IA</span> ACC</h1>
+    <p>BPMN Process Dashboard</p>
+  </div>
+  <div class="sidebar-search">
+    <input type="text" id="search" placeholder="Buscar flujo..." autocomplete="off">
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-title">Flujos Core</div>
+    <div class="nav-item active" data-flow="discovery" onclick="showFlow('discovery')">
+      <span class="num">1</span><span class="label">Discovery</span><span class="tag">MAO</span>
+    </div>
+    <div class="nav-item" data-flow="proposal" onclick="showFlow('proposal')">
+      <span class="num">2</span><span class="label">Propuesta</span><span class="tag">ME</span>
+    </div>
+    <div class="nav-item" data-flow="architecture" onclick="showFlow('architecture')">
+      <span class="num">3</span><span class="label">Arquitectura</span><span class="tag">SA</span>
+    </div>
+    <div class="nav-item" data-flow="project" onclick="showFlow('project')">
+      <span class="num">4</span><span class="label">Proyecto</span><span class="tag">PMO</span>
+    </div>
+    <div class="nav-item" data-flow="codereview" onclick="showFlow('codereview')">
+      <span class="num">5</span><span class="label">Code Review</span><span class="tag">PR</span>
+    </div>
+    <div class="nav-item" data-flow="feature" onclick="showFlow('feature')">
+      <span class="num">6</span><span class="label">Feature TDD</span><span class="tag">FD</span>
+    </div>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-title">Operaciones</div>
+    <div class="nav-item" data-flow="catalog" onclick="showFlow('catalog')">
+      <span class="num">7</span><span class="label">Catalogo</span><span class="tag">ME</span>
+    </div>
+    <div class="nav-item" data-flow="conversion" onclick="showFlow('conversion')">
+      <span class="num">8</span><span class="label">Conversion Docs</span><span class="tag">Scripts</span>
+    </div>
+    <div class="nav-item" data-flow="deploy" onclick="showFlow('deploy')">
+      <span class="num">9</span><span class="label">Deploy</span><span class="tag">Vercel</span>
+    </div>
+  </div>
+  <div class="nav-section">
+    <div class="nav-section-title">Cross-Plugin</div>
+    <div class="nav-item" data-flow="engagement" onclick="showFlow('engagement')">
+      <span class="num">10</span><span class="label">Full Engagement</span><span class="tag">ALL</span>
+    </div>
+  </div>
+</nav>
+
+<div class="main">
+  <div class="topbar">
+    <h2 id="flow-title">Discovery Completo</h2>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <div class="meta">
+        <span id="flow-plugin">Plugin: MAO</span>
+        <span id="flow-mode">Modo: Guided / Auto / Express</span>
+      </div>
+      <button class="invoke-btn" id="invoke-btn" onclick="copyInvoke()">Copiar Comando</button>
+    </div>
+  </div>
+
+  <div class="content" id="content">
+    <!-- Dynamically rendered -->
+  </div>
+</div>
+
+<div class="toast" id="toast">Comando copiado al portapapeles</div>
+
+<script>
+// ── Flow Data ─────────────────────────────────────────────────────────────
+
+const FLOWS = {
+  discovery: {
+    title: 'Discovery Completo',
+    plugin: 'MAO',
+    mode: 'Express / Guided / Auto',
+    invoke: 'Skill("mao:discovery")',
+    trigger: '"haz un discovery", "diagnostica el as-is"',
+    gates: 'G0, G1',
+    triad: 'Lead: discovery-conductor | Support: technical-discovery | Guardian: risk-controller',
+    diagram: `flowchart TD
+    START((Inicio)) --> INPUT[/Usuario describe necesidad/]
+    INPUT --> INTAKE[discovery-intake<br>Capturar contexto]
+    INTAKE --> G0{G0: Secrets Scan}
+    G0 -->|PASS| ROUTE[Intent Router<br>Dominio: Discovery]
+    G0 -->|FAIL| BLOCK[BLOQUEADO]
+    ROUTE --> FUND[Fase 1: Fundamentar<br>AS-IS + Diagnostico]
+    FUND --> ACEL[Fase 2: Acelerar<br>Oportunidades + Gaps]
+    ACEL --> G1{G1: Evidencia >= 70%?}
+    G1 -->|PASS| CAT[Fase 3: Catalizar<br>Solucion + Arquitectura]
+    G1 -->|FAIL| REFINAR[Refinar evidencia]
+    REFINAR --> FUND
+    CAT --> AMP[Fase 4: Amplificar<br>Roadmap + Recomendaciones]
+    AMP --> DELIVER[/Entregar reporte/]
+    DELIVER --> END_D((Fin))`,
+    steps: [
+      { title: 'Captura de contexto', desc: 'Ejecutar intake estructurado del cliente', cmd: '_templates/prompts/discovery-intake.md' },
+      { title: 'G0: Secrets Scan', desc: 'Verificar que no hay credentials expuestas', cmd: 'Automatico' },
+      { title: 'Fase 1: Fundamentar', desc: 'Mapear estado actual (AS-IS), diagnosticar', cmd: 'mao:diagnose-asis' },
+      { title: 'Fase 2: Acelerar', desc: 'Identificar oportunidades y gaps', cmd: 'mao:discovery (fase 2)' },
+      { title: 'G1: Evidencia Check', desc: 'Verificar completitud >= 70%', cmd: 'Checkpoint humano' },
+      { title: 'Fase 3: Catalizar', desc: 'Disenar solucion y arquitectura', cmd: 'mao:discovery (fase 3)' },
+      { title: 'Fase 4: Amplificar', desc: 'Generar roadmap y recomendaciones', cmd: 'mao:discovery (fase 4)' },
+      { title: 'Entregar', desc: 'Reporte + hallazgos + plan en workspace', cmd: 'Workspace auto' },
+    ]
+  },
+  proposal: {
+    title: 'Propuesta Comercial',
+    plugin: 'MetodologIA Engine',
+    mode: 'Guided / Auto',
+    invoke: 'Skill("metodologia-engine:propuesta")',
+    trigger: '"hazme una propuesta", "cotizacion para..."',
+    gates: 'G0, G3',
+    triad: 'Lead: proposal-conductor | Support: executive-pitch | Guardian: legal-guardian',
+    diagram: `flowchart TD
+    START((Inicio)) --> INPUT[/Datos del cliente/]
+    INPUT --> NORM[input-interpreter<br>Normalizar input]
+    NORM --> SELECT[service-selector<br>Match servicio]
+    SELECT --> BRAND[brand-resolver<br>own/cobrand/whitelabel]
+    BRAND --> WRITE[proposal-writer<br>Contenido ES + EN]
+    WRITE --> LEGAL{G3: Legal Guardian<br>L1-L10}
+    LEGAL -->|APPROVED| GEN[format-producer<br>10 archivos]
+    LEGAL -->|BLOCKED| FIX[Corregir blockers]
+    FIX --> WRITE
+    GEN --> FILES[HTML + DOCX + PPTX<br>+ XLSX + MD + Verify]
+    FILES --> END_P((Fin))`,
+    steps: [
+      { title: 'Normalizar input', desc: 'Convertir cualquier input a JSON estructurado', cmd: 'input-interpreter agent' },
+      { title: 'Seleccionar servicio', desc: 'Match con catalogo: slug + segmento + audiencia', cmd: 'service-selector agent' },
+      { title: 'Resolver marca', desc: 'Determinar modo: own, cobrand, o whitelabel', cmd: 'brand-resolver.js' },
+      { title: 'Redactar contenido', desc: 'Minto Complete en ES + EN', cmd: 'proposal-writer agent' },
+      { title: 'G3: Legal Gate', desc: '10 blockers + 7 warnings', cmd: 'legal-guardian agent' },
+      { title: 'Generar archivos', desc: 'HTML, DOCX, PPTX, XLSX, MD x2 + verification', cmd: 'format-producer agent' },
+    ]
+  },
+  architecture: {
+    title: 'Analisis de Arquitectura',
+    plugin: 'SA',
+    mode: 'Guided / Auto / Analyze',
+    invoke: 'Skill("sa:analyze")',
+    trigger: '"analiza esta arquitectura", "evalua el sistema"',
+    gates: 'G0, G1, G2',
+    triad: 'Lead: principal-architect | Support: solutions-architect | Guardian: security-specialist',
+    diagram: `flowchart TD
+    START((Inicio)) --> INPUT[/Codigo o sistema/]
+    INPUT --> G0{G0: Secrets Scan}
+    G0 -->|PASS| ASIS[Fase 1: AS-IS<br>Estado actual]
+    G0 -->|FAIL| BLOCK[BLOQUEADO]
+    ASIS --> FRICTION[Fase 2: Friction<br>10 categorias]
+    FRICTION --> G1{G1: Evidencia >= 70%?}
+    G1 -->|PASS| DESIGN[Fase 3: Design<br>Arquitectura propuesta]
+    G1 -->|FAIL| MORE[Mas evidencia]
+    MORE --> ASIS
+    DESIGN --> PLAN[Fase 4: Plan<br>Roadmap]
+    PLAN --> REPORT[Fase 5: Report<br>Reporte final]
+    REPORT --> END_A((Fin))`,
+    steps: [
+      { title: 'G0: Secrets Scan', desc: 'Verificar credenciales', cmd: 'Automatico' },
+      { title: 'Fase 1: AS-IS', desc: 'Mapear arquitectura actual', cmd: 'sa:analyze (fase 1)' },
+      { title: 'Fase 2: Friction', desc: 'Detectar 10 categorias de friccion', cmd: 'sa:analyze (fase 2)' },
+      { title: 'G1: Evidence Check', desc: 'Completitud >= 70%', cmd: 'Checkpoint' },
+      { title: 'Fase 3: Design', desc: 'Disenar arquitectura propuesta', cmd: 'sa:design-architecture' },
+      { title: 'Fase 4: Plan', desc: 'Roadmap de implementacion', cmd: 'sa:plan' },
+      { title: 'Fase 5: Report', desc: 'Generar reporte final con diagramas', cmd: 'sa:report' },
+    ]
+  },
+  project: {
+    title: 'Gestion de Proyecto',
+    plugin: 'PMO-APEX',
+    mode: 'Guided / Auto',
+    invoke: 'Skill("pm:init")',
+    trigger: '"planifica el proyecto", "inicia proyecto"',
+    gates: 'G0, G1',
+    triad: 'Lead: project-orchestrator | Support: implementation-planning | Guardian: risk-manager',
+    diagram: `flowchart TD
+    START((Inicio)) --> INIT[pm:init<br>Inicializar]
+    INIT --> CHARTER[pm:charter<br>Crear charter]
+    CHARTER --> PLAN[pm:planning<br>WBS + Cronograma]
+    PLAN --> G1{G1: Charter OK?}
+    G1 -->|PASS| SPRINT[Sprint Planning]
+    G1 -->|FAIL| FIX[Completar charter]
+    FIX --> CHARTER
+    SPRINT --> TRACK[Seguimiento]
+    TRACK --> REVIEW[Sprint Review]
+    REVIEW --> RETRO[Retrospectiva]
+    RETRO --> NEXT{Mas sprints?}
+    NEXT -->|Si| SPRINT
+    NEXT -->|No| CLOSE[pm:close]
+    CLOSE --> END_PM((Fin))`,
+    steps: [
+      { title: 'Inicializar', desc: 'Crear estructura de proyecto', cmd: 'pm:init' },
+      { title: 'Charter', desc: 'Definir alcance, objetivos, stakeholders', cmd: 'pm:charter' },
+      { title: 'Planning', desc: 'WBS, cronograma, recursos', cmd: 'pm:planning' },
+      { title: 'Sprint Planning', desc: 'Planificar cada sprint', cmd: 'pm:sprint-planning' },
+      { title: 'Track', desc: 'Seguimiento diario', cmd: 'pm:track' },
+      { title: 'Review + Retro', desc: 'Sprint review y retrospectiva', cmd: 'pm:review → pm:retro' },
+      { title: 'Close', desc: 'Cierre + lecciones aprendidas', cmd: 'pm:close' },
+    ]
+  },
+  codereview: {
+    title: 'Code Review + Ship',
+    plugin: 'PR-review-toolkit',
+    mode: 'Guided / Develop',
+    invoke: 'Skill("pr-review-toolkit:review-pr")',
+    trigger: '"revisa el codigo", "review PR"',
+    gates: 'G0',
+    triad: 'Lead: code-reviewer | Support: code-analyst | Guardian: security-specialist',
+    diagram: `flowchart TD
+    START((Inicio)) --> CODE[/Codigo/]
+    CODE --> G0{G0: Secrets}
+    G0 -->|PASS| REVIEW[Review principal]
+    G0 -->|FAIL| BLOCK[BLOQUEADO]
+    REVIEW --> SILENT[Silent failure hunter]
+    SILENT --> TYPES[Type analyzer]
+    TYPES --> SIMPLIFY[Simplifier]
+    SIMPLIFY --> TESTS[Test coverage]
+    TESTS --> OK{Clean?}
+    OK -->|Si| APPROVE[Aprobar]
+    OK -->|No| FIX[Listar issues]
+    FIX --> CODE
+    APPROVE --> DEPLOY{Deploy?}
+    DEPLOY -->|Si| SHIP[vercel deploy]
+    DEPLOY -->|No| END_CR((Fin))
+    SHIP --> END_CR`,
+    steps: [
+      { title: 'Review principal', desc: 'Bugs, logica, seguridad, quality', cmd: 'pr-review-toolkit:review-pr' },
+      { title: 'Silent failures', desc: 'Buscar error handling inadecuado', cmd: 'silent-failure-hunter agent' },
+      { title: 'Type analysis', desc: 'Evaluar diseno de tipos', cmd: 'type-design-analyzer agent' },
+      { title: 'Simplify', desc: 'Simplificar codigo si aplica', cmd: 'code-simplifier agent' },
+      { title: 'Test coverage', desc: 'Evaluar cobertura', cmd: 'pr-test-analyzer agent' },
+      { title: 'Deploy (opcional)', desc: 'Ship a preview o production', cmd: 'vercel deploy' },
+    ]
+  },
+  feature: {
+    title: 'Feature Development (TDD)',
+    plugin: 'Feature-dev + Superpowers',
+    mode: 'Develop',
+    invoke: 'Skill("feature-dev:feature-dev")',
+    trigger: '"implementa con TDD", "construye feature"',
+    gates: 'G0, G1',
+    triad: 'Lead: code-architect | Support: frontend/backend | Guardian: security',
+    diagram: `flowchart TD
+    START((Inicio)) --> ARCH[code-architect<br>Blueprint]
+    ARCH --> EXPLORE[code-explorer<br>Analizar codebase]
+    EXPLORE --> G0{G0: Secrets}
+    G0 -->|PASS| RED[RED: Test que falla]
+    G0 -->|FAIL| BLOCK[BLOQUEADO]
+    RED --> GREEN[GREEN: Implementar]
+    GREEN --> REFACTOR[REFACTOR: Limpiar]
+    REFACTOR --> RUN{Tests pasan?}
+    RUN -->|No| RED
+    RUN -->|Si| MORE{Mas funcionalidad?}
+    MORE -->|Si| RED
+    MORE -->|No| REVIEW[Code review]
+    REVIEW --> PR[Crear PR]
+    PR --> END_FD((Fin))`,
+    steps: [
+      { title: 'Blueprint', desc: 'Disenar arquitectura de la feature', cmd: 'feature-dev:code-architect' },
+      { title: 'Explorar', desc: 'Analizar codebase existente', cmd: 'feature-dev:code-explorer' },
+      { title: 'RED', desc: 'Escribir test que falla', cmd: 'superpowers:test-driven-development' },
+      { title: 'GREEN', desc: 'Implementar minimo para pasar', cmd: 'Implementacion' },
+      { title: 'REFACTOR', desc: 'Limpiar sin romper tests', cmd: 'Refactoring' },
+      { title: 'Review', desc: 'Code review final', cmd: 'feature-dev:code-reviewer' },
+    ]
+  },
+  catalog: {
+    title: 'Catalogo — Verificacion y Actualizacion',
+    plugin: 'MetodologIA Engine',
+    mode: 'Auto / Guided',
+    invoke: 'Skill("metodologia-engine:verificar")',
+    trigger: '"verifica el catalogo", "actualiza el catalogo"',
+    gates: 'G3 (legal)',
+    triad: 'Lead: catalog-curator | Support: legal-guardian | Guardian: risk-controller',
+    diagram: `flowchart TD
+    START((Inicio)) --> MODE{Operacion?}
+    MODE -->|Verificar| LOAD[Cargar transversales]
+    MODE -->|Actualizar| EDIT[Editar catalogo]
+    MODE -->|Derivar| DERIVE[Derivar para audiencia]
+    LOAD --> SCAN[Escanear servicios]
+    SCAN --> PRICE{Precios OK?}
+    PRICE -->|Si| LEGAL{Legal OK?}
+    PRICE -->|No| RED[RED BLOCKER]
+    LEGAL -->|Si| GREEN[GREEN]
+    LEGAL -->|No| YELLOW[YELLOW]
+    RED & YELLOW & GREEN --> REPORT[Quality Report]
+    EDIT --> CHECK[Legal check]
+    CHECK --> SAVE[Guardar]
+    DERIVE --> TRANSFORM[Transformar]
+    TRANSFORM --> AUDIT[Mini-auditoria]
+    REPORT & SAVE & AUDIT --> END_C((Fin))`,
+    steps: [
+      { title: 'Verificar', desc: 'Auditoria completa del catalogo', cmd: 'metodologia-engine:verificar' },
+      { title: 'Actualizar', desc: 'Editar servicios o precios', cmd: 'metodologia-engine:actualizar-catalogo' },
+      { title: 'Derivar', desc: 'Crear version para audiencia especifica', cmd: '_templates/prompts/content-derivation.md' },
+      { title: 'Auditar', desc: 'Escaneo legal + brand + precios', cmd: '_scripts/node/audit.js' },
+    ]
+  },
+  conversion: {
+    title: 'Conversion de Documentos',
+    plugin: '_scripts (Python + Node)',
+    mode: 'Express',
+    invoke: 'node _scripts/node/convert.js <cmd> <in> <out>',
+    trigger: '"convierte a PDF", "exporta a DOCX"',
+    gates: 'Ninguno',
+    triad: 'N/A (ejecucion directa)',
+    diagram: `flowchart TD
+    START((Inicio)) --> INPUT[/Archivo fuente/]
+    INPUT --> DETECT{Formato?}
+    DETECT -->|MD| TARGET{Destino?}
+    TARGET -->|DOCX| DOCX[convert.js md2docx]
+    TARGET -->|PDF| PDF[doc_converter.py md2pdf]
+    TARGET -->|PPTX| PPTX[convert.js md2pptx]
+    TARGET -->|XLSX| XLSX[convert.js md2xlsx]
+    TARGET -->|HTML| HTML[convert.js md2html]
+    DETECT -->|DOCX| D2M[doc_converter.py docx2md]
+    DETECT -->|XLSX| X2M[doc_converter.py xlsx2md]
+    DOCX & PDF & PPTX & XLSX & HTML --> BRAND[Brand aplicado]
+    D2M & X2M --> PLAIN[Conversion directa]
+    BRAND & PLAIN --> OUT[/Archivo generado/]
+    OUT --> END_CV((Fin))`,
+    steps: [
+      { title: 'MD → DOCX', desc: 'Markdown a Word (branded)', cmd: 'node _scripts/node/convert.js md2docx input.md output.docx' },
+      { title: 'MD → PDF', desc: 'Markdown a PDF (reportlab)', cmd: 'python _scripts/python/doc_converter.py md2pdf input.md output.pdf' },
+      { title: 'MD → PPTX', desc: 'Markdown a PowerPoint (branded)', cmd: 'node _scripts/node/convert.js md2pptx input.md output.pptx' },
+      { title: 'MD → XLSX', desc: 'Tablas markdown a Excel (branded)', cmd: 'node _scripts/node/convert.js md2xlsx input.md output.xlsx' },
+      { title: 'MD → HTML', desc: 'Markdown a HTML (con template)', cmd: 'node _scripts/node/convert.js md2html input.md output.html --template report' },
+      { title: 'Auditar', desc: 'Red-list + brand + precios', cmd: 'node _scripts/node/audit.js documento.md' },
+    ]
+  },
+  deploy: {
+    title: 'Deploy a Produccion',
+    plugin: 'Vercel',
+    mode: 'Guided / Develop',
+    invoke: 'Skill("vercel:deploy")',
+    trigger: '"deployea esto", "ship a produccion"',
+    gates: 'G0',
+    triad: 'Lead: deployment-expert | Support: deployment-strategy | Guardian: security-specialist',
+    diagram: `flowchart TD
+    START((Inicio)) --> CODE[/Codigo listo/]
+    CODE --> G0{G0: Secrets}
+    G0 -->|PASS| PREVIEW[vercel deploy<br>Preview URL]
+    G0 -->|FAIL| BLOCK[BLOQUEADO]
+    PREVIEW --> TEST{Tests OK?}
+    TEST -->|Si| VISUAL[Review visual]
+    TEST -->|No| FIX[Corregir]
+    FIX --> PREVIEW
+    VISUAL --> OK{Aprobado?}
+    OK -->|Si| PROD[vercel --prod]
+    OK -->|No| FIX
+    PROD --> HEALTH{Healthy?}
+    HEALTH -->|Si| DONE[Deploy exitoso]
+    HEALTH -->|No| ROLL[vercel rollback]
+    ROLL --> DONE
+    DONE --> END_DP((Fin))`,
+    steps: [
+      { title: 'G0: Secrets', desc: 'Scan de credenciales', cmd: 'Automatico' },
+      { title: 'Preview', desc: 'Deploy a preview URL', cmd: 'vercel deploy' },
+      { title: 'Test', desc: 'Ejecutar tests en preview', cmd: 'Tests automaticos' },
+      { title: 'Review visual', desc: 'Verificar en preview URL', cmd: 'Preview URL' },
+      { title: 'Production', desc: 'Deploy a produccion', cmd: 'vercel --prod' },
+      { title: 'Monitor', desc: 'Verificar salud del deploy', cmd: 'vercel logs' },
+    ]
+  },
+  engagement: {
+    title: 'Full Client Engagement',
+    plugin: 'ALL (Cross-Plugin)',
+    mode: 'Guided / Auto',
+    invoke: '"engagement completo" (workflow cross-plugin)',
+    trigger: '"engagement completo", "de discovery a produccion"',
+    gates: 'G0, G1, G3',
+    triad: 'Multiple triads por fase',
+    diagram: `flowchart TD
+    START((Inicio)) --> INTAKE[Intake de cliente]
+    INTAKE --> DISC[mao:discovery<br>4 fases]
+    DISC --> G1{G1: Discovery OK?}
+    G1 -->|PASS| PROP[metodologia-engine:propuesta<br>Pipeline completo]
+    G1 -->|FAIL| MORE[Mas datos]
+    MORE --> DISC
+    PROP --> G3{G3: Legal + Brand?}
+    G3 -->|PASS| CHART[pm:charter]
+    G3 -->|FAIL| FIX[Corregir]
+    FIX --> PROP
+    CHART --> PLAN[pm:planning]
+    PLAN --> ARCH[sa:design-architecture]
+    ARCH --> BUILD[feature-dev:feature-dev]
+    BUILD --> REVIEW[pr-review-toolkit:review-pr]
+    REVIEW --> DEPLOY[vercel:deploy]
+    DEPLOY --> CLOSE[pm:close]
+    CLOSE --> END_E((Fin))`,
+    steps: [
+      { title: 'Intake', desc: 'Captura estructurada del cliente', cmd: '_templates/prompts/discovery-intake.md' },
+      { title: 'Discovery', desc: '4 fases: Fundamentar → Acelerar → Catalizar → Amplificar', cmd: 'mao:discovery' },
+      { title: 'Propuesta', desc: 'Pipeline de propuesta con legal gate', cmd: 'metodologia-engine:propuesta' },
+      { title: 'Charter', desc: 'Crear charter de proyecto', cmd: 'pm:charter' },
+      { title: 'Planning', desc: 'WBS + cronograma', cmd: 'pm:planning' },
+      { title: 'Arquitectura', desc: 'Diseno tecnico', cmd: 'sa:design-architecture' },
+      { title: 'Build', desc: 'Implementacion con TDD', cmd: 'feature-dev:feature-dev' },
+      { title: 'Review', desc: 'Code review exhaustivo', cmd: 'pr-review-toolkit:review-pr' },
+      { title: 'Deploy', desc: 'Ship a produccion', cmd: 'vercel:deploy' },
+      { title: 'Close', desc: 'Cierre + lecciones aprendidas', cmd: 'pm:close' },
+    ]
+  }
+};
+
+// ── Render ───────────────────────────────────────────────────────────────
+
+let currentFlow = 'discovery';
+let currentInvoke = '';
+
+function showFlow(id) {
+  currentFlow = id;
+  const flow = FLOWS[id];
+  currentInvoke = flow.invoke;
+
+  // Update sidebar
+  document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+  document.querySelector(`.nav-item[data-flow="${id}"]`).classList.add('active');
+
+  // Update topbar
+  document.getElementById('flow-title').textContent = flow.title;
+  document.getElementById('flow-plugin').textContent = 'Plugin: ' + flow.plugin;
+  document.getElementById('flow-mode').textContent = 'Modo: ' + flow.mode;
+
+  // Build content
+  const html = `
+    <div class="flow-info">
+      <div class="info-card">
+        <div class="info-label">Invocar</div>
+        <div class="info-value"><code>${flow.invoke}</code></div>
+      </div>
+      <div class="info-card">
+        <div class="info-label">Trigger Natural</div>
+        <div class="info-value">${flow.trigger}</div>
+      </div>
+      <div class="info-card">
+        <div class="info-label">Gates</div>
+        <div class="info-value">${flow.gates}</div>
+      </div>
+      <div class="info-card">
+        <div class="info-label">Triad</div>
+        <div class="info-value" style="font-size:12px;">${flow.triad}</div>
+      </div>
+    </div>
+
+    <div class="diagram-container">
+      <h3>Flujo BPMN</h3>
+      <pre class="mermaid">${flow.diagram}</pre>
+    </div>
+
+    <div class="steps">
+      <h3>Pasos de Ejecucion</h3>
+      ${flow.steps.map((s, i) => `
+        <div class="step">
+          <div class="step-num">${i + 1}</div>
+          <div class="step-content">
+            <div class="step-title">${s.title}</div>
+            <div class="step-desc">${s.desc}</div>
+            <span class="step-cmd" onclick="copyText('${s.cmd}')">${s.cmd}</span>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+
+  document.getElementById('content').innerHTML = html;
+
+  // Re-render mermaid
+  mermaid.run({ querySelector: '.mermaid' });
+}
+
+function copyInvoke() {
+  copyText(currentInvoke);
+}
+
+function copyText(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    const toast = document.getElementById('toast');
+    toast.textContent = 'Copiado: ' + text;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+  });
+}
+
+// ── Search ──────────────────────────────────────────────────────────────
+
+document.getElementById('search').addEventListener('input', function(e) {
+  const q = e.target.value.toLowerCase();
+  document.querySelectorAll('.nav-item').forEach(el => {
+    const label = el.querySelector('.label').textContent.toLowerCase();
+    const tag = el.querySelector('.tag').textContent.toLowerCase();
+    const flowId = el.dataset.flow;
+    const flow = FLOWS[flowId];
+    const match = label.includes(q) || tag.includes(q) || flow.trigger.toLowerCase().includes(q) || flow.invoke.toLowerCase().includes(q);
+    el.style.display = match ? '' : 'none';
+  });
+});
+
+// ── Init ────────────────────────────────────────────────────────────────
+
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'base',
+  themeVariables: {
+    primaryColor: '#E8EDFF',
+    primaryTextColor: '#122562',
+    primaryBorderColor: '#122562',
+    lineColor: '#137DC5',
+    secondaryColor: '#FFF8DC',
+    tertiaryColor: '#F8F9FC',
+    fontFamily: 'Trebuchet MS, Arial, sans-serif',
+    fontSize: '13px',
+  }
+});
+
+showFlow('discovery');
+</script>
+
+</body>
+</html>

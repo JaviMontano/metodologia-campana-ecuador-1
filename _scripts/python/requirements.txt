@@ -1,0 +1,30 @@
+# MetodologIA — Python Dependencies for Document & Data Manipulation
+# Install: pip install -r requirements.txt
+# Or per-group: pip install -r requirements.txt --only-deps <group>
+
+# ── Document Generation ─────────────────────────────────────────────────────
+python-docx>=1.1.0          # DOCX creation & manipulation
+openpyxl>=3.1.5             # XLSX creation & manipulation (branded spreadsheets)
+reportlab>=4.1              # PDF generation (branded reports, certificates)
+python-pptx>=0.6.23         # PPTX creation & manipulation (slide decks)
+markdown>=3.6               # Markdown → HTML conversion with extensions
+
+# ── Data Manipulation ───────────────────────────────────────────────────────
+PyYAML>=6.0.1               # YAML parsing (catalog files, configs)
+pandas>=2.2                 # DataFrames for tabular data analysis
+tabulate>=0.9               # Pretty-print tables in terminal/markdown
+
+# ── PDF Reading & Extraction ────────────────────────────────────────────────
+PyPDF2>=3.0                 # PDF reading, merging, splitting
+pdfplumber>=0.11            # PDF text/table extraction (layout-aware)
+
+# ── HTML/Web ─────────────────────────────────────────────────────────────────
+beautifulsoup4>=4.12        # HTML parsing & manipulation
+lxml>=5.2                   # Fast XML/HTML parser (BeautifulSoup backend)
+Jinja2>=3.1                 # Template engine (alternative to Handlebars)
+
+# ── Image Processing (optional) ─────────────────────────────────────────────
+Pillow>=10.3                # Image manipulation (logos, charts in documents)
+
+# ── R Integration (optional) ────────────────────────────────────────────────
+# rpy2>=3.5                 # Python ↔ R bridge (uncomment if R is installed)

@@ -1,0 +1,23 @@
+{
+  "_comment": "Template para session-state.json. Copiar a session-state.json al inicio de la primera sesion.",
+  "version": "2.0",
+  "last_session": {
+    "date": null,
+    "mode": "guided",
+    "summary": null
+  },
+  "active_workspace": {
+    "path": null,
+    "workflow": null,
+    "current_step": null,
+    "total_steps": null,
+    "gate_pending": null
+  },
+  "por_confirmar_open": [],
+  "recent_domains": [],
+  "preferences": {
+    "default_mode": "guided",
+    "language": "es",
+    "bilingual_output": true
+  }
+}

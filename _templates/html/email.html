@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{subject}}</title>
+  <!--[if mso]><noscript><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml></noscript><![endif]-->
+  <style>
+    /* Reset for email clients */
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    body { margin: 0; padding: 0; width: 100% !important; }
+    /* Brand */
+    .brand-navy { background-color: #122562; }
+    .brand-gold { color: #FFD700; }
+    .brand-blue { color: #137DC5; }
+    .text-white { color: #FFFFFF; }
+    .text-dark { color: #1F2833; }
+    .text-gray { color: #808080; }
+    .bg-light { background-color: #F8F9FC; }
+  </style>
+</head>
+<body style="margin:0; padding:0; background-color:#F8F9FC;">
+  <!-- Wrapper -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#F8F9FC;">
+    <tr>
+      <td align="center" style="padding: 24px 16px;">
+        <!-- Container 600px -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px; width:100%; background-color:#FFFFFF; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+
+          <!-- Header -->
+          <tr>
+            <td class="brand-navy" style="background-color:#122562; padding:24px 32px; text-align:center;">
+              <span style="color:#FFFFFF; font-family:Arial,sans-serif; font-size:20px; font-weight:bold;">Metodolog</span><span style="color:#FFD700; font-family:Arial,sans-serif; font-size:20px; font-weight:bold;">IA</span>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:32px;">
+              <h1 style="font-family:Arial,sans-serif; font-size:22px; color:#122562; margin:0 0 16px;">{{heading}}</h1>
+              <p style="font-family:'Trebuchet MS',Arial,sans-serif; font-size:15px; color:#1F2833; line-height:1.6; margin:0 0 16px;">{{greeting}}</p>
+              <p style="font-family:'Trebuchet MS',Arial,sans-serif; font-size:15px; color:#1F2833; line-height:1.6; margin:0 0 24px;">{{body_text}}</p>
+
+              <!-- CTA Button -->
+              <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+                <tr>
+                  <td style="background-color:#FFD700; border-radius:6px; padding:14px 32px; text-align:center;">
+                    <a href="{{cta_url}}" style="font-family:Arial,sans-serif; font-size:15px; font-weight:bold; color:#122562; text-decoration:none; display:inline-block;">{{cta_text}}</a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="font-family:'Trebuchet MS',Arial,sans-serif; font-size:14px; color:#808080; line-height:1.6; margin:24px 0 0;">{{closing}}</p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color:#F8F9FC; padding:20px 32px; text-align:center; border-top:1px solid rgba(0,0,0,0.06);">
+              <p style="font-family:Arial,sans-serif; font-size:11px; color:#808080; margin:0;">{{footer_text}}</p>
+              <p style="font-family:Arial,sans-serif; font-size:11px; color:#808080; margin:4px 0 0;">{{company_address}}</p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

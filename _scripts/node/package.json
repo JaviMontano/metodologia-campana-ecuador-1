@@ -1,0 +1,29 @@
+{
+  "name": "metodologia-scripts",
+  "version": "1.0.0",
+  "description": "MetodologIA utility scripts for document generation, data processing, and automation",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "md2docx": "node md-to-docx.js",
+    "md2pptx": "node md-to-pptx.js",
+    "md2html": "node md-to-html.js",
+    "md2xlsx": "node md-to-xlsx.js",
+    "convert": "node convert.js",
+    "audit": "node audit.js"
+  },
+  "dependencies": {
+    "docx": "^9.6.1",
+    "pptxgenjs": "^4.0.1",
+    "handlebars": "^4.7.8",
+    "js-yaml": "^4.1.0",
+    "exceljs": "^4.4.0",
+    "marked": "^12.0.0",
+    "jszip": "^3.10.1",
+    "csv-parse": "^5.5.0",
+    "nanoid": "^3.3.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  }
+}

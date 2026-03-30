@@ -1,0 +1,32 @@
+/**
+ * print.css — Print-optimized stylesheet for MetodologIA documents
+ * Add after brand-base.css: <link rel="stylesheet" href="print.css" media="print">
+ */
+@media print {
+  @page {
+    size: A4;
+    margin: 20mm 15mm 25mm 15mm;
+  }
+  @page :first { margin-top: 0; }
+
+  body { font-size: 11pt; line-height: 1.5; color: #000; background: #fff; }
+  h1 { font-size: 22pt; page-break-after: avoid; }
+  h2 { font-size: 16pt; page-break-after: avoid; margin-top: 18pt; }
+  h3 { font-size: 13pt; page-break-after: avoid; }
+  p, li { orphans: 3; widows: 3; }
+  table { page-break-inside: avoid; font-size: 9pt; }
+  thead { display: table-header-group; }
+  tr { page-break-inside: avoid; }
+  img { max-width: 100% !important; page-break-inside: avoid; }
+  pre, code { font-size: 9pt; word-wrap: break-word; white-space: pre-wrap; }
+
+  .no-print, nav, .btn, button { display: none !important; }
+  a { text-decoration: none; color: #000; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8pt; color: #666; }
+  a[href^="#"]::after { content: ""; }
+
+  .header, .report-header { background: #122562 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .badge { border: 1px solid currentColor; }
+  .card { box-shadow: none; border: 1px solid #ccc; page-break-inside: avoid; }
+  .kpi-grid { grid-template-columns: repeat(4, 1fr); }
+}

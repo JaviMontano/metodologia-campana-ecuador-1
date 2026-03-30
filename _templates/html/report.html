@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="../css/brand-base.css">
+  <style>
+    .report-header { background: var(--gradient-hero); padding: var(--space-16) 0 var(--space-12); color: var(--white); }
+    .report-header h1 { font-family: var(--font-display); font-size: var(--text-4xl); margin-bottom: var(--space-2); }
+    .report-header .subtitle { font-size: var(--text-lg); opacity: 0.85; }
+    .report-meta { display: flex; gap: var(--space-8); margin-top: var(--space-6); font-size: var(--text-sm); opacity: 0.7; }
+    .report-body { max-width: var(--content-max); margin: 0 auto; padding: var(--space-8) var(--container-pad); }
+    .section { margin-bottom: var(--space-12); }
+    .section h2 { font-family: var(--font-display); font-size: var(--text-2xl); color: var(--primary); border-bottom: 3px solid var(--accent); padding-bottom: var(--space-2); display: inline-block; margin-bottom: var(--space-6); }
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4); margin-bottom: var(--space-8); }
+    .kpi-card { background: var(--white); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: var(--space-6); text-align: center; box-shadow: var(--shadow-sm); }
+    .kpi-card .value { font-size: var(--text-4xl); font-weight: var(--weight-bold); color: var(--primary); }
+    .kpi-card .label { font-size: var(--text-sm); color: var(--gray); margin-top: var(--space-1); }
+    table { width: 100%; border-collapse: collapse; margin: var(--space-4) 0; }
+    th { background: var(--primary); color: var(--white); padding: var(--space-3) var(--space-4); text-align: left; font-family: var(--font-display); font-size: var(--text-sm); }
+    td { padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--border-light); font-size: var(--text-sm); }
+    tr:nth-child(even) { background: var(--light); }
+    .status-red { color: var(--danger); font-weight: var(--weight-semibold); }
+    .status-yellow { color: var(--warning); font-weight: var(--weight-semibold); }
+    .status-green { color: var(--success); font-weight: var(--weight-semibold); }
+    .footer { background: var(--light); padding: var(--space-6); text-align: center; font-size: var(--text-xs); color: var(--gray); margin-top: var(--space-16); }
+    @media print {
+      .report-header { background: var(--primary) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .kpi-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="report-header">
+    <div class="report-body">
+      <h1>{{title}}</h1>
+      <p class="subtitle">{{subtitle}}</p>
+      <div class="report-meta">
+        <span>{{date}}</span>
+        <span>{{author}}</span>
+        <span>{{version}}</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="report-body">
+    <!-- KPI Summary -->
+    <section class="section">
+      <h2>Resumen Ejecutivo</h2>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="value">{{kpi_1_value}}</div>
+          <div class="label">{{kpi_1_label}}</div>
+        </div>
+        <div class="kpi-card">
+          <div class="value">{{kpi_2_value}}</div>
+          <div class="label">{{kpi_2_label}}</div>
+        </div>
+        <div class="kpi-card">
+          <div class="value">{{kpi_3_value}}</div>
+          <div class="label">{{kpi_3_label}}</div>
+        </div>
+        <div class="kpi-card">
+          <div class="value">{{kpi_4_value}}</div>
+          <div class="label">{{kpi_4_label}}</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Table -->
+    <section class="section">
+      <h2>{{table_title}}</h2>
+      <table>
+        <thead>
+          <tr>
+            <!-- Replace with actual column headers -->
+            <th>Item</th>
+            <th>Estado</th>
+            <th>Detalle</th>
+            <th>Severidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Populate rows dynamically -->
+          <tr>
+            <td>{{item}}</td>
+            <td class="status-{{severity}}">{{status}}</td>
+            <td>{{detail}}</td>
+            <td>{{severity_label}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Findings -->
+    <section class="section">
+      <h2>Hallazgos</h2>
+      <p>{{findings_content}}</p>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="section">
+      <h2>Recomendaciones</h2>
+      <p>{{recommendations_content}}</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Generado por MetodologIA Engine &middot; {{date}} &middot; Confidencial</p>
+  </footer>
+</body>
+</html>

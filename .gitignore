@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Large binary assets (3.9GB+ TheFutur materials)
+inputs-relevantes/TheFutur*/
+inputs-relevantes/**/*.zip
+inputs-relevantes/**/*.mp4
+
+# OS artifacts
+__MACOSX/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment & secrets
+.env
+.env.*
+*.local
+
+# IDE
+.vscode/
+.idea/
+
+# Playwright logs
+.playwright-mcp/
+
+# Session state (runtime-generated)
+session-state.json
+
+# Claude Code local settings (keep skills, exclude local prefs)
+.claude/settings.local.json
+.claude/launch.json
+
+# Reports (generated, not source)
+reportes/
+
+# Plugin release archives
+*.zip
+
+# Generated proposal outputs (DOCX, PPTX, XLSX — regenerable)
+propuesta-*/outputs/es/
+propuesta-*/outputs/en/
+
+# Large reference PDFs (>10MB)
+Referential Documents/

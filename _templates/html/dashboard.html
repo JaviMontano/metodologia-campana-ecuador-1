@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} — Dashboard</title>
+  <link rel="stylesheet" href="../css/brand-base.css">
+  <style>
+    body { background: var(--light); }
+    .dashboard { max-width: 1200px; margin: 0 auto; padding: var(--space-6); }
+    .dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-8); }
+    .dash-header h1 { font-family: var(--font-display); font-size: var(--text-2xl); color: var(--primary); }
+    .dash-header .date { font-size: var(--text-sm); color: var(--gray); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-4); margin-bottom: var(--space-8); }
+    .card { background: var(--white); border-radius: var(--radius-md); padding: var(--space-6); box-shadow: var(--shadow-sm); border-left: 4px solid var(--accent); }
+    .card .metric { font-size: var(--text-3xl); font-weight: var(--weight-bold); color: var(--primary); }
+    .card .label { font-size: var(--text-sm); color: var(--gray); margin-top: var(--space-1); }
+    .card .trend { font-size: var(--text-xs); margin-top: var(--space-2); }
+    .trend-up { color: var(--success); }
+    .trend-down { color: var(--danger); }
+    .panel { background: var(--white); border-radius: var(--radius-md); padding: var(--space-6); box-shadow: var(--shadow-sm); margin-bottom: var(--space-6); }
+    .panel h2 { font-family: var(--font-display); font-size: var(--text-xl); color: var(--primary); margin-bottom: var(--space-4); }
+    .progress-bar { height: 8px; background: var(--light); border-radius: var(--radius-full); overflow: hidden; margin: var(--space-2) 0; }
+    .progress-fill { height: 100%; background: var(--accent); border-radius: var(--radius-full); transition: width var(--transition-normal); }
+    .list-item { display: flex; justify-content: space-between; align-items: center; padding: var(--space-3) 0; border-bottom: 1px solid var(--border-light); }
+    .list-item:last-child { border-bottom: none; }
+    @media (max-width: 768px) { .cards { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <header class="dash-header">
+      <h1>{{title}}</h1>
+      <span class="date">{{date}}</span>
+    </header>
+
+    <div class="cards">
+      <div class="card">
+        <div class="metric">{{metric_1}}</div>
+        <div class="label">{{label_1}}</div>
+        <div class="trend trend-up">{{trend_1}}</div>
+      </div>
+      <div class="card">
+        <div class="metric">{{metric_2}}</div>
+        <div class="label">{{label_2}}</div>
+        <div class="trend trend-up">{{trend_2}}</div>
+      </div>
+      <div class="card">
+        <div class="metric">{{metric_3}}</div>
+        <div class="label">{{label_3}}</div>
+        <div class="trend trend-down">{{trend_3}}</div>
+      </div>
+      <div class="card">
+        <div class="metric">{{metric_4}}</div>
+        <div class="label">{{label_4}}</div>
+        <div class="trend">{{trend_4}}</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Progreso</h2>
+      <div class="list-item">
+        <span>{{task_1}}</span>
+        <span>{{pct_1}}%</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" style="width: {{pct_1}}%"></div></div>
+      <div class="list-item">
+        <span>{{task_2}}</span>
+        <span>{{pct_2}}%</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" style="width: {{pct_2}}%"></div></div>
+    </div>
+
+    <div class="panel">
+      <h2>Actividad Reciente</h2>
+      <div class="list-item"><span>{{activity_1}}</span><span class="date">{{activity_1_date}}</span></div>
+      <div class="list-item"><span>{{activity_2}}</span><span class="date">{{activity_2_date}}</span></div>
+      <div class="list-item"><span>{{activity_3}}</span><span class="date">{{activity_3_date}}</span></div>
+    </div>
+  </div>
+</body>
+</html>
