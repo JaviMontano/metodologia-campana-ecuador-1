@@ -634,6 +634,32 @@
   </nav>
 
   <!-- ====================================================================
+       INTRO LETTER (subtle, personal)
+       ==================================================================== -->
+  <section class="section-pad" style="min-height:auto;padding-top:6rem;padding-bottom:3rem;">
+    <div class="max-w-2xl mx-auto px-6 reveal">
+      <div class="glass p-10 rounded-2xl" style="border-color:rgba(255,215,0,0.1);">
+        <p class="text-xs uppercase tracking-widest font-bold mb-6" style="color:var(--gold);">Carta Personal</p>
+        <div class="text-sm leading-relaxed space-y-4" style="color:var(--text-secondary);">
+          <p>Le escribo porque creo que usted esta listo para operar de otra manera.</p>
+          <p>No le envio un catalogo de cursos. Le presento un sistema de trabajo agentico — disenado a medida — que va a cambiar como usa su tiempo, como toma decisiones, y como escala su impacto. Sin depender de nadie mas que de usted mismo y de la tecnologia que le pertenece.</p>
+          <p>Este documento es una invitacion. Puede recorrerlo en 3 minutos (modo ejecutivo) o en 15 (modo detallado). Al final, encontrara dos caminos: reservar su plaza o probar gratis primero con un workshop. Ambos son validos. Ninguno tiene compromiso.</p>
+          <p style="color:var(--text-primary);font-weight:600;">Solo hay 5 plazas. Y usted esta leyendo esto por una razon.</p>
+        </div>
+        <div class="mt-6 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background:linear-gradient(135deg,#FFD700,#FFA000);">
+            <span class="text-sm font-bold" style="color:#0B2545;">JM</span>
+          </div>
+          <div>
+            <p class="text-sm font-bold" style="color:var(--text-primary);">MetodologIA</p>
+            <p class="text-xs" style="color:var(--text-muted);">contacto@metodologia.info</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
        SECTION 2: HERO (always visible, min-height: 100vh)
        ==================================================================== -->
   <section id="hero" class="min-h-screen flex items-center section-pad pt-32 relative overflow-hidden">
@@ -717,10 +743,10 @@
               <button onclick="event.stopPropagation();openInfo('investment')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button>
             </div>
             <div class="flex items-baseline gap-3 mb-1">
-              <span class="font-heading text-2xl font-bold price-strike" style="color:var(--text-muted);">$2,500 USD</span>
+              <span class="font-heading text-2xl font-bold price-strike" style="color:var(--text-muted);">$1,997 USD</span>
             </div>
             <div class="flex items-baseline gap-2 mb-2">
-              <span class="font-heading text-5xl font-black gold-text">$1,500</span>
+              <span class="font-heading text-5xl font-black gold-text">$1,197</span>
               <span class="text-sm font-semibold" style="color:var(--gold);">USD</span>
             </div>
             <p class="text-xs mb-6" style="color:var(--text-muted);" data-i18n="hero.card.rate">
@@ -746,7 +772,7 @@
               </li>
               <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);">
                 <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>
-                <span data-i18n="hero.card.c5">Valor separado: $5,200+ USD</span>
+                <span data-i18n="hero.card.c5">Valor separado: $4,511+ USD</span>
               </li>
             </ul>
 
@@ -910,26 +936,27 @@
   </section>
 
   <!-- ====================================================================
-       SECTION 5: JOURNEY — 4 LEVELS (always visible)
+       SECTION 5: JOURNEY — 2 MOMENTOS + 1 UPGRADE (always visible)
        ==================================================================== -->
   <section id="journey" class="section-pad" style="background:var(--bg-secondary);">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16 reveal">
         <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="journey.hook">Su Camino</p>
-        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="journey.title">4 Niveles de Profundidad</h2>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="journey.title">2 Momentos + 1 Upgrade</h2>
         <div class="gold-divider"></div>
       </div>
 
-      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
 
-        <!-- Level 0: Exploracion -->
+        <!-- Momento 0: Workshop -->
         <div class="glass p-7 rounded-2xl reveal level-card flex flex-col">
           <div class="flex items-center gap-2 mb-4">
             <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">0</span>
             <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);" data-i18n="journey.l0.tag">Exploracion</span>
           </div>
           <div class="flex items-center justify-between"><h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l0.title">Workshop Gratuito</h3><button onclick="event.stopPropagation();openInfo('level-0')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
-          <p class="text-2xl font-heading font-black gold-text mb-3" data-i18n="journey.l0.price">Gratis</p>
+          <p class="text-sm mb-1 font-medium" style="color:var(--text-secondary);" data-i18n="journey.l0.price">Sin costo</p>
+          <p class="text-xs mb-3" style="color:var(--text-muted);">(sin costo, sin compromiso)</p>
           <p class="text-sm mb-4 flex-1" style="color:var(--text-secondary);" data-i18n="journey.l0.desc">
             "De Ocupado a Productivo con Agentes de IA". 3h, Semana Santa. No es solo presentacion. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM.
           </p>
@@ -938,57 +965,40 @@
           </button>
         </div>
 
-        <!-- Level 1: Asistentes a Medida -->
-        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col">
-          <div class="flex items-center gap-2 mb-4">
-            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">1</span>
-            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);" data-i18n="journey.l1.tag">A Medida</span>
-          </div>
-          <div class="flex items-center justify-between"><h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l1.title">Asistentes a Medida</h3><button onclick="event.stopPropagation();openInfo('level-1')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
-          <p class="text-2xl font-heading font-black gold-text mb-1">$400 <span class="text-sm font-normal" style="color:var(--text-muted);">USD c/u</span></p>
-          <p class="text-xs mb-4" style="color:var(--text-muted);" data-i18n="journey.l1.rate">(tasa indicativa, sujeta a variacion)</p>
-          <p class="text-sm mb-4 flex-1" style="color:var(--text-secondary);" data-i18n="journey.l1.desc">
-            QBR, Strategic Planning, OKR Tracking, KPI Tracking y mas. Asistentes disenados para su operacion especifica. Los 13 asistentes base del bootcamp son gratuitos.
-          </p>
-          <button onclick="scrollToEl('servicios')" class="btn-ghost mt-auto w-full justify-center py-2.5 text-sm">
-            <span data-i18n="journey.l1.cta">Ver servicios</span>
-          </button>
-        </div>
-
-        <!-- Level 2: CAO Bootcamp — HIGHLIGHTED -->
+        <!-- Momento 1: CAO Bootcamp — HIGHLIGHTED (PRIMARY) -->
         <div class="glass p-7 rounded-2xl reveal level-card highlighted flex flex-col relative overflow-hidden">
           <div class="absolute top-4 right-4">
             <span class="px-3 py-1 rounded-full text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#0B2545;" data-i18n="journey.l2.badge">Recomendado</span>
           </div>
           <div class="flex items-center gap-2 mb-4">
-            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#0B2545;">2</span>
-            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--gold);" data-i18n="journey.l2.tag">CAO Bootcamp</span>
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#0B2545;">1</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--gold);">Momento 1: Su Sistema Agentico</span>
           </div>
           <div class="flex items-center justify-between"><h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l2.title">Edicion Creyentes</h3><button onclick="event.stopPropagation();openInfo('level-2')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
           <div class="flex items-baseline gap-2 mb-1">
-            <span class="text-lg font-heading font-bold price-strike" style="color:var(--text-muted);">$2,500</span>
-            <span class="text-3xl font-heading font-black gold-text">$1,500</span>
+            <span class="text-lg font-heading font-bold price-strike" style="color:var(--text-muted);">$1,997</span>
+            <span class="text-3xl font-heading font-black gold-text">$1,197</span>
             <span class="text-sm" style="color:var(--text-muted);">USD</span>
           </div>
           <p class="text-xs mb-4" style="color:var(--text-muted);" data-i18n="journey.l2.rate">(tasa indicativa, sujeta a variacion)</p>
           <p class="text-sm mb-4 flex-1" style="color:var(--text-secondary);" data-i18n="journey.l2.desc">
-            9 talleres x 2h. Incluye los 13 asistentes, agente Pristino, segundo cerebro digital, networking Q3 ejecutivos. Valor si se comprase por separado: $5,200+ USD.
+            9 talleres x 2h. Incluye los 13 asistentes, agente Pristino, segundo cerebro digital, networking Q3 ejecutivos. Valor si se comprase por separado: $4,511+ USD.
           </p>
           <button onclick="openModal('reserve')" class="btn-gold mt-auto w-full justify-center py-2.5 text-sm">
             <span data-i18n="journey.l2.cta">Reservar Plaza</span>
           </button>
         </div>
 
-        <!-- Level 3: Empoderamiento -->
-        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col">
+        <!-- Upgrade: Empoderamiento — positioned as upgrade -->
+        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col" style="border-color:rgba(255,215,0,0.08);">
           <div class="flex items-center gap-2 mb-4">
-            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">3</span>
-            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);" data-i18n="journey.l3.tag">Empoderamiento</span>
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);"><i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Si elige el camino CAO</span>
           </div>
           <div class="flex items-center justify-between"><h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l3.title">Programa Completo</h3><button onclick="event.stopPropagation();openInfo('level-3')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
           <div class="flex items-baseline gap-2 mb-1">
-            <span class="text-lg font-heading font-bold price-strike" style="color:var(--text-muted);">$2,000</span>
-            <span class="text-2xl font-heading font-black gold-text">$1,600</span>
+            <span class="text-lg font-heading font-bold price-strike" style="color:var(--text-muted);">$1,897</span>
+            <span class="text-2xl font-heading font-black gold-text">$1,497</span>
             <span class="text-sm" style="color:var(--text-muted);">USD</span>
           </div>
           <p class="text-xs mb-4" style="color:var(--text-muted);" data-i18n="journey.l3.rate">(tasa indicativa, sujeta a variacion) con 20% desc. CAO</p>
@@ -998,6 +1008,17 @@
           <button onclick="scrollToEl('configurador')" class="btn-ghost mt-auto w-full justify-center py-2.5 text-sm">
             <span data-i18n="journey.l3.cta">Configurar</span>
           </button>
+        </div>
+      </div>
+
+      <!-- Note: Asistentes a Medida -->
+      <div class="max-w-3xl mx-auto mt-8 reveal">
+        <div class="glass p-5 rounded-xl flex items-center gap-4" style="border-color:rgba(255,215,0,0.08);">
+          <i data-lucide="puzzle" class="w-5 h-5 flex-shrink-0" style="color:var(--gold);"></i>
+          <div>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);" data-i18n="journey.l1.title">Asistentes a Medida</p>
+            <p class="text-xs" style="color:var(--text-secondary);">$347 USD c/u — QBR, Strategic Planning, OKR Tracking y mas. Los 13 asistentes base del bootcamp ya estan incluidos. <a href="#servicios" onclick="scrollToEl('servicios')" class="underline" style="color:var(--gold);">Ver servicios</a></p>
+          </div>
         </div>
       </div>
 
@@ -1117,7 +1138,114 @@
 
       <!-- Punchline -->
       <div class="punchline reveal">
-        <a href="#metodologias" data-i18n="mod.punchline">Vea las metodologias</a>
+        <a href="#objeciones" data-i18n="mod.punchline">Vea las metodologias</a>
+        <div class="mt-3 bounce-slow inline-block">
+          <i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       OBJECIONES (new section)
+       ==================================================================== -->
+  <section id="objeciones" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Transparencia</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Lo que probablemente esta pensando</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-6">
+        <!-- Objection 1 -->
+        <div class="glass p-7 rounded-2xl reveal">
+          <h3 class="font-heading text-lg font-bold mb-3" style="color:var(--text-primary);">
+            <i data-lucide="clock" class="w-5 h-5 inline mr-2" style="color:var(--gold);"></i>
+            "No tengo tiempo para otro programa"
+          </h3>
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary);">Entendido. Por eso el CAO Bootcamp no es un programa academico con tareas. Son 2 horas por semana donde construimos su sistema EN VIVO. No hay trabajo extra: usted llega, co-creamos, y lo que se construye en sesion es lo que opera despues. Si no tuviera tiempo, seria exactamente la persona que mas lo necesita — porque su agente va a devolverle esas horas.</p>
+        </div>
+
+        <!-- Objection 2 -->
+        <div class="glass p-7 rounded-2xl reveal">
+          <h3 class="font-heading text-lg font-bold mb-3" style="color:var(--text-primary);">
+            <i data-lucide="refresh-ccw" class="w-5 h-5 inline mr-2" style="color:var(--gold);"></i>
+            "Ya probe herramientas de IA y no funcionaron"
+          </h3>
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary);">La mayoria de ejecutivos prueban herramientas aisladas: un chatbot aqui, un prompt alla. Sin sistema, es experimentacion dispersa. El CAO Bootcamp no le da herramientas — le instala un sistema integrado donde 13 asistentes + 1 agente + 1 segundo cerebro trabajan coordinados con su contexto real. La diferencia entre probar una herramienta y operar un sistema es la diferencia entre tener un martillo y tener un taller completo.</p>
+        </div>
+
+        <!-- Objection 3 -->
+        <div class="glass p-7 rounded-2xl reveal">
+          <h3 class="font-heading text-lg font-bold mb-3" style="color:var(--text-primary);">
+            <i data-lucide="shield-question" class="w-5 h-5 inline mr-2" style="color:var(--gold);"></i>
+            "No soy tecnico, esto no es para mi"
+          </h3>
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary);">Este programa esta disenado para directivos, no para ingenieros. No necesita saber programar. No necesita entender como funciona la IA por dentro. Lo que necesita es saber que quiere lograr — nosotros nos encargamos de que la tecnologia trabaje para usted. Si sabe usar correo electronico y participar en una videollamada, tiene todo lo que necesita.</p>
+        </div>
+
+        <!-- Objection 4 -->
+        <div class="glass p-7 rounded-2xl reveal">
+          <h3 class="font-heading text-lg font-bold mb-3" style="color:var(--text-primary);">
+            <i data-lucide="banknote" class="w-5 h-5 inline mr-2" style="color:var(--gold);"></i>
+            "Es mucho dinero para algo que no conozco"
+          </h3>
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary);">Por eso existe la garantia: devolucion del 100% antes de las primeras 4 horas. Y por eso existe el Workshop gratuito — puede experimentar el metodo sin invertir un centavo. Ademas, la Edicion Creyentes es $1,197 USD, no $1,997. Es un precio que reconoce que usted esta confiando en algo nuevo. Si el ROI Calculator le muestra que recupera la inversion en 2-3 semanas, la pregunta no es si puede pagarlo, sino si puede permitirse no hacerlo.</p>
+        </div>
+      </div>
+
+      <!-- Punchline -->
+      <div class="punchline reveal">
+        <a href="#credenciales">Sin letra pequena. Sin sorpresas.</a>
+        <div class="mt-3 bounce-slow inline-block">
+          <i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       CREDENCIALES / SOCIAL PROOF (new section)
+       ==================================================================== -->
+  <section id="credenciales" class="section-pad">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Credenciales</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Por que confiar en este proceso</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+        <!-- Left: What backs us -->
+        <div class="glass p-8 rounded-2xl reveal">
+          <h3 class="font-heading text-lg font-bold mb-4" style="color:var(--text-primary);">
+            <i data-lucide="award" class="w-5 h-5 inline mr-2" style="color:var(--gold);"></i>
+            Lo que respalda el metodo
+          </h3>
+          <div class="space-y-3 text-sm" style="color:var(--text-secondary);">
+            <div class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span>Marcos validados internacionalmente: Business Model Canvas, OKRs, Lean, GTD, Golden Circle — no son inventos nuestros, son estandares globales</span></div>
+            <div class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span>Facilitadores activos — no academicos. Aplicamos estas metodologias en nuestros propios negocios</span></div>
+            <div class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span>Stack tecnologico de ultima generacion: Gemini, NotebookLM, Claude, GPT — herramientas de empresas valoradas en billones</span></div>
+            <div class="flex items-start gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span>Agente Pristino: Open Source, auditable, sin cajas negras. Usted puede ver exactamente como funciona</span></div>
+          </div>
+        </div>
+
+        <!-- Right: Honest note -->
+        <div class="glass p-8 rounded-2xl reveal" style="border-color:rgba(255,215,0,0.15);">
+          <h3 class="font-heading text-lg font-bold mb-4" style="color:var(--text-primary);">
+            <i data-lucide="heart-handshake" class="w-5 h-5 inline mr-2" style="color:var(--gold);"></i>
+            Una nota honesta
+          </h3>
+          <p class="text-sm leading-relaxed mb-4" style="color:var(--text-secondary);">No tenemos testimonios de directivos en Quito todavia. Ese es exactamente el punto de la Edicion Creyentes.</p>
+          <p class="text-sm leading-relaxed mb-4" style="color:var(--text-secondary);">Usted no esta comprando un producto probado por miles. Esta co-creando algo con nosotros. A cambio, le ofrecemos un precio que no se repetira, atencion que no podemos dar a 50 personas, y una garantia que elimina su exposicion financiera.</p>
+          <p class="text-sm leading-relaxed font-semibold" style="color:var(--text-primary);">Los primeros 5 directivos en Quito van a definir como se trabaja con IA en Ecuador. La pregunta es si usted quiere ser uno de ellos.</p>
+        </div>
+      </div>
+
+      <!-- Punchline -->
+      <div class="punchline reveal">
+        <a href="#metodologias">Vea las metodologias</a>
         <div class="mt-3 bounce-slow inline-block">
           <i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i>
         </div>
@@ -1286,7 +1414,7 @@
               <div>
                 <h4 class="font-heading font-bold mb-1" style="color:var(--text-primary);" data-i18n="config.b.title">CAO Bootcamp — Edicion Creyentes</h4>
                 <p class="text-sm" style="color:var(--text-muted);">
-                  <span class="price-strike">$2,500</span> <span class="gold-text font-bold">$1,500 USD</span>
+                  <span class="price-strike">$1,997</span> <span class="gold-text font-bold">$1,197 USD</span>
                   <span data-i18n="config.b.rate">(tasa indicativa, sujeta a variacion)</span>
                 </p>
                 <p class="text-xs mt-2" style="color:var(--text-secondary);" data-i18n="config.b.includes">Incluye los 13 asistentes + agente Pristino + segundo cerebro + networking</p>
@@ -1302,7 +1430,7 @@
               <div>
                 <h4 class="font-heading font-bold mb-1" style="color:var(--text-primary);" data-i18n="config.c.title">Programa de Empoderamiento</h4>
                 <p class="text-sm" style="color:var(--text-muted);" id="emp-price-display">
-                  $2,000 USD <span data-i18n="config.c.rate">(tasa indicativa, sujeta a variacion)</span>
+                  $1,897 USD <span data-i18n="config.c.rate">(tasa indicativa, sujeta a variacion)</span>
                 </p>
                 <p class="text-xs mt-2" style="color:var(--text-secondary);" data-i18n="config.c.desc">16 semanas, 13 plazas. 20% descuento si incluye CAO Bootcamp.</p>
               </div>
@@ -1371,7 +1499,7 @@
           <div class="flex items-center justify-between mb-4">
             <div>
               <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);">Asistentes Personalizados</h3>
-              <p class="text-sm gold-text font-semibold">$400 USD c/u (tasa indicativa, sujeta a variacion)</p>
+              <p class="text-sm gold-text font-semibold">$347 USD c/u (tasa indicativa, sujeta a variacion)</p>
             </div>
             <button onclick="event.stopPropagation();openInfo('level-1')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button>
           </div>
@@ -1396,7 +1524,7 @@
           <div class="flex items-center justify-between mb-4">
             <div>
               <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);">Desarrollo de Agentes</h3>
-              <p class="text-sm font-semibold" style="color:#c084fc;">$2,000 — $8,000 USD</p>
+              <p class="text-sm font-semibold" style="color:#c084fc;">$1,897 — $7,497 USD</p>
             </div>
             <button onclick="event.stopPropagation();openInfo('svc-agents')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button>
           </div>
@@ -1752,22 +1880,22 @@
       title_en: 'About Custom Assistants',
       body_es: `<p class="mb-4"><strong style="color:var(--text-primary);">Diferencia con los 13 del bootcamp:</strong> El CAO Bootcamp incluye 13 asistentes genericos que cubren productividad basica (task tracking, meeting analysis, planning, etc.). Son funcionales desde dia 1 y estan incluidos sin costo adicional.</p>
         <p class="mb-4"><strong style="color:var(--text-primary);">Los asistentes a medida son otra cosa.</strong> Se disenan desde cero para su operacion especifica. Un asistente de QBR (Quarterly Business Review) no es lo mismo para una empresa de retail que para una de tecnologia. El de Strategic Planning no es igual si usted opera en 3 paises que en 1.</p>
-        <p class="mb-4"><strong style="color:var(--text-primary);">Que incluye cada $400 USD:</strong> 2 horas de diseno colaborativo + configuracion + entrenamiento con su contexto real. Documentacion, prompts calibrados y asistente operativo al cierre de la sesion.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Que incluye cada $347 USD:</strong> 2 horas de diseno colaborativo + configuracion + entrenamiento con su contexto real. Documentacion, prompts calibrados y asistente operativo al cierre de la sesion.</p>
         <p><strong style="color:var(--text-primary);">Ejemplos:</strong> QBR, Strategic Planning, OKR Tracking, KPI Tracking, Due Diligence, Budget Review, Competitor Analysis, Board Prep, Investor Relations. Cualquier caso de uso ejecutivo recurrente puede ser un asistente a medida.</p>`,
       body_en: `<p class="mb-4"><strong style="color:var(--text-primary);">Difference from the 13 bootcamp assistants:</strong> The CAO Bootcamp includes 13 generic assistants covering basic productivity (task tracking, meeting analysis, planning, etc.). Functional from day 1, included at no extra cost.</p>
         <p class="mb-4"><strong style="color:var(--text-primary);">Custom assistants are different.</strong> Built from scratch for your specific operation. A QBR (Quarterly Business Review) assistant is not the same for a retail company as for a tech company. Strategic Planning differs if you operate in 3 countries vs 1.</p>
-        <p class="mb-4"><strong style="color:var(--text-primary);">What each $400 USD includes:</strong> 2 hours of collaborative design + configuration + training with your real context. Documentation, calibrated prompts, and operational assistant at session close.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">What each $347 USD includes:</strong> 2 hours of collaborative design + configuration + training with your real context. Documentation, calibrated prompts, and operational assistant at session close.</p>
         <p><strong style="color:var(--text-primary);">Examples:</strong> QBR, Strategic Planning, OKR Tracking, KPI Tracking, Due Diligence, Budget Review, Competitor Analysis, Board Prep, Investor Relations. Any recurring executive use case can become a custom assistant.</p>`
     },
     'svc-agents': {
       title_es: 'Sobre los Agentes Autonomos',
       title_en: 'About Autonomous Agents',
       body_es: `<p class="mb-4"><strong style="color:var(--text-primary);">Asistente vs Agente:</strong> Un asistente responde cuando usted le pregunta. Un agente ejecuta autonomamente: monitorea, decide, actua y reporta. Es la diferencia entre tener un analista que espera instrucciones y uno que toma iniciativa dentro de reglas claras.</p>
-        <p class="mb-4"><strong style="color:var(--text-primary);">Por que el rango $2,000 - $8,000:</strong> El precio depende de 5 factores: (1) estrategia — que debe lograr el agente, (2) infraestructura — donde opera y con que se conecta, (3) funcionalidades — cuantas tareas ejecuta, (4) personalizaciones — que tan especifico es el contexto, (5) particularidades — integraciones, seguridad, compliance.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Por que el rango $1,897 - $7,497:</strong> El precio depende de 5 factores: (1) estrategia — que debe lograr el agente, (2) infraestructura — donde opera y con que se conecta, (3) funcionalidades — cuantas tareas ejecuta, (4) personalizaciones — que tan especifico es el contexto, (5) particularidades — integraciones, seguridad, compliance.</p>
         <p class="mb-4"><strong style="color:var(--text-primary);">Proceso:</strong> Siempre inicia con un Discovery donde tasamos el tamano real del proyecto. No cotizamos a ciegas. El discovery nos permite entender complejidad real vs percibida y disenar la solucion correcta.</p>
         <p><strong style="color:var(--text-primary);">Plataformas:</strong> Claude Cowork, VS Code, Codex, Antigravity (requieren licencia del usuario). Automatizaciones: n8n, Make, Zapier, Power Automate, Copilot Studio, Google Agent Space. Siempre fixed-price, llave en mano.</p>`,
       body_en: `<p class="mb-4"><strong style="color:var(--text-primary);">Assistant vs Agent:</strong> An assistant responds when you ask. An agent executes autonomously: monitors, decides, acts and reports. It's the difference between an analyst waiting for instructions and one taking initiative within clear rules.</p>
-        <p class="mb-4"><strong style="color:var(--text-primary);">Why the $2,000 - $8,000 range:</strong> Price depends on 5 factors: (1) strategy — what the agent must achieve, (2) infrastructure — where it operates and connects, (3) capabilities — how many tasks it executes, (4) customizations — how specific the context is, (5) particularities — integrations, security, compliance.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Why the $1,897 - $7,497 range:</strong> Price depends on 5 factors: (1) strategy — what the agent must achieve, (2) infrastructure — where it operates and connects, (3) capabilities — how many tasks it executes, (4) customizations — how specific the context is, (5) particularities — integrations, security, compliance.</p>
         <p class="mb-4"><strong style="color:var(--text-primary);">Process:</strong> Always starts with Discovery to size the real project. We don't quote blindly. Discovery lets us understand real vs perceived complexity and design the right solution.</p>
         <p><strong style="color:var(--text-primary);">Platforms:</strong> Claude Cowork, VS Code, Codex, Antigravity (require user license). Automations: n8n, Make, Zapier, Power Automate, Copilot Studio, Google Agent Space. Always fixed-price, turnkey.</p>`
     },
@@ -1775,11 +1903,11 @@
       title_es: 'Sobre el CAO Bootcamp',
       title_en: 'About the CAO Bootcamp',
       body_es: `<p class="mb-4">CAO = Chief Agentic Officer. No es un titulo formal — es una mentalidad: el directivo que decide que la IA trabaje para el, no al reves.</p>
-        <p class="mb-4"><strong style="color:var(--text-primary);">Por que $1,500 y no $2,500:</strong> La "Edicion Creyentes" es un precio exclusivo para los primeros 5 directivos en Quito. A cambio pedimos retroalimentacion honesta y permiso para documentar resultados (anonimos si lo prefiere). Cuando tengamos los 5 casos, el precio vuelve a $2,500.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Por que $1,197 y no $1,997:</strong> La "Edicion Creyentes" es un precio exclusivo para los primeros 5 directivos en Quito. A cambio pedimos retroalimentacion honesta y permiso para documentar resultados (anonimos si lo prefiere). Cuando tengamos los 5 casos, el precio vuelve a $1,997.</p>
         <p class="mb-4"><strong style="color:var(--text-primary);">Que lo hace diferente:</strong> La mayoria de programas de IA ensenan conceptos. Este instala un sistema operativo. Usted termina con un agente propio, 13 asistentes operativos, un segundo cerebro digital y un IDE configurado. Son activos que le pertenecen y siguen funcionando despues de que nos vamos.</p>
         <p><strong style="color:var(--text-primary);">Estructura:</strong> 9 talleres de 2 horas en 3-6 semanas. Ritmo adaptado a su agenda. No hay tareas entre sesiones — todo se construye en vivo. En Q3 2026, reunion de networking con todos los directivos del programa.</p>`,
       body_en: `<p class="mb-4">CAO = Chief Agentic Officer. It's not a formal title — it's a mindset: the executive who decides AI works for them, not the other way around.</p>
-        <p class="mb-4"><strong style="color:var(--text-primary);">Why $1,500 and not $2,500:</strong> The "Believers Edition" is an exclusive price for the first 5 executives in Quito. In exchange, we ask for honest feedback and permission to document results (anonymous if preferred). Once we have the 5 cases, the price returns to $2,500.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Why $1,197 and not $1,997:</strong> The "Believers Edition" is an exclusive price for the first 5 executives in Quito. In exchange, we ask for honest feedback and permission to document results (anonymous if preferred). Once we have the 5 cases, the price returns to $1,997.</p>
         <p class="mb-4"><strong style="color:var(--text-primary);">What makes it different:</strong> Most AI programs teach concepts. This one installs an operating system. You finish with your own agent, 13 operational assistants, a digital second brain, and a configured IDE. These are assets that belong to you and keep working after we leave.</p>
         <p><strong style="color:var(--text-primary);">Structure:</strong> 9 two-hour workshops over 3-6 weeks. Pace adapted to your schedule. No homework between sessions — everything is built live. In Q3 2026, networking gathering with all program executives.</p>`
     },
@@ -1789,11 +1917,11 @@
       body_es: `<p class="mb-4">Este es el programa mas profundo de MetodologIA. 16 semanas de trabajo sostenido para directivos que quieren ir mas alla de la productividad personal y posicionar su marca y liderazgo en el mercado.</p>
         <p class="mb-4"><strong style="color:var(--text-primary);">Prerequisitos:</strong> Gerente o superior, 10+ anos de trayectoria, conocimiento basico de IA y gerencia. No es para principiantes — es para directivos que ya operan con IA y quieren escalar.</p>
         <p class="mb-4"><strong style="color:var(--text-primary);">Por que 13 plazas:</strong> Para mantener la intimidad. Cada participante recibe atencion personalizada. El grupo se convierte en un circulo de confianza de directivos con intereses similares.</p>
-        <p><strong style="color:var(--text-primary);">Precio preferencial:</strong> Quienes vienen del CAO Bootcamp reciben 20% de descuento ($1,600 vs $2,000) y silla asegurada. No compiten por las 13 plazas — ya la tienen reservada.</p>`,
+        <p><strong style="color:var(--text-primary);">Precio preferencial:</strong> Quienes vienen del CAO Bootcamp reciben 20% de descuento ($1,497 vs $1,897) y silla asegurada. No compiten por las 13 plazas — ya la tienen reservada.</p>`,
       body_en: `<p class="mb-4">This is MetodologIA's deepest program. 16 weeks of sustained work for executives who want to go beyond personal productivity and position their brand and leadership in the market.</p>
         <p class="mb-4"><strong style="color:var(--text-primary);">Prerequisites:</strong> Manager or above, 10+ years of experience, basic AI and management knowledge. Not for beginners — for executives already operating with AI who want to scale.</p>
         <p class="mb-4"><strong style="color:var(--text-primary);">Why 13 seats:</strong> To maintain intimacy. Each participant receives personalized attention. The group becomes a trust circle of executives with similar interests.</p>
-        <p><strong style="color:var(--text-primary);">Preferential pricing:</strong> CAO Bootcamp alumni receive 20% discount ($1,600 vs $2,000) and a guaranteed seat. They don't compete for the 13 spots — they already have one reserved.</p>`
+        <p><strong style="color:var(--text-primary);">Preferential pricing:</strong> CAO Bootcamp alumni receive 20% discount ($1,497 vs $1,897) and a guaranteed seat. They don't compete for the 13 spots — they already have one reserved.</p>`
     },
     // ── MODALIDADES ──
     'mod-solo': {
@@ -1887,7 +2015,7 @@
       title_en: 'About the Investment',
       body_es: `<p class="mb-4"><strong style="color:var(--text-primary);">Desglose de valor incluido:</strong></p>
         <ul class="list-disc pl-5 mb-4 space-y-1">
-          <li>13 asistentes de productividad (valor individual: $5,200 USD)</li>
+          <li>13 asistentes de productividad (valor individual: $4,511 USD)</li>
           <li>Agente Pristino Open Source (configurado, personalizado, suyo)</li>
           <li>Segundo cerebro digital en NotebookLM + Gemini</li>
           <li>Exoesqueleto IDE configurado (Antigravity, Codex o VS Code)</li>
@@ -1900,7 +2028,7 @@
         <p><strong style="color:var(--text-primary);">Garantia:</strong> Devolucion del 100% si el servicio no cumple expectativas antes de completar las primeras 4 horas. Unica condicion: 1 hora de retroalimentacion estructurada.</p>`,
       body_en: `<p class="mb-4"><strong style="color:var(--text-primary);">Included value breakdown:</strong></p>
         <ul class="list-disc pl-5 mb-4 space-y-1">
-          <li>13 productivity assistants (individual value: $5,200 USD)</li>
+          <li>13 productivity assistants (individual value: $4,511 USD)</li>
           <li>Pristino Open Source Agent (configured, personalized, yours)</li>
           <li>Digital second brain on NotebookLM + Gemini</li>
           <li>Configured IDE exoskeleton (Antigravity, Codex or VS Code)</li>
@@ -2103,7 +2231,7 @@
       'hero.card.c2': '13 asistentes IA personalizados',
       'hero.card.c3': '1 agente Pristino propio',
       'hero.card.c4': 'Networking Q3 ejecutivos Quito',
-      'hero.card.c5': 'Valor separado: $5,200+ USD',
+      'hero.card.c5': 'Valor separado: $4,511+ USD',
       'hero.card.cta': 'Reservar Ahora',
       'hero.punchline': 'Descubra como funciona',
       'hook.hook': 'El Desafio',
@@ -2125,10 +2253,10 @@
       'vision.v3.desc': 'Todo su conocimiento, decisiones y documentos organizados. Busca y la IA encuentra en segundos.',
       'vision.punchline': 'Empiece donde quiera',
       'journey.hook': 'Su Camino',
-      'journey.title': '4 Niveles de Profundidad',
+      'journey.title': '2 Momentos + 1 Upgrade',
       'journey.l0.tag': 'Exploracion',
       'journey.l0.title': 'Workshop Gratuito',
-      'journey.l0.price': 'Gratis',
+      'journey.l0.price': 'Sin costo',
       'journey.l0.desc': '"De Ocupado a Productivo con Agentes de IA". 3h, Semana Santa. No es solo presentacion. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM.',
       'journey.l0.cta': 'Inscribirse',
       'journey.l1.tag': 'A Medida',
@@ -2140,7 +2268,7 @@
       'journey.l2.tag': 'CAO Bootcamp',
       'journey.l2.title': 'Edicion Creyentes',
       'journey.l2.rate': '(tasa indicativa, sujeta a variacion)',
-      'journey.l2.desc': '9 talleres x 2h. Incluye los 13 asistentes, agente Pristino, segundo cerebro digital, networking Q3 ejecutivos. Valor si se comprase por separado: $5,200+ USD.',
+      'journey.l2.desc': '9 talleres x 2h. Incluye los 13 asistentes, agente Pristino, segundo cerebro digital, networking Q3 ejecutivos. Valor si se comprase por separado: $4,511+ USD.',
       'journey.l2.cta': 'Reservar Plaza',
       'journey.l3.tag': 'Empoderamiento',
       'journey.l3.title': 'Programa Completo',
@@ -2203,7 +2331,7 @@
       'config.hook': 'Configurador',
       'config.title': 'Configure su Experiencia',
       'config.a.title': 'Asistentes a la Carte',
-      'config.a.price': '$400 USD c/u (tasa indicativa, sujeta a variacion)',
+      'config.a.price': '$347 USD c/u (tasa indicativa, sujeta a variacion)',
       'config.b.title': 'CAO Bootcamp — Edicion Creyentes',
       'config.b.rate': '(tasa indicativa, sujeta a variacion)',
       'config.b.includes': 'Incluye los 13 asistentes + agente Pristino + segundo cerebro + networking',
@@ -2309,7 +2437,7 @@
       'hero.card.c2': '13 personalized AI assistants',
       'hero.card.c3': '1 own Pristino agent',
       'hero.card.c4': 'Q3 executive networking Quito',
-      'hero.card.c5': 'Separate value: $5,200+ USD',
+      'hero.card.c5': 'Separate value: $4,511+ USD',
       'hero.card.cta': 'Reserve Now',
       'hero.punchline': 'Discover how it works',
       'hook.hook': 'The Challenge',
@@ -2331,10 +2459,10 @@
       'vision.v3.desc': 'All your knowledge, decisions and documents organized. Search and AI finds in seconds.',
       'vision.punchline': 'Start wherever you want',
       'journey.hook': 'Your Path',
-      'journey.title': '4 Levels of Depth',
+      'journey.title': '2 Moments + 1 Upgrade',
       'journey.l0.tag': 'Exploration',
       'journey.l0.title': 'Free Workshop',
-      'journey.l0.price': 'Free',
+      'journey.l0.price': 'No cost',
       'journey.l0.desc': '"From Busy to Productive with AI Agents". 3h, Easter Week. Not just a presentation. We build an agent with your real work context, paired with Gemini Gems + NotebookLM.',
       'journey.l0.cta': 'Sign Up',
       'journey.l1.tag': 'Custom',
@@ -2346,7 +2474,7 @@
       'journey.l2.tag': 'CAO Bootcamp',
       'journey.l2.title': 'Believers Edition',
       'journey.l2.rate': '(indicative rate, subject to variation)',
-      'journey.l2.desc': '9 workshops x 2h. Includes all 13 assistants, Pristino agent, digital second brain, Q3 executive networking. Value if purchased separately: $5,200+ USD.',
+      'journey.l2.desc': '9 workshops x 2h. Includes all 13 assistants, Pristino agent, digital second brain, Q3 executive networking. Value if purchased separately: $4,511+ USD.',
       'journey.l2.cta': 'Reserve Seat',
       'journey.l3.tag': 'Empowerment',
       'journey.l3.title': 'Full Program',
@@ -2409,7 +2537,7 @@
       'config.hook': 'Configurator',
       'config.title': 'Configure Your Experience',
       'config.a.title': 'A la Carte Assistants',
-      'config.a.price': '$400 USD each (indicative rate, subject to variation)',
+      'config.a.price': '$347 USD each (indicative rate, subject to variation)',
       'config.b.title': 'CAO Bootcamp — Believers Edition',
       'config.b.rate': '(indicative rate, subject to variation)',
       'config.b.includes': 'Includes all 13 assistants + Pristino agent + second brain + networking',
@@ -2943,9 +3071,9 @@
       : '(indicative rate, subject to variation)';
 
     if (caoSelected) {
-      el.innerHTML = '<span class="price-strike">$2,000</span> <span class="gold-text font-bold">$1,600 USD</span> <span>' + rateText + '</span>';
+      el.innerHTML = '<span class="price-strike">$1,897</span> <span class="gold-text font-bold">$1,497 USD</span> <span>' + rateText + '</span>';
     } else {
-      el.innerHTML = '$2,000 USD <span>' + rateText + '</span>';
+      el.innerHTML = '$1,897 USD <span>' + rateText + '</span>';
     }
   }
 
@@ -2965,7 +3093,7 @@
     if (caoSelected) {
       items.push({ name: 'CAO Bootcamp Creyentes', price: 1500 });
       total += 1500;
-      /* Savings: 13 assistants at $400 = $5,200 + regular CAO $2,500 - creyentes $1,500 = $6,200 */
+      /* Savings: 13 assistants at $400 = $4,511 + regular CAO $1,997 - creyentes $1,197 = $6,200 */
       savings += (13 * 400) + 2500 - 1500;
     } else {
       const numAssistants = selectedAssistants.size;
