@@ -2124,31 +2124,23 @@
           <i data-lucide="x" class="w-5 h-5" style="color:var(--text-muted);"></i>
         </button>
       </div>
-      <p class="text-sm mb-6" style="color:var(--text-secondary);" data-i18n="modal.reserve.desc">
-        Complete el formulario y nos pondremos en contacto en menos de 24 horas para confirmar su plaza.
+      <p class="text-sm mb-6" style="color:var(--text-secondary);">
+        La experiencia es autogestionada. Haga click, registrese con su Google, y listo. El calendario hace el resto.
       </p>
       <div class="space-y-4">
-        <input type="text" placeholder="Nombre completo" class="form-input" data-i18n-placeholder="modal.reserve.name" />
-        <input type="email" placeholder="Correo electronico" class="form-input" data-i18n-placeholder="modal.reserve.email" />
-        <input type="text" placeholder="Empresa / Cargo" class="form-input" data-i18n-placeholder="modal.reserve.company" />
-        <select class="form-input">
-          <option value="" data-i18n="modal.reserve.interest">Programa de interes...</option>
-          <option value="workshop">Workshop Gratuito</option>
-          <option value="assistants">Asistentes a la Carte</option>
-          <option value="cao">CAO Bootcamp Creyentes</option>
-          <option value="empowerment">Programa Empoderamiento</option>
-        </select>
-        <select class="form-input">
-          <option value="" data-i18n="modal.reserve.modality">Modalidad preferida...</option>
-          <option value="solo" data-i18n="modal.reserve.modSolo">Solo (1:1)</option>
-          <option value="dupla" data-i18n="modal.reserve.modDupla">Dupla</option>
-          <option value="terna" data-i18n="modal.reserve.modTerna">Terna</option>
-        </select>
-        <textarea rows="3" placeholder="Mensaje (opcional)" class="form-input resize-none" data-i18n-placeholder="modal.reserve.msg"></textarea>
+        <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40metodologia.info"
+           target="_blank" rel="noopener"
+           class="btn-gold w-full justify-center text-sm">
+          <i data-lucide="calendar-plus" class="w-5 h-5"></i>
+          Reservar en Google Calendar
+        </a>
+        <a href="mailto:contacto@metodologia.info?subject=CAO%20Bootcamp%20Creyentes%20—%20Quito%202026&body=Quiero%20reservar%20mi%20plaza."
+           class="btn-ghost w-full justify-center text-sm">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          Prefiero escribir un email
+        </a>
       </div>
-      <button class="btn-gold w-full justify-center mt-6" onclick="submitReserveForm(this)">
-        <span data-i18n="modal.reserve.submit">Enviar Solicitud</span>
-      </button>
+      <p class="text-xs text-center mt-4" style="color:var(--text-muted);">Solo 5 plazas. Las inscripciones se cierran con el 5to inscrito. Segundo ciclo: finales de septiembre 2026.</p>
     </div>
   </div>
 
@@ -2168,21 +2160,21 @@
         Convocatoria exclusiva para 13 directivos, directores y managers. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM. No es presentacion — es co-creacion.
       </p>
       <div class="space-y-4">
-        <input type="text" placeholder="Nombre completo" class="form-input" />
-        <input type="email" placeholder="Correo electronico" class="form-input" />
-        <input type="text" placeholder="Empresa / Cargo" class="form-input" />
-      </div>
-      <button class="btn-gold w-full justify-center mt-6" onclick="submitWorkshopForm(this)">
-        <span data-i18n="modal.ws.submit">Reservar Lugar</span>
-      </button>
-      <div class="mt-4 flex justify-center">
         <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40metodologia.info"
            target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all hover:scale-105"
-           style="background:rgba(255,215,0,0.1);color:var(--gold);border:1px solid rgba(255,215,0,0.2);">
-          <i data-lucide="calendar-plus" class="w-4 h-4"></i>
-          Agregar a Google Calendar
+           class="btn-gold w-full justify-center text-sm">
+          <i data-lucide="calendar-plus" class="w-5 h-5"></i>
+          Inscribirme en Google Calendar
         </a>
+        <a href="mailto:contacto@metodologia.info?subject=Workshop%20Gratuito%20—%20De%20Ocupado%20a%20Productivo"
+           class="btn-ghost w-full justify-center text-sm">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          Prefiero escribir un email
+        </a>
+      </div>
+      <div class="glass p-4 rounded-xl mt-4 text-center">
+        <p class="text-xs" style="color:var(--text-secondary);"><strong style="color:var(--gold);">Horarios disponibles:</strong> 9:00 a 12:00 o 14:00 a 17:00</p>
+        <p class="text-xs mt-1" style="color:var(--text-muted);">Con 13 personas inscritas, cerramos inscripciones. La agenda esta libre — elija el bloque que mejor le funcione.</p>
       </div>
     </div>
   </div>
