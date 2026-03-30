@@ -61,7 +61,23 @@
       --glass-bg: rgba(255, 255, 255, 0.6);
       --glass-border: rgba(11, 37, 69, 0.08);
       --shadow-glow: 0 0 40px rgba(11, 37, 69, 0.05);
+      --gold: #B8860B;
     }
+
+    /* Light mode contrast fixes — gold text must be dark enough */
+    html.light .gold-text {
+      background: linear-gradient(135deg, #B8860B, #8B6914);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    html.light [style*="color:var(--gold)"] { color: #B8860B !important; }
+    html.light .btn-gold { background: linear-gradient(135deg, #D4A017, #B8860B); color: #fff; }
+    html.light .btn-gold:hover { box-shadow: 0 8px 30px rgba(184,134,11,0.3); }
+    html.light .phase-tag[style*="color:var(--gold)"] { color: #8B6914 !important; }
+    html.light .glow-border { box-shadow: none; border-color: rgba(184,134,11,0.3); }
+    html.light .method-chip { border-color: rgba(184,134,11,0.3); color: #8B6914; }
+    html.light .method-chip:hover { border-color: #B8860B; color: #B8860B; }
 
     /* ============================================================
        RESET & BASE
