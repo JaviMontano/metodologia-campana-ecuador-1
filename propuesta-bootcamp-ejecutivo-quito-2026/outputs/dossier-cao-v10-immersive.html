@@ -2008,6 +2008,40 @@
             </a>
           </div>
         </div>
+        <!-- Bonus 3: Entregables por workshop -->
+        <div class="glass p-8 rounded-2xl reveal cursor-pointer" onclick="openInfo('bonus-deliverables')" style="border-color:rgba(255,215,0,0.15);">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:rgba(255,215,0,0.1);">
+              <i data-lucide="package" class="w-6 h-6" style="color:var(--gold);"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold" style="color:var(--text-primary);">Entregables en cada sesion</h3>
+              <p class="text-xs gold-text font-semibold">Incluidos en el CAO Bootcamp</p>
+            </div>
+          </div>
+          <div class="space-y-2 text-sm" style="color:var(--text-secondary);">
+            <div class="flex items-start gap-2"><i data-lucide="bot" class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span>Asistentes GPT + Gemini Gems del tema (version abierta)</span></div>
+            <div class="flex items-start gap-2"><i data-lucide="brain" class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span>NotebookLM del caso de uso configurado</span></div>
+            <div class="flex items-start gap-2"><i data-lucide="layout" class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span>Playbook HTML interactivo (como esta propuesta, pero del tema)</span></div>
+            <div class="flex items-start gap-2"><i data-lucide="zap" class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span>Biblioteca de prompts calibrados para el caso de uso</span></div>
+          </div>
+          <button class="text-xs mt-3 font-bold flex items-center gap-1" style="color:var(--gold);"><i data-lucide="info" class="w-3 h-3"></i> Ver detalle</button>
+        </div>
+
+        <!-- Bonus 4: Campus Virtual -->
+        <div class="glass p-8 rounded-2xl reveal cursor-pointer" onclick="openInfo('bonus-campus')" style="border-color:rgba(255,215,0,0.15);">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:rgba(255,215,0,0.1);">
+              <i data-lucide="graduation-cap" class="w-6 h-6" style="color:var(--gold);"></i>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold" style="color:var(--text-primary);">Campus Virtual MetodologIA</h3>
+              <p class="text-xs gold-text font-semibold">Acceso vitalicio para Creyentes</p>
+            </div>
+          </div>
+          <p class="text-sm" style="color:var(--text-secondary);">En Q3 2026 desplegamos nuestro campus virtual — plataforma de actualizacion continua post-formacion. Los Creyentes tendran <strong style="color:var(--text-primary);">acceso vitalicio incluido</strong>. Despues, el acceso tendra un costo de $10 USD/mes.</p>
+          <button class="text-xs mt-3 font-bold flex items-center gap-1" style="color:var(--gold);"><i data-lucide="info" class="w-3 h-3"></i> Mas sobre el campus</button>
+        </div>
       </div>
     </div>
   </section>
@@ -2642,6 +2676,18 @@
       title_en: 'Open Resources',
       body_es: '<p class="mb-4"><strong style="color:var(--text-primary);">27 Asistentes GPT abiertos:</strong> Prompting, Meeting Analyst, Investigaciones Profundas, Planning, Coding, Ventas, Oportunidades y mas. Disponibles ahora en <a href="https://metodologia.info/recursos/asistentes-gpt/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">metodologia.info/recursos</a>.</p><p class="mb-4"><strong style="color:var(--text-primary);">7 Gems de Gemini:</strong> Prompts, Task Tracker, Meeting Analysis, Note-Taking, Slides, Deep Research y Task Managing. Cada GPT tiene su homologo en Gemini. Disponibles en <a href="https://metodologia.info/recursos/asistentes-gemini/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Gems de Gemini</a>.</p><p class="mb-4"><strong style="color:var(--text-primary);">180+ Prompts:</strong> Biblioteca curada por dominio: universal, ventas, desarrollo y mas. En <a href="https://metodologia.info/recursos/biblioteca-prompts/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Biblioteca de Prompts</a>.</p><p><strong style="color:var(--text-primary);">Acceso abierto, sin registro.</strong> Pruebe antes de decidir.</p>',
       body_en: '<p class="mb-4"><strong style="color:var(--text-primary);">27 free GPT Assistants:</strong> Prompting, Meeting Analyst, Deep Research, Planning, Coding, Sales, Opportunities and more. Available now at <a href="https://metodologia.info/recursos/asistentes-gpt/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">metodologia.info/recursos</a>.</p><p class="mb-4"><strong style="color:var(--text-primary);">7 Gemini Gems:</strong> Prompts, Task Tracker, Meeting Analysis, Note-Taking, Slides, Deep Research and Task Managing. Each GPT has its Gemini counterpart. Available at <a href="https://metodologia.info/recursos/asistentes-gemini/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Gemini Gems</a>.</p><p class="mb-4"><strong style="color:var(--text-primary);">180+ Prompts:</strong> Curated library by domain: universal, sales, development and more. At <a href="https://metodologia.info/recursos/biblioteca-prompts/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;">Prompt Library</a>.</p><p><strong style="color:var(--text-primary);">All free, no registration required.</strong> Try before you decide.</p>'
+    },
+    'bonus-deliverables': {
+      title_es: 'Entregables por Sesion',
+      title_en: 'Session Deliverables',
+      body_es: '<p class="mb-4"><strong style="color:var(--text-primary);">Cada una de las 9 sesiones entrega 4 activos tangibles:</strong></p><ul class="list-disc pl-5 mb-4 space-y-2 text-sm" style="color:var(--text-secondary);"><li><strong style="color:var(--text-primary);">Asistentes GPT + Gemini Gems:</strong> Version abierta de los asistentes del caso de uso, en ChatGPT y en Gemini. Operativos desde el cierre de la sesion.</li><li><strong style="color:var(--text-primary);">NotebookLM configurado:</strong> Un notebook dedicado al tema de la sesion, alimentado con el contenido trabajado. Se acumula sesion a sesion hasta formar su segundo cerebro completo.</li><li><strong style="color:var(--text-primary);">Playbook HTML interactivo:</strong> Similar al documento que esta viendo ahora, pero del tema especifico de la sesion. Navegable, con dark/light mode, consultable en cualquier momento.</li><li><strong style="color:var(--text-primary);">Biblioteca de prompts:</strong> Prompts calibrados y probados para el caso de uso de la sesion. Listos para copiar, pegar y adaptar.</li></ul><p><strong style="color:var(--text-primary);">Total al cierre del bootcamp:</strong> 9 playbooks + 9 notebooks + 18+ asistentes (GPT + Gems) + 100+ prompts calibrados. Todos suyos.</p>',
+      body_en: '<p class="mb-4"><strong style="color:var(--text-primary);">Each of the 9 sessions delivers 4 tangible assets:</strong></p><ul class="list-disc pl-5 mb-4 space-y-2 text-sm" style="color:var(--text-secondary);"><li><strong style="color:var(--text-primary);">GPT Assistants + Gemini Gems:</strong> Open versions for the use case, in ChatGPT and Gemini. Operational from session close.</li><li><strong style="color:var(--text-primary);">Configured NotebookLM:</strong> A dedicated notebook for the session topic, fed with worked content. Accumulates into your complete second brain.</li><li><strong style="color:var(--text-primary);">Interactive HTML Playbook:</strong> Like the document you are viewing now, but for the specific session topic.</li><li><strong style="color:var(--text-primary);">Prompt Library:</strong> Calibrated, tested prompts for the session use case. Ready to copy, paste, and adapt.</li></ul><p><strong style="color:var(--text-primary);">Total at bootcamp close:</strong> 9 playbooks + 9 notebooks + 18+ assistants (GPT + Gems) + 100+ calibrated prompts. All yours.</p>'
+    },
+    'bonus-campus': {
+      title_es: 'Campus Virtual MetodologIA',
+      title_en: 'MetodologIA Virtual Campus',
+      body_es: '<p class="mb-4"><strong style="color:var(--text-primary);">Lanzamiento: Q3 2026.</strong> Plataforma de actualizacion continua post-formacion. Contenido que evoluciona con las herramientas de IA — porque lo que funciona hoy puede cambiar en 3 meses.</p><p class="mb-4"><strong style="color:var(--text-primary);">Para Creyentes: acceso vitalicio incluido.</strong> Los 5 directivos de la Edicion Creyentes reciben acceso de por vida al campus como parte de su inversion. Sin costos recurrentes. Sin letra menuda.</p><p class="mb-4"><strong style="color:var(--text-primary);">Para todos los demas:</strong> $10 USD/mes. Acceso a actualizaciones de contenido, nuevos playbooks, nuevos asistentes, y la comunidad de directivos que operan con IA.</p><p><strong style="color:var(--text-primary);">Que incluye:</strong> Actualizaciones de los 9 modulos cuando cambian las herramientas, nuevos casos de uso, webinars trimestrales, y acceso a la red de directivos del programa.</p>',
+      body_en: '<p class="mb-4"><strong style="color:var(--text-primary);">Launch: Q3 2026.</strong> Continuous post-training update platform. Content that evolves with AI tools — because what works today may change in 3 months.</p><p class="mb-4"><strong style="color:var(--text-primary);">For Believers: lifetime access included.</strong> The 5 Believers Edition executives receive lifelong campus access as part of their investment. No recurring costs.</p><p class="mb-4"><strong style="color:var(--text-primary);">For everyone else:</strong> $10 USD/month. Access to content updates, new playbooks, new assistants, and the executive community.</p><p><strong style="color:var(--text-primary);">Includes:</strong> Module updates when tools change, new use cases, quarterly webinars, and access to the program executive network.</p>'
     },
     'roi-info': {
       title_es: 'Sobre la calculadora de ROI',
