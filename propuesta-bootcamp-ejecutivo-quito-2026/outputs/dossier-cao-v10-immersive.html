@@ -1691,12 +1691,15 @@
           <div class="glass p-7 rounded-2xl reveal cursor-pointer transition-all" style="border-color:rgba(16,185,129,0.2);" onclick="openModal('workshop')">
             <div class="flex justify-between items-start">
               <div>
-                <h4 class="font-heading font-bold mb-1" style="color:var(--text-primary);">Workshop: De Ocupado a Productivo</h4>
+                <h4 class="font-heading font-bold mb-1" style="color:var(--text-primary);">Workshop Zero Risk: De Ocupado a Productivo</h4>
                 <p class="text-sm font-semibold" style="color:rgb(16,185,129);">Sin inversion economica</p>
-                <p class="text-xs mt-2" style="color:var(--text-secondary);">3 horas. Sabado de Pascua 2026 (post Sabado de Pascua). Horarios: 9-12 o 14-17. Solo 13 plazas.</p>
+                <p class="text-xs mt-2" style="color:var(--text-secondary);">3 horas. Sabado de Pascua 2026. Horarios: 9-12 o 14-17. Solo 13 plazas.</p>
               </div>
-              <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(16,185,129,0.1);">
-                <i data-lucide="calendar-plus" class="w-5 h-5" style="color:rgb(16,185,129);"></i>
+              <div class="flex items-center gap-2 flex-shrink-0">
+                <button onclick="event.stopPropagation();openInfo('config-workshop')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition" title="Ver entregables"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button>
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:rgba(16,185,129,0.1);">
+                  <i data-lucide="calendar-plus" class="w-5 h-5" style="color:rgb(16,185,129);"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -1712,8 +1715,10 @@
                 </p>
                 <p class="text-xs mt-2" style="color:var(--text-secondary);" data-i18n="config.b.includes">Incluye los 13 asistentes + agente Pristino + segundo cerebro + networking</p>
               </div>
-              <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" id="cao-check"
-                style="border:2px solid var(--border-color);transition:all 0.3s ease;"></div>
+              <div class="flex items-center gap-2 flex-shrink-0">
+                <button onclick="event.stopPropagation();openInfo('config-cao')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition" title="Ver todo lo incluido"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button>
+                <div class="w-6 h-6 rounded-full flex items-center justify-center" id="cao-check" style="border:2px solid var(--border-color);transition:all 0.3s ease;"></div>
+              </div>
             </div>
           </div>
 
@@ -1727,8 +1732,10 @@
                 </p>
                 <p class="text-xs mt-2" style="color:var(--text-secondary);" data-i18n="config.c.desc">16 semanas, 13 plazas. 20% descuento si incluye CAO Bootcamp.</p>
               </div>
-              <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" id="emp-check"
-                style="border:2px solid var(--border-color);transition:all 0.3s ease;"></div>
+              <div class="flex items-center gap-2 flex-shrink-0">
+                <button onclick="event.stopPropagation();openInfo('config-empower')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition" title="Ver detalles"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button>
+                <div class="w-6 h-6 rounded-full flex items-center justify-center" id="emp-check" style="border:2px solid var(--border-color);transition:all 0.3s ease;"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -1909,8 +1916,28 @@
               <td data-i18n="cond.t5.value">Devolucion del 100% si el servicio no cumple expectativas antes de completar las primeras 4 horas. Unica condicion: 1 hora de retroalimentacion estructurada.</td>
             </tr>
             <tr>
+              <td class="font-semibold" style="color:var(--text-primary);">Horarios</td>
+              <td>
+                <strong style="color:var(--text-primary);">Franjas flexibles:</strong> 7:00-9:00 AM o 5:00-9:00 PM entre semana. Sabados disponibles.<br>
+                <span class="text-xs" style="color:var(--text-muted);">Intra-jornada de oficina: solo recomendado si el programa se vive con apoyo y aval de la organizacion, asegurando espacios de enfoque sin interrupciones.</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="font-semibold" style="color:var(--text-primary);">Facilitador</td>
+              <td>
+                <strong style="color:var(--text-primary);">Edicion Creyentes:</strong> Los 5 directivos son atendidos directamente por Javier Montano. No hay rotacion.<br>
+                <span class="text-xs" style="color:var(--text-muted);">Version septiembre 2026: en colaboracion con coaches de la red de Embajadores MetodologIA.</span>
+              </td>
+            </tr>
+            <tr>
               <td class="font-semibold" style="color:var(--text-primary);" data-i18n="cond.t6.label">Pago</td>
               <td data-i18n="cond.t6.value">Previo al inicio del programa</td>
+            </tr>
+            <tr>
+              <td class="font-semibold" style="color:var(--text-primary);">Programa de Empoderamiento</td>
+              <td>
+                <span class="text-xs" style="color:var(--text-muted);">Inicia mayo 2026. Convocatoria abierta pero sin los beneficios exclusivos de la Edicion Creyentes (precio preferencial, acceso vitalicio al campus, atencion directa de Javier).</span>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -2695,6 +2722,26 @@
       body_es: '<p class="mb-4">Esta calculadora usa un modelo conservador: asume que solo el 50% de su tiempo operativo es automatizable. En la practica, directivos que completan el CAO Bootcamp reportan reducciones del 40-70% en tareas operativas (meta indicativa, basada en experiencia de campo).</p><p class="mb-4"><strong style="color:var(--text-primary);">Variables que influyen:</strong> Tipo de industria, volumen de correo, frecuencia de reuniones, cantidad de reportes, nivel de digitalizacion actual. Un directivo con 20+ reuniones/semana vera un impacto mayor que uno con 5.</p><p><strong style="color:var(--text-primary);">Lo que no mide:</strong> El valor de las decisiones que tomara con el tiempo liberado. Eso es incalculable pero real: una hora extra de pensamiento estrategico por dia puede cambiar la trayectoria de una empresa.</p>',
       body_en: '<p class="mb-4">This calculator uses a conservative model: assumes only 50% of operational time is automatable. In practice, executives who complete the CAO Bootcamp report 40-70% reductions in operational tasks (indicative target, based on field experience).</p><p class="mb-4"><strong style="color:var(--text-primary);">Variables that influence:</strong> Industry type, email volume, meeting frequency, report quantity, current digitalization level.</p><p><strong style="color:var(--text-primary);">What it doesn\'t measure:</strong> The value of decisions you\'ll make with freed time. That\'s incalculable but real: one extra hour of strategic thinking per day can change a company\'s trajectory.</p>'
     }
+  };
+
+  // ── CONFIG INFO MODALS ──
+  infoData['config-workshop'] = {
+    title_es: 'Workshop Zero Risk — Entregables',
+    title_en: 'Zero Risk Workshop — Deliverables',
+    body_es: '<p class="mb-4"><strong style="color:var(--text-primary);">Lo que recibe en 3 horas (sin inversion economica):</strong></p><ul class="list-disc pl-5 mb-4 space-y-2 text-sm" style="color:var(--text-secondary);"><li>Asistentes GPT + Gemini Gems del caso de uso (version abierta)</li><li>NotebookLM configurado con su contexto laboral</li><li>Playbook HTML interactivo del taller</li><li>Biblioteca de prompts relevantes</li><li>Agente basico funcional co-creado en vivo</li></ul><p class="mb-4"><strong style="color:var(--text-primary);">Material de preparacion:</strong> Contenido de onboarding disponible antes del taller.</p><p><a href="https://drive.google.com/drive/folders/1QlOa6Idtdf3wpVIV5expRgi7qag-EMr_" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;font-weight:600;">Acceder a la carpeta de preparacion →</a></p>',
+    body_en: '<p class="mb-4"><strong style="color:var(--text-primary);">What you receive in 3 hours (no economic investment):</strong></p><ul class="list-disc pl-5 mb-4 space-y-2 text-sm" style="color:var(--text-secondary);"><li>GPT Assistants + Gemini Gems for the use case (open version)</li><li>NotebookLM configured with your work context</li><li>Interactive HTML playbook</li><li>Relevant prompt library</li><li>Basic functional agent co-created live</li></ul><p class="mb-4"><strong style="color:var(--text-primary);">Preparation materials:</strong> Onboarding content available before the workshop.</p><p><a href="https://drive.google.com/drive/folders/1QlOa6Idtdf3wpVIV5expRgi7qag-EMr_" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline;font-weight:600;">Access preparation folder →</a></p>'
+  };
+  infoData['config-cao'] = {
+    title_es: 'CAO Bootcamp — Todo lo incluido',
+    title_en: 'CAO Bootcamp — Everything Included',
+    body_es: '<p class="mb-4"><strong style="color:var(--text-primary);">9 sesiones. En cada una recibe:</strong></p><ul class="list-disc pl-5 mb-4 space-y-1 text-sm" style="color:var(--text-secondary);"><li>Asistentes GPT + Gemini Gems del caso de uso</li><li>NotebookLM configurado (acumulativo → segundo cerebro)</li><li>Playbook HTML interactivo del tema</li><li>Biblioteca de prompts calibrados</li></ul><p class="mb-4"><strong style="color:var(--text-primary);">Ademas, incluye:</strong></p><ul class="list-disc pl-5 mb-4 space-y-1 text-sm" style="color:var(--text-secondary);"><li>Agente Pristino personalizado (Open Source, suyo al cerrar)</li><li>Segundo cerebro: ecosistema Google completo integrado</li><li>13 asistentes base operativos</li><li>Networking Q3 con directivos del programa</li><li>Campus Virtual MetodologIA: acceso vitalicio (valor: $10 USD/mes despues)</li><li>2h bonus: Como hablarle a la IA + Asistente de Prompting</li></ul><p class="mb-4"><strong style="color:var(--text-primary);">Facilitador:</strong> Javier Montano atiende personalmente a los 5 Creyentes. No hay rotacion.</p><p class="mb-4"><strong style="color:var(--text-primary);">Horarios flexibles:</strong> 7-9 AM, 5-9 PM entre semana, o sabados.</p><p><strong style="color:var(--text-primary);">En cada semana se liberan recursos y aceleradores</strong> — el programa no espera al final para entregar valor.</p>',
+    body_en: '<p class="mb-4"><strong style="color:var(--text-primary);">9 sessions. Each one delivers:</strong></p><ul class="list-disc pl-5 mb-4 space-y-1 text-sm" style="color:var(--text-secondary);"><li>GPT Assistants + Gemini Gems</li><li>Configured NotebookLM (cumulative → second brain)</li><li>Interactive HTML playbook</li><li>Calibrated prompt library</li></ul><p class="mb-4"><strong style="color:var(--text-primary);">Also includes:</strong></p><ul class="list-disc pl-5 mb-4 space-y-1 text-sm" style="color:var(--text-secondary);"><li>Personalized Pristino Agent (Open Source, yours)</li><li>Second brain: complete Google ecosystem</li><li>13 base operational assistants</li><li>Q3 executive networking</li><li>MetodologIA Virtual Campus: lifetime access ($10/mo after)</li><li>2h bonus: How to talk to AI + Prompting Assistant</li></ul><p class="mb-4"><strong style="color:var(--text-primary);">Facilitator:</strong> Javier Montano personally serves the 5 Believers. No rotation.</p><p><strong style="color:var(--text-primary);">Flexible hours:</strong> 7-9 AM, 5-9 PM weekdays, or Saturdays.</p>'
+  };
+  infoData['config-empower'] = {
+    title_es: 'Programa de Empoderamiento',
+    title_en: 'Empowerment Program',
+    body_es: '<p class="mb-4"><strong style="color:var(--text-primary);">16 semanas. Inicia mayo 2026.</strong> Programa de lanzamiento de marca y liderazgo en Quito. Solo 13 plazas.</p><p class="mb-4"><strong style="color:var(--text-primary);">Prerequisitos:</strong> Gerente o superior, 10+ anos de trayectoria, conocimiento basico de IA y gerencia.</p><p class="mb-4"><strong style="color:var(--text-primary);">Precio:</strong> $1,897 USD regular. $1,497 USD con 20% de descuento si viene del CAO Bootcamp.</p><p class="mb-4"><strong style="color:var(--text-primary);">Nota importante:</strong> El Programa de Empoderamiento convocara en mayo, pero no de esta manera intima y con los beneficios exclusivos de la Edicion Creyentes (precio preferencial, acceso vitalicio al campus, atencion directa de Javier). Esos beneficios son exclusivos de esta convocatoria.</p><p><strong style="color:var(--text-primary);">Campus Virtual incluido</strong> para participantes del programa.</p>',
+    body_en: '<p class="mb-4"><strong style="color:var(--text-primary);">16 weeks. Starts May 2026.</strong> Brand launch and leadership program in Quito. Only 13 seats.</p><p class="mb-4"><strong style="color:var(--text-primary);">Prerequisites:</strong> Manager+, 10+ years experience, basic AI and management knowledge.</p><p class="mb-4"><strong style="color:var(--text-primary);">Pricing:</strong> $1,897 USD regular. $1,497 USD with 20% CAO Bootcamp discount.</p><p class="mb-4"><strong style="color:var(--text-primary);">Important:</strong> The Empowerment Program will open enrollment in May, but not with the intimate format and exclusive benefits of the Believers Edition.</p><p><strong style="color:var(--text-primary);">Virtual Campus included</strong> for program participants.</p>'
   };
 
   function openInfo(key) {
