@@ -54,16 +54,19 @@
     html.light {
       --bg-primary: #F8FAFC;
       --bg-secondary: #EEF2F7;
-      --bg-card: rgba(255, 255, 255, 0.7);
-      --text-primary: #0B2545;
-      --text-secondary: #3A5A80;
-      --text-muted: #6B8AB0;
-      --border-color: rgba(11, 37, 69, 0.1);
-      --glass-bg: rgba(255, 255, 255, 0.6);
-      --glass-border: rgba(11, 37, 69, 0.08);
-      --shadow-glow: 0 0 40px rgba(11, 37, 69, 0.05);
+      --bg-card: rgba(255, 255, 255, 0.85);
+      --text-primary: #0A1F3A;
+      --text-secondary: #2C4A6E;
+      --text-muted: #4A6D94;
+      --border-color: rgba(11, 37, 69, 0.15);
+      --glass-bg: rgba(255, 255, 255, 0.75);
+      --glass-border: rgba(11, 37, 69, 0.12);
+      --shadow-glow: 0 2px 20px rgba(11, 37, 69, 0.08);
       --gold: #B8860B;
     }
+    html.light body { font-weight: 500; }
+    html.light h1, html.light h2, html.light h3, html.light h4 { font-weight: 800; }
+    html.light p { letter-spacing: -0.01em; }
 
     /* Light mode contrast fixes — gold text must be dark enough */
     html.light .gold-text {
@@ -657,9 +660,9 @@
         </div>
         <!-- View Toggle -->
         <div class="toggle-pill hidden sm:inline-flex" id="view-toggle">
-          <span id="view-resumen" class="toggle-pill-btn active" onclick="setView('resumen')">Resumen</span>
-          <span id="view-detallado" class="toggle-pill-btn" onclick="setView('detallado')">Detallado</span>
-          <span id="view-inmersivo" class="toggle-pill-btn" onclick="setView('inmersivo')">Inmersivo</span>
+          <span id="view-resumen" class="toggle-pill-btn active" onclick="setView('resumen')" data-i18n="view.summary">Resumen</span>
+          <span id="view-detallado" class="toggle-pill-btn" onclick="setView('detallado')" data-i18n="view.detail">Detallado</span>
+          <span id="view-inmersivo" class="toggle-pill-btn" onclick="setView('inmersivo')" data-i18n="view.immersive">Inmersivo</span>
         </div>
         <!-- CTA Button -->
         <button onclick="openModal('reserve')" class="btn-gold hidden sm:inline-flex py-2 px-5 text-sm">
@@ -994,20 +997,22 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16 reveal">
         <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="journey.hook">Su Camino</p>
-        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="journey.title">2 Momentos + 1 Upgrade</h2>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="journey.title">Su Ruta de (R)Evolución</h2>
+        <p class="text-sm mt-3 max-w-xl mx-auto" style="color:var(--text-secondary);" data-i18n="journey.subtitle">Tres componentes independientes. Cada uno cierra una brecha distinta. Juntos, transforman su operación.</p>
         <div class="gold-divider"></div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
 
         <!-- Momento 0: Workshop -->
-        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col cursor-pointer transition-all hover:scale-[1.02]" onclick="openInfo('level-0')"
+        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col cursor-pointer transition-all hover:scale-[1.02]" onclick="openInfo('level-0')">
           <div class="flex items-center gap-2 mb-4">
             <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">0</span>
-            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);" data-i18n="journey.l0.tag">Exploracion</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);" data-i18n="journey.l0.tag">Taller · 3 horas</span>
           </div>
           <div class="flex items-center justify-between"><h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l0.title">Workshop Zero Risk</h3><button onclick="event.stopPropagation();openInfo('level-0')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas información"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
           <p class="text-2xl font-heading font-black gold-text mb-1">Zero Risk</p>
+          <p class="text-[11px] font-semibold uppercase tracking-wide mb-2" style="color:var(--gold);opacity:0.7;">Pruebe el método sin invertir</p>
           <p class="text-xs mb-3" style="color:var(--text-muted);">Sin inversión económica · 3 horas · Sábado de Pascua</p>
           <p class="text-sm mb-4 flex-1" style="color:var(--text-secondary);">
             Sale con Pristino instalado y listo para personalizar — un agente capaz de resolver tareas operativas solo. 13 plazas.
@@ -1018,13 +1023,14 @@
         </div>
 
         <!-- Momento 1: CAO Bootcamp -->
-        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col cursor-pointer transition-all hover:scale-[1.02]" onclick="openInfo('level-2')"
+        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col cursor-pointer transition-all hover:scale-[1.02]" onclick="openInfo('level-2')">
           <div class="flex items-center gap-2 mb-4">
             <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">1</span>
-            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--gold);">Momento 1: IA Operativa</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--gold);">Bootcamp · 20h en 4-10 sem</span>
             <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ml-auto" style="background:rgba(255,215,0,0.15);color:var(--gold);">Recomendado</span>
           </div>
           <div class="flex items-center justify-between"><h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l2.title">Edición Creyentes</h3><button onclick="event.stopPropagation();openInfo('level-2')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas información"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
+          <p class="text-[11px] font-semibold uppercase tracking-wide mb-2" style="color:var(--gold);opacity:0.7;">Su sistema operativo agéntico personal</p>
           <div class="flex items-baseline gap-2 mb-1">
             <span class="text-lg font-heading font-bold price-strike" style="color:var(--text-muted);">$1,990</span>
             <span class="text-3xl font-heading font-black gold-text">$1,490</span>
@@ -1043,9 +1049,10 @@
         <div class="glass p-7 rounded-2xl reveal level-card flex flex-col cursor-pointer transition-all hover:scale-[1.02]" style="border-color:rgba(255,215,0,0.08);" onclick="openInfo('level-3')">
           <div class="flex items-center gap-2 mb-4">
             <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);"><i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
-            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Upgrade: Marca y Liderazgo</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Programa · 16 semanas</span>
           </div>
-          <div class="flex items-center justify-between"><h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l3.title">Programa Completo</h3><button onclick="event.stopPropagation();openInfo('level-3')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas información"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
+          <div class="flex items-center justify-between"><h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l3.title">Empoderamiento</h3><button onclick="event.stopPropagation();openInfo('level-3')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas información"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
+          <p class="text-[11px] font-semibold uppercase tracking-wide mb-2" style="color:var(--gold);opacity:0.7;">Lance su marca y liderazgo con IA</p>
           <div class="flex items-baseline gap-2 mb-1">
             <span class="text-lg font-heading font-bold price-strike" style="color:var(--text-muted);">$1,990</span>
             <span class="text-2xl font-heading font-black gold-text">$1,490</span>
@@ -1053,7 +1060,7 @@
           </div>
           <p class="text-xs mb-4" style="color:var(--text-muted);">(tasa indicativa, sujeta a variación) · Precio Creyentes</p>
           <p class="text-sm mb-4 flex-1" style="color:var(--text-secondary);">
-            16 semanas desde mayo. 13 plazas. Marca personal y liderazgo con IA. Gerente+, 10+ años.
+            Marca personal + liderazgo amplificados con IA. 16 semanas desde mayo. Posicione su voz, su marca y su visión. Gerente+, 10+ años.
           </p>
           <button onclick="scrollToEl('configurador')" class="btn-ghost mt-auto w-full justify-center py-2.5 text-sm">
             <span data-i18n="journey.l3.cta">Configurar</span>
@@ -1210,7 +1217,7 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16 reveal">
         <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="modalidades.hook">Modalidades</p>
-        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="modalidades.title">Elija Como<br>Participar</h2>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="modalidades.title">Elija Cómo<br>Participar</h2>
         <div class="gold-divider"></div>
       </div>
 
@@ -1748,7 +1755,7 @@
                 <p class="text-sm" style="color:var(--text-muted);" id="emp-price-display">
                   $1,990 USD <span data-i18n="config.c.rate">(tasa indicativa, sujeta a variación)</span>
                 </p>
-                <p class="text-xs mt-2" style="color:var(--text-secondary);" data-i18n="config.c.desc">16 semanas, 13 plazas. 20% descuento si incluye CAO Bootcamp.</p>
+                <p class="text-xs mt-2" style="color:var(--text-secondary);" data-i18n="config.c.desc">16 semanas, 13 plazas. Precio Creyentes: $1,490 USD.</p>
               </div>
               <div class="flex items-center gap-2 flex-shrink-0">
                 <button onclick="event.stopPropagation();openInfo('config-empower')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition" title="Ver detalles"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button>
@@ -2725,7 +2732,7 @@
       body_es: `<p class="mb-4">La modalidad 1:1 es la mas intensa. Cada minuto de las 20 horas esta dedicado exclusivamente a su contexto, sus desafios, su operación.</p>
         <p class="mb-4"><strong style="color:var(--text-primary);">Ventaja principal:</strong> Velocidad. Sin necesidad de consensuar con otros participantes. El facilitador se adapta 100% a su ritmo. Si un tema necesita mas tiempo, se extiende. Si otro ya lo domina, se salta.</p>
         <p><strong style="color:var(--text-primary);">Ideal cuando:</strong> El directivo tiene una agenda muy comprimida, necesita confidencialidad total sobre su estrategia, o simplemente prefiere trabajar sin distracciones. La profundidad es maxima.</p>`,
-      body_en: `<p class="mb-4">The 1:1 modality is the most intense. Every minute of the 18 hours is exclusively dedicated to your context, challenges, and operation.</p>
+      body_en: `<p class="mb-4">The 1:1 modality is the most intense. Every minute of the 20 hours is exclusively dedicated to your context, challenges, and operation.</p>
         <p class="mb-4"><strong style="color:var(--text-primary);">Main advantage:</strong> Speed. No need to align with other participants. The facilitator adapts 100% to your pace. If a topic needs more time, it extends. If you already master another, it's skipped.</p>
         <p><strong style="color:var(--text-primary);">Ideal when:</strong> The executive has a very compressed schedule, needs total confidentiality about their strategy, or simply prefers working without distractions. Depth is maximum.</p>`
     },
@@ -3167,8 +3174,9 @@
       'vision.v3.desc': 'Todo su conocimiento, decisiones y documentos organizados. Busca y la IA encuentra en segundos.',
       'vision.punchline': 'Empiece donde quiera',
       'journey.hook': 'Su Camino',
-      'journey.title': '2 Momentos + 1 Upgrade',
-      'journey.l0.tag': 'Exploracion',
+      'journey.title': 'Su Ruta de (R)Evolución',
+      'journey.subtitle': 'Tres componentes independientes. Cada uno cierra una brecha distinta. Juntos, transforman su operación.',
+      'journey.l0.tag': 'Taller · 3 horas',
       'journey.l0.title': 'Workshop Zero Risk',
       'journey.l0.price': 'Sin costo',
       'journey.l0.desc': '"De Ocupado a Productivo con Agentes de IA". 3 horas. Sabado de Pascua 2026. Convocatoria exclusiva: solo 13 plazas para directivos, directores y managers. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM. No es presentación — es co-creación.',
@@ -3185,7 +3193,7 @@
       'journey.l2.desc': '9 talleres x 2h. Incluye los 13 asistentes, agente Pristino, segundo cerebro digital, networking Q3 ejecutivos. Valor si se comprase por separado: $4,511+ USD.',
       'journey.l2.cta': 'Reservar Plaza',
       'journey.l3.tag': 'Empoderamiento',
-      'journey.l3.title': 'Programa Completo',
+      'journey.l3.title': 'Empoderamiento',
       'journey.l3.rate': '(tasa indicativa, sujeta a variación) con 20% desc. CAO',
       'journey.l3.desc': '16 semanas. Inicia 3ra semana de mayo. 13 plazas. Requisitos: Gerente+, 10+ años experiencia, conocimiento basico de IA.',
       'journey.l3.cta': 'Configurar',
@@ -3204,7 +3212,7 @@
       'programa.phase3.note': 'Al cierre: sistema completo. 13 asistentes + agente + segundo cerebro. Suyo.',
       'programa.punchline': 'Elija como vivirlo',
       'modalidades.hook': 'Modalidades',
-      'modalidades.title': 'Elija Como<br>Participar',
+      'modalidades.title': 'Elija Cómo<br>Participar',
       'mod.solo.title': 'Solo (1:1)',
       'mod.solo.desc': 'Maxima profundidad. Ritmo personal. Foco total.',
       'mod.solo.note': 'Mismo precio en todas las modalidades',
@@ -3251,7 +3259,7 @@
       'config.b.includes': 'Incluye los 13 asistentes + agente Pristino + segundo cerebro + networking',
       'config.c.title': 'Programa de Empoderamiento',
       'config.c.rate': '(tasa indicativa, sujeta a variación)',
-      'config.c.desc': '16 semanas, 13 plazas. 20% descuento si incluye CAO Bootcamp.',
+      'config.c.desc': '16 semanas, 13 plazas. Precio Creyentes: $1,490 USD.',
       'config.summary.title': 'Resumen de Inversión',
       'config.summary.savings': 'Ahorro',
       'config.summary.total': 'Total',
@@ -3325,6 +3333,9 @@
       'modal.mod.work': 'Trabajo',
       'modal.mod.deliverable': 'Entregable',
       'modal.mod.assistant': 'Asistente IA',
+      'view.summary': 'Resumen',
+      'view.detail': 'Detallado',
+      'view.immersive': 'Inmersivo',
     },
     en: {
       'nav.journey': 'Journey',
@@ -3373,11 +3384,12 @@
       'vision.v3.desc': 'All your knowledge, decisions and documents organized. Search and AI finds in seconds.',
       'vision.punchline': 'Start wherever you want',
       'journey.hook': 'Your Path',
-      'journey.title': '2 Moments + 1 Upgrade',
-      'journey.l0.tag': 'Exploration',
+      'journey.title': 'Your (R)Evolution Path',
+      'journey.subtitle': 'Three independent components. Each closes a different gap. Together, they transform your operation.',
+      'journey.l0.tag': 'Workshop · 3 hours',
       'journey.l0.title': 'Free Workshop',
       'journey.l0.price': 'No cost',
-      'journey.l0.desc': '"From Busy to Productive with AI Agents". 3h, Easter Saturday (post Holy Week). Not just a presentation. We build an agent with your real work context, paired with Gemini Gems + NotebookLM.',
+      'journey.l0.desc': '"From Busy to Productive with AI Agents". 3h, Easter Saturday 2026. Not just a presentation. We build an agent with your real work context, paired with Gemini Gems + NotebookLM.',
       'journey.l0.cta': 'Sign Up',
       'journey.l1.tag': 'Custom',
       'journey.l1.title': 'Custom Assistants',
@@ -3391,9 +3403,9 @@
       'journey.l2.desc': '9 workshops x 2h. Includes all 13 assistants, Pristino agent, digital second brain, Q3 executive networking. Value if purchased separately: $4,511+ USD.',
       'journey.l2.cta': 'Reserve Seat',
       'journey.l3.tag': 'Empowerment',
-      'journey.l3.title': 'Full Program',
+      'journey.l3.title': 'Empowerment',
       'journey.l3.rate': '(indicative rate, subject to variation) with 20% CAO discount',
-      'journey.l3.desc': '16 weeks. Starts 3rd week of May. 13 seats. Requirements: Manager+, 10+ years experience, basic AI knowledge.',
+      'journey.l3.desc': 'Personal brand + leadership amplified with AI. 16 weeks from May. Position your voice, brand, and vision. Manager+, 10+ years.',
       'journey.l3.cta': 'Configure',
       'journey.punchline': 'See what each session covers',
       'programa.hook': 'Program',
@@ -3457,7 +3469,7 @@
       'config.b.includes': 'Includes all 13 assistants + Pristino agent + second brain + networking',
       'config.c.title': 'Empowerment Program',
       'config.c.rate': '(indicative rate, subject to variation)',
-      'config.c.desc': '16 weeks, 13 seats. 20% discount if CAO Bootcamp included.',
+      'config.c.desc': '16 weeks, 13 seats. Believers price: $1,490 USD.',
       'config.summary.title': 'Investment Summary',
       'config.summary.savings': 'Savings',
       'config.summary.total': 'Total',
@@ -3504,7 +3516,7 @@
       'ws.badge': 'Level 0 — Free',
       'ws.title': 'From Busy to Productive with AI Agents',
       'ws.desc': 'Not just a presentation. We build an agent with your real work context, paired with Gemini Gems + NotebookLM.',
-      'ws.date': 'Easter Saturday (post Holy Week) 2026',
+      'ws.date': 'Easter Saturday 2026',
       'ws.cta': 'Reserve Spot',
       'final.hook': 'Quito 2026',
       'final.body': 'The first step costs nothing. It only requires you to show up.',
@@ -3524,13 +3536,16 @@
       'modal.reserve.modTerna': 'Trio',
       'modal.reserve.msg': 'Message (optional)',
       'modal.ws.title': 'Free Workshop',
-      'modal.ws.desc': '"From Busy to Productive with AI Agents" — Easter Saturday (post Holy Week) 2026, 3 hours.',
+      'modal.ws.desc': '"From Busy to Productive with AI Agents" — Easter Saturday 2026, 3 hours.',
       'modal.ws.desc2': 'Not just a presentation. We build an agent with your real work context, paired with Gemini Gems + NotebookLM.',
       'modal.ws.submit': 'Reserve Spot',
       'modal.mod.method': 'Methodology',
       'modal.mod.work': 'Work',
       'modal.mod.deliverable': 'Deliverable',
       'modal.mod.assistant': 'AI Assistant',
+      'view.summary': 'Summary',
+      'view.detail': 'Detailed',
+      'view.immersive': 'Immersive',
     }
   };
 
