@@ -1001,7 +1001,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
 
         <!-- Momento 0: Workshop -->
-        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col">
+        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col cursor-pointer transition-all hover:scale-[1.02]" onclick="openInfo('level-0')"
           <div class="flex items-center gap-2 mb-4">
             <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">0</span>
             <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);" data-i18n="journey.l0.tag">Exploracion</span>
@@ -1018,7 +1018,7 @@
         </div>
 
         <!-- Momento 1: CAO Bootcamp -->
-        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col">
+        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col cursor-pointer transition-all hover:scale-[1.02]" onclick="openInfo('level-2')"
           <div class="flex items-center gap-2 mb-4">
             <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">1</span>
             <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--gold);">Momento 1: IA Operativa</span>
@@ -1040,7 +1040,7 @@
         </div>
 
         <!-- Upgrade: Empoderamiento — positioned as upgrade -->
-        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col" style="border-color:rgba(255,215,0,0.08);">
+        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col cursor-pointer transition-all hover:scale-[1.02]" style="border-color:rgba(255,215,0,0.08);" onclick="openInfo('level-3')">
           <div class="flex items-center gap-2 mb-4">
             <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);"><i data-lucide="arrow-up-right" class="w-4 h-4"></i></span>
             <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Upgrade: Marca y Liderazgo</span>
@@ -1214,38 +1214,45 @@
         <div class="gold-divider"></div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6 mb-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
         <!-- Solo -->
-        <div class="glass p-8 rounded-2xl reveal text-center">
-          <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4" style="background:rgba(255,215,0,0.1);">
-            <i data-lucide="user" class="w-8 h-8" style="color:var(--gold);"></i>
+        <div class="glass p-7 rounded-2xl reveal text-center cursor-pointer transition-all hover:scale-[1.02]" onclick="openInfo('mod-solo')">
+          <div class="w-14 h-14 mx-auto rounded-full flex items-center justify-center mb-4" style="background:rgba(255,215,0,0.1);">
+            <i data-lucide="user" class="w-7 h-7" style="color:var(--gold);"></i>
           </div>
-          <div class="flex items-center justify-between"><h3 class="font-heading text-xl font-bold mb-2" style="color:var(--text-primary);" data-i18n="mod.solo.title">Solo (1:1)</h3><button onclick="event.stopPropagation();openInfo('mod-solo')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas información"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
-          <p class="text-sm mb-4" style="color:var(--text-secondary);" data-i18n="mod.solo.desc">Maxima profundidad. Ritmo personal. Foco total.</p>
-          <p class="text-xs" style="color:var(--text-muted);" data-i18n="mod.solo.note">Mismo precio en todas las modalidades</p>
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);">Solo (1:1)</h3>
+            <i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);opacity:0.5;"></i>
+          </div>
+          <p class="text-sm mb-3" style="color:var(--text-secondary);">Máxima profundidad. Ritmo personal. Foco total.</p>
+          <p class="text-xs" style="color:var(--text-muted);">Mismo precio en todas las modalidades</p>
         </div>
 
-        <!-- Dupla — RECOMMENDED -->
-        <div class="glass p-8 rounded-2xl reveal text-center glow-border relative">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-            <span class="px-3 py-1 rounded-full text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#0B2545;" data-i18n="mod.dupla.badge">Recomendado</span>
+        <!-- Dupla -->
+        <div class="glass p-7 rounded-2xl reveal text-center cursor-pointer transition-all hover:scale-[1.02]" onclick="openInfo('mod-dupla')">
+          <div class="w-14 h-14 mx-auto rounded-full flex items-center justify-center mb-4" style="background:rgba(255,215,0,0.1);">
+            <i data-lucide="users" class="w-7 h-7" style="color:var(--gold);"></i>
           </div>
-          <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4" style="background:rgba(255,215,0,0.15);">
-            <i data-lucide="users" class="w-8 h-8" style="color:var(--gold);"></i>
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);">Dupla</h3>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold" style="background:rgba(255,215,0,0.15);color:var(--gold);">Recomendado</span>
+            <i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);opacity:0.5;"></i>
           </div>
-          <div class="flex items-center justify-between"><h3 class="font-heading text-xl font-bold mb-2" style="color:var(--text-primary);" data-i18n="mod.dupla.title">Dupla</h3><button onclick="event.stopPropagation();openInfo('mod-dupla')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas información"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
-          <p class="text-sm mb-4" style="color:var(--text-secondary);" data-i18n="mod.dupla.desc">Consolida cambios operativos con quien ejecuta a su lado. Los habitos se instalan en el dia a dia real.</p>
-          <p class="text-xs" style="color:var(--text-muted);" data-i18n="mod.dupla.note">Mismo precio. Trabajan juntos en una de las empresas del ejecutivo.</p>
+          <p class="text-sm mb-3" style="color:var(--text-secondary);">Consolida cambios operativos con quien ejecuta a su lado. Los hábitos se instalan en el día a día real.</p>
+          <p class="text-xs" style="color:var(--text-muted);">Mismo precio. Trabajan juntos en una de las empresas del ejecutivo.</p>
         </div>
 
         <!-- Terna -->
-        <div class="glass p-8 rounded-2xl reveal text-center">
-          <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4" style="background:rgba(255,215,0,0.1);">
-            <i data-lucide="users-round" class="w-8 h-8" style="color:var(--gold);"></i>
+        <div class="glass p-7 rounded-2xl reveal text-center cursor-pointer transition-all hover:scale-[1.02]" onclick="openInfo('mod-terna')">
+          <div class="w-14 h-14 mx-auto rounded-full flex items-center justify-center mb-4" style="background:rgba(255,215,0,0.1);">
+            <i data-lucide="users-round" class="w-7 h-7" style="color:var(--gold);"></i>
           </div>
-          <div class="flex items-center justify-between"><h3 class="font-heading text-xl font-bold mb-2" style="color:var(--text-primary);" data-i18n="mod.terna.title">Terna</h3><button onclick="event.stopPropagation();openInfo('mod-terna')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas información"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
-          <p class="text-sm mb-4" style="color:var(--text-secondary);" data-i18n="mod.terna.desc">(R)Evolucion sincronizada. 3 personas = momentum imparable.</p>
-          <p class="text-xs" style="color:var(--text-muted);" data-i18n="mod.terna.note">Mismo precio. Trabajan juntos en una de las empresas del ejecutivo.</p>
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);">Terna</h3>
+            <i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);opacity:0.5;"></i>
+          </div>
+          <p class="text-sm mb-3" style="color:var(--text-secondary);">(R)Evolución sincronizada. 3 personas = momentum imparable.</p>
+          <p class="text-xs" style="color:var(--text-muted);">Mismo precio. Trabajan juntos en una de las empresas del ejecutivo.</p>
         </div>
       </div>
 
