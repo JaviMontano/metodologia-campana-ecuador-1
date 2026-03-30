@@ -1670,6 +1670,20 @@
         <!-- LEFT options (3 cols) -->
         <div class="lg:col-span-3 space-y-6">
 
+          <!-- Workshop card (sin inversion economica) -->
+          <div class="glass p-7 rounded-2xl reveal cursor-pointer transition-all" style="border-color:rgba(16,185,129,0.2);" onclick="openModal('workshop')">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-heading font-bold mb-1" style="color:var(--text-primary);">Workshop: De Ocupado a Productivo</h4>
+                <p class="text-sm font-semibold" style="color:rgb(16,185,129);">Sin inversion economica</p>
+                <p class="text-xs mt-2" style="color:var(--text-secondary);">3 horas. Semana Santa 2026. Horarios: 9-12 o 14-17. Solo 13 plazas.</p>
+              </div>
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(16,185,129,0.1);">
+                <i data-lucide="calendar-plus" class="w-5 h-5" style="color:rgb(16,185,129);"></i>
+              </div>
+            </div>
+          </div>
+
           <!-- CAO Bootcamp card (primary option) -->
           <div class="glass p-7 rounded-2xl reveal cursor-pointer transition-all" id="config-cao-card" onclick="toggleCAO()">
             <div class="flex justify-between items-start">
@@ -2162,33 +2176,36 @@
   <div class="modal-overlay" id="modal-workshop">
     <div class="modal-content">
       <div class="flex justify-between items-center mb-6">
-        <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);" data-i18n="modal.ws.title">Workshop Gratuito</h3>
+        <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);">De Ocupado a Productivo</h3>
         <button onclick="closeModal('workshop')" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-yellow-400/10 transition">
           <i data-lucide="x" class="w-5 h-5" style="color:var(--text-muted);"></i>
         </button>
       </div>
-      <p class="text-sm mb-4" style="color:var(--text-secondary);" data-i18n="modal.ws.desc">
-        "De Ocupado a Productivo con Agentes de IA" — Semana Santa 2026, 3 horas.
+      <p class="text-sm mb-3" style="color:var(--text-secondary);">
+        3 horas. Sin inversion economica. Solo su tiempo y disposicion.
       </p>
-      <p class="text-sm mb-6" style="color:var(--text-secondary);" data-i18n="modal.ws.desc2">
-        Convocatoria exclusiva para 13 directivos, directores y managers. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM. No es presentacion — es co-creacion.
+      <p class="text-sm mb-3" style="color:var(--text-secondary);">
+        Si usted invierte su tiempo, nosotros nos comprometemos a esclarecer sus dudas sobre el trabajo agentico y a demostrarle con hechos — no con presentaciones — como opera un sistema de IA en su contexto real.
+      </p>
+      <p class="text-sm mb-6" style="color:var(--text-secondary);">
+        Al cierre del taller, podremos confirmar juntos si trabajamos en la convocatoria Creyentes. Si no es el momento, nos vemos mas adelante — tal vez en el Programa de Empoderamiento, o en el ciclo 2 del CAO Bootcamp en septiembre 2026. Sin presion.
       </p>
       <div class="space-y-4">
         <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40metodologia.info"
            target="_blank" rel="noopener"
            class="btn-gold w-full justify-center text-sm">
           <i data-lucide="calendar-plus" class="w-5 h-5"></i>
-          Inscribirme en Google Calendar
+          Confirmar mi asistencia
         </a>
-        <a href="mailto:contacto@metodologia.info?subject=Workshop%20Gratuito%20—%20De%20Ocupado%20a%20Productivo"
+        <a href="mailto:contacto@metodologia.info?subject=Workshop%20—%20De%20Ocupado%20a%20Productivo%20con%20Agentes%20de%20IA"
            class="btn-ghost w-full justify-center text-sm">
           <i data-lucide="mail" class="w-4 h-4"></i>
-          Prefiero escribir un email
+          Tengo preguntas antes de confirmar
         </a>
       </div>
       <div class="glass p-4 rounded-xl mt-4 text-center">
-        <p class="text-xs" style="color:var(--text-secondary);"><strong style="color:var(--gold);">Horarios disponibles:</strong> 9:00 a 12:00 o 14:00 a 17:00</p>
-        <p class="text-xs mt-1" style="color:var(--text-muted);">Con 13 personas inscritas, cerramos inscripciones. La agenda esta libre — elija el bloque que mejor le funcione.</p>
+        <p class="text-xs" style="color:var(--text-secondary);"><strong style="color:var(--gold);">Horarios:</strong> 9:00 a 12:00 o 14:00 a 17:00 · Semana Santa 2026</p>
+        <p class="text-xs mt-1" style="color:var(--text-muted);">13 plazas para directivos, directores y managers. Al inscribirse el 13avo, cerramos.</p>
       </div>
     </div>
   </div>
@@ -2551,8 +2568,8 @@
       work_en: 'Integrate Google Tasks, Google Notes, Drive, Gmail, Gemini Gems and NotebookLM into a cohesive system. Your knowledge, decisions, tasks and communications connected. AI searches, relates and responds with full context.',
       deliverable_es: 'Segundo Cerebro Digital (ecosistema Google integrado)',
       deliverable_en: 'Digital Second Brain (integrated Google ecosystem)',
-      assistant_es: 'Note-Taking + Workflow Generator',
-      assistant_en: 'Note-Taking + Workflow Generator',
+      assistant_es: 'Note-Taking + Ecosystem Builder',
+      assistant_en: 'Note-Taking + Ecosystem Builder',
       icon: 'database'
     },
     {
@@ -2565,8 +2582,8 @@
       work_en: 'Agent classifies, prioritizes, drafts responses, handles follow-up. Free 5+ hours/week.',
       deliverable_es: 'Sistema de Gestion de Comunicaciones',
       deliverable_en: 'Communications Management System',
-      assistant_es: 'Email Maker + Meeting Analyst',
-      assistant_en: 'Email Maker + Meeting Analyst',
+      assistant_es: 'Email Maker + Productivity Auditor',
+      assistant_en: 'Email Maker + Productivity Auditor',
       icon: 'mail'
     },
     {
@@ -2579,8 +2596,8 @@
       work_en: 'Profile customers, segments, markets with AI. Business model canvas. Identify gaps, opportunities and dependencies that used to take weeks.',
       deliverable_es: 'KYC Dashboard + Business Model Canvas digital',
       deliverable_en: 'KYC Dashboard + Digital Business Model Canvas',
-      assistant_es: 'Opportunity Finder + Copiloto Comercial',
-      assistant_en: 'Opportunity Finder + Commercial Copilot',
+      assistant_es: 'Opportunity Finder + KYC Analyst',
+      assistant_en: 'Opportunity Finder + KYC Analyst',
       icon: 'scan-line'
     },
     {
@@ -2607,8 +2624,8 @@
       work_en: 'Build live dashboards for finance, projects, areas and business units. AI financial analysis: budgets, cash flow, margins. Visual strategic planning. No manual Excel.',
       deliverable_es: 'Dashboard Ejecutivo (Finanzas + Estrategia + Proyectos)',
       deliverable_en: 'Executive Dashboard (Finance + Strategy + Projects)',
-      assistant_es: 'Planning + Diapositivas',
-      assistant_en: 'Planning + Diapositivas',
+      assistant_es: 'Planning + Dashboard Builder',
+      assistant_en: 'Planning + Dashboard Builder',
       icon: 'bar-chart-3'
     },
     {
@@ -2635,8 +2652,8 @@
       work_en: 'AI-powered personal brand. Generate content, connect strategically, measure impact.',
       deliverable_es: 'Estrategia GTM Personal',
       deliverable_en: 'Personal GTM Strategy',
-      assistant_es: 'Presentaciones + Diapositivas Comerciales',
-      assistant_en: 'Presentaciones + Diapositivas Comerciales',
+      assistant_es: 'Presentaciones + Brand Strategist',
+      assistant_en: 'Presentaciones + Brand Strategist',
       icon: 'eye'
     }
   ];
@@ -2655,9 +2672,11 @@
     { es: 'Presentaciones', en: 'Presentaciones' },
     { es: 'Opportunity Finder', en: 'Opportunity Finder' },
     { es: 'AI Assistants Generator', en: 'AI Assistants Generator' },
-    { es: 'Workflow Generator', en: 'Workflow Generator' },
-    { es: 'Diapositivas Comerciales', en: 'Diapositivas Comerciales' },
-    { es: 'Copiloto Comercial', en: 'Commercial Copilot' }
+    { es: 'Ecosystem Builder', en: 'Ecosystem Builder' },
+    { es: 'Productivity Auditor', en: 'Productivity Auditor' },
+    { es: 'KYC Analyst', en: 'KYC Analyst' },
+    { es: 'Dashboard Builder', en: 'Dashboard Builder' },
+    { es: 'Brand Strategist', en: 'Brand Strategist' }
   ];
 
   /* ==================================================================
