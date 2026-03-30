@@ -679,9 +679,9 @@
   <section class="section-pad" style="min-height:auto;padding-top:6rem;padding-bottom:3rem;">
     <div class="max-w-2xl mx-auto px-6 reveal">
       <div class="glass p-10 rounded-2xl" style="border-color:rgba(255,215,0,0.1);">
-        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Convocatoria Creyentes</p>
-        <p class="font-heading text-lg font-bold mb-6" style="color:var(--text-primary);">1 de 13 convocados</p>
-        <div class="text-sm leading-relaxed space-y-4" style="color:var(--text-secondary);">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);" data-i18n="carta.badge">Convocatoria Creyentes</p>
+        <p class="font-heading text-lg font-bold mb-6" style="color:var(--text-primary);" data-i18n="carta.count">1 de 13 convocados</p>
+        <div class="text-sm leading-relaxed space-y-4" style="color:var(--text-secondary);" data-i18n-html="carta.body">
           <p style="color:var(--text-primary);font-weight:600;">Le escribimos desde MetodologIA para invitarle al inicio de una ola de (R)Evolucion Digital que esta por empezar en Quito. Buscamos 13 directivos para una convocatoria exclusiva. El primer paso: un taller Zero Risk de 3 horas. Sin inversión económica.</p>
           <p>La brecha entre directivos que operan con IA y los que no se amplia cada trimestre. Este programa la cierra instalando un sistema agéntico personal — agente propio + 13 asistentes + segundo cerebro digital — en 9 sesiones de co-creación. Los ejecutivos que integran IA en su operación recuperan entre 10 y 15 horas semanales de trabajo operativo (meta indicativa, basada en experiencia de campo).</p>
           <p>No le pedimos mas horas. Le devolvemos las que hoy consume lo operativo. El taller <strong style="color:var(--text-primary);">Zero Risk</strong> demuestra esto en 3 horas, con su contexto laboral real, sin slides ni teoría. Sabado de Pascua 2026, horarios: 9:00-12:00 o 14:00-17:00.</p>
@@ -1295,8 +1295,8 @@
   <section id="objeciones" class="section-pad" style="background:var(--bg-secondary);">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16 reveal">
-        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Transparencia</p>
-        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Lo que probablemente<br>esta pensando</h2>
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="obj.hook">Transparencia</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n-html="obj.title">Lo que probablemente<br>esta pensando</h2>
         <div class="gold-divider"></div>
       </div>
 
@@ -3207,6 +3207,9 @@
      ================================================================== */
   const i18n = {
     es: {
+      'carta.badge': 'Convocatoria Creyentes',
+      'carta.count': '1 de 13 convocados',
+      'obj.hook': 'Transparencia',
       'nav.journey': 'Journey',
       'nav.programa': 'Programa',
       'nav.modalidades': 'Modalidades',
@@ -3419,6 +3422,9 @@
       'view.immersive': 'Inmersivo',
     },
     en: {
+      'carta.badge': 'Believers Call',
+      'carta.count': '1 of 13 invited',
+      'obj.hook': 'Transparency',
       'nav.journey': 'Journey',
       'nav.programa': 'Program',
       'nav.modalidades': 'Modalities',
@@ -3634,8 +3640,16 @@
 
   /* i18n HTML entries */
   const i18nHtml = {
-    es: { 'final.title': '5 directivos. 1 (r)evolucion.<br/>Quito 2026.' },
-    en: { 'final.title': '5 executives. 1 (r)evolution.<br/>Quito 2026.' }
+    es: {
+      'final.title': '5 directivos. 1 (r)evolucion.<br/>Quito 2026.',
+      'obj.title': 'Lo que probablemente<br>esta pensando',
+      'carta.body': '<p style="color:var(--text-primary);font-weight:600;">Le escribimos desde MetodologIA para invitarle al inicio de una ola de (R)Evolucion Digital que esta por empezar en Quito. Buscamos 13 directivos para una convocatoria exclusiva. El primer paso: un taller Zero Risk de 3 horas. Sin inversión económica.</p><p>La brecha entre directivos que operan con IA y los que no se amplia cada trimestre. Este programa la cierra instalando un sistema agéntico personal — agente propio + 13 asistentes + segundo cerebro digital — en 9 sesiones de co-creación. Los ejecutivos que integran IA en su operación recuperan entre 10 y 15 horas semanales de trabajo operativo (meta indicativa, basada en experiencia de campo).</p><p>No le pedimos mas horas. Le devolvemos las que hoy consume lo operativo. El taller <strong style="color:var(--text-primary);">Zero Risk</strong> demuestra esto en 3 horas, con su contexto laboral real, sin slides ni teoría. Sabado de Pascua 2026, horarios: 9:00-12:00 o 14:00-17:00.</p><p style="color:var(--text-primary);font-weight:600;">Al agendarse, le pedimos seriedad y asistencia — su plaza le roba la oportunidad a alguien mas. Solo 5 de los 13 convocados accederan a la Edición Creyentes ($1,490 USD en lugar de $1,990). Cuando se confirmen los primeros 5 (agendando un espacio de romper el hielo), se cerrara esta convocatoria y habra que esperar a julio, por otro valor.</p><p>Y si su visión va mas alla de usted: el Programa de Empoderamiento lleva la adopción de IA a su equipo táctico — gerentes y mandos medios que ejecutan su visión. Puede traerlos a una versión exclusiva dentro de su organización, o invitarlos al programa abierto. La Edición Creyentes del Empoderamiento también esta disponible.</p>'
+    },
+    en: {
+      'final.title': '5 executives. 1 (r)evolution.<br/>Quito 2026.',
+      'obj.title': 'What you\'re probably<br>thinking',
+      'carta.body': '<p style="color:var(--text-primary);font-weight:600;">We write from MetodologIA to invite you to the start of a Digital (R)Evolution wave about to begin in Quito. We\'re looking for 13 executives for an exclusive call. The first step: a 3-hour Zero Risk workshop. No financial investment.</p><p>The gap between executives who operate with AI and those who don\'t widens every quarter. This program closes it by installing a personal agentic system — your own agent + 13 assistants + digital second brain — in 9 co-creation sessions. Executives who integrate AI into their operations recover 10 to 15 hours of weekly operational work (indicative target, based on field experience).</p><p>We\'re not asking for more hours. We\'re giving back the ones operations consume today. The <strong style="color:var(--text-primary);">Zero Risk</strong> workshop demonstrates this in 3 hours, with your real work context, no slides or theory. Easter Saturday 2026, schedules: 9:00-12:00 or 14:00-17:00.</p><p style="color:var(--text-primary);font-weight:600;">When you sign up, we ask for commitment and attendance — your seat takes the opportunity from someone else. Only 5 of the 13 invited will access the Believers Edition ($1,490 USD instead of $1,990). Once the first 5 confirm (scheduling an icebreaker session), this call closes and the next cycle starts in July, at regular price.</p><p>And if your vision goes beyond yourself: the Empowerment Program brings AI adoption to your tactical team — managers and mid-level leaders who execute your vision. You can bring them to an exclusive closed-door version within your organization, or invite them to the open program. The Believers Edition of Empowerment is also available.</p>'
+    }
   };
 
   /* ==================================================================
