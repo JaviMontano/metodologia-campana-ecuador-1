@@ -554,6 +554,10 @@
       transform: scale(1.05);
       background: rgba(255, 215, 0, 0.08);
     }
+    .btn-gold:focus-visible, .btn-ghost:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
 
     /* ============================================================
        DECORATIVE DIVIDER
@@ -1189,7 +1193,7 @@
             <i data-lucide="banknote" class="w-5 h-5 inline mr-2" style="color:var(--gold);"></i>
             "Es mucho dinero para algo que no conozco"
           </h3>
-          <p class="text-sm leading-relaxed" style="color:var(--text-secondary);">Por eso existe la garantia: devolucion del 100% antes de las primeras 4 horas. Y por eso existe el Workshop gratuito — puede experimentar el metodo sin invertir un centavo. Ademas, la Edicion Creyentes es $1,197 USD, no $1,997. Es un precio que reconoce que usted esta confiando en algo nuevo. Si el ROI Calculator le muestra que recupera la inversion en 2-3 semanas, la pregunta no es si puede pagarlo, sino si puede permitirse no hacerlo.</p>
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary);">Tres datos concretos. Primero: existe garantia de devolucion del 100% antes de las primeras 4 horas — usted no arriesga nada. Segundo: el Workshop gratuito le permite experimentar el metodo sin invertir un centavo. Tercero: la Edicion Creyentes cuesta $1,197 USD, no $1,997. Con los valores por defecto de la calculadora de ROI, la inversion se recupera en aproximadamente 2 semanas. Despues de eso, cada hora recuperada es productividad neta (proyeccion ilustrativa).</p>
         </div>
       </div>
 
@@ -1418,7 +1422,7 @@
         <div class="reveal">
           <div class="glass p-8 rounded-2xl glow-border">
             <h3 class="font-heading text-xl font-bold mb-2" style="color:var(--text-primary);" data-i18n="roi.results.title">Su Proyeccion</h3>
-            <p class="text-xs mb-6" style="color:var(--text-muted);" data-i18n="roi.results.note">(meta indicativa)</p>
+            <p class="text-xs mb-6" style="color:var(--text-muted);" data-i18n="roi.results.note">(proyeccion ilustrativa — resultados reales varian segun perfil y adopcion)</p>
             <div class="space-y-6">
               <div class="flex justify-between items-center pb-4" style="border-bottom:1px solid var(--border-color);">
                 <span class="text-sm" style="color:var(--text-secondary);" data-i18n="roi.r1">Horas recuperadas/mes</span>
@@ -2537,7 +2541,7 @@
       'roi.ben.3': 'Dashboard financiero vivo',
       'roi.ben.4': 'Sistema de aprendizaje acelerado',
       'roi.results.title': 'Su Proyeccion',
-      'roi.results.note': '(meta indicativa)',
+      'roi.results.note': '(proyeccion ilustrativa — resultados reales varian segun perfil y adopcion)',
       'roi.r1': 'Horas recuperadas/mes',
       'roi.r2': 'Valor recuperado/mes (USD)',
       'roi.r3': 'Semanas de payback',
@@ -3028,7 +3032,7 @@
     `;
     lucide.createIcons();
     document.getElementById('modal-module').classList.add('active');
-    console.log('Module modal opened for id:', id, m['title_' + lang]);
+    /* Module modal opened */
     document.body.style.overflow = 'hidden';
   }
 
@@ -3190,7 +3194,7 @@
     const automatable = 0.5;
     const hoursMonth = Math.round(hours * automatable * 4);
     const valueMonth = hoursMonth * rate;
-    const payback = valueMonth > 0 ? (1500 / valueMonth * 4).toFixed(1) : 'N/A';
+    const payback = valueMonth > 0 ? (1197 / valueMonth * 4).toFixed(1) : 'N/A';
     const annual = valueMonth * 12;
 
     document.getElementById('roi-hours-month').textContent = hoursMonth;
@@ -3309,21 +3313,21 @@
     let savings = 0;
 
     if (caoSelected) {
-      items.push({ name: 'CAO Bootcamp Creyentes', price: 1500 });
-      total += 1500;
-      /* Savings: 13 assistants at $400 = $4,511 + regular CAO $1,997 - creyentes $1,197 = $6,200 */
-      savings += (13 * 400) + 2500 - 1500;
+      items.push({ name: 'CAO Bootcamp Creyentes', price: 1197 });
+      total += 1197;
+      /* Savings: 13 assistants at $347 = $4,511 + regular CAO $1,997 - creyentes $1,197 */
+      savings += (13 * 347) + 1997 - 1197;
     } else {
       const numAssistants = selectedAssistants.size;
       if (numAssistants > 0) {
         const label = currentLang === 'es' ? 'Asistentes' : 'Assistants';
-        items.push({ name: label + ' x' + numAssistants, price: numAssistants * 400 });
-        total += numAssistants * 400;
+        items.push({ name: label + ' x' + numAssistants, price: numAssistants * 347 });
+        total += numAssistants * 347;
       }
     }
 
     if (empSelected) {
-      const empPrice = caoSelected ? 1600 : 2000;
+      const empPrice = caoSelected ? 1497 : 1897;
       const label = currentLang === 'es' ? 'Programa Empoderamiento' : 'Empowerment Program';
       items.push({ name: label, price: empPrice });
       total += empPrice;
