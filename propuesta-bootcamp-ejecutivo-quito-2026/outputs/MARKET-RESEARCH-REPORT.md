@@ -59,22 +59,25 @@ Ejecutivos en Pichincha + Guayas que tienen:
 - **SAM = ~7,200-12,000 ejecutivos alcanzables**
 - **SAM monetario = 10,000 × $1,490 = ~$14.9M USD**
 
-### SOM (Serviceable Obtainable Market) — Año 1
-Con 1 operador (Cristian) + techo 13 por ciclo + 2-3 ciclos/año:
-- Ciclo 1: 3-5 personas
-- Ciclo 2: 5-8 personas
-- Total Año 1: 8-13 personas en CAO
-- + Empoderamiento: 5-10 personas
-- + Talleres: 20-30 asistentes (gratuitos, pipeline)
-- **SOM = 13-23 ejecutivos pagantes Año 1**
-- **SOM monetario = $19,370 - $34,270 USD** (CAO + Empoderamiento)
+### SOM (Serviceable Obtainable Market) — Año 1 (Modelo Financiero Ecuador)
+Con 1 operador (Cristian) + modelo financiero validado:
+- CAO Bootcamp: 6 ciclos (4+4+5+5+7+8) = 33 personas → $49,170 (56.6%)
+- Empoderamiento: 4 ciclos (3+4+5+7) = 19 personas → $28,310 (32.6%)
+- Asistentes IA a Medida: 27 vendidos desde julio → $9,369 (10.8%)
+- Workshop público mensual desde mayo (gratuito, funnel de leads)
+- **SOM = 52 ejecutivos pagantes + 27 asistentes Año 1**
+- **SOM monetario = $86,849 USD**
+- Costos Año 1: $30,756 (burn mensual $2,563, sin Javier — va a holding)
+- Utilidad Año 1: +$56,093 (~65% margen)
+- 51% Cristian: ~$28,600
+- Break-even: Mes 1
 
-### SOM — Año 2 (con consulting)
-- 3 ciclos CAO: 24-39 personas
-- 2 ciclos Empoderamiento: 10-20 personas
-- Asistentes a Medida: 30-50 × $347 = $10,410-$17,350
+### SOM — Año 2 (con consulting + escala)
+- 6+ ciclos CAO: 50-70 personas (Bloque 3: 10+/ciclo)
+- 4+ ciclos Empoderamiento: 25-35 personas
+- Asistentes a Medida: 50-80 × $347 = $17,350-$27,760
 - Consulting: 3-5 proyectos × $3,000-$5,000 = $9,000-$25,000
-- **SOM Año 2 = $55,000-$100,000 USD**
+- **SOM Año 2 = $120,000-$160,000 USD**
 
 ---
 
@@ -137,7 +140,7 @@ MetodologIA (Holding)
 
 ### Fuentes de financiación
 
-1. **Revenue propio** — CAO ciclos 1-2 ($8,940-$14,900) cubre parcialmente
+1. **Revenue propio** — CAO ciclo 1: $5,960 (4 pers. × $1,490). Revenue Año 1: $86,849. Cubre con creces.
 2. **Inversión Cristian** — $2,900-$8,700 como capital semilla Ecuador
 3. **Angel/Pre-seed** — $25,000-$50,000 a cambio de 5-10% de MetodologIA Holding
 4. **Revenue-based financing** — Cuando revenue sea predecible (post ciclo 3)
@@ -158,9 +161,9 @@ MetodologIA (Holding)
 ## 5. Racional de crecimiento revisado
 
 ### Fase 1: Formación (Año 1-2) — BOOM
-- Ecuador: 2-3 ciclos/año, 8-25 ejecutivos, $12k-$37k revenue
+- Ecuador: 6 ciclos CAO + 4 Emp + Asistentes, 52 ejecutivos pagantes, $86,849 revenue
 - Miami: 2-3 ciclos/año, 8-15 ejecutivos, $16k-$45k revenue
-- **Revenue combinado Año 1: $28k-$82k**
+- **Revenue combinado Año 1: $103k-$132k**
 - Foco: Testimonios, caso de éxito, pipeline, brand building
 
 ### Fase 2: Consulting (Año 2-3) — TOP-OF-MIND
@@ -181,9 +184,9 @@ MetodologIA (Holding)
 
 | Año | Ecuador | Miami | Consulting | Software | **Total** |
 |-----|---------|-------|------------|----------|-----------|
-| 1 | $12k-$37k | $16k-$45k | — | — | **$28k-$82k** |
-| 2 | $25k-$55k | $30k-$70k | $15k-$50k | — | **$70k-$175k** |
-| 3+ | $40k-$80k | $50k-$100k | $30k-$100k | $50k-$200k | **$170k-$480k** |
+| 1 | $86,849 | $16k-$45k | — | — | **$103k-$132k** |
+| 2 | $120k-$160k | $30k-$70k | $15k-$50k | — | **$165k-$280k** |
+| 3+ | $160k-$220k | $50k-$100k | $30k-$100k | $50k-$200k | **$290k-$620k** |
 
 *(proyección ilustrativa — resultados dependen de ejecución)*
 
@@ -201,8 +204,8 @@ Alimentar con:
 
 ### Para la propuesta de Cristian v3
 Incorporar:
-- Market sizing Ecuador real (TAM $89M, SAM $14.9M, SOM $19k-$34k Año 1)
-- Plan de financiación ($39k-$55k seed round)
+- Market sizing Ecuador real (TAM $89M, SAM $14.9M, SOM $86,849 Año 1)
+- Modelo financiero: utilidad +$56,093, margen ~65%, break-even mes 1
 - Salario piso: definir con Javier el monto mínimo
 - Timeline de milestones para financiación
 - Estructura holding + franquicia
