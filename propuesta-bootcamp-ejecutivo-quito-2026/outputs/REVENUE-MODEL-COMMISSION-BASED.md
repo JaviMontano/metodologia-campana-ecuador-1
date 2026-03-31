@@ -57,7 +57,7 @@ Pascua 2026 = 5 de abril. Domingo de Pascua = 5 de abril.
 |-------|--------|
 | **Dom 5 abril** | Día 1: Primer Workshop "De Ocupado a Productivo" |
 | Abril | Workshops dominicales + construcción pipeline |
-| **Abril** | CAO Puerta Cerrada arranca (5-13 ejecutivos, Javier facilita) |
+| **Abril** | CAO Puerta Cerrada arranca (formato Solo/Dupla/Terna, Javier facilita) |
 | **Julio** | CAO Académico 1 arranca ($1,990, Cristian + Embajadores) + primeros Asistentes a Medida |
 | **Agosto** | EMP-1 arranca (3 orgánicos) |
 | **Octubre** | CAO-3 + 1er cierre B2B |
