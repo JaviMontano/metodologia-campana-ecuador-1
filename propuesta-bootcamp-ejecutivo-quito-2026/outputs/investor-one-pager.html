@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetodologIA Ecuador — Investor Brief</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='10' fill='%230A122A'/><path d='M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z' fill='white'/><circle cx='18' cy='8' r='2' fill='%23FFD700'/></svg>" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ── CSS VARIABLES ── */
+    :root {
+      --bg-primary: #0B2545;
+      --bg-secondary: #071A33;
+      --bg-card: rgba(11, 37, 69, 0.6);
+      --text-primary: #F0F4F8;
+      --text-secondary: #A0B4CC;
+      --text-muted: #6B8AB0;
+      --border-color: rgba(255, 215, 0, 0.15);
+      --glass-bg: rgba(11, 37, 69, 0.55);
+      --glass-border: rgba(255, 215, 0, 0.12);
+      --gold: #FFD700;
+      --gold-dark: #FFA000;
+      --shadow-glow: 0 0 40px rgba(255, 215, 0, 0.08);
+    }
+
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      line-height: 1.5;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+
+    .gold-text {
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── LAYOUT ── */
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .header svg { flex-shrink: 0; }
+    .header-text h1 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .tagline {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid;
+      border-image: linear-gradient(90deg, var(--gold), var(--gold-dark)) 1;
+    }
+
+    /* ── SECTIONS ── */
+    .section { margin-bottom: 1.25rem; }
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .section p {
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      line-height: 1.55;
+    }
+
+    /* ── GLASS CARD ── */
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow-glow);
+      padding: 1rem 1.25rem;
+    }
+
+    /* ── TWO COLUMNS ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    /* ── TABLES ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+    }
+    th {
+      text-align: left;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      padding: 0.35rem 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    td {
+      padding: 0.3rem 0.5rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    tr:last-child td { border-bottom: none; }
+    .bold-row td { font-weight: 700; color: var(--text-primary); }
+
+    /* ── REVENUE SPLIT ── */
+    .split-bar {
+      display: flex;
+      border-radius: 6px;
+      overflow: hidden;
+      height: 28px;
+      margin: 0.5rem 0;
+      font-size: 0.65rem;
+      font-weight: 600;
+    }
+    .split-bar div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0B2545;
+    }
+    .split-50 { width: 50%; background: var(--gold); }
+    .split-20a { width: 20%; background: #FFA000; }
+    .split-10 { width: 10%; background: #FFE44D; }
+    .split-20b { width: 20%; background: #D4A017; }
+
+    /* ── METRIC CARDS ── */
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+      margin: 0.75rem 0;
+    }
+    .metric {
+      text-align: center;
+      padding: 0.6rem 0.4rem;
+    }
+    .metric .value {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--gold);
+    }
+    .metric .label {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    /* ── TEAM ── */
+    .team-member {
+      margin-bottom: 0.4rem;
+    }
+    .team-member strong {
+      color: var(--text-primary);
+      font-size: 0.8rem;
+    }
+    .team-member span {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      margin-top: 1.5rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+    }
+
+    /* ── CONFIDENTIAL BADGE ── */
+    .badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      padding: 0.15rem 0.5rem;
+    }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight {
+      background: rgba(255, 215, 0, 0.06);
+      border-left: 3px solid var(--gold);
+      padding: 0.6rem 0.85rem;
+      border-radius: 0 0.5rem 0.5rem 0;
+      margin: 0.5rem 0;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+    }
+    .highlight strong { color: var(--text-primary); }
+
+    /* ── PRINT STYLES ── */
+    @media print {
+      body {
+        background: #fff;
+        color: #1a1a1a;
+        font-size: 11px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .page {
+        max-width: 100%;
+        padding: 1.5cm;
+      }
+      .glass {
+        background: #f8f9fa;
+        backdrop-filter: none;
+        border: 1px solid #ddd;
+        box-shadow: none;
+      }
+      .gold-text {
+        -webkit-text-fill-color: #B8860B;
+        color: #B8860B;
+      }
+      .section-title { color: #B8860B; }
+      .section p, td, .team-member span { color: #444; }
+      th { color: #B8860B; }
+      .highlight {
+        background: #fdf8e8;
+        border-left-color: #B8860B;
+      }
+      .highlight strong { color: #1a1a1a; }
+      .split-bar div { color: #fff; }
+      .badge { color: #B8860B; border-color: #B8860B; }
+      .metric .value { color: #B8860B; }
+      .metric .label { color: #666; }
+      .footer { color: #888; }
+      .bold-row td { color: #1a1a1a; }
+      .tagline { color: #444; border-image: none; border-bottom-color: #B8860B; }
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ── HEADER ── -->
+    <div class="header">
+      <svg width="40" height="40" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="10" fill="#0A122A"/>
+        <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+        <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+      </svg>
+      <div class="header-text">
+        <h1><span class="gold-text">MetodologIA</span> Ecuador</h1>
+        <span class="badge">Investor Brief</span>
+      </div>
+    </div>
+    <p class="tagline">Formacion ejecutiva en IA. Franquicia. Comisiones puras. Cero riesgo de cash flow.</p>
+
+    <!-- ── PROBLEM + SOLUTION ── -->
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title">El Problema</div>
+        <p>Los ejecutivos en Latinoamerica saben que necesitan IA pero no saben como operarla. El mercado de formacion ejecutiva en IA en LatAm es de $0.28B y crece al 25% anual — pero no hay operadores serios en Ecuador.</p>
+      </div>
+      <div class="section">
+        <div class="section-title">La Solucion</div>
+        <p>MetodologIA instala sistemas agénticos personales para directivos: agente propio + 13 asistentes IA + segundo cerebro digital. No ensenamos IA — instalamos un sistema operativo que trabaja mientras el ejecutivo decide, negocia y lidera.</p>
+        <p style="margin-top:0.3rem;font-size:0.75rem;color:var(--text-muted)">3 productos: <strong style="color:var(--text-primary)">Taller Zero Risk</strong> (funnel gratuito), <strong style="color:var(--text-primary)">CAO Bootcamp</strong> ($1,490/persona), <strong style="color:var(--text-primary)">Programa de Empoderamiento</strong> ($1,490/persona).</p>
+      </div>
+    </div>
+
+    <!-- ── MARKET ── -->
+    <div class="section glass">
+      <div class="section-title">Mercado</div>
+      <div class="two-col" style="gap:2rem;align-items:center">
+        <table>
+          <tr><th>Metrica</th><th style="text-align:right">Valor</th></tr>
+          <tr><td>TAM Ecuador</td><td style="text-align:right">$89M (60-100k ejecutivos)</td></tr>
+          <tr><td>SAM</td><td style="text-align:right">$14.9M (7-12k alcanzables)</td></tr>
+          <tr><td>SOM Year 1</td><td style="text-align:right">$136k (52 ejecutivos + B2B + Cobrand)</td></tr>
+          <tr><td>Global AI Corp Training</td><td style="text-align:right">$1.5B → $10.4B by 2033</td></tr>
+          <tr><td>LatAm share</td><td style="text-align:right">7.7% ($0.28B) — Ecuador virgen</td></tr>
+        </table>
+        <div>
+          <div class="metric-grid" style="grid-template-columns:1fr 1fr">
+            <div class="metric glass">
+              <div class="value">25%</div>
+              <div class="label">CAGR Global</div>
+            </div>
+            <div class="metric glass">
+              <div class="value">$89M</div>
+              <div class="label">TAM Ecuador</div>
+            </div>
+          </div>
+          <p style="font-size:0.65rem;color:var(--text-muted);margin-top:0.4rem">Fuente: INEC 2024 (1,073,524 empresas), Census Bureau, Verified Market Reports</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── BUSINESS MODEL ── -->
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title">Modelo de Negocio</div>
+        <p style="margin-bottom:0.4rem"><strong style="color:var(--text-primary)">Revenue share por cierre — cero salarios, cero costos fijos de personal:</strong></p>
+        <div class="split-bar">
+          <div class="split-50">50% Coach</div>
+          <div class="split-20a">20% Franquicia</div>
+          <div class="split-10">10% IP</div>
+          <div class="split-20b">20% Comercial</div>
+        </div>
+        <div class="highlight">
+          Si el operador hace todo: <strong>90% para el.</strong><br>
+          Burn mensual: <strong>$813.</strong> Break-even: <strong>1 cierre.</strong>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-title">4 Flujos de Revenue</div>
+        <table>
+          <tr><th>Flujo</th><th style="text-align:right">Y1</th><th style="text-align:right">Y2</th></tr>
+          <tr><td>B2C (CAO + Emp + Asistentes)</td><td style="text-align:right">$86,849</td><td style="text-align:right">$150,000</td></tr>
+          <tr><td>B2B (grupos corp &le;20)</td><td style="text-align:right">$13,200</td><td style="text-align:right">$98,400</td></tr>
+          <tr><td>B2B2B Cobrand (4x ticket)</td><td style="text-align:right">$36,000</td><td style="text-align:right">$96,000</td></tr>
+          <tr><td>White Label</td><td style="text-align:right">$0</td><td style="text-align:right">$90,500</td></tr>
+          <tr class="bold-row"><td>Total</td><td style="text-align:right">$136,049</td><td style="text-align:right">$434,900</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- ── TRACTION + PROJECTIONS ── -->
+    <div class="section glass">
+      <div class="section-title">Traccion y Proyecciones</div>
+      <div class="two-col" style="gap:2rem">
+        <div>
+          <p style="font-size:0.75rem;color:var(--gold);font-weight:600;margin-bottom:0.3rem">Day 1: Domingo de Pascua (5 abril 2026)</p>
+          <p style="font-size:0.78rem">Pipeline: aspiracional (construyendo via talleres). Primer ciclo CAO: abril-junio (3-5 ejecutivos). Modelo embajadores: graduados se certifican como facilitadores (50% de los programas que ejecuten).</p>
+        </div>
+        <div>
+          <div class="metric-grid">
+            <div class="metric">
+              <div class="value">$136k</div>
+              <div class="label">Revenue Y1</div>
+            </div>
+            <div class="metric">
+              <div class="value">$435k</div>
+              <div class="label">Revenue Y2</div>
+            </div>
+            <div class="metric">
+              <div class="value">$571k</div>
+              <div class="label">24 Meses</div>
+            </div>
+            <div class="metric">
+              <div class="value">27-40x</div>
+              <div class="label">LTV/CAC Y1</div>
+            </div>
+          </div>
+          <table style="margin-top:0.3rem">
+            <tr><th>Metrica</th><th style="text-align:right">Year 1</th><th style="text-align:right">Year 2</th><th style="text-align:right">24 Meses</th></tr>
+            <tr><td>Revenue</td><td style="text-align:right">$136,049</td><td style="text-align:right">$434,900</td><td style="text-align:right">$570,949</td></tr>
+            <tr><td>Costos</td><td style="text-align:right">$9,756</td><td style="text-align:right">~$15,000</td><td style="text-align:right">~$25,000</td></tr>
+            <tr><td>Net income</td><td style="text-align:right">~$126,293</td><td style="text-align:right">~$420,000</td><td style="text-align:right">~$546,000</td></tr>
+            <tr><td>Ejecutivos</td><td style="text-align:right">52</td><td style="text-align:right">150+</td><td style="text-align:right">200+</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SCALING + TEAM ── -->
+    <div class="two-col">
+      <div class="section">
+        <div class="section-title">Escalamiento via Embajadores</div>
+        <p>Cada graduado CAO es un facilitador potencial certificado. Recibe 50% de los programas que ejecute. Motor de escalamiento a costo cero: mas graduados → mas embajadores → mas programas → mas graduados.</p>
+        <p style="margin-top:0.3rem">Despues del Year 1, el operador elige su mix: hacer todo (90%), delegar a embajadores (40-70%), construir redes. La flexibilidad es estructural.</p>
+      </div>
+      <div class="section">
+        <div class="section-title">Equipo</div>
+        <div class="team-member">
+          <strong>Javier Montano</strong> — <span>Founder MetodologIA. Creador del metodo. 27 GPTs, 7 Gemini Gems, Pristino agent (Open Source), 180+ prompts calibrados. Lead facilitator.</span>
+        </div>
+        <div class="team-member">
+          <strong>Cristian Jarrin</strong> — <span>Co-Founder MetodologIA Ecuador. Operador territorial. Titular de franquicia.</span>
+        </div>
+        <div class="team-member">
+          <strong>Red de apoyo:</strong> <span>German, Daniel (acceso a aceleradora, soporte estrategico).</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── THE ASK ── -->
+    <div class="section glass">
+      <div class="section-title">El Ask</div>
+      <div class="two-col" style="gap:2rem">
+        <div>
+          <p><strong style="color:var(--text-primary)">Autosuficiente desde el Mes 1</strong> — $813 burn vs $10,430 revenue M1. No se requiere funding externo para operaciones.</p>
+          <p style="margin-top:0.4rem">Para crecimiento acelerado (equipo comercial, expansion multi-ciudad, presupuesto de marketing): <strong style="color:var(--gold)">$25,000-$50,000 seed</strong> a <span style="color:var(--gold)">[POR CONFIRMAR]</span>% equity en MetodologIA Holding.</p>
+        </div>
+        <div>
+          <p style="font-size:0.75rem;color:var(--gold);font-weight:600;margin-bottom:0.3rem">Milestones para pre-seed:</p>
+          <p>&#x2713; 2 ciclos CAO completados<br>&#x2713; Revenue &gt;$5k/mes<br>&#x2713; 20+ leads cualificados</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CONTACT ── -->
+    <div class="section" style="text-align:center;margin-top:1rem">
+      <p style="font-size:0.85rem;font-weight:600;color:var(--text-primary)">contacto@metodologia.info &nbsp;&middot;&nbsp; metodologia.info</p>
+      <span class="badge" style="margin-top:0.5rem">Documento Confidencial</span>
+    </div>
+
+    <!-- ── FOOTER ── -->
+    <div class="footer">
+      <span>MetodologIA &middot; Innovation Mode &middot; Todos los precios en USD</span>
+      <span>Proyecciones ilustrativas — resultados dependen de ejecucion</span>
+    </div>
+
+  </div>
+</body>
+</html>
