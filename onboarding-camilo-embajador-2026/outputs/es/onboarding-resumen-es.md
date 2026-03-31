@@ -333,7 +333,62 @@ Si un facilitador del equipo Mayo no puede continuar, el reemplazo lo coordina K
 
 ---
 
-## 11. Proceso de Onboarding: 20 Horas
+## 11. Forma de Pago del Onboarding
+
+MetodologIA pone y entrega todo: las 20 horas de onboarding, materiales, acceso al catalogo, playbooks y CRM. **Camilo no paga upfront.** [DECISION: 2026-03, Javier — financiar el onboarding como inversion, no como gasto]
+
+### Mecanica
+
+| Concepto | Detalle |
+|----------|---------|
+| **Costo del onboarding** | Equivalente al valor de las 20h de formacion + materiales |
+| **Forma de pago** | Contra las comisiones del primer cierre de Camilo |
+| **Cuando se paga** | Al liquidar la comision del primer servicio cerrado y recaudado |
+| **Que pasa si no cierra en Q1-Q2** | Reunion de alineacion con Javier. No es deuda — es inversion compartida. Se evalua si continuar, ajustar enfoque o cerrar la relacion. [DECISION: 2026-03, Javier — modelo no punitivo] |
+
+**Logica**: MetodologIA invierte en Camilo porque confia en que va a producir. El riesgo es compartido — MetodologIA pone capital (formacion), Camilo pone tiempo y ejecucion. Cuando Camilo genera su primer cierre, el costo del onboarding se descuenta de esa comision. A partir del segundo cierre, todo es ganancia neta para Camilo.
+
+**Ejemplo**: Si Camilo cierra un EstrategIA Personal (COP 3.4M) y su comision es 70% (vende + imparte) = COP 2.38M. De ahi se descuenta el costo del onboarding. El remanente es para Camilo. A partir del segundo cierre, el 70% es limpio. [SUPUESTO: costo exacto del onboarding por definir | validar con Javier]
+
+[POR CONFIRMAR: Javier — monto exacto del costo del onboarding que se descuenta del primer cierre]
+
+---
+
+## 12. Programa de Referidos: Embajadores Comerciales
+
+Camilo puede invitar a companeros de HMV o de su red a convertirse en embajadores de la marca MetodologIA. El programa tiene 3 niveles progresivos. [DECISION: 2026-03, Katherine — crear efecto red a traves de embajadores habilitados]
+
+### Los 3 Niveles
+
+| Nivel | Nombre | Requisito | Capacidades | Comision |
+|-------|--------|-----------|-------------|----------|
+| **0** | **Referidor** | Confirmar interes formalmente | Referir prospectos a MetodologIA | 5% sobre negocio cerrado derivado de su referencia |
+| **1** | **Embajador Comercial** | Onboarding 20h completado | Referir + vender (4 hitos) + operar como ambassador lite | 20% comercial (4 hitos) + 5% por referidos propios |
+| **2** | **Embajador Completo** | Programa Empoderamiento o Digital Champions completado | Todo: referir + vender + facilitar + entrenar + marca blanca + franquicia | 20% comercial + 50% trainer + acceso franquicia + 5% referidos |
+
+### Como Funciona
+
+**Nivel 0 (Referidor)**: El entry point mas bajo. Sin onboarding, sin compromiso, sin costo. Un companero de Camilo dice "conozco a alguien que necesita esto" y refiere. Si ese negocio cierra, el referidor recibe 5% del valor recaudado. Los detalles del modelo interno se entregan al confirmar interes formalmente. [DECISION: 2026-03, Katherine — no exponer modelo completo publicamente. Se revela al confirmar.]
+
+**Nivel 1 (Embajador Comercial)**: El companero completa el onboarding de 20h (con la misma forma de pago: contra comisiones del primer cierre). Queda habilitado para vender — no para facilitar ni entrenar. Es un "embajador lite" con capacidades comerciales completas pero sin capacidades de delivery.
+
+**Nivel 2 (Embajador Completo)**: Si el Embajador Comercial completa el Programa de Empoderamiento (COP 18M, 16 semanas) o Digital Champions (B2B), desbloquea todos los beneficios: puede facilitar, entrenar, operar marca blanca, y participar en la franquicia. Es el embajador completo con acceso a toda la maquinaria. [EVIDENCIA: programa-empoderamiento/canonico.md + Ruta_Abundancia_Aliados.pdf, slide 11]
+
+### Efecto Red
+
+Cada embajador puede generar mas embajadores. Camilo invita a 3 companeros de HMV como referidores (nivel 0). Si uno de ellos se entusiasma, hace el onboarding (nivel 1). Si ese nuevo embajador cierra 2 servicios y quiere ir full, hace Empoderamiento (nivel 2). Ahora hay 2 embajadores completos en Medellin. El modelo es viral por diseno — no por presion. [INFERENCIA: modelo inspirado en franquicias de formacion con expansion organica]
+
+### Restricciones
+
+- El 5% de referidos aplica **solo a negocios que efectivamente se cierren y recauden**. Sin recaudo, sin comision. [EVIDENCIA: Ruta_Abundancia_Aliados.pdf — pago por recaudo]
+- Los detalles internos (modelos de comision, reparto de franquicia, marca blanca) se revelan **solo al confirmar interes formalmente** — no se publican ni se comparten en materiales de convocatoria. [DECISION: 2026-03, Katherine]
+- No hay clausula de permanencia. Un referidor puede dejar de referir en cualquier momento sin consecuencias.
+
+[POR CONFIRMAR: Javier — valor exacto del onboarding para embajadores comerciales (nivel 1) y si aplica la misma mecanica de "pago contra primer cierre"]
+
+---
+
+## 13. Proceso de Onboarding: 20 Horas
 
 El onboarding es un programa estructurado de **20 horas** (10 sesiones de 2h) que capacita al Embajador para ofertar y operar todos los servicios canonicos. [DECISION: 2026-03, Javier — formato de 8 talleres + kick-off + cierre]
 
@@ -373,7 +428,7 @@ Camilo se considera **habilitado** cuando:
 
 ---
 
-## 12. Catalogo Completo — Referencia para Ofertar
+## 14. Catalogo Completo — Referencia para Ofertar
 
 El Embajador debe conocer los 17 servicios para cualificar prospectos y recomendar la ruta correcta.
 
@@ -437,7 +492,7 @@ Acumulable, intransferible. [EVIDENCIA: canonicos respectivos, seccion "Credito 
 
 ---
 
-## 13. Items [POR CONFIRMAR] — Consolidado
+## 15. Items [POR CONFIRMAR] — Consolidado
 
 | # | Item | Owner | Deadline |
 |---|------|-------|----------|
@@ -451,6 +506,8 @@ Acumulable, intransferible. [EVIDENCIA: canonicos respectivos, seccion "Credito 
 | 8 | Calendario de las 10 sesiones de onboarding (20h) | Javier + Camilo | Antes de Pascua |
 | 9 | Acceso CRM configurado para Camilo | Katherine | Antes de kick-off |
 | 10 | Servicios Tier 3 (IAC): confirmar si Camilo puede ofertarlos o solo Tier 1-2 | Javier | Taller 1 del onboarding |
+| 11 | Monto exacto del costo del onboarding que se descuenta del primer cierre | Javier | Antes de Pascua |
+| 12 | Mecanica de pago para embajadores comerciales (nivel 1): misma logica de "contra primer cierre"? | Javier | Antes de abrir invitaciones a companeros |
 
 ---
 
