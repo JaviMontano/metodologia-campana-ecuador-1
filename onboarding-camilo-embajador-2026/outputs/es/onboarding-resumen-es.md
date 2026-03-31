@@ -10,7 +10,42 @@ Camilo, pasaste de participante a parte del sistema. Ya viviste la transformacio
 
 ---
 
-## 2. Que ES Ser Embajador
+## 2. Pre-Requisitos — Que Necesitas ANTES del Kick-off
+
+> Llegar preparado al kick-off es la diferencia entre arrancar en velocidad y perder la primera sesion en setup.
+
+### Cuentas y Herramientas (configurar antes del kick-off)
+
+| # | Requisito | Estado esperado | Tiempo estimado | Prioridad |
+|---|-----------|----------------|-----------------|-----------|
+| 1 | **Cuenta Google personal** (Gmail) | Activa, con Google One AI Premium ($19.99/mes) activado. Gemini Advanced + NotebookLM Plus funcionando. | 15 min | Critica |
+| 2 | **ChatGPT Plus** | Suscripcion activa ($20/mes). Acceso a GPTs personalizados. | 10 min | Alta |
+| 3 | **WhatsApp** (canal de soporte con Javier) | Ya operativo. Confirmar que tienes el numero de Javier guardado. | 2 min | Critica |
+| 4 | **Acceso al CRM** | [POR CONFIRMAR: Katherine configura antes de kick-off] | Depende de Katherine | Alta |
+| 5 | **Calendario dedicado** (Google Calendar o equivalente) | Bloquear las 10 sesiones de onboarding (20h) en tu calendario. Frecuencia sugerida: 2-3/semana. | 20 min | Alta |
+| 6 | **LinkedIn optimizado** | Perfil actualizado con rol de "Consultor en Productividad con IA" o equivalente. Foto profesional. Headline que comunique valor. | 30-60 min | Media |
+
+### Lecturas Previas (completar antes del kick-off)
+
+| # | Documento | Donde encontrarlo | Tiempo estimado | Objetivo |
+|---|-----------|-------------------|-----------------|----------|
+| 1 | **Este documento de onboarding** (completo) | Ya lo tienes | 45 min | Entender el modelo completo: comercial, operativo, retos Q |
+| 2 | **Playbook del Embajador** (anexo-E-playbook-embajador.md) | Carpeta compartida por Javier | 60 min | Referencia operativa para cada fase del ciclo de servicio |
+| 3 | **Ruta de Abundancia Aliados** (Ruta_Abundancia_Aliados.pdf) | Carpeta compartida por Javier | 30 min | Modelo comercial, reparto, vision estrategica |
+| 4 | **Catalogo canonico** (catalogo-servicios/canonico.md) | Repositorio catalogo-servicios | 45 min | Conocer los 17 servicios: que son, para quien, a que precio |
+
+### Mentalidad de Entrada
+
+| Lo que SI traer al kick-off | Lo que NO traer |
+|----------------------------|-----------------|
+| Preguntas especificas sobre el modelo comercial | Miedo a vender (vas a aprender paso a paso) |
+| Lista de 5 contactos potenciales en Medellin | Expectativa de salario fijo (es 100% a destajo) |
+| Disponibilidad de horario para las 10 sesiones | Prisa por cerrar — Q1 es para observar, no para vender |
+| Tu experiencia como egresado del Empoderamiento | Comparaciones con otros modelos de franquicia |
+
+---
+
+## 3. Que ES Ser Embajador
 
 Ser Embajador es orquestar el ciclo completo de un servicio — no solo vender, no solo facilitar, no solo seguir un guion.
 
@@ -25,7 +60,7 @@ Ser Embajador es orquestar el ciclo completo de un servicio — no solo vender, 
 
 ---
 
-## 3. Tres Retos Trimestrales — Ventas Consultivas
+## 4. Tres Retos Trimestrales — Ventas Consultivas
 
 ### Q1 (Abril-Junio 2026): Observar
 
@@ -77,7 +112,43 @@ Ser Embajador es orquestar el ciclo completo de un servicio — no solo vender, 
 
 ---
 
-## 4. Mision Mayo — Programa de Empoderamiento End-to-End
+## 5. Metricas de Exito del Embajador — Ano 1
+
+> Que significa un Ano 1 exitoso para Camilo. Estas metricas son orientativas, no punitivas — sirven para medir progreso y ajustar rumbo.
+
+### Metricas Cuantitativas
+
+| Metrica | Meta Conservadora | Meta Moderada | Meta Agresiva | Medicion |
+|---------|-------------------|---------------|---------------|----------|
+| **Revenue generado** | COP 7.1M | COP 17.8M | COP 30M+ | CRM — recaudo efectivo acumulado |
+| **Servicios cerrados** | 3 | 7 | 10+ | CRM — contratos firmados y pagados |
+| **Pipeline activo** (prospectos en proceso) | 5 contactos calificados | 10 contactos | 15+ contactos | CRM — leads con al menos H1 completado |
+| **Convocatoria Empoderamiento Mayo** | 6 participantes (breakeven) | 9 participantes | 12 participantes (capacidad maxima) | Inscripciones confirmadas y pagadas |
+| **Tasa de conversion** (lead -> cierre) | 15% | 25% | 35% | CRM — cerrados / leads totales |
+
+### Metricas Cualitativas
+
+| Metrica | Indicador de exito | Medicion |
+|---------|-------------------|----------|
+| **NPS de clientes** | >= 8.5 promedio en todos los servicios impartidos | Encuesta post-servicio estandarizada |
+| **Retencion de clientes** | >= 1 cliente repite o escala a servicio superior | CRM — upsell/cross-sell tracking |
+| **Autonomia operativa** | Camilo puede operar un servicio end-to-end sin intervencion de Javier | Evaluacion Q3 |
+| **Calidad de entregables** | Cero quejas formales de clientes en el ano | Registro de escalaciones en CRM |
+| **Red de referidos** | >= 3 referidos organicos generados por clientes satisfechos | CRM — fuente del lead |
+
+### Checkpoints de Evaluacion
+
+| Momento | Que se evalua | Quien evalua | Accion si no va bien |
+|---------|--------------|-------------|---------------------|
+| **Fin Q1** (Junio) | Reporte de observacion entregado. 6+ participantes Empoderamiento inscritos. | Javier | Coaching intensivo. Identificar blockers. |
+| **Fin Q2** (Septiembre) | 1 venta cerrada o pipeline report. NPS Empoderamiento >= 8.5. | Javier + Katherine | Ajustar estrategia comercial. Revisar prospeccion. |
+| **Fin Q3** (Diciembre) | 1 venta cerrada solo. Revenue acumulado >= COP 7.1M. | Javier + Camilo | Evaluacion formal: continuar, ajustar o cerrar. |
+
+[SUPUESTO: metas basadas en proyecciones de seccion 9 (Revenue) y capacidad estimada de un embajador en su primer ano | ajustar con datos reales post-Q2]
+
+---
+
+## 6. Mision Mayo — Programa de Empoderamiento End-to-End
 
 Primera mision grande: liderar (con equipo) el ciclo completo del Programa de Empoderamiento.
 
@@ -91,6 +162,27 @@ Primera mision grande: liderar (con equipo) el ciclo completo del Programa de Em
 | **German** | Co-facilitador / Mentor 1:1 [STAKEHOLDER] |
 
 **Contingencia de equipo:** Si un facilitador no puede continuar, Katherine coordina el reemplazo con Javier. Maximo 1 sesion sin facilitador asignado antes de activar reemplazo. [DECISION: 2026-03, Javier]
+
+### Perfiles de Participante Ideal (Personas del Empoderamiento)
+
+> Estos perfiles ayudan a Camilo a calificar prospectos durante la convocatoria. No todos encajaran perfectamente — el objetivo es que al menos 4 de 6 participantes sean "high fit".
+
+| Persona | Perfil | Sector tipico | Cargo tipico | Pain points principales | Por que el Empoderamiento es para ellos |
+|---------|--------|---------------|-------------|------------------------|----------------------------------------|
+| **El Directivo Sobrecargado** | 35-55 anos. Dirige equipos o areas. Ahogado en operacion. Sabe que la IA existe pero no tiene tiempo de aprender. | Ingenieria, manufactura, servicios profesionales | Gerente de area, Director de operaciones, VP | Demasiadas reuniones, informes manuales, decision fatigue, no delega bien | Necesita un sistema que lo libere de la operacion para que pueda pensar estrategicamente. |
+| **El Emprendedor Ambicioso** | 28-45 anos. Tiene su empresa o consultoria. Hace todo el solo o con equipo pequeno. Quiere escalar sin contratar mas gente. | Consultoria, tech, servicios, comercio | CEO, Fundador, Director General | No puede escalar, todo depende de el, trabaja 12h/dia, no tiene sistemas | El sistema agentico le da un "equipo digital" que multiplica su capacidad sin costos fijos de nomina. |
+| **El Profesional en Transicion** | 30-50 anos. Quiere reinventarse profesionalmente. Siente que el mercado cambio y necesita actualizarse. | Cualquiera | Gerente, Coordinador, Profesional senior | Obsolescencia percibida, competencia de juniors nativos digitales, ansiedad por IA | El programa lo posiciona como "aumentado por IA", no reemplazado. Diferencial competitivo en su mercado. |
+| **El C-Level Visionario** | 40-60 anos. Ya entiende que la IA es estrategica. Quiere vivir la experiencia antes de implementar en su organizacion. | Cualquiera (empresas medianas-grandes) | CEO, COO, CTO, CDO | No puede tomar decisiones informadas sobre IA sin experiencia directa, depende de proveedores que le venden sin contexto | Primero se transforma el, despues transforma la organizacion. Es el piloto antes del programa corporativo. |
+
+**Criterios de calificacion rapida** (para la convocatoria):
+
+| Criterio | Green flag | Red flag |
+|----------|-----------|----------|
+| **Capacidad de inversion** | COP 18M no es un problema financiero significativo | Pide descuento antes de entender el programa |
+| **Disponibilidad de tiempo** | Puede comprometer 4-5h/semana durante 16 semanas | "No tengo tiempo" sin disposicion a reorganizar agenda |
+| **Motivacion** | Quiere transformarse, no solo aprender | Busca solo un certificado para el CV |
+| **Apertura tecnologica** | Usa herramientas digitales basicas, dispuesto a aprender nuevas | Resistencia activa a la tecnologia |
+| **Contexto profesional** | Tiene decisiones que tomar, equipos que liderar, o negocio que escalar | Sin contexto profesional donde aplicar lo aprendido |
 
 ### El Ciclo End-to-End
 
@@ -126,26 +218,26 @@ El Programa se financia con el recaudo de participantes (COP 18M/persona). El eq
 
 ---
 
-## 5. Roadmap 2026
+## 7. Roadmap 2026
 
 ```
-MAR ── Onboarding Embajador. Leer playbook. Sesion con Javier.
+MAR -- Onboarding Embajador. Leer playbook. Sesion con Javier.
        Domingo de Pascua: arranque oficial.
-ABR ── Convocatoria Empoderamiento Mayo.
+ABR -- Convocatoria Empoderamiento Mayo.
        Q1 arranca: observar 1 venta consultiva con Javier.
-MAY ── Arranque Empoderamiento (Phase 0 + semana 1).
+MAY -- Arranque Empoderamiento (Phase 0 + semana 1).
        Q1 continua: observar ciclo completo.
-JUN ── Q1 cierra: entrega reporte de observacion.
+JUN -- Q1 cierra: entrega reporte de observacion.
        Q2 arranca: liderar 1 venta acompanado.
        Empoderamiento en ejecucion (semanas 5-8).
-JUL ── Q2 en curso. Empoderamiento semanas 9-12.
-AGO ── Q2 cierra (cierre o pipeline report).
+JUL -- Q2 en curso. Empoderamiento semanas 9-12.
+AGO -- Q2 cierra (cierre o pipeline report).
        Empoderamiento pre-capstone (semanas 13-14).
-SEP ── Cierre Empoderamiento: capstones, certificacion, NPS.
+SEP -- Cierre Empoderamiento: capstones, certificacion, NPS.
        Q3 arranca: cerrar 1 solo.
-OCT ── Q3 en curso. Post-venta Empoderamiento (T5).
-NOV ── Q3 en curso. Post-venta (T6).
-DIC ── Q3 cierra: 1 servicio cerrado y pagado.
+OCT -- Q3 en curso. Post-venta Empoderamiento (T5).
+NOV -- Q3 en curso. Post-venta (T6).
+DIC -- Q3 cierra: 1 servicio cerrado y pagado.
        Evaluacion anual como Embajador.
        Post-venta Empoderamiento (T7).
 ```
@@ -154,7 +246,7 @@ DIC ── Q3 cierra: 1 servicio cerrado y pagado.
 
 ---
 
-## 6. Modelo Comercial
+## 8. Modelo Comercial
 
 Modelo 100% a destajo. Sin salario fijo. Compensacion vinculada al valor aportado: si no produces, no cobras; si produces, la estructura es transparente y verificable. [EVIDENCIA: Ruta_Abundancia_Aliados.pdf]
 
@@ -240,7 +332,7 @@ Tu marca al frente, MetodologIA pone el Metodo. Operas con autonomia: integras y
 
 ---
 
-## 7. Proyeccion de Revenue Anual
+## 9. Proyeccion de Revenue Anual
 
 | Escenario | Servicios/ano | Revenue Camilo (est.) | Supuesto clave |
 |-----------|--------------|----------------------|----------------|
@@ -254,7 +346,7 @@ Tu marca al frente, MetodologIA pone el Metodo. Operas con autonomia: integras y
 
 ---
 
-## 8. Franquicia Colombia
+## 10. Franquicia Colombia
 
 > La franquicia es **totalmente opcional**. No es condicion para ser Embajador. Es una invitacion a evaluar juntos.
 
@@ -284,13 +376,13 @@ Tu marca al frente, MetodologIA pone el Metodo. Operas con autonomia: integras y
 
 [POR CONFIRMAR: Javier + Camilo, sin deadline forzado — estructura de entry fee, valoracion de MetodologIA Colombia, timeline de decision]
 
-**Revenue de franquicia:** El reparto completo esta en la seccion 6 (Modelo Comercial). Si Camilo es entry partner, participa del 20% de franquicia **ademas** de cualquier comision comercial (20%) y/o trainer (50%) que genere. [EVIDENCIA: Ruta_Abundancia_Aliados.pdf]
+**Revenue de franquicia:** El reparto completo esta en la seccion 8 (Modelo Comercial). Si Camilo es entry partner, participa del 20% de franquicia **ademas** de cualquier comision comercial (20%) y/o trainer (50%) que genere. [EVIDENCIA: Ruta_Abundancia_Aliados.pdf]
 
 **Conversacion exploratoria:** 180 minutos para definir ruta y alineacion. La conversacion es para explorar, no para comprometer. Si despues de 180 min no hay encaje, se cierra sin consecuencias. [DECISION: 2026-03, Javier — priorizar claridad sobre presion]
 
 ---
 
-## 9. Soporte y Escalacion
+## 11. Soporte y Escalacion
 
 | Canal | Uso | SLA |
 |-------|-----|-----|
@@ -307,14 +399,14 @@ Escalacion: cliente -> Camilo (respuesta en 24h) -> Javier (si no resuelto en 48
 
 ---
 
-## 10. Compromiso Mutuo
+## 12. Compromiso Mutuo
 
 ### MetodologIA se compromete a:
 
 - Mentoria directa de Javier durante los 3 trimestres [DECISION: 2026-03, Javier]
 - Soporte operativo de Katherine [DECISION: 2026-03, Katherine]
 - Acceso completo al catalogo, playbooks y materiales [EVIDENCIA: catalogo-servicios/]
-- Comision por ventas cerradas segun modelo comercial documentado en seccion 6 [EVIDENCIA: Ruta_Abundancia_Aliados.pdf]
+- Comision por ventas cerradas segun modelo comercial documentado en seccion 8 [EVIDENCIA: Ruta_Abundancia_Aliados.pdf]
 
 ### Camilo se compromete a:
 
@@ -330,61 +422,6 @@ No hay clausula de exclusividad. Camilo puede operar en otros proyectos. Unica r
 ### Contingencia de equipo
 
 Si un facilitador del equipo Mayo no puede continuar, el reemplazo lo coordina Katherine con Javier. Maximo 1 sesion sin facilitador asignado antes de activar reemplazo. [DECISION: 2026-03, Javier]
-
----
-
-## 11. Forma de Pago del Onboarding
-
-MetodologIA pone y entrega todo: las 20 horas de onboarding, materiales, acceso al catalogo, playbooks y CRM. **Camilo no paga upfront.** [DECISION: 2026-03, Javier — financiar el onboarding como inversion, no como gasto]
-
-### Mecanica
-
-| Concepto | Detalle |
-|----------|---------|
-| **Costo del onboarding** | Equivalente al valor de las 20h de formacion + materiales |
-| **Forma de pago** | Contra las comisiones del primer cierre de Camilo |
-| **Cuando se paga** | Al liquidar la comision del primer servicio cerrado y recaudado |
-| **Que pasa si no cierra en Q1-Q2** | Reunion de alineacion con Javier. No es deuda — es inversion compartida. Se evalua si continuar, ajustar enfoque o cerrar la relacion. [DECISION: 2026-03, Javier — modelo no punitivo] |
-
-**Logica**: MetodologIA invierte en Camilo porque confia en que va a producir. El riesgo es compartido — MetodologIA pone capital (formacion), Camilo pone tiempo y ejecucion. Cuando Camilo genera su primer cierre, el costo del onboarding se descuenta de esa comision. A partir del segundo cierre, todo es ganancia neta para Camilo.
-
-**Ejemplo**: Si Camilo cierra un EstrategIA Personal (COP 3.4M) y su comision es 70% (vende + imparte) = COP 2.38M. De ahi se descuenta el costo del onboarding. El remanente es para Camilo. A partir del segundo cierre, el 70% es limpio. [SUPUESTO: costo exacto del onboarding por definir | validar con Javier]
-
-[POR CONFIRMAR: Javier — monto exacto del costo del onboarding que se descuenta del primer cierre]
-
----
-
-## 12. Programa de Referidos: Embajadores Comerciales
-
-Camilo puede invitar a companeros de HMV o de su red a convertirse en embajadores de la marca MetodologIA. El programa tiene 3 niveles progresivos. [DECISION: 2026-03, Katherine — crear efecto red a traves de embajadores habilitados]
-
-### Los 3 Niveles
-
-| Nivel | Nombre | Requisito | Capacidades | Comision |
-|-------|--------|-----------|-------------|----------|
-| **0** | **Referidor** | Confirmar interes formalmente | Referir prospectos a MetodologIA | 5% sobre negocio cerrado derivado de su referencia |
-| **1** | **Embajador Comercial** | Onboarding 20h completado | Referir + vender (4 hitos) + operar como ambassador lite | 20% comercial (4 hitos) + 5% por referidos propios |
-| **2** | **Embajador Completo** | Programa Empoderamiento o Digital Champions completado | Todo: referir + vender + facilitar + entrenar + marca blanca + franquicia | 20% comercial + 50% trainer + acceso franquicia + 5% referidos |
-
-### Como Funciona
-
-**Nivel 0 (Referidor)**: El entry point mas bajo. Sin onboarding, sin compromiso, sin costo. Un companero de Camilo dice "conozco a alguien que necesita esto" y refiere. Si ese negocio cierra, el referidor recibe 5% del valor recaudado. Los detalles del modelo interno se entregan al confirmar interes formalmente. [DECISION: 2026-03, Katherine — no exponer modelo completo publicamente. Se revela al confirmar.]
-
-**Nivel 1 (Embajador Comercial)**: El companero completa el onboarding de 20h (con la misma forma de pago: contra comisiones del primer cierre). Queda habilitado para vender — no para facilitar ni entrenar. Es un "embajador lite" con capacidades comerciales completas pero sin capacidades de delivery.
-
-**Nivel 2 (Embajador Completo)**: Si el Embajador Comercial completa el Programa de Empoderamiento (COP 18M, 16 semanas) o Digital Champions (B2B), desbloquea todos los beneficios: puede facilitar, entrenar, operar marca blanca, y participar en la franquicia. Es el embajador completo con acceso a toda la maquinaria. [EVIDENCIA: programa-empoderamiento/canonico.md + Ruta_Abundancia_Aliados.pdf, slide 11]
-
-### Efecto Red
-
-Cada embajador puede generar mas embajadores. Camilo invita a 3 companeros de HMV como referidores (nivel 0). Si uno de ellos se entusiasma, hace el onboarding (nivel 1). Si ese nuevo embajador cierra 2 servicios y quiere ir full, hace Empoderamiento (nivel 2). Ahora hay 2 embajadores completos en Medellin. El modelo es viral por diseno — no por presion. [INFERENCIA: modelo inspirado en franquicias de formacion con expansion organica]
-
-### Restricciones
-
-- El 5% de referidos aplica **solo a negocios que efectivamente se cierren y recauden**. Sin recaudo, sin comision. [EVIDENCIA: Ruta_Abundancia_Aliados.pdf — pago por recaudo]
-- Los detalles internos (modelos de comision, reparto de franquicia, marca blanca) se revelan **solo al confirmar interes formalmente** — no se publican ni se comparten en materiales de convocatoria. [DECISION: 2026-03, Katherine]
-- No hay clausula de permanencia. Un referidor puede dejar de referir en cualquier momento sin consecuencias.
-
-[POR CONFIRMAR: Javier — valor exacto del onboarding para embajadores comerciales (nivel 1) y si aplica la misma mecanica de "pago contra primer cierre"]
 
 ---
 
@@ -407,12 +444,12 @@ El onboarding es un programa estructurado de **20 horas** (10 sesiones de 2h) qu
 | 8 | **Taller 8: Marca Blanca + Franquicia** | 2h | Modelo de marca blanca, upselling, descuento aliados, franquicia por pais. Caso Ecuador. | Camilo puede calcular su ganancia en un escenario de marca blanca. |
 | 9 | **Cierre** | 2h | Evaluacion de aprendizajes. Plan de accion Q1. Asignacion de primera observacion (reto Q1). Feedback bidireccional. | Plan de accion Q1 documentado con primer prospecto identificado. |
 
-**Total: 10 sesiones × 2h = 20 horas.**
+**Total: 10 sesiones x 2h = 20 horas.**
 
 ### Modalidad
 
 - Virtual sincronico (default). Presencial si Camilo esta en la misma ciudad que Javier. [DECISION: 2026-03, Javier]
-- Frecuencia sugerida: 2-3 sesiones/semana → completar en 3-5 semanas.
+- Frecuencia sugerida: 2-3 sesiones/semana -> completar en 3-5 semanas.
 - Facilitador: Javier Montano (todas las sesiones).
 - Grabacion incluida para referencia futura.
 
@@ -442,6 +479,21 @@ El Embajador debe conocer los 17 servicios para cualificar prospectos y recomend
 | 4 | **Digital Champions** | Programa | N/A (cohorte) | COP 35M (5-10 pers) | 16 sem / 48h |
 | 5 | **Empoderamiento** | Programa | COP 18M/persona | N/A (individual) | 16 sem / 48h |
 
+#### Manejo de Objeciones — Tier 1
+
+| Servicio | Objecion comun | Respuesta recomendada |
+|----------|---------------|----------------------|
+| **Workshop** (COP 200K) | "200K por 3 horas es caro." | "Son 3 horas que te ahorran 3 horas A LA SEMANA, cada semana. En 1 semana ya se pago solo. Ademas, si decides escalar al Bootcamp, el 100% se acredita." |
+| **Workshop** | "Ya vi videos de IA en YouTube." | "YouTube te da informacion. El Workshop te da transformacion: sales con 3 herramientas configuradas y funcionando para TU trabajo. No teoria — accion." |
+| **Bootcamp** (COP 800K) | "Es mucho para un curso." | "No es un curso — es un programa de 20 horas con proyecto real. Al final tienes un sistema de productividad personalizado. El curso te da conocimiento; el Bootcamp te da resultados medibles." |
+| **Bootcamp** | "No tengo tiempo para 20 horas." | "Son 4-5 semanas, 4-5 horas por semana. Es menos de 1 hora al dia. El bootcamp esta disenado para profesionales ocupados — por eso se llama 'Trabajar Amplificado', no 'Dejar de Trabajar'." |
+| **EstrategIA** (COP 3.4M) | "COP 3.4M es mucho para productividad personal." | "No es productividad — es estrategia agentica. Al final tienes un agente digital propio, 13 asistentes y un segundo cerebro. Es como contratar un asistente ejecutivo por COP 3.4M una sola vez, no COP 3.4M al mes." |
+| **EstrategIA** | "Que pasa si no me funciona?" | "Tienes el Workshop Zero Risk de 3 horas como prueba antes de comprometer las 9 sesiones. Si en esas 3 horas no ves valor, no sigues. Cero riesgo." |
+| **EstrategIA** | "Mi empresa no me deja usar IA." | "EstrategIA es para TI como profesional, no para tu empresa. Usas tu cuenta personal, tu dispositivo, tu tiempo. Lo que construyes es TUYO y te lo llevas a donde vayas." |
+| **Digital Champions** (COP 35M) | "COP 35M es mucho para la empresa." | "Son COP 35M para transformar a 5-10 decisores durante 16 semanas. Eso es COP 3.5M-7M por persona — menos que contratar a un consultor de IA por 1 mes. Y el resultado es permanente: tu equipo queda aumentado." |
+| **Empoderamiento** (COP 18M) | "COP 18M por una sola persona?" | "Es una transformacion de 16 semanas con mentoria 1:1 semanal, talleres grupales, capstone project, y acompanamiento post-programa de 6 meses. No existe un MBA de 4 meses que te de esto por COP 18M. Y a diferencia del MBA, sales con un sistema operando, no con un diploma." |
+| **Empoderamiento** | "Que garantia tengo?" | "La garantia es el metodo: 16 semanas, medido semana a semana. Si en la semana 4 no ves avance, ajustamos. Certificacion de competencia solo si demuestras resultados reales (capstone + portfolio). No regalamos certificados." |
+
 ### Tier 2 — Bootcamps Verticales (4)
 
 | # | Servicio | B2C | B2B | Duracion |
@@ -450,6 +502,14 @@ El Embajador debe conocer los 17 servicios para cualificar prospectos y recomend
 | 7 | **Ofimatica Google** | COP 800K | COP 12M (20 pax) | 18h |
 | 8 | **Ofimatica Microsoft** | COP 800K | COP 12M (20 pax) | 18h |
 | 9 | **Ventas Amplificadas** | COP 800K | COP 12M (20 pax) | 18h |
+
+#### Manejo de Objeciones — Tier 2
+
+| Objecion comun (aplica a todos los Tier 2) | Respuesta recomendada |
+|--------------------------------------------|----------------------|
+| "Ya tenemos capacitaciones internas." | "Las capacitaciones internas ensenan herramientas. Nosotros instalamos un sistema: la IA amplifica lo que ya saben hacer. No reemplaza su capacitacion — la potencia." |
+| "COP 12M por 20 personas, hay opciones mas baratas." | "COP 600K por persona por 18 horas de transformacion practica con proyecto real. Es menos que un dia de consultoria para la empresa. Y el resultado escala: 20 personas amplificadas generan valor exponencial." |
+| "Nuestro equipo no sabe nada de IA." | "Perfecto — eso es exactamente para lo que esta el Bootcamp. No necesitan saber nada de IA. Necesitan saber de SU trabajo. Nosotros les ensenamos a amplificarlo con IA." |
 
 ### Tier 3 — IAC White-Label (8, solo B2B)
 
@@ -463,6 +523,13 @@ El Embajador debe conocer los 17 servicios para cualificar prospectos y recomend
 | 15 | Bootcamp Amplificacion IA | COP 12M (20 pax) | 18h |
 | 16 | Bootcamp Ofimatica IA Google | COP 12M (20 pax) | 18h |
 | 17 | Bootcamp Ofimatica IA Microsoft | COP 12M (20 pax) | 18h |
+
+#### Manejo de Objeciones — Tier 3
+
+| Objecion comun | Respuesta recomendada |
+|---------------|----------------------|
+| "Nunca he oido de MetodologIA/IAC." | "Operamos bajo tu marca (white-label). Tus empleados ven TU marca, no la nuestra. Nosotros ponemos el metodo, tu pones la marca. El resultado es tuyo." |
+| "COP 33M por un programa de 16 semanas?" | "Son 64 horas de transformacion para 20 personas. COP 1.65M por persona. Menos que un seminario de fin de semana en una universidad. Y tu equipo sale con competencias digitales medibles y certificadas." |
 
 [EVIDENCIA: catalogo-servicios/*/canonico.md v2.0, 2026-03-29]
 
@@ -506,8 +573,6 @@ Acumulable, intransferible. [EVIDENCIA: canonicos respectivos, seccion "Credito 
 | 8 | Calendario de las 10 sesiones de onboarding (20h) | Javier + Camilo | Antes de Pascua |
 | 9 | Acceso CRM configurado para Camilo | Katherine | Antes de kick-off |
 | 10 | Servicios Tier 3 (IAC): confirmar si Camilo puede ofertarlos o solo Tier 1-2 | Javier | Taller 1 del onboarding |
-| 11 | Monto exacto del costo del onboarding que se descuenta del primer cierre | Javier | Antes de Pascua |
-| 12 | Mecanica de pago para embajadores comerciales (nivel 1): misma logica de "contra primer cierre"? | Javier | Antes de abrir invitaciones a companeros |
 
 ---
 
