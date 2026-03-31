@@ -26,7 +26,7 @@ Revenue bruto por cierre ($X)
 | Embajador es coach, Cristian es franq + comercial | 50% (Embajador) | 20% | 10% | 20% | **40%** |
 | Embajador coach + otro vende, Cristian solo franq | 50% (Embajador) | 20% | 10% | 20% (otro) | **20%** |
 
-### Aplicado a ticket B2C ($1,490)
+### Aplicado a ticket B2C ($1,490 Puerta Cerrada / $1,990 Calendario Académico)
 
 | Rol de Cristian | Cristian recibe | MetodologIA | Otros |
 |-----------------|----------------|-------------|-------|
@@ -57,8 +57,8 @@ Pascua 2026 = 5 de abril. Domingo de Pascua = 5 de abril.
 |-------|--------|
 | **Dom 5 abril** | Día 1: Primer Workshop "De Ocupado a Productivo" |
 | Abril | Workshops dominicales + construcción pipeline |
-| **Mayo** | CAO-1 arranca (primeros 3-5 ejecutivos) |
-| **Julio** | CAO-2 + primeros Asistentes a Medida |
+| **Abril** | CAO Puerta Cerrada arranca (5-13 ejecutivos, Javier facilita) |
+| **Julio** | CAO Académico 1 arranca ($1,990, Cristian + Embajadores) + primeros Asistentes a Medida |
 | **Agosto** | EMP-1 arranca (3 orgánicos) |
 | **Octubre** | CAO-3 + 1er cierre B2B |
 | **Noviembre** | EMP-2 + 1er cierre Cobrand |
@@ -72,17 +72,19 @@ Pascua 2026 = 5 de abril. Domingo de Pascua = 5 de abril.
 - Desde M7+: algunos Embajadores empiezan a facilitar (Cristian baja a 40-70%)
 - B2B y Cobrand: Cristian es franq + comercial (40%)
 
-### B2C Revenue (mismo modelo de ciclos)
+### B2C Revenue — CAO Bootcamp (2 formatos)
 
-| Ciclo | Mes | Personas | Revenue bruto | Cristian (90%) | MetodologIA (10%) |
-|-------|-----|----------|---------------|----------------|-------------------|
-| CAO-1 | M2 (May) | 4 | $5,960 | $5,364 | $596 |
-| CAO-2 | M4 (Jul) | 4 | $5,960 | $5,364 | $596 |
-| CAO-3 | M6 (Sep) | 5 | $7,450 | $6,705 | $745 |
-| CAO-4 | M8 (Nov) | 5 | $7,450 | $6,705 | $745 |
-| CAO-5 | M10 (Ene) | 7 | $10,430 | $9,387 | $1,043 |
-| CAO-6 | M12 (Mar) | 8 | $11,920 | $10,728 | $1,192 |
-| **CAO Total** | | **33** | **$49,170** | **$44,253** | **$4,917** |
+**Puerta Cerrada** — 1 edición/año (abril). $1,490 USD. Javier facilita personalmente. Intimidad, co-creación profunda.
+**Calendario Académico** — Cada 2 meses desde julio. $1,990 USD. Cristian + Embajadores certificados. Networking cross-industry.
+
+| Ciclo | Formato | Mes | Personas | Ticket | Revenue bruto | Cristian (90%) | MetodologIA (10%) |
+|-------|---------|-----|----------|--------|---------------|----------------|-------------------|
+| CAO Puerta Cerrada | PC | M1 (Abr) | 5-13 | $1,490 | $7,450-$19,370 | $6,705-$17,433 | $745-$1,937 |
+| CAO Académico 1 | AC | M4 (Jul) | 4 | $1,990 | $7,960 | $7,164 | $796 |
+| CAO Académico 2 | AC | M6 (Sep) | 5 | $1,990 | $9,950 | $8,955 | $995 |
+| CAO Académico 3 | AC | M8 (Nov) | 5 | $1,990 | $9,950 | $8,955 | $995 |
+| CAO Académico 4 | AC | M10 (Ene) | 7 | $1,990 | $13,930 | $12,537 | $1,393 |
+| **CAO Total** | | | **26-34** | | **$49,240-$61,160** | **$44,316-$55,044** | **$4,924-$6,116** |
 
 | Ciclo | Mes | Total | Revenue bruto | Cristian (90%) | MetodologIA (10%) |
 |-------|-----|-------|---------------|----------------|-------------------|
@@ -174,7 +176,7 @@ Asumiendo 30% de ciclos los facilitan Embajadores:
 ### Escalera de valor
 
 ```
-Ejecutivo paga CAO ($1,490)
+Ejecutivo paga CAO ($1,490 Puerta Cerrada o $1,990 Académico)
     ↓ Graduado satisfecho
     ↓ Se certifica como Embajador
     ↓ Facilita Workshop Zero Risk (genera pipeline)
