@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MetodologIA Colombia">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)">
+  <title>Propuesta Socio Franquicia Colombia &mdash; Camilo de La Llosa &mdash; MetodologIA</title>
+  <meta name="description" content="Propuesta de franquicia MetodologIA Colombia para Camilo de La Llosa. Modelo de comisiones, revenue share, roadmap.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='10' fill='%230A122A'/><path d='M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z' fill='white'/><circle cx='18' cy='8' r='2' fill='%23FFD700'/></svg>" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            navy: { DEFAULT: '#020617', light: '#0F172A' },
+            gold: { DEFAULT: '#FFD700', dark: '#FFA000', light: '#B8860B' },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --bg-primary: #020617;
+      --bg-secondary: #0F172A;
+      --bg-card: rgba(15, 23, 42, 0.7);
+      --text-primary: #F0F4F8;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --border-color: rgba(255, 215, 0, 0.12);
+      --glass-bg: rgba(15, 23, 42, 0.6);
+      --glass-border: rgba(255, 215, 0, 0.1);
+      --gold: #FFD700;
+      --gold-dark: #FFA000;
+      --shadow-glow: 0 0 30px rgba(255, 215, 0, 0.06);
+    }
+    html.light {
+      --bg-primary: #F8FAFC;
+      --bg-secondary: #EEF2F7;
+      --bg-card: rgba(255, 255, 255, 0.7);
+      --text-primary: #020617;
+      --text-secondary: #2C4A6E;
+      --text-muted: #64748B;
+      --border-color: rgba(2, 6, 23, 0.08);
+      --glass-bg: rgba(255, 255, 255, 0.6);
+      --glass-border: rgba(2, 6, 23, 0.06);
+      --shadow-glow: 0 0 30px rgba(2, 6, 23, 0.04);
+      --gold: #B8860B;
+      --gold-dark: #8B6914;
+    }
+    html.light body { font-weight: 500; }
+    html.light h1, html.light h2, html.light h3, html.light h4 { font-weight: 800; }
+    html.light .gold-text {
+      background: linear-gradient(135deg, #B8860B, #8B6914);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    html.light .btn-gold { background: linear-gradient(135deg, #D4A017, #B8860B); }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+      touch-action: manipulation;
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+    h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+    .gold-text {
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 1rem;
+      box-shadow: var(--shadow-glow);
+    }
+    .gold-divider {
+      width: 48px; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      border-radius: 2px; margin: 0.75rem auto;
+    }
+    .glow-border {
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 24px rgba(255, 215, 0, 0.1);
+    }
+    .btn-gold {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 0.875rem 2rem; min-height: 48px; border-radius: 9999px;
+      font-size: 1rem; font-weight: 700;
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      color: #020617; border: none; cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+    }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255, 215, 0, 0.2); }
+    .btn-gold:active { transform: scale(0.97); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 0.875rem 2rem; min-height: 48px; border-radius: 9999px;
+      font-size: 1rem; font-weight: 700;
+      background: transparent; color: var(--gold); border: 1px solid var(--gold);
+      cursor: pointer; transition: transform 0.2s ease;
+      text-decoration: none;
+    }
+    .btn-ghost:hover { transform: translateY(-2px); background: rgba(255, 215, 0, 0.05); }
+    .btn-ghost:active { transform: scale(0.97); }
+
+    .desktop-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      height: 64px; display: flex; align-items: center;
+      padding: 0 2rem;
+    }
+    .desktop-nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; max-width: 1200px; margin: 0 auto;
+    }
+    #scroll-progress {
+      position: fixed; top: 64px; left: 0; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      z-index: 101; width: 0%; transition: width 0.1s linear;
+    }
+    @media (max-width: 768px) {
+      .desktop-nav { height: calc(56px + env(safe-area-inset-top)); padding: env(safe-area-inset-top) 1rem 0 1rem; }
+      .desktop-nav-inner { height: 56px; }
+      #scroll-progress { top: calc(56px + env(safe-area-inset-top)); }
+      .hide-mobile { display: none !important; }
+    }
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .equity-bar { display: flex; border-radius: 9999px; overflow: hidden; height: 16px; }
+    .timeline-dot {
+      width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    }
+    .timeline-line { width: 2px; background: var(--glass-border); margin-left: 6px; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+    @media (min-width: 768px) { .container { padding: 0 2rem; } }
+
+    .accordion-trigger {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; padding: 1rem 1.25rem; min-height: 52px;
+      background: none; border: none; cursor: pointer; text-align: left;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .accordion-trigger .chevron { transition: transform 0.3s ease; flex-shrink: 0; }
+    .accordion-trigger.open .chevron { transform: rotate(180deg); }
+
+    .fin-table { width: 100%; border-collapse: collapse; }
+    .fin-table th, .fin-table td {
+      padding: 0.75rem 1rem; text-align: left; font-size: 0.875rem;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .fin-table th {
+      color: var(--gold); font-weight: 600; text-transform: uppercase;
+      font-size: 0.75rem; letter-spacing: 0.05em;
+    }
+    .fin-table td { color: var(--text-secondary); }
+    .fin-table tr:last-child td { border-bottom: none; font-weight: 700; color: var(--text-primary); }
+    .fin-table .highlight-row td { color: var(--text-primary); font-weight: 700; }
+
+    .phase-card {
+      position: relative; padding: 1.5rem; border-radius: 1rem;
+      background: var(--glass-bg); border: 1px solid var(--glass-border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .phase-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(255, 215, 0, 0.08); }
+    .phase-number {
+      position: absolute; top: -12px; left: 1.5rem;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: #020617; font-weight: 800; font-size: 0.75rem;
+      padding: 0.25rem 0.75rem; border-radius: 9999px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .path-card {
+      position: relative; padding: 2rem; border-radius: 1rem;
+      background: var(--glass-bg); border: 1px solid var(--glass-border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .path-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(255, 215, 0, 0.08); }
+    .path-card.featured { border-color: var(--gold); box-shadow: 0 0 24px rgba(255, 215, 0, 0.1); }
+
+    @media print {
+      .desktop-nav, #scroll-progress, .btn-gold, .btn-ghost { display: none !important; }
+      body { background: #fff !important; color: #020617 !important; }
+      .glass { background: #f8fafc !important; border: 1px solid #e2e8f0 !important; box-shadow: none !important; backdrop-filter: none !important; }
+      .gold-text { -webkit-text-fill-color: #B8860B !important; }
+      section { break-inside: avoid; page-break-inside: avoid; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+
+  <!-- =============== S1: NAV =============== -->
+  <nav class="desktop-nav">
+    <div class="desktop-nav-inner">
+      <a href="#carta" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;">
+        <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+          <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+          <rect width="36" height="36" rx="10" fill="url(#lg)"/>
+          <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+          <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+        </svg>
+        <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">Metodolog<span class="gold-text">IA</span></span>
+      </a>
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <a href="#caminos" class="text-xs font-medium hide-mobile" style="color:var(--text-secondary);text-decoration:none;">Dos Caminos</a>
+        <a href="#oportunidad" class="text-xs font-medium hide-mobile" style="color:var(--text-secondary);text-decoration:none;">Colombia</a>
+        <a href="#estructura" class="text-xs font-medium hide-mobile" style="color:var(--text-secondary);text-decoration:none;">Revenue</a>
+        <a href="#modelo" class="text-xs font-medium hide-mobile" style="color:var(--text-secondary);text-decoration:none;">Modelo</a>
+        <a href="#roadmap" class="text-xs font-medium hide-mobile" style="color:var(--text-secondary);text-decoration:none;">Roadmap</a>
+        <button onclick="toggleTheme()" style="background:none;border:none;cursor:pointer;padding:0.5rem;width:44px;height:44px;display:flex;align-items:center;justify-content:center;" aria-label="Cambiar tema">
+          <i data-lucide="sun-moon" class="w-5 h-5" style="color:var(--gold);"></i>
+        </button>
+        <a href="mailto:contacto@metodologia.info?subject=Confirmaci%C3%B3n%20Socio%20Franquicia%20MetodologIA%20Colombia%20%E2%80%94%20Camilo%20de%20La%20Llosa"
+           class="btn-gold" style="padding:0.5rem 1.25rem;font-size:0.8rem;min-height:40px;">
+          <i data-lucide="check-circle" class="w-4 h-4"></i> Confirmar
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =============== S2: CARTA PERSONAL DE JAVIER =============== -->
+  <section id="carta" style="padding:calc(80px + 2rem) 0 3rem;background:var(--bg-primary);">
+    <div class="container">
+      <div class="reveal" style="display:grid;gap:2rem;align-items:center;grid-template-columns:1fr;">
+        <div class="glass p-6" style="border-color:rgba(255,215,0,0.08);">
+          <p class="text-xs uppercase tracking-widest font-bold mb-1" style="color:var(--gold);">Propuesta Socio Franquicia &mdash; Documento Confidencial</p>
+          <h1 class="font-heading font-bold mb-4" style="color:var(--text-primary);font-size:clamp(1.75rem, 4vw, 2.5rem);">Camilo, esto va m&aacute;s all&aacute; del embajador</h1>
+          <div class="text-sm leading-relaxed space-y-3" style="color:var(--text-secondary);">
+            <p style="color:var(--text-primary);font-weight:600;">Ya est&aacute;s en el onboarding como Embajador. Ahora te extiendo una invitaci&oacute;n diferente.</p>
+            <p>Si quieres, adem&aacute;s de ser Embajador, puedes ser <strong style="color:var(--text-primary);">socio de la franquicia en Colombia</strong>. Mismo modelo que Ecuador: comisiones puras, cero salarios, cero riesgo de cash flow.</p>
+            <p>He construido MetodologIA con 27 asistentes GPT, 7 Gems, un agente Open Source, 180+ prompts. Todo eso es tuyo en la franquicia. Colombia es 3x el mercado de Ecuador &mdash; y ya tenemos campa&ntilde;as activas en Bogot&aacute; y Medell&iacute;n.</p>
+            <p style="color:var(--text-primary);font-weight:600;">$2,900 no es un gasto. Es el capital semilla de tu operaci&oacute;n como socio franquiciatario.</p>
+          </div>
+          <div class="mt-5 flex items-center gap-3">
+            <img src="https://raw.githubusercontent.com/ejemplo-deo-repo/img/main/javier-montano.webp" alt="Javier Monta&ntilde;o" class="w-12 h-12 rounded-full object-cover" style="border:2px solid var(--gold);" loading="lazy">
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Javier Monta&ntilde;o</p>
+              <p class="text-xs" style="color:var(--text-muted);">MetodologIA &middot; contacto@metodologia.info</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S3: QUOTE =============== -->
+  <section style="padding:2rem 0;background:var(--bg-secondary);">
+    <div class="container" style="text-align:center;">
+      <div class="reveal">
+        <p class="font-heading text-lg font-light italic leading-relaxed" style="color:var(--text-secondary);">
+          &ldquo;No es hacer m&aacute;s cosas. Es hacer que las cosas que haces, importen.&rdquo;
+        </p>
+        <p class="text-xs mt-3 uppercase tracking-widest font-bold" style="color:var(--gold);">&mdash; Intenci&oacute;n sobre Intensidad &mdash; MetodologIA</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S4: DOS CAMINOS =============== -->
+  <section id="caminos" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Tu Decisi&oacute;n</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">Dos Caminos, No Excluyentes</h2>
+        <div class="gold-divider"></div>
+        <p class="text-sm mt-3" style="color:var(--text-secondary);max-width:700px;margin:0 auto;">No tienes que elegir uno. Puedes ser ambos. Y si lo haces, el modelo econ&oacute;mico se multiplica.</p>
+      </div>
+      <div class="grid gap-6 reveal" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 960px; margin: 0 auto;">
+        <!-- Path 1: Ambassador -->
+        <div class="path-card">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="inline-flex w-12 h-12 rounded-full items-center justify-center" style="background:rgba(255,215,0,0.1);">
+              <i data-lucide="award" class="w-6 h-6" style="color:var(--gold);"></i>
+            </span>
+            <div>
+              <h3 class="font-heading text-base font-bold" style="color:var(--text-primary);">Camino 1: Embajador</h3>
+              <p class="text-xs" style="color:var(--gold);">Ya en proceso de onboarding</p>
+            </div>
+          </div>
+          <div class="text-sm space-y-2" style="color:var(--text-secondary);">
+            <p>Facilitas programas MetodologIA en Colombia. Cada programa que facilitas, ganas <strong style="color:var(--text-primary);">50% como coach</strong>.</p>
+            <p>Acceso completo al ecosistema: GPTs, Gems, Pristino, prompts, campus virtual.</p>
+          </div>
+          <div class="mt-4 glass p-3 rounded-xl text-center">
+            <p class="text-xs" style="color:var(--text-muted);">Tu ingreso como Embajador</p>
+            <p class="font-heading font-bold text-lg" style="color:var(--text-primary);">50% por programa</p>
+          </div>
+        </div>
+        <!-- Path 2: Franchise Partner -->
+        <div class="path-card featured">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="inline-flex w-12 h-12 rounded-full items-center justify-center" style="background:linear-gradient(135deg,#FFD700,#FFA000);">
+              <i data-lucide="crown" class="w-6 h-6" style="color:#020617;"></i>
+            </span>
+            <div>
+              <h3 class="font-heading text-base font-bold" style="color:var(--text-primary);">Camino 2: Socio Franquicia</h3>
+              <p class="text-xs" style="color:var(--gold);">La invitaci&oacute;n que te extiendo hoy</p>
+            </div>
+          </div>
+          <div class="text-sm space-y-2" style="color:var(--text-secondary);">
+            <p>Tienes la franquicia MetodologIA Colombia. Ganas <strong style="color:var(--text-primary);">20% de TODOS los programas en Colombia</strong>, incluso los que no facilitas personalmente.</p>
+            <p>Construyes tu propia red de embajadores. Cada embajador que certificas genera revenue para ti autom&aacute;ticamente.</p>
+          </div>
+          <div class="mt-4 glass p-3 rounded-xl text-center glow-border">
+            <p class="text-xs" style="color:var(--text-muted);">Tu ingreso como Franquiciatario</p>
+            <p class="font-heading font-bold text-lg gold-text">20% de todo Colombia</p>
+          </div>
+        </div>
+      </div>
+      <!-- Combined -->
+      <div class="glass p-6 mt-6 reveal glow-border text-center" style="max-width:960px;margin-left:auto;margin-right:auto;">
+        <div class="flex items-center justify-center gap-3 mb-3">
+          <i data-lucide="sparkles" class="w-6 h-6" style="color:var(--gold);"></i>
+          <h3 class="font-heading text-lg font-bold" style="color:var(--text-primary);">Ambos Caminos: Embajador + Socio Franquicia</h3>
+        </div>
+        <p class="text-sm mb-3" style="color:var(--text-secondary);">Si facilitas los programas (50% coach) + eres franquiciatario (20%) + cierras la venta (20%) = <strong style="color:var(--text-primary);">90% tuyo</strong>. Solo 10% a MetodologIA.</p>
+        <p class="font-heading font-bold text-2xl gold-text">90% de cada cierre que hagas completo</p>
+        <p class="text-xs mt-2 italic" style="color:var(--text-muted);">Mismo modelo que Ecuador. Cristian Jarr&iacute;n ya lo opera all&aacute;. T&uacute; lo operas en Colombia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S5: LA OPORTUNIDAD COLOMBIA =============== -->
+  <section id="oportunidad" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Colombia</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">La Oportunidad</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid gap-4 reveal" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+        <div class="glass p-5 flex items-start gap-3">
+          <i data-lucide="map-pin" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+          <div>
+            <p class="text-sm font-semibold mb-1" style="color:var(--text-primary);">Campa&ntilde;as ya activas</p>
+            <p class="text-sm" style="color:var(--text-secondary);">Bogot&aacute; y Medell&iacute;n ya tienen dossiers de campa&ntilde;a creados. No empiezas de cero &mdash; empiezas con impulso.</p>
+          </div>
+        </div>
+        <div class="glass p-5 flex items-start gap-3">
+          <i data-lucide="trending-up" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+          <div>
+            <p class="text-sm font-semibold mb-1" style="color:var(--text-primary);">~1.7M empresas registradas</p>
+            <p class="text-sm" style="color:var(--text-secondary);">DANE/Confec&aacute;maras. Colombia es 3x el mercado de Ecuador (~1M). El segmento ejecutivo es m&aacute;s grande y m&aacute;s internacionalmente conectado.</p>
+          </div>
+        </div>
+        <div class="glass p-5 flex items-start gap-3">
+          <i data-lucide="users" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+          <div>
+            <p class="text-sm font-semibold mb-1" style="color:var(--text-primary);">52M de poblaci&oacute;n</p>
+            <p class="text-sm" style="color:var(--text-secondary);">Mercado de formaci&oacute;n corporativa m&aacute;s maduro que Ecuador. Ejecutivos acostumbrados a invertir en desarrollo profesional.</p>
+          </div>
+        </div>
+        <div class="glass p-5 flex items-start gap-3">
+          <i data-lucide="crown" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+          <div>
+            <p class="text-sm font-semibold mb-1" style="color:var(--text-primary);">Sin operador serio en IA ejecutiva</p>
+            <p class="text-sm" style="color:var(--text-secondary);">La adopci&oacute;n de IA en Latam se duplica cada 6 meses. Quien se posicione primero define precios, relaciones y reglas.</p>
+          </div>
+        </div>
+      </div>
+      <!-- TAM -->
+      <div class="glass p-5 mt-4 reveal text-center" style="max-width:600px;margin-left:auto;margin-right:auto;">
+        <p class="text-xs font-bold uppercase mb-2" style="color:var(--gold);">TAM Colombia (estimado)</p>
+        <p class="font-heading font-bold text-3xl gold-text">$250M+</p>
+        <p class="text-xs mt-1" style="color:var(--text-muted);">~3x el TAM de Ecuador ($89M). Proporcional al tama&ntilde;o de econom&iacute;a.</p>
+        <p class="text-xs mt-1 italic" style="color:var(--text-muted);">[SUPUESTO] Estimaci&oacute;n proporcional, requiere validaci&oacute;n con datos locales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S6: REVENUE SHARE =============== -->
+  <section id="estructura" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Estructura</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">Revenue Share por Programa</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="glass p-6 reveal mb-4" style="max-width:900px;margin-left:auto;margin-right:auto;">
+        <p class="text-xs font-bold uppercase mb-4" style="color:var(--gold);">Reparto por cada cierre</p>
+        <div class="equity-bar mb-4">
+          <div style="width:50%;background:linear-gradient(135deg,#FFD700,#FFA000);"></div>
+          <div style="width:20%;background:linear-gradient(135deg,#60A5FA,#3B82F6);"></div>
+          <div style="width:10%;background:linear-gradient(135deg,#A78BFA,#7C3AED);"></div>
+          <div style="width:20%;background:linear-gradient(135deg,#34D399,#10B981);"></div>
+        </div>
+        <div class="grid gap-6" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+          <div class="glass p-5 rounded-xl">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="inline-flex w-12 h-12 rounded-full items-center justify-center text-lg font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#020617;">50%</span>
+              <p class="font-heading text-base font-bold" style="color:var(--text-primary);">Coach / Ejecutor</p>
+            </div>
+            <p class="text-sm mb-2" style="color:var(--text-secondary);">Quien facilita el programa. Si Camilo facilita: es suyo.</p>
+          </div>
+          <div class="glass p-5 rounded-xl">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="inline-flex w-12 h-12 rounded-full items-center justify-center text-lg font-bold" style="background:linear-gradient(135deg,#60A5FA,#3B82F6);color:#020617;">20%</span>
+              <p class="font-heading text-base font-bold" style="color:var(--text-primary);">Franquicia</p>
+            </div>
+            <p class="text-sm mb-2" style="color:var(--text-secondary);">Camilo como franquiciatario de MetodologIA Colombia. Lo recibe siempre, facilite o no.</p>
+          </div>
+          <div class="glass p-5 rounded-xl">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="inline-flex w-12 h-12 rounded-full items-center justify-center text-lg font-bold" style="background:linear-gradient(135deg,#A78BFA,#7C3AED);color:#fff;">10%</span>
+              <p class="font-heading text-base font-bold" style="color:var(--text-primary);">MetodologIA</p>
+            </div>
+            <p class="text-sm mb-2" style="color:var(--text-secondary);">IP, marca, ecosistema, soporte continuo. 27 GPTs, 7 Gems, Pristino, 180+ prompts.</p>
+          </div>
+          <div class="glass p-5 rounded-xl">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="inline-flex w-12 h-12 rounded-full items-center justify-center text-lg font-bold" style="background:linear-gradient(135deg,#34D399,#10B981);color:#020617;">20%</span>
+              <p class="font-heading text-base font-bold" style="color:var(--text-primary);">Comercial</p>
+            </div>
+            <p class="text-sm mb-2" style="color:var(--text-secondary);">Quien cierra la venta. Si Camilo vende: tambi&eacute;n es suyo.</p>
+          </div>
+        </div>
+        <!-- Scenarios Table -->
+        <div class="mt-6" style="overflow-x:auto;">
+          <p class="text-xs font-bold uppercase mb-3" style="color:var(--gold);">Escenarios de reparto</p>
+          <table class="fin-table">
+            <thead>
+              <tr>
+                <th>Escenario</th>
+                <th style="text-align:center;">Coach</th>
+                <th style="text-align:center;">Franquicia</th>
+                <th style="text-align:center;">MetodologIA</th>
+                <th style="text-align:center;">Comercial</th>
+                <th style="text-align:right;">Total Camilo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td>Camilo hace TODO</td>
+                <td style="text-align:center;">50%</td>
+                <td style="text-align:center;">20%</td>
+                <td style="text-align:center;">10%</td>
+                <td style="text-align:center;">20%</td>
+                <td style="text-align:right;"><span class="gold-text font-heading" style="font-size:1.1rem;">90%</span></td>
+              </tr>
+              <tr>
+                <td>Camilo coach + franq, otro vende</td>
+                <td style="text-align:center;">50%</td>
+                <td style="text-align:center;">20%</td>
+                <td style="text-align:center;">10%</td>
+                <td style="text-align:center;">20% (otro)</td>
+                <td style="text-align:right;font-weight:700;">70%</td>
+              </tr>
+              <tr>
+                <td>Embajador coach, Camilo franq + comercial</td>
+                <td style="text-align:center;">50% (Emb.)</td>
+                <td style="text-align:center;">20%</td>
+                <td style="text-align:center;">10%</td>
+                <td style="text-align:center;">20%</td>
+                <td style="text-align:right;font-weight:700;">40%</td>
+              </tr>
+              <tr>
+                <td>Embajador coach + otro vende, solo franq</td>
+                <td style="text-align:center;">50% (Emb.)</td>
+                <td style="text-align:center;">20%</td>
+                <td style="text-align:center;">10%</td>
+                <td style="text-align:center;">20% (otro)</td>
+                <td style="text-align:right;font-weight:700;">20%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="glass p-4 rounded-xl mt-4 glow-border text-center">
+          <p class="font-heading font-bold text-lg gold-text">Si Camilo hace todo: 90% suyo</p>
+          <p class="text-xs mt-1" style="color:var(--text-secondary);">Coach (50%) + Franquicia (20%) + Comercial (20%) = 90%. Solo 10% a MetodologIA.</p>
+        </div>
+        <p class="text-xs mt-4 text-center italic" style="color:var(--text-muted);">Sin salarios fijos. 100% comisiones. Co-crear entornos de abundancia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S7: LA INVERSION =============== -->
+  <section id="inversion" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Inversi&oacute;n</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">$2,900 USD por persona</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid gap-6 reveal" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 900px; margin: 0 auto;">
+        <!-- Breakdown -->
+        <div class="glass p-6">
+          <p class="text-xs font-bold uppercase mb-4" style="color:var(--gold);">La inversi&oacute;n cubre (costos anuales)</p>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3 justify-between">
+              <div class="flex items-start gap-3">
+                <i data-lucide="server" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+                <p class="text-sm" style="color:var(--text-secondary);">Hosting para agentes y ecosistema ag&eacute;ntico</p>
+              </div>
+              <span class="text-sm font-semibold whitespace-nowrap" style="color:var(--text-primary);">$500/a&ntilde;o</span>
+            </div>
+            <div class="flex items-start gap-3 justify-between">
+              <div class="flex items-start gap-3">
+                <i data-lucide="terminal" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+                <p class="text-sm" style="color:var(--text-secondary);">Claude Code Max ($200/mes)</p>
+              </div>
+              <span class="text-sm font-semibold whitespace-nowrap" style="color:var(--text-primary);">$2,400/a&ntilde;o</span>
+            </div>
+            <div class="flex items-start gap-3 justify-between">
+              <div class="flex items-start gap-3">
+                <i data-lucide="mail" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+                <p class="text-sm" style="color:var(--text-secondary);">Correo corporativo</p>
+              </div>
+              <span class="text-sm font-semibold whitespace-nowrap" style="color:var(--text-primary);">$150/a&ntilde;o</span>
+            </div>
+            <div class="flex items-start gap-3 justify-between">
+              <div class="flex items-start gap-3">
+                <i data-lucide="bot" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+                <p class="text-sm" style="color:var(--text-secondary);">Agente de productividad personal (opcional)</p>
+              </div>
+              <span class="text-sm font-semibold whitespace-nowrap" style="color:var(--text-primary);">$1,000/a&ntilde;o</span>
+            </div>
+            <div style="border-top:1px solid var(--glass-border);padding-top:0.75rem;margin-top:0.5rem;" class="flex items-center justify-between">
+              <p class="text-sm font-bold" style="color:var(--gold);">Total anual</p>
+              <span class="text-base font-bold" style="color:var(--text-primary);">$4,050/a&ntilde;o (~$340/mes)</span>
+            </div>
+          </div>
+          <div class="mt-4 space-y-2">
+            <div class="flex items-start gap-3">
+              <i data-lucide="graduation-cap" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+              <p class="text-sm" style="color:var(--text-secondary);">Formaci&oacute;n dedicada: domingos 2h/sesi&oacute;n, prioridad m&aacute;xima</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="handshake" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+              <p class="text-sm" style="color:var(--text-secondary);">Aceleradores + soporte de fundadores (Germ&aacute;n Sep&uacute;lveda, Daniel Zuluaga)</p>
+            </div>
+          </div>
+        </div>
+        <!-- Pricing -->
+        <div class="space-y-4">
+          <div class="glass p-6 glow-border text-center">
+            <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Solo t&uacute;</p>
+            <p class="font-heading font-black text-4xl gold-text">$2,900</p>
+            <p class="text-sm mt-1" style="color:var(--text-muted);">1 persona</p>
+          </div>
+          <div class="glass p-5 text-center">
+            <p class="font-heading font-bold text-2xl gold-text">$5,800</p>
+            <p class="text-xs mt-1" style="color:var(--text-muted);">T&uacute; + 1 aliado</p>
+          </div>
+          <div class="glass p-5 text-center">
+            <p class="font-heading font-bold text-2xl gold-text">$8,700</p>
+            <p class="text-xs mt-1" style="color:var(--text-muted);">T&uacute; + 2 aliados (m&aacute;ximo)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S8: FRANQUICIA COMPLETA =============== -->
+  <section id="franquicia" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Lo que operas</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">Franquicia Completa</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid gap-4 reveal" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="glass p-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">1</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Taller &middot; 3 horas</span>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-1" style="color:var(--text-primary);">&ldquo;De Ocupado a Productivo&rdquo;</h3>
+          <p class="text-sm" style="color:var(--text-secondary);">Facilita talleres Zero Risk en Colombia. Puerta de entrada para directivos. Sin inversi&oacute;n econ&oacute;mica para el asistente.</p>
+        </div>
+        <div class="glass p-5 glow-border">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#020617;">2</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--gold);">CAO Bootcamp</span>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-1" style="color:var(--text-primary);">2 Formatos, 2 Flujos de Revenue</h3>
+          <p class="text-sm mb-2" style="color:var(--text-secondary);">20h en 4-10 semanas. 13 asistentes IA, agente Pristino, segundo cerebro digital. Formato personalizado: Solo (1:1), Dupla o Terna.</p>
+          <div class="text-xs space-y-1 mt-2" style="color:var(--text-secondary);">
+            <p><strong style="color:var(--gold);">Puerta Cerrada</strong> &mdash; 1x/a&ntilde;o. $1,490 USD. Javier facilita. Intimidad, co-creaci&oacute;n profunda, testimonios premium.</p>
+            <p><strong style="color:var(--gold);">Calendario Acad&eacute;mico</strong> &mdash; Cada 2 meses. $1,990 USD. Camilo + Embajadores certificados. Networking cross-industry, volumen recurrente.</p>
+          </div>
+        </div>
+        <div class="glass p-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">3</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Empoderamiento</span>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-1" style="color:var(--text-primary);">Programa de Empoderamiento</h3>
+          <p class="text-sm" style="color:var(--text-secondary);">Lleva adopci&oacute;n IA a equipos t&aacute;cticos. Gerentes y mandos medios. 16 semanas.</p>
+        </div>
+      </div>
+      <div class="glass p-5 mt-4 reveal text-center">
+        <p class="text-xs font-semibold mb-3" style="color:var(--gold);">Adem&aacute;s incluye:</p>
+        <div class="flex flex-wrap justify-center gap-2">
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Marca MetodologIA Colombia</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Pristino (agente)</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">27 GPTs</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">7 Gems</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">180+ prompts</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Campus virtual</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S9: PRISTINO =============== -->
+  <section id="pristino" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="container">
+      <div class="reveal" style="display:grid;gap:2rem;align-items:center;grid-template-columns:auto 1fr;max-width:800px;margin:0 auto;">
+        <img src="https://raw.githubusercontent.com/ejemplo-deo-repo/img/main/Pristino.png" alt="Pristino" class="w-28 h-28 rounded-2xl object-cover" style="box-shadow:0 0 30px rgba(0,200,255,0.12), 0 0 60px rgba(255,215,0,0.06);" loading="lazy">
+        <div>
+          <h3 class="font-heading text-xl font-bold mb-2" style="color:var(--text-primary);">Pristino</h3>
+          <p class="text-sm leading-relaxed mb-3" style="color:var(--text-secondary);">
+            Este agente tambi&eacute;n ser&aacute; tuyo. Lo operas, lo personalizas, lo ofreces a tus clientes. Open Source, auditable, sin cajas negras.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Open Source</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Local</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Auditable</span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Tuyo para siempre</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S10: MODELO DE NEGOCIO =============== -->
+  <section id="modelo" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Business Case Colombia</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">El Modelo de Negocio</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <!-- 10a: COSTS TABLE -->
+      <div class="glass p-6 reveal mb-6" style="max-width:900px;margin:0 auto;overflow-x:auto;">
+        <p class="text-xs font-bold uppercase mb-4" style="color:var(--gold);">
+          <i data-lucide="receipt" class="w-4 h-4 inline-block mr-1" style="vertical-align:-2px;"></i>
+          Costos Anuales Confirmados
+        </p>
+        <table class="fin-table">
+          <thead>
+            <tr>
+              <th>Concepto</th>
+              <th style="text-align:right;">Costo/a&ntilde;o</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hosting para agentes</td>
+              <td style="text-align:right;">$500</td>
+            </tr>
+            <tr>
+              <td>Claude Code Max ($200/mes)</td>
+              <td style="text-align:right;">$2,400</td>
+            </tr>
+            <tr>
+              <td>Correo corporativo</td>
+              <td style="text-align:right;">$150</td>
+            </tr>
+            <tr>
+              <td>Agente productividad personal (opcional)</td>
+              <td style="text-align:right;">$1,000</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>Total anual</strong></td>
+              <td style="text-align:right;"><span class="gold-text font-heading" style="font-size:1.1rem;">$4,050/a&ntilde;o (~$340/mes)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 10b: UNIT ECONOMICS APPLIED TO CAO TICKET -->
+      <div class="glass p-6 reveal mb-6" style="max-width:900px;margin:0 auto;overflow-x:auto;">
+        <p class="text-xs font-bold uppercase mb-4" style="color:var(--gold);">
+          <i data-lucide="ticket" class="w-4 h-4 inline-block mr-1" style="vertical-align:-2px;"></i>
+          Aplicado a Ticket CAO ($1,490 PC / $1,990 Acad&eacute;mico)
+        </p>
+        <table class="fin-table">
+          <thead>
+            <tr>
+              <th>Rol de Camilo</th>
+              <th style="text-align:right;">Camilo recibe</th>
+              <th style="text-align:right;">MetodologIA</th>
+              <th style="text-align:right;">Otros</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td>Hace todo (90%)</td>
+              <td style="text-align:right;"><span class="gold-text font-heading">$1,341</span></td>
+              <td style="text-align:right;">$149</td>
+              <td style="text-align:right;">$0</td>
+            </tr>
+            <tr>
+              <td>Coach + franq (70%)</td>
+              <td style="text-align:right;font-weight:700;">$1,043</td>
+              <td style="text-align:right;">$149</td>
+              <td style="text-align:right;">$298 (comercial)</td>
+            </tr>
+            <tr>
+              <td>Solo franq (20%)</td>
+              <td style="text-align:right;font-weight:700;">$298</td>
+              <td style="text-align:right;">$149</td>
+              <td style="text-align:right;">$1,043 (coach+com.)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="text-xs mt-3 text-center" style="color:var(--text-muted);">1 cierre CAO cubre ~2 meses de costos operativos ($1,341 vs $340/mes burn).</p>
+      </div>
+
+      <!-- 10c: REVENUE PROJECTIONS COLOMBIA -->
+      <div class="glass p-6 reveal mb-6" style="max-width:900px;margin:0 auto;overflow-x:auto;">
+        <p class="text-xs font-bold uppercase mb-4" style="color:var(--gold);">
+          <i data-lucide="bar-chart-3" class="w-4 h-4 inline-block mr-1" style="vertical-align:-2px;"></i>
+          Revenue Proyectado Colombia &mdash; Camilo Hace Todo (90%)
+        </p>
+        <table class="fin-table">
+          <thead>
+            <tr>
+              <th>A&ntilde;o</th>
+              <th>Fase</th>
+              <th style="text-align:right;">Revenue Bruto</th>
+              <th style="text-align:right;">Camilo (90%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A&ntilde;o 1</td>
+              <td>Formaci&oacute;n (CAO + Empoderamiento + Asistentes)</td>
+              <td style="text-align:right;">$150k - $200k</td>
+              <td style="text-align:right;font-weight:700;">$135k - $180k</td>
+            </tr>
+            <tr>
+              <td>A&ntilde;o 2</td>
+              <td>Formaci&oacute;n + Consultor&iacute;a + B2B + Cobrand</td>
+              <td style="text-align:right;">$400k - $600k</td>
+              <td style="text-align:right;font-weight:700;">$200k - $330k</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>24 Meses</strong></td>
+              <td><strong>Acumulado conservador</strong></td>
+              <td style="text-align:right;"><span class="gold-text font-heading" style="font-size:1.1rem;">$550k - $800k</span></td>
+              <td style="text-align:right;"><span class="gold-text font-heading" style="font-size:1.1rem;">$335k - $510k</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="text-xs mt-3 text-center italic" style="color:var(--text-muted);">[SUPUESTO] Proyecci&oacute;n proporcional a Ecuador &times; 1.5-2x por tama&ntilde;o de mercado. Resultados dependen de ejecuci&oacute;n.</p>
+      </div>
+
+      <!-- 10d: UNIT ECONOMICS -->
+      <div class="grid gap-4 reveal mb-6" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); max-width: 900px; margin: 0 auto;">
+        <div class="glass p-4 rounded-lg text-center">
+          <i data-lucide="target" class="w-5 h-5 mx-auto mb-2" style="color:var(--gold);"></i>
+          <p class="text-xs" style="color:var(--text-muted);">CAC estimado</p>
+          <p class="font-heading font-bold text-lg" style="color:var(--text-primary);">~$100-150</p>
+          <p class="text-xs mt-0.5" style="color:var(--text-muted);">org&aacute;nico, sin ads</p>
+        </div>
+        <div class="glass p-4 rounded-lg text-center">
+          <i data-lucide="ticket" class="w-5 h-5 mx-auto mb-2" style="color:var(--gold);"></i>
+          <p class="text-xs" style="color:var(--text-muted);">Ticket promedio</p>
+          <p class="font-heading font-bold text-lg gold-text">$1,490</p>
+          <p class="text-xs mt-0.5" style="color:var(--text-muted);">CAO Puerta Cerrada</p>
+        </div>
+        <div class="glass p-4 rounded-lg text-center">
+          <i data-lucide="gem" class="w-5 h-5 mx-auto mb-2" style="color:var(--gold);"></i>
+          <p class="text-xs" style="color:var(--text-muted);">LTV por ejecutivo</p>
+          <p class="font-heading font-bold text-lg gold-text">~$4,000+</p>
+          <p class="text-xs mt-0.5" style="color:var(--text-muted);">CAO + asist. + Empow.</p>
+        </div>
+        <div class="glass p-4 rounded-lg text-center glow-border">
+          <i data-lucide="zap" class="w-5 h-5 mx-auto mb-2" style="color:var(--gold);"></i>
+          <p class="text-xs" style="color:var(--text-muted);">LTV/CAC</p>
+          <p class="font-heading font-bold text-lg gold-text">27-40x</p>
+          <p class="text-xs mt-0.5" style="color:var(--text-muted);">supera target 3-4x</p>
+        </div>
+        <div class="glass p-4 rounded-lg text-center">
+          <i data-lucide="check-circle" class="w-5 h-5 mx-auto mb-2" style="color:var(--gold);"></i>
+          <p class="text-xs" style="color:var(--text-muted);">Breakeven</p>
+          <p class="font-heading font-bold text-lg" style="color:var(--text-primary);">Ciclo 1</p>
+          <p class="text-xs mt-0.5" style="color:var(--text-muted);">3+ personas</p>
+        </div>
+      </div>
+
+      <!-- 10e: COMPARISON vs ECUADOR -->
+      <div class="glass p-6 reveal" style="max-width:900px;margin:0 auto;overflow-x:auto;">
+        <p class="text-xs font-bold uppercase mb-4" style="color:var(--gold);">
+          <i data-lucide="scale" class="w-4 h-4 inline-block mr-1" style="vertical-align:-2px;"></i>
+          Colombia vs Ecuador &mdash; Comparativa de Mercado
+        </p>
+        <table class="fin-table">
+          <thead>
+            <tr>
+              <th>M&eacute;trica</th>
+              <th style="text-align:center;">Ecuador</th>
+              <th style="text-align:center;">Colombia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Poblaci&oacute;n</td>
+              <td style="text-align:center;">~18M</td>
+              <td style="text-align:center;font-weight:700;">~52M</td>
+            </tr>
+            <tr>
+              <td>Empresas registradas</td>
+              <td style="text-align:center;">~1M</td>
+              <td style="text-align:center;font-weight:700;">~1.7M</td>
+            </tr>
+            <tr>
+              <td>TAM estimado</td>
+              <td style="text-align:center;">$89M</td>
+              <td style="text-align:center;font-weight:700;">$250M+</td>
+            </tr>
+            <tr>
+              <td>Revenue A&ntilde;o 1 (proyecci&oacute;n)</td>
+              <td style="text-align:center;">$136k</td>
+              <td style="text-align:center;font-weight:700;">$150k - $200k</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>Revenue A&ntilde;o 2</strong></td>
+              <td style="text-align:center;"><strong>$435k</strong></td>
+              <td style="text-align:center;"><span class="gold-text font-heading" style="font-size:1.1rem;">$400k - $600k</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="text-xs mt-3 text-center" style="color:var(--text-muted);">Todos los precios en USD. Colombia: pricing en USD (est&aacute;ndar para educaci&oacute;n ejecutiva en Latam).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S11: EMBAJADORES =============== -->
+  <section id="embajadores" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Escala</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">Tu Red de Embajadores en Colombia</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="glass p-6 reveal" style="max-width:900px;margin:0 auto;">
+        <div class="flex items-center gap-3 mb-3">
+          <i data-lucide="award" class="w-6 h-6 flex-shrink-0" style="color:var(--gold);"></i>
+          <h3 class="font-heading text-base font-bold" style="color:var(--text-primary);">C&oacute;mo Funciona</h3>
+        </div>
+        <p class="text-sm mb-3" style="color:var(--text-secondary);">Al graduarse del CAO Bootcamp, los ejecutivos colombianos tienen la opci&oacute;n de certificarse como <strong style="color:var(--text-primary);">Embajador MetodologIA Colombia</strong>. El 50% de cada programa que faciliten es suyo (como coach).</p>
+        <p class="text-sm mb-3" style="color:var(--text-secondary);">Cada Embajador que certificas genera revenue para ti autom&aacute;ticamente: t&uacute; recibes el <strong style="color:var(--text-primary);">20% de franquicia</strong> de TODO lo que operen bajo la marca MetodologIA Colombia.</p>
+        <p class="text-sm mb-4" style="color:var(--text-secondary);">En A&ntilde;o 1 haces todo (90%). Desde A&ntilde;o 2, delegas a embajadores y escalas sin hacer m&aacute;s horas.</p>
+
+        <!-- Escalera de valor -->
+        <p class="text-xs font-bold uppercase mb-3" style="color:var(--gold);">Escalera de Valor del Ejecutivo Colombiano</p>
+        <div class="grid gap-2" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);">
+            <i data-lucide="user-plus" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i>
+            <span>Paga CAO ($1,490 - $1,990)</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);">
+            <i data-lucide="badge-check" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i>
+            <span>Se certifica como Embajador</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);">
+            <i data-lucide="presentation" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i>
+            <span>Facilita talleres Zero Risk</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);">
+            <i data-lucide="users" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i>
+            <span>Facilita CAO (50% como coach)</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);">
+            <i data-lucide="building-2" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i>
+            <span>Conecta su empresa (B2B)</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);">
+            <i data-lucide="handshake" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i>
+            <span>Conecta su gremio (Cobrand)</span>
+          </div>
+        </div>
+        <p class="text-sm font-semibold italic mt-4" style="color:var(--gold);">Co-crear entornos de abundancia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S12: ROADMAP COLOMBIA =============== -->
+  <section id="roadmap" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Roadmap</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">El Camino Colombia</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div style="max-width:800px;margin:0 auto;" class="reveal">
+        <!-- Phase 0 -->
+        <div class="flex gap-4 mb-1">
+          <div class="flex flex-col items-center"><div class="timeline-dot mt-1"></div><div class="timeline-line flex-1"></div></div>
+          <div class="glass p-5 mb-3 flex-1">
+            <p class="text-xs font-bold uppercase mb-1" style="color:var(--gold);">Fase 0 &mdash; Ahora</p>
+            <h4 class="font-heading text-sm font-bold mb-1" style="color:var(--text-primary);">Confirmaci&oacute;n e Inversi&oacute;n</h4>
+            <p class="text-sm" style="color:var(--text-secondary);">Confirmar participaci&oacute;n como Socio Franquicia &rarr; transferir inversi&oacute;n &rarr; setup de infraestructura (hosting, cuentas Claude Code, ecosistema ag&eacute;ntico).</p>
+            <p class="text-xs mt-2 font-semibold" style="color:var(--gold);">Milestone: Infraestructura operativa Colombia</p>
+          </div>
+        </div>
+        <!-- Phase 1 -->
+        <div class="flex gap-4 mb-1">
+          <div class="flex flex-col items-center"><div class="timeline-dot mt-1"></div><div class="timeline-line flex-1"></div></div>
+          <div class="glass p-5 mb-3 flex-1">
+            <p class="text-xs font-bold uppercase mb-1" style="color:var(--gold);">Fase 1 &mdash; Formaci&oacute;n</p>
+            <h4 class="font-heading text-sm font-bold mb-1" style="color:var(--text-primary);">Dominio del M&eacute;todo</h4>
+            <p class="text-sm" style="color:var(--text-secondary);">Sesiones dominicales 2h. Dominio del m&eacute;todo, los asistentes GPT, Gems, Pristino. Pr&aacute;ctica con casos reales del mercado colombiano.</p>
+            <p class="text-xs mt-2 font-semibold" style="color:var(--gold);">Milestone: Certificaci&oacute;n como facilitador MetodologIA</p>
+          </div>
+        </div>
+        <!-- Phase 2 -->
+        <div class="flex gap-4 mb-1">
+          <div class="flex flex-col items-center"><div class="timeline-dot mt-1"></div><div class="timeline-line flex-1"></div></div>
+          <div class="glass p-5 mb-3 flex-1">
+            <p class="text-xs font-bold uppercase mb-1" style="color:var(--gold);">Fase 2 &mdash; Activaci&oacute;n Bogot&aacute;</p>
+            <h4 class="font-heading text-sm font-bold mb-1" style="color:var(--text-primary);">Primer Taller + Pipeline</h4>
+            <p class="text-sm" style="color:var(--text-secondary);">Activar campa&ntilde;a Bogot&aacute; (ya existe dossier). Primer taller &ldquo;De Ocupado a Productivo&rdquo; presencial. Zero Risk. Pipeline de leads para CAO.</p>
+            <p class="text-xs mt-2 font-semibold" style="color:var(--gold);">Milestone: Primer evento presencial en Bogot&aacute;</p>
+          </div>
+        </div>
+        <!-- Phase 3 -->
+        <div class="flex gap-4 mb-1">
+          <div class="flex flex-col items-center"><div class="timeline-dot mt-1"></div><div class="timeline-line flex-1"></div></div>
+          <div class="glass p-5 mb-3 flex-1">
+            <p class="text-xs font-bold uppercase mb-1" style="color:var(--gold);">Fase 3 &mdash; Primer Ciclo CAO</p>
+            <h4 class="font-heading text-sm font-bold mb-1" style="color:var(--text-primary);">Revenue desde Ciclo 1</h4>
+            <p class="text-sm" style="color:var(--text-secondary);">5+ ejecutivos &times; $1,490 = <strong style="color:var(--text-primary);">$7,450+ USD</strong>. 20h en 4-10 semanas. Primer revenue. Burn mensual: solo $340 (sin salarios, 100% comisiones).</p>
+            <p class="text-xs mt-2 font-semibold" style="color:var(--gold);">Milestone: Breakeven + primer revenue + testimonios</p>
+          </div>
+        </div>
+        <!-- Phase 4 -->
+        <div class="flex gap-4 mb-1">
+          <div class="flex flex-col items-center"><div class="timeline-dot mt-1"></div><div class="timeline-line flex-1"></div></div>
+          <div class="glass p-5 mb-3 flex-1">
+            <p class="text-xs font-bold uppercase mb-1" style="color:var(--gold);">Fase 4 &mdash; Medell&iacute;n + Empoderamiento</p>
+            <h4 class="font-heading text-sm font-bold mb-1" style="color:var(--text-primary);">Segundo Mercado + Segundo Producto</h4>
+            <p class="text-sm" style="color:var(--text-secondary);">Activar campa&ntilde;a Medell&iacute;n (dossier ya existe). Lanzar Programa de Empoderamiento. Dos ciudades, dos productos, dos flujos de revenue.</p>
+            <p class="text-xs mt-2 font-semibold" style="color:var(--gold);">Milestone: Presencia en 2 ciudades + 2 l&iacute;neas de ingreso</p>
+          </div>
+        </div>
+        <!-- Phase 5 -->
+        <div class="flex gap-4">
+          <div class="flex flex-col items-center"><div class="timeline-dot mt-1"></div></div>
+          <div class="glass p-5 flex-1">
+            <p class="text-xs font-bold uppercase mb-1" style="color:var(--gold);">Fase 5 &mdash; Escala Nacional</p>
+            <h4 class="font-heading text-sm font-bold mb-1" style="color:var(--text-primary);">Cali, Barranquilla + Red de Embajadores</h4>
+            <p class="text-sm" style="color:var(--text-secondary);">Expandir a tercera y cuarta ciudad. Primeros embajadores certificados empiezan a facilitar. B2B y Cobrand activos. Camilo escala sin sumar horas.</p>
+            <p class="text-xs mt-2 font-semibold" style="color:var(--gold);">Milestone: 4 ciudades + embajadores activos + B2B</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S13: COST OF INACTION =============== -->
+  <section style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Costo de la Inacci&oacute;n</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.25rem, 3vw, 1.75rem);">Cada mes sin operar...</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid gap-4 reveal" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); max-width: 900px; margin: 0 auto;">
+        <div class="glass p-5 text-center">
+          <i data-lucide="alert-triangle" class="w-6 h-6 mx-auto mb-2" style="color:#F59E0B;"></i>
+          <p class="text-sm" style="color:var(--text-secondary);">Otro facilitador se posiciona en Bogot&aacute;</p>
+        </div>
+        <div class="glass p-5 text-center">
+          <i data-lucide="alert-triangle" class="w-6 h-6 mx-auto mb-2" style="color:#F59E0B;"></i>
+          <p class="text-sm" style="color:var(--text-secondary);">Las campa&ntilde;as activas pierden momentum</p>
+        </div>
+        <div class="glass p-5 text-center">
+          <i data-lucide="alert-triangle" class="w-6 h-6 mx-auto mb-2" style="color:#F59E0B;"></i>
+          <p class="text-sm" style="color:var(--text-secondary);">Colombia (3x Ecuador) se define sin ti</p>
+        </div>
+        <div class="glass p-5 text-center">
+          <i data-lucide="alert-triangle" class="w-6 h-6 mx-auto mb-2" style="color:#F59E0B;"></i>
+          <p class="text-sm font-semibold" style="color:var(--text-primary);">$0 invertido hoy = $0 revenue ma&ntilde;ana</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S14: CTA FINAL =============== -->
+  <section id="final" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="container">
+      <div class="text-center reveal" style="max-width:700px;margin:0 auto;">
+        <h2 class="font-heading font-bold mb-4" style="color:var(--text-primary);font-size:clamp(1.75rem, 4vw, 2.5rem);">Camilo, la decisi&oacute;n es tuya.</h2>
+        <div class="gold-divider"></div>
+        <p class="text-base mb-4 mt-4" style="color:var(--text-secondary);">Socio Franquicia MetodologIA Colombia. $2,900. Un mercado 3x m&aacute;s grande que Ecuador. Campa&ntilde;as ya activas en Bogot&aacute; y Medell&iacute;n. Y un equipo de fundadores que te respalda.</p>
+        <p class="text-sm mb-8" style="color:var(--text-secondary);">Ser Embajador ya lo est&aacute;s haciendo. Ser Socio Franquicia es lo que multiplica todo.</p>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a href="mailto:contacto@metodologia.info?subject=Confirmaci%C3%B3n%20Socio%20Franquicia%20MetodologIA%20Colombia%20%E2%80%94%20Camilo%20de%20La%20Llosa"
+             class="btn-gold" style="padding:1rem 2.5rem;">
+            <i data-lucide="check-circle" class="w-5 h-5"></i> Confirmar como Socio Franquicia Colombia
+          </a>
+          <a href="mailto:contacto@metodologia.info?subject=Preguntas%20Franquicia%20MetodologIA%20Colombia%20%E2%80%94%20Camilo%20de%20La%20Llosa"
+             class="btn-ghost" style="padding:1rem 2.5rem;">
+            <i data-lucide="message-circle" class="w-5 h-5"></i> Tengo preguntas
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S15: FOOTER =============== -->
+  <footer style="padding:2rem 0 calc(2rem + env(safe-area-inset-bottom));background:var(--bg-secondary);border-top:1px solid var(--border-color);">
+    <div class="container text-center">
+      <div class="flex items-center justify-center gap-2 mb-3">
+        <svg width="24" height="24" viewBox="0 0 36 36" fill="none">
+          <defs><linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+          <rect width="36" height="36" rx="10" fill="url(#lg2)"/>
+          <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+          <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+        </svg>
+        <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">Metodolog<span class="gold-text">IA</span></span>
+      </div>
+      <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-4">
+        <a href="https://metodologia.info/vision.html" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="eye" class="w-3 h-3"></i> Visi&oacute;n
+        </a>
+        <a href="https://metodologia.info/ruta/" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="route" class="w-3 h-3"></i> Ruta
+        </a>
+        <a href="mailto:contacto@metodologia.info" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="mail" class="w-3 h-3"></i> Contacto
+        </a>
+      </div>
+      <p class="text-xs leading-relaxed" style="color:var(--text-muted);">
+        Documento confidencial. Preparado exclusivamente para Camilo de La Llosa. MetodologIA &copy; 2026. Todos los precios en USD.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    if (html.classList.contains('dark')) { html.classList.remove('dark'); html.classList.add('light'); }
+    else { html.classList.remove('light'); html.classList.add('dark'); }
+  }
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.add('light');
+  }
+  function toggleAcc(btn) {
+    const content = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    const parent = btn.closest('.space-y-2');
+    if (parent) {
+      parent.querySelectorAll('.accordion-trigger.open').forEach(other => {
+        if (other !== btn) { other.classList.remove('open'); other.nextElementSibling.style.maxHeight = '0'; }
+      });
+    }
+    if (isOpen) { btn.classList.remove('open'); content.style.maxHeight = '0'; }
+    else { btn.classList.add('open'); content.style.maxHeight = content.scrollHeight + 'px'; }
+  }
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = h > 0 ? (window.scrollY / h) * 100 : 0;
+    document.getElementById('scroll-progress').style.width = pct + '%';
+  }, { passive: true });
+  function observeReveals() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+  }
+  document.addEventListener('DOMContentLoaded', () => { lucide.createIcons(); observeReveals(); });
+  </script>
+
+</body>
+</html>
