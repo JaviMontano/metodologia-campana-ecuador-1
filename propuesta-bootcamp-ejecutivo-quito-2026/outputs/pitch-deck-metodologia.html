@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetodologIA Ecuador — Pitch Deck</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='10' fill='%230A122A'/><path d='M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z' fill='white'/><circle cx='18' cy='8' r='2' fill='%23FFD700'/></svg>" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* ── CSS VARIABLES ── */
+    :root {
+      --bg-primary: #0B2545;
+      --bg-secondary: #071A33;
+      --text-primary: #F0F4F8;
+      --text-secondary: #A0B4CC;
+      --text-muted: #6B8AB0;
+      --glass-bg: rgba(11, 37, 69, 0.55);
+      --glass-border: rgba(255, 215, 0, 0.12);
+      --gold: #FFD700;
+      --gold-dark: #FFA000;
+      --gold-soft: #FFE44D;
+      --border-color: rgba(255, 215, 0, 0.15);
+      --shadow-glow: 0 0 60px rgba(255, 215, 0, 0.08);
+    }
+
+    .light-mode {
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F5F7FA;
+      --text-primary: #1A1A2E;
+      --text-secondary: #4A5568;
+      --text-muted: #718096;
+      --glass-bg: rgba(245, 247, 250, 0.85);
+      --glass-border: rgba(184, 134, 11, 0.2);
+      --gold: #B8860B;
+      --gold-dark: #8B6508;
+      --gold-soft: #DAA520;
+      --border-color: rgba(184, 134, 11, 0.2);
+      --shadow-glow: 0 0 40px rgba(184, 134, 11, 0.06);
+    }
+
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.25rem;
+      line-height: 1.6;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.15;
+    }
+
+    .gold-text {
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .light-mode .gold-text {
+      background: linear-gradient(135deg, #B8860B, #8B6508);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── SLIDE SECTIONS ── */
+    section {
+      min-height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 8%;
+      position: relative;
+    }
+
+    section::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.3;
+    }
+
+    /* ── GLASS CARD ── */
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 1rem;
+      box-shadow: var(--shadow-glow);
+      padding: 2rem 2.5rem;
+    }
+
+    /* ── SLIDE COUNTER ── */
+    .slide-counter {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold);
+      opacity: 0.7;
+      z-index: 100;
+      pointer-events: none;
+    }
+
+    /* ── MODE TOGGLE ── */
+    .mode-toggle {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 200;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .mode-toggle:hover { color: var(--gold); }
+
+    /* ── NAV HINT ── */
+    .nav-hint {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      opacity: 0.5;
+      z-index: 100;
+      pointer-events: none;
+    }
+
+    /* ── PRODUCT CARDS ── */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .product-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 1rem;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .product-card h4 {
+      font-size: 1.1rem;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .product-card .price {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0.5rem 0;
+    }
+    .product-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    /* ── PAIN POINTS ── */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .pain-item {
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .pain-item .icon-wrap {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(255, 215, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .pain-item .icon-wrap i { color: var(--gold); }
+    .pain-item p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ── METRIC CARDS ── */
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .metric-card {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 1rem;
+    }
+    .metric-card .value {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--gold);
+    }
+    .metric-card .label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* ── SPLIT BAR ── */
+    .split-bar {
+      display: flex;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      height: 48px;
+      margin: 1.5rem 0;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .split-bar div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0B2545;
+    }
+    .split-50 { width: 50%; background: #FFD700; }
+    .split-20a { width: 20%; background: #FFA000; }
+    .split-10 { width: 10%; background: #FFE44D; }
+    .split-20b { width: 20%; background: #D4A017; }
+
+    /* ── REVENUE BARS ── */
+    .rev-bars {
+      display: flex;
+      align-items: flex-end;
+      gap: 3rem;
+      justify-content: center;
+      margin: 2rem 0;
+      height: 220px;
+    }
+    .rev-bar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .rev-bar {
+      width: 120px;
+      border-radius: 0.75rem 0.75rem 0 0;
+      background: linear-gradient(180deg, #FFD700, #FFA000);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 0.75rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: #0B2545;
+    }
+    .rev-bar-label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    /* ── REVENUE MINI TABLE ── */
+    .rev-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1.05rem;
+      margin: 1rem 0;
+    }
+    .rev-table th {
+      text-align: left;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .rev-table td {
+      padding: 0.4rem 0.75rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .rev-table .total td {
+      font-weight: 700;
+      color: var(--text-primary);
+      border-top: 2px solid var(--gold);
+    }
+
+    /* ── TAM/SAM/SOM ── */
+    .tam-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .tam-circle {
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid;
+    }
+    .tam-circle .amount {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+    }
+    .tam-circle .name {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── FLOW VISUAL ── */
+    .flow-steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .flow-step {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 0.75rem;
+      padding: 0.75rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      text-align: center;
+      max-width: 180px;
+    }
+    .flow-arrow {
+      font-size: 1.5rem;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ── SEGMENT PATH ── */
+    .segment-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+    .segment-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+    .segment-card h4 {
+      font-size: 1rem;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .segment-card .ticket {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+    .segment-card .timing {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+
+    /* ── TEAM ── */
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .team-member {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .team-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      flex-shrink: 0;
+    }
+    .team-avatar-placeholder {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(255, 215, 0, 0.1);
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--gold);
+    }
+    .team-info h4 {
+      font-size: 1.15rem;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+    .team-info p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight {
+      background: rgba(255, 215, 0, 0.06);
+      border-left: 4px solid var(--gold);
+      padding: 1.25rem 1.5rem;
+      border-radius: 0 0.75rem 0.75rem 0;
+      margin: 1.25rem 0;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+    }
+    .highlight strong { color: var(--text-primary); }
+
+    /* ── SUBTITLE ── */
+    .slide-subtitle {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+
+    /* ── SMALL PRISTINO ── */
+    .pristino-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+    }
+    .pristino-badge svg { flex-shrink: 0; }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 1.5rem;
+      font-style: italic;
+    }
+
+    /* ── MARKET DATA ── */
+    .market-badge {
+      display: inline-block;
+      background: rgba(255, 215, 0, 0.08);
+      border: 1px solid var(--border-color);
+      border-radius: 2rem;
+      padding: 0.5rem 1.25rem;
+      font-size: 0.95rem;
+      color: var(--gold);
+      font-weight: 600;
+      margin-top: 1.5rem;
+    }
+
+    /* ── CTA SECTION ── */
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin: 2rem 0;
+    }
+
+    .milestone-list {
+      list-style: none;
+      padding: 0;
+    }
+    .milestone-list li {
+      padding: 0.4rem 0;
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+    }
+    .milestone-list li::before {
+      content: '\2713';
+      color: var(--gold);
+      font-weight: 700;
+      margin-right: 0.75rem;
+    }
+
+    /* ── PRINT STYLES ── */
+    @media print {
+      html { scroll-snap-type: none; }
+      body {
+        background: #fff !important;
+        color: #1a1a1a !important;
+        font-size: 10px !important;
+      }
+      section {
+        min-height: auto !important;
+        page-break-after: always;
+        padding: 1.5cm !important;
+      }
+      section:last-child { page-break-after: avoid; }
+      .glass {
+        background: #f8f9fa !important;
+        backdrop-filter: none !important;
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+      }
+      .gold-text {
+        -webkit-text-fill-color: #B8860B !important;
+        color: #B8860B !important;
+      }
+      .slide-counter, .mode-toggle, .nav-hint { display: none !important; }
+      .split-bar div { color: #fff !important; }
+      .rev-bar { color: #fff !important; }
+      .metric-card .value { color: #B8860B !important; }
+      .product-card h4, .segment-card h4 { color: #B8860B !important; }
+      .pain-item .icon-wrap { background: #fdf8e8 !important; }
+      .highlight { background: #fdf8e8 !important; border-left-color: #B8860B !important; }
+      .highlight strong { color: #1a1a1a !important; }
+    }
+
+    @page { size: 16in 9in landscape; margin: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- CONTROLS -->
+  <button class="mode-toggle" onclick="document.body.classList.toggle('light-mode')">
+    <i data-lucide="sun" style="width:14px;height:14px;vertical-align:middle"></i> Modo claro
+  </button>
+  <div class="slide-counter" id="slideCounter">1 / 10</div>
+  <div class="nav-hint">&#8593; &#8595; para navegar</div>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- SLIDE 1: TITLE -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <section id="slide-1" style="text-align:center;">
+    <div>
+      <svg width="120" height="120" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:2rem;">
+        <rect width="36" height="36" rx="10" fill="#0A122A"/>
+        <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+        <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+      </svg>
+      <h1 style="font-size:4.5rem;font-weight:900;margin-bottom:0.5rem;">
+        <span class="gold-text">MetodologIA</span> Ecuador
+      </h1>
+      <p style="font-size:1.5rem;color:var(--text-secondary);margin-bottom:1.5rem;">
+        Formaci&oacute;n ejecutiva en IA para directivos latinoamericanos
+      </p>
+      <p style="font-size:1.15rem;color:var(--text-muted);margin-bottom:2.5rem;">
+        Franquicia &middot; Comisiones puras &middot; Cero riesgo de cash flow
+      </p>
+      <div style="display:inline-block;border:1px solid var(--border-color);border-radius:2rem;padding:0.5rem 2rem;font-size:0.95rem;color:var(--gold);font-weight:600;">
+        Abril 2026
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- SLIDE 2: THE PROBLEM -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <section id="slide-2">
+    <h2 style="font-size:3rem;font-weight:900;margin-bottom:0.5rem;">El Problema</h2>
+    <p class="slide-subtitle" style="font-size:1.4rem;font-weight:600;color:var(--text-primary);">
+      Los ejecutivos saben que necesitan IA. No saben c&oacute;mo operarla.
+    </p>
+
+    <div class="pain-grid">
+      <div class="pain-item glass">
+        <div class="icon-wrap"><i data-lucide="clock" style="width:28px;height:28px;color:var(--gold)"></i></div>
+        <p><strong style="color:var(--gold)">12-18h semanales</strong> en tareas operativas que un agente ejecutar&iacute;a</p>
+      </div>
+      <div class="pain-item glass">
+        <div class="icon-wrap"><i data-lucide="unplug" style="width:28px;height:28px;color:var(--gold)"></i></div>
+        <p>Herramientas aisladas sin sistema: chatbot aqu&iacute;, prompt all&aacute;</p>
+      </div>
+      <div class="pain-item glass">
+        <div class="icon-wrap"><i data-lucide="trending-up" style="width:28px;height:28px;color:var(--gold)"></i></div>
+        <p>Cada trimestre la brecha se ampl&iacute;a entre quienes operan con IA y quienes no</p>
+      </div>
+    </div>
+
+    <div class="market-badge" style="text-align:center;display:block;max-width:fit-content;margin:1.5rem auto 0;">
+      $0.28B mercado LatAm IA Corp Training &middot; 25% CAGR &middot; Ecuador: cero operadores serios
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- SLIDE 3: THE SOLUTION -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <section id="slide-3">
+    <h2 style="font-size:3rem;font-weight:900;margin-bottom:0.5rem;">La Soluci&oacute;n</h2>
+    <p class="slide-subtitle" style="font-size:1.4rem;font-weight:600;color:var(--text-primary);">
+      No ense&ntilde;amos IA &mdash; instalamos un sistema operativo ag&eacute;ntico personal
+    </p>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <h4>Taller &ldquo;De Ocupado a Productivo&rdquo;</h4>
+        <div class="price" style="color:var(--gold)">Gratis</div>
+        <p>Funnel de entrada &middot; 3 horas<br>Demuestra el m&eacute;todo en vivo</p>
+      </div>
+      <div class="product-card" style="border-color:var(--gold);box-shadow:0 0 30px rgba(255,215,0,0.1);">
+        <h4>CAO Bootcamp</h4>
+        <div class="price">$1,490</div>
+        <p>20 horas &middot; Agente propio + 13 asistentes + segundo cerebro</p>
+      </div>
+      <div class="product-card">
+        <h4>Programa de Empoderamiento</h4>
+        <div class="price">$1,490</div>
+        <p>16 semanas &middot; Equipos t&aacute;cticos &middot; Adopci&oacute;n organizacional</p>
+      </div>
+    </div>
+
+    <div class="pristino-badge" style="justify-content:center;display:flex;">
+      <svg width="24" height="24" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="10" fill="#0A122A"/>
+        <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+        <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+      </svg>
+      <span>Pristino &mdash; Open Source, auditable, suyo para siempre</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- SLIDE 4: MARKET -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <section id="slide-4">
+    <h2 style="font-size:3rem;font-weight:900;margin-bottom:1.5rem;">Mercado</h2>
+
+    <div class="tam-visual">
+      <div class="tam-circle" style="width:280px;height:280px;border-color:rgba(255,215,0,0.2);background:rgba(255,215,0,0.03);">
+        <div class="amount" style="font-size:2.5rem;color:var(--gold);">$89M</div>
+        <div class="name" style="font-size:0.8rem;color:var(--text-muted);">TAM</div>
+        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.25rem;">60-100k ejecutivos Ecuador</div>
+
+        <div class="tam-circle" style="width:170px;height:170px;border-color:rgba(255,160,0,0.3);background:rgba(255,160,0,0.05);margin-top:0.5rem;">
+          <div class="amount" style="font-size:1.6rem;color:var(--gold-dark);">$14.9M</div>
+          <div class="name" style="font-size:0.7rem;color:var(--text-muted);">SAM</div>
+          <div style="font-size:0.65rem;color:var(--text-muted);">7-12k alcanzables</div>
+
+          <div class="tam-circle" style="width:80px;height:80px;border-color:var(--gold);background:rgba(255,215,0,0.1);margin-top:0.3rem;">
+            <div class="amount" style="font-size:1rem;color:var(--gold);">$136k</div>
+            <div class="name" style="font-size:0.55rem;color:var(--text-muted);">SOM Y1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:1rem;">
+      <p style="font-size:1.1rem;color:var(--text-secondary);">
+        1,073,524 empresas en Ecuador (INEC 2024) &middot; Mercado virgen
+      </p>
+      <p style="font-size:0.95rem;color:var(--text-muted);margin-top:0.5rem;">
+        Penetraci&oacute;n Y1: 0.006% del TAM &rarr; espacio masivo
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- SLIDE 5: BUSINESS MODEL -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <section id="slide-5">
+    <h2 style="font-size:3rem;font-weight:900;margin-bottom:0.5rem;">Modelo de Negocio</h2>
+    <p class="slide-subtitle" style="font-size:1.4rem;font-weight:600;color:var(--text-primary);">
+      Comisiones puras. Cero salarios. Cero riesgo de cash flow.
+    </p>
+
+    <div class="split-bar">
+      <div class="split-50">50% Coach</div>
+      <div class="split-20a">20% Franquicia</div>
+      <div class="split-10">10% MetodologIA</div>
+      <div class="split-20b">20% Comercial</div>
+    </div>
+
+    <div class="highlight" style="font-size:1.2rem;">
+      Si el operador hace todo: <strong>90% suyo.</strong> &nbsp;
+      Burn: <strong>$813/mes.</strong> &nbsp;
+      Break-even: <strong>1 cierre.</strong>
+    </div>
+
+    <table class="rev-table" style="margin-top:1.5rem;">
+      <tr><th>Flujo de Revenue</th><th style="text-align:right">Y1</th><th style="text-align:right">Y2</th></tr>
+      <tr><td>B2C (CAO + Empoderamiento + Asistentes)</td><td style="text-align:right">$86,849</td><td style="text-align:right">$150,000</td></tr>
+      <tr><td>B2B (grupos corp &le;20)</td><td style="text-align:right">$13,200</td><td style="text-align:right">$98,400</td></tr>
+      <tr><td>B2B2B Cobrand (4x ticket)</td><td style="text-align:right">$36,000</td><td style="text-align:right">$96,000</td></tr>
+      <tr><td>White Label</td><td style="text-align:right">$0</td><td style="text-align:right">$90,500</td></tr>
+      <tr class="total"><td><strong>Total</strong></td><td style="text-align:right"><strong>$136,049</strong></td><td style="text-align:right"><strong>$434,900</strong></td></tr>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- SLIDE 6: TRACTION & PROJECTIONS -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <section id="slide-6">
+    <h2 style="font-size:3rem;font-weight:900;margin-bottom:1.5rem;">Tracci&oacute;n y Proyecciones</h2>
+
+    <div class="metric-row">
+      <div class="metric-card">
+        <div class="value">$136k</div>
+        <div class="label">Revenue Y1</div>
+      </div>
+      <div class="metric-card">
+        <div class="value">$435k</div>
+        <div class="label">Revenue Y2</div>
+      </div>
+      <div class="metric-card">
+        <div class="value">$571k</div>
+        <div class="label">24 Meses</div>
+      </div>
+      <div class="metric-card">
+        <div class="value">27-40x</div>
+        <div class="label">LTV/CAC Y1</div>
+      </div>
+    </div>
+
+    <div class="rev-bars">
+      <div class="rev-bar-wrap">
+        <div class="rev-bar" style="height:110px;">$136k</div>
+        <span class="rev-bar-label">Year 1</span>
+      </div>
+      <div class="rev-bar-wrap">
+        <div class="rev-bar" style="height:200px;">$435k</div>
+        <span class="rev-bar-label">Year 2</span>
+      </div>
+    </div>
+
+    <div style="text-align:center;">
+      <p style="font-size:1.1rem;color:var(--gold);font-weight:700;">Day 1: Domingo de Pascua (5 abril 2026)</p>
+      <p style="font-size:0.95rem;color:var(--text-secondary);margin-top:0.5rem;">
+        Pipeline: aspiracional &middot; Primer ciclo: abril-junio
+      </p>
+    </div>
+    <p class="disclaimer">Proyecciones ilustrativas &mdash; resultados dependen de ejecuci&oacute;n</p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- SLIDE 7: SCALING — AMBASSADORS -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <section id="slide-7">
+    <h2 style="font-size:3rem;font-weight:900;margin-bottom:0.5rem;">Escalamiento v&iacute;a Embajadores</h2>
+    <p class="slide-subtitle" style="font-size:1.4rem;font-weight:600;color:var(--text-primary);">
+      Cada graduado es un facilitador potencial
+    </p>
+
+    <div class="flow-steps">
+      <div class="flow-step">Ejecutivo paga CAO</div>
+      <span class="flow-arrow">&rarr;</span>
+      <div class="flow-step">Graduado</div>
+      <span class="flow-arrow">&rarr;</span>
+      <div class="flow-step">Embajador certificado</div>
+      <span class="flow-arrow">&rarr;</span>
+      <div class="flow-step">Facilita programas <strong style="color:var(--gold)">(50%)</strong></div>
+      <span class="flow-arrow">&rarr;</span>
+      <div class="flow-step">Conecta empresas (B2B)</div>
+      <span class="flow-arrow">&rarr;</span>
+      <div class="flow-step" style="border-color:var(--gold);">Co-crea entornos de abundancia</div>
+    </div>
+
+    <div class="highlight" style="text-align:center;font-size:1.15rem;margin-top:2rem;">
+      Motor de escala a costo cero: m&aacute;s graduados &rarr; m&aacute;s embajadores &rarr; m&aacute;s programas
+    </div>
+
+    <p style="text-align:center;font-size:0.95rem;color:var(--text-muted);margin-top:1rem;">
+      Despu&eacute;s del Year 1: el operador elige su mix
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- SLIDE 8: 4 SEGMENTS -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <section id="slide-8">
+    <h2 style="font-size:3rem;font-weight:900;margin-bottom:1.5rem;">4 Segmentos de Crecimiento</h2>
+
+    <div class="segment-grid">
+      <div class="segment-card">
+        <h4>B2C</h4>
+        <div class="ticket">$1,490/persona</div>
+        <p style="font-size:0.9rem;color:var(--text-secondary);margin-top:0.5rem;">CAO + Empoderamiento</p>
+        <div class="timing">A&ntilde;o 1-2</div>
+      </div>
+      <div class="segment-card">
+        <h4>B2B</h4>
+        <div class="ticket">$13-25k/proyecto</div>
+        <p style="font-size:0.9rem;color:var(--text-secondary);margin-top:0.5rem;">Grupos &le;20</p>
+        <div class="timing">Desde Q3</div>
+      </div>
+      <div class="segment-card">
+        <h4>B2B2B Cobrand</h4>
+        <div class="ticket">$60-120k/programa</div>
+        <p style="font-size:0.9rem;color:var(--text-secondary);margin-top:0.5rem;">4x ticket &middot; Co-branded</p>
+        <div class="timing">Desde Q4</div>
+      </div>
+      <div class="segment-card">
+        <h4>White Label</h4>
+        <div class="ticket">$50-90k/programa</div>
+        <p style="font-size:0.9rem;color:var(--text-secondary);margin-top:0.5rem;">Marca aliada &middot; Delivery r&aacute;pido</p>
+        <div class="timing">Post Q4</div>
+      </div>
+    </div>
+
+    <div class="highlight" style="text-align:center;font-size:1.1rem;">
+      El directivo que entra por B2C abre la puerta a B2B.<br>
+      El gremio escala a Cobrand. La marca aliada activa White Label.
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- SLIDE 9: TEAM -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <section id="slide-9">
+    <h2 style="font-size:3rem;font-weight:900;margin-bottom:2rem;">Equipo</h2>
+
+    <div class="team-grid">
+      <div class="team-member">
+        <img class="team-avatar" src="https://github.com/ejemplo-deo-repo/img/blob/main/javier-montano.webp?raw=true" alt="Javier Monta&ntilde;o" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="team-avatar-placeholder" style="display:none;">JM</div>
+        <div class="team-info">
+          <h4>Javier Monta&ntilde;o</h4>
+          <p>Founder MetodologIA &middot; Creador del m&eacute;todo<br>
+          27 GPTs, 7 Gems, Pristino, 180+ prompts</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="team-avatar-placeholder">CJ</div>
+        <div class="team-info">
+          <h4>Cristian Jarr&iacute;n</h4>
+          <p>Co-Founder Ecuador &middot; Operador territorial<br>
+          Titular de franquicia</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:2rem;margin-top:2rem;align-items:center;justify-content:center;">
+      <div class="glass" style="padding:1.25rem 2rem;text-align:center;">
+        <p style="font-size:1rem;color:var(--text-secondary);">
+          <strong style="color:var(--text-primary);">Red de apoyo:</strong> Germ&aacute;n, Daniel &mdash; Acceso a aceleradora, soporte estrat&eacute;gico
+        </p>
+      </div>
+      <div class="pristino-badge" style="flex-shrink:0;">
+        <svg width="32" height="32" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="10" fill="#0A122A"/>
+          <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+          <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+        </svg>
+        <span style="font-size:0.9rem;">Pristino &mdash; Agente Open Source, parte del ecosistema</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- SLIDE 10: THE ASK + CONTACT -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <section id="slide-10" style="text-align:center;">
+    <h2 style="font-size:3rem;font-weight:900;margin-bottom:0.5rem;">El Ask</h2>
+    <p style="font-size:1.6rem;font-weight:700;color:var(--gold);margin-bottom:2rem;">
+      Autosuficiente desde el Mes 1
+    </p>
+
+    <div class="cta-grid" style="text-align:left;">
+      <div>
+        <p style="font-size:1.3rem;color:var(--text-primary);font-weight:600;margin-bottom:1rem;">
+          $813 burn vs $10,430 revenue M1
+        </p>
+        <p style="font-size:1.1rem;color:var(--text-secondary);margin-bottom:1.5rem;">
+          Para crecimiento acelerado:
+        </p>
+        <div class="glass" style="text-align:center;">
+          <p style="font-size:1.8rem;font-weight:800;color:var(--gold);font-family:'Poppins',sans-serif;">
+            $25,000 &ndash; $50,000 seed
+          </p>
+          <p style="font-size:1rem;color:var(--text-muted);margin-top:0.25rem;">
+            a <span style="color:var(--gold);font-weight:700;">[POR CONFIRMAR]</span>% equity
+          </p>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:1rem;color:var(--gold);font-weight:700;margin-bottom:0.75rem;">Milestones para pre-seed:</p>
+        <ul class="milestone-list">
+          <li>2 ciclos CAO completados</li>
+          <li>Revenue &gt;$5k/mes</li>
+          <li>20+ leads cualificados</li>
+          <li>Pre-seed ready</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:3rem;">
+      <p style="font-size:1.3rem;font-weight:700;color:var(--text-primary);">
+        contacto@metodologia.info &nbsp;&middot;&nbsp; metodologia.info
+      </p>
+      <p style="font-size:1.15rem;color:var(--text-muted);margin-top:1rem;font-style:italic;">
+        &ldquo;Co-creamos entornos de abundancia&rdquo;
+      </p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- JAVASCRIPT -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Slide counter
+    const sections = document.querySelectorAll('section');
+    const counter = document.getElementById('slideCounter');
+    const total = sections.length;
+
+    function updateCounter() {
+      let current = 1;
+      const scrollY = window.scrollY + window.innerHeight / 2;
+      sections.forEach((s, i) => {
+        if (scrollY > s.offsetTop) current = i + 1;
+      });
+      counter.textContent = current + ' / ' + total;
+    }
+
+    window.addEventListener('scroll', updateCounter);
+    updateCounter();
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      const currentScroll = window.scrollY;
+      const vh = window.innerHeight;
+      let currentSlide = 0;
+      sections.forEach((s, i) => {
+        if (currentScroll >= s.offsetTop - vh / 3) currentSlide = i;
+      });
+
+      if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
+        const next = Math.min(currentSlide + 1, total - 1);
+        sections[next].scrollIntoView({ behavior: 'smooth' });
+      }
+      if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const prev = Math.max(currentSlide - 1, 0);
+        sections[prev].scrollIntoView({ behavior: 'smooth' });
+      }
+      // F key for fullscreen
+      if (e.key === 'f' || e.key === 'F') {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen();
+        } else {
+          document.exitFullscreen();
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
