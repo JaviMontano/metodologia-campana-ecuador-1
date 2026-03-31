@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Onboarding Embajador">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)">
+  <title>Onboarding Embajador — Camilo de La Llosa | MetodologIA</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='10' fill='%230A122A'/><path d='M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z' fill='white'/><circle cx='18' cy='8' r='2' fill='%23FFD700'/></svg>" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            navy: { DEFAULT: '#020617', light: '#0F172A' },
+            gold: { DEFAULT: '#FFD700', dark: '#FFA000', light: '#B8860B' },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --bg-primary: #020617;
+      --bg-secondary: #0F172A;
+      --bg-card: rgba(15, 23, 42, 0.7);
+      --text-primary: #F0F4F8;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --border-color: rgba(255, 215, 0, 0.12);
+      --glass-bg: rgba(15, 23, 42, 0.6);
+      --glass-border: rgba(255, 215, 0, 0.1);
+      --gold: #FFD700;
+      --gold-dark: #FFA000;
+      --shadow-glow: 0 0 30px rgba(255, 215, 0, 0.06);
+    }
+
+    html.light {
+      --bg-primary: #F8FAFC;
+      --bg-secondary: #EEF2F7;
+      --bg-card: rgba(255, 255, 255, 0.7);
+      --text-primary: #020617;
+      --text-secondary: #2C4A6E;
+      --text-muted: #64748B;
+      --border-color: rgba(2, 6, 23, 0.08);
+      --glass-bg: rgba(255, 255, 255, 0.6);
+      --glass-border: rgba(2, 6, 23, 0.06);
+      --shadow-glow: 0 0 30px rgba(2, 6, 23, 0.04);
+      --gold: #B8860B;
+      --gold-dark: #8B6914;
+    }
+    html.light body { font-weight: 500; }
+    html.light h1, html.light h2, html.light h3, html.light h4 { font-weight: 800; }
+    html.light .gold-text {
+      background: linear-gradient(135deg, #B8860B, #8B6914);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y proximity;
+      -webkit-overflow-scrolling: touch;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+      touch-action: manipulation;
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+
+    h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+
+    .gold-text {
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 1rem;
+      box-shadow: var(--shadow-glow);
+    }
+
+    .gold-divider {
+      width: 48px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      border-radius: 2px;
+      margin: 0.75rem auto;
+    }
+
+    .glow-border {
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 24px rgba(255, 215, 0, 0.1);
+    }
+
+    section { scroll-snap-align: start; }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      padding: env(safe-area-inset-top) 1rem 0 1rem;
+      height: calc(56px + env(safe-area-inset-top));
+      display: flex;
+      align-items: center;
+    }
+
+    .mobile-nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 56px;
+    }
+
+    .nav-btn {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    #scroll-progress {
+      position: fixed;
+      top: calc(56px + env(safe-area-inset-top));
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      z-index: 101;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--gold), var(--gold-dark), transparent);
+    }
+
+    .timeline-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid var(--bg-primary);
+      position: absolute;
+      left: 10px;
+      top: 4px;
+      z-index: 1;
+    }
+
+    .timeline-dot.active {
+      width: 16px;
+      height: 16px;
+      left: 8px;
+      top: 2px;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+    }
+
+    .phase-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .phase-item:last-child { border-bottom: none; }
+
+    .phase-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255, 215, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 428px) {
+      .section-px { padding-left: 1.5rem; padding-right: 1.5rem; }
+    }
+    @media (min-width: 640px) {
+      .section-px { padding-left: 2rem; padding-right: 2rem; }
+    }
+    @media (min-width: 768px) {
+      .retos-grid { grid-template-columns: repeat(3, 1fr); }
+      .hitos-grid { grid-template-columns: repeat(2, 1fr); }
+      .bonus-grid { grid-template-columns: repeat(3, 1fr); }
+      .revenue-grid { grid-template-columns: repeat(4, 1fr); }
+      .split-grid { grid-template-columns: repeat(4, 1fr) !important; }
+    }
+    @media (min-width: 1024px) {
+      .mobile-nav { display: none; }
+      #scroll-progress { top: 0; }
+      body { padding-top: 0; }
+    }
+
+    @supports (-webkit-touch-callout: none) {
+      body { -webkit-overflow-scrolling: touch; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+
+  <!-- ================================================================
+       NAV
+       ================================================================ -->
+  <nav class="mobile-nav">
+    <div class="mobile-nav-inner">
+      <a href="#bienvenida" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;">
+        <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+          <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+          <rect width="36" height="36" rx="10" fill="url(#lg)"/>
+          <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+          <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+        </svg>
+        <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">Metodolog<span class="gold-text">IA</span></span>
+      </a>
+      <button class="nav-btn" onclick="toggleTheme()" aria-label="Cambiar tema">
+        <i data-lucide="sun-moon" class="w-5 h-5" style="color:var(--gold);"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ================================================================
+       S1: BIENVENIDA
+       ================================================================ -->
+  <section id="bienvenida" style="padding:calc(72px + env(safe-area-inset-top)) 0 2rem;background:var(--bg-primary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+
+      <div class="text-center mb-6 reveal">
+        <span class="inline-block px-3 py-1 rounded-full text-xs uppercase tracking-widest font-bold mb-4" style="background:rgba(255,215,0,0.1);color:var(--gold);border:1px solid rgba(255,215,0,0.2);">
+          Onboarding Embajador
+        </span>
+        <h1 class="font-heading font-bold" style="font-size:clamp(1.75rem, 7vw, 2.5rem);color:var(--text-primary);line-height:1.15;">
+          Camilo de La Llosa
+        </h1>
+        <p class="text-base mt-2" style="color:var(--text-secondary);">Orquestador End-to-End del ciclo completo de un servicio. Ciclo: ~318 dias.</p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="glass p-6 reveal" style="border-color:rgba(255,215,0,0.08);">
+        <div class="text-sm leading-relaxed space-y-3" style="color:var(--text-secondary);">
+          <p style="color:var(--text-primary);font-weight:600;">Camilo, pasaste de participante a parte del sistema. Ya viviste la transformacion; ahora tu rol es multiplicarla como orquestador de experiencias. Arrancamos el Domingo de Pascua 2026.</p>
+        </div>
+
+        <div class="mt-5 flex items-center gap-3">
+          <img src="https://github.com/ejemplo-deo-repo/img/blob/main/javier-montano.webp?raw=true" alt="Javier Montano" class="w-10 h-10 rounded-full object-cover" style="border:2px solid var(--gold);" loading="lazy">
+          <div>
+            <p class="text-sm font-bold" style="color:var(--text-primary);">Javier Montano</p>
+            <p class="text-xs" style="color:var(--text-muted);">Fundador MetodologIA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S2: QUOTE
+       ================================================================ -->
+  <section style="padding:2rem 0;background:var(--bg-secondary);">
+    <div class="section-px" style="padding:0 1.5rem;max-width:640px;margin:0 auto;text-align:center;">
+      <div class="reveal">
+        <p class="font-heading text-lg font-light italic leading-relaxed" style="color:var(--text-secondary);">
+          &ldquo;Crear abundancia para todos.&rdquo;
+        </p>
+        <p class="text-xs mt-3 uppercase tracking-widest font-bold" style="color:var(--gold);">&mdash; La filosofia del Embajador &mdash; MetodologIA</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S3: 3 RETOS TRIMESTRALES
+       ================================================================ -->
+  <section id="retos" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Tu Primer Ano</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">3 Retos Trimestrales</h2>
+        <div class="gold-divider"></div>
+        <p class="text-sm mt-2" style="color:var(--text-secondary);">Progresion controlada. Cada trimestre sube la autonomia.</p>
+      </div>
+
+      <div class="grid gap-4 retos-grid">
+        <!-- Q1: Observar -->
+        <div class="glass p-5 reveal">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Q1</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Trimestre 1</span>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-2" style="color:var(--text-primary);">Observar</h3>
+          <p class="text-sm leading-relaxed mb-3" style="color:var(--text-secondary);">Asistir como observador a 1 venta consultiva completa. Desde prospeccion hasta cierre. Documentar aprendizajes.</p>
+          <p class="text-xs font-semibold" style="color:var(--text-muted);">
+            <i data-lucide="eye" class="w-3 h-3 inline-block" style="vertical-align:-2px;"></i> Javier lidera, tu observas
+          </p>
+        </div>
+
+        <!-- Q2: Vender Acompanado -->
+        <div class="glass p-5 reveal glow-border">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:linear-gradient(135deg, #FFD700, #FFA000);color:#020617;">Q2</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Trimestre 2</span>
+            <span class="inline-block px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wider font-bold" style="background:rgba(255,215,0,0.15);color:var(--gold);border:1px solid rgba(255,215,0,0.3);">En Curso</span>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-2" style="color:var(--text-primary);">Vender Acompanado</h3>
+          <p class="text-sm leading-relaxed mb-3" style="color:var(--text-secondary);">Liderar la venta de 1 servicio con Javier como backup. Cerrar o documentar por que no cerro.</p>
+          <p class="text-xs font-semibold" style="color:var(--text-muted);">
+            <i data-lucide="users" class="w-3 h-3 inline-block" style="vertical-align:-2px;"></i> Tu lideras, Javier acompana
+          </p>
+        </div>
+
+        <!-- Q3: Cerrar Solo -->
+        <div class="glass p-5 reveal">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Q3</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Trimestre 3</span>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-2" style="color:var(--text-primary);">Cerrar Solo</h3>
+          <p class="text-sm leading-relaxed mb-3" style="color:var(--text-secondary);">Vender y cerrar 1 servicio independientemente. Javier disponible para consulta pero no presente.</p>
+          <p class="text-xs font-semibold" style="color:var(--text-muted);">
+            <i data-lucide="trophy" class="w-3 h-3 inline-block" style="vertical-align:-2px;"></i> Tu solo, Javier como consultor
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S4: MISION MAYO — EMPODERAMIENTO
+       ================================================================ -->
+  <section id="mision" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="reveal">
+        <div class="glass p-6 glow-border" style="position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg, var(--gold), var(--gold-dark));"></div>
+
+          <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Mision Mayo 2026</p>
+          <h2 class="font-heading font-bold mb-1" style="color:var(--text-primary);font-size:clamp(1.35rem, 5.5vw, 1.75rem);">Programa de Empoderamiento</h2>
+          <p class="text-sm mb-5" style="color:var(--text-secondary);">Tu primera mision grande: liderar con equipo el ciclo completo.</p>
+
+          <!-- Phase 1 -->
+          <div class="phase-item">
+            <div class="phase-icon">
+              <i data-lucide="calendar" class="w-5 h-5" style="color:var(--gold);"></i>
+            </div>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Convocatoria</p>
+              <p class="text-xs" style="color:var(--text-secondary);">Abril 2026 &mdash; Atraer 6-12 participantes</p>
+            </div>
+          </div>
+
+          <!-- Phase 2 -->
+          <div class="phase-item">
+            <div class="phase-icon">
+              <i data-lucide="settings" class="w-5 h-5" style="color:var(--gold);"></i>
+            </div>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Preparacion</p>
+              <p class="text-xs" style="color:var(--text-secondary);">Abril-Mayo &mdash; Diagnosticos 360, LMS, repositorios</p>
+            </div>
+          </div>
+
+          <!-- Phase 3 -->
+          <div class="phase-item">
+            <div class="phase-icon">
+              <i data-lucide="users" class="w-5 h-5" style="color:var(--gold);"></i>
+            </div>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Imparticion</p>
+              <p class="text-xs" style="color:var(--text-secondary);">Mayo-Agosto &mdash; 16 semanas, 1:1 + talleres grupales</p>
+            </div>
+          </div>
+
+          <!-- Phase 4 -->
+          <div class="phase-item">
+            <div class="phase-icon">
+              <i data-lucide="award" class="w-5 h-5" style="color:var(--gold);"></i>
+            </div>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Cierre</p>
+              <p class="text-xs" style="color:var(--text-secondary);">Agosto-Sep &mdash; Capstones, certificacion, NPS</p>
+            </div>
+          </div>
+
+          <!-- Team -->
+          <div class="mt-4 pt-4" style="border-top:1px solid var(--border-color);">
+            <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Equipo</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.08);color:var(--text-primary);border:1px solid var(--border-color);">
+                <i data-lucide="user" class="w-3 h-3" style="color:var(--gold);"></i> Camilo
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.08);color:var(--text-primary);border:1px solid var(--border-color);">
+                <i data-lucide="user" class="w-3 h-3" style="color:var(--gold);"></i> Ardila
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.08);color:var(--text-primary);border:1px solid var(--border-color);">
+                <i data-lucide="user" class="w-3 h-3" style="color:var(--gold);"></i> Katherine
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.08);color:var(--text-primary);border:1px solid var(--border-color);">
+                <i data-lucide="user" class="w-3 h-3" style="color:var(--gold);"></i> German
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S5: ROADMAP
+       ================================================================ -->
+  <section id="roadmap" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Horizonte 2026</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">Tu Roadmap</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="reveal" style="position:relative;padding-left:40px;">
+        <div class="timeline-line"></div>
+
+        <!-- MAR -->
+        <div style="position:relative;padding-bottom:1.5rem;">
+          <div class="timeline-dot active"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">MAR</p>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Onboarding como Embajador</p>
+          </div>
+        </div>
+
+        <!-- ABR -->
+        <div style="position:relative;padding-bottom:1.5rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">ABR</p>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Convocatoria Empoderamiento + Q1: observar 1 venta</p>
+          </div>
+        </div>
+
+        <!-- MAY -->
+        <div style="position:relative;padding-bottom:1.5rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">MAY</p>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Arranque Empoderamiento + continuar Q1</p>
+          </div>
+        </div>
+
+        <!-- JUN -->
+        <div style="position:relative;padding-bottom:1.5rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">JUN</p>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Q1 cierra + Q2 arranca: vender acompanado</p>
+          </div>
+        </div>
+
+        <!-- JUL-AGO -->
+        <div style="position:relative;padding-bottom:1.5rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">JUL&ndash;AGO</p>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Empoderamiento en ejecucion + Q2</p>
+          </div>
+        </div>
+
+        <!-- SEP -->
+        <div style="position:relative;padding-bottom:1.5rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">SEP</p>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Cierre Empoderamiento + Q3: cerrar 1 solo</p>
+          </div>
+        </div>
+
+        <!-- OCT-DIC -->
+        <div style="position:relative;padding-bottom:0.5rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">OCT&ndash;DIC</p>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Q3 + post-venta + evaluacion anual</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S5.5: MODELO COMERCIAL — RUTA DE ABUNDANCIA
+       ================================================================ -->
+  <section id="modelo-comercial" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Modelo Comercial</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">Comision 20% &mdash; 4 Hitos</h2>
+        <div class="gold-divider"></div>
+        <p class="text-sm mt-2" style="color:var(--text-secondary);">Compensacion vinculada al valor aportado. A destajo.</p>
+        <p class="text-sm mt-2" style="color:var(--text-secondary);">Nadie tiene salario. Solo comisionamos — o no. Arranque: Domingo de Pascua 2026.</p>
+      </div>
+
+      <div class="glass p-5 mb-4 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-3 text-center" style="color:var(--gold);">Reparto del Revenue (100%)</p>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.75rem;" class="split-grid">
+          <div class="text-center">
+            <div class="font-heading font-black text-2xl gold-text">50%</div>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">Trainer</p>
+            <p class="text-xs" style="color:var(--text-muted);">Quien ejecuta/imparte</p>
+          </div>
+          <div class="text-center" style="background:rgba(255,215,0,0.05);border-radius:0.75rem;padding:0.75rem;">
+            <div class="font-heading font-black text-2xl gold-text">20%</div>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">Comercial</p>
+            <p class="text-xs" style="color:var(--text-muted);">Tus 4 hitos ↓</p>
+          </div>
+          <div class="text-center">
+            <div class="font-heading font-black text-2xl gold-text">20%</div>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">Franquicia</p>
+            <p class="text-xs" style="color:var(--text-muted);">Colombia: Javier + partners</p>
+          </div>
+          <div class="text-center">
+            <div class="font-heading font-black text-2xl gold-text">10%</div>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">Royalty</p>
+            <p class="text-xs" style="color:var(--text-muted);">Casa matriz</p>
+          </div>
+        </div>
+        <p class="text-xs text-center mt-3" style="color:var(--gold);">Si vendes e impartes, accedes al 70%. El modelo premia a quien aporta.</p>
+      </div>
+
+      <!-- 4 Hitos Grid -->
+      <div class="grid gap-4 hitos-grid" style="grid-template-columns:1fr;">
+        <!-- H1: Registro -->
+        <div class="glass p-5 reveal">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">H1</span>
+            <span class="inline-block px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wider font-bold" style="background:rgba(255,215,0,0.15);color:var(--gold);border:1px solid rgba(255,215,0,0.3);">5%</span>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-2" style="color:var(--text-primary);">Registro</h3>
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary);">Referencia cualificada y registro unico en CRM.</p>
+        </div>
+
+        <!-- H2: Reunion Efectiva -->
+        <div class="glass p-5 reveal">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">H2</span>
+            <span class="inline-block px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wider font-bold" style="background:rgba(255,215,0,0.15);color:var(--gold);border:1px solid rgba(255,215,0,0.3);">5%</span>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-2" style="color:var(--text-primary);">Reunion Efectiva</h3>
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary);">Discovery validado con tomadores de decision.</p>
+        </div>
+
+        <!-- H3: Acompanamiento -->
+        <div class="glass p-5 reveal">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">H3</span>
+            <span class="inline-block px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wider font-bold" style="background:rgba(255,215,0,0.15);color:var(--gold);border:1px solid rgba(255,215,0,0.3);">5%</span>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-2" style="color:var(--text-primary);">Acompanamiento</h3>
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary);">Soporte activo en propuesta y validacion.</p>
+        </div>
+
+        <!-- H4: Cierre (gold glow) -->
+        <div class="glass p-5 reveal glow-border">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold" style="background:linear-gradient(135deg, #FFD700, #FFA000);color:#020617;">H4</span>
+            <span class="inline-block px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wider font-bold" style="background:rgba(255,215,0,0.15);color:var(--gold);border:1px solid rgba(255,215,0,0.3);">5%</span>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-2" style="color:var(--text-primary);">Cierre</h3>
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary);">Firma de contrato y recaudo efectivo.</p>
+        </div>
+      </div>
+
+      <!-- Bonus Features -->
+      <div class="grid gap-4 bonus-grid mt-6" style="grid-template-columns:1fr;">
+        <div class="glass p-4 reveal" style="text-align:center;">
+          <i data-lucide="gift" class="w-5 h-5 mx-auto mb-2" style="color:var(--gold);"></i>
+          <h4 class="font-heading text-sm font-bold mb-1" style="color:var(--text-primary);">Bonus de Abundancia</h4>
+          <p class="text-xs leading-relaxed" style="color:var(--text-secondary);">Por cada cierre: 1 cupo gratuito en un curso para tu equipo o familia.</p>
+        </div>
+        <div class="glass p-4 reveal" style="text-align:center;">
+          <i data-lucide="trending-up" class="w-5 h-5 mx-auto mb-2" style="color:var(--gold);"></i>
+          <h4 class="font-heading text-sm font-bold mb-1" style="color:var(--text-primary);">Upselling</h4>
+          <p class="text-xs leading-relaxed" style="color:var(--text-secondary);">Margen por encima del Precio de Referencia es 100% tuyo.</p>
+        </div>
+        <div class="glass p-4 reveal" style="text-align:center;">
+          <i data-lucide="percent" class="w-5 h-5 mx-auto mb-2" style="color:var(--gold);"></i>
+          <h4 class="font-heading text-sm font-bold mb-1" style="color:var(--text-primary);">Descuento Aliados</h4>
+          <p class="text-xs leading-relaxed" style="color:var(--text-secondary);">Accedes a toda la tecnologia al 53.6% del PVP. Extensible a familia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S5.6: OPORTUNIDAD — FRANQUICIA COLOMBIA
+       ================================================================ -->
+  <section id="franquicia" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="reveal">
+        <div class="glass p-6 glow-border" style="position:relative;">
+          <!-- Optional Badge -->
+          <span class="inline-block px-3 py-1 rounded-full text-[10px] uppercase tracking-wider font-bold" style="position:absolute;top:1rem;right:1rem;background:rgba(34,197,94,0.12);color:#4ade80;border:1px solid rgba(34,197,94,0.3);">Opcional</span>
+
+          <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Oportunidad</p>
+          <h2 class="font-heading font-bold mb-1" style="color:var(--text-primary);font-size:clamp(1.3rem, 5vw, 1.75rem);">Franquicia Colombia &mdash; Entry Partner</h2>
+          <div class="gold-divider" style="margin:0.75rem 0;"></div>
+
+          <p class="text-sm leading-relaxed mb-5" style="color:var(--text-secondary);">MetodologIA migra a modelo de franquicia por pais. Cada franquiciatario es co-responsable del exito comercial, con revision y apoyo sinergico de la casa matriz. Ecuador ya opera con Cristian Jarrin como referencia.</p>
+
+          <!-- Table-like layout -->
+          <div style="display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0.75rem;border-radius:0.5rem;background:rgba(255,215,0,0.04);border:1px solid var(--glass-border);">
+              <span class="text-xs font-semibold" style="color:var(--text-muted);">Dueno Colombia</span>
+              <span class="text-sm font-bold" style="color:var(--text-primary);">Javier Montano (51%)</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0.75rem;border-radius:0.5rem;background:rgba(255,215,0,0.04);border:1px solid var(--glass-border);">
+              <span class="text-xs font-semibold" style="color:var(--text-muted);">Entry partners</span>
+              <span class="text-sm font-bold" style="color:var(--text-primary);">Buscando</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0.75rem;border-radius:0.5rem;background:rgba(255,215,0,0.04);border:1px solid var(--glass-border);">
+              <span class="text-xs font-semibold" style="color:var(--text-muted);">Tu invitacion</span>
+              <span class="text-sm font-bold" style="color:var(--text-primary);">Totalmente opcional</span>
+            </div>
+          </div>
+
+          <!-- Revenue Split -->
+          <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--text-muted);">Reparto por servicio</p>
+          <div class="grid gap-3 revenue-grid" style="grid-template-columns:repeat(2,1fr);margin-bottom:1.5rem;">
+            <div style="text-align:center;">
+              <p class="font-heading font-bold gold-text" style="font-size:1.5rem;">50%</p>
+              <p class="text-xs font-semibold" style="color:var(--text-muted);">Trainer</p>
+            </div>
+            <div style="text-align:center;">
+              <p class="font-heading font-bold gold-text" style="font-size:1.5rem;">20%</p>
+              <p class="text-xs font-semibold" style="color:var(--text-muted);">Comercial</p>
+            </div>
+            <div style="text-align:center;">
+              <p class="font-heading font-bold gold-text" style="font-size:1.5rem;">20%</p>
+              <p class="text-xs font-semibold" style="color:var(--text-muted);">Franquicia</p>
+            </div>
+            <div style="text-align:center;">
+              <p class="font-heading font-bold gold-text" style="font-size:1.5rem;">10%</p>
+              <p class="text-xs font-semibold" style="color:var(--text-muted);">Royalty</p>
+            </div>
+          </div>
+
+          <p class="text-sm leading-relaxed" style="color:var(--text-secondary);">La propuesta: valorar juntos MetodologIA Colombia y explorar financiacion e inversion manteniendo la logica del reparto. Sin presion. El primer paso es una conversacion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S7: PROCESO DE ONBOARDING (20 HORAS)
+       ================================================================ -->
+  <section id="onboarding-proceso" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="text-center mb-6 reveal">
+        <span class="inline-block px-3 py-1 rounded-full text-xs uppercase tracking-widest font-bold mb-4" style="background:rgba(255,215,0,0.1);color:var(--gold);border:1px solid rgba(255,215,0,0.2);">
+          Tu Formacion
+        </span>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">Onboarding: 20 Horas</h2>
+        <div class="gold-divider"></div>
+        <p class="text-sm mt-2" style="color:var(--text-secondary);">10 sesiones &times; 2h. Kick-off + 8 talleres + Cierre.</p>
+      </div>
+
+      <!-- Timeline: 10 sessions -->
+      <div class="reveal" style="position:relative;padding-left:40px;">
+        <div class="timeline-line"></div>
+
+        <!-- Session 0: Kick-off -->
+        <div style="position:relative;padding-bottom:1.25rem;">
+          <div class="timeline-dot active"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <div class="flex items-center gap-2 mb-1">
+              <i data-lucide="rocket" class="w-4 h-4" style="color:var(--gold);"></i>
+              <p class="text-xs uppercase tracking-wider font-bold" style="color:var(--gold);">Sesion 0</p>
+            </div>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Kick-off</p>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">Modelo comercial, reparto, retos Q, playbook, CRM</p>
+          </div>
+        </div>
+
+        <!-- Session 1 -->
+        <div style="position:relative;padding-bottom:1.25rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <div class="flex items-center gap-2 mb-1">
+              <i data-lucide="book-open" class="w-4 h-4" style="color:var(--gold);"></i>
+              <p class="text-xs uppercase tracking-wider font-bold" style="color:var(--gold);">Taller 1</p>
+            </div>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">El Catalogo</p>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">17 servicios canonicos, fichas rapidas, rutas de venta</p>
+          </div>
+        </div>
+
+        <!-- Session 2 -->
+        <div style="position:relative;padding-bottom:1.25rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <div class="flex items-center gap-2 mb-1">
+              <i data-lucide="zap" class="w-4 h-4" style="color:var(--gold);"></i>
+              <p class="text-xs uppercase tracking-wider font-bold" style="color:var(--gold);">Taller 2</p>
+            </div>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Workshop: De Ocupado a Productivo</p>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">Servicio de entrada, guion, materiales, flow de 3h, CTA</p>
+          </div>
+        </div>
+
+        <!-- Session 3 -->
+        <div style="position:relative;padding-bottom:1.25rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <div class="flex items-center gap-2 mb-1">
+              <i data-lucide="layers" class="w-4 h-4" style="color:var(--gold);"></i>
+              <p class="text-xs uppercase tracking-wider font-bold" style="color:var(--gold);">Taller 3</p>
+            </div>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Bootcamp: Trabajar Amplificado</p>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">Estructura 20h, modulos, dinamicas, proyecto final, certificacion</p>
+          </div>
+        </div>
+
+        <!-- Session 4 -->
+        <div style="position:relative;padding-bottom:1.25rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <div class="flex items-center gap-2 mb-1">
+              <i data-lucide="compass" class="w-4 h-4" style="color:var(--gold);"></i>
+              <p class="text-xs uppercase tracking-wider font-bold" style="color:var(--gold);">Taller 4</p>
+            </div>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">EstrategIA: Consultive Workshop</p>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">9 sesiones, artefactos, gate de decision, pricing B2C y B2B</p>
+          </div>
+        </div>
+
+        <!-- Session 5 -->
+        <div style="position:relative;padding-bottom:1.25rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <div class="flex items-center gap-2 mb-1">
+              <i data-lucide="award" class="w-4 h-4" style="color:var(--gold);"></i>
+              <p class="text-xs uppercase tracking-wider font-bold" style="color:var(--gold);">Taller 5</p>
+            </div>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Programas: Empoderamiento + Digital Champions</p>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">16 semanas, mentorias 1:1, talleres grupales, capstone</p>
+          </div>
+        </div>
+
+        <!-- Session 6 -->
+        <div style="position:relative;padding-bottom:1.25rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <div class="flex items-center gap-2 mb-1">
+              <i data-lucide="trending-up" class="w-4 h-4" style="color:var(--gold);"></i>
+              <p class="text-xs uppercase tracking-wider font-bold" style="color:var(--gold);">Taller 6</p>
+            </div>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Venta Consultiva</p>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">Ciclo completo: prospeccion, calificacion, propuesta, negociacion, cierre</p>
+          </div>
+        </div>
+
+        <!-- Session 7 -->
+        <div style="position:relative;padding-bottom:1.25rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <div class="flex items-center gap-2 mb-1">
+              <i data-lucide="settings" class="w-4 h-4" style="color:var(--gold);"></i>
+              <p class="text-xs uppercase tracking-wider font-bold" style="color:var(--gold);">Taller 7</p>
+            </div>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Operacion End-to-End</p>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">Playbook embajador, templates, dashboards, escalacion</p>
+          </div>
+        </div>
+
+        <!-- Session 8 -->
+        <div style="position:relative;padding-bottom:1.25rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <div class="flex items-center gap-2 mb-1">
+              <i data-lucide="globe" class="w-4 h-4" style="color:var(--gold);"></i>
+              <p class="text-xs uppercase tracking-wider font-bold" style="color:var(--gold);">Taller 8</p>
+            </div>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Marca Blanca + Franquicia</p>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">Upselling, descuento aliados, franquicia por pais, caso Ecuador</p>
+          </div>
+        </div>
+
+        <!-- Session 9: Cierre -->
+        <div style="position:relative;padding-bottom:0.5rem;">
+          <div class="timeline-dot"></div>
+          <div class="glass p-4" style="margin-left:8px;">
+            <div class="flex items-center gap-2 mb-1">
+              <i data-lucide="flag" class="w-4 h-4" style="color:var(--gold);"></i>
+              <p class="text-xs uppercase tracking-wider font-bold" style="color:var(--gold);">Sesion 9</p>
+            </div>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Cierre</p>
+            <p class="text-xs mt-1" style="color:var(--text-secondary);">Evaluacion, plan Q1, primer prospecto identificado</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graduation Criteria -->
+      <div class="glass p-5 mt-6 reveal glow-border">
+        <div class="flex items-center gap-2 mb-3">
+          <i data-lucide="graduation-cap" class="w-5 h-5" style="color:var(--gold);"></i>
+          <p class="text-sm font-heading font-bold" style="color:var(--text-primary);">Criterio de Graduacion</p>
+        </div>
+        <p class="text-sm leading-relaxed" style="color:var(--text-secondary);">
+          <strong style="color:var(--text-primary);">Habilitado cuando:</strong>
+          (1) 10 sesiones completadas (&ge;90%),
+          (2) Done When aprobados,
+          (3) CRM configurado,
+          (4) Plan Q1 documentado.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S8: CATALOGO COMPLETO (17 SERVICIOS)
+       ================================================================ -->
+  <section id="catalogo-completo" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="text-center mb-6 reveal">
+        <span class="inline-block px-3 py-1 rounded-full text-xs uppercase tracking-widest font-bold mb-4" style="background:rgba(255,215,0,0.1);color:var(--gold);border:1px solid rgba(255,215,0,0.2);">
+          Tu Arsenal
+        </span>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">17 Servicios para Ofertar</h2>
+        <div class="gold-divider"></div>
+        <p class="text-sm mt-2" style="color:var(--text-secondary);">Conocer que vender, a quien, a que precio.</p>
+      </div>
+
+      <!-- Tier 1: Core (5 servicios) -->
+      <div class="glass p-5 mb-4 reveal">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold" style="background:linear-gradient(135deg, #FFD700, #FFA000);color:#020617;">T1</span>
+          <p class="text-xs uppercase tracking-widest font-bold" style="color:var(--gold);">Core &mdash; 5 servicios</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0.75rem;border-radius:0.5rem;background:rgba(255,215,0,0.04);border:1px solid var(--glass-border);">
+            <div>
+              <p class="text-sm font-semibold" style="color:var(--text-primary);">De Ocupado a Productivo</p>
+              <p class="text-[10px]" style="color:var(--text-muted);">Workshop &middot; 3h</p>
+            </div>
+            <span class="text-xs font-bold gold-text">COP 200K</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0.75rem;border-radius:0.5rem;background:rgba(255,215,0,0.04);border:1px solid var(--glass-border);">
+            <div>
+              <p class="text-sm font-semibold" style="color:var(--text-primary);">Trabajar Amplificado</p>
+              <p class="text-[10px]" style="color:var(--text-muted);">Bootcamp &middot; 20h</p>
+            </div>
+            <span class="text-xs font-bold gold-text">COP 800K</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0.75rem;border-radius:0.5rem;background:rgba(255,215,0,0.04);border:1px solid var(--glass-border);">
+            <div>
+              <p class="text-sm font-semibold" style="color:var(--text-primary);">EstrategIA Personal</p>
+              <p class="text-[10px]" style="color:var(--text-muted);">Consultive Workshop &middot; 18h</p>
+            </div>
+            <span class="text-xs font-bold gold-text">COP 3.4M</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0.75rem;border-radius:0.5rem;background:rgba(255,215,0,0.04);border:1px solid var(--glass-border);">
+            <div>
+              <p class="text-sm font-semibold" style="color:var(--text-primary);">Digital Champions</p>
+              <p class="text-[10px]" style="color:var(--text-muted);">Programa &middot; 16 sem &middot; B2B</p>
+            </div>
+            <span class="text-xs font-bold gold-text">COP 35M</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0.75rem;border-radius:0.5rem;background:rgba(255,215,0,0.04);border:1px solid var(--glass-border);">
+            <div>
+              <p class="text-sm font-semibold" style="color:var(--text-primary);">Empoderamiento</p>
+              <p class="text-[10px]" style="color:var(--text-muted);">Programa &middot; 16 sem</p>
+            </div>
+            <span class="text-xs font-bold gold-text">COP 18M</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tier 2: Verticales (4 bootcamps) -->
+      <div class="glass p-5 mb-4 reveal">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">T2</span>
+          <p class="text-xs uppercase tracking-widest font-bold" style="color:var(--gold);">Verticales &mdash; 4 bootcamps</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+          <span class="inline-block px-3 py-1.5 rounded-lg text-xs font-semibold" style="background:rgba(255,215,0,0.04);color:var(--text-primary);border:1px solid var(--glass-border);">
+            <i data-lucide="briefcase" class="w-3 h-3 inline-block" style="vertical-align:-2px;color:var(--gold);"></i> Gerencia Proyectos
+          </span>
+          <span class="inline-block px-3 py-1.5 rounded-lg text-xs font-semibold" style="background:rgba(255,215,0,0.04);color:var(--text-primary);border:1px solid var(--glass-border);">
+            <i data-lucide="chrome" class="w-3 h-3 inline-block" style="vertical-align:-2px;color:var(--gold);"></i> Ofimatica Google
+          </span>
+          <span class="inline-block px-3 py-1.5 rounded-lg text-xs font-semibold" style="background:rgba(255,215,0,0.04);color:var(--text-primary);border:1px solid var(--glass-border);">
+            <i data-lucide="monitor" class="w-3 h-3 inline-block" style="vertical-align:-2px;color:var(--gold);"></i> Ofimatica Microsoft
+          </span>
+          <span class="inline-block px-3 py-1.5 rounded-lg text-xs font-semibold" style="background:rgba(255,215,0,0.04);color:var(--text-primary);border:1px solid var(--glass-border);">
+            <i data-lucide="target" class="w-3 h-3 inline-block" style="vertical-align:-2px;color:var(--gold);"></i> Ventas Amplificadas
+          </span>
+        </div>
+        <p class="text-xs mt-3 text-center" style="color:var(--text-muted);">Todos: COP 800K B2C / COP 12M B2B</p>
+      </div>
+
+      <!-- Tier 3: IAC White-Label (8, solo B2B) -->
+      <div class="glass p-5 mb-4 reveal">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">T3</span>
+          <p class="text-xs uppercase tracking-widest font-bold" style="color:var(--gold);">IAC White-Label &mdash; 8 servicios (solo B2B)</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+          <span class="inline-block px-2 py-1 rounded text-[10px] font-semibold" style="background:rgba(255,215,0,0.04);color:var(--text-secondary);border:1px solid var(--glass-border);">IA Comercial</span>
+          <span class="inline-block px-2 py-1 rounded text-[10px] font-semibold" style="background:rgba(255,215,0,0.04);color:var(--text-secondary);border:1px solid var(--glass-border);">Intro IA Generativa</span>
+          <span class="inline-block px-2 py-1 rounded text-[10px] font-semibold" style="background:rgba(255,215,0,0.04);color:var(--text-secondary);border:1px solid var(--glass-border);">Competencias Digitales</span>
+          <span class="inline-block px-2 py-1 rounded text-[10px] font-semibold" style="background:rgba(255,215,0,0.04);color:var(--text-secondary);border:1px solid var(--glass-border);">Liderazgo Digital</span>
+          <span class="inline-block px-2 py-1 rounded text-[10px] font-semibold" style="background:rgba(255,215,0,0.04);color:var(--text-secondary);border:1px solid var(--glass-border);">Transformacion Digital</span>
+          <span class="inline-block px-2 py-1 rounded text-[10px] font-semibold" style="background:rgba(255,215,0,0.04);color:var(--text-secondary);border:1px solid var(--glass-border);">Amplificacion IA</span>
+          <span class="inline-block px-2 py-1 rounded text-[10px] font-semibold" style="background:rgba(255,215,0,0.04);color:var(--text-secondary);border:1px solid var(--glass-border);">Ofimatica IA Google</span>
+          <span class="inline-block px-2 py-1 rounded text-[10px] font-semibold" style="background:rgba(255,215,0,0.04);color:var(--text-secondary);border:1px solid var(--glass-border);">Ofimatica IA Microsoft</span>
+        </div>
+        <p class="text-xs mt-3 text-center" style="color:var(--text-muted);">Rango: COP 12M &ndash; 33M</p>
+      </div>
+
+      <!-- Ruta de Venta -->
+      <div class="glass p-5 reveal glow-border">
+        <div class="flex items-center gap-2 mb-3">
+          <i data-lucide="route" class="w-5 h-5" style="color:var(--gold);"></i>
+          <p class="text-sm font-heading font-bold" style="color:var(--text-primary);">Ruta de Venta</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span class="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center" style="background:rgba(255,215,0,0.1);"><i data-lucide="help-circle" class="w-3.5 h-3.5" style="color:var(--gold);"></i></span>
+            <div>
+              <p class="text-sm font-semibold" style="color:var(--text-primary);">&iquest;Quiere probar?</p>
+              <p class="text-xs" style="color:var(--text-secondary);">Workshop &rarr; COP 200K</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span class="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center" style="background:rgba(255,215,0,0.1);"><i data-lucide="arrow-up-right" class="w-3.5 h-3.5" style="color:var(--gold);"></i></span>
+            <div>
+              <p class="text-sm font-semibold" style="color:var(--text-primary);">&iquest;Quiere profundizar?</p>
+              <p class="text-xs" style="color:var(--text-secondary);">Bootcamp &rarr; COP 800K</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span class="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center" style="background:linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,160,0,0.15));"><i data-lucide="target" class="w-3.5 h-3.5" style="color:var(--gold);"></i></span>
+            <div>
+              <p class="text-sm font-semibold" style="color:var(--text-primary);">&iquest;Quiere estrategia?</p>
+              <p class="text-xs" style="color:var(--text-secondary);">EstrategIA &rarr; COP 3.4M</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S6: SOPORTE
+       ================================================================ -->
+  <section id="soporte" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Tu Red</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 6vw, 2rem);">Soporte</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="glass p-6 reveal">
+        <div class="space-y-4">
+          <!-- Javier -->
+          <div class="flex items-start gap-3">
+            <div class="phase-icon" style="width:36px;height:36px;border-radius:8px;">
+              <i data-lucide="phone" class="w-4 h-4" style="color:var(--gold);"></i>
+            </div>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Javier (mentor)</p>
+              <p class="text-xs" style="color:var(--text-secondary);">Estrategia, ventas, decisiones</p>
+            </div>
+          </div>
+
+          <div style="height:1px;background:var(--border-color);"></div>
+
+          <!-- Katherine -->
+          <div class="flex items-start gap-3">
+            <div class="phase-icon" style="width:36px;height:36px;border-radius:8px;">
+              <i data-lucide="mail" class="w-4 h-4" style="color:var(--gold);"></i>
+            </div>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Katherine (ops)</p>
+              <p class="text-xs" style="color:var(--text-secondary);">Coordinacion, produccion, calidad</p>
+            </div>
+          </div>
+
+          <div style="height:1px;background:var(--border-color);"></div>
+
+          <!-- Playbook -->
+          <div class="flex items-start gap-3">
+            <div class="phase-icon" style="width:36px;height:36px;border-radius:8px;">
+              <i data-lucide="book-open" class="w-4 h-4" style="color:var(--gold);"></i>
+            </div>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Playbook Embajador</p>
+              <p class="text-xs" style="color:var(--text-secondary);">Tu referencia operativa</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer style="padding:2rem 0 calc(2rem + env(safe-area-inset-bottom));background:var(--bg-primary);border-top:1px solid var(--border-color);">
+    <div class="section-px" style="padding:0 1rem;max-width:640px;margin:0 auto;text-align:center;">
+      <div class="flex items-center justify-center gap-2 mb-3">
+        <svg width="24" height="24" viewBox="0 0 36 36" fill="none">
+          <defs><linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+          <rect width="36" height="36" rx="10" fill="url(#lg2)"/>
+          <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+          <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+        </svg>
+        <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">Metodolog<span class="gold-text">IA</span></span>
+      </div>
+      <p class="text-xs italic mb-3" style="color:var(--text-secondary);">Crear abundancia para todos.</p>
+      <p class="text-[10px] uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Documento interno de onboarding. No compartir con clientes.</p>
+    </div>
+  </footer>
+
+  <!-- ================================================================
+       SCRIPTS
+       ================================================================ -->
+  <script>
+  /* ==================================================================
+     THEME TOGGLE
+     ================================================================== */
+  function toggleTheme() {
+    const html = document.documentElement;
+    if (html.classList.contains('dark')) {
+      html.classList.remove('dark');
+      html.classList.add('light');
+    } else {
+      html.classList.remove('light');
+      html.classList.add('dark');
+    }
+  }
+
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.add('light');
+  }
+
+  /* ==================================================================
+     SCROLL PROGRESS
+     ================================================================== */
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = h > 0 ? (window.scrollY / h) * 100 : 0;
+    document.getElementById('scroll-progress').style.width = pct + '%';
+  }, { passive: true });
+
+  /* ==================================================================
+     SCROLL REVEAL
+     ================================================================== */
+  function observeReveals() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+  }
+
+  /* ==================================================================
+     INIT
+     ================================================================== */
+  document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
+    observeReveals();
+  });
+  </script>
+
+</body>
+</html>

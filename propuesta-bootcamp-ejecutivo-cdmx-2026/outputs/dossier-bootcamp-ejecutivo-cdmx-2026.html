@@ -1,0 +1,3028 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAO Bootcamp — Chief Agentic Officer | MetodologIA</title>
+  <meta name="description" content="Bootcamp Ejecutivo Modular para directivos. Edicion Creyentes, solo 13 plazas en CDMX 2026." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            navy: { DEFAULT: '#0B2545', light: '#163A6A', dark: '#071A33' },
+            gold: { DEFAULT: '#FFD700', dark: '#FFA000', light: '#FFE44D' },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES — DARK (default)
+       ============================================================ */
+    :root {
+      --bg-primary: #0B2545;
+      --bg-secondary: #071A33;
+      --bg-card: rgba(11, 37, 69, 0.6);
+      --text-primary: #F0F4F8;
+      --text-secondary: #A0B4CC;
+      --text-muted: #6B8AB0;
+      --border-color: rgba(255, 215, 0, 0.15);
+      --glass-bg: rgba(11, 37, 69, 0.55);
+      --glass-border: rgba(255, 215, 0, 0.12);
+      --gold: #FFD700;
+      --gold-dark: #FFA000;
+      --navy: #0B2545;
+      --shadow-glow: 0 0 40px rgba(255, 215, 0, 0.08);
+    }
+
+    /* ============================================================
+       CSS CUSTOM PROPERTIES — LIGHT
+       ============================================================ */
+    html.light {
+      --bg-primary: #F8FAFC;
+      --bg-secondary: #EEF2F7;
+      --bg-card: rgba(255, 255, 255, 0.7);
+      --text-primary: #0B2545;
+      --text-secondary: #3A5A80;
+      --text-muted: #6B8AB0;
+      --border-color: rgba(11, 37, 69, 0.1);
+      --glass-bg: rgba(255, 255, 255, 0.6);
+      --glass-border: rgba(11, 37, 69, 0.08);
+      --shadow-glow: 0 0 40px rgba(11, 37, 69, 0.05);
+    }
+
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ============================================================
+       SCROLL PROGRESS BAR
+       ============================================================ */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      z-index: 9999;
+      transition: width 0.1s linear;
+      width: 0%;
+    }
+
+    /* ============================================================
+       GOLD GRADIENT TEXT UTILITY
+       ============================================================ */
+    .gold-text {
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ============================================================
+       GLASSMORPHISM CARD
+       ============================================================ */
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 1rem;
+      box-shadow: var(--shadow-glow);
+      transition: all 0.4s ease;
+    }
+
+    .glass:hover {
+      border-color: rgba(255, 215, 0, 0.25);
+      box-shadow: 0 0 60px rgba(255, 215, 0, 0.12);
+    }
+
+    /* ============================================================
+       GLASS NAV
+       ============================================================ */
+    .glass-nav {
+      background: var(--glass-bg);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    /* ============================================================
+       TOGGLE PILL
+       ============================================================ */
+    .toggle-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem;
+      border-radius: 9999px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+
+    .toggle-pill span {
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .toggle-pill span.active {
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      color: #0B2545;
+      font-weight: 600;
+    }
+
+    /* ============================================================
+       SECTION PADDING
+       ============================================================ */
+    .section-pad {
+      padding: 7rem 0;
+    }
+
+    /* ============================================================
+       SCROLL REVEAL ANIMATION
+       ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+       VIEW TOGGLING
+       ============================================================ */
+    body:not(.view-full) .view-full-section {
+      display: none !important;
+    }
+
+    /* ============================================================
+       GLOW BORDER
+       ============================================================ */
+    .glow-border {
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.15),
+                  inset 0 0 30px rgba(255, 215, 0, 0.03);
+    }
+
+    /* ============================================================
+       ANIMATIONS
+       ============================================================ */
+    @keyframes bounce-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+    .bounce-slow {
+      animation: bounce-slow 2s infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.1); }
+      50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.25); }
+    }
+    .pulse-glow {
+      animation: pulse-glow 3s infinite;
+    }
+
+    @keyframes float-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================================================
+       PRICE STRIKETHROUGH
+       ============================================================ */
+    .price-strike {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+
+    /* ============================================================
+       RANGE SLIDER
+       ============================================================ */
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--border-color);
+      outline: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      cursor: pointer;
+      border: 2px solid #0B2545;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      cursor: pointer;
+      border: 2px solid #0B2545;
+    }
+
+    /* ============================================================
+       CONFETTI PIECES
+       ============================================================ */
+    .confetti-piece {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      z-index: 10000;
+      pointer-events: none;
+    }
+
+    /* ============================================================
+       MODAL SYSTEM
+       ============================================================ */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9990;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-content {
+      background: var(--bg-primary);
+      border: 1px solid var(--glass-border);
+      border-radius: 1.5rem;
+      max-width: 600px;
+      width: 90%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+      transform: translateY(30px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+       CHIP SELECTOR
+       ============================================================ */
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4rem 0.85rem;
+      border-radius: 9999px;
+      border: 1px solid var(--border-color);
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: var(--text-secondary);
+      user-select: none;
+    }
+
+    .chip.selected {
+      background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,160,0,0.1));
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .chip.locked {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    /* ============================================================
+       SMOOTH SCROLL
+       ============================================================ */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ============================================================
+       KPI CARD
+       ============================================================ */
+    .kpi-card {
+      text-align: center;
+      padding: 1.25rem 1rem;
+    }
+
+    .kpi-card .kpi-value {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .kpi-card .kpi-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+
+    /* ============================================================
+       METHODOLOGY CHIPS
+       ============================================================ */
+    .method-chip {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      border: 1px solid var(--border-color);
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      margin: 0.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .method-chip:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* ============================================================
+       PHASE TAG
+       ============================================================ */
+    .phase-tag {
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ============================================================
+       CUSTOM SCROLLBAR
+       ============================================================ */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--gold-dark);
+    }
+
+    /* ============================================================
+       DATA TABLE
+       ============================================================ */
+    .data-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+
+    .data-table th {
+      background: rgba(255, 215, 0, 0.08);
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--gold);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .data-table td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* ============================================================
+       LEVEL CARD
+       ============================================================ */
+    .level-card.highlighted {
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.12);
+    }
+
+    /* ============================================================
+       PUNCHLINE
+       ============================================================ */
+    .punchline {
+      text-align: center;
+      padding-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .punchline a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .punchline a:hover {
+      opacity: 0.8;
+    }
+
+    /* ============================================================
+       RESPONSIVE ADJUSTMENTS
+       ============================================================ */
+    @media (max-width: 768px) {
+      .section-pad { padding: 4rem 0; }
+      .kpi-card .kpi-value { font-size: 1.5rem; }
+    }
+
+    /* ============================================================
+       AMBIENT BACKGROUND CIRCLES
+       ============================================================ */
+    .ambient-circle {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    /* ============================================================
+       INPUT FIELDS
+       ============================================================ */
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 0.75rem;
+      font-size: 0.875rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-input:focus {
+      border-color: var(--gold);
+    }
+
+    .form-input::placeholder {
+      color: var(--text-muted);
+    }
+
+    /* ============================================================
+       GOLD CTA BUTTON
+       ============================================================ */
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      color: #0B2545;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-gold:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+    }
+
+    /* ============================================================
+       GHOST BUTTON
+       ============================================================ */
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-ghost:hover {
+      transform: scale(1.05);
+      background: rgba(255, 215, 0, 0.08);
+    }
+
+    /* ============================================================
+       DECORATIVE DIVIDER
+       ============================================================ */
+    .gold-divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      border-radius: 2px;
+      margin: 1rem auto;
+    }
+  </style>
+</head>
+<body class="view-full">
+
+  <!-- ====================================================================
+       SCROLL PROGRESS BAR
+       ==================================================================== -->
+  <div id="scroll-progress"></div>
+
+  <!-- ====================================================================
+       SECTION 1: NAV
+       ==================================================================== -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 py-3" id="main-nav">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-2 group">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0A122A"/>
+              <stop offset="100%" stop-color="#1E293B"/>
+            </linearGradient>
+          </defs>
+          <rect width="36" height="36" rx="10" fill="url(#logoGrad)"/>
+          <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+          <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+        </svg>
+        <span class="font-heading font-bold text-lg hidden sm:block" style="color:var(--text-primary)">
+          Metodolog<span class="gold-text">IA</span>
+        </span>
+      </a>
+
+      <!-- Nav links (desktop) -->
+      <div class="hidden lg:flex items-center gap-6 text-sm font-medium" style="color:var(--text-secondary)">
+        <a href="#journey" class="hover:text-yellow-400 transition" data-i18n="nav.journey">Journey</a>
+        <a href="#programa" class="hover:text-yellow-400 transition" data-i18n="nav.programa">Programa</a>
+        <a href="#modalidades" class="hover:text-yellow-400 transition" data-i18n="nav.modalidades">Modalidades</a>
+        <a href="#roi" class="hover:text-yellow-400 transition" data-i18n="nav.roi">ROI</a>
+        <a href="#configurador" class="hover:text-yellow-400 transition" data-i18n="nav.invertir">Invertir</a>
+      </div>
+
+      <!-- Toggles + CTA -->
+      <div class="flex items-center gap-3">
+        <!-- Language Toggle -->
+        <div class="toggle-pill" id="lang-toggle" onclick="toggleLang()">
+          <span id="lang-es" class="active">ES</span>
+          <span id="lang-en">EN</span>
+        </div>
+        <!-- Theme Toggle -->
+        <div class="toggle-pill" id="theme-toggle" onclick="toggleTheme()">
+          <span id="theme-dark" class="active"><i data-lucide="moon" class="w-3 h-3 inline"></i></span>
+          <span id="theme-light"><i data-lucide="sun" class="w-3 h-3 inline"></i></span>
+        </div>
+        <!-- View Toggle -->
+        <div class="toggle-pill hidden sm:inline-flex" id="view-toggle" onclick="toggleView()">
+          <span id="view-exec" data-i18n="nav.exec">Exec</span>
+          <span id="view-full" class="active" data-i18n="nav.full">Full</span>
+        </div>
+        <!-- CTA Button -->
+        <button onclick="openModal('reserve')" class="btn-gold hidden sm:inline-flex py-2 px-5 text-sm">
+          <i data-lucide="calendar-check" class="w-4 h-4"></i>
+          <span data-i18n="nav.cta">Reservar</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====================================================================
+       SECTION 2: HERO (always visible, min-height: 100vh)
+       ==================================================================== -->
+  <section id="hero" class="min-h-screen flex items-center section-pad pt-32 relative overflow-hidden">
+    <!-- Ambient decoration -->
+    <div class="ambient-circle" style="width:600px;height:600px;background:var(--gold);top:-200px;right:-200px;"></div>
+    <div class="ambient-circle" style="width:400px;height:400px;background:#163A6A;bottom:-100px;left:-100px;"></div>
+
+    <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+      <div class="grid lg:grid-cols-5 gap-12 items-center">
+
+        <!-- Left Content (3 cols) -->
+        <div class="lg:col-span-3 reveal">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold mb-6"
+            style="background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.2);color:var(--gold);">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+            <span data-i18n="hero.badge">Edicion Creyentes &middot; Solo 13 Plazas &middot; CDMX</span>
+          </div>
+
+          <!-- Pre-title -->
+          <p class="text-sm font-semibold uppercase tracking-widest mb-3" style="color:var(--gold);" data-i18n="hero.pre">
+            Bootcamp Ejecutivo Modular
+          </p>
+
+          <!-- H1 -->
+          <h1 class="font-heading font-black text-5xl md:text-7xl leading-tight mb-2">
+            <span style="color:var(--text-primary)">C</span><span class="gold-text">A</span><span style="color:var(--text-primary)">O </span><span class="gold-text">Bootcamp</span>
+          </h1>
+
+          <!-- Sub -->
+          <p class="font-heading text-xl md:text-2xl font-medium mb-6" style="color:var(--text-secondary);" data-i18n="hero.sub">
+            Chief Agentic Officer
+          </p>
+
+          <!-- Decorative divider -->
+          <div class="gold-divider" style="margin:0 0 1.5rem 0;"></div>
+
+          <!-- Body text -->
+          <p class="text-base md:text-lg leading-relaxed mb-8 max-w-xl" style="color:var(--text-secondary);" data-i18n="hero.body">
+            Su semana esta llena. Reuniones, reportes, seguimiento, correos. La IA puede ejecutar el 60% de eso. Este bootcamp no le ensena IA. Le disena e instala un sistema de trabajo agentico a medida — la puerta de entrada a la (r)evolucion digital que usted esperaba.
+          </p>
+
+          <!-- KPIs -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div class="kpi-card glass">
+              <div class="kpi-value gold-text">18h</div>
+              <div class="kpi-label" data-i18n="hero.kpi1">Contenido intensivo</div>
+            </div>
+            <div class="kpi-card glass">
+              <div class="kpi-value gold-text">13</div>
+              <div class="kpi-label" data-i18n="hero.kpi2">Asistentes IA</div>
+            </div>
+            <div class="kpi-card glass">
+              <div class="kpi-value gold-text">1</div>
+              <div class="kpi-label" data-i18n="hero.kpi3">Agente Propio</div>
+            </div>
+            <div class="kpi-card glass">
+              <div class="kpi-value gold-text">3-6</div>
+              <div class="kpi-label" data-i18n="hero.kpi4">Semanas</div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openModal('reserve')" class="btn-gold">
+              <i data-lucide="rocket" class="w-4 h-4"></i>
+              <span data-i18n="hero.cta1">Reservar Plaza</span>
+            </button>
+            <button onclick="openModal('workshop')" class="btn-ghost">
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+              <span data-i18n="hero.cta2">Probar Gratis</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Investment Card (2 cols) -->
+        <div class="lg:col-span-2 reveal">
+          <div class="glass glow-border pulse-glow p-8 rounded-2xl">
+            <div class="flex items-center justify-between mb-4">
+              <p class="text-xs uppercase tracking-widest font-semibold" style="color:var(--gold);" data-i18n="hero.card.label">Su sistema agentico a medida</p>
+              <button onclick="event.stopPropagation();openInfo('investment')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button>
+            </div>
+            <div class="flex items-baseline gap-3 mb-1">
+              <span class="font-heading text-2xl font-bold price-strike" style="color:var(--text-muted);">$2,500 USD</span>
+            </div>
+            <div class="flex items-baseline gap-2 mb-2">
+              <span class="font-heading text-5xl font-black gold-text">$1,500</span>
+              <span class="text-sm font-semibold" style="color:var(--gold);">USD</span>
+            </div>
+            <p class="text-xs mb-6" style="color:var(--text-muted);" data-i18n="hero.card.rate">
+              (tasa indicativa, sujeta a variacion)
+            </p>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);">
+                <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>
+                <span data-i18n="hero.card.c1">9 talleres x 2h (18h de contenido)</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);">
+                <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>
+                <span data-i18n="hero.card.c2">13 asistentes IA personalizados</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);">
+                <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>
+                <span data-i18n="hero.card.c3">1 agente Pristino propio</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);">
+                <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>
+                <span data-i18n="hero.card.c4">Networking Q3 ejecutivos CDMX</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);">
+                <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>
+                <span data-i18n="hero.card.c5">Valor separado: $5,200+ USD</span>
+              </li>
+            </ul>
+
+            <button onclick="openModal('reserve')" class="btn-gold w-full justify-center">
+              <span data-i18n="hero.card.cta">Reservar Ahora</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Punchline -->
+      <div class="punchline reveal mt-16">
+        <a href="#hook" data-i18n="hero.punchline">Descubra como funciona</a>
+        <div class="mt-3 bounce-slow inline-block">
+          <i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 3: THE HOOK (zig-zag, view-full)
+       ==================================================================== -->
+  <section id="hook" class="section-pad view-full-section" style="background:var(--bg-secondary);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- LEFT text -->
+        <div class="reveal">
+          <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="hook.hook">
+            El Desafio
+          </p>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold mb-8" style="color:var(--text-primary);" data-i18n="hook.title">
+            Le suena familiar?
+          </h2>
+          <div class="space-y-6">
+            <div class="glass p-6 rounded-xl flex items-start gap-4">
+              <i data-lucide="clock" class="w-8 h-8 flex-shrink-0" style="color:var(--gold);"></i>
+              <div>
+                <h4 class="font-heading font-semibold mb-1" style="color:var(--text-primary);" data-i18n="hook.p1.title">
+                  12+ horas semanales en tareas operativas
+                </h4>
+                <p class="text-sm" style="color:var(--text-secondary);" data-i18n="hook.p1.desc">
+                  Correos, seguimiento, reportes, agendamiento. Actividades que no mueven la aguja pero consumen su dia.
+                </p>
+              </div>
+            </div>
+            <div class="glass p-6 rounded-xl flex items-start gap-4">
+              <i data-lucide="brain" class="w-8 h-8 flex-shrink-0" style="color:var(--gold);"></i>
+              <div>
+                <h4 class="font-heading font-semibold mb-1" style="color:var(--text-primary);" data-i18n="hook.p2.title">
+                  Conocimiento disperso, decisiones lentas
+                </h4>
+                <p class="text-sm" style="color:var(--text-secondary);" data-i18n="hook.p2.desc">
+                  Informacion en 15 herramientas distintas. Cada decision requiere buscar, compilar, analizar manualmente.
+                </p>
+              </div>
+            </div>
+            <div class="glass p-6 rounded-xl flex items-start gap-4">
+              <i data-lucide="trending-down" class="w-8 h-8 flex-shrink-0" style="color:var(--gold);"></i>
+              <div>
+                <h4 class="font-heading font-semibold mb-1" style="color:var(--text-primary);" data-i18n="hook.p3.title">
+                  La IA avanza; su operacion, no
+                </h4>
+                <p class="text-sm" style="color:var(--text-secondary);" data-i18n="hook.p3.desc">
+                  Cada semana hay una herramienta nueva. Pero sin sistema, es ruido. Con sistema, es ventaja competitiva.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT icon visual -->
+        <div class="reveal flex justify-center">
+          <div class="glass w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center relative">
+            <i data-lucide="clock" class="w-24 h-24 md:w-32 md:h-32" style="color:var(--gold);opacity:0.5;"></i>
+            <div class="absolute inset-0 rounded-full" style="border:1px dashed var(--border-color);"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Punchline -->
+      <div class="punchline reveal">
+        <a href="#vision" data-i18n="hook.punchline">Ahora imagine esto...</a>
+        <div class="mt-3 bounce-slow inline-block">
+          <i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 4: THE VISION (zig-zag flipped, view-full)
+       ==================================================================== -->
+  <section id="vision" class="section-pad view-full-section">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- LEFT icon visual -->
+        <div class="reveal flex justify-center order-2 lg:order-1">
+          <div class="glass w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center relative">
+            <i data-lucide="cpu" class="w-24 h-24 md:w-32 md:h-32" style="color:var(--gold);opacity:0.5;"></i>
+            <div class="absolute inset-0 rounded-full" style="border:1px dashed var(--border-color);"></div>
+          </div>
+        </div>
+
+        <!-- RIGHT text -->
+        <div class="reveal order-1 lg:order-2">
+          <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="vision.hook">
+            La Vision
+          </p>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold mb-8" style="color:var(--text-primary);" data-i18n="vision.title">
+            Al dia 30
+          </h2>
+          <div class="space-y-6">
+            <div class="glass p-6 rounded-xl flex items-start gap-4">
+              <i data-lucide="bot" class="w-8 h-8 flex-shrink-0" style="color:var(--gold);"></i>
+              <div>
+                <h4 class="font-heading font-semibold mb-1" style="color:var(--text-primary);" data-i18n="vision.v1.title">
+                  Su agente gestiona lo operativo
+                </h4>
+                <p class="text-sm" style="color:var(--text-secondary);" data-i18n="vision.v1.desc">
+                  Correos clasificados, borradores listos, follow-ups automaticos. Usted revisa y aprueba en minutos.
+                </p>
+              </div>
+            </div>
+            <div class="glass p-6 rounded-xl flex items-start gap-4">
+              <i data-lucide="users" class="w-8 h-8 flex-shrink-0" style="color:var(--gold);"></i>
+              <div>
+                <h4 class="font-heading font-semibold mb-1" style="color:var(--text-primary);" data-i18n="vision.v2.title">
+                  13 asistentes trabajan con su contexto
+                </h4>
+                <p class="text-sm" style="color:var(--text-secondary);" data-i18n="vision.v2.desc">
+                  Cada asistente conoce su negocio, su tono, sus reglas. Desde finanzas hasta networking.
+                </p>
+              </div>
+            </div>
+            <div class="glass p-6 rounded-xl flex items-start gap-4">
+              <i data-lucide="database" class="w-8 h-8 flex-shrink-0" style="color:var(--gold);"></i>
+              <div>
+                <h4 class="font-heading font-semibold mb-1" style="color:var(--text-primary);" data-i18n="vision.v3.title">
+                  Segundo cerebro digital consolidado
+                </h4>
+                <p class="text-sm" style="color:var(--text-secondary);" data-i18n="vision.v3.desc">
+                  Todo su conocimiento, decisiones y documentos organizados. Busca y la IA encuentra en segundos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Punchline -->
+      <div class="punchline reveal">
+        <a href="#journey" data-i18n="vision.punchline">Empiece donde quiera</a>
+        <div class="mt-3 bounce-slow inline-block">
+          <i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 5: JOURNEY — 4 LEVELS (always visible)
+       ==================================================================== -->
+  <section id="journey" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="journey.hook">Su Camino</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="journey.title">4 Niveles de Profundidad</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+        <!-- Level 0: Exploracion -->
+        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">0</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);" data-i18n="journey.l0.tag">Workshop &middot; 3 horas</span>
+          </div>
+          <div class="flex items-center justify-between"><h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l0.title">Workshop Gratuito</h3><button onclick="event.stopPropagation();openInfo('level-0')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
+          <p class="text-xs font-semibold mb-1" style="color:var(--gold);" data-i18n="journey.l0.tagline">Workshop Zero Risk</p>
+          <p class="text-2xl font-heading font-black gold-text mb-3" data-i18n="journey.l0.price">Gratis</p>
+          <p class="text-sm mb-4 flex-1" style="color:var(--text-secondary);" data-i18n="journey.l0.desc">
+            "De Ocupado a Productivo con Agentes de IA". 3h, fecha por confirmar. No es solo presentacion. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM.
+          </p>
+          <button onclick="openModal('workshop')" class="btn-ghost mt-auto w-full justify-center py-2.5 text-sm">
+            <span data-i18n="journey.l0.cta">Inscribirse</span>
+          </button>
+        </div>
+
+        <!-- Level 1: Asistentes a Medida -->
+        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">1</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);" data-i18n="journey.l1.tag">A Medida</span>
+          </div>
+          <div class="flex items-center justify-between"><h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l1.title">Asistentes a Medida</h3><button onclick="event.stopPropagation();openInfo('level-1')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
+          <p class="text-2xl font-heading font-black gold-text mb-1">$400 <span class="text-sm font-normal" style="color:var(--text-muted);">USD c/u</span></p>
+          <p class="text-xs mb-4" style="color:var(--text-muted);" data-i18n="journey.l1.rate">(tasa indicativa, sujeta a variacion)</p>
+          <p class="text-sm mb-4 flex-1" style="color:var(--text-secondary);" data-i18n="journey.l1.desc">
+            QBR, Strategic Planning, OKR Tracking, KPI Tracking y mas. Asistentes disenados para su operacion especifica. Los 13 asistentes base del bootcamp son gratuitos.
+          </p>
+          <button onclick="scrollToEl('servicios')" class="btn-ghost mt-auto w-full justify-center py-2.5 text-sm">
+            <span data-i18n="journey.l1.cta">Ver servicios</span>
+          </button>
+        </div>
+
+        <!-- Level 2: CAO Bootcamp — HIGHLIGHTED -->
+        <div class="glass p-7 rounded-2xl reveal level-card highlighted flex flex-col relative overflow-hidden">
+          <div class="absolute top-4 right-4">
+            <span class="px-3 py-1 rounded-full text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#0B2545;" data-i18n="journey.l2.badge">Recomendado</span>
+          </div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#0B2545;">2</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--gold);" data-i18n="journey.l2.tag">Bootcamp &middot; 18h</span>
+          </div>
+          <div class="flex items-center justify-between"><h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l2.title">Edicion Creyentes</h3><button onclick="event.stopPropagation();openInfo('level-2')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
+          <p class="text-xs font-semibold mb-1" style="color:var(--gold);" data-i18n="journey.l2.tagline">CAO Bootcamp</p>
+          <div class="flex items-baseline gap-2 mb-1">
+            <span class="text-lg font-heading font-bold price-strike" style="color:var(--text-muted);">$2,500</span>
+            <span class="text-3xl font-heading font-black gold-text">$1,500</span>
+            <span class="text-sm" style="color:var(--text-muted);">USD</span>
+          </div>
+          <p class="text-xs mb-4" style="color:var(--text-muted);" data-i18n="journey.l2.rate">(tasa indicativa, sujeta a variacion)</p>
+          <p class="text-sm mb-4 flex-1" style="color:var(--text-secondary);" data-i18n="journey.l2.desc">
+            9 talleres x 2h. Incluye los 13 asistentes, agente Pristino, segundo cerebro digital, networking Q3 ejecutivos. Valor si se comprase por separado: $5,200+ USD.
+          </p>
+          <button onclick="openModal('reserve')" class="btn-gold mt-auto w-full justify-center py-2.5 text-sm">
+            <span data-i18n="journey.l2.cta">Reservar Plaza</span>
+          </button>
+        </div>
+
+        <!-- Level 3: Empoderamiento -->
+        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">3</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);" data-i18n="journey.l3.tag">Programa &middot; 16 semanas</span>
+          </div>
+          <div class="flex items-center justify-between"><h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l3.title">Empoderamiento</h3><button onclick="event.stopPropagation();openInfo('level-3')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
+          <p class="text-xs font-semibold mb-1" style="color:var(--gold);" data-i18n="journey.l3.tagline">Programa de Adopcion IA</p>
+          <div class="flex items-baseline gap-2 mb-1">
+            <span class="text-lg font-heading font-bold price-strike" style="color:var(--text-muted);">$2,000</span>
+            <span class="text-2xl font-heading font-black gold-text">$1,600</span>
+            <span class="text-sm" style="color:var(--text-muted);">USD</span>
+          </div>
+          <p class="text-xs mb-4" style="color:var(--text-muted);" data-i18n="journey.l3.rate">(tasa indicativa, sujeta a variacion) con 20% desc. CAO</p>
+          <p class="text-sm mb-4 flex-1" style="color:var(--text-secondary);" data-i18n="journey.l3.desc">
+            16 semanas. Inicia 3ra semana de mayo. 13 plazas. Requisitos: Gerente+, 10+ anos experiencia, conocimiento basico de IA.
+          </p>
+          <button onclick="scrollToEl('configurador')" class="btn-ghost mt-auto w-full justify-center py-2.5 text-sm">
+            <span data-i18n="journey.l3.cta">Configurar</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Punchline -->
+      <div class="punchline reveal">
+        <a href="#programa" data-i18n="journey.punchline">Vea que se trabaja en cada sesion</a>
+        <div class="mt-3 bounce-slow inline-block">
+          <i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 6: PROGRAMA — 9 USE CASES (view-full)
+       ==================================================================== -->
+  <section id="programa" class="section-pad view-full-section">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="programa.hook">Programa</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="programa.title">9 Casos de Uso Ejecutivos</h2>
+        <div class="gold-divider"></div>
+        <p class="mt-4 max-w-2xl mx-auto" style="color:var(--text-secondary);" data-i18n="programa.subtitle">Cada modulo es un caso de uso real. Haga clic en cualquier tarjeta para ver el detalle completo.</p>
+      </div>
+
+      <!-- Phase 1 -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="phase-tag" style="background:rgba(255,215,0,0.15);color:var(--gold);" data-i18n="programa.phase1.tag">Fase 1</span>
+          <span class="font-heading font-semibold" style="color:var(--text-primary);" data-i18n="programa.phase1.title">Diagnostico y Cimiento</span>
+        </div>
+        <p class="text-sm mb-6 reveal" style="color:var(--text-muted);" data-i18n="programa.phase1.note">Desde sesion 1: Agente Pristino instalado + primeros asistentes.</p>
+        <div class="grid md:grid-cols-3 gap-6" id="phase1-grid"></div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="phase-tag" style="background:rgba(255,215,0,0.15);color:var(--gold);" data-i18n="programa.phase2.tag">Fase 2</span>
+          <span class="font-heading font-semibold" style="color:var(--text-primary);" data-i18n="programa.phase2.title">Estrategia y Ejecucion</span>
+        </div>
+        <p class="text-sm mb-6 reveal" style="color:var(--text-muted);" data-i18n="programa.phase2.note">Durante Fase 2: Segundo Cerebro Digital en NotebookLM.</p>
+        <div class="grid md:grid-cols-3 gap-6" id="phase2-grid"></div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="mb-14">
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="phase-tag" style="background:rgba(255,215,0,0.15);color:var(--gold);" data-i18n="programa.phase3.tag">Fase 3</span>
+          <span class="font-heading font-semibold" style="color:var(--text-primary);" data-i18n="programa.phase3.title">Escalamiento y Cierre</span>
+        </div>
+        <p class="text-sm mb-6 reveal" style="color:var(--text-muted);" data-i18n="programa.phase3.note">Al cierre: Agente personalizado. Usted se lo lleva.</p>
+        <div class="grid md:grid-cols-3 gap-6" id="phase3-grid"></div>
+      </div>
+
+      <!-- Punchline -->
+      <div class="punchline reveal">
+        <a href="#modalidades" data-i18n="programa.punchline">Elija su modalidad</a>
+        <div class="mt-3 bounce-slow inline-block">
+          <i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 7: MODALIDADES (always visible)
+       ==================================================================== -->
+  <section id="modalidades" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="modalidades.hook">Modalidades</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="modalidades.title">Elija Como Participar</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <!-- Solo -->
+        <div class="glass p-8 rounded-2xl reveal text-center">
+          <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4" style="background:rgba(255,215,0,0.1);">
+            <i data-lucide="user" class="w-8 h-8" style="color:var(--gold);"></i>
+          </div>
+          <div class="flex items-center justify-between"><h3 class="font-heading text-xl font-bold mb-2" style="color:var(--text-primary);" data-i18n="mod.solo.title">Solo (1:1)</h3><button onclick="event.stopPropagation();openInfo('mod-solo')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
+          <p class="text-sm mb-4" style="color:var(--text-secondary);" data-i18n="mod.solo.desc">Maxima profundidad. Ritmo personal. Foco total.</p>
+          <p class="text-xs" style="color:var(--text-muted);" data-i18n="mod.solo.note">Mismo precio en todas las modalidades</p>
+        </div>
+
+        <!-- Dupla — RECOMMENDED -->
+        <div class="glass p-8 rounded-2xl reveal text-center glow-border relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="px-3 py-1 rounded-full text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#0B2545;" data-i18n="mod.dupla.badge">Recomendado</span>
+          </div>
+          <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4" style="background:rgba(255,215,0,0.15);">
+            <i data-lucide="users" class="w-8 h-8" style="color:var(--gold);"></i>
+          </div>
+          <div class="flex items-center justify-between"><h3 class="font-heading text-xl font-bold mb-2" style="color:var(--text-primary);" data-i18n="mod.dupla.title">Dupla</h3><button onclick="event.stopPropagation();openInfo('mod-dupla')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
+          <p class="text-sm mb-4" style="color:var(--text-secondary);" data-i18n="mod.dupla.desc">Consolida cambios operativos con quien ejecuta a su lado. Los habitos se instalan en el dia a dia real.</p>
+          <p class="text-xs" style="color:var(--text-muted);" data-i18n="mod.dupla.note">Mismo precio. Trabajan juntos en una de las empresas del ejecutivo.</p>
+        </div>
+
+        <!-- Terna -->
+        <div class="glass p-8 rounded-2xl reveal text-center">
+          <div class="w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4" style="background:rgba(255,215,0,0.1);">
+            <i data-lucide="users-round" class="w-8 h-8" style="color:var(--gold);"></i>
+          </div>
+          <div class="flex items-center justify-between"><h3 class="font-heading text-xl font-bold mb-2" style="color:var(--text-primary);" data-i18n="mod.terna.title">Terna</h3><button onclick="event.stopPropagation();openInfo('mod-terna')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button></div>
+          <p class="text-sm mb-4" style="color:var(--text-secondary);" data-i18n="mod.terna.desc">(R)Evolucion sincronizada. 3 personas = momentum imparable.</p>
+          <p class="text-xs" style="color:var(--text-muted);" data-i18n="mod.terna.note">Mismo precio. Trabajan juntos en una de las empresas del ejecutivo.</p>
+        </div>
+      </div>
+
+      <div class="text-center reveal">
+        <p class="glass inline-block px-6 py-3 rounded-xl text-sm" style="color:var(--text-secondary);" data-i18n="mod.note">
+          La dupla y la terna no reducen profundidad. La multiplican.
+        </p>
+      </div>
+
+      <!-- Punchline -->
+      <div class="punchline reveal">
+        <a href="#metodologias" data-i18n="mod.punchline">Vea las metodologias</a>
+        <div class="mt-3 bounce-slow inline-block">
+          <i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 8: METODOLOGIAS (zig-zag, view-full)
+       ==================================================================== -->
+  <section id="metodologias" class="section-pad view-full-section">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- LEFT text -->
+        <div class="reveal">
+          <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="metodo.hook">Fundamentos</p>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6" style="color:var(--text-primary);" data-i18n="metodo.title">Metodologias Probadas</h2>
+          <p class="text-sm mb-8" style="color:var(--text-secondary);" data-i18n="metodo.desc">Cada sesion integra marcos reconocidos a nivel mundial con herramientas de IA de ultima generacion.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="method-chip">Business Model Canvas</span>
+            <span class="method-chip">Ikigai</span>
+            <span class="method-chip">Golden Circle</span>
+            <span class="method-chip">OKRs</span>
+            <span class="method-chip">Lean Personal</span>
+            <span class="method-chip">GTD</span>
+            <span class="method-chip">Arquetipos</span>
+            <span class="method-chip">Roadmapping</span>
+            <span class="method-chip">Scenario Planning</span>
+            <span class="method-chip">Value-Based Pricing</span>
+            <span class="method-chip">Prompt Engineering</span>
+            <span class="method-chip">Agent Design</span>
+          </div>
+        </div>
+        <!-- RIGHT icon -->
+        <div class="reveal flex justify-center">
+          <div class="glass w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center relative">
+            <i data-lucide="book-open" class="w-24 h-24 md:w-32 md:h-32" style="color:var(--gold);opacity:0.5;"></i>
+            <div class="absolute inset-0 rounded-full" style="border:1px dashed var(--border-color);"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Punchline -->
+      <div class="punchline reveal">
+        <a href="#roi" data-i18n="metodo.punchline">Modele su inversion</a>
+        <div class="mt-3 bounce-slow inline-block">
+          <i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 9: ROI CALCULATOR (always visible)
+       ==================================================================== -->
+  <section id="roi" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="roi.hook">Retorno</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="roi.title">Calculadora de ROI</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Sliders -->
+        <div class="reveal">
+          <div class="glass p-8 rounded-2xl space-y-8">
+            <!-- Hours slider -->
+            <div>
+              <div class="flex justify-between mb-3">
+                <label class="text-sm font-medium" style="color:var(--text-secondary);" data-i18n="roi.slider1.label">Horas/semana en tareas operativas</label>
+                <span class="text-sm font-bold gold-text" id="roi-hours-val">15</span>
+              </div>
+              <input type="range" id="roi-hours" min="5" max="30" value="15" oninput="calcROI()">
+              <div class="flex justify-between text-xs mt-1" style="color:var(--text-muted);"><span>5h</span><span>30h</span></div>
+            </div>
+            <!-- Rate slider -->
+            <div>
+              <div class="flex justify-between mb-3">
+                <label class="text-sm font-medium" style="color:var(--text-secondary);" data-i18n="roi.slider2.label">Valor de su hora (USD)</label>
+                <span class="text-sm font-bold gold-text" id="roi-rate-val">$80</span>
+              </div>
+              <input type="range" id="roi-rate" min="20" max="200" value="80" step="5" oninput="calcROI()">
+              <div class="flex justify-between text-xs mt-1" style="color:var(--text-muted);"><span>$20</span><span>$200</span></div>
+            </div>
+          </div>
+
+          <!-- Extra capability and benefit lists -->
+          <div class="grid grid-cols-2 gap-6 mt-8">
+            <div class="glass p-6 rounded-2xl reveal">
+              <h4 class="font-heading font-semibold mb-3 text-sm" style="color:var(--gold);" data-i18n="roi.cap.title">Capacidades nuevas</h4>
+              <ul class="space-y-2 text-sm" style="color:var(--text-secondary);">
+                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="roi.cap.1">Agente operativo propio</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="roi.cap.2">13 asistentes calibrados</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="roi.cap.3">Segundo cerebro digital</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="zap" class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="roi.cap.4">Prompts calibrados 50+</span></li>
+              </ul>
+            </div>
+            <div class="glass p-6 rounded-2xl reveal">
+              <h4 class="font-heading font-semibold mb-3 text-sm" style="color:var(--gold);" data-i18n="roi.ben.title">Beneficios adicionales</h4>
+              <ul class="space-y-2 text-sm" style="color:var(--text-secondary);">
+                <li class="flex items-start gap-2"><i data-lucide="star" class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="roi.ben.1">Networking ejecutivo Q3</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="star" class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="roi.ben.2">Marca personal amplificada</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="star" class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="roi.ben.3">Dashboard financiero vivo</span></li>
+                <li class="flex items-start gap-2"><i data-lucide="star" class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="roi.ben.4">Sistema de aprendizaje acelerado</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results panel -->
+        <div class="reveal">
+          <div class="glass p-8 rounded-2xl glow-border">
+            <h3 class="font-heading text-xl font-bold mb-2" style="color:var(--text-primary);" data-i18n="roi.results.title">Su Proyeccion</h3>
+            <p class="text-xs mb-6" style="color:var(--text-muted);" data-i18n="roi.results.note">(meta indicativa)</p>
+            <div class="space-y-6">
+              <div class="flex justify-between items-center pb-4" style="border-bottom:1px solid var(--border-color);">
+                <span class="text-sm" style="color:var(--text-secondary);" data-i18n="roi.r1">Horas recuperadas/mes</span>
+                <span class="font-heading text-2xl font-bold gold-text" id="roi-hours-month">30</span>
+              </div>
+              <div class="flex justify-between items-center pb-4" style="border-bottom:1px solid var(--border-color);">
+                <span class="text-sm" style="color:var(--text-secondary);" data-i18n="roi.r2">Valor recuperado/mes (USD)</span>
+                <span class="font-heading text-2xl font-bold gold-text" id="roi-value-month">$2,400</span>
+              </div>
+              <div class="flex justify-between items-center pb-4" style="border-bottom:1px solid var(--border-color);">
+                <span class="text-sm" style="color:var(--text-secondary);" data-i18n="roi.r3">Semanas de payback</span>
+                <span class="font-heading text-2xl font-bold gold-text" id="roi-payback">2.5</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm" style="color:var(--text-secondary);" data-i18n="roi.r4">Valor anual (USD)</span>
+                <span class="font-heading text-3xl font-black gold-text" id="roi-annual">$28,800</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Punchline -->
+      <div class="punchline reveal">
+        <a href="#configurador" data-i18n="roi.punchline">Configure su experiencia</a>
+        <div class="mt-3 bounce-slow inline-block">
+          <i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 10: CONFIGURADOR (always visible)
+       ==================================================================== -->
+  <section id="configurador" class="section-pad">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="config.hook">Configurador</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="config.title">Configure su Experiencia</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-8">
+        <!-- LEFT options (3 cols) -->
+        <div class="lg:col-span-3 space-y-6">
+
+          <!-- CAO Bootcamp card (primary option) -->
+          <div class="glass p-7 rounded-2xl reveal cursor-pointer transition-all" id="config-cao-card" onclick="toggleCAO()">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-heading font-bold mb-1" style="color:var(--text-primary);" data-i18n="config.b.title">CAO Bootcamp — Edicion Creyentes</h4>
+                <p class="text-sm" style="color:var(--text-muted);">
+                  <span class="price-strike">$2,500</span> <span class="gold-text font-bold">$1,500 USD</span>
+                  <span data-i18n="config.b.rate">(tasa indicativa, sujeta a variacion)</span>
+                </p>
+                <p class="text-xs mt-2" style="color:var(--text-secondary);" data-i18n="config.b.includes">Incluye los 13 asistentes + agente Pristino + segundo cerebro + networking</p>
+              </div>
+              <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" id="cao-check"
+                style="border:2px solid var(--border-color);transition:all 0.3s ease;"></div>
+            </div>
+          </div>
+
+          <!-- Empoderamiento card -->
+          <div class="glass p-7 rounded-2xl reveal cursor-pointer transition-all" id="config-emp-card" onclick="toggleEmp()">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-heading font-bold mb-1" style="color:var(--text-primary);" data-i18n="config.c.title">Programa de Empoderamiento</h4>
+                <p class="text-sm" style="color:var(--text-muted);" id="emp-price-display">
+                  $2,000 USD <span data-i18n="config.c.rate">(tasa indicativa, sujeta a variacion)</span>
+                </p>
+                <p class="text-xs mt-2" style="color:var(--text-secondary);" data-i18n="config.c.desc">16 semanas, 13 plazas. 20% descuento si incluye CAO Bootcamp.</p>
+              </div>
+              <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" id="emp-check"
+                style="border:2px solid var(--border-color);transition:all 0.3s ease;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT sticky summary (2 cols) -->
+        <div class="lg:col-span-2">
+          <div class="lg:sticky lg:top-28">
+            <div class="glass p-8 rounded-2xl glow-border reveal">
+              <h4 class="font-heading font-bold text-lg mb-6" style="color:var(--text-primary);" data-i18n="config.summary.title">Resumen de Inversion</h4>
+
+              <div id="config-summary-items" class="space-y-3 mb-6"></div>
+
+              <div class="pt-4 mb-2" style="border-top:1px solid var(--border-color);">
+                <div class="flex justify-between items-center mb-1" id="config-savings-row" style="display:none;">
+                  <span class="text-sm" style="color:var(--gold);" data-i18n="config.summary.savings">Ahorro</span>
+                  <span class="font-heading font-bold gold-text" id="config-savings">$0</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="font-heading font-bold" style="color:var(--text-primary);" data-i18n="config.summary.total">Total</span>
+                  <span class="font-heading text-3xl font-black gold-text" id="config-total">$0</span>
+                </div>
+                <p class="text-xs mt-1" style="color:var(--text-muted);" data-i18n="config.summary.rate">USD (tasa indicativa, sujeta a variacion)</p>
+              </div>
+
+              <button onclick="openModal('reserve')" class="btn-gold w-full justify-center mt-4">
+                <span data-i18n="config.summary.cta">Reservar Ahora</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Punchline -->
+      <div class="punchline reveal">
+        <a href="#servicios" data-i18n="config.punchline">Lleve su operacion al siguiente nivel</a>
+        <div class="mt-3 bounce-slow inline-block">
+          <i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 11: SERVICIOS AVANZADOS (view-full)
+       ==================================================================== -->
+  <section id="servicios" class="section-pad view-full-section" style="background:var(--bg-secondary);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="servicios.hook">Servicios Avanzados</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="servicios.title">Mas Alla del Bootcamp</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <!-- Tier 1: Asistentes a Medida -->
+      <div class="mb-12 reveal">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider" style="background:rgba(255,215,0,0.1);color:var(--gold);border:1px solid rgba(255,215,0,0.2);">Tier 1</span>
+          <span class="text-sm" style="color:var(--text-muted);">Asistentes a Medida</span>
+        </div>
+        <div class="glass p-8 rounded-2xl" style="border-color:rgba(255,215,0,0.15);">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);">Asistentes Personalizados</h3>
+              <p class="text-sm gold-text font-semibold">$400 USD c/u (tasa indicativa, sujeta a variacion)</p>
+            </div>
+            <button onclick="event.stopPropagation();openInfo('level-1')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button>
+          </div>
+          <p class="text-sm mb-5" style="color:var(--text-secondary);">A diferencia de los 13 asistentes incluidos en el bootcamp (genericos y funcionales desde dia 1), estos son construidos desde cero para su operacion especifica. Cada uno incluye 2h de diseno, configuracion y entrenamiento.</p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-5">
+            <div class="glass p-3 rounded-xl text-center"><i data-lucide="presentation" class="w-5 h-5 mx-auto mb-1" style="color:var(--gold);"></i><span class="text-xs font-semibold" style="color:var(--text-primary);">QBR</span></div>
+            <div class="glass p-3 rounded-xl text-center"><i data-lucide="compass" class="w-5 h-5 mx-auto mb-1" style="color:var(--gold);"></i><span class="text-xs font-semibold" style="color:var(--text-primary);">Strategic Planning</span></div>
+            <div class="glass p-3 rounded-xl text-center"><i data-lucide="target" class="w-5 h-5 mx-auto mb-1" style="color:var(--gold);"></i><span class="text-xs font-semibold" style="color:var(--text-primary);">OKR Tracking</span></div>
+            <div class="glass p-3 rounded-xl text-center"><i data-lucide="bar-chart-3" class="w-5 h-5 mx-auto mb-1" style="color:var(--gold);"></i><span class="text-xs font-semibold" style="color:var(--text-primary);">KPI Tracking</span></div>
+          </div>
+          <p class="text-xs" style="color:var(--text-muted);">Ejemplos. Cualquier caso de uso ejecutivo puede convertirse en un asistente a medida.</p>
+        </div>
+      </div>
+
+      <!-- Tier 2: Agentes Autonomos -->
+      <div class="mb-12 reveal">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider" style="background:rgba(168,85,247,0.1);color:#c084fc;border:1px solid rgba(168,85,247,0.2);">Tier 2</span>
+          <span class="text-sm" style="color:var(--text-muted);">Agentes Autonomos</span>
+        </div>
+        <div class="glass p-8 rounded-2xl" style="border-color:rgba(168,85,247,0.15);">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);">Desarrollo de Agentes</h3>
+              <p class="text-sm font-semibold" style="color:#c084fc;">$2,000 — $8,000 USD</p>
+            </div>
+            <button onclick="event.stopPropagation();openInfo('svc-agents')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button>
+          </div>
+          <p class="text-sm mb-5" style="color:var(--text-secondary);">Un agente va mas alla de un asistente: ejecuta tareas autonomamente, toma decisiones dentro de reglas definidas y reporta resultados. Requiere discovery para tasar tamano, definir estrategia, infraestructura, funcionalidades y particularidades.</p>
+          <div class="grid md:grid-cols-2 gap-4 mb-5">
+            <div class="glass p-4 rounded-xl">
+              <h4 class="text-sm font-bold mb-2" style="color:var(--text-primary);"><i data-lucide="terminal" class="w-4 h-4 inline mr-1" style="color:#c084fc;"></i>En Claude Cowork / IDE</h4>
+              <p class="text-xs" style="color:var(--text-secondary);">Claude Cowork, VS Code, Codex, Antigravity. Agentes que operan en su entorno de trabajo.</p>
+              <p class="text-xs mt-1" style="color:var(--text-muted);">Req: licencia del usuario ($20-100/mes)</p>
+            </div>
+            <div class="glass p-4 rounded-xl">
+              <h4 class="text-sm font-bold mb-2" style="color:var(--text-primary);"><i data-lucide="workflow" class="w-4 h-4 inline mr-1" style="color:#c084fc;"></i>Automatizaciones</h4>
+              <p class="text-xs" style="color:var(--text-secondary);">n8n, Make, Zapier, Power Automate, Power Apps, Copilot Studio, Google Workspace, Agent Space.</p>
+              <p class="text-xs mt-1" style="color:var(--text-muted);">Proyecto fixed-price, llave en mano</p>
+            </div>
+          </div>
+          <p class="text-xs" style="color:var(--text-muted);">El precio varia segun: estrategia, infraestructura, funcionalidades, personalizaciones y particularidades. Discovery obligatorio antes de cotizar. (Tasa indicativa, sujeta a variacion.)</p>
+        </div>
+      </div>
+
+      <!-- Tier 3: Desarrollo a Medida -->
+      <div class="reveal">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider" style="background:rgba(239,68,68,0.1);color:#f87171;border:1px solid rgba(239,68,68,0.2);">Tier 3</span>
+          <span class="text-sm" style="color:var(--text-muted);">Desarrollo de Software</span>
+        </div>
+        <div class="glass p-8 rounded-2xl" style="border-color:rgba(239,68,68,0.1);">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);">Desarrollo de Software con IA</h3>
+              <p class="text-sm font-semibold" style="color:#f87171;">Discovery + cotizacion a medida</p>
+            </div>
+            <button onclick="event.stopPropagation();openInfo('svc-dev')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button>
+          </div>
+          <p class="text-sm" style="color:var(--text-secondary);">Soluciones agenticas completas a medida. Cuando necesita un sistema que no existe en ningun producto del mercado. Discovery primero, cotizacion despues. Proyecto fixed-price, llave en mano.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 12: CONDITIONS (view-full)
+       ==================================================================== -->
+  <section id="condiciones" class="section-pad view-full-section">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="cond.hook">Condiciones</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="cond.title">Condiciones del Programa</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="glass rounded-2xl overflow-hidden reveal max-w-4xl mx-auto">
+        <table class="data-table">
+          <tbody>
+            <tr>
+              <td class="font-semibold" style="color:var(--text-primary);width:30%;" data-i18n="cond.t1.label">Duracion</td>
+              <td data-i18n="cond.t1.value">Roadmap a medida de N semanas (tipico 9-12 sem.)</td>
+            </tr>
+            <tr>
+              <td class="font-semibold" style="color:var(--text-primary);" data-i18n="cond.t2.label">Formato</td>
+              <td data-i18n="cond.t2.value">100% online. Minimo 1 workshop de 2h por semana + 2h de trabajo independiente. Compromiso de continuidad sin pausas.</td>
+            </tr>
+            <tr>
+              <td class="font-semibold" style="color:var(--text-primary);" data-i18n="cond.t3.label">Modalidades</td>
+              <td data-i18n="cond.t3.value">Solo / Dupla / Terna — mismo precio</td>
+            </tr>
+            <tr>
+              <td class="font-semibold" style="color:var(--text-primary);" data-i18n="cond.t4.label">Inasistencia / Pausa</td>
+              <td data-i18n="cond.t4.value">1ra ausencia justificada = $0. Cada semana sin actividad (workshop o trabajo independiente) = $100 USD de penalidad. Nota: las penalidades son redimibles como descuento en futuras facturas. Existen para proteger la continuidad del proceso, no para cobrar de mas.</td>
+            </tr>
+            <tr>
+              <td class="font-semibold" style="color:var(--text-primary);" data-i18n="cond.t5.label">Garantia</td>
+              <td data-i18n="cond.t5.value">Devolucion del 100% si el servicio no cumple expectativas antes de completar las primeras 4 horas. Unica condicion: 1 hora de retroalimentacion estructurada.</td>
+            </tr>
+            <tr>
+              <td class="font-semibold" style="color:var(--text-primary);" data-i18n="cond.t6.label">Pago</td>
+              <td data-i18n="cond.t6.value">Previo al inicio del programa</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 13: STACK TECNOLOGICO (view-full)
+       ==================================================================== -->
+  <section id="stack" class="section-pad view-full-section" style="background:var(--bg-secondary);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="stack.hook">Stack</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="stack.title">Stack Tecnologico</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="glass rounded-2xl overflow-hidden reveal max-w-3xl mx-auto">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th data-i18n="stack.th1">Herramienta</th>
+              <th data-i18n="stack.th2">Costo Aprox.</th>
+              <th data-i18n="stack.th3">Categoria</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-semibold" style="color:var(--text-primary);">Google One AI Premium</td>
+              <td>~$19.99/mes</td>
+              <td><span class="phase-tag" style="background:rgba(255,215,0,0.15);color:var(--gold);" data-i18n="stack.essential">Esencial</span></td>
+            </tr>
+            <tr>
+              <td class="font-semibold" style="color:var(--text-primary);">ChatGPT Plus</td>
+              <td>~$20/mes</td>
+              <td><span class="phase-tag" style="background:rgba(255,215,0,0.08);color:var(--text-muted);" data-i18n="stack.recommended">Recomendado</span></td>
+            </tr>
+            <tr>
+              <td class="font-semibold" style="color:var(--text-primary);">IDE (VS Code)</td>
+              <td>$0</td>
+              <td><span class="phase-tag" style="background:rgba(255,215,0,0.08);color:var(--text-muted);" data-i18n="stack.free">Gratuito</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center text-xs mt-4 reveal" style="color:var(--text-muted);" data-i18n="stack.note">Nota: se recomienda Gmail personal para maximo aprovechamiento.</p>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 14: WORKSHOP GRATUITO (always visible)
+       ==================================================================== -->
+  <section id="workshop-section" class="section-pad">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="glass p-10 md:p-14 rounded-2xl text-center glow-border reveal">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold mb-6"
+          style="background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.2);color:var(--gold);">
+          <i data-lucide="gift" class="w-3.5 h-3.5"></i>
+          <span data-i18n="ws.badge">Nivel 0 — Gratuito</span>
+        </div>
+        <h2 class="font-heading text-2xl md:text-4xl font-bold mb-4" style="color:var(--text-primary);" data-i18n="ws.title">
+          De Ocupado a Productivo con Agentes de IA
+        </h2>
+        <div class="gold-divider"></div>
+        <p class="text-base max-w-xl mx-auto mb-8 mt-4" style="color:var(--text-secondary);" data-i18n="ws.desc">
+          No es solo presentacion. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6 mb-10">
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);">
+            <i data-lucide="calendar" class="w-4 h-4" style="color:var(--gold);"></i>
+            <span data-i18n="ws.date">Fecha por confirmar</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);">
+            <i data-lucide="clock" class="w-4 h-4" style="color:var(--gold);"></i>
+            <span>3h</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);">
+            <i data-lucide="user" class="w-4 h-4" style="color:var(--gold);"></i>
+            <span>Javier Montano</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);">
+            <i data-lucide="mail" class="w-4 h-4" style="color:var(--gold);"></i>
+            <span>contacto@metodologia.info</span>
+          </div>
+        </div>
+        <button onclick="openModal('workshop')" class="btn-gold">
+          <i data-lucide="play-circle" class="w-4 h-4"></i>
+          <span data-i18n="ws.cta">Reservar Lugar</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 15: FINAL CTA (always visible)
+       ==================================================================== -->
+  <section id="final-cta" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-4xl mx-auto px-6 text-center reveal">
+      <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="final.hook">CDMX 2026</p>
+      <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4" style="color:var(--text-primary);" data-i18n-html="final.title">
+        13 directivos. 1 (R)Evolucion Digital.<br/>CDMX 2026.
+      </h2>
+      <div class="gold-divider"></div>
+      <p class="text-lg mb-10 max-w-xl mx-auto mt-4" style="color:var(--text-secondary);" data-i18n="final.body">
+        Las plazas son limitadas. La oportunidad, tambien.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <button onclick="openModal('reserve')" class="btn-gold text-base py-4 px-8">
+          <i data-lucide="rocket" class="w-5 h-5"></i>
+          <span data-i18n="final.cta1">Reservar Plaza</span>
+        </button>
+        <button onclick="openModal('workshop')" class="btn-ghost text-base py-4 px-8">
+          <i data-lucide="play-circle" class="w-5 h-5"></i>
+          <span data-i18n="final.cta2">Probar Gratis</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 16: FOOTER
+       ==================================================================== -->
+  <footer class="py-12" style="background:var(--bg-primary);border-top:1px solid var(--border-color);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="logoGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+            <rect width="36" height="36" rx="10" fill="url(#logoGrad2)"/>
+            <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+            <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+          </svg>
+          <span class="font-heading font-bold" style="color:var(--text-primary);">Metodolog<span class="gold-text">IA</span></span>
+        </div>
+        <!-- Disclaimer -->
+        <div class="text-center max-w-lg">
+          <p class="text-xs" style="color:var(--text-muted);" data-i18n="footer.disclaimer">
+            Innovation Mode: este documento fue generado con asistencia de IA y revisado por humanos. Los precios y condiciones estan sujetos a confirmacion final.
+          </p>
+        </div>
+        <!-- Contact -->
+        <div class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);">
+          <i data-lucide="mail" class="w-4 h-4" style="color:var(--gold);"></i>
+          <span>contacto@metodologia.info</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       MODALS
+       ==================================================================== -->
+
+  <!-- Reserve Modal -->
+  <div class="modal-overlay" id="modal-reserve">
+    <div class="modal-content">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);" data-i18n="modal.reserve.title">Reservar Plaza</h3>
+        <button onclick="closeModal('reserve')" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-yellow-400/10 transition">
+          <i data-lucide="x" class="w-5 h-5" style="color:var(--text-muted);"></i>
+        </button>
+      </div>
+      <p class="text-sm mb-6" style="color:var(--text-secondary);" data-i18n="modal.reserve.desc">
+        Complete el formulario y nos pondremos en contacto en menos de 24 horas para confirmar su plaza.
+      </p>
+      <div class="space-y-4">
+        <input type="text" placeholder="Nombre completo" class="form-input" data-i18n-placeholder="modal.reserve.name" />
+        <input type="email" placeholder="Correo electronico" class="form-input" data-i18n-placeholder="modal.reserve.email" />
+        <input type="text" placeholder="Empresa / Cargo" class="form-input" data-i18n-placeholder="modal.reserve.company" />
+        <select class="form-input">
+          <option value="" data-i18n="modal.reserve.interest">Programa de interes...</option>
+          <option value="workshop">Workshop Gratuito</option>
+          <option value="assistants">Asistentes a la Carte</option>
+          <option value="cao">CAO Bootcamp Creyentes</option>
+          <option value="empowerment">Programa Empoderamiento</option>
+        </select>
+        <select class="form-input">
+          <option value="" data-i18n="modal.reserve.modality">Modalidad preferida...</option>
+          <option value="solo" data-i18n="modal.reserve.modSolo">Solo (1:1)</option>
+          <option value="dupla" data-i18n="modal.reserve.modDupla">Dupla</option>
+          <option value="terna" data-i18n="modal.reserve.modTerna">Terna</option>
+        </select>
+        <textarea rows="3" placeholder="Mensaje (opcional)" class="form-input resize-none" data-i18n-placeholder="modal.reserve.msg"></textarea>
+      </div>
+      <button class="btn-gold w-full justify-center mt-6" onclick="submitReserveForm(this)">
+        <span data-i18n="modal.reserve.submit">Enviar Solicitud</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Workshop Modal -->
+  <div class="modal-overlay" id="modal-workshop">
+    <div class="modal-content">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);" data-i18n="modal.ws.title">Workshop Gratuito</h3>
+        <button onclick="closeModal('workshop')" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-yellow-400/10 transition">
+          <i data-lucide="x" class="w-5 h-5" style="color:var(--text-muted);"></i>
+        </button>
+      </div>
+      <p class="text-sm mb-4" style="color:var(--text-secondary);" data-i18n="modal.ws.desc">
+        "De Ocupado a Productivo con Agentes de IA" — Fecha por confirmar, 3 horas.
+      </p>
+      <p class="text-sm mb-6" style="color:var(--text-secondary);" data-i18n="modal.ws.desc2">
+        No es solo presentacion. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM.
+      </p>
+      <div class="space-y-4">
+        <input type="text" placeholder="Nombre completo" class="form-input" />
+        <input type="email" placeholder="Correo electronico" class="form-input" />
+        <input type="text" placeholder="Empresa / Cargo" class="form-input" />
+      </div>
+      <button class="btn-gold w-full justify-center mt-6" onclick="submitWorkshopForm(this)">
+        <span data-i18n="modal.ws.submit">Reservar Lugar</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Module Modal (Dynamic content) -->
+  <div class="modal-overlay" id="modal-module">
+    <div class="modal-content">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="font-heading text-xl font-bold" style="color:var(--text-primary);" id="module-modal-title"></h3>
+        <button onclick="closeModal('module')" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-yellow-400/10 transition">
+          <i data-lucide="x" class="w-5 h-5" style="color:var(--text-muted);"></i>
+        </button>
+      </div>
+      <div id="module-modal-body"></div>
+    </div>
+  </div>
+
+
+  <!-- Info Modal (generic, content set by JS) -->
+  <div class="modal-overlay" id="modal-info">
+    <div class="modal-content" style="max-width:520px;">
+      <div class="flex justify-between items-center mb-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:rgba(255,215,0,0.1);">
+            <i data-lucide="info" class="w-5 h-5" style="color:var(--gold);"></i>
+          </div>
+          <h3 class="font-heading text-lg font-bold" style="color:var(--text-primary);" id="info-modal-title"></h3>
+        </div>
+        <button onclick="closeModal('info')" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-yellow-400/10 transition">
+          <i data-lucide="x" class="w-5 h-5" style="color:var(--text-muted);"></i>
+        </button>
+      </div>
+      <div id="info-modal-body" class="text-sm leading-relaxed" style="color:var(--text-secondary);"></div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       JAVASCRIPT
+       ==================================================================== -->
+  <script>
+  /* ==================================================================
+     DATA: INFO MODALS — Contextual high-value content for every card
+     One entry per info-button. Key = unique card id.
+     Copywriting style: inform, never sell. High-ticket advisory voice.
+     ================================================================== */
+  const infoData = {
+    // ── JOURNEY LEVELS ──
+    'level-0': {
+      title_es: 'Sobre el Workshop Gratuito',
+      title_en: 'About the Free Workshop',
+      body_es: `<p class="mb-4">El workshop no es una charla motivacional ni una demo de producto. Es una sesion practica de 3 horas donde usted construye algo real.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Lo que sucede:</strong> En dupla con Gemini Gems y NotebookLM, creamos un agente basico con su contexto laboral real — sus tipos de reuniones, sus flujos de correo, sus decisiones recurrentes. Al salir, tiene un prototipo funcional, no un PDF.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Por que lo hacemos gratuito:</strong> Porque la mejor manera de explicar el trabajo agentico es vivirlo. Si despues de 3 horas decide que no es para usted, no ha invertido nada. Si decide continuar, ya tiene la base instalada.</p>
+        <p><strong style="color:var(--text-primary);">Dato relevante:</strong> Los ejecutivos que prueban herramientas antes de comprar tienen 3x mas probabilidad de adopcion sostenida que quienes solo ven presentaciones (indicative target, basado en experiencia de campo).</p>`,
+      body_en: `<p class="mb-4">The workshop is not a motivational talk or product demo. It's a practical 3-hour session where you build something real.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">What happens:</strong> Working with Gemini Gems and NotebookLM, we create a basic agent with your real work context — your meeting types, email flows, recurring decisions. You leave with a working prototype, not a PDF.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Why we do it free:</strong> Because the best way to explain agentic work is to experience it. If after 3 hours you decide it's not for you, you've invested nothing. If you continue, the foundation is already installed.</p>
+        <p><strong style="color:var(--text-primary);">Relevant data:</strong> Executives who try tools before buying have 3x higher sustained adoption than those who only see presentations (indicative target, based on field experience).</p>`
+    },
+    'level-1': {
+      title_es: 'Sobre los Asistentes a Medida',
+      title_en: 'About Custom Assistants',
+      body_es: `<p class="mb-4"><strong style="color:var(--text-primary);">Diferencia con los 13 del bootcamp:</strong> El CAO Bootcamp incluye 13 asistentes genericos que cubren productividad basica (task tracking, meeting analysis, planning, etc.). Son funcionales desde dia 1 y estan incluidos sin costo adicional.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Los asistentes a medida son otra cosa.</strong> Se disenan desde cero para su operacion especifica. Un asistente de QBR (Quarterly Business Review) no es lo mismo para una empresa de retail que para una de tecnologia. El de Strategic Planning no es igual si usted opera en 3 paises que en 1.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Que incluye cada $400 USD:</strong> 2 horas de diseno colaborativo + configuracion + entrenamiento con su contexto real. Documentacion, prompts calibrados y asistente operativo al cierre de la sesion.</p>
+        <p><strong style="color:var(--text-primary);">Ejemplos:</strong> QBR, Strategic Planning, OKR Tracking, KPI Tracking, Due Diligence, Budget Review, Competitor Analysis, Board Prep, Investor Relations. Cualquier caso de uso ejecutivo recurrente puede ser un asistente a medida.</p>`,
+      body_en: `<p class="mb-4"><strong style="color:var(--text-primary);">Difference from the 13 bootcamp assistants:</strong> The CAO Bootcamp includes 13 generic assistants covering basic productivity (task tracking, meeting analysis, planning, etc.). Functional from day 1, included at no extra cost.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Custom assistants are different.</strong> Built from scratch for your specific operation. A QBR (Quarterly Business Review) assistant is not the same for a retail company as for a tech company. Strategic Planning differs if you operate in 3 countries vs 1.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">What each $400 USD includes:</strong> 2 hours of collaborative design + configuration + training with your real context. Documentation, calibrated prompts, and operational assistant at session close.</p>
+        <p><strong style="color:var(--text-primary);">Examples:</strong> QBR, Strategic Planning, OKR Tracking, KPI Tracking, Due Diligence, Budget Review, Competitor Analysis, Board Prep, Investor Relations. Any recurring executive use case can become a custom assistant.</p>`
+    },
+    'svc-agents': {
+      title_es: 'Sobre los Agentes Autonomos',
+      title_en: 'About Autonomous Agents',
+      body_es: `<p class="mb-4"><strong style="color:var(--text-primary);">Asistente vs Agente:</strong> Un asistente responde cuando usted le pregunta. Un agente ejecuta autonomamente: monitorea, decide, actua y reporta. Es la diferencia entre tener un analista que espera instrucciones y uno que toma iniciativa dentro de reglas claras.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Por que el rango $2,000 - $8,000:</strong> El precio depende de 5 factores: (1) estrategia — que debe lograr el agente, (2) infraestructura — donde opera y con que se conecta, (3) funcionalidades — cuantas tareas ejecuta, (4) personalizaciones — que tan especifico es el contexto, (5) particularidades — integraciones, seguridad, compliance.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Proceso:</strong> Siempre inicia con un Discovery donde tasamos el tamano real del proyecto. No cotizamos a ciegas. El discovery nos permite entender complejidad real vs percibida y disenar la solucion correcta.</p>
+        <p><strong style="color:var(--text-primary);">Plataformas:</strong> Claude Cowork, VS Code, Codex, Antigravity (requieren licencia del usuario). Automatizaciones: n8n, Make, Zapier, Power Automate, Copilot Studio, Google Agent Space. Siempre fixed-price, llave en mano.</p>`,
+      body_en: `<p class="mb-4"><strong style="color:var(--text-primary);">Assistant vs Agent:</strong> An assistant responds when you ask. An agent executes autonomously: monitors, decides, acts and reports. It's the difference between an analyst waiting for instructions and one taking initiative within clear rules.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Why the $2,000 - $8,000 range:</strong> Price depends on 5 factors: (1) strategy — what the agent must achieve, (2) infrastructure — where it operates and connects, (3) capabilities — how many tasks it executes, (4) customizations — how specific the context is, (5) particularities — integrations, security, compliance.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Process:</strong> Always starts with Discovery to size the real project. We don't quote blindly. Discovery lets us understand real vs perceived complexity and design the right solution.</p>
+        <p><strong style="color:var(--text-primary);">Platforms:</strong> Claude Cowork, VS Code, Codex, Antigravity (require user license). Automations: n8n, Make, Zapier, Power Automate, Copilot Studio, Google Agent Space. Always fixed-price, turnkey.</p>`
+    },
+    'level-2': {
+      title_es: 'Sobre el CAO Bootcamp',
+      title_en: 'About the CAO Bootcamp',
+      body_es: `<p class="mb-4">CAO = Chief Agentic Officer. No es un titulo formal — es una mentalidad: el directivo que decide que la IA trabaje para el, no al reves.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Por que $1,500 y no $2,500:</strong> La "Edicion Creyentes" es un precio exclusivo para la comunidad de directivos aliados en CDMX. A cambio pedimos retroalimentacion honesta y permiso para documentar resultados (anonimos si lo prefiere). Una vez consolidada la comunidad, el precio vuelve a $2,500.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Que lo hace diferente:</strong> La mayoria de programas de IA ensenan conceptos. Este instala un sistema operativo. Usted termina con un agente propio, 13 asistentes operativos, un segundo cerebro digital y un IDE configurado. Son activos que le pertenecen y siguen funcionando despues de que nos vamos.</p>
+        <p><strong style="color:var(--text-primary);">Estructura:</strong> 9 talleres de 2 horas en 3-6 semanas. Ritmo adaptado a su agenda. No hay tareas entre sesiones — todo se construye en vivo. En Q3 2026, reunion de networking con todos los directivos del programa.</p>`,
+      body_en: `<p class="mb-4">CAO = Chief Agentic Officer. It's not a formal title — it's a mindset: the executive who decides AI works for them, not the other way around.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Why $1,500 and not $2,500:</strong> The "Believers Edition" is an exclusive price for the community of allied executives in Mexico City. In exchange, we ask for honest feedback and permission to document results (anonymous if preferred). Once the community is consolidated, the price returns to $2,500.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">What makes it different:</strong> Most AI programs teach concepts. This one installs an operating system. You finish with your own agent, 13 operational assistants, a digital second brain, and a configured IDE. These are assets that belong to you and keep working after we leave.</p>
+        <p><strong style="color:var(--text-primary);">Structure:</strong> 9 two-hour workshops over 3-6 weeks. Pace adapted to your schedule. No homework between sessions — everything is built live. In Q3 2026, networking gathering with all program executives.</p>`
+    },
+    'level-3': {
+      title_es: 'Sobre el Programa de Empoderamiento',
+      title_en: 'About the Empowerment Program',
+      body_es: `<p class="mb-4">Este es el programa mas profundo de MetodologIA. 16 semanas de trabajo sostenido para directivos que quieren ir mas alla de la productividad personal y posicionar su marca y liderazgo en el mercado.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Prerequisitos:</strong> Gerente o superior, 10+ anos de trayectoria, conocimiento basico de IA y gerencia. No es para principiantes — es para directivos que ya operan con IA y quieren escalar.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Por que 13 plazas:</strong> Para mantener la intimidad. Cada participante recibe atencion personalizada. El grupo se convierte en un circulo de confianza de directivos con intereses similares.</p>
+        <p><strong style="color:var(--text-primary);">Precio preferencial:</strong> Quienes vienen del CAO Bootcamp reciben 20% de descuento ($1,600 vs $2,000) y silla asegurada. No compiten por las 13 plazas — ya la tienen reservada.</p>`,
+      body_en: `<p class="mb-4">This is MetodologIA's deepest program. 16 weeks of sustained work for executives who want to go beyond personal productivity and position their brand and leadership in the market.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Prerequisites:</strong> Manager or above, 10+ years of experience, basic AI and management knowledge. Not for beginners — for executives already operating with AI who want to scale.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Why 13 seats:</strong> To maintain intimacy. Each participant receives personalized attention. The group becomes a trust circle of executives with similar interests.</p>
+        <p><strong style="color:var(--text-primary);">Preferential pricing:</strong> CAO Bootcamp alumni receive 20% discount ($1,600 vs $2,000) and a guaranteed seat. They don't compete for the 13 spots — they already have one reserved.</p>`
+    },
+    // ── MODALIDADES ──
+    'mod-solo': {
+      title_es: 'Sobre la Modalidad Solo',
+      title_en: 'About Solo Mode',
+      body_es: `<p class="mb-4">La modalidad 1:1 es la mas intensa. Cada minuto de las 18 horas esta dedicado exclusivamente a su contexto, sus desafios, su operacion.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Ventaja principal:</strong> Velocidad. Sin necesidad de consensuar con otros participantes. El facilitador se adapta 100% a su ritmo. Si un tema necesita mas tiempo, se extiende. Si otro ya lo domina, se salta.</p>
+        <p><strong style="color:var(--text-primary);">Ideal cuando:</strong> El directivo tiene una agenda muy comprimida, necesita confidencialidad total sobre su estrategia, o simplemente prefiere trabajar sin distracciones. La profundidad es maxima.</p>`,
+      body_en: `<p class="mb-4">The 1:1 modality is the most intense. Every minute of the 18 hours is exclusively dedicated to your context, challenges, and operation.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Main advantage:</strong> Speed. No need to align with other participants. The facilitator adapts 100% to your pace. If a topic needs more time, it extends. If you already master another, it's skipped.</p>
+        <p><strong style="color:var(--text-primary);">Ideal when:</strong> The executive has a very compressed schedule, needs total confidentiality about their strategy, or simply prefers working without distractions. Depth is maximum.</p>`
+    },
+    'mod-dupla': {
+      title_es: 'Sobre la Modalidad Dupla',
+      title_en: 'About Duo Mode',
+      body_es: `<p class="mb-4">La dupla es la modalidad mas equilibrada. Usted trabaja junto a su mano derecha — director, gerente, o la persona que ejecuta a su lado en el dia a dia.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Por que la recomendamos:</strong> Los habitos nuevos solo se sostienen cuando el entorno los refuerza. Si usted adopta un agente pero su primera linea no, las fricciones eliminan la ganancia. En dupla, ambos instalan el mismo lenguaje, las mismas herramientas, los mismos rituales.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Dinamica en sesion:</strong> Ambos participan activamente. Cada uno configura sus propios asistentes pero lo hacen juntos, viendo como sus flujos se conectan. El resultado es un equipo de 2 personas que opera como si fueran 6.</p>
+        <p><strong style="color:var(--text-primary);">Mismo precio:</strong> La dupla no cuesta mas. El valor para MetodologIA es mayor porque genera un caso de exito mas robusto y sostenible.</p>`,
+      body_en: `<p class="mb-4">The duo is the most balanced modality. You work alongside your right hand — director, manager, or the person who executes beside you daily.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Why we recommend it:</strong> New habits only stick when the environment reinforces them. If you adopt an agent but your first line doesn't, friction eliminates the gains. In duo, both install the same language, tools, and rituals.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Session dynamics:</strong> Both participate actively. Each configures their own assistants but they do it together, seeing how their flows connect. The result is a 2-person team that operates as if they were 6.</p>
+        <p><strong style="color:var(--text-primary);">Same price:</strong> Duo doesn't cost more. The value for MetodologIA is greater because it generates a more robust and sustainable success case.</p>`
+    },
+    'mod-terna': {
+      title_es: 'Sobre la Modalidad Terna',
+      title_en: 'About Trio Mode',
+      body_es: `<p class="mb-4">La terna es para el directivo que quiere que el cambio se propague desde el nucleo. Usted y 2 aliados clave — las personas con quienes trabaja dia a dia en alguna de sus empresas.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">El efecto de red:</strong> Tres personas alineadas con el mismo lenguaje agentico generan un momentum que una persona sola no puede. Las decisiones se aceleran, el seguimiento se automatiza entre los tres, y el sistema se auto-refuerza.</p>
+        <p><strong style="color:var(--text-primary);">Requisito clave:</strong> Los tres deben trabajar juntos activamente. No vale invitar a un amigo de otra empresa. El valor esta en que el equipo real adopta el sistema real, en el contexto real.</p>`,
+      body_en: `<p class="mb-4">Trio is for the executive who wants change to propagate from the core. You and 2 key allies — the people you work with daily at one of your companies.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">The network effect:</strong> Three people aligned with the same agentic language generate momentum that one person alone cannot. Decisions accelerate, follow-up automates across the three, and the system self-reinforces.</p>
+        <p><strong style="color:var(--text-primary);">Key requirement:</strong> All three must actively work together. You can't invite a friend from another company. The value lies in the real team adopting the real system in the real context.</p>`
+    },
+    // ── SERVICIOS AVANZADOS ──
+    'svc-cowork': {
+      title_es: 'Sobre Agentizar en Claude Cowork',
+      title_en: 'About Agentizing in Claude Cowork',
+      body_es: `<p class="mb-4">Agentizar significa llevar un asistente del nivel "responde cuando le pregunto" al nivel "ejecuta autonomamente y me reporta". Es la diferencia entre tener un empleado que espera instrucciones y uno que toma iniciativa.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Que implica tecnicamente:</strong> Configuramos el asistente dentro de Claude Cowork (plataforma de Anthropic) con herramientas, memoria persistente y capacidad de ejecutar flujos multi-paso. Usted define las reglas, el agente opera dentro de esas reglas.</p>
+        <p><strong style="color:var(--text-primary);">Requisito del usuario:</strong> Licencia activa de Claude ($20-100 USD/mes segun plan). MetodologIA no gestiona ni costea esta licencia — es responsabilidad del ejecutivo.</p>`,
+      body_en: `<p class="mb-4">Agentizing means taking an assistant from "responds when I ask" level to "executes autonomously and reports to me" level. It's the difference between an employee waiting for instructions and one taking initiative.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">What it means technically:</strong> We configure the assistant within Claude Cowork (Anthropic's platform) with tools, persistent memory and multi-step flow capabilities. You define the rules, the agent operates within those rules.</p>
+        <p><strong style="color:var(--text-primary);">User requirement:</strong> Active Claude license ($20-100 USD/month depending on plan). MetodologIA does not manage or cover this license — it is the executive's responsibility.</p>`
+    },
+    'svc-ide': {
+      title_es: 'Sobre Agentizar en IDE',
+      title_en: 'About Agentizing in IDE',
+      body_es: `<p class="mb-4">Un IDE (Entorno de Desarrollo Integrado) como VS Code, Codex o Antigravity no es solo para programadores. Es un espacio de trabajo donde un agente puede leer archivos, ejecutar comandos, conectarse a APIs y automatizar flujos complejos.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">El ejemplo de Pristino:</strong> El agente Pristino opera dentro de un IDE. Lee sus documentos, prepara reportes, ejecuta analisis, conecta con sus herramientas. En el Nivel 1 del bootcamp, usted aprende a instalarlo en local — esa es la base para cualquier agentizacion posterior.</p>
+        <p><strong style="color:var(--text-primary);">Capa gratuita:</strong> VS Code, Codex y Antigravity ofrecen capas gratuitas suficientes para operar. Las licencias de pago desbloquean capacidades adicionales pero no son estrictamente necesarias para comenzar.</p>`,
+      body_en: `<p class="mb-4">An IDE (Integrated Development Environment) like VS Code, Codex or Antigravity is not just for programmers. It's a workspace where an agent can read files, execute commands, connect to APIs and automate complex flows.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">The Pristino example:</strong> The Pristino agent operates within an IDE. It reads your documents, prepares reports, runs analyses, connects to your tools. At Level 1, you learn to install it locally — that's the foundation for any further agentization.</p>
+        <p><strong style="color:var(--text-primary);">Free tier:</strong> VS Code, Codex and Antigravity all offer free tiers sufficient to operate. Paid licenses unlock additional capabilities but are not strictly necessary to start.</p>`
+    },
+    'svc-auto': {
+      title_es: 'Sobre Automatizaciones a Medida',
+      title_en: 'About Custom Automations',
+      body_es: `<p class="mb-4">Cuando sus necesidades van mas alla de asistentes individuales y requieren flujos automatizados que conecten multiples sistemas, entramos en territorio de automatizacion a medida.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Herramientas que manejamos:</strong></p>
+        <ul class="list-disc pl-5 mb-4 space-y-1">
+          <li><strong>Aceleradores:</strong> n8n, Make, Zapier</li>
+          <li><strong>Microsoft:</strong> Power Automate, Power Apps, Copilot Studio, Microsoft 365 Copilot</li>
+          <li><strong>Google:</strong> Workspace, Agent Space, AppSheet</li>
+        </ul>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Proceso:</strong> Siempre empieza con un Discovery (diagnostico). No cotizamos sin entender. Despues del discovery, presentamos un proyecto fixed-price, llave en mano, con alcance claro y entregables definidos.</p>
+        <p><strong style="color:var(--text-primary);">Ejemplo:</strong> Un directivo quiere que cuando un cliente envie un correo con una solicitud, automaticamente se cree un ticket, se asigne al responsable, se le notifique por Slack y se actualice el dashboard. Eso es automatizacion a medida.</p>`,
+      body_en: `<p class="mb-4">When your needs go beyond individual assistants and require automated flows connecting multiple systems, we enter custom automation territory.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Tools we work with:</strong></p>
+        <ul class="list-disc pl-5 mb-4 space-y-1">
+          <li><strong>Accelerators:</strong> n8n, Make, Zapier</li>
+          <li><strong>Microsoft:</strong> Power Automate, Power Apps, Copilot Studio, Microsoft 365 Copilot</li>
+          <li><strong>Google:</strong> Workspace, Agent Space, AppSheet</li>
+        </ul>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Process:</strong> Always starts with Discovery (diagnosis). We don't quote without understanding. After discovery, we present a fixed-price turnkey project with clear scope and defined deliverables.</p>
+        <p><strong style="color:var(--text-primary);">Example:</strong> An executive wants that when a client sends an email request, a ticket is automatically created, assigned to the owner, Slack-notified, and the dashboard updated. That's custom automation.</p>`
+    },
+    'svc-dev': {
+      title_es: 'Sobre Desarrollo de Software con IA',
+      title_en: 'About AI Software Development',
+      body_es: `<p class="mb-4">Cuando necesita una solucion que no existe en ningun producto del mercado — un sistema hecho a medida que resuelve un problema especifico de su operacion.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Mismo proceso:</strong> Discovery primero, cotizacion despues. El discovery nos permite entender la complejidad real, no la percibida. Muchos proyectos que parecen complejos resultan simples con las herramientas correctas — y viceversa.</p>
+        <p><strong style="color:var(--text-primary);">Con IA, no desde cero:</strong> El desarrollo moderno con IA permite construir en semanas lo que antes tomaba meses. Usamos agentes de codigo que aceleran la implementacion, reducen errores y permiten iterar rapidamente. El resultado es software funcional, no un prototipo eterno.</p>`,
+      body_en: `<p class="mb-4">When you need a solution that doesn't exist in any market product — a custom-built system that solves a specific problem in your operation.</p>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Same process:</strong> Discovery first, quote second. Discovery lets us understand real complexity, not perceived complexity. Many projects that seem complex turn out simple with the right tools — and vice versa.</p>
+        <p><strong style="color:var(--text-primary);">With AI, not from scratch:</strong> Modern AI-powered development allows building in weeks what used to take months. We use code agents that accelerate implementation, reduce errors and enable rapid iteration. The result is functional software, not an eternal prototype.</p>`
+    },
+    // ── INVESTMENT CARD ──
+    'investment': {
+      title_es: 'Sobre la Inversion',
+      title_en: 'About the Investment',
+      body_es: `<p class="mb-4"><strong style="color:var(--text-primary);">Desglose de valor incluido:</strong></p>
+        <ul class="list-disc pl-5 mb-4 space-y-1">
+          <li>13 asistentes de productividad (valor individual: $5,200 USD)</li>
+          <li>Agente Pristino Open Source (configurado, personalizado, suyo)</li>
+          <li>Segundo cerebro digital en NotebookLM + Gemini</li>
+          <li>Exoesqueleto IDE configurado (Antigravity, Codex o VS Code)</li>
+          <li>9 entregables tangibles (uno por sesion)</li>
+          <li>Pack de prompts calibrados por dominio</li>
+          <li>Grabaciones de todas las sesiones (acceso de por vida)</li>
+          <li>Networking Q3 con directivos del programa</li>
+        </ul>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Lo que NO incluye:</strong> Licencias de IA (Gemini, ChatGPT, Claude — estimado $20-60 USD/mes, a cargo del ejecutivo). Sugerimos cuenta personal de Gmail para independencia total.</p>
+        <p><strong style="color:var(--text-primary);">Garantia:</strong> Devolucion del 100% si el servicio no cumple expectativas antes de completar las primeras 4 horas. Unica condicion: 1 hora de retroalimentacion estructurada.</p>`,
+      body_en: `<p class="mb-4"><strong style="color:var(--text-primary);">Included value breakdown:</strong></p>
+        <ul class="list-disc pl-5 mb-4 space-y-1">
+          <li>13 productivity assistants (individual value: $5,200 USD)</li>
+          <li>Pristino Open Source Agent (configured, personalized, yours)</li>
+          <li>Digital second brain on NotebookLM + Gemini</li>
+          <li>Configured IDE exoskeleton (Antigravity, Codex or VS Code)</li>
+          <li>9 tangible deliverables (one per session)</li>
+          <li>Domain-calibrated prompt pack</li>
+          <li>All session recordings (lifetime access)</li>
+          <li>Q3 networking with program executives</li>
+        </ul>
+        <p class="mb-4"><strong style="color:var(--text-primary);">Not included:</strong> AI licenses (Gemini, ChatGPT, Claude — estimated $20-60 USD/month, executive's responsibility). Personal Gmail account recommended for full independence.</p>
+        <p><strong style="color:var(--text-primary);">Guarantee:</strong> 100% refund if the service does not meet expectations before completing the first 4 hours. One condition: 1 hour of structured feedback.</p>`
+    }
+  };
+
+  function openInfo(key) {
+    const d = infoData[key];
+    if (!d) return;
+    const lang = document.documentElement.lang || 'es';
+    document.getElementById('info-modal-title').textContent = lang === 'en' ? d.title_en : d.title_es;
+    document.getElementById('info-modal-body').innerHTML = lang === 'en' ? d.body_en : d.body_es;
+    openModal('info');
+  }
+
+  /* ==================================================================
+     DATA: 9 MODULES
+     ================================================================== */
+  const modulesData = [
+    {
+      id: 1, phase: 1, num: '01',
+      title_es: 'KYC con IA: Conozca a su cliente como nunca',
+      title_en: 'AI KYC: Know your customer like never before',
+      method_es: 'Know Your Customer + Business Model Canvas + Market Research con IA',
+      method_en: 'Know Your Customer + Business Model Canvas + AI Market Research',
+      work_es: 'Perfile clientes, segmentos, mercados con IA. Canvas de modelo de negocio. Identifique gaps, oportunidades y dependencias que antes tomaban semanas.',
+      work_en: 'Profile customers, segments, markets with AI. Business model canvas. Identify gaps, opportunities and dependencies that used to take weeks.',
+      deliverable_es: 'KYC Dashboard + Business Model Canvas digital',
+      deliverable_en: 'KYC Dashboard + Digital Business Model Canvas',
+      assistant_es: 'Analista de Mercado',
+      assistant_en: 'Market Analyst',
+      icon: 'scan-line'
+    },
+    {
+      id: 2, phase: 1, num: '02',
+      title_es: 'Due Diligence con IA: Investigue, valide, decida',
+      title_en: 'AI Due Diligence: Research, validate, decide',
+      method_es: 'Due Diligence Framework + Market Research + Competitive Intelligence con IA',
+      method_en: 'Due Diligence Framework + Market Research + AI Competitive Intelligence',
+      work_es: 'Evaluar proveedores, aliados, mercados y competencia en horas, no semanas. Construya dossiers de investigacion con IA que antes requerian un equipo completo.',
+      work_en: 'Evaluate suppliers, partners, markets and competition in hours, not weeks. Build research dossiers with AI that previously required a full team.',
+      deliverable_es: 'Dossier de Due Diligence + Matriz de Evaluacion',
+      deliverable_en: 'Due Diligence Dossier + Evaluation Matrix',
+      assistant_es: 'Investigador Estrategico',
+      assistant_en: 'Strategic Researcher',
+      icon: 'search'
+    },
+    {
+      id: 3, phase: 1, num: '03',
+      title_es: 'Automatice correos, agenda y seguimiento',
+      title_en: 'Automate emails, calendar & follow-ups',
+      method_es: 'Lean Personal + GTD + Auditoria de Fricciones',
+      method_en: 'Lean Personal + GTD + Friction Audit',
+      work_es: 'Agente clasifica, prioriza, responde borradores, hace follow-up. Libere 5+ horas/semana.',
+      work_en: 'Agent classifies, prioritizes, drafts responses, handles follow-up. Free 5+ hours/week.',
+      deliverable_es: 'Sistema de Gestion de Comunicaciones',
+      deliverable_en: 'Communications Management System',
+      assistant_es: 'Auditor de Productividad',
+      assistant_en: 'Productivity Auditor',
+      icon: 'mail'
+    },
+    {
+      id: 4, phase: 2, num: '04',
+      title_es: 'Segundo cerebro: Ordene su espacio digital',
+      title_en: 'Second brain: Organize your digital space',
+      method_es: 'Zettelkasten + NotebookLM Architecture',
+      method_en: 'Zettelkasten + NotebookLM Architecture',
+      work_es: 'Organice repos, docs, decisiones para que la IA y usted encuentren todo.',
+      work_en: 'Organize repos, docs, decisions so AI and you can find everything.',
+      deliverable_es: 'Arquitectura de Segundo Cerebro',
+      deliverable_en: 'Second Brain Architecture',
+      assistant_es: 'Arquitecto Digital',
+      assistant_en: 'Digital Architect',
+      icon: 'database'
+    },
+    {
+      id: 5, phase: 2, num: '05',
+      title_es: 'Prompts para hacer cualquier cosa',
+      title_en: 'Prompts to do anything',
+      method_es: 'Prompt Engineering Framework (Rol + Contexto + Tarea + Formato + Restricciones)',
+      method_en: 'Prompt Engineering Framework (Role + Context + Task + Format + Constraints)',
+      work_es: 'Desde analizar un contrato hasta preparar una negociacion. Framework replicable.',
+      work_en: 'From analyzing a contract to preparing a negotiation. Replicable framework.',
+      deliverable_es: 'Pack de 50+ Prompts Calibrados',
+      deliverable_en: '50+ Calibrated Prompts Pack',
+      assistant_es: 'Ingeniero de Prompts',
+      assistant_en: 'Prompt Engineer',
+      icon: 'message-square-code'
+    },
+    {
+      id: 6, phase: 2, num: '06',
+      title_es: 'Asistentes de IA hechos a su medida',
+      title_en: 'Custom-built AI assistants',
+      method_es: 'Agent Design + Prompt Engineering',
+      method_en: 'Agent Design + Prompt Engineering',
+      work_es: 'Configure 13 asistentes que operan con su contexto, su tono, sus reglas. Agente Pristino personalizado.',
+      work_en: 'Configure 13 assistants that operate with your context, tone, and rules. Personalized Pristino Agent.',
+      deliverable_es: 'Suite de 13 Asistentes Operativos',
+      deliverable_en: 'Suite of 13 Operational Assistants',
+      assistant_es: 'Meta-Asistente IA',
+      assistant_en: 'AI Meta-Assistant',
+      icon: 'bot'
+    },
+    {
+      id: 7, phase: 3, num: '07',
+      title_es: 'Aprenda a aprender con IA',
+      title_en: 'Learn to learn with AI',
+      method_es: 'Active Learning + Knowledge Extraction',
+      method_en: 'Active Learning + Knowledge Extraction',
+      work_es: 'Consuma libros, podcasts, papers, reuniones. Extraiga conocimiento accionable en minutos.',
+      work_en: 'Consume books, podcasts, papers, meetings. Extract actionable knowledge in minutes.',
+      deliverable_es: 'Sistema de Aprendizaje Acelerado',
+      deliverable_en: 'Accelerated Learning System',
+      assistant_es: 'Curador de Conocimiento',
+      assistant_en: 'Knowledge Curator',
+      icon: 'graduation-cap'
+    },
+    {
+      id: 8, phase: 3, num: '08',
+      title_es: 'Dashboards con IA: Finanzas, proyectos, estrategia',
+      title_en: 'AI Dashboards: Finance, projects, strategy',
+      method_es: 'Financial Analysis + Dashboard Design + Strategy Planning con IA',
+      method_en: 'Financial Analysis + Dashboard Design + AI Strategy Planning',
+      work_es: 'Cree dashboards vivos de finanzas, proyectos, areas y unidades de negocio. Analisis financiero con IA: presupuestos, cash flow, margenes. Planificacion estrategica visual. Sin Excel manual.',
+      work_en: 'Build live dashboards for finance, projects, areas and business units. AI financial analysis: budgets, cash flow, margins. Visual strategic planning. No manual Excel.',
+      deliverable_es: 'Dashboard Ejecutivo (Finanzas + Estrategia + Proyectos)',
+      deliverable_en: 'Executive Dashboard (Finance + Strategy + Projects)',
+      assistant_es: 'Analista Financiero y Estrategico',
+      assistant_en: 'Financial & Strategic Analyst',
+      icon: 'bar-chart-3'
+    },
+    {
+      id: 9, phase: 3, num: '09',
+      title_es: 'Visibilidad y networking amplificado',
+      title_en: 'Amplified visibility & networking',
+      method_es: 'Personal Branding + Networking Strategy + Content Strategy',
+      method_en: 'Personal Branding + Networking Strategy + Content Strategy',
+      work_es: 'Marca personal con IA. Genere contenido, conecte estrategicamente, mida impacto.',
+      work_en: 'AI-powered personal brand. Generate content, connect strategically, measure impact.',
+      deliverable_es: 'Estrategia GTM Personal',
+      deliverable_en: 'Personal GTM Strategy',
+      assistant_es: 'Estratega de Visibilidad',
+      assistant_en: 'Visibility Strategist',
+      icon: 'eye'
+    }
+  ];
+
+  /* ==================================================================
+     ASSISTANT NAMES (for configurator)
+     ================================================================== */
+  const assistantNames = [
+    { es: 'Estratega de Modelo', en: 'Model Strategist' },
+    { es: 'Investigador Estrategico', en: 'Strategic Researcher' },
+    { es: 'Auditor de Productividad', en: 'Productivity Auditor' },
+    { es: 'Arquitecto Digital', en: 'Digital Architect' },
+    { es: 'Ingeniero de Prompts', en: 'Prompt Engineer' },
+    { es: 'Meta-Asistente IA', en: 'AI Meta-Assistant' },
+    { es: 'Curador de Conocimiento', en: 'Knowledge Curator' },
+    { es: 'Analista Financiero', en: 'Financial Analyst' },
+    { es: 'Estratega de Visibilidad', en: 'Visibility Strategist' },
+    { es: 'Consultor Legal IA', en: 'AI Legal Consultant' },
+    { es: 'Gestor de Proyectos', en: 'Project Manager' },
+    { es: 'Analista de Datos', en: 'Data Analyst' },
+    { es: 'Redactor Ejecutivo', en: 'Executive Writer' }
+  ];
+
+  /* ==================================================================
+     i18n DICTIONARIES
+     ================================================================== */
+  const i18n = {
+    es: {
+      'nav.journey': 'Journey',
+      'nav.programa': 'Programa',
+      'nav.modalidades': 'Modalidades',
+      'nav.roi': 'ROI',
+      'nav.invertir': 'Invertir',
+      'nav.exec': 'Exec',
+      'nav.full': 'Full',
+      'nav.cta': 'Reservar',
+      'hero.badge': 'Edicion Creyentes \u00b7 Solo 13 Plazas \u00b7 CDMX',
+      'hero.pre': 'Bootcamp Ejecutivo Modular',
+      'hero.sub': 'Chief Agentic Officer',
+      'hero.body': 'Su semana esta llena. Reuniones, reportes, seguimiento, correos. La IA puede ejecutar el 60% de eso. Este bootcamp no le ensena IA. Le disena e instala un sistema de trabajo agentico a medida — la puerta de entrada a la (r)evolucion digital que usted esperaba.',
+      'hero.kpi1': 'Contenido intensivo',
+      'hero.kpi2': 'Asistentes IA',
+      'hero.kpi3': 'Agente Propio',
+      'hero.kpi4': 'Semanas',
+      'hero.cta1': 'Reservar Plaza',
+      'hero.cta2': 'Probar Gratis',
+      'hero.card.label': 'Inversion CAO Bootcamp',
+      'hero.card.rate': '(tasa indicativa, sujeta a variacion)',
+      'hero.card.c1': '9 talleres x 2h (18h de contenido)',
+      'hero.card.c2': '13 asistentes IA personalizados',
+      'hero.card.c3': '1 agente Pristino propio',
+      'hero.card.c4': 'Networking Q3 ejecutivos CDMX',
+      'hero.card.c5': 'Valor separado: $5,200+ USD',
+      'hero.card.cta': 'Reservar Ahora',
+      'hero.punchline': 'Descubra como funciona',
+      'hook.hook': 'El Desafio',
+      'hook.title': 'Le suena familiar?',
+      'hook.p1.title': '12+ horas semanales en tareas operativas',
+      'hook.p1.desc': 'Correos, seguimiento, reportes, agendamiento. Actividades que no mueven la aguja pero consumen su dia.',
+      'hook.p2.title': 'Conocimiento disperso, decisiones lentas',
+      'hook.p2.desc': 'Informacion en 15 herramientas distintas. Cada decision requiere buscar, compilar, analizar manualmente.',
+      'hook.p3.title': 'La IA avanza; su operacion, no',
+      'hook.p3.desc': 'Cada semana hay una herramienta nueva. Pero sin sistema, es ruido. Con sistema, es ventaja competitiva.',
+      'hook.punchline': 'Ahora imagine esto...',
+      'vision.hook': 'La Vision',
+      'vision.title': 'Al dia 30',
+      'vision.v1.title': 'Su agente gestiona lo operativo',
+      'vision.v1.desc': 'Correos clasificados, borradores listos, follow-ups automaticos. Usted revisa y aprueba en minutos.',
+      'vision.v2.title': '13 asistentes trabajan con su contexto',
+      'vision.v2.desc': 'Cada asistente conoce su negocio, su tono, sus reglas. Desde finanzas hasta networking.',
+      'vision.v3.title': 'Segundo cerebro digital consolidado',
+      'vision.v3.desc': 'Todo su conocimiento, decisiones y documentos organizados. Busca y la IA encuentra en segundos.',
+      'vision.punchline': 'Empiece donde quiera',
+      'journey.hook': 'Su Camino',
+      'journey.title': '4 Niveles de Profundidad',
+      'journey.l0.tag': 'Workshop \u00b7 3 horas',
+      'journey.l0.title': 'Workshop Gratuito',
+      'journey.l0.tagline': 'Workshop Zero Risk',
+      'journey.l0.price': 'Gratis',
+      'journey.l0.desc': '"De Ocupado a Productivo con Agentes de IA". 3h, fecha por confirmar. No es solo presentacion. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM.',
+      'journey.l0.cta': 'Inscribirse',
+      'journey.l1.tag': 'A Medida',
+      'journey.l1.title': 'Asistentes a Medida',
+      'journey.l1.rate': '(tasa indicativa, sujeta a variacion)',
+      'journey.l1.desc': 'QBR, Strategic Planning, OKR Tracking, KPI Tracking y mas. Asistentes disenados para su operacion especifica. Los 13 asistentes base del bootcamp son gratuitos.',
+      'journey.l1.cta': 'Ver servicios',
+      'journey.l2.badge': 'Recomendado',
+      'journey.l2.tag': 'Bootcamp \u00b7 18h',
+      'journey.l2.tagline': 'CAO Bootcamp',
+      'journey.l2.title': 'Edicion Creyentes',
+      'journey.l2.rate': '(tasa indicativa, sujeta a variacion)',
+      'journey.l2.desc': '9 talleres x 2h. Incluye los 13 asistentes, agente Pristino, segundo cerebro digital, networking Q3 ejecutivos. Valor si se comprase por separado: $5,200+ USD.',
+      'journey.l2.cta': 'Reservar Plaza',
+      'journey.l3.tag': 'Programa \u00b7 16 semanas',
+      'journey.l3.tagline': 'Programa de Adopcion IA',
+      'journey.l3.title': 'Empoderamiento',
+      'journey.l3.rate': '(tasa indicativa, sujeta a variacion) con 20% desc. CAO',
+      'journey.l3.desc': '16 semanas. Inicia 3ra semana de mayo. 13 plazas. Requisitos: Gerente+, 10+ anos experiencia, conocimiento basico de IA.',
+      'journey.l3.cta': 'Configurar',
+      'journey.punchline': 'Vea que se trabaja en cada sesion',
+      'programa.hook': 'Programa',
+      'programa.title': '9 Casos de Uso Ejecutivos',
+      'programa.subtitle': 'Cada modulo es un caso de uso real. Haga clic en cualquier tarjeta para ver el detalle completo.',
+      'programa.phase1.tag': 'Fase 1',
+      'programa.phase1.title': 'Diagnostico y Cimiento',
+      'programa.phase1.note': 'Desde sesion 1: Agente Pristino instalado + primeros asistentes.',
+      'programa.phase2.tag': 'Fase 2',
+      'programa.phase2.title': 'Estrategia y Ejecucion',
+      'programa.phase2.note': 'Durante Fase 2: Segundo Cerebro Digital en NotebookLM.',
+      'programa.phase3.tag': 'Fase 3',
+      'programa.phase3.title': 'Escalamiento y Cierre',
+      'programa.phase3.note': 'Al cierre: Agente personalizado. Usted se lo lleva.',
+      'programa.punchline': 'Elija su modalidad',
+      'modalidades.hook': 'Modalidades',
+      'modalidades.title': 'Elija Como Participar',
+      'mod.solo.title': 'Solo (1:1)',
+      'mod.solo.desc': 'Maxima profundidad. Ritmo personal. Foco total.',
+      'mod.solo.note': 'Mismo precio en todas las modalidades',
+      'mod.dupla.badge': 'Recomendado',
+      'mod.dupla.title': 'Dupla',
+      'mod.dupla.desc': 'Consolida cambios operativos con quien ejecuta a su lado. Los habitos se instalan en el dia a dia real.',
+      'mod.dupla.note': 'Mismo precio. Trabajan juntos en una de las empresas del ejecutivo.',
+      'mod.terna.title': 'Terna',
+      'mod.terna.desc': '(R)Evolucion sincronizada. 3 personas = momentum imparable.',
+      'mod.terna.note': 'Mismo precio. Trabajan juntos en una de las empresas del ejecutivo.',
+      'mod.note': 'La dupla y la terna no reducen profundidad. La multiplican.',
+      'mod.punchline': 'Vea las metodologias',
+      'metodo.hook': 'Fundamentos',
+      'metodo.title': 'Metodologias Probadas',
+      'metodo.desc': 'Cada sesion integra marcos reconocidos a nivel mundial con herramientas de IA de ultima generacion.',
+      'metodo.punchline': 'Modele su inversion',
+      'roi.hook': 'Retorno',
+      'roi.title': 'Calculadora de ROI',
+      'roi.slider1.label': 'Horas/semana en tareas operativas',
+      'roi.slider2.label': 'Valor de su hora (USD)',
+      'roi.cap.title': 'Capacidades nuevas',
+      'roi.cap.1': 'Agente operativo propio',
+      'roi.cap.2': '13 asistentes calibrados',
+      'roi.cap.3': 'Segundo cerebro digital',
+      'roi.cap.4': 'Prompts calibrados 50+',
+      'roi.ben.title': 'Beneficios adicionales',
+      'roi.ben.1': 'Networking ejecutivo Q3',
+      'roi.ben.2': 'Marca personal amplificada',
+      'roi.ben.3': 'Dashboard financiero vivo',
+      'roi.ben.4': 'Sistema de aprendizaje acelerado',
+      'roi.results.title': 'Su Proyeccion',
+      'roi.results.note': '(meta indicativa)',
+      'roi.r1': 'Horas recuperadas/mes',
+      'roi.r2': 'Valor recuperado/mes (USD)',
+      'roi.r3': 'Semanas de payback',
+      'roi.r4': 'Valor anual (USD)',
+      'roi.punchline': 'Configure su experiencia',
+      'config.hook': 'Configurador',
+      'config.title': 'Configure su Experiencia',
+      'config.a.title': 'Asistentes a la Carte',
+      'config.a.price': '$400 USD c/u (tasa indicativa, sujeta a variacion)',
+      'config.b.title': 'CAO Bootcamp — Edicion Creyentes',
+      'config.b.rate': '(tasa indicativa, sujeta a variacion)',
+      'config.b.includes': 'Incluye los 13 asistentes + agente Pristino + segundo cerebro + networking',
+      'config.c.title': 'Programa de Empoderamiento',
+      'config.c.rate': '(tasa indicativa, sujeta a variacion)',
+      'config.c.desc': '16 semanas, 13 plazas. 20% descuento si incluye CAO Bootcamp.',
+      'config.summary.title': 'Resumen de Inversion',
+      'config.summary.savings': 'Ahorro',
+      'config.summary.total': 'Total',
+      'config.summary.rate': 'USD (tasa indicativa, sujeta a variacion)',
+      'config.summary.cta': 'Reservar Ahora',
+      'config.punchline': 'Lleve su operacion al siguiente nivel',
+      'servicios.hook': 'Servicios Avanzados',
+      'servicios.title': 'Mas Alla del Bootcamp',
+      'serv.1.title': 'Agentizar en Claude Cowork',
+      'serv.1.desc': 'Requisito: licencia Claude $20-100/mes. Configuramos su entorno de trabajo agentico completo en Claude.',
+      'serv.1.rate': '(tasa indicativa, sujeta a variacion)',
+      'serv.2.title': 'Agentizar en IDE',
+      'serv.2.desc': 'VS Code, Codex, Antigravity. Su entorno de desarrollo potenciado con agentes de IA.',
+      'serv.2.rate': '(tasa indicativa, sujeta a variacion)',
+      'serv.3.title': 'Automatizaciones a Medida',
+      'serv.3.pricing': 'Discovery + precio fijo',
+      'serv.3.desc': 'n8n, Make, Zapier, Power Automate, Power Apps, Copilot Studio, Microsoft 365 Copilot, Google Workspace, Agent Space, AppSheet.',
+      'serv.4.title': 'Desarrollo de Software con IA',
+      'serv.4.pricing': 'Discovery + precio fijo, llave en mano',
+      'serv.4.desc': 'Soluciones completas de software potenciadas con IA. Desde el discovery hasta la entrega final.',
+      'cond.hook': 'Condiciones',
+      'cond.title': 'Condiciones del Programa',
+      'cond.t1.label': 'Duracion',
+      'cond.t1.value': 'Roadmap a medida de N semanas (tipico 9-12 sem.)',
+      'cond.t2.label': 'Formato',
+      'cond.t2.value': '100% online. Min. 1 workshop de 2h/semana + 2h trabajo independiente. Compromiso de continuidad sin pausas.',
+      'cond.t3.label': 'Modalidades',
+      'cond.t3.value': 'Solo / Dupla / Terna — mismo precio',
+      'cond.t4.label': 'Inasistencia',
+      'cond.t4.value': '1ra ausencia justificada = $0. Cada semana sin actividad = $100 USD. Penalidades redimibles como descuento en futuras facturas. Protegen continuidad, no cobran de mas.',
+      'cond.t5.label': 'Garantia',
+      'cond.t5.value': 'Devolucion del 100% si el servicio no cumple expectativas antes de completar las primeras 4 horas. Unica condicion: 1 hora de retroalimentacion estructurada.',
+      'cond.t6.label': 'Pago',
+      'cond.t6.value': 'Previo al inicio del programa',
+      'stack.hook': 'Stack',
+      'stack.title': 'Stack Tecnologico',
+      'stack.th1': 'Herramienta',
+      'stack.th2': 'Costo Aprox.',
+      'stack.th3': 'Categoria',
+      'stack.essential': 'Esencial',
+      'stack.recommended': 'Recomendado',
+      'stack.free': 'Gratuito',
+      'stack.note': 'Nota: se recomienda Gmail personal para maximo aprovechamiento.',
+      'ws.badge': 'Nivel 0 — Gratuito',
+      'ws.title': 'De Ocupado a Productivo con Agentes de IA',
+      'ws.desc': 'No es solo presentacion. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM.',
+      'ws.date': 'Fecha por confirmar',
+      'ws.cta': 'Reservar Lugar',
+      'final.hook': 'CDMX 2026',
+      'final.body': 'Las plazas son limitadas. La oportunidad, tambien.',
+      'final.cta1': 'Reservar Plaza',
+      'final.cta2': 'Probar Gratis',
+      'footer.disclaimer': 'Innovation Mode: este documento fue generado con asistencia de IA y revisado por humanos. Los precios y condiciones estan sujetos a confirmacion final.',
+      'modal.reserve.title': 'Reservar Plaza',
+      'modal.reserve.desc': 'Complete el formulario y nos pondremos en contacto en menos de 24 horas para confirmar su plaza.',
+      'modal.reserve.name': 'Nombre completo',
+      'modal.reserve.email': 'Correo electronico',
+      'modal.reserve.company': 'Empresa / Cargo',
+      'modal.reserve.submit': 'Enviar Solicitud',
+      'modal.reserve.interest': 'Programa de interes...',
+      'modal.reserve.modality': 'Modalidad preferida...',
+      'modal.reserve.modSolo': 'Solo (1:1)',
+      'modal.reserve.modDupla': 'Dupla',
+      'modal.reserve.modTerna': 'Terna',
+      'modal.reserve.msg': 'Mensaje (opcional)',
+      'modal.ws.title': 'Workshop Gratuito',
+      'modal.ws.desc': '"De Ocupado a Productivo con Agentes de IA" — Fecha por confirmar, 3 horas.',
+      'modal.ws.desc2': 'No es solo presentacion. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM.',
+      'modal.ws.submit': 'Reservar Lugar',
+      'modal.mod.method': 'Metodologia',
+      'modal.mod.work': 'Trabajo',
+      'modal.mod.deliverable': 'Entregable',
+      'modal.mod.assistant': 'Asistente IA',
+    },
+    en: {
+      'nav.journey': 'Journey',
+      'nav.programa': 'Program',
+      'nav.modalidades': 'Modalities',
+      'nav.roi': 'ROI',
+      'nav.invertir': 'Invest',
+      'nav.exec': 'Exec',
+      'nav.full': 'Full',
+      'nav.cta': 'Reserve',
+      'hero.badge': 'Believers Edition \u00b7 Only 13 Seats \u00b7 CDMX',
+      'hero.pre': 'Modular Executive Bootcamp',
+      'hero.sub': 'Chief Agentic Officer',
+      'hero.body': 'Your week is full. Meetings, reports, follow-ups, emails. AI can execute 60% of that. This bootcamp doesn\'t teach you AI. It designs and installs a custom agentic work system — the gateway to the digital (r)evolution you\'ve been waiting for.',
+      'hero.kpi1': 'Intensive content',
+      'hero.kpi2': 'AI Assistants',
+      'hero.kpi3': 'Own Agent',
+      'hero.kpi4': 'Weeks',
+      'hero.cta1': 'Reserve Seat',
+      'hero.cta2': 'Try Free',
+      'hero.card.label': 'CAO Bootcamp Investment',
+      'hero.card.rate': '(indicative rate, subject to variation)',
+      'hero.card.c1': '9 workshops x 2h (18h of content)',
+      'hero.card.c2': '13 personalized AI assistants',
+      'hero.card.c3': '1 own Pristino agent',
+      'hero.card.c4': 'Q3 executive networking Mexico City',
+      'hero.card.c5': 'Separate value: $5,200+ USD',
+      'hero.card.cta': 'Reserve Now',
+      'hero.punchline': 'Discover how it works',
+      'hook.hook': 'The Challenge',
+      'hook.title': 'Sound familiar?',
+      'hook.p1.title': '12+ weekly hours on operational tasks',
+      'hook.p1.desc': 'Emails, follow-ups, reports, scheduling. Activities that don\'t move the needle but consume your day.',
+      'hook.p2.title': 'Scattered knowledge, slow decisions',
+      'hook.p2.desc': 'Information in 15 different tools. Each decision requires manual searching, compiling, analyzing.',
+      'hook.p3.title': 'AI advances; your operation doesn\'t',
+      'hook.p3.desc': 'Every week there\'s a new tool. But without a system, it\'s noise. With a system, it\'s competitive advantage.',
+      'hook.punchline': 'Now imagine this...',
+      'vision.hook': 'The Vision',
+      'vision.title': 'On day 30',
+      'vision.v1.title': 'Your agent handles operations',
+      'vision.v1.desc': 'Classified emails, ready drafts, automatic follow-ups. You review and approve in minutes.',
+      'vision.v2.title': '13 assistants work with your context',
+      'vision.v2.desc': 'Each assistant knows your business, your tone, your rules. From finance to networking.',
+      'vision.v3.title': 'Consolidated digital second brain',
+      'vision.v3.desc': 'All your knowledge, decisions and documents organized. Search and AI finds in seconds.',
+      'vision.punchline': 'Start wherever you want',
+      'journey.hook': 'Your Path',
+      'journey.title': '4 Levels of Depth',
+      'journey.l0.tag': 'Workshop \u00b7 3 hours',
+      'journey.l0.title': 'Free Workshop',
+      'journey.l0.tagline': 'Workshop Zero Risk',
+      'journey.l0.price': 'Free',
+      'journey.l0.desc': '"From Busy to Productive with AI Agents". 3h, date to be confirmed. Not just a presentation. We build an agent with your real work context, paired with Gemini Gems + NotebookLM.',
+      'journey.l0.cta': 'Sign Up',
+      'journey.l1.tag': 'Custom',
+      'journey.l1.title': 'Custom Assistants',
+      'journey.l1.rate': '(indicative rate, subject to variation)',
+      'journey.l1.desc': 'QBR, Strategic Planning, OKR Tracking, KPI Tracking and more. Designed for your specific operation. The 13 base bootcamp assistants are included free.',
+      'journey.l1.cta': 'View services',
+      'journey.l2.badge': 'Recommended',
+      'journey.l2.tag': 'Bootcamp \u00b7 18h',
+      'journey.l2.tagline': 'CAO Bootcamp',
+      'journey.l2.title': 'Believers Edition',
+      'journey.l2.rate': '(indicative rate, subject to variation)',
+      'journey.l2.desc': '9 workshops x 2h. Includes all 13 assistants, Pristino agent, digital second brain, Q3 executive networking. Value if purchased separately: $5,200+ USD.',
+      'journey.l2.cta': 'Reserve Seat',
+      'journey.l3.tag': 'Program \u00b7 16 weeks',
+      'journey.l3.tagline': 'AI Adoption Program',
+      'journey.l3.title': 'Empowerment',
+      'journey.l3.rate': '(indicative rate, subject to variation) with 20% CAO discount',
+      'journey.l3.desc': '16 weeks. Starts 3rd week of May. 13 seats. Requirements: Manager+, 10+ years experience, basic AI knowledge.',
+      'journey.l3.cta': 'Configure',
+      'journey.punchline': 'See what each session covers',
+      'programa.hook': 'Program',
+      'programa.title': '9 Executive Use Cases',
+      'programa.subtitle': 'Each module is a real use case. Click any card to see full details.',
+      'programa.phase1.tag': 'Phase 1',
+      'programa.phase1.title': 'Diagnosis & Foundation',
+      'programa.phase1.note': 'From session 1: Pristino Agent installed + first assistants.',
+      'programa.phase2.tag': 'Phase 2',
+      'programa.phase2.title': 'Strategy & Execution',
+      'programa.phase2.note': 'During Phase 2: Digital Second Brain in NotebookLM.',
+      'programa.phase3.tag': 'Phase 3',
+      'programa.phase3.title': 'Scaling & Closing',
+      'programa.phase3.note': 'At closing: Personalized agent. You take it with you.',
+      'programa.punchline': 'Choose your modality',
+      'modalidades.hook': 'Modalities',
+      'modalidades.title': 'Choose How to Participate',
+      'mod.solo.title': 'Solo (1:1)',
+      'mod.solo.desc': 'Maximum depth. Personal pace. Total focus.',
+      'mod.solo.note': 'Same price across all modalities',
+      'mod.dupla.badge': 'Recommended',
+      'mod.dupla.title': 'Duo',
+      'mod.dupla.desc': 'Consolidate operational changes with the person who executes by your side. Habits are installed in the real day-to-day.',
+      'mod.dupla.note': 'Same price. Work together at one of the executive\'s companies.',
+      'mod.terna.title': 'Trio',
+      'mod.terna.desc': 'Synchronized (r)evolution. 3 people = unstoppable momentum.',
+      'mod.terna.note': 'Same price. Work together at one of the executive\'s companies.',
+      'mod.note': 'The duo and trio don\'t reduce depth. They multiply it.',
+      'mod.punchline': 'See the methodologies',
+      'metodo.hook': 'Foundations',
+      'metodo.title': 'Proven Methodologies',
+      'metodo.desc': 'Each session integrates globally recognized frameworks with cutting-edge AI tools.',
+      'metodo.punchline': 'Model your investment',
+      'roi.hook': 'Return',
+      'roi.title': 'ROI Calculator',
+      'roi.slider1.label': 'Hours/week on operational tasks',
+      'roi.slider2.label': 'Hourly value (USD)',
+      'roi.cap.title': 'New capabilities',
+      'roi.cap.1': 'Own operative agent',
+      'roi.cap.2': '13 calibrated assistants',
+      'roi.cap.3': 'Digital second brain',
+      'roi.cap.4': '50+ calibrated prompts',
+      'roi.ben.title': 'Additional benefits',
+      'roi.ben.1': 'Q3 executive networking',
+      'roi.ben.2': 'Amplified personal brand',
+      'roi.ben.3': 'Live financial dashboard',
+      'roi.ben.4': 'Accelerated learning system',
+      'roi.results.title': 'Your Projection',
+      'roi.results.note': '(indicative target)',
+      'roi.r1': 'Hours recovered/month',
+      'roi.r2': 'Value recovered/month (USD)',
+      'roi.r3': 'Payback weeks',
+      'roi.r4': 'Annual value (USD)',
+      'roi.punchline': 'Configure your experience',
+      'config.hook': 'Configurator',
+      'config.title': 'Configure Your Experience',
+      'config.a.title': 'A la Carte Assistants',
+      'config.a.price': '$400 USD each (indicative rate, subject to variation)',
+      'config.b.title': 'CAO Bootcamp — Believers Edition',
+      'config.b.rate': '(indicative rate, subject to variation)',
+      'config.b.includes': 'Includes all 13 assistants + Pristino agent + second brain + networking',
+      'config.c.title': 'Empowerment Program',
+      'config.c.rate': '(indicative rate, subject to variation)',
+      'config.c.desc': '16 weeks, 13 seats. 20% discount if CAO Bootcamp included.',
+      'config.summary.title': 'Investment Summary',
+      'config.summary.savings': 'Savings',
+      'config.summary.total': 'Total',
+      'config.summary.rate': 'USD (indicative rate, subject to variation)',
+      'config.summary.cta': 'Reserve Now',
+      'config.punchline': 'Take your operation to the next level',
+      'servicios.hook': 'Advanced Services',
+      'servicios.title': 'Beyond the Bootcamp',
+      'serv.1.title': 'Agentize in Claude Cowork',
+      'serv.1.desc': 'Requirement: Claude license $20-100/month. We configure your complete agentic work environment in Claude.',
+      'serv.1.rate': '(indicative rate, subject to variation)',
+      'serv.2.title': 'Agentize in IDE',
+      'serv.2.desc': 'VS Code, Codex, Antigravity. Your development environment powered by AI agents.',
+      'serv.2.rate': '(indicative rate, subject to variation)',
+      'serv.3.title': 'Custom Automations',
+      'serv.3.pricing': 'Discovery + fixed price',
+      'serv.3.desc': 'n8n, Make, Zapier, Power Automate, Power Apps, Copilot Studio, Microsoft 365 Copilot, Google Workspace, Agent Space, AppSheet.',
+      'serv.4.title': 'AI Software Development',
+      'serv.4.pricing': 'Discovery + fixed price, turnkey',
+      'serv.4.desc': 'Complete software solutions powered by AI. From discovery to final delivery.',
+      'cond.hook': 'Conditions',
+      'cond.title': 'Program Conditions',
+      'cond.t1.label': 'Duration',
+      'cond.t1.value': 'Custom roadmap of N weeks (typically 9-12 wks)',
+      'cond.t2.label': 'Format',
+      'cond.t2.value': '100% online. Min. 1 workshop of 2h/week + 2h independent work. Continuity commitment, no pauses.',
+      'cond.t3.label': 'Modalities',
+      'cond.t3.value': 'Solo / Duo / Trio — same price',
+      'cond.t4.label': 'No-show',
+      'cond.t4.value': '1st justified absence = $0. Each week without activity = $100 USD. Penalties are redeemable as discounts on future invoices. They protect continuity, not overcharge.',
+      'cond.t5.label': 'Guarantee',
+      'cond.t5.value': '100% refund if the service does not meet expectations before completing the first 4 hours. Only condition: 1 hour of structured feedback.',
+      'cond.t6.label': 'Payment',
+      'cond.t6.value': 'Prior to program start',
+      'stack.hook': 'Stack',
+      'stack.title': 'Technology Stack',
+      'stack.th1': 'Tool',
+      'stack.th2': 'Approx. Cost',
+      'stack.th3': 'Category',
+      'stack.essential': 'Essential',
+      'stack.recommended': 'Recommended',
+      'stack.free': 'Free',
+      'stack.note': 'Note: personal Gmail recommended for maximum benefit.',
+      'ws.badge': 'Level 0 — Free',
+      'ws.title': 'From Busy to Productive with AI Agents',
+      'ws.desc': 'Not just a presentation. We build an agent with your real work context, paired with Gemini Gems + NotebookLM.',
+      'ws.date': 'Date to be confirmed',
+      'ws.cta': 'Reserve Spot',
+      'final.hook': 'CDMX 2026',
+      'final.body': 'Seats are limited. So is the opportunity.',
+      'final.cta1': 'Reserve Seat',
+      'final.cta2': 'Try Free',
+      'footer.disclaimer': 'Innovation Mode: this document was generated with AI assistance and reviewed by humans. Prices and conditions subject to final confirmation.',
+      'modal.reserve.title': 'Reserve Seat',
+      'modal.reserve.desc': 'Complete the form and we\'ll contact you within 24 hours to confirm your seat.',
+      'modal.reserve.name': 'Full name',
+      'modal.reserve.email': 'Email address',
+      'modal.reserve.company': 'Company / Role',
+      'modal.reserve.submit': 'Send Request',
+      'modal.reserve.interest': 'Program of interest...',
+      'modal.reserve.modality': 'Preferred modality...',
+      'modal.reserve.modSolo': 'Solo (1:1)',
+      'modal.reserve.modDupla': 'Duo',
+      'modal.reserve.modTerna': 'Trio',
+      'modal.reserve.msg': 'Message (optional)',
+      'modal.ws.title': 'Free Workshop',
+      'modal.ws.desc': '"From Busy to Productive with AI Agents" — Date to be confirmed, 3 hours.',
+      'modal.ws.desc2': 'Not just a presentation. We build an agent with your real work context, paired with Gemini Gems + NotebookLM.',
+      'modal.ws.submit': 'Reserve Spot',
+      'modal.mod.method': 'Methodology',
+      'modal.mod.work': 'Work',
+      'modal.mod.deliverable': 'Deliverable',
+      'modal.mod.assistant': 'AI Assistant',
+    }
+  };
+
+  /* i18n HTML entries */
+  const i18nHtml = {
+    es: { 'final.title': '13 directivos. 1 (R)Evolucion Digital.<br/>CDMX 2026.' },
+    en: { 'final.title': '13 executives. 1 Digital (R)Evolution.<br/>CDMX 2026.' }
+  };
+
+  /* ==================================================================
+     APPLICATION STATE
+     ================================================================== */
+  let currentLang = 'es';
+  let isDark = true;
+  let isFullView = true;
+  let caoSelected = false;
+  let empSelected = false;
+  let selectedAssistants = new Set();
+
+  /* ==================================================================
+     INITIALIZATION
+     ================================================================== */
+  document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
+    renderModuleCards();
+    renderAssistantChips();
+    calcROI();
+    updateConfig();
+    initScrollReveal();
+    initScrollProgress();
+    addAccessibility();
+  });
+
+  /* ==================================================================
+     SCROLL PROGRESS BAR
+     ================================================================== */
+  function initScrollProgress() {
+    const bar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = h > 0 ? (window.scrollY / h) * 100 : 0;
+      bar.style.width = pct + '%';
+    });
+  }
+
+  /* ==================================================================
+     SCROLL REVEAL (IntersectionObserver)
+     ================================================================== */
+  function initScrollReveal() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+
+  /* ==================================================================
+     THEME TOGGLE
+     ================================================================== */
+  function toggleTheme() {
+    isDark = !isDark;
+    document.documentElement.classList.toggle('light', !isDark);
+    document.documentElement.classList.toggle('dark', isDark);
+    document.getElementById('theme-dark').classList.toggle('active', isDark);
+    document.getElementById('theme-light').classList.toggle('active', !isDark);
+  }
+
+  /* ==================================================================
+     LANGUAGE TOGGLE
+     ================================================================== */
+  function toggleLang() {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    document.getElementById('lang-es').classList.toggle('active', currentLang === 'es');
+    document.getElementById('lang-en').classList.toggle('active', currentLang === 'en');
+    document.documentElement.lang = currentLang;
+    setLang(currentLang);
+  }
+
+  function setLang(lang) {
+    const dict = i18n[lang];
+    const dictHtml = i18nHtml[lang];
+
+    /* Update textContent */
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+
+    /* Update innerHTML */
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dictHtml && dictHtml[key] !== undefined) el.innerHTML = dictHtml[key];
+    });
+
+    /* Update placeholders */
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key] !== undefined) el.placeholder = dict[key];
+    });
+
+    /* Re-render dynamic content */
+    renderModuleCards();
+    renderAssistantChips();
+    updateConfig();
+  }
+
+  /* ==================================================================
+     VIEW TOGGLE (Exec / Full)
+     ================================================================== */
+  function toggleView() {
+    isFullView = !isFullView;
+    document.body.classList.toggle('view-full', isFullView);
+    document.getElementById('view-exec').classList.toggle('active', !isFullView);
+    document.getElementById('view-full').classList.toggle('active', isFullView);
+  }
+
+  /* ==================================================================
+     MODULE CARD RENDERING
+     ================================================================== */
+  function renderModuleCards() {
+    const lang = currentLang;
+    [1, 2, 3].forEach(phase => {
+      const grid = document.getElementById(`phase${phase}-grid`);
+      if (!grid) return;
+      grid.innerHTML = '';
+      modulesData.filter(m => m.phase === phase).forEach(m => {
+        const card = document.createElement('div');
+        card.className = 'glass p-6 rounded-2xl reveal visible cursor-pointer transition-all hover:scale-[1.02]';
+        card.onclick = () => openModuleModal(m.id);
+        card.innerHTML = `
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold"
+              style="background:rgba(255,215,0,0.1);color:var(--gold);">${m.num}</span>
+            <i data-lucide="${m.icon}" class="w-5 h-5" style="color:var(--gold);"></i>
+          </div>
+          <h4 class="font-heading font-semibold mb-2 text-sm" style="color:var(--text-primary);">
+            ${m['title_' + lang]}
+          </h4>
+          <p class="text-xs" style="color:var(--text-muted);">
+            ${lang === 'es' ? 'Asistente' : 'Assistant'}: ${m['assistant_' + lang]}
+          </p>
+          <p class="text-xs mt-2" style="color:var(--text-secondary);">
+            ${m['work_' + lang]}
+          </p>
+        `;
+        grid.appendChild(card);
+      });
+    });
+    lucide.createIcons();
+  }
+
+  /* ==================================================================
+     MODULE MODAL
+     ================================================================== */
+  function openModuleModal(id) {
+    const m = modulesData.find(mod => mod.id === id);
+    if (!m) return;
+    const lang = currentLang;
+    const dict = i18n[lang];
+
+    document.getElementById('module-modal-title').textContent = m['title_' + lang];
+    document.getElementById('module-modal-body').innerHTML = `
+      <div class="space-y-6">
+        <div class="glass p-5 rounded-xl">
+          <p class="text-xs uppercase tracking-wider font-bold mb-2" style="color:var(--gold);">
+            <i data-lucide="compass" class="w-3.5 h-3.5 inline mr-1"></i>${dict['modal.mod.method']}
+          </p>
+          <p class="text-sm" style="color:var(--text-secondary);">${m['method_' + lang]}</p>
+        </div>
+        <div class="glass p-5 rounded-xl">
+          <p class="text-xs uppercase tracking-wider font-bold mb-2" style="color:var(--gold);">
+            <i data-lucide="hammer" class="w-3.5 h-3.5 inline mr-1"></i>${dict['modal.mod.work']}
+          </p>
+          <p class="text-sm" style="color:var(--text-secondary);">${m['work_' + lang]}</p>
+        </div>
+        <div class="glass p-5 rounded-xl">
+          <p class="text-xs uppercase tracking-wider font-bold mb-2" style="color:var(--gold);">
+            <i data-lucide="package" class="w-3.5 h-3.5 inline mr-1"></i>${dict['modal.mod.deliverable']}
+          </p>
+          <p class="text-sm" style="color:var(--text-secondary);">${m['deliverable_' + lang]}</p>
+        </div>
+        <div class="glass p-5 rounded-xl">
+          <p class="text-xs uppercase tracking-wider font-bold mb-2" style="color:var(--gold);">
+            <i data-lucide="bot" class="w-3.5 h-3.5 inline mr-1"></i>${dict['modal.mod.assistant']}
+          </p>
+          <p class="text-sm" style="color:var(--text-secondary);">${m['assistant_' + lang]}</p>
+        </div>
+      </div>
+    `;
+    lucide.createIcons();
+    document.getElementById('modal-module').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  /* ==================================================================
+     MODAL OPEN / CLOSE
+     ================================================================== */
+  function openModal(name) {
+    document.getElementById('modal-' + name).classList.add('active');
+    document.body.style.overflow = 'hidden';
+    if (name === 'reserve') fireConfetti();
+  }
+
+  function closeModal(name) {
+    document.getElementById('modal-' + name).classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  /* Close on overlay click */
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal-overlay')) {
+      e.target.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+
+  /* Close on Escape key */
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.active').forEach(m => {
+        m.classList.remove('active');
+      });
+      document.body.style.overflow = '';
+    }
+  });
+
+  /* ══════════════════════════════════════════════════════════════
+     FORM SUBMISSION — builds mailto link from form fields
+     ══════════════════════════════════════════════════════════════ */
+  function submitReserveForm(btn) {
+    const modal = btn.closest('.modal-content');
+    const inputs = modal.querySelectorAll('.form-input');
+    const name = inputs[0]?.value || '';
+    const email = inputs[1]?.value || '';
+    const company = inputs[2]?.value || '';
+    const program = inputs[3]?.value || '';
+    const modality = inputs[4]?.value || '';
+    const message = inputs[5]?.value || '';
+    if (!name || !email) { inputs[0].focus(); return; }
+    const subject = encodeURIComponent('Reserva CAO Bootcamp Creyentes — CDMX 2026');
+    const body = encodeURIComponent(
+      'Nombre: ' + name + '\n' +
+      'Email: ' + email + '\n' +
+      'Empresa/Cargo: ' + company + '\n' +
+      'Programa: ' + program + '\n' +
+      'Modalidad: ' + modality + '\n' +
+      'Mensaje: ' + message
+    );
+    window.location.href = 'mailto:contacto@metodologia.info?subject=' + subject + '&body=' + body;
+  }
+
+  function submitWorkshopForm(btn) {
+    const modal = btn.closest('.modal-content');
+    const inputs = modal.querySelectorAll('.form-input');
+    const name = inputs[0]?.value || '';
+    const email = inputs[1]?.value || '';
+    const company = inputs[2]?.value || '';
+    if (!name || !email) { inputs[0].focus(); return; }
+    const subject = encodeURIComponent('Workshop Gratuito — De Ocupado a Productivo — CDMX 2026');
+    const body = encodeURIComponent(
+      'Nombre: ' + name + '\n' +
+      'Email: ' + email + '\n' +
+      'Empresa/Cargo: ' + company
+    );
+    window.location.href = 'mailto:contacto@metodologia.info?subject=' + subject + '&body=' + body;
+  }
+
+  /* ══════════════════════════════════════════════════════════════
+     ACCESSIBILITY — add ARIA attributes after DOM ready
+     ══════════════════════════════════════════════════════════════ */
+  function addAccessibility() {
+    // Modals
+    document.querySelectorAll('.modal-overlay').forEach(m => {
+      m.setAttribute('role', 'dialog');
+      m.setAttribute('aria-modal', 'true');
+      const title = m.querySelector('h3');
+      if (title) {
+        const id = 'aria-' + m.id;
+        title.id = id;
+        m.setAttribute('aria-labelledby', id);
+      }
+    });
+    // Nav
+    const nav = document.querySelector('nav');
+    if (nav) nav.setAttribute('aria-label', 'Main navigation');
+    // Buttons without text
+    document.querySelectorAll('button:not([aria-label])').forEach(btn => {
+      if (!btn.textContent.trim()) {
+        btn.setAttribute('aria-label', 'Close');
+      }
+    });
+    // Images/icons
+    document.querySelectorAll('svg:not([aria-hidden])').forEach(svg => {
+      svg.setAttribute('aria-hidden', 'true');
+    });
+    // Sliders
+    document.querySelectorAll('input[type="range"]').forEach(s => {
+      if (!s.getAttribute('aria-label')) {
+        const label = s.closest('div')?.querySelector('span, div')?.textContent || 'Slider';
+        s.setAttribute('aria-label', label);
+      }
+    });
+  }
+
+  /* ==================================================================
+     CONFETTI EFFECT
+     ================================================================== */
+  function fireConfetti() {
+    const colors = ['#FFD700', '#FFA000', '#FFE44D', '#0B2545', '#163A6A', '#FFFFFF'];
+    for (let i = 0; i < 80; i++) {
+      const piece = document.createElement('div');
+      piece.className = 'confetti-piece';
+      piece.style.left = Math.random() * 100 + 'vw';
+      piece.style.top = '-10px';
+      piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+      const size = Math.random() * 8 + 4;
+      piece.style.width = size + 'px';
+      piece.style.height = size + 'px';
+      document.body.appendChild(piece);
+
+      const destX = (Math.random() - 0.5) * 500;
+      const destY = Math.random() * 700 + 200;
+      const rot = Math.random() * 720;
+      const dur = Math.random() * 1800 + 1000;
+
+      piece.animate([
+        { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
+        { transform: `translate(${destX}px, ${destY}px) rotate(${rot}deg)`, opacity: 0 }
+      ], {
+        duration: dur,
+        easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+      });
+
+      setTimeout(() => piece.remove(), dur);
+    }
+  }
+
+  /* ==================================================================
+     ROI CALCULATOR
+     ================================================================== */
+  function calcROI() {
+    const hours = parseInt(document.getElementById('roi-hours').value);
+    const rate = parseInt(document.getElementById('roi-rate').value);
+
+    document.getElementById('roi-hours-val').textContent = hours;
+    document.getElementById('roi-rate-val').textContent = '$' + rate;
+
+    const automatable = 0.5;
+    const hoursMonth = Math.round(hours * automatable * 4);
+    const valueMonth = hoursMonth * rate;
+    const payback = valueMonth > 0 ? (1500 / valueMonth * 4).toFixed(1) : 'N/A';
+    const annual = valueMonth * 12;
+
+    document.getElementById('roi-hours-month').textContent = hoursMonth;
+    document.getElementById('roi-value-month').textContent = '$' + valueMonth.toLocaleString();
+    document.getElementById('roi-payback').textContent = payback;
+    document.getElementById('roi-annual').textContent = '$' + annual.toLocaleString();
+  }
+
+  /* ==================================================================
+     CONFIGURATOR: ASSISTANT CHIPS
+     ================================================================== */
+  function renderAssistantChips() {
+    const container = document.getElementById('assistant-chips');
+    if (!container) return;
+    container.innerHTML = '';
+    assistantNames.forEach((a, i) => {
+      const chip = document.createElement('span');
+      const name = currentLang === 'es' ? a.es : a.en;
+      chip.className = 'chip'
+        + (selectedAssistants.has(i) ? ' selected' : '')
+        + (caoSelected ? ' locked selected' : '');
+      chip.textContent = name;
+      chip.onclick = () => {
+        if (caoSelected) return;
+        if (selectedAssistants.has(i)) {
+          selectedAssistants.delete(i);
+        } else {
+          selectedAssistants.add(i);
+        }
+        renderAssistantChips();
+        updateConfig();
+      };
+      container.appendChild(chip);
+    });
+  }
+
+  /* ==================================================================
+     CONFIGURATOR: CAO TOGGLE
+     ================================================================== */
+  function toggleCAO() {
+    caoSelected = !caoSelected;
+    const check = document.getElementById('cao-check');
+    const card = document.getElementById('config-cao-card');
+
+    if (caoSelected) {
+      check.innerHTML = '<i data-lucide="check" class="w-4 h-4" style="color:#0B2545;"></i>';
+      check.style.background = 'linear-gradient(135deg,#FFD700,#FFA000)';
+      check.style.borderColor = '#FFD700';
+      card.classList.add('glow-border');
+      for (let i = 0; i < 13; i++) selectedAssistants.add(i);
+    } else {
+      check.innerHTML = '';
+      check.style.background = 'transparent';
+      check.style.borderColor = 'var(--border-color)';
+      card.classList.remove('glow-border');
+      selectedAssistants.clear();
+    }
+
+    updateEmpPrice();
+    renderAssistantChips();
+    updateConfig();
+    lucide.createIcons();
+  }
+
+  /* ==================================================================
+     CONFIGURATOR: EMPOWERMENT TOGGLE
+     ================================================================== */
+  function toggleEmp() {
+    empSelected = !empSelected;
+    const check = document.getElementById('emp-check');
+    const card = document.getElementById('config-emp-card');
+
+    if (empSelected) {
+      check.innerHTML = '<i data-lucide="check" class="w-4 h-4" style="color:#0B2545;"></i>';
+      check.style.background = 'linear-gradient(135deg,#FFD700,#FFA000)';
+      check.style.borderColor = '#FFD700';
+      card.classList.add('glow-border');
+    } else {
+      check.innerHTML = '';
+      check.style.background = 'transparent';
+      check.style.borderColor = 'var(--border-color)';
+      card.classList.remove('glow-border');
+    }
+
+    updateConfig();
+    lucide.createIcons();
+  }
+
+  /* ==================================================================
+     CONFIGURATOR: UPDATE EMPOWERMENT PRICE DISPLAY
+     ================================================================== */
+  function updateEmpPrice() {
+    const el = document.getElementById('emp-price-display');
+    const rateText = currentLang === 'es'
+      ? '(tasa indicativa, sujeta a variacion)'
+      : '(indicative rate, subject to variation)';
+
+    if (caoSelected) {
+      el.innerHTML = '<span class="price-strike">$2,000</span> <span class="gold-text font-bold">$1,600 USD</span> <span>' + rateText + '</span>';
+    } else {
+      el.innerHTML = '$2,000 USD <span>' + rateText + '</span>';
+    }
+  }
+
+  /* ==================================================================
+     CONFIGURATOR: UPDATE SUMMARY
+     ================================================================== */
+  function updateConfig() {
+    const summaryEl = document.getElementById('config-summary-items');
+    const totalEl = document.getElementById('config-total');
+    const savingsEl = document.getElementById('config-savings');
+    const savingsRow = document.getElementById('config-savings-row');
+
+    let items = [];
+    let total = 0;
+    let savings = 0;
+
+    if (caoSelected) {
+      items.push({ name: 'CAO Bootcamp Creyentes', price: 1500 });
+      total += 1500;
+      /* Savings: 13 assistants at $400 = $5,200 + regular CAO $2,500 - creyentes $1,500 = $6,200 */
+      savings += (13 * 400) + 2500 - 1500;
+    } else {
+      const numAssistants = selectedAssistants.size;
+      if (numAssistants > 0) {
+        const label = currentLang === 'es' ? 'Asistentes' : 'Assistants';
+        items.push({ name: label + ' x' + numAssistants, price: numAssistants * 400 });
+        total += numAssistants * 400;
+      }
+    }
+
+    if (empSelected) {
+      const empPrice = caoSelected ? 1600 : 2000;
+      const label = currentLang === 'es' ? 'Programa Empoderamiento' : 'Empowerment Program';
+      items.push({ name: label, price: empPrice });
+      total += empPrice;
+      if (caoSelected) savings += 400;
+    }
+
+    const emptyMsg = currentLang === 'es' ? 'Seleccione opciones arriba' : 'Select options above';
+    summaryEl.innerHTML = items.length === 0
+      ? '<p class="text-sm" style="color:var(--text-muted);">' + emptyMsg + '</p>'
+      : items.map(it => `
+          <div class="flex justify-between items-center text-sm">
+            <span style="color:var(--text-secondary);">${it.name}</span>
+            <span class="font-semibold" style="color:var(--text-primary);">$${it.price.toLocaleString()}</span>
+          </div>
+        `).join('');
+
+    totalEl.textContent = '$' + total.toLocaleString();
+
+    if (savings > 0) {
+      savingsRow.style.display = 'flex';
+      savingsEl.textContent = '$' + savings.toLocaleString();
+    } else {
+      savingsRow.style.display = 'none';
+    }
+
+    updateEmpPrice();
+  }
+
+  /* ==================================================================
+     UTILITY: SCROLL TO ELEMENT
+     ================================================================== */
+  function scrollToEl(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+  </script>
+
+</body>
+</html>
