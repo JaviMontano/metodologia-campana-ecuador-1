@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+  <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)">
+  <title>MetodologIA — Modelo Financiero 2026-2027</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='10' fill='%230A122A'/><path d='M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z' fill='white'/><circle cx='18' cy='8' r='2' fill='%23FFD700'/></svg>" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { heading: ['Poppins','sans-serif'], body: ['Montserrat','sans-serif'] },
+          colors: {
+            navy: { DEFAULT: '#020617', light: '#0F172A' },
+            gold: { DEFAULT: '#FFD700', dark: '#FFA000', light: '#B8860B' },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --bg-primary: #020617; --bg-secondary: #0F172A;
+      --bg-card: rgba(15,23,42,0.7); --text-primary: #F0F4F8;
+      --text-secondary: #94A3B8; --text-muted: #64748B;
+      --border-color: rgba(255,215,0,0.12);
+      --glass-bg: rgba(15,23,42,0.6); --glass-border: rgba(255,215,0,0.1);
+      --gold: #FFD700; --gold-dark: #FFA000;
+      --shadow-glow: 0 0 30px rgba(255,215,0,0.06);
+      --positive: #22C55E; --negative: #EF4444;
+    }
+    html.light {
+      --bg-primary: #F8FAFC; --bg-secondary: #EEF2F7;
+      --bg-card: rgba(255,255,255,0.7); --text-primary: #020617;
+      --text-secondary: #2C4A6E; --text-muted: #64748B;
+      --border-color: rgba(2,6,23,0.08);
+      --glass-bg: rgba(255,255,255,0.6); --glass-border: rgba(2,6,23,0.06);
+      --shadow-glow: 0 0 30px rgba(2,6,23,0.04);
+      --gold: #B8860B; --gold-dark: #8B6914;
+      --positive: #16A34A; --negative: #DC2626;
+    }
+    html.light body { font-weight: 500; }
+    html.light h1,html.light h2,html.light h3,html.light h4 { font-weight: 800; }
+    html.light .gold-text { background: linear-gradient(135deg,#B8860B,#8B6914); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family:'Montserrat',sans-serif; background-color:var(--bg-primary); color:var(--text-primary); overflow-x:hidden; }
+    h1,h2,h3,h4 { font-family:'Poppins',sans-serif; }
+    .gold-text { background:linear-gradient(135deg,#FFD700,#FFA000); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .glass { background:var(--glass-bg); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border:1px solid var(--glass-border); border-radius:1rem; box-shadow:var(--shadow-glow); }
+    .gold-divider { width:48px; height:3px; background:linear-gradient(90deg,var(--gold),var(--gold-dark)); border-radius:2px; margin:0.75rem 0; }
+    .container { max-width:1200px; margin:0 auto; padding:0 1.5rem; }
+    @media(min-width:768px){ .container { padding:0 2rem; } }
+
+    /* Nav */
+    .top-nav { position:fixed; top:0; left:0; right:0; z-index:100; background:var(--glass-bg); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--glass-border); height:56px; display:flex; align-items:center; padding:0 2rem; }
+    .top-nav-inner { display:flex; align-items:center; justify-content:space-between; width:100%; max-width:1200px; margin:0 auto; }
+    #scroll-progress { position:fixed; top:56px; left:0; height:2px; background:linear-gradient(90deg,var(--gold),var(--gold-dark)); z-index:101; width:0%; transition:width 0.1s linear; }
+
+    /* Scenario toggle */
+    .scenario-toggle { display:inline-flex; border-radius:9999px; overflow:hidden; border:1px solid var(--glass-border); }
+    .scenario-btn { padding:0.5rem 1.25rem; font-size:0.8rem; font-weight:600; cursor:pointer; background:transparent; border:none; color:var(--text-muted); transition:all 0.2s; font-family:'Montserrat',sans-serif; }
+    .scenario-btn.active { background:linear-gradient(135deg,var(--gold),var(--gold-dark)); color:#020617; }
+
+    /* KPI cards */
+    .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:1rem; }
+    .kpi-card { padding:1.25rem; text-align:center; }
+    .kpi-value { font-family:'Poppins',sans-serif; font-size:1.5rem; font-weight:800; }
+    .kpi-label { font-size:0.75rem; color:var(--text-muted); margin-top:0.25rem; text-transform:uppercase; letter-spacing:0.05em; }
+
+    /* Tables */
+    .fin-table { width:100%; border-collapse:collapse; font-size:0.8rem; }
+    .fin-table th,.fin-table td { padding:0.6rem 0.75rem; text-align:right; border-bottom:1px solid var(--glass-border); white-space:nowrap; }
+    .fin-table th { color:var(--gold); font-weight:600; text-transform:uppercase; font-size:0.7rem; letter-spacing:0.05em; position:sticky; top:0; background:var(--bg-secondary); z-index:2; }
+    .fin-table td:first-child,.fin-table th:first-child { text-align:left; position:sticky; left:0; background:var(--bg-secondary); z-index:1; min-width:160px; }
+    .fin-table th:first-child { z-index:3; }
+    .fin-table td { color:var(--text-secondary); }
+    .fin-table .row-header { font-weight:600; color:var(--text-primary); }
+    .fin-table .row-total td { font-weight:700; color:var(--text-primary); border-top:2px solid var(--gold); }
+    .fin-table .row-subtotal td { font-weight:600; color:var(--text-primary); }
+    .fin-table .row-indent td:first-child { padding-left:1.5rem; }
+    .positive { color:var(--positive) !important; }
+    .negative { color:var(--negative) !important; }
+    .table-scroll { overflow-x:auto; border-radius:0.75rem; }
+
+    /* Revenue bars */
+    .rev-bar-container { display:flex; align-items:center; gap:0.75rem; margin:0.4rem 0; }
+    .rev-bar-label { width:140px; font-size:0.8rem; color:var(--text-secondary); flex-shrink:0; text-align:right; }
+    .rev-bar-track { flex:1; height:22px; background:var(--glass-border); border-radius:4px; overflow:hidden; position:relative; }
+    .rev-bar-fill { height:100%; border-radius:4px; background:linear-gradient(90deg,var(--gold),var(--gold-dark)); transition:width 0.6s ease; }
+    .rev-bar-value { width:80px; font-size:0.8rem; font-weight:600; color:var(--text-primary); flex-shrink:0; }
+
+    /* Market circles */
+    .market-stack { display:flex; flex-direction:column; gap:0.5rem; align-items:center; }
+    .market-ring { border-radius:50%; display:flex; align-items:center; justify-content:center; flex-direction:column; border:2px solid var(--glass-border); }
+
+    /* Timeline */
+    .milestone-row { display:flex; align-items:flex-start; gap:1rem; padding:0.75rem 0; }
+    .milestone-dot { width:12px; height:12px; border-radius:50%; flex-shrink:0; margin-top:4px; background:linear-gradient(135deg,var(--gold),var(--gold-dark)); }
+    .milestone-dot.future { background:var(--glass-border); }
+    .milestone-month { font-size:0.75rem; font-weight:700; color:var(--gold); width:32px; flex-shrink:0; }
+
+    /* Section */
+    .section { padding:3rem 0; }
+    .section-title { font-size:1.5rem; font-weight:800; margin-bottom:0.5rem; }
+
+    /* Print */
+    @media print {
+      .top-nav, #scroll-progress, .scenario-toggle, #theme-toggle { display:none !important; }
+      body { background:#fff !important; color:#000 !important; font-size:10px; }
+      .glass { background:#f9f9f9 !important; border:1px solid #ddd !important; box-shadow:none !important; backdrop-filter:none !important; }
+      .section { page-break-inside:avoid; padding:1.5rem 0; }
+      .fin-table th,.fin-table td:first-child { background:#f9f9f9 !important; }
+      .gold-text { -webkit-text-fill-color:#B8860B !important; }
+      .positive { color:#16A34A !important; } .negative { color:#DC2626 !important; }
+    }
+
+    /* Reveal */
+    .reveal { opacity:0; transform:translateY(20px); transition:opacity 0.5s ease,transform 0.5s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+  </style>
+</head>
+<body class="font-body">
+
+<!-- NAV -->
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <span class="font-heading font-bold text-sm"><span class="gold-text">MetodologIA</span> &mdash; Modelo Financiero</span>
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <div class="scenario-toggle" id="scenarioToggle">
+        <button class="scenario-btn" data-scenario="conservative" onclick="setScenario('conservative')">Conservador</button>
+        <button class="scenario-btn active" data-scenario="base" onclick="setScenario('base')">Base</button>
+        <button class="scenario-btn" data-scenario="optimistic" onclick="setScenario('optimistic')">Optimista</button>
+      </div>
+      <button id="theme-toggle" onclick="toggleTheme()" style="background:none;border:none;cursor:pointer;color:var(--text-muted);padding:4px;" aria-label="Cambiar tema">
+        <i data-lucide="sun" style="width:20px;height:20px;"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+<div id="scroll-progress"></div>
+
+<main style="padding-top:72px;">
+
+<!-- HEADER -->
+<header class="section" style="padding-top:2rem;">
+  <div class="container" style="text-align:center;">
+    <h1 class="font-heading" style="font-size:2rem;font-weight:900;">
+      <span class="gold-text">MetodologIA</span> &mdash; Modelo Financiero 2026-2027
+    </h1>
+    <p style="color:var(--text-muted);font-size:0.9rem;margin-top:0.5rem;">Miami + Ecuador &bull; Documento interno &bull; Escenario: <strong id="scenarioLabel">Base</strong></p>
+    <p style="color:var(--text-muted);font-size:0.75rem;margin-top:0.25rem;">Modelo financiero ilustrativo &mdash; resultados dependen de ejecucion</p>
+  </div>
+</header>
+
+<!-- KPI DASHBOARD -->
+<section class="section reveal" style="padding-top:0;">
+  <div class="container">
+    <h2 class="section-title">Dashboard de KPIs</h2>
+    <div class="gold-divider"></div>
+    <div class="kpi-grid" style="margin-top:1.5rem;" id="kpiGrid">
+      <div class="glass kpi-card">
+        <div class="kpi-value negative" id="kpiBurn">$5,963</div>
+        <div class="kpi-label">Burn mensual prom.</div>
+      </div>
+      <div class="glass kpi-card">
+        <div class="kpi-value gold-text" id="kpiBE">Mes 4</div>
+        <div class="kpi-label">Break-even</div>
+      </div>
+      <div class="glass kpi-card">
+        <div class="kpi-value" id="kpiCAC">~$125</div>
+        <div class="kpi-label">CAC (organico)</div>
+      </div>
+      <div class="glass kpi-card">
+        <div class="kpi-value positive" id="kpiLTV">32x</div>
+        <div class="kpi-label">LTV / CAC</div>
+      </div>
+      <div class="glass kpi-card">
+        <div class="kpi-value positive" id="kpiMargin">~95%</div>
+        <div class="kpi-label">Margen bruto</div>
+      </div>
+      <div class="glass kpi-card">
+        <div class="kpi-value negative" id="kpiRunway">~1.5 meses</div>
+        <div class="kpi-label">Runway ($8,700 seed)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- P&L 12 MONTHS -->
+<section class="section reveal">
+  <div class="container">
+    <h2 class="section-title">P&L Proyectado &mdash; 12 Meses</h2>
+    <div class="gold-divider"></div>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1rem;">Cifras en USD. Ingresos reconocidos al inicio de cada ciclo por simplicidad. <span style="color:var(--gold);">(est.)</span> = estimado.</p>
+    <div class="table-scroll glass" style="padding:0;">
+      <table class="fin-table" id="plTable">
+        <thead><tr id="plHeader"></tr></thead>
+        <tbody id="plBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- REVENUE BREAKDOWN -->
+<section class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Desglose de Ingresos por Linea</h2>
+    <div class="gold-divider"></div>
+    <div class="glass" style="padding:1.5rem;margin-top:1rem;" id="revBars"></div>
+  </div>
+</section>
+
+<!-- MARKET SIZING -->
+<section class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Dimensionamiento de Mercado</h2>
+    <div class="gold-divider"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;" id="marketGrid">
+      <!-- Ecuador -->
+      <div class="glass" style="padding:1.5rem;">
+        <h3 class="font-heading" style="font-size:1rem;font-weight:700;margin-bottom:1rem;text-align:center;">Ecuador</h3>
+        <div class="rev-bar-container">
+          <span class="rev-bar-label">TAM</span>
+          <div class="rev-bar-track"><div class="rev-bar-fill" style="width:100%;background:linear-gradient(90deg,var(--gold),var(--gold-dark));opacity:0.3;"></div></div>
+          <span class="rev-bar-value">$89M</span>
+        </div>
+        <div class="rev-bar-container">
+          <span class="rev-bar-label">SAM</span>
+          <div class="rev-bar-track"><div class="rev-bar-fill" style="width:16.7%;"></div></div>
+          <span class="rev-bar-value">$14.9M</span>
+        </div>
+        <div class="rev-bar-container">
+          <span class="rev-bar-label">SOM Ano 1</span>
+          <div class="rev-bar-track"><div class="rev-bar-fill" style="width:0.4%;min-width:4px;"></div></div>
+          <span class="rev-bar-value" id="somEcuador">$26.5k</span>
+        </div>
+        <p style="font-size:0.7rem;color:var(--text-muted);margin-top:0.75rem;">60-100k ejecutivos &bull; 7-12k target accesible &bull; <span id="somEcPeople">18</span> personas Ano 1 (est.)</p>
+      </div>
+      <!-- Miami -->
+      <div class="glass" style="padding:1.5rem;">
+        <h3 class="font-heading" style="font-size:1rem;font-weight:700;margin-bottom:1rem;text-align:center;">Miami</h3>
+        <div class="rev-bar-container">
+          <span class="rev-bar-label">TAM</span>
+          <div class="rev-bar-track"><div class="rev-bar-fill" style="width:100%;background:linear-gradient(90deg,var(--gold),var(--gold-dark));opacity:0.3;"></div></div>
+          <span class="rev-bar-value">$89M</span>
+        </div>
+        <div class="rev-bar-container">
+          <span class="rev-bar-label">SAM</span>
+          <div class="rev-bar-track"><div class="rev-bar-fill" style="width:27%;"></div></div>
+          <span class="rev-bar-value">$24M</span>
+        </div>
+        <div class="rev-bar-container">
+          <span class="rev-bar-label">SOM Ano 1</span>
+          <div class="rev-bar-track"><div class="rev-bar-fill" style="width:0.4%;min-width:4px;"></div></div>
+          <span class="rev-bar-value" id="somMiami">$32.5k</span>
+        </div>
+        <p style="font-size:0.7rem;color:var(--text-muted);margin-top:0.75rem;">50-80k ejecutivos &bull; 12-20k target accesible &bull; <span id="somMiPeople">12</span> personas Ano 1 (est.)</p>
+      </div>
+    </div>
+    <p style="font-size:0.7rem;color:var(--text-muted);margin-top:1rem;text-align:center;">Mercado global AI Corp Training: $1.5B &rarr; $10.4B para 2033 &bull; LatAm 7.7% ($0.28B) [DOC]</p>
+  </div>
+</section>
+
+<!-- UNIT ECONOMICS -->
+<section class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Unit Economics</h2>
+    <div class="gold-divider"></div>
+    <div class="kpi-grid" style="margin-top:1.5rem;">
+      <div class="glass kpi-card">
+        <div class="kpi-value">$100-150</div>
+        <div class="kpi-label">CAC (organico)</div>
+        <p style="font-size:0.65rem;color:var(--text-muted);margin-top:0.5rem;">Campanas organicas, sin paid ads [SUPUESTO]</p>
+      </div>
+      <div class="glass kpi-card">
+        <div class="kpi-value gold-text">$1,490</div>
+        <div class="kpi-label">Ticket promedio</div>
+        <p style="font-size:0.65rem;color:var(--text-muted);margin-top:0.5rem;">CAO Creyentes / Empoderamiento</p>
+      </div>
+      <div class="glass kpi-card">
+        <div class="kpi-value positive">~$4,000+</div>
+        <div class="kpi-label">LTV estimado</div>
+        <p style="font-size:0.65rem;color:var(--text-muted);margin-top:0.5rem;">CAO + 3 asistentes + Empoderamiento</p>
+      </div>
+      <div class="glass kpi-card">
+        <div class="kpi-value positive">27-40x</div>
+        <div class="kpi-label">LTV / CAC</div>
+        <p style="font-size:0.65rem;color:var(--text-muted);margin-top:0.5rem;">Target era 10x &mdash; superado</p>
+      </div>
+      <div class="glass kpi-card">
+        <div class="kpi-value positive">92-98%</div>
+        <div class="kpi-label">Margen bruto</div>
+        <p style="font-size:0.65rem;color:var(--text-muted);margin-top:0.5rem;">Segun tamano de ciclo</p>
+      </div>
+      <div class="glass kpi-card">
+        <div class="kpi-value">$347</div>
+        <div class="kpi-label">Asistentes a Medida</div>
+        <p style="font-size:0.65rem;color:var(--text-muted);margin-top:0.5rem;">Techo 10/cliente &bull; 2h delivery</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COST STRUCTURE -->
+<section class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Estructura de Costos</h2>
+    <div class="gold-divider"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;">
+      <!-- Fixed -->
+      <div class="glass" style="padding:1.5rem;">
+        <h3 class="font-heading" style="font-size:0.9rem;font-weight:700;margin-bottom:1rem;"><i data-lucide="server" style="width:16px;height:16px;display:inline;vertical-align:middle;color:var(--gold);"></i> Infraestructura (fijos anuales)</h3>
+        <table class="fin-table">
+          <thead><tr><th>Item</th><th>Anual</th><th>Mensual</th></tr></thead>
+          <tbody>
+            <tr><td>Agent hosting</td><td>$500</td><td>$42</td></tr>
+            <tr><td>Claude Code Max</td><td>$2,400</td><td>$200</td></tr>
+            <tr><td>Correo corporativo</td><td>$150</td><td>$13</td></tr>
+            <tr><td>Agente productividad</td><td>$1,000</td><td>$83</td></tr>
+            <tr class="row-total"><td>Subtotal</td><td>$4,050</td><td>$338</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- Variable -->
+      <div class="glass" style="padding:1.5rem;">
+        <h3 class="font-heading" style="font-size:0.9rem;font-weight:700;margin-bottom:1rem;"><i data-lucide="users" style="width:16px;height:16px;display:inline;vertical-align:middle;color:var(--gold);"></i> Personas + Crecimiento (variables)</h3>
+        <table class="fin-table">
+          <thead><tr><th>Item</th><th>Mensual</th><th>Notas</th></tr></thead>
+          <tbody>
+            <tr><td>Javier (salario piso)</td><td>$3,000-$4,000</td><td>Full-time</td></tr>
+            <tr><td>Cristian (salario piso)</td><td>$1,500-$2,000</td><td>Desde M3</td></tr>
+            <tr><td>Marketing / CAC</td><td>$250-$500</td><td>Organico + minimal paid</td></tr>
+            <tr><td>Herramientas</td><td>$100</td><td>Zoom, Canva, etc.</td></tr>
+            <tr class="row-total"><td>Subtotal</td><td>$4,850-$6,600</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="glass" style="padding:1rem 1.5rem;margin-top:1rem;text-align:center;">
+      <span style="font-size:0.85rem;color:var(--text-muted);">Burn total mensual: </span>
+      <span style="font-size:1.1rem;font-weight:700;color:var(--negative);">$5,188 &mdash; $6,938</span>
+      <span style="font-size:0.75rem;color:var(--text-muted);"> (rango segun salarios y marketing)</span>
+    </div>
+  </div>
+</section>
+
+<!-- FUNDING -->
+<section class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Requerimiento de Financiamiento</h2>
+    <div class="gold-divider"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;">
+      <div class="glass" style="padding:1.5rem;">
+        <h3 class="font-heading" style="font-size:0.9rem;font-weight:700;margin-bottom:1rem;"><i data-lucide="banknote" style="width:16px;height:16px;display:inline;vertical-align:middle;color:var(--gold);"></i> Seed Requerido</h3>
+        <div style="font-size:2rem;font-weight:900;font-family:'Poppins',sans-serif;" class="gold-text">$39,000 &mdash; $55,000</div>
+        <p style="font-size:0.8rem;color:var(--text-secondary);margin-top:0.75rem;">Cubre 6 meses de operacion:</p>
+        <ul style="font-size:0.8rem;color:var(--text-secondary);margin-top:0.5rem;padding-left:1.25rem;">
+          <li>Salarios (Javier + Cristian): $31,500-$36,000</li>
+          <li>Infraestructura: $2,028</li>
+          <li>Marketing: $2,250</li>
+          <li>Herramientas: $600</li>
+          <li>Buffer contingencia: $2,622-$14,122</li>
+        </ul>
+      </div>
+      <div class="glass" style="padding:1.5rem;">
+        <h3 class="font-heading" style="font-size:0.9rem;font-weight:700;margin-bottom:1rem;"><i data-lucide="pie-chart" style="width:16px;height:16px;display:inline;vertical-align:middle;color:var(--gold);"></i> Condiciones</h3>
+        <table class="fin-table">
+          <tbody>
+            <tr><td>Equity ofrecido</td><td style="font-weight:700;">5-10% de Holding [POR CONFIRMAR]</td></tr>
+            <tr><td>Vehiculo</td><td>MetodologIA Holding LLC [POR CONFIRMAR]</td></tr>
+            <tr><td>Runway con seed actual ($8,700)</td><td style="color:var(--negative);">~1.3-1.7 meses</td></tr>
+            <tr><td>Runway con seed completo</td><td style="color:var(--positive);">~6 meses</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.75rem;color:var(--text-muted);margin-top:1rem;">Milestones para siguiente ronda:</p>
+        <ul style="font-size:0.75rem;color:var(--text-muted);padding-left:1.25rem;margin-top:0.25rem;">
+          <li>2 ciclos CAO completados con NPS > 8</li>
+          <li>Revenue > $5k/mes recurrente</li>
+          <li>Pipeline de 20+ leads calificados</li>
+          <li>Modelo replicable documentado</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MILESTONES -->
+<section class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Hitos Clave &mdash; 12 Meses</h2>
+    <div class="gold-divider"></div>
+    <div class="glass" style="padding:1.5rem;margin-top:1.5rem;" id="milestones">
+      <div class="milestone-row"><span class="milestone-month">M1</span><span class="milestone-dot"></span><div><strong>Setup infraestructura</strong><br><span style="font-size:0.75rem;color:var(--text-muted);">Plataformas, dominios, materiales base, agentes configurados</span></div></div>
+      <div class="milestone-row"><span class="milestone-month">M2</span><span class="milestone-dot"></span><div><strong>Entrenamiento de facilitadores</strong><br><span style="font-size:0.75rem;color:var(--text-muted);">Sesiones dominicales &bull; Cristian certificado como facilitador</span></div></div>
+      <div class="milestone-row"><span class="milestone-month">M3</span><span class="milestone-dot"></span><div><strong>Primer Taller Zero Risk (Quito)</strong><br><span style="font-size:0.75rem;color:var(--text-muted);">Sabado de Pascua &bull; Funnel hacia CAO Ecuador</span></div></div>
+      <div class="milestone-row"><span class="milestone-month">M4</span><span class="milestone-dot future"></span><div><strong>Primer ciclo CAO Ecuador inicia</strong><br><span style="font-size:0.75rem;color:var(--text-muted);">3-8 personas &bull; Duracion 4-10 semanas</span></div></div>
+      <div class="milestone-row"><span class="milestone-month">M5</span><span class="milestone-dot future"></span><div><strong>Primer ciclo CAO Miami inicia</strong><br><span style="font-size:0.75rem;color:var(--text-muted);">3-8 personas &bull; Revenue reconocido</span></div></div>
+      <div class="milestone-row"><span class="milestone-month">M6</span><span class="milestone-dot future"></span><div><strong>Target break-even</strong><br><span style="font-size:0.75rem;color:var(--text-muted);">Revenue mensual >= burn mensual</span></div></div>
+      <div class="milestone-row"><span class="milestone-month">M8</span><span class="milestone-dot future"></span><div><strong>Empoderamiento Ecuador inicia</strong><br><span style="font-size:0.75rem;color:var(--text-muted);">3-5 graduados CAO &bull; 16 semanas &bull; $1,490/persona</span></div></div>
+      <div class="milestone-row"><span class="milestone-month">M10</span><span class="milestone-dot future"></span><div><strong>Primer proyecto de consultoria</strong><br><span style="font-size:0.75rem;color:var(--text-muted);">$3,000-$15,000 &bull; Fase 2 activada [SUPUESTO]</span></div></div>
+      <div class="milestone-row"><span class="milestone-month">M12</span><span class="milestone-dot future"></span><div><strong>Revenue > $5k/mes &rarr; ready for pre-seed</strong><br><span style="font-size:0.75rem;color:var(--text-muted);">Modelo validado &bull; Metricas para siguiente ronda</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSUMPTIONS -->
+<section class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Supuestos y Disclaimers</h2>
+    <div class="gold-divider"></div>
+    <div class="glass" style="padding:1.5rem;margin-top:1.5rem;">
+      <ul style="font-size:0.8rem;color:var(--text-secondary);line-height:1.8;padding-left:1.25rem;">
+        <li><span style="color:var(--gold);">[ASPIRACIONAL]</span> Pipeline de clientes es aspiracional &mdash; depende de ejecucion de marketing y ventas</li>
+        <li><span style="color:var(--gold);">[SUPUESTO]</span> CAC basado en campanas organicas, sin inversion en paid ads significativa</li>
+        <li><span style="color:var(--gold);">[SUPUESTO]</span> Salarios son pisos minimos viables, no tasas de mercado</li>
+        <li><span style="color:var(--gold);">[SUPUESTO]</span> Estabilidad de tipo de cambio asumida por 3 anos (Ecuador: USD nativo)</li>
+        <li><span style="color:var(--gold);">[SUPUESTO]</span> No hay cambios en precios de franquicia durante el periodo</li>
+        <li><span style="color:var(--gold);">[SUPUESTO]</span> Revenue de consultoria inicia M10 como muy temprano</li>
+        <li><span style="color:var(--gold);">[SUPUESTO]</span> Salario Cristian en USD ~$1,750/mo (competitivo para Quito)</li>
+        <li><span style="color:var(--gold);">[SUPUESTO]</span> Ingresos reconocidos al inicio de ciclo (simplificacion contable)</li>
+        <li><span style="color:var(--gold);">[POR CONFIRMAR]</span> Equity ofrecido: 5-10% de MetodologIA Holding</li>
+        <li><span style="color:var(--gold);">[POR CONFIRMAR]</span> Estructura legal del holding (LLC vs. Corp)</li>
+      </ul>
+      <div style="margin-top:1.25rem;padding:1rem;border-radius:0.75rem;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);">
+        <p style="font-size:0.8rem;font-weight:600;color:var(--negative);">Disclaimer</p>
+        <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.25rem;">Modelo financiero ilustrativo. Resultados reales dependen de ejecucion, condiciones de mercado y variables externas. No constituye proyeccion garantizada ni oferta de inversion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="padding:2rem 0;text-align:center;">
+  <p style="font-size:0.7rem;color:var(--text-muted);">MetodologIA &bull; Modelo Financiero Interno &bull; Generado 2026-03-30 &bull; Documento confidencial</p>
+</footer>
+
+</main>
+
+<script>
+// ============================================================
+// SCENARIO DATA ENGINE
+// ============================================================
+const MONTHS = ['M1','M2','M3','M4','M5','M6','M7','M8','M9','M10','M11','M12'];
+
+// Fixed costs per month (unchanged across scenarios)
+const COSTS = {
+  infra:   [338,338,338,338,338,338,338,338,338,338,338,338],
+  javier:  [3500,3500,3500,3500,3500,3500,3500,3500,3500,3500,3500,3500],
+  cristian:[0,0,1750,1750,1750,1750,1750,1750,1750,1750,1750,1750],
+  marketing:[375,375,375,375,375,375,375,375,375,375,375,375],
+  tools:   [100,100,100,100,100,100,100,100,100,100,100,100],
+};
+
+// Revenue per scenario
+// CAO Ecuador: cycle 1 revenue at start (M3-M5 range -> recognized M3), cycle 2 recognized M6
+// CAO Miami: cycle 1 recognized M4-M5, cycle 2 recognized M8
+// Empoderamiento: starts M5-M8
+// Asistentes: incremental from M5+
+// Consulting: M10+ optimistic only
+const SCENARIOS = {
+  conservative: {
+    label: 'Conservador',
+    taller:       [0,0,0,0,0,0,0,0,0,0,0,0],
+    cao_ecuador:  [0,0,4470,0,0,4470,0,0,0,4470,0,0],    // 3 people x $1490 per cycle
+    cao_miami:    [0,0,0,4470,0,0,0,4470,0,0,0,0],        // 3 people x $1490
+    empoderamiento:[0,0,0,0,4470,0,0,0,0,0,4470,0],       // 3 people x $1490
+    asistentes:   [0,0,0,0,347,347,694,694,694,694,694,694],// 1-2/month x $347
+    consulting:   [0,0,0,0,0,0,0,0,0,0,0,0],
+    kpis: { burn:'$5,563', be:'Mes 5-6', cac:'~$150', ltv:'27x', margin:'~92%', runway:'~1.6 meses' },
+    somEc:'$19k', somMi:'$20k', somEcP:'13', somMiP:'8'
+  },
+  base: {
+    label: 'Base',
+    taller:       [0,0,0,0,0,0,0,0,0,0,0,0],
+    cao_ecuador:  [0,0,7450,0,0,7450,0,0,0,9940,0,0],     // 5 -> 5 -> 5 (mix: some creyentes $1490, some regular $1990, avg ~$1490-1990; use 5x$1490=7450)
+    cao_miami:    [0,0,0,0,7450,0,0,7450,0,0,0,0],         // 5 people x $1490
+    empoderamiento:[0,0,0,0,0,5970,0,0,0,0,5970,0],        // 4 people x ~$1490 (recognized at start)
+    asistentes:   [0,0,0,0,694,694,1041,1041,1041,1041,1041,1041],// 2-3/month x $347
+    consulting:   [0,0,0,0,0,0,0,0,0,5000,0,0],
+    kpis: { burn:'$5,963', be:'Mes 4', cac:'~$125', ltv:'32x', margin:'~95%', runway:'~1.5 meses' },
+    somEc:'$26.5k', somMi:'$32.5k', somEcP:'18', somMiP:'12'
+  },
+  optimistic: {
+    label: 'Optimista',
+    taller:       [0,0,0,0,0,0,0,0,0,0,0,0],
+    cao_ecuador:  [0,0,11920,0,0,11920,0,0,0,15920,0,0],   // 8 people x $1490
+    cao_miami:    [0,0,0,0,11920,0,0,11920,0,0,0,11920],    // 8 people x $1490
+    empoderamiento:[0,0,0,0,0,10430,0,0,0,0,10430,0],       // 7 x $1490
+    asistentes:   [0,0,0,0,1041,1388,1735,1735,2082,2082,2082,2082],
+    consulting:   [0,0,0,0,0,0,0,0,0,8000,0,8000],
+    kpis: { burn:'$6,313', be:'Mes 3', cac:'~$100', ltv:'40x', margin:'~98%', runway:'~1.4 meses' },
+    somEc:'$34k', somMi:'$45k', somEcP:'23', somMiP:'15'
+  }
+};
+
+let currentScenario = 'base';
+
+function setScenario(s) {
+  currentScenario = s;
+  document.querySelectorAll('.scenario-btn').forEach(b => b.classList.toggle('active', b.dataset.scenario === s));
+  document.getElementById('scenarioLabel').textContent = SCENARIOS[s].label;
+  render();
+}
+
+function render() {
+  const sc = SCENARIOS[currentScenario];
+  // KPIs
+  document.getElementById('kpiBurn').textContent = sc.kpis.burn;
+  document.getElementById('kpiBE').textContent = sc.kpis.be;
+  document.getElementById('kpiCAC').textContent = sc.kpis.cac;
+  document.getElementById('kpiLTV').textContent = sc.kpis.ltv;
+  document.getElementById('kpiMargin').textContent = sc.kpis.margin;
+  document.getElementById('kpiRunway').textContent = sc.kpis.runway;
+  // Market
+  document.getElementById('somEcuador').textContent = sc.somEc;
+  document.getElementById('somMiami').textContent = sc.somMi;
+  document.getElementById('somEcPeople').textContent = sc.somEcP;
+  document.getElementById('somMiPeople').textContent = sc.somMiP;
+  renderPL(sc);
+  renderRevBars(sc);
+}
+
+function sum(arr) { return arr.reduce((a,b) => a + b, 0); }
+function fmt(n) {
+  if (n === 0) return '—';
+  const neg = n < 0;
+  const s = '$' + Math.abs(n).toLocaleString('en-US');
+  return neg ? '(' + s + ')' : s;
+}
+function fmtClass(n) { return n > 0 ? 'positive' : n < 0 ? 'negative' : ''; }
+
+function renderPL(sc) {
+  // Compute rows
+  const totalRev = MONTHS.map((_,i) => sc.taller[i] + sc.cao_ecuador[i] + sc.cao_miami[i] + sc.empoderamiento[i] + sc.asistentes[i] + sc.consulting[i]);
+  const totalCost = MONTHS.map((_,i) => COSTS.infra[i] + COSTS.javier[i] + COSTS.cristian[i] + COSTS.marketing[i] + COSTS.tools[i]);
+  const grossProfit = MONTHS.map((_,i) => totalRev[i] - totalCost[i]);
+  const cumulative = [];
+  grossProfit.forEach((gp, i) => { cumulative.push((cumulative[i-1]||0) + gp); });
+
+  const rows = [
+    { label: 'INGRESOS', data: null, cls: 'row-header' },
+    { label: '  Taller Zero Risk', data: sc.taller, cls: 'row-indent' },
+    { label: '  CAO Ecuador', data: sc.cao_ecuador, cls: 'row-indent' },
+    { label: '  CAO Miami', data: sc.cao_miami, cls: 'row-indent' },
+    { label: '  Empoderamiento', data: sc.empoderamiento, cls: 'row-indent' },
+    { label: '  Asistentes a Medida', data: sc.asistentes, cls: 'row-indent' },
+    { label: '  Consultoria (est.)', data: sc.consulting, cls: 'row-indent' },
+    { label: 'Total Ingresos', data: totalRev, cls: 'row-subtotal' },
+    { label: '', data: null, cls: '' },
+    { label: 'COSTOS', data: null, cls: 'row-header' },
+    { label: '  Infraestructura', data: COSTS.infra, cls: 'row-indent' },
+    { label: '  Javier (salario)', data: COSTS.javier, cls: 'row-indent' },
+    { label: '  Cristian (salario)', data: COSTS.cristian, cls: 'row-indent' },
+    { label: '  Marketing', data: COSTS.marketing, cls: 'row-indent' },
+    { label: '  Herramientas', data: COSTS.tools, cls: 'row-indent' },
+    { label: 'Total Costos', data: totalCost, cls: 'row-subtotal' },
+    { label: '', data: null, cls: '' },
+    { label: 'Utilidad Bruta', data: grossProfit, cls: 'row-total' },
+    { label: 'P&L Acumulado', data: cumulative, cls: 'row-total' },
+  ];
+
+  // Header
+  const hdr = document.getElementById('plHeader');
+  hdr.innerHTML = '<th></th>' + MONTHS.map(m => '<th>' + m + '</th>').join('') + '<th>TOTAL</th>';
+
+  // Body
+  const body = document.getElementById('plBody');
+  body.innerHTML = '';
+  rows.forEach(row => {
+    const tr = document.createElement('tr');
+    if (row.cls) tr.className = row.cls;
+    if (!row.data && !row.label) { tr.innerHTML = '<td colspan="14" style="height:8px;border:none;"></td>'; body.appendChild(tr); return; }
+    if (!row.data) { tr.innerHTML = '<td colspan="14" style="font-weight:700;color:var(--gold);font-size:0.75rem;letter-spacing:0.05em;border:none;padding-top:1rem;">' + row.label + '</td>'; body.appendChild(tr); return; }
+    const total = sum(row.data);
+    let html = '<td>' + row.label + '</td>';
+    row.data.forEach(v => {
+      html += '<td class="' + fmtClass(v) + '">' + fmt(v) + '</td>';
+    });
+    html += '<td class="' + fmtClass(total) + '" style="font-weight:700;">' + fmt(total) + '</td>';
+    tr.innerHTML = html;
+    body.appendChild(tr);
+  });
+}
+
+function renderRevBars(sc) {
+  const streams = [
+    { label: 'CAO Ecuador', total: sum(sc.cao_ecuador) },
+    { label: 'CAO Miami', total: sum(sc.cao_miami) },
+    { label: 'Empoderamiento', total: sum(sc.empoderamiento) },
+    { label: 'Asistentes', total: sum(sc.asistentes) },
+    { label: 'Consultoria', total: sum(sc.consulting) },
+  ];
+  const maxVal = Math.max(...streams.map(s => s.total), 1);
+  const totalRev = streams.reduce((a, s) => a + s.total, 0);
+  const container = document.getElementById('revBars');
+  container.innerHTML = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;"><span style="font-size:0.85rem;font-weight:600;">Revenue total 12 meses</span><span style="font-size:1.1rem;font-weight:800;font-family:Poppins,sans-serif;" class="' + fmtClass(totalRev) + '">' + fmt(totalRev) + '</span></div>';
+  streams.forEach(s => {
+    const pct = maxVal > 0 ? (s.total / maxVal * 100) : 0;
+    const pctTotal = totalRev > 0 ? (s.total / totalRev * 100).toFixed(1) : '0.0';
+    container.innerHTML += '<div class="rev-bar-container"><span class="rev-bar-label">' + s.label + '</span><div class="rev-bar-track"><div class="rev-bar-fill" style="width:' + pct + '%;"></div></div><span class="rev-bar-value">' + fmt(s.total) + ' <span style="font-size:0.65rem;color:var(--text-muted);">(' + pctTotal + '%)</span></span></div>';
+  });
+}
+
+// ============================================================
+// THEME TOGGLE
+// ============================================================
+function toggleTheme() {
+  document.documentElement.classList.toggle('dark');
+  document.documentElement.classList.toggle('light');
+  lucide.createIcons();
+}
+
+// ============================================================
+// SCROLL PROGRESS
+// ============================================================
+window.addEventListener('scroll', () => {
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = h > 0 ? (window.scrollY / h * 100) : 0;
+  document.getElementById('scroll-progress').style.width = pct + '%';
+});
+
+// ============================================================
+// REVEAL ON SCROLL
+// ============================================================
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ============================================================
+// INIT
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+  render();
+});
+</script>
+</body>
+</html>
