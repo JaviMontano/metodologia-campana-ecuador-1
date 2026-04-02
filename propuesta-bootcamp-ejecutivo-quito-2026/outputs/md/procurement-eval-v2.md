@@ -121,8 +121,44 @@ Las licencias de software NO estan incluidas en el precio del bootcamp. [DOC]
 
 ---
 
-> **Disclaimer -- Innovation Mode**: Este documento fue generado en modo de innovacion agentica. Los datos marcados con [INFERENCIA] o [SUPUESTO] requieren validacion con stakeholders y proveedores antes de comprometer decisiones de procurement o comunicaciones de precios a participantes.
+## 8. Switching Costs y Vendor Lock-in
+
+| Herramienta | Lock-in risk | Costo de cambio | Alternativa viable | Evidencia |
+|-------------|-------------|-----------------|-------------------|-----------|
+| Google Workspace | Medio | Alto (migrar Drive, Calendar, Gmail) | Microsoft 365 (~$12/mes) | [INFERENCIA] |
+| ChatGPT Plus | Bajo | Bajo (historial exportable) | Claude Pro, Gemini | [INFERENCIA] |
+| Claude Pro | Bajo | Bajo | ChatGPT Plus, Gemini | [INFERENCIA] |
+| NotebookLM | Medio | Medio (contenido exportable, workflow no) | Notion AI, Obsidian | [INFERENCIA] |
+| Pristino (Open Source) | **Cero** | Cero (suyo, local, sin dependencia) | N/A — es suyo | [DOC] |
+
+**Decision de diseno:** Pristino como orquestador es la pieza cero-lock-in. Si un participante cambia de ChatGPT a Claude, Pristino sigue operando. [DOC]
 
 ---
 
-Construido por profesionales, potenciado por la red agentica de MetodologIA.
+## 9. Free Tier Limits (riesgos de degradacion)
+
+| Herramienta | Free tier incluye | Limite critico | Que pasa al exceder | Evidencia |
+|-------------|------------------|----------------|---------------------|-----------|
+| Google Gemini (sin Premium) | 15 msgs/dia modelo basico | Sin Gemini Advanced | Calidad de respuestas cae 60%+ | [INFERENCIA] |
+| ChatGPT Free | GPT-4o limitado a 10 msgs/3h | Sin GPTs custom | No puede usar asistentes configurados | [DOC] |
+| Claude Free | 10-15 msgs/dia | Sin Projects | No puede subir documentos largos | [INFERENCIA] |
+| NotebookLM Free | 5 notebooks, 50 fuentes | Sin podcast/audio | Funcionalidad base intacta | [INFERENCIA] |
+
+**Riesgo:** Participante que no contrata Tier 1 no puede seguir el programa. Solucion: hacer Tier 1 requisito de inscripcion, verificar en onboarding dia 1. [INFERENCIA]
+
+---
+
+## 10. Compliance de licencias
+
+| Aspecto | Riesgo | Mitigacion | Evidencia |
+|---------|--------|-----------|-----------|
+| Uso corporativo de cuenta personal | Medio | Recomendar cuenta profesional separada | [SUPUESTO] |
+| Compartir credenciales entre equipo | Alto | 1 licencia por participante, no compartida | [DOC] |
+| Datos sensibles en plataformas cloud | Medio | Pristino local para datos criticos; cloud para lo demas | [INFERENCIA] |
+| TOS de OpenAI/Google/Anthropic | Bajo | Uso dentro de terminos standard; sin fine-tuning de modelos base | [INFERENCIA] |
+
+---
+
+> **Innovation Mode**: Datos con [INFERENCIA] o [SUPUESTO] requieren validacion con proveedores antes de decisiones de procurement.
+
+*Construido por profesionales, potenciado por la red agentica de MetodologIA.*
