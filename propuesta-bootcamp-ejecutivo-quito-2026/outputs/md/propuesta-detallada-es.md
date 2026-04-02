@@ -33,13 +33,13 @@ Los directivos que operan con un sistema agentico integrado recuperan **18+ hora
 
 ## 2. La Solucion: Sistema Agentico Personal
 
-El CAO Bootcamp no ensena IA — le da un **agente que usted auto-entrena para que haga sus tareas a su medida**. En el taller ve el potencial: Javier opera con Pristino en vivo, con su contexto real. En el bootcamp, usted conecta su mail, calendario, Drive y entrena su propio agente. Al terminar las 20 horas, tiene un sistema agentico personal que no depende de nadie.
+El CAO Bootcamp no ensena IA — le da un **agente que se vuelve su mejor aliado**. En el taller, Javier muestra como opera con Pristino y usted aprende a instalarlo en su version basica. Sacarle todo el potencial es posible auto-estudiando, o yendo de la mano de nosotros en el Bootcamp: le damos todo su contexto, lo conectamos a su ecosistema y aprende las best practices del Directivo en la Era de la IA.
 
 ### Lo que recibe (sin letra chica)
 
 | # | Entregable | Que es exactamente |
 |---|------------|-------------------|
-| 1 | **1 agente propio que usted auto-entrena** | Instalamos a Pristino, agente Open Source de Javier Montano. En el bootcamp lo conecta a su mail, calendario y Drive, y lo entrena para que haga sus tareas a su medida. Suyo para siempre, auditable, no depende de nadie. |
+| 1 | **1 agente propio** | Instalamos a Pristino, agente Open Source de Javier Montano. En el taller aprende a usarlo en su version basica. Todo el potencial: auto-estudio o Bootcamp de la mano de nosotros. Suyo para siempre, auditable. |
 | 2 | **13 asistentes IA especializados** | Listos para usar en flujos de trabajo desde el dia 1. Cada uno cubre una funcion ejecutiva: comunicacion, analisis, agenda, decisiones, reportes. Son especializados (por funcion), no personalizados (por individuo). Durante el bootcamp aprende a usarlos mejor que el publico. |
 | 3 | **1 Playbook de Introduccion** | "Como Dirigir en la Era de la IA". Guia practica para directivos que quieren liderar con IA sin depender de tecnicos. |
 | 4 | **2 bibliotecas de prompts** | Biblioteca Universal (para cualquier profesional, desde el dia 1) + Biblioteca Ejecutiva (estrategia, decision, delegacion, comunicacion directiva, reportes). |

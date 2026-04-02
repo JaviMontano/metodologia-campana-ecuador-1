@@ -33,13 +33,13 @@ Executives who operate with an integrated agentic system recover **18+ hours/wee
 
 ## 2. The Solution: Personal Agentic System
 
-The CAO Bootcamp does not teach AI — it gives you an **agent you self-train to do your tasks your way**. In the workshop you see the potential: Javier operates with Pristino live, with his real context. In the bootcamp, you connect your email, calendar, Drive and train your own agent. By the end of the 20 hours, you have a personal agentic system that depends on no one.
+The CAO Bootcamp does not teach AI — it gives you an **agent that becomes your best ally**. In the workshop, Javier shows how he operates with Pristino and you learn to install its basic version. Unlocking its full potential: self-study or hand-in-hand with us in the Bootcamp where we give it your full context and you learn the best practices for Leading in the AI Era.
 
 ### What You Receive (no fine print)
 
 | # | Deliverable | What it is exactly |
 |---|-------------|-------------------|
-| 1 | **1 personal agent you self-train** | We install Pristino, Javier Montano's Open Source agent. In the bootcamp you connect it to your email, calendar and Drive, and train it to do your tasks your way. Yours forever, auditable, depends on no one. |
+| 1 | **1 personal agent** | We install Pristino, Javier Montano.s Open Source agent. In the workshop you learn its basic version. Full potential: self-study or hand-in-hand with us in the Bootcamp. Yours forever, auditable. |
 | 2 | **13 specialized AI assistants** | Ready to use in workflows from day 1. Each covers an executive function: communication, analysis, scheduling, decisions, reports. Specialized (by function), not personalized (by individual). During the bootcamp you learn to use them better than the public. |
 | 3 | **1 Introduction Playbook** | "How to Lead in the AI Era". Practical guide for executives who want to lead with AI without depending on technicians. |
 | 4 | **2 prompt libraries** | Universal Library (for any professional, from day 1) + Executive Library (strategy, decision-making, delegation, executive communication, reports). |

@@ -52,6 +52,58 @@
       -webkit-font-smoothing: antialiased;
     }
 
+    /* --- WOW ANIMATIONS --- */
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+    @keyframes pulse-gold { 0%,100% { box-shadow: 0 0 0 0 rgba(255,215,0,0.3); } 50% { box-shadow: 0 0 20px 4px rgba(255,215,0,0.15); } }
+    @keyframes count-up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes gradient-shift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+    .float { animation: float 3s ease-in-out infinite; }
+    .pulse-gold { animation: pulse-gold 2s ease-in-out infinite; }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark), var(--gold));
+      background-size: 200% 200%;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradient-shift 4s ease infinite;
+    }
+
+    /* --- STAT PILL --- */
+    .stat-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 16px; border-radius: 20px;
+      font-family: var(--font-display); font-weight: 600; font-size: 13px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+    .stat-pill:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .stat-pill .stat-num { font-size: 16px; font-weight: 800; color: var(--gold); }
+
+    /* --- SOCIAL PROOF --- */
+    .proof-strip {
+      display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;
+      padding: 16px 0;
+    }
+    .proof-item {
+      text-align: center; font-size: 11px; color: var(--text-secondary);
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .proof-item strong { display: block; font-size: 20px; color: var(--gold); font-family: var(--font-display); }
+
+    /* --- COMPARISON CARD --- */
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .compare-col { padding: 20px; }
+    .compare-col.bad { background: rgba(192,57,43,0.05); }
+    .compare-col.good { background: rgba(255,215,0,0.05); }
+    .compare-col h4 { font-family: var(--font-display); font-weight: 700; font-size: 14px; margin-bottom: 12px; }
+    .compare-col .item { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px; font-size: 13px; color: var(--text-secondary); }
+    .compare-col .item .x { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+    .compare-col .item .check { color: #27AE60; font-weight: 700; flex-shrink: 0; }
+
+    /* --- CARD HOVER --- */
+    .card { transition: all 0.3s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); border-color: var(--gold); }
+
     /* --- NAV --- */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -355,8 +407,15 @@
       <span class="gold" data-i18n="hero.title2">con Agentes de IA</span>
     </h1>
     <p class="subtitle" data-i18n="hero.subtitle">
-      3 horas. Construimos un agente IA con su contexto laboral real. Sin inversion economica. Solo 13 plazas. Tambien disponible sabado: 9-12 o 14-17.
+      3 horas. Construimos un agente IA con su contexto laboral real. Sin inversion economica. Solo 13 plazas.
     </p>
+
+    <!-- STAT PILLS -->
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;">
+      <div class="stat-pill"><span class="stat-num">$89M</span> TAM Ecuador</div>
+      <div class="stat-pill"><span class="stat-num">0</span> Competidores directos</div>
+      <div class="stat-pill"><span class="stat-num">18h</span> /semana recuperadas</div>
+    </div>
 
     <!-- COUNTDOWN -->
     <div class="countdown" id="countdown">
@@ -426,6 +485,29 @@
     </div>
   </section>
 
+  <!-- COMPARADOR: Sin sistema vs Con Pristino -->
+  <section class="reveal">
+    <h2 style="font-family:var(--font-display);font-weight:700;font-size:24px;margin-bottom:24px;text-align:center;" data-i18n="compare.title">La diferencia es operativa</h2>
+    <div class="compare-grid">
+      <div class="compare-col bad">
+        <h4 style="color:#C0392B;" data-i18n="compare.bad.title">Sin sistema agentico</h4>
+        <div class="item"><span class="x">&#10005;</span> 60% del tiempo en correos, reportes, seguimiento</div>
+        <div class="item"><span class="x">&#10005;</span> Herramientas de IA aisladas, abandonadas en 2-4 semanas</div>
+        <div class="item"><span class="x">&#10005;</span> Decisiones basadas en informacion fragmentada</div>
+        <div class="item"><span class="x">&#10005;</span> Cada trimestre, mas lejos de quienes ya operan con IA</div>
+        <div class="item"><span class="x">&#10005;</span> Depende de tecnicos para cualquier automatizacion</div>
+      </div>
+      <div class="compare-col good">
+        <h4 style="color:#27AE60;" data-i18n="compare.good.title">Con Pristino + 13 asistentes</h4>
+        <div class="item"><span class="check">&#10003;</span> 18h/semana recuperadas — el agente ejecuta lo operativo</div>
+        <div class="item"><span class="check">&#10003;</span> Sistema integrado que opera 24/7 con su contexto real</div>
+        <div class="item"><span class="check">&#10003;</span> Segundo cerebro con toda su informacion conectada</div>
+        <div class="item"><span class="check">&#10003;</span> Auto-estudio o Bootcamp de la mano de nosotros: su mejor aliado</div>
+        <div class="item"><span class="check">&#10003;</span> Best practices del Directivo en la Era de la IA incluidas</div>
+      </div>
+    </div>
+  </section>
+
   <!-- EXPERIENCIA DEL TALLER -->
   <section class="reveal">
     <h2 style="font-family:var(--font-display);font-weight:700;font-size:24px;margin-bottom:24px;text-align:center;" data-i18n="exp.title">Que pasa en las 3 horas</h2>
@@ -438,7 +520,7 @@
       <div class="card">
         <div class="icon" style="background:rgba(255,215,0,0.1);color:var(--gold);">&#128295;</div>
         <h3 data-i18n="exp.2.title">Llévese un agente funcionando</h3>
-        <p data-i18n="exp.2.desc">Instalamos su agente con tareas basicas desde el minuto 1. En el Bootcamp lo auto-entrena: le conecta mail, calendario, Drive. Aprende las best practices del Directivo en la Era de la IA. No depende de nadie. Quiere mas? Empodere a su equipo.</p>
+        <p data-i18n="exp.2.desc">Aprende a instalar y usar Pristino en su version basica. Sacarle todo el potencial: auto-estudio o de la mano de nosotros en el Bootcamp, donde le damos todo su contexto y lo volvemos su mejor aliado.</p>
       </div>
     </div>
   </section>
@@ -477,15 +559,26 @@
     <p class="quote-attr" data-i18n="quote.attr">MetodologIA — Intencion sobre Intensidad</p>
   </div>
 
+  <!-- SOCIAL PROOF + ROI -->
+  <section class="reveal">
+    <div class="proof-strip">
+      <div class="proof-item"><strong>$4,320</strong>valor/mes recuperado</div>
+      <div class="proof-item"><strong>10 dias</strong>payback estimado</div>
+      <div class="proof-item"><strong>34.8x</strong>retorno anual/inversion</div>
+      <div class="proof-item"><strong>$51,840</strong>valor anual del sistema</div>
+    </div>
+    <p style="text-align:center;font-size:11px;color:var(--text-secondary);margin-top:8px;">Basado en 18h/semana recuperadas x $60/h valor hora directivo. Proyeccion ilustrativa.</p>
+  </section>
+
   <!-- WHAT'S NEXT -->
   <section class="reveal">
     <h2 style="font-family:var(--font-display);font-weight:700;font-size:24px;margin-bottom:24px;text-align:center;" data-i18n="next.title">Despues del taller</h2>
     <div class="cards-grid" style="grid-template-columns:1fr 1fr;">
-      <div class="card">
+      <div class="card pulse-gold">
         <div style="font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;" data-i18n="next.cao.badge">Recomendado</div>
         <h3 data-i18n="next.cao.title">CAO Bootcamp</h3>
-        <p style="font-size:24px;font-family:var(--font-display);font-weight:700;color:var(--gold);margin:8px 0;" data-i18n="next.cao.price">$1,490 USD</p>
-        <p data-i18n="next.cao.desc">20 horas en 4-10 semanas. Agente Pristino + 13 asistentes + segundo cerebro digital. Solo 5 plazas en la Edicion Creyentes (abril).</p>
+        <p style="font-size:24px;font-family:var(--font-display);font-weight:700;margin:8px 0;" data-i18n="next.cao.price"><span class="gradient-text">$1,490 USD</span></p>
+        <p data-i18n="next.cao.desc">20 horas en 4-10 semanas. Auto-entrene su agente + 13 asistentes + segundo cerebro. Best practices del Directivo en la Era de la IA. Solo 5 plazas Creyentes (abril).</p>
       </div>
       <div class="card">
         <div style="font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;" data-i18n="next.emp.badge">Para equipos</div>

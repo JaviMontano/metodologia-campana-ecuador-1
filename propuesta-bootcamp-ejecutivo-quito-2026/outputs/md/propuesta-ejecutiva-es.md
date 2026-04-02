@@ -24,7 +24,7 @@ Su semana esta llena. Reuniones, reportes, seguimiento, correos. La IA puede eje
 
 | # | Que se lleva | Que es exactamente |
 |---|-------------|-------------------|
-| 1 | **1 agente que usted auto-entrena** | Pristino: lo conecta a su mail, calendario, Drive. Lo entrena a su medida. No depende de nadie |
+| 1 | **1 agente propio** | Pristino: en el taller lo instala basico. Todo el potencial: auto-estudio o Bootcamp. Suyo para siempre |
 | 2 | **13 asistentes IA especializados** | Para flujos de trabajo desde el dia 1. Aprende a usarlos mejor que el publico |
 | 3 | **1 Playbook** | "Como Dirigir en la Era de la IA". Guia practica sin depender de tecnicos |
 | 4 | **2 bibliotecas de prompts** | Universal + Ejecutiva (estrategia, decision, delegacion, reportes) |
