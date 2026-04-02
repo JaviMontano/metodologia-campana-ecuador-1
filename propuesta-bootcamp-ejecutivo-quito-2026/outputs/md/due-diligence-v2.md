@@ -15,7 +15,7 @@
 | Dimension | Detalle | Evidencia |
 |-----------|---------|-----------|
 | Nombre | Cristian Jarrin | [DOC] |
-| Rol | Co-fundador Ecuador (51% participacion) | [DOC] |
+| Rol | Co-fundador Ecuador (7% participacion) | [DOC] |
 | Funcion operativa | Representacion legal local, gestion de alianzas, logistica in-country | [INFERENCIA] |
 | Nota importante | Cristian NO es facilitador del programa; su rol es estrategico y operativo | [DOC] |
 | Estado de relacion | Confirmado y activo | [DOC] |
