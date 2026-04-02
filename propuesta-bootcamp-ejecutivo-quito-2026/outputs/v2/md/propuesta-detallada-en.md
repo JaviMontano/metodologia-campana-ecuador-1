@@ -41,10 +41,15 @@ The CAO Bootcamp does not teach AI — it installs a **custom agentic work syste
 - Connected to your work ecosystem (Gmail, Calendar, Drive)
 - Auditable: the executive sees exactly what it does and why
 
-### 13 AI Assistants
-- Specialized by executive function (communication, analysis, scheduling, decisions, reports...)
-- Configured during the 9 co-creation sessions
+### 13 Specialized AI Assistants
+- Available from day 1 for use in workflows
+- Specialized by function (communication, analysis, scheduling, decisions, reports...), not personalized by individual
+- During the bootcamp they are delivered and explained how to use them better than the general public
 - Base set included in the bootcamp; additional assistants available at $347 USD each
+
+### Prompt Libraries
+- **Universal Prompt Library**: collection for any professional, access from day 1
+- **Executive & Manager Prompt Library**: specialized prompts for strategy, decision-making, delegation, executive communication, reports
 
 ### Digital Second Brain
 - Powered by NotebookLM

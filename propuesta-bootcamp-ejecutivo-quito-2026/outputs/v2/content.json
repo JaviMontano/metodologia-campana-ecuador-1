@@ -47,7 +47,8 @@
       ],
       "deliverables": [
         { "es": "Agente Pristino personalizado", "en": "Personalized Pristino Agent" },
-        { "es": "13 asistentes IA configurados", "en": "13 configured AI assistants" },
+        { "es": "13 asistentes IA especializados (disponibles desde el dia 1, para flujos de trabajo)", "en": "13 specialized AI assistants (available from day 1, for workflows)" },
+        { "es": "Biblioteca Universal de Prompts + Biblioteca de Prompts para Directivos", "en": "Universal Prompt Library + Executive Prompt Library" },
         { "es": "Segundo cerebro digital (NotebookLM)", "en": "Digital second brain (NotebookLM)" },
         { "es": "9 sesiones de co-creacion", "en": "9 co-creation sessions" },
         { "es": "Campus virtual (1 mes incluido)", "en": "Virtual campus (1 month included)" }
@@ -323,7 +324,26 @@
     },
     "assistants": {
       "count": 13,
-      "description": { "es": "Asistentes IA especializados, configurados con su contexto real", "en": "Specialized AI assistants, configured with your real context" }
+      "type": { "es": "Especializados por funcion (no personalizados)", "en": "Specialized by function (not personalized)" },
+      "availability": "day-1",
+      "description": {
+        "es": "13 asistentes IA especializados para usar en flujos de trabajo desde el dia 1. Cada uno cubre una funcion ejecutiva distinta. Durante el bootcamp se entregan y se explica como usarlos mejor que el publico general.",
+        "en": "13 specialized AI assistants for use in workflows from day 1. Each one covers a distinct executive function. During the bootcamp they are delivered and explained how to use them better than the general public."
+      },
+      "clarification": {
+        "es": "Los asistentes son especializados (por funcion), no personalizados (por individuo). La personalizacion ocurre con Pristino (agente personal).",
+        "en": "The assistants are specialized (by function), not personalized (by individual). Personalization happens with Pristino (personal agent)."
+      }
+    },
+    "prompt_libraries": {
+      "universal": {
+        "name": { "es": "Biblioteca Universal de Prompts", "en": "Universal Prompt Library" },
+        "description": { "es": "Coleccion de prompts para cualquier profesional. Acceso desde el dia 1.", "en": "Prompt collection for any professional. Access from day 1." }
+      },
+      "executive": {
+        "name": { "es": "Biblioteca de Prompts para Directivos y Managers", "en": "Executive & Manager Prompt Library" },
+        "description": { "es": "Prompts especializados para funciones directivas: estrategia, decision, delegacion, comunicacion ejecutiva, reportes.", "en": "Specialized prompts for executive functions: strategy, decision-making, delegation, executive communication, reports." }
+      }
     },
     "second_brain": {
       "platform": "NotebookLM",

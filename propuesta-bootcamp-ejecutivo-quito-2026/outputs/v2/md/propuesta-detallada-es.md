@@ -41,10 +41,15 @@ El CAO Bootcamp no ensena IA — instala un **sistema de trabajo agentico a medi
 - Conectado a su ecosistema de trabajo (Gmail, Calendar, Drive)
 - Auditable: el ejecutivo ve exactamente que hace y por que
 
-### 13 Asistentes IA
-- Especializados por funcion ejecutiva (comunicacion, analisis, agenda, decisiones, reportes...)
-- Configurados durante las 9 sesiones de co-creacion
+### 13 Asistentes IA Especializados
+- Disponibles desde el dia 1 para usar en flujos de trabajo
+- Especializados por funcion (comunicacion, analisis, agenda, decisiones, reportes...), no personalizados por individuo
+- Durante el bootcamp se entregan y se explica como usarlos mejor que el publico general
 - Base incluida en el bootcamp; asistentes adicionales disponibles a $347 USD c/u
+
+### Bibliotecas de Prompts
+- **Biblioteca Universal de Prompts**: coleccion para cualquier profesional, acceso desde el dia 1
+- **Biblioteca de Prompts para Directivos y Managers**: prompts especializados para estrategia, decision, delegacion, comunicacion ejecutiva, reportes
 
 ### Segundo Cerebro Digital
 - Basado en NotebookLM
