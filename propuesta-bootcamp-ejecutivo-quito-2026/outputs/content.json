@@ -22,8 +22,12 @@
       "duration_hours": 3,
       "duration_weeks": null,
       "deliverables": [
-        { "es": "Agente funcional con contexto real", "en": "Functional agent with real context" }
+        { "es": "Agente funcional con contexto real (operativo para tareas basicas desde el dia 1)", "en": "Functional agent with real context (operational for basic tasks from day 1)" }
       ],
+      "experience": {
+        "es": "En el taller, Javier muestra como opera con Pristino configurado y totalmente funcional con su contexto real. El agente que instalamos opera y hace tareas basicas. En el Bootcamp, aprendemos a darle nuestro contexto completo, conectarlo a mail, calendario, Drive y expandir sus capacidades con los 13 asistentes especializados.",
+        "en": "In the workshop, Javier shows how he operates with Pristino fully configured with his real context. The agent we install is operational for basic tasks. In the Bootcamp, we learn to give it our full context, connect it to email, calendar, Drive and expand its capabilities with the 13 specialized assistants."
+      },
       "cta_label": { "es": "Reservar Plaza Gratis", "en": "Reserve Free Spot" }
     },
     {
