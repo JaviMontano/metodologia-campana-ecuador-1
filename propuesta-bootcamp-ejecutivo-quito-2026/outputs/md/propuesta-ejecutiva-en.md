@@ -75,7 +75,7 @@ Your week is full. Meetings, reports, follow-ups, emails. AI can execute 60% of 
 ## 4. Timeline
 
 ```
-APR 5        APR           MAY           MAY           JUL
+APR 6        APR           MAY           MAY           JUL
   |            |             |             |             |
 Workshop    CAO           CAO          Empower-      Academic
 Free      Believers      Open          ment         Calendar

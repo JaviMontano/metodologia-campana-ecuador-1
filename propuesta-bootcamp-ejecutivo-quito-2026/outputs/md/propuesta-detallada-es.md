@@ -157,7 +157,7 @@ El CAO Bootcamp no ensena IA — instala un **sistema de trabajo agentico a medi
 
 | Fecha | Evento | Audiencia | Status |
 |-------|--------|-----------|--------|
-| 5 abril 2026 (martes 7 de abril) | Taller "De Ocupado a Productivo" | Directivos + managers | Confirmado, 13 plazas |
+| 7 abril 2026 | Taller "De Ocupado a Productivo" | Directivos + managers | Confirmado, 13 plazas |
 | Abril 2026 | CAO Edicion Creyentes | 5 directivos seleccionados | $1,490, Puerta Cerrada |
 | Mayo 2026 | CAO Convocatoria Abierta | Directivos C-level | $1,990, Academico |
 | Mayo 2026 | Programa de Empoderamiento | Managers 7+ anios exp | $1,490/persona |

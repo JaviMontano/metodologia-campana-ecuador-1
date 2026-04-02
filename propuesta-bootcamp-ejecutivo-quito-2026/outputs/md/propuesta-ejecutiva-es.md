@@ -75,7 +75,7 @@ Su semana esta llena. Reuniones, reportes, seguimiento, correos. La IA puede eje
 ## 4. Timeline
 
 ```
-ABR 5        ABR           MAY           MAY           JUL
+ABR 6        ABR           MAY           MAY           JUL
   |            |             |             |             |
 Taller      CAO           CAO          Empode-      Calendario
 Gratis    Creyentes     Abierto      ramiento      Academico
