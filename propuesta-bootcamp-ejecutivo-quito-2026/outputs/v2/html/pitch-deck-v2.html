@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetodologIA Ecuador — Pitch Deck v2</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='10' fill='%230A122A'/><path d='M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z' fill='white'/><circle cx='18' cy='8' r='2' fill='%23FFD700'/></svg>" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* ── CSS VARIABLES ── */
+    :root {
+      --bg-primary: #0B2545;
+      --bg-secondary: #071A33;
+      --bg-gradient: linear-gradient(180deg, #0B2545 0%, #071A33 100%);
+      --text-primary: #F0F4F8;
+      --text-secondary: #A0B4CC;
+      --text-muted: #6B8AB0;
+      --glass-bg: rgba(11, 37, 69, 0.55);
+      --glass-border: rgba(255, 215, 0, 0.12);
+      --gold: #FFD700;
+      --gold-dark: #FFA000;
+      --gold-soft: #FFE44D;
+      --border-color: rgba(255, 215, 0, 0.15);
+      --shadow-glow: 0 0 60px rgba(255, 215, 0, 0.08);
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --green-accent: #4ADE80;
+      --red-accent: #F87171;
+    }
+
+    .light-mode {
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F5F7FA;
+      --bg-gradient: linear-gradient(180deg, #FFFFFF 0%, #F5F7FA 100%);
+      --text-primary: #1A1A2E;
+      --text-secondary: #4A5568;
+      --text-muted: #718096;
+      --glass-bg: rgba(245, 247, 250, 0.85);
+      --glass-border: rgba(184, 134, 11, 0.2);
+      --gold: #B8860B;
+      --gold-dark: #8B6508;
+      --gold-soft: #DAA520;
+      --border-color: rgba(184, 134, 11, 0.2);
+      --shadow-glow: 0 0 40px rgba(184, 134, 11, 0.06);
+      --card-bg: rgba(0, 0, 0, 0.03);
+      --card-border: rgba(0, 0, 0, 0.08);
+      --green-accent: #16A34A;
+      --red-accent: #DC2626;
+    }
+
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      background: var(--bg-gradient);
+      color: var(--text-primary);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.15;
+    }
+
+    .gold-text {
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .light-mode .gold-text {
+      background: linear-gradient(135deg, #B8860B, #8B6508);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── SLIDE SECTIONS ── */
+    section {
+      min-height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 8%;
+      position: relative;
+    }
+
+    section::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      right: 10%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.25;
+    }
+
+    /* ── SLIDE TAG ── */
+    .slide-tag {
+      position: absolute;
+      top: 2rem;
+      right: 3rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.7;
+    }
+
+    /* ── GLASS CARD ── */
+    .glass-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 2rem;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: var(--shadow-glow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 80px rgba(255, 215, 0, 0.12);
+    }
+
+    /* ── GOLD ACCENT LINE ── */
+    .gold-line {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      border-radius: 2px;
+      margin: 1.5rem 0;
+    }
+    .gold-line-wide {
+      width: 160px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      border-radius: 2px;
+      margin: 1.5rem 0;
+    }
+
+    /* ── GRID LAYOUTS ── */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+
+    /* ── TABLES ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    .data-table th {
+      background: rgba(255, 215, 0, 0.1);
+      color: var(--gold);
+      padding: 0.8rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--gold);
+    }
+    .data-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-secondary);
+    }
+    .data-table tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .light-mode .data-table tr:nth-child(even) td {
+      background: rgba(0, 0, 0, 0.02);
+    }
+    .data-table .highlight-row td {
+      background: rgba(255, 215, 0, 0.08);
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .data-table .check { color: var(--green-accent); font-weight: 700; }
+    .data-table .cross { color: var(--red-accent); font-weight: 700; }
+
+    /* ── KPI CARDS ── */
+    .kpi-card {
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .kpi-card .kpi-value {
+      font-size: 2.4rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .kpi-card .kpi-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ── STACKED BAR ── */
+    .stacked-bar {
+      display: flex;
+      height: 48px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 1.5rem 0;
+    }
+    .stacked-bar .segment {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #0B2545;
+      transition: flex-basis 0.4s ease;
+    }
+
+    /* ── FUNNEL ── */
+    .funnel-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+    .funnel-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2rem;
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+      position: relative;
+      text-align: center;
+      clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+    }
+    .funnel-rate {
+      font-size: 0.75rem;
+      color: var(--gold);
+      font-weight: 600;
+      margin-top: 0.2rem;
+    }
+
+    /* ── FLYWHEEL ── */
+    .flywheel {
+      position: relative;
+      width: 420px;
+      height: 420px;
+      margin: 0 auto;
+    }
+    .flywheel-node {
+      position: absolute;
+      width: 140px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 12px;
+      background: var(--glass-bg);
+      border: 1px solid var(--gold);
+      color: var(--text-primary);
+      z-index: 2;
+    }
+    .flywheel-node:nth-child(1) { top: 0; left: 50%; transform: translateX(-50%); }
+    .flywheel-node:nth-child(2) { top: 50%; right: 0; transform: translateY(-50%); }
+    .flywheel-node:nth-child(3) { bottom: 0; left: 50%; transform: translateX(-50%); }
+    .flywheel-node:nth-child(4) { top: 50%; left: 0; transform: translateY(-50%); }
+    .flywheel-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 280px;
+      height: 280px;
+      transform: translate(-50%, -50%);
+      border: 2px dashed var(--gold);
+      border-radius: 50%;
+      opacity: 0.4;
+    }
+    .flywheel-arrow {
+      position: absolute;
+      z-index: 1;
+      color: var(--gold);
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .flywheel-arrow.top-right { top: 18%; right: 12%; transform: rotate(45deg); }
+    .flywheel-arrow.bottom-right { bottom: 18%; right: 12%; transform: rotate(135deg); }
+    .flywheel-arrow.bottom-left { bottom: 18%; left: 12%; transform: rotate(225deg); }
+    .flywheel-arrow.top-left { top: 18%; left: 12%; transform: rotate(315deg); }
+    .flywheel-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      z-index: 3;
+    }
+
+    /* ── CONTROLS (fixed) ── */
+    .controls {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 1000;
+    }
+    .ctrl-btn {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      color: var(--text-secondary);
+      padding: 0.4rem 0.7rem;
+      border-radius: 8px;
+      font-size: 0.7rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: all 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .ctrl-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    .ctrl-btn.active {
+      background: rgba(255, 215, 0, 0.15);
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* ── SLIDE COUNTER ── */
+    .slide-counter {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold);
+      opacity: 0.6;
+      z-index: 1000;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ── PRESENTATION TIMER ── */
+    .timer {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      z-index: 1000;
+      font-variant-numeric: tabular-nums;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .timer.visible { opacity: 1; }
+    .timer.warning { color: var(--gold); }
+    .timer.danger { color: var(--red-accent); }
+
+    /* ── SPEAKER NOTES ── */
+    .speaker-notes {
+      display: none;
+      margin-top: 1.5rem;
+      padding: 1rem 1.5rem;
+      background: rgba(255, 215, 0, 0.06);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+    .show-notes .speaker-notes { display: block; }
+
+    /* ── FOOTER TAGLINE ── */
+    .slide-footer {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 8%;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+
+    /* ── SECTION-SPECIFIC ── */
+    .slide-title { text-align: center; }
+    .slide-title h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.3rem;
+    }
+    .slide-title .subtitle {
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+    }
+    .slide-title .meta {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      max-width: 700px;
+    }
+
+    .pain-card {
+      padding: 2rem;
+      text-align: center;
+    }
+    .pain-card .pain-stat {
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .pain-card .pain-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .product-card { padding: 2rem; }
+    .product-card .product-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    .product-card .product-price {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+    .product-card .product-detail {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.3rem;
+    }
+
+    .tam-bar {
+      display: flex;
+      align-items: flex-end;
+      gap: 3rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+    .tam-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tam-col .bar {
+      width: 80px;
+      border-radius: 8px 8px 0 0;
+      background: linear-gradient(180deg, var(--gold), var(--gold-dark));
+      transition: height 0.5s ease;
+    }
+    .tam-col .bar-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .tam-col .bar-value {
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+
+    .segment-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .segment-legend .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    .segment-legend .legend-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+    }
+
+    .team-card {
+      padding: 2rem;
+      text-align: center;
+    }
+    .team-card .team-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+    .team-card .team-role {
+      font-size: 0.8rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.6rem;
+    }
+    .team-card .team-equity {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
+    }
+    .team-card .team-desc {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    .cta-big {
+      font-size: 2.6rem;
+      font-weight: 900;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    .cta-sub {
+      text-align: center;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .cta-item {
+      padding: 1.5rem 2.5rem;
+      text-align: center;
+    }
+    .cta-item .cta-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.3rem;
+    }
+    .cta-item .cta-value {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .disclaimer {
+      text-align: center;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 2rem;
+      opacity: 0.6;
+    }
+
+    .pnl-summary {
+      font-size: 0.85rem;
+    }
+    .pnl-summary td {
+      padding: 0.5rem 1rem;
+    }
+
+    /* ── I18N hidden layers ── */
+    .lang-en { display: none; }
+    .show-en .lang-es { display: none; }
+    .show-en .lang-en { display: block; }
+    .show-en .lang-en-inline { display: inline; }
+    .show-en .lang-es-inline { display: none; }
+    .lang-en-inline { display: none; }
+
+    /* ── PRINT MODE ── */
+    @media print {
+      html { scroll-snap-type: none; }
+      section {
+        min-height: auto;
+        height: 100vh;
+        page-break-after: always;
+        page-break-inside: avoid;
+      }
+      .controls, .slide-counter, .timer, .speaker-notes, .slide-footer { display: none !important; }
+      body { background: white; color: #1A1A2E; }
+      .glass-card { border: 1px solid #ddd; background: #fafafa; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── CONTROLS ── -->
+  <div class="controls">
+    <button class="ctrl-btn" id="btnTheme" onclick="toggleTheme()" title="Dark/Light">D/L</button>
+    <button class="ctrl-btn" id="btnLang" onclick="toggleLang()" title="ES/EN">ES/EN</button>
+    <button class="ctrl-btn" id="btnNotes" title="Press N for notes">N</button>
+    <button class="ctrl-btn" id="btnTimer" title="Press T for timer">T</button>
+  </div>
+
+  <!-- ── SLIDE COUNTER ── -->
+  <div class="slide-counter" id="slideCounter">1/12</div>
+
+  <!-- ── TIMER ── -->
+  <div class="timer" id="timer">15:00</div>
+
+  <!-- ══════════════════════════════════════════════
+       SLIDE 1 — TITLE
+       ══════════════════════════════════════════════ -->
+  <section id="slide-1" class="slide-title">
+    <span class="slide-tag">TITULO</span>
+    <div>
+      <h1 class="gold-text">MetodologIA Ecuador</h1>
+      <div class="gold-line-wide" style="margin:1rem auto;"></div>
+      <p class="subtitle lang-es">CAO Bootcamp &mdash; Chief Agentic Officer</p>
+      <p class="subtitle lang-en">CAO Bootcamp &mdash; Chief Agentic Officer</p>
+      <p class="meta">Quito 2026</p>
+      <p class="meta" style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-muted);">
+        <span class="lang-es">La primera certificacion ejecutiva en orquestacion de agentes IA de Latinoamerica</span>
+        <span class="lang-en" style="display:none;">Latin America's first executive certification in AI agent orchestration</span>
+      </p>
+    </div>
+    <div class="speaker-notes">
+      <span class="lang-es">Saludo, presentate, establece contexto del mercado ecuatoriano.</span>
+      <span class="lang-en" style="display:none;">Greeting, introduce yourself, set context for Ecuador market.</span>
+    </div>
+    <span class="slide-footer">MetodologIA -- (R)Evolucion Agentica</span>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SLIDE 2 — PROBLEM
+       ══════════════════════════════════════════════ -->
+  <section id="slide-2">
+    <span class="slide-tag">PROBLEMA</span>
+    <h2 class="section-title">
+      <span class="lang-es">El Problema</span>
+      <span class="lang-en" style="display:none;">The Problem</span>
+    </h2>
+    <p class="section-subtitle">
+      <span class="lang-es">Los ejecutivos pierden tiempo, dinero y ventaja competitiva sin saber orquestar IA.</span>
+      <span class="lang-en" style="display:none;">Executives waste time, money, and competitive edge without AI orchestration skills.</span>
+    </p>
+    <div class="grid-3">
+      <div class="glass-card pain-card">
+        <div class="pain-stat gold-text">60%</div>
+        <div class="gold-line" style="margin:0.8rem auto;"></div>
+        <p class="pain-desc">
+          <span class="lang-es">del tiempo ejecutivo en tareas operativas repetitivas</span>
+          <span class="lang-en" style="display:none;">of executive time on repetitive operational tasks</span>
+        </p>
+      </div>
+      <div class="glass-card pain-card">
+        <div class="pain-stat gold-text">73%</div>
+        <div class="gold-line" style="margin:0.8rem auto;"></div>
+        <p class="pain-desc">
+          <span class="lang-es">de herramientas IA aisladas no generan ROI medible</span>
+          <span class="lang-en" style="display:none;">of isolated AI tools fail to generate measurable ROI</span>
+        </p>
+      </div>
+      <div class="glass-card pain-card">
+        <div class="pain-stat gold-text">2.4x</div>
+        <div class="gold-line" style="margin:0.8rem auto;"></div>
+        <p class="pain-desc">
+          <span class="lang-es">crece la brecha entre empresas con y sin estrategia IA (YoY)</span>
+          <span class="lang-en" style="display:none;">growing gap between companies with and without AI strategy (YoY)</span>
+        </p>
+      </div>
+    </div>
+    <div class="speaker-notes">
+      <span class="lang-es">Pregunta: cuantas horas semanales dedican a email/reportes?</span>
+      <span class="lang-en" style="display:none;">Ask: how many hours do you spend on email/reports weekly?</span>
+    </div>
+    <span class="slide-footer">MetodologIA -- (R)Evolucion Agentica</span>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SLIDE 3 — SOLUTION
+       ══════════════════════════════════════════════ -->
+  <section id="slide-3">
+    <span class="slide-tag">SOLUCION</span>
+    <h2 class="section-title">
+      <span class="lang-es">La Solucion</span>
+      <span class="lang-en" style="display:none;">The Solution</span>
+    </h2>
+    <p class="section-subtitle">
+      <span class="lang-es">No es un curso &mdash; es una instalacion.</span>
+      <span class="lang-en" style="display:none;">Not a course &mdash; an installation.</span>
+    </p>
+    <div class="grid-3">
+      <div class="glass-card" style="text-align:center; padding:2rem;">
+        <div style="font-size:2.4rem; font-weight:800; margin-bottom:0.5rem;" class="gold-text">Pristino</div>
+        <div class="gold-line" style="margin:0.5rem auto;"></div>
+        <p style="font-size:0.9rem; color:var(--text-secondary);">
+          <span class="lang-es">Agente orquestador central que coordina todo el ecosistema</span>
+          <span class="lang-en" style="display:none;">Central orchestrator agent coordinating the entire ecosystem</span>
+        </p>
+      </div>
+      <div class="glass-card" style="text-align:center; padding:2rem;">
+        <div style="font-size:2.4rem; font-weight:800; margin-bottom:0.5rem;" class="gold-text">13</div>
+        <div style="font-size:1rem; color:var(--text-secondary); margin-bottom:0.3rem;">
+          <span class="lang-es">Asistentes especializados</span>
+          <span class="lang-en" style="display:none;">Specialized assistants</span>
+        </div>
+        <div class="gold-line" style="margin:0.5rem auto;"></div>
+        <p style="font-size:0.8rem; color:var(--text-muted);">
+          <span class="lang-es">Email, calendario, finanzas, investigacion, contenido, CRM...</span>
+          <span class="lang-en" style="display:none;">Email, calendar, finance, research, content, CRM...</span>
+        </p>
+      </div>
+      <div class="glass-card" style="text-align:center; padding:2rem;">
+        <div style="font-size:1.4rem; font-weight:800; margin-bottom:0.5rem;" class="gold-text">Second Brain</div>
+        <div class="gold-line" style="margin:0.5rem auto;"></div>
+        <p style="font-size:0.9rem; color:var(--text-secondary);">
+          <span class="lang-es">Memoria persistente, RAG contextual, decision-support en tiempo real</span>
+          <span class="lang-en" style="display:none;">Persistent memory, contextual RAG, real-time decision support</span>
+        </p>
+      </div>
+    </div>
+    <div class="speaker-notes">
+      <span class="lang-es">Enfasis: el participante sale con un sistema funcional, no con apuntes.</span>
+      <span class="lang-en" style="display:none;">Emphasis: participants leave with a working system, not notes.</span>
+    </div>
+    <span class="slide-footer">MetodologIA -- (R)Evolucion Agentica</span>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SLIDE 4 — PRODUCTS
+       ══════════════════════════════════════════════ -->
+  <section id="slide-4">
+    <span class="slide-tag">PRODUCTOS</span>
+    <h2 class="section-title">
+      <span class="lang-es">Portafolio de Productos</span>
+      <span class="lang-en" style="display:none;">Product Portfolio</span>
+    </h2>
+    <div class="gold-line"></div>
+    <div class="grid-3">
+      <div class="glass-card product-card">
+        <div class="product-name">
+          <span class="lang-es">Taller Ejecutivo</span>
+          <span class="lang-en" style="display:none;">Executive Workshop</span>
+        </div>
+        <div class="product-price gold-text">
+          <span class="lang-es">Gratuito</span>
+          <span class="lang-en" style="display:none;">Free</span>
+        </div>
+        <p class="product-detail"><span class="lang-es">Duracion:</span><span class="lang-en" style="display:none;">Duration:</span> 2h</p>
+        <p class="product-detail"><span class="lang-es">Formato: Presencial</span><span class="lang-en" style="display:none;">Format: In-person</span></p>
+        <p class="product-detail"><span class="lang-es">Audiencia: C-Level, VP, Directores</span><span class="lang-en" style="display:none;">Audience: C-Level, VP, Directors</span></p>
+        <div class="gold-line" style="margin:1rem 0 0.5rem;"></div>
+        <p style="font-size:0.75rem; color:var(--text-muted);">
+          <span class="lang-es">Puerta de entrada al ecosistema</span>
+          <span class="lang-en" style="display:none;">Gateway to the ecosystem</span>
+        </p>
+      </div>
+      <div class="glass-card product-card" style="border-color:var(--gold); box-shadow:0 0 40px rgba(255,215,0,0.12);">
+        <div class="product-name">CAO Bootcamp</div>
+        <div class="product-price gold-text">$1,490 &ndash; $1,990</div>
+        <p class="product-detail"><span class="lang-es">Duracion:</span><span class="lang-en" style="display:none;">Duration:</span> 4-6 <span class="lang-es">semanas</span><span class="lang-en" style="display:none;">weeks</span></p>
+        <p class="product-detail"><span class="lang-es">Formato: Hibrido (presencial + virtual)</span><span class="lang-en" style="display:none;">Format: Hybrid (in-person + virtual)</span></p>
+        <p class="product-detail"><span class="lang-es">Audiencia: Ejecutivos decision-makers</span><span class="lang-en" style="display:none;">Audience: Decision-maker executives</span></p>
+        <div class="gold-line" style="margin:1rem 0 0.5rem;"></div>
+        <p style="font-size:0.75rem; color:var(--gold); font-weight:600;">
+          <span class="lang-es">Producto insignia</span>
+          <span class="lang-en" style="display:none;">Flagship product</span>
+        </p>
+      </div>
+      <div class="glass-card product-card">
+        <div class="product-name">
+          <span class="lang-es">Empoderamiento IA</span>
+          <span class="lang-en" style="display:none;">AI Empowerment</span>
+        </div>
+        <div class="product-price gold-text">$1,490</div>
+        <p class="product-detail"><span class="lang-es">Duracion:</span><span class="lang-en" style="display:none;">Duration:</span> 3-4 <span class="lang-es">semanas</span><span class="lang-en" style="display:none;">weeks</span></p>
+        <p class="product-detail"><span class="lang-es">Formato: Virtual + mentoria</span><span class="lang-en" style="display:none;">Format: Virtual + mentoring</span></p>
+        <p class="product-detail"><span class="lang-es">Audiencia: Mandos medios, equipos</span><span class="lang-en" style="display:none;">Audience: Middle management, teams</span></p>
+        <div class="gold-line" style="margin:1rem 0 0.5rem;"></div>
+        <p style="font-size:0.75rem; color:var(--text-muted);">
+          <span class="lang-es">Escalabilidad organizacional</span>
+          <span class="lang-en" style="display:none;">Organizational scalability</span>
+        </p>
+      </div>
+    </div>
+    <div class="speaker-notes">
+      <span class="lang-es">El taller gratuito es el funnel. El CAO es donde se monetiza. Empoderamiento escala.</span>
+      <span class="lang-en" style="display:none;">The free workshop is the funnel. CAO is where we monetize. Empowerment scales.</span>
+    </div>
+    <span class="slide-footer">MetodologIA -- (R)Evolucion Agentica</span>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SLIDE 5 — MARKET
+       ══════════════════════════════════════════════ -->
+  <section id="slide-5">
+    <span class="slide-tag">MERCADO</span>
+    <h2 class="section-title">
+      <span class="lang-es">Oportunidad de Mercado</span>
+      <span class="lang-en" style="display:none;">Market Opportunity</span>
+    </h2>
+    <div class="gold-line"></div>
+    <div class="tam-bar">
+      <div class="tam-col">
+        <div class="bar-value gold-text">$89M</div>
+        <div class="bar" style="height:200px;"></div>
+        <div class="bar-label">TAM</div>
+        <div style="font-size:0.7rem; color:var(--text-muted); text-align:center;">
+          <span class="lang-es">Formacion ejecutiva<br>IA LatAm</span>
+          <span class="lang-en" style="display:none;">Executive AI<br>training LatAm</span>
+        </div>
+      </div>
+      <div class="tam-col">
+        <div class="bar-value gold-text">$14.9M</div>
+        <div class="bar" style="height:120px; opacity:0.8;"></div>
+        <div class="bar-label">SAM</div>
+        <div style="font-size:0.7rem; color:var(--text-muted); text-align:center;">
+          <span class="lang-es">Region Andina<br>presencial + hibrido</span>
+          <span class="lang-en" style="display:none;">Andean region<br>in-person + hybrid</span>
+        </div>
+      </div>
+      <div class="tam-col">
+        <div class="bar-value gold-text">$136K</div>
+        <div class="bar" style="height:50px; opacity:0.6;"></div>
+        <div class="bar-label">SOM Y1</div>
+        <div style="font-size:0.7rem; color:var(--text-muted); text-align:center;">
+          <span class="lang-es">Quito primer ano<br>5 directivos</span>
+          <span class="lang-en" style="display:none;">Quito first year<br>5 executives</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:1.5rem;">
+      <p style="font-size:0.9rem; color:var(--text-secondary);">
+        <span class="lang-es">Mercado global de formacion IA: $1.5B (2024) &rarr; $10.4B (2033). LatAm = 7.7% del crecimiento.</span>
+        <span class="lang-en" style="display:none;">Global AI training market: $1.5B (2024) &rarr; $10.4B (2033). LatAm = 7.7% of growth.</span>
+      </p>
+    </div>
+    <div class="speaker-notes">
+      <span class="lang-es">Pausa aqui -- este es el momento donde la oportunidad de mercado hace click.</span>
+      <span class="lang-en" style="display:none;">Pause here -- this is where the market opportunity clicks.</span>
+    </div>
+    <span class="slide-footer">MetodologIA -- (R)Evolucion Agentica</span>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SLIDE 6 — BUSINESS MODEL
+       ══════════════════════════════════════════════ -->
+  <section id="slide-6">
+    <span class="slide-tag">MODELO</span>
+    <h2 class="section-title">
+      <span class="lang-es">Modelo de Negocio</span>
+      <span class="lang-en" style="display:none;">Business Model</span>
+    </h2>
+    <p class="section-subtitle">
+      <span class="lang-es">4 fuentes de ingreso con margen compuesto.</span>
+      <span class="lang-en" style="display:none;">4 revenue streams with compounding margin.</span>
+    </p>
+    <div class="gold-line"></div>
+    <div class="stacked-bar">
+      <div class="segment" style="flex-basis:50%; background:linear-gradient(135deg, #FFD700, #FFA000);">Coach 50%</div>
+      <div class="segment" style="flex-basis:20%; background:linear-gradient(135deg, #FFE44D, #FFD700);">Franquicia 20%</div>
+      <div class="segment" style="flex-basis:10%; background:linear-gradient(135deg, #FFF3B0, #FFE44D);">IP 10%</div>
+      <div class="segment" style="flex-basis:20%; background:linear-gradient(135deg, #FFFDE7, #FFF3B0);">Comercial 20%</div>
+    </div>
+    <div class="segment-legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#FFD700;"></div>
+        <span class="lang-es">Coach/Facilitacion &mdash; Bootcamps + talleres</span>
+        <span class="lang-en" style="display:none;">Coaching/Facilitation &mdash; Bootcamps + workshops</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#FFE44D;"></div>
+        <span class="lang-es">Franquicia &mdash; Operadores certificados por pais</span>
+        <span class="lang-en" style="display:none;">Franchise &mdash; Certified operators per country</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#FFF3B0;"></div>
+        <span class="lang-es">IP &mdash; Licencias de metodologia y contenido</span>
+        <span class="lang-en" style="display:none;">IP &mdash; Methodology and content licenses</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#FFFDE7;"></div>
+        <span class="lang-es">Comercial &mdash; Consulting + implementacion post-bootcamp</span>
+        <span class="lang-en" style="display:none;">Commercial &mdash; Consulting + post-bootcamp implementation</span>
+      </div>
+    </div>
+    <div class="speaker-notes">
+      <span class="lang-es">El modelo de franquicia permite escalar sin multiplicar costo operativo.</span>
+      <span class="lang-en" style="display:none;">The franchise model allows scaling without multiplying operational cost.</span>
+    </div>
+    <span class="slide-footer">MetodologIA -- (R)Evolucion Agentica</span>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SLIDE 7 — COMPETITIVE LANDSCAPE (NEW)
+       ══════════════════════════════════════════════ -->
+  <section id="slide-7">
+    <span class="slide-tag">COMPETENCIA</span>
+    <h2 class="section-title">
+      <span class="lang-es">Panorama Competitivo</span>
+      <span class="lang-en" style="display:none;">Competitive Landscape</span>
+    </h2>
+    <div class="gold-line"></div>
+    <div class="glass-card" style="overflow-x:auto;">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th><span class="lang-es">Criterio</span><span class="lang-en" style="display:none;">Criteria</span></th>
+            <th style="color:var(--gold);">MetodologIA</th>
+            <th>IDE Business School</th>
+            <th>USFQ</th>
+            <th>Big 4 Consulting</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td><span class="lang-es">Precio</span><span class="lang-en" style="display:none;">Price</span></td>
+            <td>$1,490 &ndash; $1,990</td>
+            <td>$3,500+</td>
+            <td>$2,800+</td>
+            <td>$15,000+</td>
+          </tr>
+          <tr>
+            <td><span class="lang-es">Duracion</span><span class="lang-en" style="display:none;">Duration</span></td>
+            <td>4-6 <span class="lang-es">sem</span><span class="lang-en" style="display:none;">wks</span></td>
+            <td>12 <span class="lang-es">sem</span><span class="lang-en" style="display:none;">wks</span></td>
+            <td>8-10 <span class="lang-es">sem</span><span class="lang-en" style="display:none;">wks</span></td>
+            <td>2-4 <span class="lang-es">sem</span><span class="lang-en" style="display:none;">wks</span></td>
+          </tr>
+          <tr class="highlight-row">
+            <td><span class="lang-es">Entregable</span><span class="lang-en" style="display:none;">Deliverable</span></td>
+            <td><span class="check">Sistema IA funcional</span></td>
+            <td><span class="lang-es">Certificado academico</span><span class="lang-en" style="display:none;">Academic certificate</span></td>
+            <td><span class="lang-es">Diploma</span><span class="lang-en" style="display:none;">Diploma</span></td>
+            <td><span class="lang-es">Reporte + recomendaciones</span><span class="lang-en" style="display:none;">Report + recommendations</span></td>
+          </tr>
+          <tr>
+            <td><span class="lang-es">Agentes IA</span><span class="lang-en" style="display:none;">AI Agents</span></td>
+            <td><span class="check">13+ instalados</span></td>
+            <td><span class="cross">No</span></td>
+            <td><span class="cross">No</span></td>
+            <td><span class="lang-es">Generico</span><span class="lang-en" style="display:none;">Generic</span></td>
+          </tr>
+          <tr class="highlight-row">
+            <td><span class="lang-es">Soporte post</span><span class="lang-en" style="display:none;">Post support</span></td>
+            <td><span class="check">Comunidad + embajadores</span></td>
+            <td><span class="lang-es">Alumni basico</span><span class="lang-en" style="display:none;">Basic alumni</span></td>
+            <td><span class="lang-es">Limitado</span><span class="lang-en" style="display:none;">Limited</span></td>
+            <td><span class="lang-es">Costoso</span><span class="lang-en" style="display:none;">Expensive</span></td>
+          </tr>
+          <tr>
+            <td>ROI <span class="lang-es">visible</span><span class="lang-en" style="display:none;">visible</span></td>
+            <td><span class="check"><span class="lang-es">Semana 1</span><span class="lang-en" style="display:none;">Week 1</span></span></td>
+            <td><span class="lang-es">Meses despues</span><span class="lang-en" style="display:none;">Months later</span></td>
+            <td><span class="lang-es">Meses despues</span><span class="lang-en" style="display:none;">Months later</span></td>
+            <td><span class="lang-es">Variable</span><span class="lang-en" style="display:none;">Variable</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="speaker-notes">
+      <span class="lang-es">El diferenciador no es precio -- es que sales con un sistema funcional desde la semana 1.</span>
+      <span class="lang-en" style="display:none;">The differentiator isn't price -- it's that you leave with a working system from week 1.</span>
+    </div>
+    <span class="slide-footer">MetodologIA -- (R)Evolucion Agentica</span>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SLIDE 8 — FINANCIALS
+       ══════════════════════════════════════════════ -->
+  <section id="slide-8">
+    <span class="slide-tag">FINANZAS</span>
+    <h2 class="section-title">
+      <span class="lang-es">Proyeccion Financiera</span>
+      <span class="lang-en" style="display:none;">Financial Projection</span>
+    </h2>
+    <div class="gold-line"></div>
+    <div class="grid-4">
+      <div class="glass-card kpi-card">
+        <div class="kpi-value gold-text">$136K</div>
+        <div class="kpi-label"><span class="lang-es">Ingreso Y1</span><span class="lang-en" style="display:none;">Revenue Y1</span></div>
+      </div>
+      <div class="glass-card kpi-card">
+        <div class="kpi-value gold-text">$435K</div>
+        <div class="kpi-label"><span class="lang-es">Ingreso Y2</span><span class="lang-en" style="display:none;">Revenue Y2</span></div>
+      </div>
+      <div class="glass-card kpi-card">
+        <div class="kpi-value gold-text">$571K</div>
+        <div class="kpi-label"><span class="lang-es">Acumulado 24mo</span><span class="lang-en" style="display:none;">Cumulative 24mo</span></div>
+      </div>
+      <div class="glass-card kpi-card">
+        <div class="kpi-value gold-text">27-40x</div>
+        <div class="kpi-label">LTV / CAC</div>
+      </div>
+    </div>
+    <div class="glass-card" style="margin-top:2rem; overflow-x:auto;">
+      <table class="data-table pnl-summary">
+        <thead>
+          <tr>
+            <th><span class="lang-es">Concepto</span><span class="lang-en" style="display:none;">Concept</span></th>
+            <th>Y1</th>
+            <th>Y2</th>
+            <th><span class="lang-es">24mo Acum.</span><span class="lang-en" style="display:none;">24mo Cum.</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="lang-es">Ingresos</span><span class="lang-en" style="display:none;">Revenue</span></td>
+            <td class="gold-text" style="font-weight:700;">$136,000</td>
+            <td class="gold-text" style="font-weight:700;">$435,000</td>
+            <td class="gold-text" style="font-weight:700;">$571,000</td>
+          </tr>
+          <tr>
+            <td><span class="lang-es">Costos operativos</span><span class="lang-en" style="display:none;">Operating costs</span></td>
+            <td>$48,000</td>
+            <td>$130,000</td>
+            <td>$178,000</td>
+          </tr>
+          <tr class="highlight-row">
+            <td><span class="lang-es">Margen bruto</span><span class="lang-en" style="display:none;">Gross margin</span></td>
+            <td>65%</td>
+            <td>70%</td>
+            <td>69%</td>
+          </tr>
+          <tr>
+            <td><span class="lang-es">Burn mensual</span><span class="lang-en" style="display:none;">Monthly burn</span></td>
+            <td>$813</td>
+            <td>$1,200</td>
+            <td>&mdash;</td>
+          </tr>
+          <tr class="highlight-row">
+            <td><span class="lang-es">Breakeven</span><span class="lang-en" style="display:none;">Breakeven</span></td>
+            <td colspan="3" style="text-align:center; color:var(--green-accent); font-weight:700;">
+              <span class="lang-es">Mes 1 (autosuficiente)</span>
+              <span class="lang-en" style="display:none;">Month 1 (self-sufficient)</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="speaker-notes">
+      <span class="lang-es">Mensaje clave: autosuficiente desde el mes 1. $813 de burn vs $10K+ de ingreso potencial.</span>
+      <span class="lang-en" style="display:none;">Key message: self-sufficient from month 1. $813 burn vs $10K+ potential revenue.</span>
+    </div>
+    <span class="slide-footer">MetodologIA -- (R)Evolucion Agentica</span>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SLIDE 9 — TRACTION & FUNNEL
+       ══════════════════════════════════════════════ -->
+  <section id="slide-9">
+    <span class="slide-tag">TRACCION</span>
+    <h2 class="section-title">
+      <span class="lang-es">Traccion y Embudo</span>
+      <span class="lang-en" style="display:none;">Traction & Funnel</span>
+    </h2>
+    <div class="gold-line"></div>
+    <div class="grid-2" style="align-items:start;">
+      <div>
+        <div class="funnel-container">
+          <div class="funnel-block" style="width:90%; background:rgba(255,215,0,0.25); border-radius:8px 8px 0 0;">
+            <span>13 <span class="lang-es">Invitados</span><span class="lang-en" style="display:none;">Invited</span></span>
+          </div>
+          <div class="funnel-block" style="width:72%; background:rgba(255,215,0,0.35);">
+            <span>~8 <span class="lang-es">Interesados</span><span class="lang-en" style="display:none;">Interested</span></span>
+          </div>
+          <div class="funnel-block" style="width:55%; background:rgba(255,215,0,0.50);">
+            <span>5 Creyentes</span>
+          </div>
+          <div class="funnel-block" style="width:42%; background:rgba(255,215,0,0.65);">
+            <span><span class="lang-es">Graduados CAO</span><span class="lang-en" style="display:none;">CAO Graduates</span></span>
+          </div>
+          <div class="funnel-block" style="width:32%; background:rgba(255,215,0,0.85); border-radius:0 0 8px 8px;">
+            <span><span class="lang-es">Embajadores</span><span class="lang-en" style="display:none;">Ambassadors</span></span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="glass-card" style="margin-bottom:1rem;">
+          <h4 style="font-size:0.85rem; color:var(--gold); margin-bottom:0.5rem;">
+            <span class="lang-es">Tasas de Conversion</span>
+            <span class="lang-en" style="display:none;">Conversion Rates</span>
+          </h4>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.3rem;">
+            <span class="lang-es">Invitados &rarr; Interesados:</span>
+            <span class="lang-en" style="display:none;">Invited &rarr; Interested:</span>
+            <strong style="color:var(--gold);">62%</strong>
+          </p>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.3rem;">
+            <span class="lang-es">Interesados &rarr; Creyentes:</span>
+            <span class="lang-en" style="display:none;">Interested &rarr; Believers:</span>
+            <strong style="color:var(--gold);">63%</strong>
+          </p>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.3rem;">
+            <span class="lang-es">Creyentes &rarr; Graduados:</span>
+            <span class="lang-en" style="display:none;">Believers &rarr; Graduates:</span>
+            <strong style="color:var(--gold);">90%+</strong>
+          </p>
+          <p style="font-size:0.85rem; color:var(--text-secondary);">
+            <span class="lang-es">Graduados &rarr; Embajadores:</span>
+            <span class="lang-en" style="display:none;">Graduates &rarr; Ambassadors:</span>
+            <strong style="color:var(--gold);">60%+</strong>
+          </p>
+        </div>
+        <div class="glass-card">
+          <h4 style="font-size:0.85rem; color:var(--gold); margin-bottom:0.5rem;">
+            <span class="lang-es">Hoy</span>
+            <span class="lang-en" style="display:none;">Today</span>
+          </h4>
+          <p style="font-size:0.85rem; color:var(--text-secondary);">
+            <span class="lang-es">13 ejecutivos invitados en Quito. 5 comprometidos como "Creyentes" fundadores.</span>
+            <span class="lang-en" style="display:none;">13 executives invited in Quito. 5 committed as founding "Believers".</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="speaker-notes">
+      <span class="lang-es">Los Creyentes son los primeros 5 ejecutivos que validan el mercado. Cada uno es un caso de exito potencial.</span>
+      <span class="lang-en" style="display:none;">Believers are the first 5 execs who validate the market. Each one is a potential success story.</span>
+    </div>
+    <span class="slide-footer">MetodologIA -- (R)Evolucion Agentica</span>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SLIDE 10 — AMBASSADOR FLYWHEEL (NEW)
+       ══════════════════════════════════════════════ -->
+  <section id="slide-10">
+    <span class="slide-tag">FLYWHEEL</span>
+    <h2 class="section-title">
+      <span class="lang-es">Volante de Embajadores</span>
+      <span class="lang-en" style="display:none;">Ambassador Flywheel</span>
+    </h2>
+    <p class="section-subtitle">
+      <span class="lang-es">Cada graduado alimenta el crecimiento organico.</span>
+      <span class="lang-en" style="display:none;">Every graduate fuels organic growth.</span>
+    </p>
+    <div class="gold-line"></div>
+    <div class="flywheel">
+      <div class="flywheel-ring"></div>
+      <div class="flywheel-center">
+        <span class="lang-es">CRECIMIENTO<br>ORGANICO</span>
+        <span class="lang-en" style="display:none;">ORGANIC<br>GROWTH</span>
+      </div>
+      <div class="flywheel-node">
+        <span class="lang-es">Graduados<br>CAO</span>
+        <span class="lang-en" style="display:none;">CAO<br>Graduates</span>
+      </div>
+      <div class="flywheel-node">
+        <span class="lang-es">Embajadores<br>Activos</span>
+        <span class="lang-en" style="display:none;">Active<br>Ambassadors</span>
+      </div>
+      <div class="flywheel-node">
+        <span class="lang-es">Referidos<br>Nuevos</span>
+        <span class="lang-en" style="display:none;">New<br>Referrals</span>
+      </div>
+      <div class="flywheel-node">
+        <span class="lang-es">Clientes<br>Nuevos</span>
+        <span class="lang-en" style="display:none;">New<br>Clients</span>
+      </div>
+      <div class="flywheel-arrow top-right">&rsaquo;</div>
+      <div class="flywheel-arrow bottom-right">&rsaquo;</div>
+      <div class="flywheel-arrow bottom-left">&rsaquo;</div>
+      <div class="flywheel-arrow top-left">&rsaquo;</div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <p style="font-size:0.9rem; color:var(--text-secondary); max-width:600px; margin:0 auto;">
+        <span class="lang-es">Los embajadores reciben comision por referido exitoso y acceso prioritario a nuevos modulos.</span>
+        <span class="lang-en" style="display:none;">Ambassadors receive commission on successful referrals and priority access to new modules.</span>
+      </p>
+    </div>
+    <div class="speaker-notes">
+      <span class="lang-es">El flywheel elimina la dependencia de publicidad paga a partir del mes 6.</span>
+      <span class="lang-en" style="display:none;">The flywheel eliminates dependency on paid advertising from month 6.</span>
+    </div>
+    <span class="slide-footer">MetodologIA -- (R)Evolucion Agentica</span>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SLIDE 11 — TEAM
+       ══════════════════════════════════════════════ -->
+  <section id="slide-11">
+    <span class="slide-tag">EQUIPO</span>
+    <h2 class="section-title">
+      <span class="lang-es">Equipo Fundador</span>
+      <span class="lang-en" style="display:none;">Founding Team</span>
+    </h2>
+    <div class="gold-line"></div>
+    <div class="grid-3">
+      <div class="glass-card team-card">
+        <div class="team-name">Javier Montano</div>
+        <div class="team-role">
+          <span class="lang-es">Metodo + Tecnologia</span>
+          <span class="lang-en" style="display:none;">Method + Technology</span>
+        </div>
+        <div class="team-equity gold-text">19%</div>
+        <div class="gold-line" style="margin:0.5rem auto;"></div>
+        <p class="team-desc">
+          <span class="lang-es">PreSales Architect. Creador de MetodologIA, Pristino, y el ecosistema de agentes. 15+ anos en consultoria tecnologica.</span>
+          <span class="lang-en" style="display:none;">PreSales Architect. Creator of MetodologIA, Pristino, and the agent ecosystem. 15+ years in tech consulting.</span>
+        </p>
+      </div>
+      <div class="glass-card team-card">
+        <div class="team-name">Cristian</div>
+        <div class="team-role">
+          <span class="lang-es">Territorio + Operaciones</span>
+          <span class="lang-en" style="display:none;">Territory + Operations</span>
+        </div>
+        <div class="team-equity gold-text">51%</div>
+        <div class="gold-line" style="margin:0.5rem auto;"></div>
+        <p class="team-desc">
+          <span class="lang-es">Operador local en Ecuador. Red de contactos ejecutivos en Quito. Gestion de sede, logistica y relaciones institucionales.</span>
+          <span class="lang-en" style="display:none;">Local operator in Ecuador. Executive contact network in Quito. Venue management, logistics, and institutional relationships.</span>
+        </p>
+      </div>
+      <div class="glass-card team-card">
+        <div class="team-name">Holding</div>
+        <div class="team-role">
+          <span class="lang-es">Estructura Corporativa</span>
+          <span class="lang-en" style="display:none;">Corporate Structure</span>
+        </div>
+        <div class="team-equity gold-text">30%</div>
+        <div class="gold-line" style="margin:0.5rem auto;"></div>
+        <p class="team-desc">
+          <span class="lang-es">Vehiculo de inversion y gobernanza. Reserva para futuros socios estrategicos e inversionistas.</span>
+          <span class="lang-en" style="display:none;">Investment and governance vehicle. Reserve for future strategic partners and investors.</span>
+        </p>
+      </div>
+    </div>
+    <div class="speaker-notes">
+      <span class="lang-es">El 30% del holding es estrategico: abre la puerta a inversionistas sin diluir a los fundadores operativos.</span>
+      <span class="lang-en" style="display:none;">The 30% holding is strategic: opens the door to investors without diluting operating founders.</span>
+    </div>
+    <span class="slide-footer">MetodologIA -- (R)Evolucion Agentica</span>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SLIDE 12 — CTA
+       ══════════════════════════════════════════════ -->
+  <section id="slide-12">
+    <span class="slide-tag">CIERRE</span>
+    <div class="cta-big">
+      <span class="lang-es">5 directivos. 1 (r)evolucion.<br><span class="gold-text">Quito 2026.</span></span>
+      <span class="lang-en" style="display:none;">5 executives. 1 (r)evolution.<br><span class="gold-text">Quito 2026.</span></span>
+    </div>
+    <div class="gold-line-wide" style="margin:1rem auto;"></div>
+    <p class="cta-sub">
+      <span class="lang-es">Autosuficiente desde el mes 1: $813 de burn vs $10,000+ de ingreso potencial.</span>
+      <span class="lang-en" style="display:none;">Self-sufficient from month 1: $813 burn vs $10,000+ potential revenue.</span>
+    </p>
+    <div class="cta-row">
+      <div class="glass-card cta-item">
+        <div class="cta-label"><span class="lang-es">Siguiente paso</span><span class="lang-en" style="display:none;">Next step</span></div>
+        <div class="cta-value">
+          <span class="lang-es">Agendar taller gratuito para 5 directivos</span>
+          <span class="lang-en" style="display:none;">Schedule free workshop for 5 executives</span>
+        </div>
+      </div>
+      <div class="glass-card cta-item">
+        <div class="cta-label"><span class="lang-es">Contacto</span><span class="lang-en" style="display:none;">Contact</span></div>
+        <div class="cta-value">javier@metodologia.ai</div>
+      </div>
+      <div class="glass-card cta-item">
+        <div class="cta-label"><span class="lang-es">Reserva</span><span class="lang-en" style="display:none;">Reserve</span></div>
+        <div class="cta-value">
+          <span class="lang-es">5 plazas Creyentes abiertas</span>
+          <span class="lang-en" style="display:none;">5 Believers seats open</span>
+        </div>
+      </div>
+    </div>
+    <p class="disclaimer">
+      <span class="lang-es">Innovation Mode -- Proyecciones basadas en modelado interno. Sujetas a validacion de mercado. No constituyen garantia de resultados.</span>
+      <span class="lang-en" style="display:none;">Innovation Mode -- Projections based on internal modeling. Subject to market validation. Do not constitute guarantee of results.</span>
+    </p>
+    <div class="speaker-notes">
+      <span class="lang-es">Cierra con ask especifico -- fecha para el taller o reserva de plaza Creyentes.</span>
+      <span class="lang-en" style="display:none;">Close with specific ask -- workshop date or Believers reservation.</span>
+    </div>
+    <span class="slide-footer">MetodologIA -- (R)Evolucion Agentica</span>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       JAVASCRIPT
+       ══════════════════════════════════════════════ -->
+  <script>
+    /* ── THEME TOGGLE ── */
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+      var btn = document.getElementById('btnTheme');
+      btn.classList.toggle('active', document.body.classList.contains('light-mode'));
+    }
+
+    /* ── LANGUAGE TOGGLE ── */
+    function toggleLang() {
+      document.body.classList.toggle('show-en');
+      var btn = document.getElementById('btnLang');
+      btn.classList.toggle('active', document.body.classList.contains('show-en'));
+      // Toggle inline elements
+      var esInline = document.querySelectorAll('.lang-es-inline');
+      var enInline = document.querySelectorAll('.lang-en-inline');
+      var isEn = document.body.classList.contains('show-en');
+      esInline.forEach(function(el) { el.style.display = isEn ? 'none' : 'inline'; });
+      enInline.forEach(function(el) { el.style.display = isEn ? 'inline' : 'none'; });
+      // Also toggle .lang-en and .lang-es spans/divs inside show-en mode
+      var langEn = document.querySelectorAll('.lang-en');
+      var langEs = document.querySelectorAll('.lang-es');
+      langEn.forEach(function(el) { el.style.display = isEn ? '' : 'none'; });
+      langEs.forEach(function(el) { el.style.display = isEn ? 'none' : ''; });
+    }
+
+    /* ── SPEAKER NOTES TOGGLE (N key) ── */
+    function toggleNotes() {
+      document.body.classList.toggle('show-notes');
+      var btn = document.getElementById('btnNotes');
+      btn.classList.toggle('active', document.body.classList.contains('show-notes'));
+    }
+
+    /* ── PRESENTATION TIMER (T key) ── */
+    var timerEl = document.getElementById('timer');
+    var timerRunning = false;
+    var timerInterval = null;
+    var timerSeconds = 15 * 60; // 15 minutes
+
+    function formatTime(s) {
+      var m = Math.floor(s / 60);
+      var sec = s % 60;
+      return (m < 10 ? '0' : '') + m + ':' + (sec < 10 ? '0' : '') + sec;
+    }
+
+    function toggleTimer() {
+      var btn = document.getElementById('btnTimer');
+      if (!timerRunning) {
+        timerEl.classList.add('visible');
+        btn.classList.add('active');
+        timerRunning = true;
+        timerInterval = setInterval(function() {
+          timerSeconds--;
+          if (timerSeconds <= 0) {
+            timerSeconds = 0;
+            clearInterval(timerInterval);
+            timerRunning = false;
+          }
+          timerEl.textContent = formatTime(timerSeconds);
+          // Warning states
+          timerEl.classList.remove('warning', 'danger');
+          if (timerSeconds <= 60) {
+            timerEl.classList.add('danger');
+          } else if (timerSeconds <= 180) {
+            timerEl.classList.add('warning');
+          }
+        }, 1000);
+      } else {
+        clearInterval(timerInterval);
+        timerRunning = false;
+        timerEl.classList.remove('visible');
+        btn.classList.remove('active');
+        timerSeconds = 15 * 60;
+        timerEl.textContent = formatTime(timerSeconds);
+        timerEl.classList.remove('warning', 'danger');
+      }
+    }
+
+    /* ── KEYBOARD SHORTCUTS ── */
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'n' || e.key === 'N') { toggleNotes(); }
+      if (e.key === 't' || e.key === 'T') { toggleTimer(); }
+    });
+
+    /* ── BUTTON CLICK HANDLERS ── */
+    document.getElementById('btnNotes').addEventListener('click', toggleNotes);
+    document.getElementById('btnTimer').addEventListener('click', toggleTimer);
+
+    /* ── SLIDE COUNTER via IntersectionObserver ── */
+    var slides = document.querySelectorAll('section');
+    var counterEl = document.getElementById('slideCounter');
+    var totalSlides = slides.length;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var idx = Array.prototype.indexOf.call(slides, entry.target) + 1;
+          counterEl.textContent = idx + '/' + totalSlides;
+        }
+      });
+    }, { threshold: 0.5 });
+
+    slides.forEach(function(s) { observer.observe(s); });
+  </script>
+
+</body>
+</html>

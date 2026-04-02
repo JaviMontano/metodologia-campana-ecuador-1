@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="MetodologIA Ecuador">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)">
+  <title>Dossier Co-Fundador v2 &mdash; Cristian Jarr&iacute;n &mdash; MetodologIA Ecuador</title>
+  <meta name="description" content="Dossier definitivo de co-fundador para MetodologIA Ecuador. Equity, modelo financiero, roadmap, FAQ.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='10' fill='%230A122A'/><path d='M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z' fill='white'/><circle cx='18' cy='8' r='2' fill='%23FFD700'/></svg>" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            navy: { DEFAULT: '#020617', light: '#0F172A' },
+            gold: { DEFAULT: '#FFD700', dark: '#FFA000', light: '#B8860B' },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    /* -- CSS Variables (Dark default) -- */
+    :root {
+      --bg-primary: #020617;
+      --bg-secondary: #0F172A;
+      --bg-card: rgba(15, 23, 42, 0.7);
+      --text-primary: #F0F4F8;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --border-color: rgba(255, 215, 0, 0.12);
+      --glass-bg: rgba(15, 23, 42, 0.6);
+      --glass-border: rgba(255, 215, 0, 0.1);
+      --gold: #FFD700;
+      --gold-dark: #FFA000;
+      --shadow-glow: 0 0 30px rgba(255, 215, 0, 0.06);
+    }
+    html.light {
+      --bg-primary: #F8FAFC;
+      --bg-secondary: #EEF2F7;
+      --bg-card: rgba(255, 255, 255, 0.7);
+      --text-primary: #020617;
+      --text-secondary: #2C4A6E;
+      --text-muted: #64748B;
+      --border-color: rgba(2, 6, 23, 0.08);
+      --glass-bg: rgba(255, 255, 255, 0.6);
+      --glass-border: rgba(2, 6, 23, 0.06);
+      --shadow-glow: 0 0 30px rgba(2, 6, 23, 0.04);
+      --gold: #B8860B;
+      --gold-dark: #8B6914;
+    }
+    html.light body { font-weight: 500; }
+    html.light h1, html.light h2, html.light h3, html.light h4 { font-weight: 800; }
+    html.light .gold-text {
+      background: linear-gradient(135deg, #B8860B, #8B6914);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    html.light .btn-gold { background: linear-gradient(135deg, #D4A017, #B8860B); }
+
+    /* -- Reset & Base -- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+      touch-action: manipulation;
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
+    h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
+
+    /* -- Gold gradient text -- */
+    .gold-text {
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* -- Glass card -- */
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 1rem;
+      box-shadow: var(--shadow-glow);
+    }
+    .gold-divider {
+      width: 48px; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      border-radius: 2px; margin: 0.75rem auto;
+    }
+    .glow-border {
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 24px rgba(255, 215, 0, 0.1);
+    }
+
+    /* -- Buttons -- */
+    .btn-gold {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 0.875rem 2rem; min-height: 48px; border-radius: 9999px;
+      font-size: 1rem; font-weight: 700;
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      color: #020617; border: none; cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+    }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255, 215, 0, 0.2); }
+    .btn-gold:active { transform: scale(0.97); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 0.875rem 2rem; min-height: 48px; border-radius: 9999px;
+      font-size: 1rem; font-weight: 700;
+      background: transparent; color: var(--gold); border: 1px solid var(--gold);
+      cursor: pointer; transition: transform 0.2s ease;
+      text-decoration: none;
+    }
+    .btn-ghost:hover { transform: translateY(-2px); background: rgba(255, 215, 0, 0.05); }
+    .btn-ghost:active { transform: scale(0.97); }
+
+    /* -- Navigation -- */
+    .site-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      height: 64px; display: flex; align-items: center;
+      padding: 0 2rem;
+    }
+    .site-nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; max-width: 1200px; margin: 0 auto;
+    }
+    #scroll-progress {
+      position: fixed; top: 64px; left: 0; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      z-index: 101; width: 0%; transition: width 0.1s linear;
+    }
+
+    /* -- Scroll reveal -- */
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* -- Layout -- */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+    .equity-bar { display: flex; border-radius: 9999px; overflow: hidden; height: 16px; }
+
+    /* -- Donut chart (CSS-only) -- */
+    .donut-wrap { position: relative; width: 220px; height: 220px; margin: 0 auto; }
+    .donut-ring {
+      width: 100%; height: 100%; border-radius: 50%;
+      background: conic-gradient(
+        #FFD700 0deg 183.6deg,
+        #60A5FA 183.6deg 252deg,
+        #A78BFA 252deg 360deg
+      );
+      mask: radial-gradient(circle, transparent 60%, black 61%);
+      -webkit-mask: radial-gradient(circle, transparent 60%, black 61%);
+      animation: donutSpin 1.2s ease-out forwards;
+      animation-play-state: paused;
+      transform: rotate(-90deg);
+    }
+    @keyframes donutSpin {
+      from { clip-path: polygon(50% 50%, 50% 0%, 50% 0%); opacity: 0.3; }
+      to   { clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 50% 0%); opacity: 1; }
+    }
+    .donut-center {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+    }
+
+    /* -- Financial table -- */
+    .fin-table { width: 100%; border-collapse: collapse; }
+    .fin-table th, .fin-table td {
+      padding: 0.75rem 1rem; text-align: left; font-size: 0.875rem;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .fin-table th {
+      color: var(--gold); font-weight: 600; text-transform: uppercase;
+      font-size: 0.75rem; letter-spacing: 0.05em;
+    }
+    .fin-table td { color: var(--text-secondary); }
+    .fin-table tr:last-child td { border-bottom: none; font-weight: 700; color: var(--text-primary); }
+    .fin-table .highlight-row td { color: var(--text-primary); font-weight: 700; }
+
+    /* -- Phase cards -- */
+    .phase-card {
+      position: relative; padding: 1.5rem; border-radius: 1rem;
+      background: var(--glass-bg); border: 1px solid var(--glass-border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .phase-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(255, 215, 0, 0.08); }
+    .phase-number {
+      position: absolute; top: -12px; left: 1.5rem;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: #020617; font-weight: 800; font-size: 0.75rem;
+      padding: 0.25rem 0.75rem; border-radius: 9999px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* -- Timeline -- */
+    .timeline-dot {
+      width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    }
+    .timeline-line { width: 2px; background: var(--glass-border); margin-left: 6px; }
+
+    /* -- P&L toggle -- */
+    .pnl-tab {
+      padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 700;
+      cursor: pointer; border: 1px solid var(--glass-border);
+      background: transparent; color: var(--text-secondary);
+      transition: all 0.2s ease; min-height: 40px;
+    }
+    .pnl-tab.active {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: #020617; border-color: transparent;
+    }
+    .pnl-panel { display: none; }
+    .pnl-panel.active { display: block; }
+
+    /* -- Revenue sparkline (CSS bars) -- */
+    .spark-bar {
+      display: inline-block; width: 14px; border-radius: 4px 4px 0 0;
+      background: linear-gradient(180deg, var(--gold), var(--gold-dark));
+      transition: height 0.6s ease;
+      vertical-align: bottom;
+    }
+
+    /* -- Waterfall bar -- */
+    .waterfall-bar {
+      border-radius: 4px;
+      transition: width 0.6s ease;
+      min-height: 28px; display: flex; align-items: center;
+      padding: 0 0.5rem; font-size: 0.75rem; font-weight: 700; color: #020617;
+    }
+
+    /* -- Gantt roadmap -- */
+    .gantt-grid { display: grid; grid-template-columns: 120px repeat(12, 1fr); gap: 2px; }
+    .gantt-label {
+      font-size: 0.7rem; font-weight: 600; color: var(--text-secondary);
+      display: flex; align-items: center; padding-right: 0.5rem;
+    }
+    .gantt-bar {
+      border-radius: 6px; min-height: 28px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.65rem; font-weight: 700; color: #020617;
+    }
+    .gantt-header { font-size: 0.6rem; text-align: center; color: var(--text-muted); font-weight: 600; }
+
+    /* -- FAQ accordion -- */
+    .faq-item { border-bottom: 1px solid var(--glass-border); }
+    .faq-q {
+      width: 100%; padding: 1rem 0; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      color: var(--text-primary); font-weight: 600; font-size: 0.9rem; text-align: left;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .faq-q i { transition: transform 0.3s ease; flex-shrink: 0; color: var(--gold); }
+    .faq-q.open i { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease;
+      color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6;
+    }
+    .faq-a.open { max-height: 400px; padding-bottom: 1rem; }
+
+    /* -- Confidential watermark -- */
+    .watermark {
+      position: fixed; bottom: 1rem; right: 1rem; z-index: 50;
+      background: rgba(255, 215, 0, 0.08); border: 1px solid rgba(255, 215, 0, 0.15);
+      padding: 0.35rem 0.75rem; border-radius: 6px;
+      font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em;
+      color: var(--gold); text-transform: uppercase; pointer-events: none;
+      opacity: 0.5;
+    }
+
+    /* -- Language toggle content -- */
+    [data-lang="en"] { display: none; }
+    html[data-lang="en"] [data-lang="en"] { display: initial; }
+    html[data-lang="en"] [data-lang="es"] { display: none; }
+
+    /* -- Responsive -- */
+    @media (max-width: 768px) {
+      .site-nav { height: calc(56px + env(safe-area-inset-top)); padding: env(safe-area-inset-top) 1rem 0 1rem; }
+      .site-nav-inner { height: 56px; }
+      #scroll-progress { top: calc(56px + env(safe-area-inset-top)); }
+      .hide-mobile { display: none; }
+      .container { padding: 0 1rem; }
+      .donut-wrap { width: 180px; height: 180px; }
+      .gantt-grid { grid-template-columns: 80px repeat(12, 1fr); }
+      .gantt-label { font-size: 0.6rem; }
+      .gantt-bar { font-size: 0.55rem; min-height: 24px; }
+      .gantt-header { font-size: 0.5rem; }
+      .fin-table th, .fin-table td { padding: 0.5rem 0.5rem; font-size: 0.75rem; }
+      section { padding-top: 2rem; padding-bottom: 2rem; }
+    }
+    @media (min-width: 768px) { .container { padding: 0 2rem; } }
+    @media (min-width: 1024px) {
+      .carta-grid { max-width: 720px; margin: 0 auto; }
+    }
+
+    /* -- Print -- */
+    @media print {
+      .site-nav, #scroll-progress, .watermark { display: none; }
+      body { background: #fff; color: #020617; padding: 0; }
+      .glass { background: #f8f9fa; border: 1px solid #e0e0e0; box-shadow: none; backdrop-filter: none; }
+      .gold-text { -webkit-text-fill-color: #B8860B; color: #B8860B; }
+      .reveal { opacity: 1; transform: none; }
+      .pnl-panel { display: block; page-break-inside: avoid; }
+      .faq-a { max-height: none; padding-bottom: 0.5rem; }
+      section { padding: 1rem 0; }
+      .btn-gold, .btn-ghost { border: 1px solid #B8860B; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="watermark">Confidencial</div>
+  <div id="scroll-progress"></div>
+
+  <!-- =============== S1: NAV =============== -->
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a href="#carta" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;">
+        <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+          <defs><linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+          <rect width="36" height="36" rx="10" fill="url(#lg)"/>
+          <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+          <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+        </svg>
+        <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">
+          <span data-lang="es">Metodolog<span class="gold-text">IA</span></span>
+          <span data-lang="en">Metodolog<span class="gold-text">IA</span></span>
+        </span>
+      </a>
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <a href="#oportunidad" class="text-xs font-medium hide-mobile" style="color:var(--text-secondary);text-decoration:none;">
+          <span data-lang="es">Oportunidad</span><span data-lang="en">Opportunity</span>
+        </a>
+        <a href="#equity" class="text-xs font-medium hide-mobile" style="color:var(--text-secondary);text-decoration:none;">Equity</a>
+        <a href="#modelo" class="text-xs font-medium hide-mobile" style="color:var(--text-secondary);text-decoration:none;">
+          <span data-lang="es">Modelo</span><span data-lang="en">Model</span>
+        </a>
+        <a href="#roadmap" class="text-xs font-medium hide-mobile" style="color:var(--text-secondary);text-decoration:none;">Roadmap</a>
+        <a href="#faq" class="text-xs font-medium hide-mobile" style="color:var(--text-secondary);text-decoration:none;">FAQ</a>
+        <button onclick="toggleLang()" id="langBtn" style="background:none;border:1px solid var(--glass-border);border-radius:6px;cursor:pointer;padding:0.35rem 0.5rem;font-size:0.7rem;font-weight:700;color:var(--gold);min-width:36px;min-height:36px;" aria-label="Cambiar idioma">ES</button>
+        <button onclick="toggleTheme()" style="background:none;border:none;cursor:pointer;padding:0.5rem;width:44px;height:44px;display:flex;align-items:center;justify-content:center;" aria-label="Cambiar tema">
+          <i data-lucide="sun-moon" class="w-5 h-5" style="color:var(--gold);"></i>
+        </button>
+        <a href="mailto:contacto@metodologia.info?subject=Confirmaci%C3%B3n%20Co-Fundador%20MetodologIA%20Ecuador%20%E2%80%94%20Cristian%20Jarr%C3%ADn"
+           class="btn-gold" style="padding:0.5rem 1.25rem;font-size:0.8rem;min-height:40px;">
+          <i data-lucide="check-circle" class="w-4 h-4"></i>
+          <span data-lang="es">Confirmar</span><span data-lang="en">Confirm</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =============== S2: CARTA PERSONAL =============== -->
+  <section id="carta" style="padding:calc(80px + 2rem) 0 3rem;background:var(--bg-primary);">
+    <div class="container">
+      <div class="reveal carta-grid" style="display:grid;gap:2rem;align-items:center;">
+        <div class="glass p-6" style="border-image:linear-gradient(135deg,rgba(255,215,0,0.3),rgba(255,160,0,0.1)) 1;border-width:2px;border-style:solid;border-radius:1rem;max-width:720px;margin:0 auto;">
+          <div class="flex items-center gap-2 mb-3">
+            <i data-lucide="shield-check" class="w-4 h-4" style="color:var(--gold);"></i>
+            <p class="text-xs uppercase tracking-widest font-bold" style="color:var(--gold);">
+              <span data-lang="es">Dossier Co-Fundador &mdash; Documento Confidencial</span>
+              <span data-lang="en">Co-Founder Dossier &mdash; Confidential Document</span>
+            </p>
+          </div>
+          <h1 class="font-heading font-bold mb-4" style="color:var(--text-primary);font-size:clamp(1.75rem, 4vw, 2.5rem);">
+            <span data-lang="es">Cristian, esto es para ti</span>
+            <span data-lang="en">Cristian, this is for you</span>
+          </h1>
+          <div class="text-sm leading-relaxed space-y-3" style="color:var(--text-secondary);">
+            <p data-lang="es" style="color:var(--text-primary);font-weight:600;">Llevas meses evaluando. La ventana no se abre &mdash; se cierra.</p>
+            <p data-lang="en" style="color:var(--text-primary);font-weight:600;">You have been evaluating for months. The window does not open &mdash; it closes.</p>
+            <p data-lang="es"><strong style="color:var(--text-primary);">51% es tuyo.</strong> La mayor&iacute;a. Ecuador es tu operaci&oacute;n. Yo pongo el m&eacute;todo, la marca y la red. T&uacute; pones la ejecuci&oacute;n en territorio.</p>
+            <p data-lang="en"><strong style="color:var(--text-primary);">51% is yours.</strong> The majority. Ecuador is your operation. I bring the method, the brand and the network. You bring the execution on the ground.</p>
+            <p data-lang="es">He construido MetodologIA con 27 asistentes GPT, 7 Gems, un agente Open Source, 180+ prompts. Todo eso es tuyo en la franquicia.</p>
+            <p data-lang="en">I have built MetodologIA with 27 GPT assistants, 7 Gems, an Open Source agent, 180+ prompts. All of that is yours in the franchise.</p>
+            <p data-lang="es">Este dossier contiene el caso de negocio completo: financieros, roadmap operativo, modelo de embajadores, unit economics y FAQ. L&eacute;elo completo antes de decidir.</p>
+            <p data-lang="en">This dossier contains the complete business case: financials, operational roadmap, ambassador model, unit economics and FAQ. Read it fully before deciding.</p>
+            <p data-lang="es" style="color:var(--text-primary);font-weight:600;">$2,900 no es un gasto. Es el capital semilla de tu operaci&oacute;n como co-fundador.</p>
+            <p data-lang="en" style="color:var(--text-primary);font-weight:600;">$2,900 is not an expense. It is the seed capital for your operation as co-founder.</p>
+          </div>
+          <div class="mt-5 flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold" style="background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:#020617;border:2px solid var(--gold);">JM</div>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Javier Monta&ntilde;o</p>
+              <p class="text-xs" style="color:var(--text-muted);">MetodologIA &middot; contacto@metodologia.info</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S3: QUOTE =============== -->
+  <section style="padding:2rem 0;background:var(--bg-secondary);">
+    <div class="container" style="text-align:center;">
+      <div class="reveal">
+        <p class="font-heading text-lg font-light italic leading-relaxed" style="color:var(--text-secondary);">
+          <span data-lang="es">&ldquo;No es hacer m&aacute;s cosas. Es hacer que las cosas que haces, importen.&rdquo;</span>
+          <span data-lang="en">&ldquo;It is not about doing more things. It is about making the things you do, matter.&rdquo;</span>
+        </p>
+        <p class="text-xs mt-3 uppercase tracking-widest font-bold" style="color:var(--gold);">&mdash; Intenci&oacute;n sobre Intensidad &mdash; MetodologIA</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S4: LA OPORTUNIDAD =============== -->
+  <section id="oportunidad" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Ecuador</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">
+          <span data-lang="es">La Oportunidad</span><span data-lang="en">The Opportunity</span>
+        </h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid gap-4 reveal" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+        <div class="glass p-5 flex items-start gap-3">
+          <i data-lucide="map-pin" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+          <div>
+            <p class="text-sm font-semibold mb-1" style="color:var(--text-primary);">
+              <span data-lang="es">Vac&iacute;o de mercado</span><span data-lang="en">Market gap</span>
+            </p>
+            <p class="text-sm" style="color:var(--text-secondary);">
+              <span data-lang="es">Ecuador no tiene un operador serio de formaci&oacute;n ejecutiva en IA. El que se posicione primero, define las reglas.</span>
+              <span data-lang="en">Ecuador has no serious executive AI training operator. Whoever positions first, sets the rules.</span>
+            </p>
+          </div>
+        </div>
+        <div class="glass p-5 flex items-start gap-3">
+          <i data-lucide="trending-up" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+          <div>
+            <p class="text-sm font-semibold mb-1" style="color:var(--text-primary);">
+              <span data-lang="es">Adopci&oacute;n de IA</span><span data-lang="en">AI Adoption</span>
+            </p>
+            <p class="text-sm" style="color:var(--text-secondary);">
+              <span data-lang="es">La adopci&oacute;n de IA en Latam se duplica cada 6 meses. Ecuador est&aacute; rezagado &mdash; eso es ventaja para quien llegue primero.</span>
+              <span data-lang="en">AI adoption in Latam doubles every 6 months. Ecuador is behind &mdash; that is an advantage for whoever arrives first.</span>
+            </p>
+          </div>
+        </div>
+        <div class="glass p-5 flex items-start gap-3">
+          <i data-lucide="users" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+          <div>
+            <p class="text-sm font-semibold mb-1" style="color:var(--text-primary);">Pipeline</p>
+            <p class="text-sm" style="color:var(--text-secondary);">
+              <span data-lang="es">El pipeline es aspiracional &mdash; se construye convocando. Workshop gratuito mensual como embudo de captaci&oacute;n.</span>
+              <span data-lang="en">The pipeline is aspirational &mdash; built by convening. Free monthly workshop as a capture funnel.</span>
+            </p>
+            <p class="text-xs mt-1 italic" style="color:var(--text-muted);">[ASPIRACIONAL, no confirmado]</p>
+          </div>
+        </div>
+        <div class="glass p-5 flex items-start gap-3">
+          <i data-lucide="crown" class="w-5 h-5 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+          <div>
+            <p class="text-sm font-semibold mb-1" style="color:var(--text-primary);">
+              <span data-lang="es">Ventaja del primero</span><span data-lang="en">First Mover</span>
+            </p>
+            <p class="text-sm" style="color:var(--text-secondary);">
+              <span data-lang="es">Quien se posiciona primero, define precios, relaciones y reglas del mercado.</span>
+              <span data-lang="en">Whoever positions first, defines prices, relationships and market rules.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S5: TU PARTICIPACION (EQUITY DONUT) =============== -->
+  <section id="equity" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">
+          <span data-lang="es">Estructura</span><span data-lang="en">Structure</span>
+        </p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">
+          <span data-lang="es">Tu Participaci&oacute;n</span><span data-lang="en">Your Stake</span>
+        </h2>
+        <div class="gold-divider"></div>
+      </div>
+      <!-- Donut Chart -->
+      <div class="glass p-6 reveal mb-6" style="max-width:900px;margin:0 auto;">
+        <div id="donutChart" class="donut-wrap mb-6">
+          <div class="donut-ring"></div>
+          <div class="donut-center">
+            <p class="font-heading font-black text-2xl gold-text">51%</p>
+            <p class="text-xs font-bold" style="color:var(--text-primary);">Cristian</p>
+          </div>
+        </div>
+        <div class="grid gap-4" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
+          <div class="glass p-3 rounded-xl text-center">
+            <span class="inline-flex w-10 h-10 rounded-full items-center justify-center text-sm font-bold mb-1" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#020617;">51%</span>
+            <p class="font-heading text-xs font-bold" style="color:var(--text-primary);">Cristian</p>
+            <p class="text-xs mt-0.5" style="color:var(--text-muted);">
+              <span data-lang="es">Operaci&oacute;n Ecuador</span><span data-lang="en">Ecuador Operations</span>
+            </p>
+          </div>
+          <div class="glass p-3 rounded-xl text-center">
+            <span class="inline-flex w-10 h-10 rounded-full items-center justify-center text-sm font-bold mb-1" style="background:linear-gradient(135deg,#60A5FA,#3B82F6);color:#020617;">19%</span>
+            <p class="font-heading text-xs font-bold" style="color:var(--text-primary);">Javier</p>
+            <p class="text-xs mt-0.5" style="color:var(--text-muted);">
+              <span data-lang="es">M&eacute;todo, marca, red</span><span data-lang="en">Method, brand, network</span>
+            </p>
+          </div>
+          <div class="glass p-3 rounded-xl text-center">
+            <span class="inline-flex w-10 h-10 rounded-full items-center justify-center text-sm font-bold mb-1" style="background:linear-gradient(135deg,#A78BFA,#7C3AED);color:#fff;">30%</span>
+            <p class="font-heading text-xs font-bold" style="color:var(--text-primary);">Holding</p>
+            <p class="text-xs mt-0.5" style="color:var(--text-muted);">
+              <span data-lang="es">Reinversi&oacute;n y crecimiento</span><span data-lang="en">Reinvestment and growth</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Revenue Share Model -->
+      <div class="glass p-6 reveal" style="max-width:900px;margin:0 auto;">
+        <p class="text-xs font-bold uppercase mb-4" style="color:var(--gold);">
+          <span data-lang="es">Revenue Share por Programa</span><span data-lang="en">Revenue Share per Program</span>
+        </p>
+        <div class="equity-bar mb-4">
+          <div style="width:50%;background:linear-gradient(135deg,#FFD700,#FFA000);"></div>
+          <div style="width:20%;background:linear-gradient(135deg,#60A5FA,#3B82F6);"></div>
+          <div style="width:10%;background:linear-gradient(135deg,#A78BFA,#7C3AED);"></div>
+          <div style="width:20%;background:linear-gradient(135deg,#34D399,#10B981);"></div>
+        </div>
+        <div class="grid gap-4" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex w-9 h-9 rounded-full items-center justify-center text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#020617;">50%</span>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Coach / Ejecutor</p>
+              <p class="text-xs" style="color:var(--text-muted);">
+                <span data-lang="es">Quien facilita el programa</span><span data-lang="en">Who facilitates the program</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="inline-flex w-9 h-9 rounded-full items-center justify-center text-xs font-bold" style="background:linear-gradient(135deg,#60A5FA,#3B82F6);color:#020617;">20%</span>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">
+                <span data-lang="es">Franquicia</span><span data-lang="en">Franchise</span>
+              </p>
+              <p class="text-xs" style="color:var(--text-muted);">
+                <span data-lang="es">Cristian como franquiciatario</span><span data-lang="en">Cristian as franchisee</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="inline-flex w-9 h-9 rounded-full items-center justify-center text-xs font-bold" style="background:linear-gradient(135deg,#A78BFA,#7C3AED);color:#fff;">10%</span>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">MetodologIA IP</p>
+              <p class="text-xs" style="color:var(--text-muted);">
+                <span data-lang="es">Marca, ecosistema, soporte</span><span data-lang="en">Brand, ecosystem, support</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="inline-flex w-9 h-9 rounded-full items-center justify-center text-xs font-bold" style="background:linear-gradient(135deg,#34D399,#10B981);color:#020617;">20%</span>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Comercial</p>
+              <p class="text-xs" style="color:var(--text-muted);">
+                <span data-lang="es">Quien cierra la venta</span><span data-lang="en">Who closes the sale</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="glass p-4 rounded-xl mt-4 glow-border text-center">
+          <p class="font-heading font-bold text-lg gold-text">
+            <span data-lang="es">Si Cristian hace todo: 90% suyo</span>
+            <span data-lang="en">If Cristian does everything: 90% his</span>
+          </p>
+          <p class="text-xs mt-1" style="color:var(--text-secondary);">Coach (50%) + Franquicia (20%) + Comercial (20%) = 90%. Solo 10% a MetodologIA.</p>
+        </div>
+        <p class="text-xs mt-4 text-center italic" style="color:var(--text-muted);">
+          <span data-lang="es">Sin salarios fijos. 100% comisiones. Co-crear entornos de abundancia.</span>
+          <span data-lang="en">No fixed salaries. 100% commissions. Co-create abundance environments.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S6: $2,900 INVESTMENT =============== -->
+  <section id="inversion" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">
+          <span data-lang="es">Inversi&oacute;n</span><span data-lang="en">Investment</span>
+        </p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">$2,900 USD</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid gap-6 reveal" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width:900px; margin:0 auto;">
+        <div class="glass p-6">
+          <p class="text-xs font-bold uppercase mb-4" style="color:var(--gold);">
+            <span data-lang="es">La inversi&oacute;n cubre (costos anuales)</span><span data-lang="en">The investment covers (annual costs)</span>
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3 justify-between">
+              <div class="flex items-start gap-3"><i data-lucide="server" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+                <p class="text-sm" style="color:var(--text-secondary);">
+                  <span data-lang="es">Hosting agentes y ecosistema ag&eacute;ntico</span><span data-lang="en">Agent hosting and agentic ecosystem</span>
+                </p>
+              </div>
+              <span class="text-sm font-semibold whitespace-nowrap" style="color:var(--text-primary);">$500/yr</span>
+            </div>
+            <div class="flex items-start gap-3 justify-between">
+              <div class="flex items-start gap-3"><i data-lucide="terminal" class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:var(--gold);"></i>
+                <p class="text-sm" style="color:var(--text-secondary);">Claude Code Max ($200/mes)</p>
+              </div>
+              <span class="text-sm font-semibold whitespace-nowrap" style="color:var(--text-primary);">$2,400/yr</span>
+            </div>
+          </div>
+          <div class="mt-4 pt-3" style="border-top:1px solid var(--glass-border);">
+            <div class="flex justify-between items-center">
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Total</p>
+              <p class="font-heading font-bold text-lg gold-text">$2,900</p>
+            </div>
+          </div>
+        </div>
+        <div class="glass p-6">
+          <p class="text-xs font-bold uppercase mb-4" style="color:var(--gold);">
+            <span data-lang="es">Burn mensual operativo</span><span data-lang="en">Monthly operational burn</span>
+          </p>
+          <div class="space-y-3">
+            <div class="flex justify-between"><span class="text-sm" style="color:var(--text-secondary);">
+              <span data-lang="es">Infraestructura</span><span data-lang="en">Infrastructure</span>
+            </span><span class="text-sm font-semibold" style="color:var(--text-primary);">$338/mes</span></div>
+            <div class="flex justify-between"><span class="text-sm" style="color:var(--text-secondary);">Marketing</span><span class="text-sm font-semibold" style="color:var(--text-primary);">$375/mes</span></div>
+            <div class="flex justify-between"><span class="text-sm" style="color:var(--text-secondary);">
+              <span data-lang="es">Herramientas</span><span data-lang="en">Tools</span>
+            </span><span class="text-sm font-semibold" style="color:var(--text-primary);">$100/mes</span></div>
+          </div>
+          <div class="mt-4 pt-3" style="border-top:1px solid var(--glass-border);">
+            <div class="flex justify-between items-center">
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Total burn</p>
+              <p class="font-heading font-bold text-lg gold-text">$813/mes</p>
+            </div>
+            <p class="text-xs mt-2 italic" style="color:var(--text-muted);">
+              <span data-lang="es">Break-even: 1 cierre CAO</span><span data-lang="en">Break-even: 1 CAO close</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S7: FRANQUICIA COMPLETA =============== -->
+  <section id="franquicia" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">
+          <span data-lang="es">Portafolio</span><span data-lang="en">Portfolio</span>
+        </p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">
+          <span data-lang="es">Franquicia Completa</span><span data-lang="en">Complete Franchise</span>
+        </h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid gap-6 reveal" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width:960px; margin:0 auto;">
+        <!-- Product 1: Workshop -->
+        <div class="glass p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i data-lucide="megaphone" class="w-5 h-5" style="color:var(--gold);"></i>
+            <p class="text-xs uppercase tracking-wider font-bold" style="color:var(--gold);">Funnel</p>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-2" style="color:var(--text-primary);">
+            <span data-lang="es">Taller &ldquo;De Ocupado a Productivo&rdquo;</span>
+            <span data-lang="en">Workshop &ldquo;From Busy to Productive&rdquo;</span>
+          </h3>
+          <p class="text-sm mb-3" style="color:var(--text-secondary);">
+            <span data-lang="es">Gratuito. 13 cupos. Funnel de captaci&oacute;n para CAO Bootcamp. Se ejecuta cada mes desde abril.</span>
+            <span data-lang="en">Free. 13 spots. Capture funnel for CAO Bootcamp. Runs monthly from April.</span>
+          </p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs px-2 py-1 rounded-full font-bold" style="background:rgba(52,211,153,0.15);color:#34D399;">
+              <span data-lang="es">Gratuito</span><span data-lang="en">Free</span>
+            </span>
+            <span class="text-xs px-2 py-1 rounded-full font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">13 cupos</span>
+          </div>
+        </div>
+        <!-- Product 2: CAO Bootcamp -->
+        <div class="glass p-6 glow-border">
+          <div class="flex items-center gap-2 mb-3">
+            <i data-lucide="graduation-cap" class="w-5 h-5" style="color:var(--gold);"></i>
+            <p class="text-xs uppercase tracking-wider font-bold" style="color:var(--gold);">Core</p>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-2" style="color:var(--text-primary);">CAO Bootcamp</h3>
+          <p class="text-sm mb-3" style="color:var(--text-secondary);">
+            <span data-lang="es">2 formatos: Creyentes (abril, $1,490) + Calendario Acad&eacute;mico (desde mayo, $1,990). Ejecutivos, gerentes, directores.</span>
+            <span data-lang="en">2 formats: Believers (April, $1,490) + Academic Calendar (from May, $1,990). Executives, managers, directors.</span>
+          </p>
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xs px-2 py-1 rounded-full font-bold" style="background:rgba(255,215,0,0.15);color:var(--gold);">$1,490 Creyentes</span>
+            <span class="text-xs px-2 py-1 rounded-full font-bold" style="background:rgba(96,165,250,0.15);color:#60A5FA;">$1,990 Acad&eacute;mico</span>
+          </div>
+        </div>
+        <!-- Product 3: Empoderamiento -->
+        <div class="glass p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i data-lucide="users" class="w-5 h-5" style="color:var(--gold);"></i>
+            <p class="text-xs uppercase tracking-wider font-bold" style="color:var(--gold);">Teams</p>
+          </div>
+          <h3 class="font-heading text-base font-bold mb-2" style="color:var(--text-primary);">
+            <span data-lang="es">Empoderamiento</span><span data-lang="en">Empowerment</span>
+          </h3>
+          <p class="text-sm mb-3" style="color:var(--text-secondary);">
+            <span data-lang="es">Para equipos y gerentes con 7+ a&ntilde;os de experiencia. Formaci&oacute;n in-company o abierta.</span>
+            <span data-lang="en">For teams and managers with 7+ years experience. In-company or open enrollment.</span>
+          </p>
+          <div class="flex items-center gap-2">
+            <span class="text-xs px-2 py-1 rounded-full font-bold" style="background:rgba(167,139,250,0.15);color:#A78BFA;">$1,490</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S8: PRISTINO =============== -->
+  <section id="pristino" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">
+          <span data-lang="es">Entrega al Cliente</span><span data-lang="en">Client Delivery</span>
+        </p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">Pristino</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="glass p-6 reveal" style="max-width:900px;margin:0 auto;">
+        <p class="text-sm mb-4" style="color:var(--text-secondary);">
+          <span data-lang="es">Cada participante del CAO recibe acceso al ecosistema Pristino &mdash; la infraestructura ag&eacute;ntica de MetodologIA:</span>
+          <span data-lang="en">Each CAO participant gets access to the Pristino ecosystem &mdash; MetodologIA's agentic infrastructure:</span>
+        </p>
+        <div class="grid gap-3" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+          <div class="flex items-center gap-2"><i data-lucide="bot" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i><span class="text-sm" style="color:var(--text-secondary);">27 asistentes GPT</span></div>
+          <div class="flex items-center gap-2"><i data-lucide="gem" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i><span class="text-sm" style="color:var(--text-secondary);">7 Gems</span></div>
+          <div class="flex items-center gap-2"><i data-lucide="code" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i><span class="text-sm" style="color:var(--text-secondary);">
+            <span data-lang="es">Agente Open Source</span><span data-lang="en">Open Source Agent</span>
+          </span></div>
+          <div class="flex items-center gap-2"><i data-lucide="file-text" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i><span class="text-sm" style="color:var(--text-secondary);">180+ prompts</span></div>
+          <div class="flex items-center gap-2"><i data-lucide="layers" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i><span class="text-sm" style="color:var(--text-secondary);">
+            <span data-lang="es">Asistentes personalizados (hasta 10, $347 c/u)</span>
+            <span data-lang="en">Custom assistants (up to 10, $347 each)</span>
+          </span></div>
+          <div class="flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i><span class="text-sm" style="color:var(--text-secondary);">
+            <span data-lang="es">Soporte continuo post-bootcamp</span><span data-lang="en">Ongoing post-bootcamp support</span>
+          </span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S9: MODELO DE NEGOCIO DEEP DIVE =============== -->
+  <section id="modelo" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Deep Dive</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">
+          <span data-lang="es">Modelo de Negocio</span><span data-lang="en">Business Model</span>
+        </h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <!-- Scenario Tabs -->
+      <div class="glass p-6 reveal mb-6" style="max-width:900px;margin:0 auto;">
+        <p class="text-xs font-bold uppercase mb-4" style="color:var(--gold);">
+          <span data-lang="es">Simulador de Escenarios (P&L A&ntilde;o 1)</span><span data-lang="en">Scenario Simulator (P&L Year 1)</span>
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <button class="pnl-tab active" onclick="switchPnl(0)">
+            <span data-lang="es">A: Hago todo (90%)</span><span data-lang="en">A: I do it all (90%)</span>
+          </button>
+          <button class="pnl-tab" onclick="switchPnl(1)">
+            <span data-lang="es">B: Coach + Franquicia (70%)</span><span data-lang="en">B: Coach + Franchise (70%)</span>
+          </button>
+          <button class="pnl-tab" onclick="switchPnl(2)">
+            <span data-lang="es">C: Solo Franquicia (20%)</span><span data-lang="en">C: Franchise Only (20%)</span>
+          </button>
+        </div>
+
+        <!-- Scenario A -->
+        <div class="pnl-panel active" id="pnl-0">
+          <div class="glass p-5 glow-border mb-4">
+            <div class="text-center mb-3">
+              <p class="font-heading font-black text-3xl gold-text">$122,444</p>
+              <p class="text-sm font-bold mt-1" style="color:var(--text-primary);">
+                <span data-lang="es">Ingreso neto A&ntilde;o 1</span><span data-lang="en">Net Income Year 1</span>
+              </p>
+            </div>
+            <table class="fin-table">
+              <tbody>
+                <tr><td><span data-lang="es">Revenue bruto</span><span data-lang="en">Gross revenue</span></td><td style="text-align:right;">$136,049</td></tr>
+                <tr><td><span data-lang="es">Costos operativos anuales</span><span data-lang="en">Annual operating costs</span></td><td style="text-align:right;">- $9,756</td></tr>
+                <tr><td>Holding (30% de IP 10%)</td><td style="text-align:right;">- $3,849</td></tr>
+                <tr class="highlight-row"><td><strong><span data-lang="es">Neto para Cristian</span><span data-lang="en">Net to Cristian</span></strong></td><td style="text-align:right;"><span class="gold-text font-heading">$122,444</span></td></tr>
+              </tbody>
+            </table>
+            <p class="text-xs mt-3 text-center" style="color:var(--text-muted);">
+              <span data-lang="es">Cristian ejecuta, vende y facilita todo. 50% coach + 20% franquicia + 20% comercial = 90%.</span>
+              <span data-lang="en">Cristian executes, sells and facilitates everything. 50% coach + 20% franchise + 20% commercial = 90%.</span>
+            </p>
+          </div>
+          <div class="flex items-end justify-center gap-1" style="height:60px;">
+            <div class="spark-bar" style="height:15%;"></div>
+            <div class="spark-bar" style="height:25%;"></div>
+            <div class="spark-bar" style="height:35%;"></div>
+            <div class="spark-bar" style="height:40%;"></div>
+            <div class="spark-bar" style="height:55%;"></div>
+            <div class="spark-bar" style="height:60%;"></div>
+            <div class="spark-bar" style="height:70%;"></div>
+            <div class="spark-bar" style="height:75%;"></div>
+            <div class="spark-bar" style="height:85%;"></div>
+            <div class="spark-bar" style="height:90%;"></div>
+            <div class="spark-bar" style="height:95%;"></div>
+            <div class="spark-bar" style="height:100%;"></div>
+          </div>
+          <p class="text-xs text-center mt-1" style="color:var(--text-muted);">
+            <span data-lang="es">Revenue mensual acumulado (12 meses)</span><span data-lang="en">Cumulative monthly revenue (12 months)</span>
+          </p>
+        </div>
+
+        <!-- Scenario B -->
+        <div class="pnl-panel" id="pnl-1">
+          <div class="glass p-5 mb-4">
+            <div class="text-center mb-3">
+              <p class="font-heading font-black text-3xl gold-text">~$95,000</p>
+              <p class="text-sm font-bold mt-1" style="color:var(--text-primary);">
+                <span data-lang="es">Ingreso neto A&ntilde;o 1</span><span data-lang="en">Net Income Year 1</span>
+              </p>
+            </div>
+            <table class="fin-table">
+              <tbody>
+                <tr><td><span data-lang="es">Revenue bruto</span><span data-lang="en">Gross revenue</span></td><td style="text-align:right;">$136,049</td></tr>
+                <tr><td><span data-lang="es">Share Cristian (70%)</span><span data-lang="en">Cristian share (70%)</span></td><td style="text-align:right;">$95,234</td></tr>
+                <tr><td><span data-lang="es">Embajadores (30% coach share)</span><span data-lang="en">Ambassadors (30% coach share)</span></td><td style="text-align:right;">- restante</td></tr>
+                <tr class="highlight-row"><td><strong><span data-lang="es">Neto para Cristian</span><span data-lang="en">Net to Cristian</span></strong></td><td style="text-align:right;"><span class="gold-text font-heading">~$95,000</span></td></tr>
+              </tbody>
+            </table>
+            <p class="text-xs mt-3 text-center" style="color:var(--text-muted);">
+              <span data-lang="es">Cristian delega parte de la facilitaci&oacute;n a Embajadores certificados. 20% franquicia + 20% comercial + parte del coach.</span>
+              <span data-lang="en">Cristian delegates part of facilitation to certified Ambassadors. 20% franchise + 20% commercial + part of coaching.</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Scenario C -->
+        <div class="pnl-panel" id="pnl-2">
+          <div class="glass p-5 mb-4">
+            <div class="text-center mb-3">
+              <p class="font-heading font-black text-3xl gold-text">~$27,000</p>
+              <p class="text-sm font-bold mt-1" style="color:var(--text-primary);">
+                <span data-lang="es">Ingreso neto A&ntilde;o 1</span><span data-lang="en">Net Income Year 1</span>
+              </p>
+            </div>
+            <table class="fin-table">
+              <tbody>
+                <tr><td><span data-lang="es">Revenue bruto</span><span data-lang="en">Gross revenue</span></td><td style="text-align:right;">$136,049</td></tr>
+                <tr><td><span data-lang="es">Share Cristian (20% franquicia)</span><span data-lang="en">Cristian share (20% franchise)</span></td><td style="text-align:right;">$27,210</td></tr>
+                <tr><td><span data-lang="es">Embajadores operan todo</span><span data-lang="en">Ambassadors operate everything</span></td><td style="text-align:right;">80%</td></tr>
+                <tr class="highlight-row"><td><strong><span data-lang="es">Neto para Cristian</span><span data-lang="en">Net to Cristian</span></strong></td><td style="text-align:right;"><span class="gold-text font-heading">~$27,000</span></td></tr>
+              </tbody>
+            </table>
+            <p class="text-xs mt-3 text-center" style="color:var(--text-muted);">
+              <span data-lang="es">Solo revenue de franquicia. Embajadores operan la facilitaci&oacute;n y ventas.</span>
+              <span data-lang="en">Franchise revenue only. Ambassadors handle facilitation and sales.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Growth Rationale Table -->
+      <div class="glass p-6 reveal" style="max-width:900px;margin:0 auto;overflow-x:auto;">
+        <p class="text-xs font-bold uppercase mb-4" style="color:var(--gold);">
+          <i data-lucide="trending-up" class="w-4 h-4 inline-block mr-1" style="vertical-align:-2px;"></i>
+          <span data-lang="es">Racional de Crecimiento</span><span data-lang="en">Growth Rationale</span>
+        </p>
+        <table class="fin-table">
+          <thead>
+            <tr>
+              <th><span data-lang="es">Ciclo</span><span data-lang="en">Cycle</span></th>
+              <th><span data-lang="es">Per&iacute;odo</span><span data-lang="en">Period</span></th>
+              <th style="text-align:center;"><span data-lang="es">Personas</span><span data-lang="en">People</span></th>
+              <th style="text-align:right;">Revenue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bloque 1</td><td>M1-M7 (Abr-Oct 2026)</td>
+              <td style="text-align:center;">3-5/ciclo</td><td style="text-align:right;">4 CAO + 2 Emp</td>
+            </tr>
+            <tr>
+              <td>Bloque 2</td><td>M9-M11 (Dic 2026-Feb 2027)</td>
+              <td style="text-align:center;">7-9/ciclo</td><td style="text-align:right;">CAO 5-6 + Emp 3-4</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>Total Y1</strong></td><td><strong>6 CAO + 4 Emp + Workshop</strong></td>
+              <td style="text-align:center;"><strong>33 CAO + 19 Emp</strong></td>
+              <td style="text-align:right;"><span class="gold-text font-heading" style="font-size:1.1rem;">$136,049</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S10: UNIT ECONOMICS =============== -->
+  <section id="unit-economics" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Per Closing</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">Unit Economics</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <!-- Waterfall breakdown -->
+      <div class="glass p-6 reveal mb-6" style="max-width:900px;margin:0 auto;">
+        <p class="text-xs font-bold uppercase mb-4" style="color:var(--gold);">
+          <span data-lang="es">Desglose por cierre CAO $1,490</span><span data-lang="en">Breakdown per CAO close $1,490</span>
+        </p>
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-bold w-20 text-right" style="color:var(--text-secondary);">Coach 50%</span>
+            <div class="waterfall-bar" style="width:50%;background:linear-gradient(90deg,#FFD700,#FFA000);">$745</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-bold w-20 text-right" style="color:var(--text-secondary);">Franquicia 20%</span>
+            <div class="waterfall-bar" style="width:20%;background:linear-gradient(90deg,#60A5FA,#3B82F6);">$298</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-bold w-20 text-right" style="color:var(--text-secondary);">IP 10%</span>
+            <div class="waterfall-bar" style="width:10%;background:linear-gradient(90deg,#A78BFA,#7C3AED);color:#fff;">$149</div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-bold w-20 text-right" style="color:var(--text-secondary);">Comercial 20%</span>
+            <div class="waterfall-bar" style="width:20%;background:linear-gradient(90deg,#34D399,#10B981);">$298</div>
+          </div>
+        </div>
+        <div class="mt-4 pt-3 text-center" style="border-top:1px solid var(--glass-border);">
+          <p class="text-sm" style="color:var(--text-secondary);">
+            <span data-lang="es">Si Cristian ejecuta todo:</span><span data-lang="en">If Cristian executes all:</span>
+            <strong class="gold-text"> $745 + $298 + $298 = $1,341 / $1,490</strong> (90%)
+          </p>
+        </div>
+      </div>
+      <!-- KPIs -->
+      <div class="grid gap-4 reveal" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); max-width:900px; margin:0 auto;">
+        <div class="glass p-4 rounded-lg text-center">
+          <i data-lucide="target" class="w-5 h-5 mx-auto mb-2" style="color:var(--gold);"></i>
+          <p class="text-xs" style="color:var(--text-muted);">CAC</p>
+          <p class="font-heading font-bold text-lg" style="color:var(--text-primary);">~$100-150</p>
+          <p class="text-xs mt-0.5" style="color:var(--text-muted);">
+            <span data-lang="es">org&aacute;nico, sin ads</span><span data-lang="en">organic, no ads</span>
+          </p>
+        </div>
+        <div class="glass p-4 rounded-lg text-center">
+          <i data-lucide="ticket" class="w-5 h-5 mx-auto mb-2" style="color:var(--gold);"></i>
+          <p class="text-xs" style="color:var(--text-muted);">Ticket</p>
+          <p class="font-heading font-bold text-lg gold-text">$1,490</p>
+          <p class="text-xs mt-0.5" style="color:var(--text-muted);">CAO Creyentes</p>
+        </div>
+        <div class="glass p-4 rounded-lg text-center">
+          <i data-lucide="gem" class="w-5 h-5 mx-auto mb-2" style="color:var(--gold);"></i>
+          <p class="text-xs" style="color:var(--text-muted);">LTV</p>
+          <p class="font-heading font-bold text-lg gold-text">~$4,000+</p>
+          <p class="text-xs mt-0.5" style="color:var(--text-muted);">CAO + asist. + Empow.</p>
+        </div>
+        <div class="glass p-4 rounded-lg text-center glow-border">
+          <i data-lucide="zap" class="w-5 h-5 mx-auto mb-2" style="color:var(--gold);"></i>
+          <p class="text-xs" style="color:var(--text-muted);">LTV/CAC</p>
+          <p class="font-heading font-bold text-lg gold-text">27-40x</p>
+          <p class="text-xs mt-0.5" style="color:var(--text-muted);">target 3-4x</p>
+        </div>
+        <div class="glass p-4 rounded-lg text-center">
+          <i data-lucide="check-circle" class="w-5 h-5 mx-auto mb-2" style="color:var(--gold);"></i>
+          <p class="text-xs" style="color:var(--text-muted);">Break-even</p>
+          <p class="font-heading font-bold text-lg" style="color:var(--text-primary);">
+            <span data-lang="es">Ciclo 1</span><span data-lang="en">Cycle 1</span>
+          </p>
+          <p class="text-xs mt-0.5" style="color:var(--text-muted);">3+ personas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S11: HORIZONTE ESTRATEGICO =============== -->
+  <section id="horizonte" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">
+          <span data-lang="es">Visi&oacute;n a 3+ A&ntilde;os</span><span data-lang="en">3+ Year Vision</span>
+        </p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">
+          <span data-lang="es">Horizonte Estrat&eacute;gico</span><span data-lang="en">Strategic Horizon</span>
+        </h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid gap-6 reveal" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); max-width:960px; margin:0 auto;">
+        <div class="phase-card">
+          <div class="phase-number">FASE 1</div>
+          <div class="mt-3">
+            <p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">
+              <span data-lang="es">A&ntilde;o 1 &mdash; BOOM</span><span data-lang="en">Year 1 &mdash; BOOM</span>
+            </p>
+            <h3 class="font-heading text-base font-bold mb-2" style="color:var(--text-primary);">
+              <span data-lang="es">Formaci&oacute;n</span><span data-lang="en">Training</span>
+            </h3>
+            <p class="text-sm mb-2" style="color:var(--text-secondary);">
+              <span data-lang="es">Talleres, CAO Bootcamp, Empoderamiento. Construir marca, testimonios, pipeline. Red de embajadores.</span>
+              <span data-lang="en">Workshops, CAO Bootcamp, Empowerment. Build brand, testimonials, pipeline. Ambassador network.</span>
+            </p>
+            <p class="text-xs font-semibold" style="color:var(--gold);">$136k bruto, ~$122k net</p>
+          </div>
+        </div>
+        <div class="phase-card">
+          <div class="phase-number">FASE 2</div>
+          <div class="mt-3">
+            <p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">
+              <span data-lang="es">A&ntilde;o 2 &mdash; TOP-OF-MIND</span><span data-lang="en">Year 2 &mdash; TOP-OF-MIND</span>
+            </p>
+            <h3 class="font-heading text-base font-bold mb-2" style="color:var(--text-primary);">
+              <span data-lang="es">Consultor&iacute;a</span><span data-lang="en">Consulting</span>
+            </h3>
+            <p class="text-sm mb-2" style="color:var(--text-secondary);">
+              <span data-lang="es">Soluciones ag&eacute;nticas custom, discovery, implementaci&oacute;n. Revenue recurrente de formaci&oacute;n + consultor&iacute;a.</span>
+              <span data-lang="en">Custom agentic solutions, discovery, implementation. Recurring revenue from training + consulting.</span>
+            </p>
+            <p class="text-xs font-semibold" style="color:var(--gold);">$435k bruto, ~$420k net</p>
+          </div>
+        </div>
+        <div class="phase-card" style="border-color:var(--gold);">
+          <div class="phase-number">FASE 3</div>
+          <div class="mt-3">
+            <p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">
+              <span data-lang="es">A&ntilde;o 3+ &mdash; TRUST</span><span data-lang="en">Year 3+ &mdash; TRUST</span>
+            </p>
+            <h3 class="font-heading text-base font-bold mb-2" style="color:var(--text-primary);">Software Factory + Ambassadors</h3>
+            <p class="text-sm mb-2" style="color:var(--text-secondary);">
+              <span data-lang="es">Proyectos fixed, soporte, equipo t&eacute;cnico, marcas aliadas y red de embajadores en Ecuador.</span>
+              <span data-lang="en">Fixed projects, support, technical team, allied brands and ambassador network in Ecuador.</span>
+            </p>
+            <p class="text-xs font-semibold" style="color:var(--gold);">$180k - $250k/yr</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S12: ROADMAP DETALLADO =============== -->
+  <section id="roadmap" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">Roadmap</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">
+          <span data-lang="es">El Camino Detallado</span><span data-lang="en">The Detailed Path</span>
+        </h2>
+        <div class="gold-divider"></div>
+      </div>
+      <!-- Gantt -->
+      <div class="glass p-4 reveal mb-6" style="max-width:960px;margin:0 auto;overflow-x:auto;">
+        <div class="gantt-grid" style="min-width:600px;">
+          <div></div>
+          <div class="gantt-header">Abr</div><div class="gantt-header">May</div><div class="gantt-header">Jun</div><div class="gantt-header">Jul</div>
+          <div class="gantt-header">Ago</div><div class="gantt-header">Sep</div><div class="gantt-header">Oct</div><div class="gantt-header">Nov</div>
+          <div class="gantt-header">Dic</div><div class="gantt-header">Ene</div><div class="gantt-header">Feb</div><div class="gantt-header">Mar</div>
+          <!-- Workshop -->
+          <div class="gantt-label">Workshop</div>
+          <div class="gantt-bar" style="background:linear-gradient(90deg,#34D399,#10B981);grid-column:span 12;">Mensual (gratuito)</div>
+          <!-- CAO Creyentes -->
+          <div class="gantt-label">CAO Creyentes</div>
+          <div class="gantt-bar" style="background:linear-gradient(90deg,#FFD700,#FFA000);grid-column:span 2;">Abr-May</div>
+          <div style="grid-column:span 10;"></div>
+          <!-- CAO Open -->
+          <div class="gantt-label">CAO Open</div>
+          <div style="grid-column:span 1;"></div>
+          <div class="gantt-bar" style="background:linear-gradient(90deg,#FFD700,#FFA000);grid-column:span 8;">May-Dic (bimestral)</div>
+          <div style="grid-column:span 3;"></div>
+          <!-- Empowerment -->
+          <div class="gantt-label">Empoderamiento</div>
+          <div style="grid-column:span 1;"></div>
+          <div class="gantt-bar" style="background:linear-gradient(90deg,#A78BFA,#7C3AED);color:#fff;grid-column:span 8;">May-Dic</div>
+          <div style="grid-column:span 3;"></div>
+          <!-- Academic -->
+          <div class="gantt-label">Acad&eacute;mico</div>
+          <div style="grid-column:span 3;"></div>
+          <div class="gantt-bar" style="background:linear-gradient(90deg,#60A5FA,#3B82F6);grid-column:span 9;">Jul-Mar (Embajadores)</div>
+          <!-- B2B -->
+          <div class="gantt-label">B2B</div>
+          <div style="grid-column:span 6;"></div>
+          <div class="gantt-bar" style="background:linear-gradient(90deg,#F472B6,#EC4899);grid-column:span 6;">Oct-Mar</div>
+          <!-- Cobrand -->
+          <div class="gantt-label">Cobrand</div>
+          <div style="grid-column:span 7;"></div>
+          <div class="gantt-bar" style="background:linear-gradient(90deg,#FB923C,#F97316);grid-column:span 5;">Nov-Mar</div>
+        </div>
+      </div>
+
+      <!-- Timeline milestones -->
+      <div class="glass p-6 reveal" style="max-width:700px;margin:0 auto;">
+        <p class="text-xs font-bold uppercase mb-4" style="color:var(--gold);">
+          <span data-lang="es">Hitos Clave</span><span data-lang="en">Key Milestones</span>
+        </p>
+        <div class="space-y-4">
+          <div class="flex gap-3">
+            <div><div class="timeline-dot"></div><div class="timeline-line" style="height:calc(100% - 14px);"></div></div>
+            <div class="pb-2">
+              <p class="text-sm font-bold" style="color:var(--text-primary);">5 Abr &mdash; Workshop (Semana Santa)</p>
+              <p class="text-xs" style="color:var(--text-secondary);">
+                <span data-lang="es">Primer taller gratuito. 13 cupos. Generaci&oacute;n de leads para CAO Creyentes.</span>
+                <span data-lang="en">First free workshop. 13 spots. Lead generation for CAO Believers.</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <div><div class="timeline-dot"></div><div class="timeline-line" style="height:calc(100% - 14px);"></div></div>
+            <div class="pb-2">
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Abr &mdash; CAO Creyentes</p>
+              <p class="text-xs" style="color:var(--text-secondary);">
+                <span data-lang="es">Javier facilita el primer ciclo. Cristian observa y aprende la mec&aacute;nica.</span>
+                <span data-lang="en">Javier facilitates the first cycle. Cristian observes and learns the mechanics.</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <div><div class="timeline-dot"></div><div class="timeline-line" style="height:calc(100% - 14px);"></div></div>
+            <div class="pb-2">
+              <p class="text-sm font-bold" style="color:var(--text-primary);">May &mdash; CAO Open + Empoderamiento</p>
+              <p class="text-xs" style="color:var(--text-secondary);">
+                <span data-lang="es">Ciclos abiertos. Cristian comienza a facilitar. $1,990 por participante.</span>
+                <span data-lang="en">Open cycles. Cristian starts facilitating. $1,990 per participant.</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <div><div class="timeline-dot"></div><div class="timeline-line" style="height:calc(100% - 14px);"></div></div>
+            <div class="pb-2">
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Jul &mdash; Calendario Acad&eacute;mico</p>
+              <p class="text-xs" style="color:var(--text-secondary);">
+                <span data-lang="es">Cristian + primeros Embajadores certificados. Ciclos bimestrales.</span>
+                <span data-lang="en">Cristian + first certified Ambassadors. Bimonthly cycles.</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <div><div class="timeline-dot"></div><div class="timeline-line" style="height:calc(100% - 14px);"></div></div>
+            <div class="pb-2">
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Oct &mdash; B2B primer cierre</p>
+              <p class="text-xs" style="color:var(--text-secondary);">
+                <span data-lang="es">Formaci&oacute;n corporativa. Empresas que ya conocen MetodologIA a trav&eacute;s de graduados.</span>
+                <span data-lang="en">Corporate training. Companies already familiar with MetodologIA through graduates.</span>
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <div><div class="timeline-dot"></div></div>
+            <div>
+              <p class="text-sm font-bold" style="color:var(--text-primary);">Nov &mdash; Cobrand primer cierre</p>
+              <p class="text-xs" style="color:var(--text-secondary);">
+                <span data-lang="es">Marca aliada ejecuta programas MetodologIA en su mercado.</span>
+                <span data-lang="en">Allied brand executes MetodologIA programs in their market.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S13: AMBASSADOR MODEL =============== -->
+  <section id="embajadores" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">
+          <span data-lang="es">Motor de Escala</span><span data-lang="en">Scale Engine</span>
+        </p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">
+          <span data-lang="es">Modelo de Embajadores</span><span data-lang="en">Ambassador Model</span>
+        </h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="glass p-6 reveal" style="max-width:900px;margin:0 auto;">
+        <div class="grid gap-4 mb-4" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+          <div class="glass p-4 rounded-xl text-center">
+            <i data-lucide="award" class="w-6 h-6 mx-auto mb-2" style="color:var(--gold);"></i>
+            <p class="text-sm font-bold mb-1" style="color:var(--text-primary);">
+              <span data-lang="es">Certificaci&oacute;n</span><span data-lang="en">Certification</span>
+            </p>
+            <p class="text-xs" style="color:var(--text-secondary);">
+              <span data-lang="es">Graduados sobresalientes del CAO pueden certificarse como Embajador MetodologIA</span>
+              <span data-lang="en">Outstanding CAO graduates can certify as MetodologIA Ambassador</span>
+            </p>
+          </div>
+          <div class="glass p-4 rounded-xl text-center">
+            <i data-lucide="percent" class="w-6 h-6 mx-auto mb-2" style="color:var(--gold);"></i>
+            <p class="text-sm font-bold mb-1" style="color:var(--text-primary);">
+              <span data-lang="es">50% descuento</span><span data-lang="en">50% discount</span>
+            </p>
+            <p class="text-xs" style="color:var(--text-secondary);">
+              <span data-lang="es">Acceso al pr&oacute;ximo programa con 50% de descuento sobre precio regular</span>
+              <span data-lang="en">Access to next program at 50% discount on regular price</span>
+            </p>
+          </div>
+          <div class="glass p-4 rounded-xl text-center">
+            <i data-lucide="wallet" class="w-6 h-6 mx-auto mb-2" style="color:var(--gold);"></i>
+            <p class="text-sm font-bold mb-1" style="color:var(--text-primary);">
+              <span data-lang="es">Ingreso por facilitaci&oacute;n</span><span data-lang="en">Facilitation income</span>
+            </p>
+            <p class="text-xs" style="color:var(--text-secondary);">
+              <span data-lang="es">Ganan 50% del revenue de cada programa que facilitan (rol de coach)</span>
+              <span data-lang="en">Earn 50% of revenue from each program they facilitate (coach role)</span>
+            </p>
+          </div>
+          <div class="glass p-4 rounded-xl text-center">
+            <i data-lucide="repeat" class="w-6 h-6 mx-auto mb-2" style="color:var(--gold);"></i>
+            <p class="text-sm font-bold mb-1" style="color:var(--text-primary);">Flywheel</p>
+            <p class="text-xs" style="color:var(--text-secondary);">
+              <span data-lang="es">Referidos generan nuevos participantes. Ciclo de crecimiento org&aacute;nico.</span>
+              <span data-lang="en">Referrals generate new participants. Organic growth cycle.</span>
+            </p>
+          </div>
+        </div>
+        <p class="text-xs text-center italic" style="color:var(--text-muted);">
+          <span data-lang="es">Los Embajadores son el motor del Calendario Acad&eacute;mico (ciclos bimestrales desde julio). Cristian elige c&oacute;mo articular: hacer todo, delegar, o un mix.</span>
+          <span data-lang="en">Ambassadors power the Academic Calendar (bimonthly cycles from July). Cristian chooses how to orchestrate: do everything, delegate, or a mix.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S14: QUIENES RESPALDAN =============== -->
+  <section id="equipo" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">
+          <span data-lang="es">Equipo</span><span data-lang="en">Team</span>
+        </p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">
+          <span data-lang="es">Quienes Respaldan</span><span data-lang="en">Who Has Your Back</span>
+        </h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid gap-4 reveal" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); max-width:900px; margin:0 auto;">
+        <div class="glass p-5">
+          <p class="font-heading text-sm font-bold mb-1" style="color:var(--text-primary);">Javier Monta&ntilde;o</p>
+          <p class="text-xs mb-2" style="color:var(--gold);">Fundador MetodologIA</p>
+          <p class="text-sm" style="color:var(--text-secondary);">
+            <span data-lang="es">M&eacute;todo, marca, 27 GPTs, 7 Gems, Pristino, 180+ prompts. Soporte continuo desde Colombia.</span>
+            <span data-lang="en">Method, brand, 27 GPTs, 7 Gems, Pristino, 180+ prompts. Ongoing support from Colombia.</span>
+          </p>
+        </div>
+        <div class="glass p-5">
+          <p class="font-heading text-sm font-bold mb-1" style="color:var(--text-primary);">
+            <span data-lang="es">Red de Fundadores</span><span data-lang="en">Founders Network</span>
+          </p>
+          <p class="text-xs mb-2" style="color:var(--gold);">
+            <span data-lang="es">Soporte estrat&eacute;gico</span><span data-lang="en">Strategic support</span>
+          </p>
+          <p class="text-sm" style="color:var(--text-secondary);">
+            <span data-lang="es">Acceso a la red de co-fundadores MetodologIA en Latam. Compartir aprendizajes, leads, mejores pr&aacute;cticas.</span>
+            <span data-lang="en">Access to the MetodologIA co-founders network in Latam. Share learnings, leads, best practices.</span>
+          </p>
+        </div>
+        <div class="glass p-5">
+          <p class="font-heading text-sm font-bold mb-1" style="color:var(--text-primary);">
+            <span data-lang="es">Formaci&oacute;n Dominical</span><span data-lang="en">Sunday Training</span>
+          </p>
+          <p class="text-xs mb-2" style="color:var(--gold);">
+            <span data-lang="es">Certificaci&oacute;n de facilitador</span><span data-lang="en">Facilitator certification</span>
+          </p>
+          <p class="text-sm" style="color:var(--text-secondary);">
+            <span data-lang="es">Sesiones dedicadas los domingos para dominar el m&eacute;todo antes de facilitar. No necesitas experiencia previa en IA.</span>
+            <span data-lang="en">Dedicated Sunday sessions to master the method before facilitating. No prior AI experience needed.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S15: COSTO DE OPORTUNIDAD =============== -->
+  <section id="urgencia" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="container">
+      <div class="reveal text-center" style="max-width:700px;margin:0 auto;">
+        <i data-lucide="clock" class="w-8 h-8 mx-auto mb-3" style="color:var(--gold);"></i>
+        <h2 class="font-heading font-bold mb-4" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">
+          <span data-lang="es">Costo de Oportunidad</span><span data-lang="en">Opportunity Cost</span>
+        </h2>
+        <div class="gold-divider"></div>
+        <p class="text-base mt-4 mb-3" style="color:var(--text-secondary);">
+          <span data-lang="es">Cada mes sin operar es un ciclo de CAO que no se ejecuta. 5 participantes a $1,490 = <strong style="color:var(--text-primary);">$7,450 que no entran.</strong></span>
+          <span data-lang="en">Every month without operating is a CAO cycle not executed. 5 participants at $1,490 = <strong style="color:var(--text-primary);">$7,450 that does not come in.</strong></span>
+        </p>
+        <p class="text-base mb-3" style="color:var(--text-secondary);">
+          <span data-lang="es">Cada trimestre de retraso es un Embajador que no se certifica, un referido que no se genera, una empresa que no te conoce.</span>
+          <span data-lang="en">Every quarter of delay is an Ambassador not certified, a referral not generated, a company that does not know you.</span>
+        </p>
+        <div class="glass p-4 rounded-xl glow-border mt-4 inline-block">
+          <p class="font-heading font-bold text-lg gold-text">
+            <span data-lang="es">Costo de esperar 6 meses: ~$45,000 en revenue perdido</span>
+            <span data-lang="en">Cost of waiting 6 months: ~$45,000 in lost revenue</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S16: FAQ =============== -->
+  <section id="faq" style="padding:3rem 0;background:var(--bg-primary);">
+    <div class="container">
+      <div class="text-center mb-6 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);">FAQ</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem, 3vw, 2.25rem);">
+          <span data-lang="es">Preguntas Frecuentes</span><span data-lang="en">Frequently Asked Questions</span>
+        </h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="glass p-6 reveal" style="max-width:800px;margin:0 auto;">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-lang="es">Qu&eacute; pasa si pierdo los $2,900?</span>
+            <span data-lang="en">What if I lose the $2,900?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+          </button>
+          <div class="faq-a">
+            <span data-lang="es">Los $2,900 cubren infraestructura real (hosting, Claude Code Max, correo corporativo). No es un fee de entrada. Son costos operativos que necesitas para funcionar. Con 1 solo cierre CAO ($1,490) ya cubres el burn mensual de $813. Con 2 cierres, ya tienes ROI positivo sobre la inversi&oacute;n anual.</span>
+            <span data-lang="en">The $2,900 covers real infrastructure (hosting, Claude Code Max, corporate email). It is not an entry fee. These are operational costs you need to function. With 1 CAO close ($1,490) you already cover the monthly $813 burn. With 2 closes, you already have positive ROI on the annual investment.</span>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-lang="es">Cu&aacute;nto tiempo necesito dedicar?</span>
+            <span data-lang="en">How much time do I need to dedicate?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+          </button>
+          <div class="faq-a">
+            <span data-lang="es">Depende del escenario. Si haces todo (Escenario A), es una operaci&oacute;n activa: convocatoria, facilitaci&oacute;n, ventas. Si delegas a Embajadores (B o C), tu dedicaci&oacute;n baja significativamente. Domingos de formaci&oacute;n con Javier son fijos durante los primeros 3 meses.</span>
+            <span data-lang="en">Depends on the scenario. If you do everything (Scenario A), it is an active operation: convening, facilitation, sales. If you delegate to Ambassadors (B or C), your dedication drops significantly. Sunday training with Javier is fixed during the first 3 months.</span>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-lang="es">Qu&eacute; pasa si no funciona la facilitaci&oacute;n?</span>
+            <span data-lang="en">What if facilitation does not work for me?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+          </button>
+          <div class="faq-a">
+            <span data-lang="es">El modelo de Embajadores existe para eso. Puedes delegar la facilitaci&oacute;n a graduados certificados y quedarte con el 20% de franquicia + 20% comercial. Escenario B o C.</span>
+            <span data-lang="en">The Ambassador model exists for that. You can delegate facilitation to certified graduates and keep 20% franchise + 20% commercial. Scenario B or C.</span>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-lang="es">Por qu&eacute; 51% para m&iacute; y no 50/50?</span>
+            <span data-lang="en">Why 51% for me and not 50/50?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+          </button>
+          <div class="faq-a">
+            <span data-lang="es">Porque Ecuador es tu territorio. T&uacute; tomas las decisiones operativas. 51% garantiza que no hay empate en ninguna votaci&oacute;n. Es una se&ntilde;al de confianza, no un n&uacute;mero arbitrario.</span>
+            <span data-lang="en">Because Ecuador is your territory. You make the operational decisions. 51% guarantees no tie in any vote. It is a signal of trust, not an arbitrary number.</span>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-lang="es">Necesito experiencia previa en IA?</span>
+            <span data-lang="en">Do I need prior AI experience?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+          </button>
+          <div class="faq-a">
+            <span data-lang="es">No. La formaci&oacute;n dedicada (domingos) te certifica como facilitador MetodologIA. El m&eacute;todo ya est&aacute; construido &mdash; 27 GPTs, 7 Gems, 180+ prompts. T&uacute; lo ejecutas, no lo creas desde cero.</span>
+            <span data-lang="en">No. Dedicated training (Sundays) certifies you as a MetodologIA facilitator. The method is already built &mdash; 27 GPTs, 7 Gems, 180+ prompts. You execute it, you do not create it from scratch.</span>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-lang="es">Qu&eacute; es el modelo de Embajadores?</span>
+            <span data-lang="en">What is the Ambassador model?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+          </button>
+          <div class="faq-a">
+            <span data-lang="es">Los graduados sobresalientes del CAO pueden certificarse como Embajadores MetodologIA. Ejecutan programas y ganan 50% del revenue de cada programa que facilitan. T&uacute; mantienes franquicia (20%) + comercial (20%) por cada programa que ellos ejecuten.</span>
+            <span data-lang="en">Outstanding CAO graduates can certify as MetodologIA Ambassadors. They execute programs and earn 50% of revenue from each one. You keep franchise (20%) + commercial (20%) for each program they run.</span>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-lang="es">Qu&eacute; pasa si quiero salir despu&eacute;s del primer a&ntilde;o?</span>
+            <span data-lang="en">What if I want to exit after the first year?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+          </button>
+          <div class="faq-a">
+            <span data-lang="es">La franquicia opera a&ntilde;o a a&ntilde;o. Si al final del primer a&ntilde;o decides no continuar, no hay penalidad. Tu red de contactos, experiencia y certificaci&oacute;n te quedan. Los Embajadores que certificaste pueden operar de forma independiente.</span>
+            <span data-lang="en">The franchise operates year to year. If at the end of year one you decide not to continue, there is no penalty. Your network, experience and certification stay with you. Ambassadors you certified can operate independently.</span>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-lang="es">C&oacute;mo se manejan los impuestos en Ecuador?</span>
+            <span data-lang="en">How are taxes handled in Ecuador?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+          </button>
+          <div class="faq-a">
+            <span data-lang="es">Las proyecciones son pre-impuestos. La estructura fiscal depende de si operas como persona natural o sociedad. Recomendamos asesor&iacute;a contable local antes de iniciar operaciones. Los $2,900 de infraestructura son deducibles como gasto operativo.</span>
+            <span data-lang="en">Projections are pre-tax. Tax structure depends on whether you operate as individual or company. We recommend local accounting advice before starting operations. The $2,900 infrastructure cost is deductible as an operating expense.</span>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-lang="es">Las cifras est&aacute;n garantizadas?</span>
+            <span data-lang="en">Are these figures guaranteed?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+          </button>
+          <div class="faq-a">
+            <span data-lang="es">No. Las proyecciones son ilustrativas y basadas en supuestos. Los resultados dependen de la ejecuci&oacute;n, la convocatoria y el mercado. Modo Innovaci&oacute;n aplica a todo el documento. Lo que s&iacute; es real: la infraestructura, el m&eacute;todo, la marca y el soporte.</span>
+            <span data-lang="en">No. Projections are illustrative and based on assumptions. Results depend on execution, convening power and market. Innovation Mode applies to the entire document. What is real: infrastructure, method, brand and support.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== S17: FINAL CTA =============== -->
+  <section id="final" style="padding:3rem 0;background:var(--bg-secondary);">
+    <div class="container">
+      <div class="text-center reveal" style="max-width:700px;margin:0 auto;">
+        <h2 class="font-heading font-bold mb-4" style="color:var(--text-primary);font-size:clamp(1.75rem, 4vw, 2.5rem);">
+          <span data-lang="es">Cristian, la decisi&oacute;n es tuya.</span>
+          <span data-lang="en">Cristian, the decision is yours.</span>
+        </h2>
+        <div class="gold-divider"></div>
+        <p class="text-base mb-3 mt-4" style="color:var(--text-secondary);">
+          <span data-lang="es">51% de MetodologIA Ecuador. $2,900 de inversi&oacute;n. Domingos de formaci&oacute;n. Un mercado virgen. Un m&eacute;todo probado. Y un equipo de fundadores que te respalda.</span>
+          <span data-lang="en">51% of MetodologIA Ecuador. $2,900 investment. Sunday training. A virgin market. A proven method. And a team of founders that backs you.</span>
+        </p>
+        <p class="text-sm mb-8" style="color:var(--text-muted);">
+          <span data-lang="es">Escenario A: $122K neto A&ntilde;o 1. Escenario B: ~$95K. Escenario C: ~$27K. T&uacute; eliges c&oacute;mo operar.</span>
+          <span data-lang="en">Scenario A: $122K net Year 1. Scenario B: ~$95K. Scenario C: ~$27K. You choose how to operate.</span>
+        </p>
+        <div class="flex gap-4 justify-center flex-wrap">
+          <a href="mailto:contacto@metodologia.info?subject=Confirmaci%C3%B3n%20Co-Fundador%20MetodologIA%20Ecuador%20%E2%80%94%20Cristian%20Jarr%C3%ADn"
+             class="btn-gold" style="padding:1rem 2.5rem;">
+            <i data-lucide="check-circle" class="w-5 h-5"></i>
+            <span data-lang="es">Confirmar como Co-Fundador</span>
+            <span data-lang="en">Confirm as Co-Founder</span>
+          </a>
+          <a href="mailto:contacto@metodologia.info?subject=Preguntas%20Co-Fundador%20MetodologIA%20Ecuador"
+             class="btn-ghost" style="padding:1rem 2.5rem;">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+            <span data-lang="es">Tengo preguntas</span>
+            <span data-lang="en">I have questions</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== FOOTER =============== -->
+  <footer style="padding:2rem 0 calc(2rem + env(safe-area-inset-bottom));background:var(--bg-primary);border-top:1px solid var(--border-color);">
+    <div class="container text-center">
+      <div class="flex items-center justify-center gap-2 mb-3">
+        <svg width="24" height="24" viewBox="0 0 36 36" fill="none">
+          <defs><linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+          <rect width="36" height="36" rx="10" fill="url(#lg2)"/>
+          <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+          <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+        </svg>
+        <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">Metodolog<span class="gold-text">IA</span></span>
+      </div>
+      <p class="text-xs mb-2 italic" style="color:var(--text-muted);">
+        <span data-lang="es">(R)Evolucion, no transformaci&oacute;n</span>
+        <span data-lang="en">(R)Evolution, not transformation</span>
+      </p>
+      <div class="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-4">
+        <a href="https://metodologia.info/vision.html" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="eye" class="w-3 h-3"></i> <span data-lang="es">Visi&oacute;n</span><span data-lang="en">Vision</span>
+        </a>
+        <a href="https://metodologia.info/ruta/" target="_blank" rel="noopener" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="route" class="w-3 h-3"></i> <span data-lang="es">Ruta</span><span data-lang="en">Route</span>
+        </a>
+        <a href="mailto:contacto@metodologia.info" class="text-xs inline-flex items-center gap-1" style="color:var(--text-muted);text-decoration:none;min-height:44px;padding:0.5rem;">
+          <i data-lucide="mail" class="w-3 h-3"></i> Contacto
+        </a>
+      </div>
+      <p class="text-xs leading-relaxed" style="color:var(--text-muted);">
+        <span data-lang="es">Documento confidencial. Preparado exclusivamente para Cristian Jarr&iacute;n. MetodologIA &copy; 2026. Todos los precios en USD.</span>
+        <span data-lang="en">Confidential document. Prepared exclusively for Cristian Jarr&iacute;n. MetodologIA &copy; 2026. All prices in USD.</span>
+      </p>
+      <p class="text-xs mt-2" style="color:var(--text-muted);opacity:0.5;">
+        <span data-lang="es">Modo Innovaci&oacute;n &mdash; Cifras proyectadas basadas en supuestos. No constituyen garant&iacute;a de resultados.</span>
+        <span data-lang="en">Innovation Mode &mdash; Projected figures based on assumptions. They do not constitute a guarantee of results.</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- =============== SCRIPTS =============== -->
+  <script>
+  /* Theme toggle */
+  function toggleTheme() {
+    const html = document.documentElement;
+    if (html.classList.contains('dark')) { html.classList.remove('dark'); html.classList.add('light'); }
+    else { html.classList.remove('light'); html.classList.add('dark'); }
+  }
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.add('light');
+  }
+
+  /* Language toggle */
+  function toggleLang() {
+    const html = document.documentElement;
+    const btn = document.getElementById('langBtn');
+    if (html.getAttribute('data-lang') === 'en') {
+      html.removeAttribute('data-lang');
+      btn.textContent = 'ES';
+    } else {
+      html.setAttribute('data-lang', 'en');
+      btn.textContent = 'EN';
+    }
+  }
+
+  /* Scroll progress */
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = h > 0 ? (window.scrollY / h) * 100 : 0;
+    document.getElementById('scroll-progress').style.width = pct + '%';
+  }, { passive: true });
+
+  /* Reveal on scroll */
+  function observeReveals() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+  }
+
+  /* P&L tab switcher */
+  function switchPnl(idx) {
+    document.querySelectorAll('.pnl-tab').forEach((t, i) => t.classList.toggle('active', i === idx));
+    document.querySelectorAll('.pnl-panel').forEach((p, i) => p.classList.toggle('active', i === idx));
+  }
+
+  /* FAQ accordion */
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-q.open').forEach(q => { q.classList.remove('open'); q.nextElementSibling.classList.remove('open'); });
+    if (!isOpen) { btn.classList.add('open'); answer.classList.add('open'); }
+  }
+
+  /* Donut chart scroll animation */
+  function observeDonut() {
+    const chart = document.getElementById('donutChart');
+    if (!chart) return;
+    const ring = chart.querySelector('.donut-ring');
+    if (!ring) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          ring.style.animationPlayState = 'running';
+          obs.unobserve(chart);
+        }
+      });
+    }, { threshold: 0.3 });
+    obs.observe(chart);
+  }
+
+  /* Init */
+  document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
+    observeReveals();
+    observeDonut();
+  });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="es" class="dark" data-view="resumen">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
+  <title>CAO Bootcamp — Chief Agentic Officer | MetodologIA</title>
+  <meta name="description" content="Dossier Integral del Bootcamp Ejecutivo Modular para directivos. Edicion Creyentes, solo 5 plazas en Quito 2026." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%230A122A'/%3E%3Cstop offset='100%25' stop-color='%231E293B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='36' height='36' rx='10' fill='url(%23g)'/%3E%3Cpath d='M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z' fill='%23fff'/%3E%3Ccircle cx='18' cy='8' r='2' fill='%23FFD700'/%3E%3C/svg%3E">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            navy: { DEFAULT: '#0B2545', light: '#163A6A', dark: '#071A33' },
+            gold: { DEFAULT: '#FFD700', dark: '#FFA000', light: '#FFE44D' },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES — DARK (default)
+       ============================================================ */
+    :root {
+      --bg-primary: #0B2545;
+      --bg-secondary: #071A33;
+      --bg-card: rgba(11, 37, 69, 0.6);
+      --text-primary: #F0F4F8;
+      --text-secondary: #A0B4CC;
+      --text-muted: #6B8AB0;
+      --border-color: rgba(255, 215, 0, 0.15);
+      --glass-bg: rgba(11, 37, 69, 0.55);
+      --glass-border: rgba(255, 215, 0, 0.12);
+      --gold: #FFD700;
+      --gold-dark: #FFA000;
+      --navy: #0B2545;
+      --shadow-glow: 0 0 40px rgba(255, 215, 0, 0.08);
+    }
+
+    /* ============================================================
+       CSS CUSTOM PROPERTIES — LIGHT
+       ============================================================ */
+    html.light {
+      --bg-primary: #F8FAFC;
+      --bg-secondary: #EEF2F7;
+      --bg-card: rgba(255, 255, 255, 0.85);
+      --text-primary: #0A1F3A;
+      --text-secondary: #2C4A6E;
+      --text-muted: #4A6D94;
+      --border-color: rgba(11, 37, 69, 0.15);
+      --glass-bg: rgba(255, 255, 255, 0.75);
+      --glass-border: rgba(11, 37, 69, 0.12);
+      --shadow-glow: 0 2px 20px rgba(11, 37, 69, 0.08);
+      --gold: #B8860B;
+    }
+    html.light body { font-weight: 500; }
+    html.light h1, html.light h2, html.light h3, html.light h4 { font-weight: 800; }
+    html.light p { letter-spacing: -0.01em; }
+    html.light .gold-text {
+      background: linear-gradient(135deg, #B8860B, #8B6914);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    html.light [style*="color:var(--gold)"] { color: #B8860B !important; }
+    html.light .btn-gold { background: linear-gradient(135deg, #D4A017, #B8860B); color: #fff; }
+    html.light .btn-gold:hover { box-shadow: 0 8px 30px rgba(184,134,11,0.3); }
+    html.light .phase-tag[style*="color:var(--gold)"] { color: #8B6914 !important; }
+    html.light .glow-border { box-shadow: none; border-color: rgba(184,134,11,0.3); }
+    html.light .method-chip { border-color: rgba(184,134,11,0.3); color: #8B6914; }
+    html.light .method-chip:hover { border-color: #B8860B; color: #B8860B; }
+
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+
+    /* ============================================================
+       SCROLL PROGRESS BAR
+       ============================================================ */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      z-index: 9999; transition: width 0.1s linear; width: 0%;
+    }
+
+    /* ============================================================
+       GOLD GRADIENT TEXT
+       ============================================================ */
+    .gold-text {
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ============================================================
+       GLASSMORPHISM CARD
+       ============================================================ */
+    .glass {
+      background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border); border-radius: 1rem;
+      box-shadow: var(--shadow-glow); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass:hover {
+      border-color: rgba(255, 215, 0, 0.25);
+      box-shadow: 0 0 60px rgba(255, 215, 0, 0.12);
+      transform: translateY(-2px);
+    }
+
+    /* ============================================================
+       GLASS NAV
+       ============================================================ */
+    .glass-nav {
+      background: var(--glass-bg); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    /* ============================================================
+       TOGGLE PILL
+       ============================================================ */
+    .toggle-pill {
+      display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.25rem;
+      border-radius: 9999px; background: var(--bg-card); border: 1px solid var(--border-color);
+      font-size: 0.75rem; cursor: pointer;
+    }
+    .toggle-pill span {
+      padding: 0.25rem 0.65rem; border-radius: 9999px; transition: all 0.3s ease;
+      font-weight: 500; color: var(--text-muted);
+    }
+    .toggle-pill span.active {
+      background: linear-gradient(135deg, #FFD700, #FFA000); color: #0B2545; font-weight: 600;
+    }
+
+    /* ============================================================
+       SECTION PADDING
+       ============================================================ */
+    .section-pad { padding: 7rem 0; }
+
+    /* ============================================================
+       SCROLL REVEAL
+       ============================================================ */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       VIEW TOGGLING — 4 levels
+       ============================================================ */
+    .view-detail { display: none !important; }
+    .view-immersive { display: none !important; }
+    .view-datos { display: none !important; }
+    html[data-view="detallado"] .view-detail { display: block !important; }
+    html[data-view="inmersivo"] .view-detail { display: block !important; }
+    html[data-view="inmersivo"] .view-immersive { display: block !important; }
+    html[data-view="datos"] .view-detail { display: block !important; }
+    html[data-view="datos"] .view-immersive { display: block !important; }
+    html[data-view="datos"] .view-datos { display: block !important; }
+
+    /* ============================================================
+       GLOW BORDER
+       ============================================================ */
+    .glow-border {
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.15), inset 0 0 30px rgba(255, 215, 0, 0.03);
+    }
+
+    /* ============================================================
+       ANIMATIONS
+       ============================================================ */
+    @keyframes bounce-slow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+    .bounce-slow { animation: bounce-slow 2s infinite; }
+    @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.1); } 50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.25); } }
+    .pulse-glow { animation: pulse-glow 3s infinite; }
+    @keyframes float-in { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ============================================================
+       PRICE STRIKE
+       ============================================================ */
+    .price-strike { text-decoration: line-through; opacity: 0.5; }
+
+    /* ============================================================
+       RANGE SLIDER
+       ============================================================ */
+    input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 3px; background: var(--border-color); outline: none; }
+    input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg, #FFD700, #FFA000); cursor: pointer; border: 2px solid #0B2545; }
+    input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg, #FFD700, #FFA000); cursor: pointer; border: 2px solid #0B2545; }
+
+    /* ============================================================
+       CONFETTI
+       ============================================================ */
+    .confetti-piece { position: fixed; width: 10px; height: 10px; z-index: 10000; pointer-events: none; }
+
+    /* ============================================================
+       MODAL SYSTEM
+       ============================================================ */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 9990; background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+    }
+    .modal-overlay.active { opacity: 1; pointer-events: auto; }
+    .modal-content {
+      background: var(--bg-primary); border: 1px solid var(--glass-border); border-radius: 1.5rem;
+      max-width: 600px; width: 90%; max-height: 85vh; overflow-y: auto; padding: 2.5rem;
+      transform: translateY(30px); transition: transform 0.3s ease;
+    }
+    .modal-overlay.active .modal-content { transform: translateY(0); }
+
+    /* ============================================================
+       CHIP SELECTOR
+       ============================================================ */
+    .chip {
+      display: inline-flex; align-items: center; padding: 0.4rem 0.85rem; border-radius: 9999px;
+      border: 1px solid var(--border-color); font-size: 0.8rem; cursor: pointer;
+      transition: all 0.3s ease; color: var(--text-secondary); user-select: none;
+    }
+    .chip.selected { background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,160,0,0.1)); border-color: var(--gold); color: var(--gold); }
+    .chip.locked { opacity: 0.6; cursor: default; }
+
+    /* ============================================================
+       SMOOTH SCROLL & KPI CARDS
+       ============================================================ */
+    html { scroll-behavior: smooth; }
+    .kpi-card { text-align: center; padding: 1.25rem 1rem; }
+    .kpi-card .kpi-value { font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 700; line-height: 1; }
+    .kpi-card .kpi-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem; }
+
+    /* ============================================================
+       METHODOLOGY CHIPS / PHASE TAG
+       ============================================================ */
+    .method-chip { display: inline-block; padding: 0.35rem 0.85rem; border-radius: 9999px; border: 1px solid var(--border-color); font-size: 0.78rem; color: var(--text-secondary); margin: 0.2rem; transition: all 0.3s ease; }
+    .method-chip:hover { border-color: var(--gold); color: var(--gold); }
+    .phase-tag { display: inline-block; padding: 0.3rem 0.8rem; border-radius: 9999px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* ============================================================
+       CUSTOM SCROLLBAR
+       ============================================================ */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+    ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
+
+    /* ============================================================
+       DATA TABLE
+       ============================================================ */
+    .data-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+    .data-table th { background: rgba(255,215,0,0.08); padding: 1rem; text-align: left; font-weight: 600; font-size: 0.85rem; color: var(--gold); border-bottom: 1px solid var(--border-color); }
+    .data-table td { padding: 1rem; border-bottom: 1px solid var(--border-color); font-size: 0.9rem; color: var(--text-secondary); }
+
+    /* ============================================================
+       LEVEL CARD
+       ============================================================ */
+    .level-card.highlighted { border: 2px solid var(--gold); box-shadow: 0 0 40px rgba(255, 215, 0, 0.12); }
+
+    /* ============================================================
+       PUNCHLINE
+       ============================================================ */
+    .punchline { text-align: center; padding-top: 3rem; color: var(--text-muted); font-size: 0.95rem; }
+    .punchline a { color: var(--gold); text-decoration: none; transition: opacity 0.3s ease; border-bottom: 1px solid transparent; }
+    .punchline a:hover { opacity: 0.8; border-bottom-color: var(--gold); }
+
+    /* ============================================================
+       AMBIENT CIRCLES
+       ============================================================ */
+    .ambient-circle { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.08; pointer-events: none; }
+
+    /* ============================================================
+       FORM INPUT
+       ============================================================ */
+    .form-input { width: 100%; padding: 0.75rem 1rem; border-radius: 0.75rem; font-size: 0.875rem; background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-primary); outline: none; transition: border-color 0.3s ease; }
+    .form-input:focus { border-color: var(--gold); }
+    .form-input::placeholder { color: var(--text-muted); }
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+    .btn-gold { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 2rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 700; background: linear-gradient(135deg, #FFD700, #FFA000); color: #0B2545; border: none; cursor: pointer; transition: all 0.3s ease; }
+    .btn-gold:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 215, 0, 0.3); }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 2rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 700; background: transparent; color: var(--gold); border: 1px solid var(--gold); cursor: pointer; transition: all 0.3s ease; }
+    .btn-ghost:hover { transform: scale(1.05); background: rgba(255, 215, 0, 0.08); }
+    .btn-gold:focus-visible, .btn-ghost:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    /* ============================================================
+       DECORATIVE DIVIDER
+       ============================================================ */
+    .gold-divider { width: 60px; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-dark)); border-radius: 2px; margin: 1rem auto; }
+
+    /* ============================================================
+       DASHBOARD BAR CHART (CSS-only)
+       ============================================================ */
+    .bar-chart-bar { transition: width 0.8s cubic-bezier(0.4,0,0.2,1); border-radius: 0 4px 4px 0; min-height: 28px; }
+
+    /* ============================================================
+       COMPETITIVE TABLE
+       ============================================================ */
+    .comp-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    .comp-table th { padding: 0.75rem; text-align: left; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold); border-bottom: 2px solid var(--border-color); }
+    .comp-table td { padding: 0.75rem; border-bottom: 1px solid var(--border-color); color: var(--text-secondary); }
+    .comp-table tr:hover td { background: rgba(255,215,0,0.03); }
+
+    /* ============================================================
+       RESPONSIVE — MOBILE
+       ============================================================ */
+    @media (max-width: 768px) {
+      .section-pad { padding: 3rem 0 !important; }
+      .kpi-card .kpi-value { font-size: 1.5rem; }
+      body { font-size: 16px; touch-action: manipulation; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); -webkit-text-size-adjust: 100%; }
+      nav { padding: 0.5rem 1rem !important; }
+      nav .hidden.sm\:inline-flex { display: none !important; }
+      nav .toggle-pill { display: none !important; }
+      h1 { font-size: 2rem !important; }
+      h2 { font-size: 1.6rem !important; }
+      h3 { font-size: 1.1rem !important; }
+      .grid.lg\:grid-cols-3 { grid-template-columns: 1fr !important; }
+      .grid.md\:grid-cols-2 { grid-template-columns: 1fr !important; }
+      .grid.md\:grid-cols-3 { grid-template-columns: 1fr !important; }
+      .grid.lg\:grid-cols-5 { grid-template-columns: 1fr !important; }
+      .glass { padding: 1.25rem !important; border-radius: 1rem !important; }
+      .glass.p-7, .glass.p-8, .glass.p-10 { padding: 1.5rem !important; }
+      button, .btn-gold, .btn-ghost, a[href] { min-height: 44px; }
+      .btn-gold, .btn-ghost { padding: 0.75rem 1.5rem !important; font-size: 0.875rem !important; }
+      .flex.flex-col.lg\:flex-row { flex-direction: column !important; }
+      .lg\:sticky { position: static !important; }
+      .grid.grid-cols-2.md\:grid-cols-4 { grid-template-columns: repeat(2, 1fr) !important; }
+      .modal-content { width: 100% !important; max-width: 100% !important; height: 100% !important; max-height: 100% !important; border-radius: 0 !important; margin: 0 !important; }
+      .punchline { font-size: 0.875rem !important; }
+      .flex.flex-col.md\:flex-row { flex-direction: column !important; align-items: center !important; text-align: center !important; }
+      blockquote, .text-2xl.italic { font-size: 1.1rem !important; }
+      .text-3xl.font-heading { font-size: 1.75rem !important; }
+      .text-5xl { font-size: 2rem !important; }
+      button[onclick*="toggleAccordion"] { padding: 1rem !important; min-height: 48px; }
+    }
+    @media (max-width: 380px) {
+      h1 { font-size: 1.6rem !important; }
+      h2 { font-size: 1.3rem !important; }
+      .glass { padding: 1rem !important; }
+    }
+    @supports (-webkit-touch-callout: none) {
+      body { -webkit-overflow-scrolling: touch; }
+      .modal-overlay { -webkit-overflow-scrolling: touch; }
+      input, select, textarea { font-size: 16px !important; }
+    }
+
+    /* ============================================================
+       PRINT MODE
+       ============================================================ */
+    @media print {
+      body { background: #fff !important; color: #1a1a1a !important; font-size: 11pt; }
+      .glass-nav, #scroll-progress, .btn-gold, .btn-ghost, .toggle-pill, .modal-overlay, .confetti-piece { display: none !important; }
+      .glass { background: #fff !important; border: 1px solid #ccc !important; box-shadow: none !important; backdrop-filter: none !important; break-inside: avoid; }
+      .view-detail, .view-immersive, .view-datos { display: block !important; }
+      .section-pad { padding: 1.5rem 0 !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .gold-text { -webkit-text-fill-color: #B8860B !important; color: #B8860B !important; }
+      h1, h2, h3 { color: #0B2545 !important; }
+      a { color: #0B2545 !important; }
+      .ambient-circle { display: none !important; }
+      @page { size: A4; margin: 1.5cm; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====================================================================
+       SCROLL PROGRESS BAR
+       ==================================================================== -->
+  <div id="scroll-progress"></div>
+
+  <!-- ====================================================================
+       SECTION 1: NAV
+       ==================================================================== -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50 py-3" id="main-nav">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-2 group">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+          <rect width="36" height="36" rx="10" fill="url(#logoGrad)"/>
+          <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+          <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+        </svg>
+        <span class="font-heading font-bold text-lg hidden sm:block" style="color:var(--text-primary)">
+          Metodolog<span class="gold-text">IA</span>
+        </span>
+      </a>
+
+      <!-- Nav links (desktop) -->
+      <div class="hidden lg:flex items-center gap-6 text-sm font-medium" style="color:var(--text-secondary)">
+        <a href="#journey" class="hover:text-yellow-400 transition" data-i18n="nav.journey">Journey</a>
+        <a href="#programa" class="hover:text-yellow-400 transition" data-i18n="nav.programa">Programa</a>
+        <a href="#roi" class="hover:text-yellow-400 transition" data-i18n="nav.roi">ROI</a>
+        <a href="#configurador" class="hover:text-yellow-400 transition" data-i18n="nav.invertir">Invertir</a>
+      </div>
+
+      <!-- Toggles + CTA -->
+      <div class="flex items-center gap-3">
+        <!-- Language -->
+        <div class="toggle-pill" id="lang-toggle" onclick="toggleLang()">
+          <span id="lang-es" class="active">ES</span>
+          <span id="lang-en">EN</span>
+        </div>
+        <!-- Theme -->
+        <div class="toggle-pill" id="theme-toggle" onclick="toggleTheme()">
+          <span id="theme-dark" class="active"><i data-lucide="moon" class="w-3 h-3 inline"></i></span>
+          <span id="theme-light"><i data-lucide="sun" class="w-3 h-3 inline"></i></span>
+        </div>
+        <!-- 4-View Toggle -->
+        <div class="toggle-pill hidden sm:inline-flex" id="view-toggle">
+          <span id="view-resumen" class="toggle-pill-btn active" onclick="setView('resumen')" data-i18n="view.summary">Resumen</span>
+          <span id="view-detallado" class="toggle-pill-btn" onclick="setView('detallado')" data-i18n="view.detail">Detallado</span>
+          <span id="view-inmersivo" class="toggle-pill-btn" onclick="setView('inmersivo')" data-i18n="view.immersive">Inmersivo</span>
+          <span id="view-datos" class="toggle-pill-btn" onclick="setView('datos')" data-i18n="view.data">Datos</span>
+        </div>
+        <!-- CTA -->
+        <button onclick="openModal('reserve')" class="btn-gold hidden sm:inline-flex py-2 px-5 text-sm">
+          <i data-lucide="calendar-check" class="w-4 h-4"></i>
+          <span data-i18n="nav.cta">Reservar</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====================================================================
+       SECTION 2: HERO
+       ==================================================================== -->
+  <section id="hero" class="min-h-screen flex items-center section-pad pt-32 relative overflow-hidden">
+    <div class="ambient-circle" style="width:600px;height:600px;background:var(--gold);top:-200px;right:-200px;"></div>
+    <div class="ambient-circle" style="width:400px;height:400px;background:#163A6A;bottom:-100px;left:-100px;"></div>
+
+    <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+      <div class="grid lg:grid-cols-5 gap-12 items-center">
+        <!-- Left (3 cols) -->
+        <div class="lg:col-span-3 reveal">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold mb-6"
+            style="background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.2);color:var(--gold);">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+            <span data-i18n="hero.badge">Edicion Creyentes &middot; Solo 5 Plazas &middot; Quito</span>
+          </div>
+          <p class="text-sm font-semibold uppercase tracking-widest mb-3" style="color:var(--gold);" data-i18n="hero.pre">Bootcamp Ejecutivo Modular</p>
+          <h1 class="font-heading font-black text-5xl md:text-7xl leading-tight mb-2">
+            <span style="color:var(--text-primary)">C</span><span class="gold-text">A</span><span style="color:var(--text-primary)">O </span><span class="gold-text">Bootcamp</span>
+          </h1>
+          <p class="font-heading text-xl md:text-2xl font-medium mb-6" style="color:var(--text-secondary);" data-i18n="hero.sub">Chief Agentic Officer</p>
+          <div class="gold-divider" style="margin:0 0 1.5rem 0;"></div>
+          <p class="text-base md:text-lg leading-relaxed mb-8 max-w-xl" style="color:var(--text-secondary);" data-i18n="hero.body">
+            Su semana esta llena de reuniones, reportes, seguimiento y correos. La IA puede ejecutar el 60% de eso por usted. Este bootcamp no le ensena IA — le instala un sistema operativo agentico personal, disenado a su medida, que trabaja mientras usted decide, negocia y lidera.
+          </p>
+          <!-- KPI Cards -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div class="kpi-card glass"><div class="kpi-value gold-text" data-count="20">20h</div><div class="kpi-label" data-i18n="hero.kpi1">Contenido intensivo</div></div>
+            <div class="kpi-card glass"><div class="kpi-value gold-text" data-count="13">13</div><div class="kpi-label" data-i18n="hero.kpi2">Asistentes IA</div></div>
+            <div class="kpi-card glass"><div class="kpi-value gold-text" data-count="1">1</div><div class="kpi-label" data-i18n="hero.kpi3">Agente Propio</div></div>
+            <div class="kpi-card glass"><div class="kpi-value gold-text">3-6</div><div class="kpi-label" data-i18n="hero.kpi4">Semanas</div></div>
+          </div>
+          <!-- CTAs -->
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openModal('reserve')" class="btn-gold"><i data-lucide="rocket" class="w-4 h-4"></i><span data-i18n="hero.cta1">Reservar Plaza</span></button>
+            <button onclick="openModal('workshop')" class="btn-ghost"><i data-lucide="play-circle" class="w-4 h-4"></i><span data-i18n="hero.cta2">Asistir al Taller</span></button>
+          </div>
+        </div>
+        <!-- Right Investment Card (2 cols) -->
+        <div class="lg:col-span-2 reveal">
+          <div class="glass glow-border pulse-glow p-8 rounded-2xl">
+            <div class="flex items-center justify-between mb-4">
+              <p class="text-xs uppercase tracking-widest font-semibold" style="color:var(--gold);" data-i18n="hero.card.label">Su sistema agentico a medida</p>
+              <button onclick="event.stopPropagation();openInfo('investment')" class="w-6 h-6 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition flex-shrink-0" title="Mas informacion"><i data-lucide="info" class="w-3.5 h-3.5" style="color:var(--gold);"></i></button>
+            </div>
+            <div class="flex items-baseline gap-3 mb-1"><span class="font-heading text-2xl font-bold price-strike" style="color:var(--text-muted);">$1,990 USD</span></div>
+            <div class="flex items-baseline gap-2 mb-2"><span class="font-heading text-5xl font-black gold-text">$1,490</span><span class="text-sm font-semibold" style="color:var(--gold);">USD</span></div>
+            <p class="text-xs mb-6" style="color:var(--text-muted);" data-i18n="hero.card.rate">Edicion Creyentes</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="hero.card.c1">9 sesiones x 2h (20h de contenido)</span></li>
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="hero.card.c2">13 asistentes IA personalizados</span></li>
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="hero.card.c3">1 agente Pristino propio</span></li>
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="hero.card.c4">Networking Q3 ejecutivos Quito</span></li>
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="hero.card.c5">Valor separado: $4,511+ USD</span></li>
+            </ul>
+            <button onclick="openModal('reserve')" class="btn-gold w-full justify-center"><span data-i18n="hero.card.cta">Reservar Ahora</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="punchline reveal mt-16"><a href="#hook" data-i18n="hero.punchline">Descubra como funciona</a><div class="mt-3 bounce-slow inline-block"><i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i></div></div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 3: HOOK (view-detail)
+       ==================================================================== -->
+  <section id="hook" class="section-pad view-detail" style="background:var(--bg-secondary);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+          <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="hook.hook">El Desafio</p>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold mb-8" style="color:var(--text-primary);" data-i18n="hook.title">Le suena familiar?</h2>
+          <div class="space-y-6">
+            <div class="glass p-6 rounded-xl flex items-start gap-4">
+              <i data-lucide="clock" class="w-8 h-8 flex-shrink-0" style="color:var(--gold);"></i>
+              <div><h4 class="font-heading font-semibold mb-1" style="color:var(--text-primary);">12+ horas semanales en tareas operativas</h4><p class="text-sm" style="color:var(--text-secondary);">Correos, seguimiento, reportes, agendamiento. Actividades que no mueven la aguja pero consumen su dia.</p></div>
+            </div>
+            <div class="glass p-6 rounded-xl flex items-start gap-4">
+              <i data-lucide="brain" class="w-8 h-8 flex-shrink-0" style="color:var(--gold);"></i>
+              <div><h4 class="font-heading font-semibold mb-1" style="color:var(--text-primary);">Conocimiento disperso, decisiones lentas</h4><p class="text-sm" style="color:var(--text-secondary);">Informacion en 15 herramientas distintas. Cada decision requiere buscar, compilar, analizar manualmente.</p></div>
+            </div>
+            <div class="glass p-6 rounded-xl flex items-start gap-4">
+              <i data-lucide="trending-down" class="w-8 h-8 flex-shrink-0" style="color:var(--gold);"></i>
+              <div><h4 class="font-heading font-semibold mb-1" style="color:var(--text-primary);">La IA avanza; su operacion, no</h4><p class="text-sm" style="color:var(--text-secondary);">Cada semana hay una herramienta nueva. Pero sin sistema, es ruido. Con sistema, es ventaja competitiva.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal flex justify-center">
+          <div class="glass w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center relative">
+            <i data-lucide="clock" class="w-24 h-24 md:w-32 md:h-32" style="color:var(--gold);opacity:0.5;"></i>
+            <div class="absolute inset-0 rounded-full" style="border:1px dashed var(--border-color);"></div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-12 reveal">
+        <p class="text-lg font-heading font-semibold" style="color:var(--gold);">Intencion sobre Intensidad</p>
+        <p class="text-sm mt-2 max-w-lg mx-auto" style="color:var(--text-secondary);">La solucion no es trabajar mas horas ni mas rapido. Es aprender a dirigir su energia hacia las decisiones que generan resultados.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 4: VISION (view-detail)
+       ==================================================================== -->
+  <section id="vision" class="section-pad view-detail">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal flex justify-center order-2 lg:order-1">
+          <div class="glass w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center relative">
+            <i data-lucide="cpu" class="w-24 h-24 md:w-32 md:h-32" style="color:var(--gold);opacity:0.5;"></i>
+            <div class="absolute inset-0 rounded-full" style="border:1px dashed var(--border-color);"></div>
+          </div>
+        </div>
+        <div class="reveal order-1 lg:order-2">
+          <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">La (R)Evolucion</p>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold mb-8" style="color:var(--text-primary);">Al dia 30</h2>
+          <div class="space-y-6">
+            <div class="glass p-6 rounded-xl flex items-start gap-4">
+              <i data-lucide="bot" class="w-8 h-8 flex-shrink-0" style="color:var(--gold);"></i>
+              <div><h4 class="font-heading font-semibold mb-1" style="color:var(--text-primary);">Su agente gestiona lo operativo</h4><p class="text-sm" style="color:var(--text-secondary);">Correos clasificados, borradores listos, follow-ups automaticos. Usted revisa y aprueba en minutos.</p></div>
+            </div>
+            <div class="glass p-6 rounded-xl flex items-start gap-4">
+              <i data-lucide="users" class="w-8 h-8 flex-shrink-0" style="color:var(--gold);"></i>
+              <div><h4 class="font-heading font-semibold mb-1" style="color:var(--text-primary);">13 asistentes trabajan con su contexto</h4><p class="text-sm" style="color:var(--text-secondary);">Cada asistente conoce su negocio, su tono, sus reglas. Desde finanzas hasta networking.</p></div>
+            </div>
+            <div class="glass p-6 rounded-xl flex items-start gap-4">
+              <i data-lucide="database" class="w-8 h-8 flex-shrink-0" style="color:var(--gold);"></i>
+              <div><h4 class="font-heading font-semibold mb-1" style="color:var(--text-primary);">Segundo cerebro digital consolidado</h4><p class="text-sm" style="color:var(--text-secondary);">Todo su conocimiento, decisiones y documentos organizados. Busca y la IA encuentra en segundos.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote divider -->
+  <div class="text-center py-16 reveal" style="max-width:48rem;margin:0 auto;padding-left:2rem;padding-right:2rem;">
+    <p class="text-xl md:text-2xl font-heading font-light italic leading-relaxed" style="color:var(--text-secondary);">"No es hacer mas cosas. Es hacer que las cosas que haces, importen."</p>
+    <p class="text-xs mt-4 uppercase tracking-widest font-bold" style="color:var(--gold);">-- Intencion sobre Intensidad -- MetodologIA</p>
+  </div>
+
+  <!-- ====================================================================
+       SECTION 5: JOURNEY — 3 Components
+       ==================================================================== -->
+  <section id="journey" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);" data-i18n="journey.hook">Su Camino</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);" data-i18n="journey.title">3 Componentes. 1 Sistema.</h2>
+        <p class="text-sm mt-3 max-w-xl mx-auto" style="color:var(--text-secondary);">Tres componentes independientes en grupos cerrados de hasta 13 personas. Cada uno cierra una brecha distinta. Juntos, potencian su operacion.</p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <!-- Workshop -->
+        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col cursor-pointer transition-all hover:scale-[1.02]" onclick="openModal('workshop')">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">0</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Taller - 3 horas</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);">De Ocupado a Productivo</h3>
+          <p class="text-[11px] font-semibold uppercase tracking-wide mb-2" style="color:var(--gold);opacity:0.7;">Con metodo e IA - Zero Risk</p>
+          <p class="text-xs mb-3" style="color:var(--text-muted);">Sin inversion economica - 3 horas - Domingo de Pascua - 13 plazas</p>
+          <p class="text-sm mb-4 flex-1" style="color:var(--text-secondary);">Aprenda a pasar de ejecutar tareas operativas a delegarlas a un agente de IA. En 3 horas construye su primer sistema con su contexto laboral real.</p>
+          <button onclick="event.stopPropagation();openModal('workshop')" class="btn-ghost mt-auto w-full justify-center py-2.5 text-sm"><span>Inscribirse</span></button>
+        </div>
+
+        <!-- CAO Bootcamp -->
+        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col cursor-pointer transition-all hover:scale-[1.02]" onclick="openModal('reserve')">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">1</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--gold);">Bootcamp - 20h en 4-10 sem</span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ml-auto" style="background:rgba(255,215,0,0.15);color:var(--gold);">Recomendado</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);">CAO Bootcamp</h3>
+          <p class="text-[11px] font-semibold uppercase tracking-wide mb-2" style="color:var(--gold);opacity:0.7;">Su sistema operativo agentico personal</p>
+          <div class="flex items-baseline gap-2 mb-1">
+            <span class="text-lg font-heading font-bold price-strike" style="color:var(--text-muted);">$1,990</span>
+            <span class="text-3xl font-heading font-black gold-text">$1,490</span>
+            <span class="text-sm" style="color:var(--text-muted);">USD</span>
+          </div>
+          <p class="text-xs mb-4" style="color:var(--text-muted);">Edicion Creyentes</p>
+          <p class="text-sm mb-2 flex-1" style="color:var(--text-secondary);">Solo (1:1), Dupla o Terna. 9 sesiones x 2h. Incluye 13 asistentes IA, agente Pristino, segundo cerebro digital, networking Q3. Valor por separado: $4,511+ USD.</p>
+          <p class="text-xs mb-4" style="color:var(--gold);opacity:0.85;font-weight:600;">Unica edicion a puerta cerrada del ano. Desde julio: calendario academico abierto ($1,990).</p>
+          <button onclick="event.stopPropagation();openModal('reserve')" class="btn-gold mt-auto w-full justify-center py-2.5 text-sm"><span>Reservar Plaza</span></button>
+        </div>
+
+        <!-- Empoderamiento -->
+        <div class="glass p-7 rounded-2xl reveal level-card flex flex-col cursor-pointer transition-all hover:scale-[1.02]" style="border-color:rgba(255,215,0,0.08);" onclick="scrollToEl('configurador')">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);"><i data-lucide="users" class="w-4 h-4"></i></span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);">Programa - 16 semanas</span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ml-auto" style="background:rgba(255,215,0,0.15);color:var(--gold);">Ed. Creyentes</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);">Empoderamiento</h3>
+          <p class="text-[11px] font-semibold uppercase tracking-wide mb-2" style="color:var(--gold);opacity:0.7;">Adopcion IA para su equipo tactico</p>
+          <div class="flex items-baseline gap-2 mb-1">
+            <span class="text-lg font-heading font-bold price-strike" style="color:var(--text-muted);">$1,990</span>
+            <span class="text-2xl font-heading font-black gold-text">$1,490</span>
+            <span class="text-sm" style="color:var(--text-muted);">USD</span>
+          </div>
+          <p class="text-xs mb-4" style="color:var(--text-muted);">Precio Creyentes</p>
+          <p class="text-sm mb-4 flex-1" style="color:var(--text-secondary);">Para sus gerentes y mandos medios (7+ anos de experiencia). Puerta cerrada in-company o programa abierto. 16 semanas. Marca personal + liderazgo con IA.</p>
+          <button onclick="event.stopPropagation();scrollToEl('configurador')" class="btn-ghost mt-auto w-full justify-center py-2.5 text-sm"><span>Configurar</span></button>
+        </div>
+      </div>
+
+      <!-- Horizontal Timeline -->
+      <div class="max-w-3xl mx-auto mt-16 reveal">
+        <div class="flex items-center justify-between relative">
+          <div class="absolute top-1/2 left-0 right-0 h-0.5" style="background:var(--border-color);transform:translateY(-50%);z-index:0;"></div>
+          <div class="relative z-10 text-center flex-1">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2" style="background:linear-gradient(135deg,#FFD700,#FFA000);"><i data-lucide="zap" class="w-5 h-5" style="color:#0B2545;"></i></div>
+            <p class="text-xs font-bold" style="color:var(--gold);">ABR</p>
+            <p class="text-[10px]" style="color:var(--text-muted);">Workshop + Creyentes</p>
+          </div>
+          <div class="relative z-10 text-center flex-1">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2" style="background:rgba(255,215,0,0.15);border:2px solid var(--gold);"><i data-lucide="users" class="w-5 h-5" style="color:var(--gold);"></i></div>
+            <p class="text-xs font-bold" style="color:var(--gold);">MAY</p>
+            <p class="text-[10px]" style="color:var(--text-muted);">Open + Empowerment</p>
+          </div>
+          <div class="relative z-10 text-center flex-1">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2" style="background:rgba(255,215,0,0.15);border:2px solid var(--gold);"><i data-lucide="graduation-cap" class="w-5 h-5" style="color:var(--gold);"></i></div>
+            <p class="text-xs font-bold" style="color:var(--gold);">JUL</p>
+            <p class="text-[10px]" style="color:var(--text-muted);">Academico Abierto</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Asistentes note -->
+      <div class="max-w-3xl mx-auto mt-8 reveal">
+        <div class="glass p-5 rounded-xl flex items-center gap-4" style="border-color:rgba(255,215,0,0.08);">
+          <i data-lucide="puzzle" class="w-5 h-5 flex-shrink-0" style="color:var(--gold);"></i>
+          <div>
+            <p class="text-sm font-semibold" style="color:var(--text-primary);">Asistentes a Medida</p>
+            <p class="text-xs" style="color:var(--text-secondary);">$347 USD c/u -- QBR, Strategic Planning, OKR Tracking y mas. Los 13 base estan incluidos en el bootcamp.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="punchline reveal"><a href="#programa">Vea que se trabaja en cada sesion</a><div class="mt-3 bounce-slow inline-block"><i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i></div></div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 6: PROGRAMA — 9 Casos de Uso Ejecutivos
+       ==================================================================== -->
+  <section id="programa" class="section-pad">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Programa</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">9 Casos de Uso Ejecutivos</h2>
+        <p class="text-sm mt-3 max-w-xl mx-auto" style="color:var(--text-secondary);">Tres fases. Cada fase cierra una brecha. Cada sesion produce un entregable funcional.</p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <!-- Phase 1: Foundations -->
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="phase-tag" style="background:rgba(255,215,0,0.1);color:var(--gold);">Fase 1</span>
+          <span class="text-sm font-semibold" style="color:var(--text-primary);">Foundations -- Sesiones 01-03</span>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4" id="phase1-grid">
+          <div class="glass p-6 rounded-2xl reveal">
+            <div class="flex items-center gap-3 mb-4"><span class="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">01</span><i data-lucide="compass" class="w-5 h-5" style="color:var(--gold);"></i></div>
+            <h4 class="font-heading font-semibold mb-2 text-sm" style="color:var(--text-primary);">Golden Circle + Pristino</h4>
+            <p class="text-xs" style="color:var(--text-muted);">Asistente: Meta-Estratega</p><p class="text-xs mt-2" style="color:var(--text-secondary);">Definir proposito del sistema agentico. Instalar Pristino base.</p>
+          </div>
+          <div class="glass p-6 rounded-2xl reveal">
+            <div class="flex items-center gap-3 mb-4"><span class="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">02</span><i data-lucide="mail" class="w-5 h-5" style="color:var(--gold);"></i></div>
+            <h4 class="font-heading font-semibold mb-2 text-sm" style="color:var(--text-primary);">Email Triage + Drafts</h4>
+            <p class="text-xs" style="color:var(--text-muted);">Asistente: Gestor de Correo</p><p class="text-xs mt-2" style="color:var(--text-secondary);">Automatizar clasificacion y borradores con su tono profesional.</p>
+          </div>
+          <div class="glass p-6 rounded-2xl reveal">
+            <div class="flex items-center gap-3 mb-4"><span class="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">03</span><i data-lucide="calendar" class="w-5 h-5" style="color:var(--gold);"></i></div>
+            <h4 class="font-heading font-semibold mb-2 text-sm" style="color:var(--text-primary);">Agenda + GTD</h4>
+            <p class="text-xs" style="color:var(--text-muted);">Asistente: Productividad</p><p class="text-xs mt-2" style="color:var(--text-secondary);">Sistema GTD digital. Segundo cerebro con Google Tasks + Notes + Calendar.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 2: Integration -->
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="phase-tag" style="background:rgba(255,215,0,0.1);color:var(--gold);">Fase 2</span>
+          <span class="text-sm font-semibold" style="color:var(--text-primary);">Integration -- Sesiones 04-06</span>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="glass p-6 rounded-2xl reveal">
+            <div class="flex items-center gap-3 mb-4"><span class="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">04</span><i data-lucide="file-text" class="w-5 h-5" style="color:var(--gold);"></i></div>
+            <h4 class="font-heading font-semibold mb-2 text-sm" style="color:var(--text-primary);">Reportes + Analisis</h4>
+            <p class="text-xs" style="color:var(--text-muted);">Asistente: Analista Financiero</p><p class="text-xs mt-2" style="color:var(--text-secondary);">Generar reportes ejecutivos desde datos crudos. NotebookLM como base.</p>
+          </div>
+          <div class="glass p-6 rounded-2xl reveal">
+            <div class="flex items-center gap-3 mb-4"><span class="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">05</span><i data-lucide="message-square" class="w-5 h-5" style="color:var(--gold);"></i></div>
+            <h4 class="font-heading font-semibold mb-2 text-sm" style="color:var(--text-primary);">Comunicacion + Reuniones</h4>
+            <p class="text-xs" style="color:var(--text-muted);">Asistente: Comunicador</p><p class="text-xs mt-2" style="color:var(--text-secondary);">Pre-lecturas, agendas, actas y follow-ups automaticos por reunion.</p>
+          </div>
+          <div class="glass p-6 rounded-2xl reveal">
+            <div class="flex items-center gap-3 mb-4"><span class="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">06</span><i data-lucide="users" class="w-5 h-5" style="color:var(--gold);"></i></div>
+            <h4 class="font-heading font-semibold mb-2 text-sm" style="color:var(--text-primary);">Networking + CRM</h4>
+            <p class="text-xs" style="color:var(--text-muted);">Asistente: Networker</p><p class="text-xs mt-2" style="color:var(--text-secondary);">Pipeline de contactos con follow-up inteligente. Nurturing automatizado.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase 3: Mastery -->
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6 reveal">
+          <span class="phase-tag" style="background:rgba(255,215,0,0.1);color:var(--gold);">Fase 3</span>
+          <span class="text-sm font-semibold" style="color:var(--text-primary);">Mastery -- Sesiones 07-09</span>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="glass p-6 rounded-2xl reveal">
+            <div class="flex items-center gap-3 mb-4"><span class="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">07</span><i data-lucide="bar-chart-3" class="w-5 h-5" style="color:var(--gold);"></i></div>
+            <h4 class="font-heading font-semibold mb-2 text-sm" style="color:var(--text-primary);">Dashboard Ejecutivo</h4>
+            <p class="text-xs" style="color:var(--text-muted);">Asistente: Data Viz</p><p class="text-xs mt-2" style="color:var(--text-secondary);">KPIs en tiempo real. Dashboards vivos alimentados por sus datos reales.</p>
+          </div>
+          <div class="glass p-6 rounded-2xl reveal">
+            <div class="flex items-center gap-3 mb-4"><span class="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">08</span><i data-lucide="target" class="w-5 h-5" style="color:var(--gold);"></i></div>
+            <h4 class="font-heading font-semibold mb-2 text-sm" style="color:var(--text-primary);">OKRs + Estrategia</h4>
+            <p class="text-xs" style="color:var(--text-muted);">Asistente: Estratega OKR</p><p class="text-xs mt-2" style="color:var(--text-secondary);">Alinear agente con OKRs trimestrales. Cascadear de estrategia a operacion.</p>
+          </div>
+          <div class="glass p-6 rounded-2xl reveal">
+            <div class="flex items-center gap-3 mb-4"><span class="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">09</span><i data-lucide="rocket" class="w-5 h-5" style="color:var(--gold);"></i></div>
+            <h4 class="font-heading font-semibold mb-2 text-sm" style="color:var(--text-primary);">Integracion + Lanzamiento</h4>
+            <p class="text-xs" style="color:var(--text-muted);">Asistente: Integrador</p><p class="text-xs mt-2" style="color:var(--text-secondary);">Calibrar los 13 asistentes, conectar con Pristino, lanzar sistema completo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="punchline reveal"><a href="#modalidades">Elija su formato</a><div class="mt-3 bounce-slow inline-block"><i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i></div></div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 7: MODALIDADES
+       ==================================================================== -->
+  <section id="modalidades" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Modalidades</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Su Ritmo, Su Equipo</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass p-7 rounded-2xl reveal text-center">
+          <i data-lucide="user" class="w-10 h-10 mx-auto mb-4" style="color:var(--gold);"></i>
+          <h3 class="font-heading font-bold text-lg mb-2" style="color:var(--text-primary);">Solo (1:1)</h3>
+          <p class="text-sm mb-3" style="color:var(--text-secondary);">Atencion 100% personalizada. 1 ejecutivo + 1 facilitador. Ritmo flexible.</p>
+          <p class="text-xs" style="color:var(--text-muted);">Ideal para CEOs y directores generales</p>
+        </div>
+        <div class="glass p-7 rounded-2xl reveal text-center glow-border">
+          <i data-lucide="users" class="w-10 h-10 mx-auto mb-4" style="color:var(--gold);"></i>
+          <h3 class="font-heading font-bold text-lg mb-2" style="color:var(--text-primary);">Dupla</h3>
+          <p class="text-sm mb-3" style="color:var(--text-secondary);">2 ejecutivos de la misma organizacion. Co-creacion con pares. Misma inversion.</p>
+          <p class="text-xs" style="color:var(--text-muted);">Adopcion mas rapida, habitos compartidos</p>
+        </div>
+        <div class="glass p-7 rounded-2xl reveal text-center">
+          <i data-lucide="users-round" class="w-10 h-10 mx-auto mb-4" style="color:var(--gold);"></i>
+          <h3 class="font-heading font-bold text-lg mb-2" style="color:var(--text-primary);">Terna</h3>
+          <p class="text-sm mb-3" style="color:var(--text-secondary);">3 ejecutivos. Dinamica colaborativa. Perspectivas multiples. Misma inversion.</p>
+          <p class="text-xs" style="color:var(--text-muted);">Ideal para equipos directivos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 8: OBJECTIONS (Accordion)
+       ==================================================================== -->
+  <section id="objections" class="section-pad">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Preguntas Frecuentes</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">FAQ</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="space-y-3 max-w-3xl mx-auto">
+        <div class="glass rounded-xl overflow-hidden reveal"><button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-5 text-left cursor-pointer transition-all hover:bg-yellow-400/5"><span class="font-heading font-semibold text-sm" style="color:var(--text-primary);">Necesito saber programar?</span><i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300" style="color:var(--gold);"></i></button><div class="accordion-content" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;"><div class="px-5 pb-5 text-sm" style="color:var(--text-secondary);">No. El programa esta disenado para directivos, no para ingenieros. Si sabe usar correo electronico y participar en una videollamada, tiene las habilidades tecnicas suficientes.</div></div></div>
+        <div class="glass rounded-xl overflow-hidden reveal"><button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-5 text-left cursor-pointer transition-all hover:bg-yellow-400/5"><span class="font-heading font-semibold text-sm" style="color:var(--text-primary);">Que pasa si no puedo asistir a una sesion?</span><i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300" style="color:var(--gold);"></i></button><div class="accordion-content" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;"><div class="px-5 pb-5 text-sm" style="color:var(--text-secondary);">La primera ausencia justificada no tiene costo. Cada semana sin actividad genera una penalidad de $100 USD, redimible como descuento en futuras facturas. El proceso requiere continuidad para generar resultados.</div></div></div>
+        <div class="glass rounded-xl overflow-hidden reveal"><button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-5 text-left cursor-pointer transition-all hover:bg-yellow-400/5"><span class="font-heading font-semibold text-sm" style="color:var(--text-primary);">Cuando se paga?</span><i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300" style="color:var(--gold);"></i></button><div class="accordion-content" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;"><div class="px-5 pb-5 text-sm" style="color:var(--text-secondary);">50% despues de las primeras 4 horas (si confirma estar a gusto). 50% al cierre. 10% de descuento si paga todo anticipado. Garantia de devolucion 100% antes de las 4 horas.</div></div></div>
+        <div class="glass rounded-xl overflow-hidden reveal"><button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-5 text-left cursor-pointer transition-all hover:bg-yellow-400/5"><span class="font-heading font-semibold text-sm" style="color:var(--text-primary);">Que necesito tener instalado?</span><i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300" style="color:var(--gold);"></i></button><div class="accordion-content" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;"><div class="px-5 pb-5 text-sm" style="color:var(--text-secondary);">Google One AI Premium (~$19.99/mes) para Gemini y NotebookLM. Recomendado: ChatGPT Plus (~$20/mes). IDE (VS Code, Antigravity o Codex) es sin costo. Cuenta personal de Gmail, no corporativa.</div></div></div>
+        <div class="glass rounded-xl overflow-hidden reveal"><button onclick="toggleAccordion(this)" class="w-full flex items-center justify-between p-5 text-left cursor-pointer transition-all hover:bg-yellow-400/5"><span class="font-heading font-semibold text-sm" style="color:var(--text-primary);">Que diferencia hay entre Creyentes y el ciclo de julio?</span><i data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-300" style="color:var(--gold);"></i></button><div class="accordion-content" style="max-height:0;overflow:hidden;transition:max-height 0.4s ease;"><div class="px-5 pb-5 text-sm" style="color:var(--text-secondary);">Creyentes: $1,490 (vs $1,990), atencion directa de Javier, acceso vitalicio al campus, 5 plazas exclusivas. Julio: precio regular, facilitacion en colaboracion con Embajadores certificados, campus por suscripcion ($10/mes).</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 9: CREDENCIALES
+       ==================================================================== -->
+  <section id="credenciales" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Credenciales</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Fundamentacion</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-3 reveal">
+        <span class="method-chip">OKR (Doerr)</span><span class="method-chip">Lean Startup</span><span class="method-chip">GTD (Allen)</span>
+        <span class="method-chip">Golden Circle (Sinek)</span><span class="method-chip">Design Thinking</span><span class="method-chip">RAG Architecture</span>
+        <span class="method-chip">Agent Orchestration</span><span class="method-chip">Second Brain (Forte)</span><span class="method-chip">Kaizen</span>
+        <span class="method-chip">Multi-Agent Systems</span><span class="method-chip">Prompt Engineering</span><span class="method-chip">Personal Knowledge Management</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 10: PRISTINO (view-detail)
+       ==================================================================== -->
+  <section id="pristino" class="section-pad view-detail">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">El Agente</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Pristino</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="glass p-10 rounded-2xl reveal flex flex-col md:flex-row items-center gap-8">
+        <div class="w-32 h-32 rounded-full flex-shrink-0 flex items-center justify-center" style="background:linear-gradient(135deg,rgba(255,215,0,0.15),rgba(255,215,0,0.05));border:2px solid var(--gold);">
+          <i data-lucide="bot" class="w-16 h-16" style="color:var(--gold);"></i>
+        </div>
+        <div>
+          <h3 class="font-heading text-xl font-bold mb-3" style="color:var(--text-primary);">Agente Open Source de MetodologIA</h3>
+          <p class="text-sm mb-3" style="color:var(--text-secondary);">Se instala en local, se personaliza durante el bootcamp, y el ejecutivo se lo lleva al cerrar. Corre en Claude Code / VS Code / Codex / Antigravity. Ejecuta tareas autonomamente, toma decisiones dentro de reglas definidas y reporta resultados.</p>
+          <p class="text-xs" style="color:var(--text-muted);">MetodologIA no almacena, accede ni retiene sus datos. El agente Pristino corre en local -- usted controla todo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 11: EQUIPO (view-detail)
+       ==================================================================== -->
+  <section id="equipo" class="section-pad view-detail" style="background:var(--bg-secondary);">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Equipo</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Los Facilitadores</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="glass p-8 rounded-2xl reveal text-center">
+          <div class="w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center" style="background:linear-gradient(135deg,rgba(255,215,0,0.15),rgba(255,215,0,0.05));border:2px solid var(--gold);"><i data-lucide="user" class="w-10 h-10" style="color:var(--gold);"></i></div>
+          <h3 class="font-heading font-bold text-lg" style="color:var(--text-primary);">Javier Montano</h3>
+          <p class="text-xs font-semibold mb-3" style="color:var(--gold);">Fundador MetodologIA - 19% equity</p>
+          <p class="text-sm" style="color:var(--text-secondary);">PreSales Architect @ Sofka Technologies. Creador del framework MetodologIA, Pristino Agent, y el ecosistema CAO. Facilita personalmente la Edicion Creyentes.</p>
+        </div>
+        <div class="glass p-8 rounded-2xl reveal text-center">
+          <div class="w-24 h-24 rounded-full mx-auto mb-4 flex items-center justify-center" style="background:linear-gradient(135deg,rgba(255,215,0,0.15),rgba(255,215,0,0.05));border:2px solid var(--gold);"><i data-lucide="user" class="w-10 h-10" style="color:var(--gold);"></i></div>
+          <h3 class="font-heading font-bold text-lg" style="color:var(--text-primary);">Cristian Jarrin</h3>
+          <p class="text-xs font-semibold mb-3" style="color:var(--gold);">Co-fundador - 51% equity</p>
+          <p class="text-sm" style="color:var(--text-secondary);">Lider operativo en Quito. Facilita el programa academico abierto desde julio y coordina la red de Embajadores. Conexion directa con el ecosistema empresarial ecuatoriano.</p>
+        </div>
+      </div>
+      <p class="text-xs text-center mt-4 reveal" style="color:var(--text-muted);">Holding: 30% reservado para operaciones y reinversion.</p>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 12: METODOLOGIAS (view-detail)
+       ==================================================================== -->
+  <section class="section-pad view-detail">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Fundamentos</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Metodologias Referenciadas</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 reveal">
+        <div class="glass p-6 rounded-2xl text-center"><i data-lucide="target" class="w-8 h-8 mx-auto mb-3" style="color:var(--gold);"></i><h4 class="font-heading font-bold mb-2" style="color:var(--text-primary);">OKR</h4><p class="text-xs" style="color:var(--text-secondary);">Objectives & Key Results (Doerr). Alinear agente con objetivos trimestrales medibles.</p></div>
+        <div class="glass p-6 rounded-2xl text-center"><i data-lucide="repeat" class="w-8 h-8 mx-auto mb-3" style="color:var(--gold);"></i><h4 class="font-heading font-bold mb-2" style="color:var(--text-primary);">Lean</h4><p class="text-xs" style="color:var(--text-secondary);">Build-Measure-Learn. Cada sesion produce un MVP funcional que se itera.</p></div>
+        <div class="glass p-6 rounded-2xl text-center"><i data-lucide="check-square" class="w-8 h-8 mx-auto mb-3" style="color:var(--gold);"></i><h4 class="font-heading font-bold mb-2" style="color:var(--text-primary);">GTD</h4><p class="text-xs" style="color:var(--text-secondary);">Getting Things Done (Allen). Capturar, procesar, organizar. El segundo cerebro lo implementa.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 13: ROI CALCULATOR
+       ==================================================================== -->
+  <section id="roi" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Retorno</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Calcule su ROI</h2>
+        <p class="text-sm mt-3 max-w-lg mx-auto" style="color:var(--text-secondary);">Ajuste los parametros a su realidad. Los resultados son estimaciones indicativas basadas en 50% de automatizacion.</p>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <!-- Sliders -->
+        <div class="reveal space-y-8">
+          <div>
+            <div class="flex justify-between mb-3"><span class="text-sm font-semibold" style="color:var(--text-primary);">Horas operativas / semana</span><span class="text-sm font-bold gold-text" id="roi-hours-val">18</span></div>
+            <input type="range" min="5" max="30" value="18" id="roi-hours" oninput="calcROI()" aria-label="Horas operativas por semana">
+            <div class="flex justify-between text-xs mt-1" style="color:var(--text-muted);"><span>5h</span><span>30h</span></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-3"><span class="text-sm font-semibold" style="color:var(--text-primary);">Valor / hora (USD)</span><span class="text-sm font-bold gold-text" id="roi-rate-val">$60</span></div>
+            <input type="range" min="20" max="200" step="5" value="60" id="roi-rate" oninput="calcROI()" aria-label="Valor por hora USD">
+            <div class="flex justify-between text-xs mt-1" style="color:var(--text-muted);"><span>$20</span><span>$200</span></div>
+          </div>
+        </div>
+        <!-- Results -->
+        <div class="reveal">
+          <div class="glass p-8 rounded-2xl glow-border">
+            <div class="grid grid-cols-2 gap-6 mb-6">
+              <div class="text-center"><p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">Horas/mes recuperadas</p><p class="font-heading text-3xl font-black" style="color:var(--text-primary);" id="roi-hours-month">36</p></div>
+              <div class="text-center"><p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">Valor/mes</p><p class="font-heading text-3xl font-black gold-text" id="roi-value-month">$2,160</p></div>
+              <div class="text-center"><p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">Payback (semanas)</p><p class="font-heading text-3xl font-black" style="color:var(--text-primary);" id="roi-payback">2.8</p></div>
+              <div class="text-center"><p class="text-xs uppercase tracking-wider font-bold mb-1" style="color:var(--gold);">ROI anual</p><p class="font-heading text-3xl font-black gold-text" id="roi-annual">$25,920</p></div>
+            </div>
+            <!-- Bar chart -->
+            <div class="space-y-2 mt-6">
+              <p class="text-xs font-bold uppercase tracking-wider mb-3" style="color:var(--gold);">Proyeccion 12 meses</p>
+              <div class="flex items-center gap-3"><span class="text-xs w-20 text-right" style="color:var(--text-muted);">Inversion</span><div class="bar-chart-bar h-6 flex items-center px-2" style="width:10%;background:rgba(255,215,0,0.3);"><span class="text-[10px] font-bold" style="color:var(--gold);">$1,490</span></div></div>
+              <div class="flex items-center gap-3"><span class="text-xs w-20 text-right" style="color:var(--text-muted);">Valor Q1</span><div class="bar-chart-bar h-6 flex items-center px-2" style="width:40%;background:linear-gradient(90deg,rgba(255,215,0,0.3),rgba(255,215,0,0.5));"><span class="text-[10px] font-bold" style="color:var(--gold);" id="roi-q1">$6,480</span></div></div>
+              <div class="flex items-center gap-3"><span class="text-xs w-20 text-right" style="color:var(--text-muted);">Valor Y1</span><div class="bar-chart-bar h-6 flex items-center px-2" style="width:100%;background:linear-gradient(90deg,rgba(255,215,0,0.4),rgba(255,215,0,0.7));"><span class="text-[10px] font-bold" style="color:#0B2545;" id="roi-y1">$25,920</span></div></div>
+            </div>
+            <p class="text-xs mt-4" style="color:var(--text-muted);">Proyeccion ilustrativa. Resultados varian segun perfil y adopcion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 14: CONFIGURADOR
+       ==================================================================== -->
+  <section id="configurador" class="section-pad">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Configurador</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Configure<br>su Experiencia</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid lg:grid-cols-5 gap-8">
+        <div class="lg:col-span-3 space-y-6">
+          <!-- Workshop -->
+          <div class="glass p-7 rounded-2xl reveal cursor-pointer transition-all" style="border-color:rgba(16,185,129,0.2);" onclick="openModal('workshop')">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-heading font-bold mb-1" style="color:var(--text-primary);">Workshop Zero Risk: De Ocupado a Productivo</h4>
+                <p class="text-sm font-semibold" style="color:rgb(16,185,129);">Sin inversion economica</p>
+                <p class="text-xs mt-2" style="color:var(--text-secondary);">3 horas. Domingo de Pascua 2026. Horarios: 9-12 o 14-17. Solo 13 plazas.</p>
+              </div>
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(16,185,129,0.1);"><i data-lucide="calendar-plus" class="w-5 h-5" style="color:rgb(16,185,129);"></i></div>
+            </div>
+          </div>
+          <!-- CAO -->
+          <div class="glass p-7 rounded-2xl reveal cursor-pointer transition-all" id="config-cao-card" onclick="toggleCAO()">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-heading font-bold mb-1" style="color:var(--text-primary);">CAO Bootcamp -- Edicion Creyentes</h4>
+                <p class="text-sm" style="color:var(--text-muted);"><span class="price-strike">$1,990</span> <span class="gold-text font-bold">$1,490 USD</span></p>
+                <p class="text-xs mt-2" style="color:var(--text-secondary);">Incluye los 13 asistentes + agente Pristino + segundo cerebro + networking</p>
+              </div>
+              <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" id="cao-check" style="border:2px solid var(--border-color);transition:all 0.3s ease;"></div>
+            </div>
+          </div>
+          <!-- Empowerment -->
+          <div class="glass p-7 rounded-2xl reveal cursor-pointer transition-all" id="config-emp-card" onclick="toggleEmp()">
+            <div class="flex justify-between items-start">
+              <div>
+                <h4 class="font-heading font-bold mb-1" style="color:var(--text-primary);">Programa de Empoderamiento</h4>
+                <p class="text-sm" style="color:var(--text-muted);" id="emp-price-display">$1,990 USD</p>
+                <p class="text-xs mt-2" style="color:var(--text-secondary);">16 semanas. Puerta cerrada (in-company) o publico abierto. Precio Creyentes: $1,490 USD.</p>
+              </div>
+              <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" id="emp-check" style="border:2px solid var(--border-color);transition:all 0.3s ease;"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Summary -->
+        <div class="lg:col-span-2">
+          <div class="lg:sticky lg:top-28">
+            <div class="glass p-8 rounded-2xl glow-border reveal">
+              <h4 class="font-heading font-bold text-lg mb-6" style="color:var(--text-primary);">Resumen de Inversion</h4>
+              <div id="config-summary-items" class="space-y-3 mb-6"></div>
+              <div class="pt-4 mb-2" style="border-top:1px solid var(--border-color);">
+                <div class="flex justify-between items-center mb-1" id="config-savings-row" style="display:none;">
+                  <span class="text-sm" style="color:var(--gold);">Ahorro</span><span class="font-heading font-bold gold-text" id="config-savings">$0</span>
+                </div>
+                <div class="flex justify-between items-center"><span class="font-heading font-bold" style="color:var(--text-primary);">Total</span><span class="font-heading text-3xl font-black gold-text" id="config-total">$0</span></div>
+                <p class="text-xs mt-1" style="color:var(--text-muted);">USD</p>
+              </div>
+              <button onclick="openModal('reserve')" class="btn-gold w-full justify-center mt-4"><span>Reservar Ahora</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 15: COMPETENCIA (NEW — view-detail)
+       ==================================================================== -->
+  <section id="competencia" class="section-pad view-detail" style="background:var(--bg-secondary);">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Contexto Competitivo</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Panorama del Mercado</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="glass p-6 rounded-2xl reveal overflow-x-auto">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Criterio</th><th>MetodologIA</th><th>IDE Business School</th><th>USFQ</th><th>Big 4 / Consulting</th><th>Coursera / Platzi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Precio</td><td style="color:var(--gold);font-weight:700;">$1,490 - $1,990</td><td>$5,000 - $15,000</td><td>$3,000 - $8,000</td><td>$10,000+</td><td>$50 - $500</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Formato</td><td>1:1 / Dupla / Terna</td><td>Cohorte 20-30</td><td>Cohorte 15-25</td><td>Workshop corporativo</td><td>Autoguiado</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Enfoque IA</td><td style="color:var(--gold);">Sistema agentico personal</td><td>Modulos teoricos IA</td><td>Casos de estudio</td><td>Strategy + advisory</td><td>Cursos genericos</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Entregable</td><td style="color:var(--gold);">Agente + 13 asistentes + cerebro</td><td>Certificado</td><td>Certificado</td><td>Informe + roadmap</td><td>Certificado</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Personalizacion</td><td style="color:var(--gold);">100% su contexto</td><td>Baja</td><td>Baja</td><td>Alta (precio alto)</td><td>Ninguna</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Post-programa</td><td style="color:var(--gold);">Campus vitalicio (Creyentes)</td><td>Alumni network</td><td>Red USFQ</td><td>Nada incluido</td><td>Acceso limitado</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 16: AMBASSADOR PROGRAM (NEW — view-detail)
+       ==================================================================== -->
+  <section id="ambassador" class="section-pad view-detail">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Red de Valor</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Embajador MetodologIA</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="reveal">
+          <div class="glass p-8 rounded-2xl" style="border-color:rgba(255,215,0,0.2);">
+            <p class="text-lg font-heading font-bold mb-4" style="color:var(--text-primary);">50% de cada programa es suyo</p>
+            <p class="text-sm mb-4" style="color:var(--text-secondary);">Al graduarse del CAO Bootcamp, tiene la opcion de certificarse como Embajador MetodologIA. Co-cree entornos de abundancia y genere ingresos facilitando programas.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>Certificacion como facilitador autorizado</li>
+              <li class="flex items-start gap-2 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>50% de ingresos por programa facilitado</li>
+              <li class="flex items-start gap-2 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>Acceso a materiales y metodologia actualizados</li>
+              <li class="flex items-start gap-2 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i>Red de Embajadores en expansion</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Flywheel -->
+        <div class="reveal flex justify-center">
+          <div class="relative w-64 h-64">
+            <div class="absolute inset-0 rounded-full" style="border:2px dashed var(--border-color);"></div>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 glass px-3 py-1.5 rounded-full text-xs font-bold" style="color:var(--gold);">Graduado CAO</div>
+            <div class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 glass px-3 py-1.5 rounded-full text-xs font-bold" style="color:var(--gold);">Embajador</div>
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 glass px-3 py-1.5 rounded-full text-xs font-bold" style="color:var(--gold);">Facilita</div>
+            <div class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 glass px-3 py-1.5 rounded-full text-xs font-bold" style="color:var(--gold);">50% Revenue</div>
+            <div class="absolute inset-8 rounded-full flex items-center justify-center" style="background:rgba(255,215,0,0.05);border:1px solid var(--glass-border);"><i data-lucide="refresh-cw" class="w-8 h-8" style="color:var(--gold);opacity:0.5;"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 17: SERVICIOS (view-detail)
+       ==================================================================== -->
+  <section id="servicios" class="section-pad view-detail" style="background:var(--bg-secondary);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Servicios Avanzados</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Mas Alla del Bootcamp</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass p-7 rounded-2xl reveal">
+          <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider" style="background:rgba(255,215,0,0.1);color:var(--gold);border:1px solid rgba(255,215,0,0.2);">Tier 1</span>
+          <h3 class="font-heading text-lg font-bold mt-4 mb-2" style="color:var(--text-primary);">Asistentes Personalizados</h3>
+          <p class="text-sm gold-text font-semibold mb-3">$347 USD c/u</p>
+          <p class="text-sm" style="color:var(--text-secondary);">Construidos desde cero para su operacion especifica. 2h de diseno, configuracion y entrenamiento incluidas.</p>
+        </div>
+        <div class="glass p-7 rounded-2xl reveal">
+          <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider" style="background:rgba(168,85,247,0.1);color:#c084fc;border:1px solid rgba(168,85,247,0.2);">Tier 2</span>
+          <h3 class="font-heading text-lg font-bold mt-4 mb-2" style="color:var(--text-primary);">Agentes Autonomos</h3>
+          <p class="text-sm font-semibold mb-3" style="color:#c084fc;">$1,990 -- $7,497 USD</p>
+          <p class="text-sm" style="color:var(--text-secondary);">Agentes que ejecutan tareas autonomamente. Claude Cowork, n8n, Make, Zapier, Power Automate. Discovery obligatorio.</p>
+        </div>
+        <div class="glass p-7 rounded-2xl reveal">
+          <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider" style="background:rgba(59,130,246,0.1);color:#60a5fa;border:1px solid rgba(59,130,246,0.2);">Tier 3</span>
+          <h3 class="font-heading text-lg font-bold mt-4 mb-2" style="color:var(--text-primary);">Desarrollo a Medida</h3>
+          <p class="text-sm font-semibold mb-3" style="color:#60a5fa;">Cotizacion por proyecto</p>
+          <p class="text-sm" style="color:var(--text-secondary);">Soluciones completas: apps, plataformas, integraciones enterprise. Sofka Technologies como partner tecnologico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 18: CONDICIONES (view-detail)
+       ==================================================================== -->
+  <section class="section-pad view-detail">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Transparencia</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Condiciones</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="glass p-8 rounded-2xl reveal overflow-x-auto">
+        <table class="data-table">
+          <tbody>
+            <tr><td class="font-semibold" style="color:var(--text-primary);width:30%;">Garantia</td><td>Devolucion del 100% si el servicio no cumple expectativas antes de completar las primeras 4 horas. Unica condicion: 1 hora de retroalimentacion estructurada.</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Estructura</td><td><strong style="color:var(--text-primary);">50% al confirmar</strong> (despues de las primeras 4 horas). <strong style="color:var(--text-primary);">50% al cierre</strong> del programa.</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Descuento</td><td><strong style="color:var(--gold);">10% de descuento</strong> en caso de pago completo anticipado.</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Metodos</td><td><strong style="color:var(--text-primary);">PayPal</strong> o <strong style="color:var(--text-primary);">acuerdo puntual</strong> (transferencia u otro metodo convenido).</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">No-show</td><td>Primera ausencia justificada sin costo. Cada semana sin actividad: $100 USD penalidad, redimible en futuras facturas.</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Formato</td><td>Virtual sincrono (video). Sesiones grabadas con consentimiento mutuo.</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Licencias</td><td>Google One AI Premium (~$19.99/mes) obligatorio. ChatGPT Plus recomendado. IDE sin costo. Cuenta personal Gmail.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 19: STACK (view-detail)
+       ==================================================================== -->
+  <section class="section-pad view-detail" style="background:var(--bg-secondary);">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Tecnologia</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Stack Tecnologico</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 reveal">
+        <div class="glass p-6 rounded-2xl"><h4 class="font-heading font-bold mb-3 text-sm" style="color:var(--gold);">Capa Agentes</h4><p class="text-xs" style="color:var(--text-secondary);">Claude Code, VS Code, Codex, Antigravity. Pristino como agente base. Ejecucion local, datos privados.</p></div>
+        <div class="glass p-6 rounded-2xl"><h4 class="font-heading font-bold mb-3 text-sm" style="color:var(--gold);">Capa Asistentes</h4><p class="text-xs" style="color:var(--text-secondary);">Gemini Gems, ChatGPT GPTs, NotebookLM. 13 asistentes calibrados por caso de uso.</p></div>
+        <div class="glass p-6 rounded-2xl"><h4 class="font-heading font-bold mb-3 text-sm" style="color:var(--gold);">Capa Cerebro</h4><p class="text-xs" style="color:var(--text-secondary);">Google Drive + Tasks + Notes + Calendar + Gmail + NotebookLM. GTD implementado con IA.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 20: VALOR AGREGADO
+       ==================================================================== -->
+  <section class="section-pad">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Incluido</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Valor Agregado</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6 reveal">
+        <div class="glass p-6 rounded-2xl flex items-start gap-4"><i data-lucide="message-circle" class="w-6 h-6 flex-shrink-0" style="color:var(--gold);"></i><div><h4 class="font-heading font-semibold text-sm mb-1" style="color:var(--text-primary);">2h How-to-Talk-to-AI</h4><p class="text-xs" style="color:var(--text-secondary);">Sesion adicional sobre prompt engineering avanzado. Rol + Contexto + Tarea + Formato + Restricciones.</p></div></div>
+        <div class="glass p-6 rounded-2xl flex items-start gap-4"><i data-lucide="book-open" class="w-6 h-6 flex-shrink-0" style="color:var(--gold);"></i><div><h4 class="font-heading font-semibold text-sm mb-1" style="color:var(--text-primary);">Recursos Abiertos</h4><p class="text-xs" style="color:var(--text-secondary);">Playbooks interactivos HTML por sesion. 50+ prompts personalizados. Templates y frameworks.</p></div></div>
+        <div class="glass p-6 rounded-2xl flex items-start gap-4"><i data-lucide="package" class="w-6 h-6 flex-shrink-0" style="color:var(--gold);"></i><div><h4 class="font-heading font-semibold text-sm mb-1" style="color:var(--text-primary);">Entregables por Sesion</h4><p class="text-xs" style="color:var(--text-secondary);">Cada sesion produce un artefacto funcional. No hay tarea -- lo que se construye en sesion es lo que opera despues.</p></div></div>
+        <div class="glass p-6 rounded-2xl flex items-start gap-4"><i data-lucide="layout-dashboard" class="w-6 h-6 flex-shrink-0" style="color:var(--gold);"></i><div><h4 class="font-heading font-semibold text-sm mb-1" style="color:var(--text-primary);">Campus Virtual</h4><p class="text-xs" style="color:var(--text-secondary);">Creyentes: acceso vitalicio. Lanzamiento Q3 2026. Actualizacion continua, nuevos modulos, comunidad.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 21: YOUTUBE (view-immersive)
+       ==================================================================== -->
+  <section class="section-pad view-immersive" style="background:var(--bg-secondary);">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Inmersivo</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Video Overview</h2>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="glass p-4 rounded-2xl reveal">
+        <div id="yt-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:0.75rem;box-shadow:0 8px 40px rgba(255,215,0,0.08);background:var(--bg-card);cursor:pointer;" onclick="playVideo(this)">
+          <img src="https://img.youtube.com/vi/rUu1o7iKUMM/maxresdefault.jpg" alt="De Ocupado a Productivo — MetodologIA" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:0.75rem;opacity:0.85;" loading="lazy">
+          <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;background:rgba(255,215,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.3);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#0B2545"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <p style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);font-size:12px;color:rgba(255,255,255,0.7);">Click para reproducir</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 22: DATOS DASHBOARD (NEW — view-datos)
+       ==================================================================== -->
+  <section id="datos-dashboard" class="section-pad view-datos">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Business Intelligence</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold" style="color:var(--text-primary);">Dashboard Financiero</h2>
+        <p class="text-sm mt-3 max-w-lg mx-auto" style="color:var(--text-secondary);">Metricas completas del modelo de negocio MetodologIA para la campana Ecuador 2026.</p>
+        <div class="gold-divider"></div>
+      </div>
+
+      <!-- 4 KPI Cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 reveal">
+        <div class="glass p-6 rounded-2xl text-center"><p class="text-xs uppercase tracking-wider font-bold mb-2" style="color:var(--gold);">TAM</p><p class="font-heading text-3xl font-black gold-text">$89M</p><p class="text-xs mt-1" style="color:var(--text-muted);">Ecuador EdTech + Executive Ed</p></div>
+        <div class="glass p-6 rounded-2xl text-center"><p class="text-xs uppercase tracking-wider font-bold mb-2" style="color:var(--gold);">SOM Y1</p><p class="font-heading text-3xl font-black" style="color:var(--text-primary);">$136K</p><p class="text-xs mt-1" style="color:var(--text-muted);">Serviceable Obtainable Market</p></div>
+        <div class="glass p-6 rounded-2xl text-center"><p class="text-xs uppercase tracking-wider font-bold mb-2" style="color:var(--gold);">LTV/CAC</p><p class="font-heading text-3xl font-black gold-text">27-40x</p><p class="text-xs mt-1" style="color:var(--text-muted);">Ratio valor/adquisicion</p></div>
+        <div class="glass p-6 rounded-2xl text-center"><p class="text-xs uppercase tracking-wider font-bold mb-2" style="color:var(--gold);">Burn</p><p class="font-heading text-3xl font-black" style="color:var(--text-primary);">$813</p><p class="text-xs mt-1" style="color:var(--text-muted);">/mes operativo</p></div>
+      </div>
+
+      <!-- Revenue by Segment -->
+      <div class="glass p-8 rounded-2xl mb-8 reveal">
+        <h3 class="font-heading font-bold text-lg mb-6" style="color:var(--text-primary);">Revenue por Segmento (Y1)</h3>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between mb-1"><span class="text-sm" style="color:var(--text-secondary);">B2C (CAO + Empowerment)</span><span class="text-sm font-bold" style="color:var(--text-primary);">$86,800</span></div>
+            <div class="w-full h-7 rounded-full" style="background:var(--bg-card);"><div class="bar-chart-bar h-7 flex items-center px-3" style="width:64%;background:linear-gradient(90deg,rgba(255,215,0,0.4),rgba(255,215,0,0.7));"><span class="text-[10px] font-bold" style="color:#0B2545;">64%</span></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1"><span class="text-sm" style="color:var(--text-secondary);">B2B (In-company)</span><span class="text-sm font-bold" style="color:var(--text-primary);">$13,200</span></div>
+            <div class="w-full h-7 rounded-full" style="background:var(--bg-card);"><div class="bar-chart-bar h-7 flex items-center px-3" style="width:10%;background:linear-gradient(90deg,rgba(168,85,247,0.4),rgba(168,85,247,0.7));"><span class="text-[10px] font-bold" style="color:#fff;">10%</span></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1"><span class="text-sm" style="color:var(--text-secondary);">Cobrand (Partner)</span><span class="text-sm font-bold" style="color:var(--text-primary);">$36,000</span></div>
+            <div class="w-full h-7 rounded-full" style="background:var(--bg-card);"><div class="bar-chart-bar h-7 flex items-center px-3" style="width:26%;background:linear-gradient(90deg,rgba(59,130,246,0.4),rgba(59,130,246,0.7));"><span class="text-[10px] font-bold" style="color:#fff;">26%</span></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-1"><span class="text-sm" style="color:var(--text-secondary);">White Label</span><span class="text-sm font-bold" style="color:var(--text-primary);">$0</span></div>
+            <div class="w-full h-7 rounded-full" style="background:var(--bg-card);"><div class="bar-chart-bar h-7 flex items-center px-3" style="width:2%;background:var(--border-color);"><span class="text-[10px]" style="color:var(--text-muted);">0%</span></div></div>
+          </div>
+        </div>
+        <p class="text-xs mt-4" style="color:var(--text-muted);">Total Y1: $136,000 USD</p>
+      </div>
+
+      <!-- P&L Table -->
+      <div class="glass p-8 rounded-2xl mb-8 reveal overflow-x-auto">
+        <h3 class="font-heading font-bold text-lg mb-6" style="color:var(--text-primary);">P&L Proyectado</h3>
+        <table class="data-table">
+          <thead><tr><th>Concepto</th><th>Y1</th><th>Y2</th><th>24 meses</th></tr></thead>
+          <tbody>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Revenue</td><td style="color:var(--gold);font-weight:700;">$136,000</td><td style="color:var(--gold);font-weight:700;">$435,000</td><td style="color:var(--gold);font-weight:700;">$571,000</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Costos Operativos</td><td>$9,800</td><td>$15,000</td><td>$24,800</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Resultado Neto</td><td style="color:var(--gold);font-weight:700;">$126,200</td><td style="color:var(--gold);font-weight:700;">$420,000</td><td style="color:var(--gold);font-weight:700;">$546,200</td></tr>
+            <tr><td class="font-semibold" style="color:var(--text-primary);">Margen</td><td>92.8%</td><td>96.6%</td><td>95.7%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 12-Month Calendar -->
+      <div class="glass p-8 rounded-2xl mb-8 reveal">
+        <h3 class="font-heading font-bold text-lg mb-6" style="color:var(--text-primary);">Calendario de Productos (12 meses)</h3>
+        <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          <div class="glass p-3 rounded-xl text-center" style="border-color:rgba(255,215,0,0.3);"><p class="text-xs font-bold" style="color:var(--gold);">ABR</p><p class="text-[10px] mt-1" style="color:var(--text-secondary);">Workshop</p><p class="text-[10px]" style="color:var(--text-muted);">Creyentes</p></div>
+          <div class="glass p-3 rounded-xl text-center"><p class="text-xs font-bold" style="color:var(--gold);">MAY</p><p class="text-[10px] mt-1" style="color:var(--text-secondary);">Open Workshop</p><p class="text-[10px]" style="color:var(--text-muted);">Empowerment</p></div>
+          <div class="glass p-3 rounded-xl text-center"><p class="text-xs font-bold" style="color:var(--gold);">JUN</p><p class="text-[10px] mt-1" style="color:var(--text-secondary);">Workshop</p><p class="text-[10px]" style="color:var(--text-muted);">Funnel</p></div>
+          <div class="glass p-3 rounded-xl text-center" style="border-color:rgba(255,215,0,0.3);"><p class="text-xs font-bold" style="color:var(--gold);">JUL</p><p class="text-[10px] mt-1" style="color:var(--text-secondary);">CAO Academico</p><p class="text-[10px]" style="color:var(--text-muted);">$1,990</p></div>
+          <div class="glass p-3 rounded-xl text-center"><p class="text-xs font-bold" style="color:var(--gold);">AGO</p><p class="text-[10px] mt-1" style="color:var(--text-secondary);">Empowerment</p><p class="text-[10px]" style="color:var(--text-muted);">Ciclo 2</p></div>
+          <div class="glass p-3 rounded-xl text-center" style="border-color:rgba(255,215,0,0.3);"><p class="text-xs font-bold" style="color:var(--gold);">SEP</p><p class="text-[10px] mt-1" style="color:var(--text-secondary);">CAO Ciclo 2</p><p class="text-[10px]" style="color:var(--text-muted);">Embajadores</p></div>
+          <div class="glass p-3 rounded-xl text-center"><p class="text-xs font-bold" style="color:var(--gold);">OCT</p><p class="text-[10px] mt-1" style="color:var(--text-secondary);">Workshop</p><p class="text-[10px]" style="color:var(--text-muted);">Campus Launch</p></div>
+          <div class="glass p-3 rounded-xl text-center"><p class="text-xs font-bold" style="color:var(--gold);">NOV</p><p class="text-[10px] mt-1" style="color:var(--text-secondary);">Empowerment</p><p class="text-[10px]" style="color:var(--text-muted);">Ciclo 3</p></div>
+          <div class="glass p-3 rounded-xl text-center" style="border-color:rgba(255,215,0,0.3);"><p class="text-xs font-bold" style="color:var(--gold);">DIC</p><p class="text-[10px] mt-1" style="color:var(--text-secondary);">CAO Ciclo 3</p><p class="text-[10px]" style="color:var(--text-muted);">Y1 Close</p></div>
+          <div class="glass p-3 rounded-xl text-center"><p class="text-xs font-bold" style="color:var(--gold);">ENE</p><p class="text-[10px] mt-1" style="color:var(--text-secondary);">Y2 Kick-off</p><p class="text-[10px]" style="color:var(--text-muted);">Scale</p></div>
+          <div class="glass p-3 rounded-xl text-center"><p class="text-xs font-bold" style="color:var(--gold);">FEB</p><p class="text-[10px] mt-1" style="color:var(--text-secondary);">CAO + EMP</p><p class="text-[10px]" style="color:var(--text-muted);">Expansion</p></div>
+          <div class="glass p-3 rounded-xl text-center"><p class="text-xs font-bold" style="color:var(--gold);">MAR</p><p class="text-[10px] mt-1" style="color:var(--text-secondary);">Cobrand</p><p class="text-[10px]" style="color:var(--text-muted);">Partners</p></div>
+        </div>
+      </div>
+
+      <!-- Competitive Positioning -->
+      <div class="glass p-8 rounded-2xl reveal">
+        <h3 class="font-heading font-bold text-lg mb-6" style="color:var(--text-primary);">Unit Economics</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-xs uppercase tracking-wider font-bold mb-3" style="color:var(--gold);">Metricas por Producto</p>
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm"><span style="color:var(--text-secondary);">CAO Creyentes</span><span class="font-bold" style="color:var(--text-primary);">$1,490</span></div>
+              <div class="flex justify-between text-sm"><span style="color:var(--text-secondary);">CAO Academico</span><span class="font-bold" style="color:var(--text-primary);">$1,990</span></div>
+              <div class="flex justify-between text-sm"><span style="color:var(--text-secondary);">Empowerment</span><span class="font-bold" style="color:var(--text-primary);">$1,490</span></div>
+              <div class="flex justify-between text-sm"><span style="color:var(--text-secondary);">Asistente a Medida</span><span class="font-bold" style="color:var(--text-primary);">$347</span></div>
+              <div class="flex justify-between text-sm"><span style="color:var(--text-secondary);">Workshop (free)</span><span class="font-bold" style="color:var(--text-primary);">$0</span></div>
+            </div>
+          </div>
+          <div>
+            <p class="text-xs uppercase tracking-wider font-bold mb-3" style="color:var(--gold);">Funnel & Market</p>
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm"><span style="color:var(--text-secondary);">Convocados iniciales</span><span class="font-bold" style="color:var(--text-primary);">13</span></div>
+              <div class="flex justify-between text-sm"><span style="color:var(--text-secondary);">Target Creyentes</span><span class="font-bold" style="color:var(--gold);">5</span></div>
+              <div class="flex justify-between text-sm"><span style="color:var(--text-secondary);">SAM</span><span class="font-bold" style="color:var(--text-primary);">$14.9M</span></div>
+              <div class="flex justify-between text-sm"><span style="color:var(--text-secondary);">SOM Y2</span><span class="font-bold" style="color:var(--text-primary);">$435K</span></div>
+              <div class="flex justify-between text-sm"><span style="color:var(--text-secondary);">CAC estimado</span><span class="font-bold" style="color:var(--text-primary);">~$37-55</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 23: WORKSHOP COUNTDOWN
+       ==================================================================== -->
+  <section id="workshop-cta" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-4xl mx-auto px-6 text-center reveal">
+      <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Proximo Paso</p>
+      <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4" style="color:var(--text-primary);">Workshop Zero Risk</h2>
+      <div class="gold-divider"></div>
+      <!-- Countdown -->
+      <div class="grid grid-cols-4 gap-4 max-w-sm mx-auto my-8">
+        <div class="glass p-3 rounded-xl text-center"><p class="font-heading text-2xl font-black gold-text" id="cd-days">--</p><p class="text-[10px]" style="color:var(--text-muted);">Dias</p></div>
+        <div class="glass p-3 rounded-xl text-center"><p class="font-heading text-2xl font-black" style="color:var(--text-primary);" id="cd-hours">--</p><p class="text-[10px]" style="color:var(--text-muted);">Horas</p></div>
+        <div class="glass p-3 rounded-xl text-center"><p class="font-heading text-2xl font-black gold-text" id="cd-mins">--</p><p class="text-[10px]" style="color:var(--text-muted);">Min</p></div>
+        <div class="glass p-3 rounded-xl text-center"><p class="font-heading text-2xl font-black" style="color:var(--text-primary);" id="cd-secs">--</p><p class="text-[10px]" style="color:var(--text-muted);">Seg</p></div>
+      </div>
+      <div class="max-w-md mx-auto space-y-3 mb-8">
+        <div class="flex items-center gap-3 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i>Sin inversion economica -- solo su tiempo</div>
+        <div class="flex items-center gap-3 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i>3 horas con su contexto laboral real</div>
+        <div class="flex items-center gap-3 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 flex-shrink-0" style="color:var(--gold);"></i>Construya su primer sistema agentico</div>
+      </div>
+      <button onclick="openModal('workshop')" class="btn-gold text-base py-4 px-8"><i data-lucide="calendar-check" class="w-5 h-5"></i><span>Agendar Workshop</span></button>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 24: FINAL CTA
+       ==================================================================== -->
+  <section id="final-cta" class="section-pad">
+    <div class="max-w-4xl mx-auto px-6 text-center reveal">
+      <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Quito 2026</p>
+      <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4" style="color:var(--text-primary);">5 directivos. 1 (r)evolucion.<br>Quito 2026.</h2>
+      <div class="gold-divider"></div>
+      <p class="text-lg mb-10 max-w-xl mx-auto mt-4" style="color:var(--text-secondary);">El primer paso no cuesta nada. Solo requiere que se presente.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <button onclick="openModal('workshop')" class="btn-gold text-base py-4 px-8"><i data-lucide="play-circle" class="w-5 h-5"></i><span>Asistir al Taller</span></button>
+        <button onclick="openModal('reserve')" class="btn-ghost text-base py-4 px-8"><i data-lucide="rocket" class="w-5 h-5"></i><span>Reservar Plaza</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION 25: FOOTER
+       ==================================================================== -->
+  <footer class="py-12" style="background:var(--bg-primary);border-top:1px solid var(--border-color);">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="logoGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+            <rect width="36" height="36" rx="10" fill="url(#logoGrad2)"/>
+            <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+            <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+          </svg>
+          <span class="font-heading font-bold" style="color:var(--text-primary);">Metodolog<span class="gold-text">IA</span></span>
+        </div>
+        <div class="text-center max-w-lg">
+          <p class="text-xs" style="color:var(--text-muted);">Innovation Mode: este documento fue generado con asistencia de IA y revisado por humanos. Los precios y condiciones estan sujetos a confirmacion final.</p>
+        </div>
+        <a href="mailto:contacto@metodologia.info?subject=Consulta%20CAO%20Bootcamp" class="flex items-center gap-2 text-sm transition-all hover:scale-105" style="color:var(--text-secondary);">
+          <i data-lucide="mail" class="w-4 h-4" style="color:var(--gold);"></i> contacto@metodologia.info
+        </a>
+      </div>
+      <div class="text-center mt-8"><p class="text-xs" style="color:var(--text-muted);">Intencion sobre Intensidad -- MetodologIA 2026</p></div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       MODALS
+       ==================================================================== -->
+  <!-- Reserve Modal -->
+  <div class="modal-overlay" id="modal-reserve">
+    <div class="modal-content">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="font-heading font-bold text-xl" style="color:var(--text-primary);">Reservar Plaza</h3>
+        <button onclick="closeModal('reserve')" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition" aria-label="Cerrar"><i data-lucide="x" class="w-4 h-4" style="color:var(--text-muted);"></i></button>
+      </div>
+      <!-- Step dots -->
+      <div class="flex justify-center gap-2 mb-6">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" id="res-dot-1" style="background:var(--gold);color:#0B2545;">1</div>
+        <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" id="res-dot-2" style="background:var(--border-color);color:var(--text-muted);">2</div>
+        <div class="w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold" id="res-dot-3" style="background:var(--border-color);color:var(--text-muted);">3</div>
+      </div>
+      <!-- Step 1 -->
+      <div id="res-step-1">
+        <div class="space-y-4">
+          <input type="text" class="form-input" placeholder="Nombre completo" data-i18n-placeholder="form.name">
+          <input type="email" class="form-input" placeholder="Email profesional" data-i18n-placeholder="form.email">
+          <input type="text" class="form-input" placeholder="Empresa / Cargo" data-i18n-placeholder="form.company">
+        </div>
+        <button onclick="showResStep(2)" class="btn-gold w-full justify-center mt-6"><span>Siguiente</span></button>
+      </div>
+      <!-- Step 2 -->
+      <div id="res-step-2" style="display:none;">
+        <div class="space-y-4">
+          <select class="form-input"><option value="">Programa de interes</option><option>CAO Bootcamp Creyentes ($1,490)</option><option>Empowerment Creyentes ($1,490)</option><option>Ambos</option></select>
+          <select class="form-input"><option value="">Modalidad</option><option>Solo (1:1)</option><option>Dupla</option><option>Terna</option></select>
+        </div>
+        <div class="flex gap-3 mt-6"><button onclick="showResStep(1)" class="btn-ghost flex-1 justify-center"><span>Atras</span></button><button onclick="showResStep(3)" class="btn-gold flex-1 justify-center"><span>Siguiente</span></button></div>
+      </div>
+      <!-- Step 3 -->
+      <div id="res-step-3" style="display:none;">
+        <textarea class="form-input" rows="4" placeholder="Mensaje o pregunta (opcional)" data-i18n-placeholder="form.message"></textarea>
+        <div class="flex gap-3 mt-6"><button onclick="showResStep(2)" class="btn-ghost flex-1 justify-center"><span>Atras</span></button><button onclick="submitReserveForm(this)" class="btn-gold flex-1 justify-center"><i data-lucide="send" class="w-4 h-4"></i><span>Enviar</span></button></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Workshop Modal -->
+  <div class="modal-overlay" id="modal-workshop">
+    <div class="modal-content">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="font-heading font-bold text-xl" style="color:var(--text-primary);">Workshop Zero Risk</h3>
+        <button onclick="closeModal('workshop')" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition" aria-label="Cerrar"><i data-lucide="x" class="w-4 h-4" style="color:var(--text-muted);"></i></button>
+      </div>
+      <p class="text-sm mb-1" style="color:var(--text-primary);font-weight:600;">De Ocupado a Productivo -- con metodo e IA</p>
+      <p class="text-xs mb-6" style="color:var(--text-muted);">Domingo de Pascua 2026. Horarios: 9:00-12:00 o 14:00-17:00. 13 plazas.</p>
+      <div class="space-y-4">
+        <input type="text" class="form-input" placeholder="Nombre completo">
+        <input type="email" class="form-input" placeholder="Email profesional">
+        <input type="text" class="form-input" placeholder="Empresa / Cargo">
+      </div>
+      <button onclick="submitWorkshopForm(this)" class="btn-gold w-full justify-center mt-6"><i data-lucide="calendar-check" class="w-4 h-4"></i><span>Agendar</span></button>
+    </div>
+  </div>
+
+  <!-- Info Modal (generic) -->
+  <div class="modal-overlay" id="modal-info">
+    <div class="modal-content">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="font-heading font-bold text-xl" style="color:var(--text-primary);" id="info-modal-title">Detalle</h3>
+        <button onclick="closeModal('info')" class="w-8 h-8 rounded-full flex items-center justify-center hover:bg-yellow-400/15 transition" aria-label="Cerrar"><i data-lucide="x" class="w-4 h-4" style="color:var(--text-muted);"></i></button>
+      </div>
+      <div id="info-modal-body" class="text-sm" style="color:var(--text-secondary);"></div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       JAVASCRIPT
+       ==================================================================== -->
+  <script>
+  /* ==================================================================
+     STATE
+     ================================================================== */
+  let isDark = true;
+  let currentLang = 'es';
+  let caoSelected = false;
+  let empSelected = false;
+  let selectedAssistants = new Set();
+
+  /* ==================================================================
+     i18n — Minimal bilingual dictionary
+     ================================================================== */
+  const i18n = {
+    es: {
+      'nav.journey': 'Journey', 'nav.programa': 'Programa', 'nav.roi': 'ROI', 'nav.invertir': 'Invertir', 'nav.cta': 'Reservar',
+      'view.summary': 'Resumen', 'view.detail': 'Detallado', 'view.immersive': 'Inmersivo', 'view.data': 'Datos',
+      'hero.pre': 'Bootcamp Ejecutivo Modular', 'hero.sub': 'Chief Agentic Officer',
+      'hero.kpi1': 'Contenido intensivo', 'hero.kpi2': 'Asistentes IA', 'hero.kpi3': 'Agente Propio', 'hero.kpi4': 'Semanas',
+      'hero.cta1': 'Reservar Plaza', 'hero.cta2': 'Asistir al Taller',
+    },
+    en: {
+      'nav.journey': 'Journey', 'nav.programa': 'Program', 'nav.roi': 'ROI', 'nav.invertir': 'Invest', 'nav.cta': 'Reserve',
+      'view.summary': 'Summary', 'view.detail': 'Detailed', 'view.immersive': 'Immersive', 'view.data': 'Data',
+      'hero.pre': 'Modular Executive Bootcamp', 'hero.sub': 'Chief Agentic Officer',
+      'hero.kpi1': 'Intensive content', 'hero.kpi2': 'AI Assistants', 'hero.kpi3': 'Own Agent', 'hero.kpi4': 'Weeks',
+      'hero.cta1': 'Reserve Seat', 'hero.cta2': 'Attend Workshop',
+    }
+  };
+
+  /* ==================================================================
+     INIT — DOMContentLoaded
+     ================================================================== */
+  document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
+    initScrollReveal();
+    initScrollProgress();
+    initCountdown();
+    calcROI();
+    updateConfig();
+    addAccessibility();
+  });
+
+  /* ==================================================================
+     SCROLL REVEAL
+     ================================================================== */
+  function initScrollReveal() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+
+  /* ==================================================================
+     SCROLL PROGRESS
+     ================================================================== */
+  function initScrollProgress() {
+    const bar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+    });
+  }
+
+  /* ==================================================================
+     COUNTDOWN — April 5, 2026
+     ================================================================== */
+  function initCountdown() {
+    const target = new Date('2026-04-05T09:00:00-05:00').getTime();
+    function update() {
+      const now = Date.now();
+      const diff = Math.max(0, target - now);
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cd-days').textContent = d;
+      document.getElementById('cd-hours').textContent = h;
+      document.getElementById('cd-mins').textContent = m;
+      document.getElementById('cd-secs').textContent = s;
+    }
+    update();
+    setInterval(update, 1000);
+  }
+
+  /* ==================================================================
+     THEME TOGGLE
+     ================================================================== */
+  /* ==================================================================
+     VIDEO PLAYER — robust iframe injection (no inline innerHTML escaping)
+     ================================================================== */
+  function playVideo(container) {
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube.com/embed/rUu1o7iKUMM?autoplay=1&rel=0&modestbranding=1';
+    iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:0.75rem;';
+    iframe.allow = 'accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture';
+    iframe.allowFullscreen = true;
+    container.innerHTML = '';
+    container.style.cursor = 'default';
+    container.appendChild(iframe);
+  }
+
+  function toggleTheme() {
+    isDark = !isDark;
+    document.documentElement.classList.toggle('light', !isDark);
+    document.documentElement.classList.toggle('dark', isDark);
+    document.getElementById('theme-dark').classList.toggle('active', isDark);
+    document.getElementById('theme-light').classList.toggle('active', !isDark);
+  }
+
+  /* ==================================================================
+     LANGUAGE TOGGLE
+     ================================================================== */
+  function toggleLang() {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    document.getElementById('lang-es').classList.toggle('active', currentLang === 'es');
+    document.getElementById('lang-en').classList.toggle('active', currentLang === 'en');
+    document.documentElement.lang = currentLang;
+    setLang(currentLang);
+  }
+
+  function setLang(lang) {
+    const dict = i18n[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key] !== undefined) el.placeholder = dict[key];
+    });
+    updateConfig();
+  }
+
+  /* ==================================================================
+     VIEW TOGGLE (4 views)
+     ================================================================== */
+  function setView(view) {
+    document.documentElement.setAttribute('data-view', view);
+    document.querySelectorAll('#view-toggle .toggle-pill-btn, #view-toggle span').forEach(s => {
+      s.classList.toggle('active', s.id === 'view-' + view);
+    });
+  }
+
+  /* ==================================================================
+     MODAL OPEN / CLOSE
+     ================================================================== */
+  function openModal(name) {
+    document.getElementById('modal-' + name).classList.add('active');
+    document.body.style.overflow = 'hidden';
+    if (name === 'reserve') { fireConfetti(); showResStep(1); }
+  }
+
+  function closeModal(name) {
+    document.getElementById('modal-' + name).classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function openInfo(id) {
+    const titles = {
+      'investment': 'Detalle de Inversion',
+    };
+    const bodies = {
+      'investment': 'El CAO Bootcamp Edicion Creyentes incluye: 9 sesiones de 2 horas (20h), 13 asistentes IA personalizados, 1 agente Pristino propio, segundo cerebro digital, acceso al networking Q3 ejecutivos Quito, y acceso vitalicio al Campus Virtual MetodologIA (lanzamiento Q3 2026). Valor por separado: $4,511+ USD. Precio Creyentes: $1,490 USD.',
+    };
+    document.getElementById('info-modal-title').textContent = titles[id] || 'Detalle';
+    document.getElementById('info-modal-body').textContent = bodies[id] || '';
+    openModal('info');
+  }
+
+  function showResStep(n) {
+    [1,2,3].forEach(i => {
+      const step = document.getElementById('res-step-' + i);
+      const dot = document.getElementById('res-dot-' + i);
+      if (step) step.style.display = i === n ? 'block' : 'none';
+      if (dot) {
+        dot.style.background = i <= n ? 'var(--gold)' : 'var(--border-color)';
+        dot.style.color = i <= n ? '#0B2545' : 'var(--text-muted)';
+      }
+    });
+    lucide.createIcons();
+  }
+
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal-overlay')) {
+      e.target.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.active').forEach(m => { m.classList.remove('active'); });
+      document.body.style.overflow = '';
+    }
+  });
+
+  /* ==================================================================
+     FORM SUBMISSION
+     ================================================================== */
+  function submitReserveForm(btn) {
+    const modal = btn.closest('.modal-content');
+    const inputs = modal.querySelectorAll('.form-input');
+    const name = inputs[0]?.value || '';
+    const email = inputs[1]?.value || '';
+    const company = inputs[2]?.value || '';
+    const program = inputs[3]?.value || '';
+    const modality = inputs[4]?.value || '';
+    const message = inputs[5]?.value || '';
+    if (!name || !email) { inputs[0].focus(); return; }
+    const subject = encodeURIComponent('Reserva CAO Bootcamp Creyentes -- Quito 2026');
+    const body = encodeURIComponent('Nombre: ' + name + '\nEmail: ' + email + '\nEmpresa/Cargo: ' + company + '\nPrograma: ' + program + '\nModalidad: ' + modality + '\nMensaje: ' + message);
+    window.location.href = 'mailto:contacto@metodologia.info?subject=' + subject + '&body=' + body;
+  }
+
+  function submitWorkshopForm(btn) {
+    const modal = btn.closest('.modal-content');
+    const inputs = modal.querySelectorAll('.form-input');
+    const name = inputs[0]?.value || '';
+    const email = inputs[1]?.value || '';
+    const company = inputs[2]?.value || '';
+    if (!name || !email) { inputs[0].focus(); return; }
+    const subject = encodeURIComponent('Workshop Zero Risk -- De Ocupado a Productivo -- Quito 2026');
+    const body = encodeURIComponent('Nombre: ' + name + '\nEmail: ' + email + '\nEmpresa/Cargo: ' + company);
+    window.location.href = 'mailto:contacto@metodologia.info?subject=' + subject + '&body=' + body;
+  }
+
+  /* ==================================================================
+     ROI CALCULATOR
+     ================================================================== */
+  function calcROI() {
+    const hours = parseInt(document.getElementById('roi-hours').value);
+    const rate = parseInt(document.getElementById('roi-rate').value);
+    document.getElementById('roi-hours-val').textContent = hours;
+    document.getElementById('roi-rate-val').textContent = '$' + rate;
+    const automatable = 0.5;
+    const hoursMonth = Math.round(hours * automatable * 4);
+    const valueMonth = hoursMonth * rate;
+    const payback = valueMonth > 0 ? (1490 / valueMonth * 4).toFixed(1) : 'N/A';
+    const annual = valueMonth * 12;
+    document.getElementById('roi-hours-month').textContent = hoursMonth;
+    document.getElementById('roi-value-month').textContent = '$' + valueMonth.toLocaleString();
+    document.getElementById('roi-payback').textContent = payback;
+    document.getElementById('roi-annual').textContent = '$' + annual.toLocaleString();
+    /* Update bar chart values */
+    const q1 = valueMonth * 3;
+    const el_q1 = document.getElementById('roi-q1');
+    const el_y1 = document.getElementById('roi-y1');
+    if (el_q1) el_q1.textContent = '$' + q1.toLocaleString();
+    if (el_y1) el_y1.textContent = '$' + annual.toLocaleString();
+  }
+
+  /* ==================================================================
+     CONFIGURATOR: CAO TOGGLE
+     ================================================================== */
+  function toggleCAO() {
+    caoSelected = !caoSelected;
+    const check = document.getElementById('cao-check');
+    const card = document.getElementById('config-cao-card');
+    if (caoSelected) {
+      check.innerHTML = '<i data-lucide="check" class="w-4 h-4" style="color:#0B2545;"></i>';
+      check.style.background = 'linear-gradient(135deg,#FFD700,#FFA000)';
+      check.style.borderColor = '#FFD700';
+      card.classList.add('glow-border');
+    } else {
+      check.innerHTML = '';
+      check.style.background = 'transparent';
+      check.style.borderColor = 'var(--border-color)';
+      card.classList.remove('glow-border');
+    }
+    updateEmpPrice();
+    updateConfig();
+    lucide.createIcons();
+  }
+
+  /* ==================================================================
+     CONFIGURATOR: EMP TOGGLE
+     ================================================================== */
+  function toggleEmp() {
+    empSelected = !empSelected;
+    const check = document.getElementById('emp-check');
+    const card = document.getElementById('config-emp-card');
+    if (empSelected) {
+      check.innerHTML = '<i data-lucide="check" class="w-4 h-4" style="color:#0B2545;"></i>';
+      check.style.background = 'linear-gradient(135deg,#FFD700,#FFA000)';
+      check.style.borderColor = '#FFD700';
+      card.classList.add('glow-border');
+    } else {
+      check.innerHTML = '';
+      check.style.background = 'transparent';
+      check.style.borderColor = 'var(--border-color)';
+      card.classList.remove('glow-border');
+    }
+    updateConfig();
+    lucide.createIcons();
+  }
+
+  function updateEmpPrice() {
+    const el = document.getElementById('emp-price-display');
+    el.innerHTML = '<span class="price-strike">$1,990</span> <span class="gold-text font-bold">$1,490 USD</span> - Precio Creyentes';
+  }
+
+  /* ==================================================================
+     CONFIGURATOR: UPDATE SUMMARY
+     ================================================================== */
+  function updateConfig() {
+    const summaryEl = document.getElementById('config-summary-items');
+    const totalEl = document.getElementById('config-total');
+    const savingsEl = document.getElementById('config-savings');
+    const savingsRow = document.getElementById('config-savings-row');
+    let items = [];
+    let total = 0;
+    let savings = 0;
+
+    if (caoSelected) {
+      items.push({ name: 'CAO Bootcamp Creyentes', price: 1490 });
+      total += 1490;
+      savings += (13 * 347) + 1990 - 1490;
+    }
+    if (empSelected) {
+      const label = currentLang === 'es' ? 'Empoderamiento Creyentes' : 'Empowerment Believers';
+      items.push({ name: label, price: 1490 });
+      total += 1490;
+      savings += 1990 - 1490;
+    }
+
+    const allSelected = caoSelected && empSelected;
+    let surpriseDiscount = 0;
+    if (allSelected) {
+      surpriseDiscount = Math.round(total * 0.20);
+      total = total - surpriseDiscount;
+      savings += surpriseDiscount;
+    }
+
+    const emptyMsg = currentLang === 'es' ? 'Seleccione opciones arriba' : 'Select options above';
+    let html = items.length === 0
+      ? '<p class="text-sm" style="color:var(--text-muted);">' + emptyMsg + '</p>'
+      : items.map(it => '<div class="flex justify-between items-center text-sm"><span style="color:var(--text-secondary);">' + it.name + '</span><span class="font-semibold" style="color:var(--text-primary);">$' + it.price.toLocaleString() + '</span></div>').join('');
+
+    if (allSelected) {
+      html += '<div class="glass p-5 rounded-xl mt-4" style="border-color:rgba(255,215,0,0.3);background:rgba(255,215,0,0.05);">' +
+        '<p class="text-xs font-bold uppercase tracking-wider mb-3 text-center" style="color:var(--gold);"><i data-lucide="gift" class="w-4 h-4 inline mr-1"></i>Sorpresa Creyentes</p>' +
+        '<div class="flex justify-between items-center mb-2 pb-2" style="border-bottom:1px solid rgba(255,215,0,0.1);"><span class="text-xs" style="color:var(--text-secondary);">Descuento 20% sobre total</span><span class="text-sm font-bold" style="color:var(--gold);">-$' + surpriseDiscount.toLocaleString() + ' USD</span></div>' +
+        '<div class="flex justify-between items-center mb-3"><span class="text-xs" style="color:var(--text-secondary);">Workshop Estrategia Personal 1:1 con Javier</span><span class="text-sm font-bold" style="color:var(--gold);">+$800 USD</span></div>' +
+        '<div class="text-center pt-2" style="border-top:1px solid rgba(255,215,0,0.1);"><p class="text-xs font-bold" style="color:var(--text-primary);">Valor total de la sorpresa: <span style="color:var(--gold);">$' + (surpriseDiscount + 800).toLocaleString() + ' USD</span></p></div></div>';
+    }
+
+    summaryEl.innerHTML = html;
+    totalEl.textContent = '$' + total.toLocaleString();
+    if (savings > 0) { savingsRow.style.display = 'flex'; savingsEl.textContent = '$' + savings.toLocaleString(); } else { savingsRow.style.display = 'none'; }
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+    updateEmpPrice();
+  }
+
+  /* ==================================================================
+     ACCORDION
+     ================================================================== */
+  function toggleAccordion(btn) {
+    const content = btn.nextElementSibling;
+    const icon = btn.querySelector('[data-lucide="chevron-down"]');
+    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+    document.querySelectorAll('.accordion-content').forEach(c => {
+      c.style.maxHeight = '0px';
+      c.previousElementSibling?.querySelector('[data-lucide="chevron-down"]')?.style.removeProperty('transform');
+    });
+    if (!isOpen) {
+      content.style.maxHeight = content.scrollHeight + 'px';
+      if (icon) icon.style.transform = 'rotate(180deg)';
+    }
+    lucide.createIcons();
+  }
+
+  /* ==================================================================
+     SCROLL TO ELEMENT
+     ================================================================== */
+  function scrollToEl(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  /* ==================================================================
+     CONFETTI
+     ================================================================== */
+  function fireConfetti() {
+    const colors = ['#FFD700', '#FFA000', '#FFE44D', '#0B2545', '#163A6A', '#FFFFFF'];
+    for (let i = 0; i < 80; i++) {
+      const piece = document.createElement('div');
+      piece.className = 'confetti-piece';
+      piece.style.left = Math.random() * 100 + 'vw';
+      piece.style.top = '-10px';
+      piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+      const size = Math.random() * 8 + 4;
+      piece.style.width = size + 'px';
+      piece.style.height = size + 'px';
+      document.body.appendChild(piece);
+      const destX = (Math.random() - 0.5) * 500;
+      const destY = Math.random() * 700 + 200;
+      const rot = Math.random() * 720;
+      const dur = Math.random() * 1800 + 1000;
+      piece.animate([
+        { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
+        { transform: 'translate(' + destX + 'px, ' + destY + 'px) rotate(' + rot + 'deg)', opacity: 0 }
+      ], { duration: dur, easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)' });
+      setTimeout(() => piece.remove(), dur);
+    }
+  }
+
+  /* ==================================================================
+     ACCESSIBILITY
+     ================================================================== */
+  function addAccessibility() {
+    document.querySelectorAll('.modal-overlay').forEach(m => {
+      m.setAttribute('role', 'dialog');
+      m.setAttribute('aria-modal', 'true');
+      const title = m.querySelector('h3');
+      if (title) { if (!title.id) title.id = 'aria-' + m.id; m.setAttribute('aria-labelledby', title.id); }
+    });
+    const nav = document.querySelector('nav');
+    if (nav) nav.setAttribute('aria-label', 'Main navigation');
+    document.querySelectorAll('button:not([aria-label])').forEach(btn => { if (!btn.textContent.trim()) btn.setAttribute('aria-label', 'Close'); });
+    document.querySelectorAll('svg:not([aria-hidden])').forEach(svg => svg.setAttribute('aria-hidden', 'true'));
+    document.querySelectorAll('input[type="range"]').forEach(s => {
+      if (!s.getAttribute('aria-label')) {
+        const label = s.closest('div')?.querySelector('span, div')?.textContent || 'Slider';
+        s.setAttribute('aria-label', label);
+      }
+    });
+  }
+  </script>
+</body>
+</html>

@@ -2242,12 +2242,11 @@
         <div class="max-w-2xl mx-auto mb-8">
           <!-- YouTube embed with nocookie + fallback -->
           <div id="yt-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 8px 40px rgba(255,215,0,0.08);background:#0B2545;cursor:pointer;"
-               onclick="this.innerHTML='<iframe src=\'https://www.youtube-nocookie.com/embed/rUu1o7iKUMM?autoplay=1\' style=\'position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:16px;\' allow=\'accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture\' allowfullscreen></iframe>'">
+               onclick="(function(c){var f=document.createElement('iframe');f.src='https://www.youtube.com/embed/rUu1o7iKUMM?autoplay=1&rel=0&modestbranding=1';f.style.cssText='position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:16px;';f.allow='accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture';f.allowFullscreen=true;c.innerHTML='';c.style.cursor='default';c.appendChild(f)})(this)">
             <img src="https://img.youtube.com/vi/rUu1o7iKUMM/maxresdefault.jpg"
                  alt="De Ocupado a Productivo — MetodologIA"
-                 style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:16px;opacity:0.85;">
-            <!-- Play button overlay -->
-            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;background:rgba(255,215,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.3);transition:transform 0.2s;">
+                 style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:16px;opacity:0.85;" loading="lazy">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;background:rgba(255,215,0,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.3);">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="#0B2545"><path d="M8 5v14l11-7z"/></svg>
             </div>
             <p style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);font-size:12px;color:rgba(255,255,255,0.7);font-family:Montserrat,sans-serif;">Click para reproducir</p>

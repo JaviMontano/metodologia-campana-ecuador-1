@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAO Bootcamp — Chief Agentic Officer | MetodologIA</title>
+  <meta name="description" content="Bootcamp Ejecutivo Modular para directivos. Edicion Creyentes, Quito 2026. 20h, 13 asistentes IA, 1 agente propio.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='10' fill='%230A122A'/><path d='M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z' fill='white'/><circle cx='18' cy='8' r='2' fill='%23FFD700'/></svg>" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Montserrat', 'sans-serif'],
+          },
+          colors: {
+            navy: { DEFAULT: '#0B2545', light: '#163A6A', dark: '#071A33' },
+            gold: { DEFAULT: '#FFD700', dark: '#FFA000', light: '#FFE44D' },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    /* ── CSS VARIABLES — DARK (default) ── */
+    :root {
+      --bg-primary: #0B2545;
+      --bg-secondary: #071A33;
+      --bg-card: rgba(11, 37, 69, 0.6);
+      --text-primary: #F0F4F8;
+      --text-secondary: #A0B4CC;
+      --text-muted: #6B8AB0;
+      --border-color: rgba(255, 215, 0, 0.15);
+      --glass-bg: rgba(11, 37, 69, 0.55);
+      --glass-border: rgba(255, 215, 0, 0.12);
+      --gold: #FFD700;
+      --gold-dark: #FFA000;
+      --shadow-glow: 0 0 40px rgba(255, 215, 0, 0.08);
+      --green: #10B981;
+      --red: #EF4444;
+    }
+
+    /* ── CSS VARIABLES — LIGHT ── */
+    html.light {
+      --bg-primary: #F8FAFC;
+      --bg-secondary: #EEF2F7;
+      --bg-card: rgba(255, 255, 255, 0.85);
+      --text-primary: #0A1F3A;
+      --text-secondary: #2C4A6E;
+      --text-muted: #4A6D94;
+      --border-color: rgba(11, 37, 69, 0.15);
+      --glass-bg: rgba(255, 255, 255, 0.75);
+      --glass-border: rgba(11, 37, 69, 0.12);
+      --shadow-glow: 0 2px 20px rgba(11, 37, 69, 0.08);
+      --gold: #B8860B;
+      --gold-dark: #8B6914;
+      --green: #059669;
+      --red: #DC2626;
+    }
+    html.light body { font-weight: 500; }
+    html.light h1, html.light h2, html.light h3, html.light h4 { font-weight: 800; }
+    html.light .gold-text { background: linear-gradient(135deg, #B8860B, #8B6914); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    html.light .btn-gold { background: linear-gradient(135deg, #D4A017, #B8860B); color: #fff; }
+    html.light .btn-gold:hover { box-shadow: 0 8px 30px rgba(184,134,11,0.3); }
+    html.light .glow-border { box-shadow: none; border-color: rgba(184,134,11,0.3); }
+
+    /* ── RESET & BASE ── */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+
+    /* ── SCROLL PROGRESS ── */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      z-index: 9999; width: 0%; transition: width 0.1s linear;
+    }
+
+    /* ── GOLD TEXT ── */
+    .gold-text {
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── GLASS CARD ── */
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 1rem;
+      box-shadow: var(--shadow-glow);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass:hover { border-color: rgba(255, 215, 0, 0.25); box-shadow: 0 0 60px rgba(255, 215, 0, 0.12); transform: translateY(-2px); }
+
+    /* ── NAV ── */
+    .glass-nav {
+      background: var(--glass-bg);
+      backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    /* ── TOGGLE PILL ── */
+    .toggle-pill {
+      display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.25rem;
+      border-radius: 9999px; background: var(--bg-card); border: 1px solid var(--border-color);
+      font-size: 0.75rem; cursor: pointer;
+    }
+    .toggle-pill span {
+      padding: 0.25rem 0.65rem; border-radius: 9999px; transition: all 0.3s ease;
+      font-weight: 500; color: var(--text-muted);
+    }
+    .toggle-pill span.active {
+      background: linear-gradient(135deg, #FFD700, #FFA000);
+      color: #0B2545; font-weight: 600;
+    }
+
+    /* ── BUTTONS ── */
+    .btn-gold {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 0.875rem 2rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 700;
+      background: linear-gradient(135deg, #FFD700, #FFA000); color: #0B2545;
+      border: none; cursor: pointer; transition: all 0.3s ease; text-decoration: none;
+    }
+    .btn-gold:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 215, 0, 0.3); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      padding: 0.875rem 2rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 700;
+      background: transparent; color: var(--gold); border: 1px solid var(--gold);
+      cursor: pointer; transition: all 0.3s ease; text-decoration: none;
+    }
+    .btn-ghost:hover { transform: scale(1.05); background: rgba(255, 215, 0, 0.08); }
+    .btn-gold:focus-visible, .btn-ghost:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    /* ── GLOW BORDER ── */
+    .glow-border {
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.15), inset 0 0 30px rgba(255, 215, 0, 0.03);
+    }
+
+    /* ── GOLD DIVIDER ── */
+    .gold-divider { width: 60px; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-dark)); border-radius: 2px; margin: 1rem auto; }
+
+    .section-pad { padding: 7rem 0; }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.1); }
+      50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.25); }
+    }
+    .pulse-glow { animation: pulse-glow 3s infinite; }
+    @keyframes bounce-slow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+    .bounce-slow { animation: bounce-slow 2s infinite; }
+    @keyframes counter-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ── AMBIENT ── */
+    .ambient-circle { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.08; pointer-events: none; }
+
+    /* ── KPI CARD ── */
+    .kpi-card { text-align: center; padding: 1.25rem 1rem; }
+    .kpi-card .kpi-value { font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 700; line-height: 1; }
+    .kpi-card .kpi-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.4rem; }
+
+    /* ── DATA PILLS ── */
+    .data-pill {
+      display: flex; flex-direction: column; align-items: center; gap: 0.25rem;
+      padding: 1.25rem 2rem; border-radius: 1rem;
+      background: linear-gradient(135deg, rgba(255,215,0,0.05), rgba(255,215,0,0.12));
+      border: 1px solid rgba(255,215,0,0.15);
+    }
+    .data-pill .pill-value { font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--gold); }
+    .data-pill .pill-label { font-size: 0.75rem; color: var(--text-muted); text-align: center; }
+
+    /* ── TIMELINE ── */
+    .timeline-track { position: relative; display: flex; justify-content: space-between; align-items: flex-start; padding: 2rem 0; }
+    .timeline-track::before {
+      content: ''; position: absolute; top: 18px; left: 5%; right: 5%; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      border-radius: 2px;
+    }
+    .timeline-node {
+      position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;
+      width: 22%;
+    }
+    .timeline-dot {
+      width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      background: var(--bg-primary); border: 3px solid var(--gold); font-size: 0.7rem; font-weight: 700; color: var(--gold);
+    }
+    .timeline-dot.active { background: linear-gradient(135deg, #FFD700, #FFA000); color: #0B2545; border-color: transparent; }
+    .timeline-label { text-align: center; }
+    .timeline-label .tl-month { font-size: 0.7rem; font-weight: 700; color: var(--gold); text-transform: uppercase; }
+    .timeline-label .tl-title { font-size: 0.8rem; font-weight: 600; color: var(--text-primary); margin-top: 0.15rem; }
+    .timeline-label .tl-desc { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.15rem; }
+
+    /* ── USE CASE GRID ── */
+    .uc-card {
+      position: relative; overflow: hidden; cursor: default;
+    }
+    .uc-card .uc-expand {
+      max-height: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.3s ease; opacity: 0;
+    }
+    .uc-card:hover .uc-expand { max-height: 120px; opacity: 1; }
+    .uc-card:hover { border-color: rgba(255, 215, 0, 0.3); }
+
+    /* ── ACCORDION ── */
+    .acc-item { border-bottom: 1px solid var(--border-color); }
+    .acc-trigger { cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 0; }
+    .acc-trigger:hover { color: var(--gold); }
+    .acc-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .acc-body.open { max-height: 300px; }
+    .acc-chevron { transition: transform 0.3s ease; }
+    .acc-chevron.open { transform: rotate(180deg); }
+
+    /* ── ROI CALCULATOR ── */
+    .roi-slider { -webkit-appearance: none; width: 100%; height: 6px; border-radius: 3px; background: var(--border-color); outline: none; }
+    .roi-slider::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%;
+      background: linear-gradient(135deg, #FFD700, #FFA000); cursor: pointer; border: 2px solid #0B2545;
+    }
+    .roi-bar { height: 24px; border-radius: 4px; transition: width 0.4s ease; min-width: 4px; }
+
+    /* ── AMBASSADOR GLOW ── */
+    .ambassador-glow {
+      background: linear-gradient(135deg, rgba(255,215,0,0.03), rgba(255,215,0,0.08));
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+    }
+    .ambassador-glow::before {
+      content: ''; position: absolute; inset: -2px; border-radius: inherit; padding: 2px;
+      background: linear-gradient(135deg, #FFD700, #FFA000, #FFD700); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+    }
+
+    /* ── COUNTDOWN ── */
+    .cd-block { display: flex; flex-direction: column; align-items: center; min-width: 60px; }
+    .cd-block .cd-val { font-family: 'Poppins', sans-serif; font-size: 2rem; font-weight: 800; line-height: 1; }
+    .cd-block .cd-unit { font-size: 0.65rem; text-transform: uppercase; color: var(--text-muted); margin-top: 0.25rem; }
+
+    /* ── SIDEBAR NAV ── */
+    .side-nav { position: fixed; right: 1.5rem; top: 50%; transform: translateY(-50%); z-index: 40; display: flex; flex-direction: column; gap: 0.5rem; }
+    .side-nav a {
+      width: 10px; height: 10px; border-radius: 50%; background: var(--border-color); transition: all 0.3s ease;
+      display: block; position: relative;
+    }
+    .side-nav a.active { background: var(--gold); width: 12px; height: 12px; box-shadow: 0 0 10px rgba(255,215,0,0.4); }
+    .side-nav a::after {
+      content: attr(data-tooltip); position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+      background: var(--bg-card); color: var(--text-primary); font-size: 0.65rem; padding: 0.25rem 0.5rem;
+      border-radius: 4px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s ease;
+      border: 1px solid var(--glass-border);
+    }
+    .side-nav a:hover::after { opacity: 1; }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+    ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr !important; }
+      .hero-card-col { margin-top: 2rem; }
+      .section-pad { padding: 5rem 0; }
+      .side-nav { display: none; }
+      .timeline-track { flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+      .timeline-track::before { display: none; }
+      .timeline-node { width: 45%; }
+    }
+    @media (max-width: 768px) {
+      .journey-grid, .obj-grid, .pristino-grid, .uc-grid, .modal-grid { grid-template-columns: 1fr !important; }
+      .section-pad { padding: 3.5rem 0; }
+      h1 { font-size: 2.5rem !important; }
+      h2 { font-size: 1.75rem !important; }
+      .data-pills-row { flex-direction: column; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem !important; }
+      .kpi-card .kpi-value { font-size: 1.5rem; }
+      .glass { padding: 1.25rem !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="scroll-progress"></div>
+
+  <!-- ── SIDEBAR MINI-NAV ── -->
+  <div class="side-nav" id="side-nav">
+    <a href="#hero" data-tooltip="Inicio" data-section="hero"></a>
+    <a href="#carta" data-tooltip="Carta" data-section="carta"></a>
+    <a href="#journey" data-tooltip="Journey" data-section="journey"></a>
+    <a href="#timeline" data-tooltip="Timeline" data-section="timeline"></a>
+    <a href="#usecases" data-tooltip="Casos de Uso" data-section="usecases"></a>
+    <a href="#modalidades" data-tooltip="Modalidades" data-section="modalidades"></a>
+    <a href="#pristino" data-tooltip="Pristino" data-section="pristino"></a>
+    <a href="#roi" data-tooltip="ROI" data-section="roi"></a>
+    <a href="#competencia" data-tooltip="Comparativa" data-section="competencia"></a>
+    <a href="#workshop" data-tooltip="Workshop" data-section="workshop"></a>
+    <a href="#final" data-tooltip="Reservar" data-section="final"></a>
+  </div>
+
+  <!-- ================================================================
+       S1: NAV (sticky, 64px)
+       ================================================================ -->
+  <nav class="glass-nav fixed top-0 left-0 right-0 z-50" id="main-nav" style="height:64px;">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-full">
+      <a href="#hero" class="flex items-center gap-2 group" style="text-decoration:none;">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <defs><linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+          <rect width="36" height="36" rx="10" fill="url(#logoGrad)"/>
+          <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+          <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+        </svg>
+        <span class="font-heading font-bold text-lg" style="color:var(--text-primary)">Metodolog<span class="gold-text">IA</span></span>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-6 text-sm font-medium" style="color:var(--text-secondary)">
+        <a href="#journey" class="hover:text-yellow-400 transition" data-i18n="nav.journey">Journey</a>
+        <a href="#pristino" class="hover:text-yellow-400 transition" data-i18n="nav.programa">Programa</a>
+        <a href="#roi" class="hover:text-yellow-400 transition" data-i18n="nav.roi">ROI</a>
+        <a href="mailto:contacto@metodologia.info?subject=Reserva%20CAO%20Bootcamp%20%E2%80%94%20Edici%C3%B3n%20Creyentes%20Quito%202026" class="hover:text-yellow-400 transition" data-i18n="nav.reservar">Reservar</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="toggle-pill" id="lang-toggle" onclick="switchLang(currentLang==='es'?'en':'es')">
+          <span id="lang-es" class="active">ES</span>
+          <span id="lang-en">EN</span>
+        </div>
+        <div class="toggle-pill" id="theme-toggle" onclick="toggleTheme()">
+          <span id="theme-dark" class="active"><i data-lucide="moon" class="w-3 h-3 inline"></i></span>
+          <span id="theme-light"><i data-lucide="sun" class="w-3 h-3 inline"></i></span>
+        </div>
+        <a href="mailto:contacto@metodologia.info?subject=Reserva%20CAO%20Bootcamp%20%E2%80%94%20Edici%C3%B3n%20Creyentes%20Quito%202026"
+           class="btn-gold py-2 px-5 text-sm">
+          <i data-lucide="calendar-check" class="w-4 h-4"></i>
+          <span data-i18n="nav.cta">Reservar</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================================================================
+       S2: HERO — Split Layout
+       ================================================================ -->
+  <section id="hero" class="min-h-screen flex items-center section-pad pt-32 relative overflow-hidden">
+    <div class="ambient-circle" style="width:600px;height:600px;background:var(--gold);top:-200px;right:-200px;"></div>
+    <div class="ambient-circle" style="width:400px;height:400px;background:#163A6A;bottom:-100px;left:-100px;"></div>
+
+    <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+      <div class="grid lg:grid-cols-5 gap-12 items-center hero-grid">
+        <!-- LEFT Content (3 cols) -->
+        <div class="lg:col-span-3 reveal">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold mb-6"
+            style="background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.2);color:var(--gold);">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+            <span data-i18n="hero.badge">Convocatoria Creyentes &middot; Solo 5 Plazas &middot; Quito</span>
+          </div>
+
+          <h1 class="font-heading font-black leading-tight mb-2" style="font-size:clamp(2.5rem,5.5vw,5rem);">
+            <span style="color:var(--text-primary)">C</span><span class="gold-text">A</span><span style="color:var(--text-primary)">O </span><span class="gold-text">Bootcamp</span>
+          </h1>
+          <p class="font-heading text-xl md:text-2xl font-medium mb-6" style="color:var(--text-secondary);" data-i18n="hero.sub">Chief Agentic Officer</p>
+          <div class="gold-divider" style="margin:0 0 1.5rem 0;"></div>
+
+          <p class="text-base md:text-lg leading-relaxed mb-8 max-w-xl" style="color:var(--text-secondary);" data-i18n="hero.body">
+            Su semana esta llena de reuniones, reportes, seguimiento y correos. La IA puede ejecutar el 60% de eso por usted. Este bootcamp le instala un sistema operativo agenticoo personal, disenado a su medida, que trabaja mientras usted decide, negocia y lidera.
+          </p>
+
+          <!-- KPI Cards with counter animation -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+            <div class="kpi-card glass" data-counter="20" data-suffix="h">
+              <div class="kpi-value gold-text"><span class="counter-val">0</span>h</div>
+              <div class="kpi-label" data-i18n="hero.kpi1">Contenido intensivo</div>
+            </div>
+            <div class="kpi-card glass" data-counter="13" data-suffix="">
+              <div class="kpi-value gold-text"><span class="counter-val">0</span></div>
+              <div class="kpi-label" data-i18n="hero.kpi2">Asistentes IA</div>
+            </div>
+            <div class="kpi-card glass" data-counter="1" data-suffix="">
+              <div class="kpi-value gold-text"><span class="counter-val">0</span></div>
+              <div class="kpi-label" data-i18n="hero.kpi3">Agente Propio</div>
+            </div>
+            <div class="kpi-card glass" data-counter="6" data-suffix="" data-prefix="3-">
+              <div class="kpi-value gold-text">3-<span class="counter-val">0</span></div>
+              <div class="kpi-label" data-i18n="hero.kpi4">Semanas</div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="mailto:contacto@metodologia.info?subject=Reserva%20CAO%20Bootcamp%20%E2%80%94%20Edici%C3%B3n%20Creyentes%20Quito%202026" class="btn-gold">
+              <i data-lucide="rocket" class="w-4 h-4"></i>
+              <span data-i18n="hero.cta1">Reservar Plaza</span>
+            </a>
+            <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40metodologia.info"
+               target="_blank" rel="noopener" class="btn-ghost">
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+              <span data-i18n="hero.cta2">Asistir al Taller</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT Investment Card (2 cols) -->
+        <div class="lg:col-span-2 hero-card-col reveal">
+          <div class="glass glow-border pulse-glow p-8 rounded-2xl">
+            <p class="text-xs uppercase tracking-widest font-semibold mb-4" style="color:var(--gold);" data-i18n="hero.card.label">Su sistema agenticoo a medida</p>
+            <div class="flex items-baseline gap-3 mb-1">
+              <span class="font-heading text-2xl font-bold" style="color:var(--text-muted);text-decoration:line-through;opacity:0.5;">$1,990 USD</span>
+            </div>
+            <div class="flex items-baseline gap-2 mb-2">
+              <span class="font-heading font-black gold-text" style="font-size:3.5rem;">$1,490</span>
+              <span class="text-sm font-semibold" style="color:var(--gold);">USD</span>
+            </div>
+            <p class="text-xs mb-6" style="color:var(--text-muted);" data-i18n="hero.card.rate">Edicion Creyentes</p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="hero.card.c1">9 sesiones x 2h (20h de contenido)</span></li>
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="hero.card.c2">13 asistentes IA personalizados</span></li>
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="hero.card.c3">1 agente Pristino propio</span></li>
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="hero.card.c4">Networking Q3 ejecutivos Quito</span></li>
+              <li class="flex items-start gap-3 text-sm" style="color:var(--text-secondary);"><i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--gold);"></i><span data-i18n="hero.card.c5">Valor separado: $4,511+ USD</span></li>
+            </ul>
+            <a href="mailto:contacto@metodologia.info?subject=Reserva%20CAO%20Bootcamp%20%E2%80%94%20Edici%C3%B3n%20Creyentes%20Quito%202026" class="btn-gold w-full justify-center">
+              <span data-i18n="hero.card.cta">Reservar Ahora</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-16 reveal">
+        <a href="#carta" style="color:var(--text-muted);text-decoration:none;font-size:0.95rem;" data-i18n="hero.punchline">Conozca la convocatoria</a>
+        <div class="mt-3 bounce-slow inline-block"><i data-lucide="chevron-down" class="w-5 h-5" style="color:var(--gold);"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S3: CARTA PERSONAL
+       ================================================================ -->
+  <section id="carta" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-2xl mx-auto px-6 reveal">
+      <div class="glass p-10 rounded-2xl" style="border-color:rgba(255,215,0,0.1);">
+        <p class="text-xs uppercase tracking-widest font-bold mb-2" style="color:var(--gold);" data-i18n="carta.badge">Convocatoria Creyentes</p>
+        <p class="font-heading text-lg font-bold mb-6" style="color:var(--text-primary);" data-i18n="carta.count">1 de 13 convocados</p>
+        <div class="text-sm leading-relaxed space-y-4" style="color:var(--text-secondary);" data-i18n-html="carta.body">
+          <p style="color:var(--text-primary);font-weight:600;">Le escribimos desde MetodologIA para invitarle al inicio de una ola de (R)Evolucion Digital que esta por empezar en Quito. Buscamos 13 directivos para una convocatoria exclusiva. El primer paso: un taller Zero Risk de 3 horas. Sin inversion economica.</p>
+          <p>La brecha entre directivos que operan con IA y los que no se amplia cada trimestre. Este programa la cierra instalando un sistema agenticoo personal &mdash; agente propio + 13 asistentes + segundo cerebro digital &mdash; en 9 sesiones de co-creacion.</p>
+          <p>No le pedimos mas horas. Le devolvemos las que hoy consume lo operativo. El taller <strong style="color:var(--text-primary);">Zero Risk</strong> demuestra esto en 3 horas, con su contexto laboral real. Domingo de Pascua 2026.</p>
+          <p style="color:var(--text-primary);font-weight:600;">Esta es la unica edicion a puerta cerrada del anio. Solo 5 de los 13 convocados accederan a la Edicion Creyentes ($1,490 USD). Javier Montanio facilita personalmente. Cuando se confirmen los primeros 5, se cerrara esta convocatoria. Desde julio, el CAO Bootcamp pasa a formato de calendario academico abierto &mdash; otra energia, otro precio ($1,990).</p>
+          <p>En paralelo, el Programa de Empoderamiento ya esta en convocatoria para su equipo tactico &mdash; gerentes y mandos medios con 7+ anios de experiencia (ciclos cada 3 meses desde mayo, 20% de graduados CAO + organico). Workshop publico mensual desde mayo (gratuito).</p>
+        </div>
+        <div class="mt-6 flex items-center gap-4">
+          <div class="flex -space-x-2">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#0B2545;border:2px solid var(--gold);z-index:1;position:relative;">JM</div>
+            <div class="w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold" style="background:rgba(255,215,0,0.15);color:var(--gold);border:2px solid var(--gold);">CJ</div>
+          </div>
+          <div>
+            <p class="text-sm font-bold" style="color:var(--text-primary);">Javier Montanio & Cristhian Jarrin</p>
+            <p class="text-xs" style="color:var(--text-muted);">MetodologIA &middot; contacto@metodologia.info</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S4: POR QUE AHORA — Data Pills Strip
+       ================================================================ -->
+  <section style="padding:4rem 0;background:var(--bg-primary);">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-8 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--gold);" data-i18n="why.hook">Por que ahora</p>
+        <div class="gold-divider"></div>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6 data-pills-row reveal">
+        <div class="data-pill">
+          <span class="pill-value">$89M</span>
+          <span class="pill-label" data-i18n="why.p1">TAM en Ecuador</span>
+        </div>
+        <div class="data-pill">
+          <span class="pill-value">0</span>
+          <span class="pill-label" data-i18n="why.p2">Competidores directos en Ecuador</span>
+        </div>
+        <div class="data-pill">
+          <span class="pill-value">18h/sem</span>
+          <span class="pill-label" data-i18n="why.p3">Horas recuperadas con IA agenticoa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S5: JOURNEY — 3 Componentes. 1 Sistema.
+       ================================================================ -->
+  <section id="journey" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--gold);" data-i18n="journey.hook">Su Ruta de (R)Evolucion</p>
+        <h2 class="font-heading font-bold mb-3" style="color:var(--text-primary);font-size:clamp(1.75rem,4vw,2.75rem);" data-i18n="journey.title">3 Componentes. 1 Sistema.</h2>
+        <div class="gold-divider"></div>
+        <p class="text-base mt-4 max-w-2xl mx-auto" style="color:var(--text-secondary);" data-i18n="journey.subtitle">Tres componentes independientes en grupos cerrados de hasta 13 personas. Cada uno cierra una brecha distinta.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 journey-grid">
+        <!-- Card 0: Workshop -->
+        <div class="glass p-7 reveal">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">0</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);" data-i18n="journey.l0.tag">Taller &middot; 3 horas</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l0.title">De Ocupado a Productivo</h3>
+          <p class="text-sm font-semibold mb-2" style="color:var(--green);" data-i18n="journey.l0.price">Sin inversion economica</p>
+          <p class="text-sm mb-5 leading-relaxed" style="color:var(--text-secondary);" data-i18n="journey.l0.desc">3 horas. Domingo de Pascua 2026. Construimos un agente con su contexto laboral real, en dupla con Gemini Gems + NotebookLM. 13 plazas.</p>
+          <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40metodologia.info"
+             target="_blank" rel="noopener" class="btn-ghost w-full text-sm">
+            <i data-lucide="calendar-plus" class="w-4 h-4"></i> <span data-i18n="journey.l0.cta">Inscribirse</span>
+          </a>
+        </div>
+
+        <!-- Card 1: CAO Bootcamp (Recommended) -->
+        <div class="glass p-7 reveal glow-border" style="position:relative;">
+          <div style="position:absolute;top:14px;right:14px;">
+            <span class="px-3 py-1 rounded-full text-xs font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#0B2545;" data-i18n="journey.l2.badge">Recomendado</span>
+          </div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#0B2545;">1</span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--gold);" data-i18n="journey.l2.tag">Bootcamp &middot; 20h</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold mb-2" style="color:var(--text-primary);" data-i18n="journey.l2.title2">Edicion Creyentes</h3>
+          <div class="flex items-baseline gap-2 mb-2">
+            <span class="text-lg font-heading font-bold" style="color:var(--text-muted);text-decoration:line-through;opacity:0.5;">$1,990</span>
+            <span class="text-3xl font-heading font-black gold-text">$1,490</span>
+            <span class="text-xs" style="color:var(--text-muted);">USD</span>
+          </div>
+          <p class="text-xs mb-2" style="color:var(--text-secondary);">Solo / Dupla / Terna</p>
+          <p class="text-sm mb-2 leading-relaxed" style="color:var(--text-secondary);" data-i18n="journey.l2.desc">20h en 4-10 semanas. 13 asistentes IA, agente Pristino, segundo cerebro digital, networking Q3. Formato personalizado.</p>
+          <p class="text-xs mb-5" style="color:var(--gold);font-weight:600;">Unica edicion a puerta cerrada del anio. Desde julio: calendario academico abierto ($1,990).</p>
+          <a href="mailto:contacto@metodologia.info?subject=Reserva%20CAO%20Bootcamp%20%E2%80%94%20Edici%C3%B3n%20Creyentes%20Quito%202026"
+             class="btn-gold w-full text-sm">
+            <i data-lucide="rocket" class="w-4 h-4"></i> <span data-i18n="journey.l2.cta">Reservar Plaza</span>
+          </a>
+        </div>
+
+        <!-- Card 2: Empoderamiento -->
+        <div class="glass p-7 reveal">
+          <div style="position:absolute;top:14px;right:14px;" class="relative">
+            <span class="px-3 py-1 rounded-full text-xs font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);">7+ anios exp.</span>
+          </div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold" style="background:rgba(255,215,0,0.1);color:var(--gold);"><i data-lucide="users" class="w-4 h-4"></i></span>
+            <span class="text-xs uppercase tracking-wider font-semibold" style="color:var(--text-muted);" data-i18n="journey.l3.tag">Programa &middot; 16 sem</span>
+          </div>
+          <h3 class="font-heading text-lg font-bold mb-1" style="color:var(--text-primary);" data-i18n="journey.l3.title">Programa de Empoderamiento</h3>
+          <p class="text-xs font-semibold mb-2" style="color:var(--gold);">Adopcion IA para su equipo tactico</p>
+          <div class="flex items-baseline gap-2 mb-2">
+            <span class="text-lg font-heading font-bold" style="color:var(--text-muted);text-decoration:line-through;opacity:0.5;">$1,990</span>
+            <span class="text-2xl font-heading font-black gold-text">$1,490</span>
+            <span class="text-xs" style="color:var(--text-muted);">USD</span>
+          </div>
+          <p class="text-sm mb-5 leading-relaxed" style="color:var(--text-secondary);" data-i18n="journey.l3.desc">16 semanas desde mayo. Puerta cerrada (in-company) o publico abierto. Gerentes y mandos medios con 5+ anios de experiencia en gestion. 13 plazas.</p>
+          <a href="mailto:contacto@metodologia.info?subject=Consulta%20Programa%20Empoderamiento%20%E2%80%94%20MetodologIA" class="btn-ghost w-full text-sm">
+            <i data-lucide="mail" class="w-4 h-4"></i> <span data-i18n="journey.l3.cta">Consultar</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Asistentes bar -->
+      <div class="glass p-5 mt-6 flex items-center gap-4 reveal max-w-3xl mx-auto">
+        <i data-lucide="puzzle" class="w-5 h-5 flex-shrink-0" style="color:var(--gold);"></i>
+        <p class="text-sm" style="color:var(--text-secondary);"><strong style="color:var(--text-primary);">Asistentes a Medida:</strong> $347 USD c/u. Los 13 asistentes base ya estan incluidos en el bootcamp.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S6: VISUAL TIMELINE
+       ================================================================ -->
+  <section id="timeline" class="section-pad" style="background:var(--bg-primary);">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--gold);">Calendario 2026</p>
+        <h2 class="font-heading font-bold" style="color:var(--text-primary);font-size:clamp(1.5rem,3.5vw,2.25rem);">Tu ruta en el tiempo</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="timeline-track reveal">
+        <div class="timeline-node">
+          <div class="timeline-dot active">5</div>
+          <div class="timeline-label">
+            <span class="tl-month">ABR 5</span>
+            <span class="tl-title">Workshop Zero Risk</span>
+            <span class="tl-desc">Taller gratuito, 3h, Pascua</span>
+          </div>
+        </div>
+        <div class="timeline-node">
+          <div class="timeline-dot">ABR</div>
+          <div class="timeline-label">
+            <span class="tl-month">Abril</span>
+            <span class="tl-title">Edicion Creyentes</span>
+            <span class="tl-desc">5 directivos, puerta cerrada</span>
+          </div>
+        </div>
+        <div class="timeline-node">
+          <div class="timeline-dot">MAY</div>
+          <div class="timeline-label">
+            <span class="tl-month">Mayo</span>
+            <span class="tl-title">CAO Abierto + Empoderamiento</span>
+            <span class="tl-desc">Workshop mensual + ciclos</span>
+          </div>
+        </div>
+        <div class="timeline-node">
+          <div class="timeline-dot">JUL</div>
+          <div class="timeline-label">
+            <span class="tl-month">Julio</span>
+            <span class="tl-title">Calendario Academico</span>
+            <span class="tl-desc">$1,990 USD, formato abierto</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S7: 9 USE CASES GRID
+       ================================================================ -->
+  <section id="usecases" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--gold);">Lo que construira</p>
+        <h2 class="font-heading font-bold mb-3" style="color:var(--text-primary);font-size:clamp(1.75rem,4vw,2.75rem);">9 Casos de Uso en 3 Fases</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <!-- Phase labels -->
+      <div class="grid md:grid-cols-3 gap-6 uc-grid">
+        <!-- FOUNDATIONS -->
+        <div class="space-y-4 reveal">
+          <p class="text-xs uppercase tracking-widest font-bold text-center mb-2" style="color:var(--gold);">Fase 1: Fundamentos</p>
+          <div class="glass p-5 uc-card">
+            <div class="flex items-center gap-3 mb-2"><i data-lucide="brain" class="w-5 h-5" style="color:var(--gold);"></i><h4 class="font-heading font-bold text-sm" style="color:var(--text-primary);">Segundo Cerebro Digital</h4></div>
+            <div class="uc-expand"><p class="text-xs" style="color:var(--text-secondary);">Centralice conocimiento en NotebookLM. Consulte, sintetice y genere insights desde su propia base documental.</p></div>
+          </div>
+          <div class="glass p-5 uc-card">
+            <div class="flex items-center gap-3 mb-2"><i data-lucide="bot" class="w-5 h-5" style="color:var(--gold);"></i><h4 class="font-heading font-bold text-sm" style="color:var(--text-primary);">Asistente de Correo</h4></div>
+            <div class="uc-expand"><p class="text-xs" style="color:var(--text-secondary);">Triaje automatico, borradores inteligentes y seguimiento de compromisos extraidos de su bandeja.</p></div>
+          </div>
+          <div class="glass p-5 uc-card">
+            <div class="flex items-center gap-3 mb-2"><i data-lucide="file-text" class="w-5 h-5" style="color:var(--gold);"></i><h4 class="font-heading font-bold text-sm" style="color:var(--text-primary);">Generador de Reportes</h4></div>
+            <div class="uc-expand"><p class="text-xs" style="color:var(--text-secondary);">Transforme datos crudos en reportes ejecutivos con narrativa, graficos y recomendaciones en minutos.</p></div>
+          </div>
+        </div>
+
+        <!-- INTEGRATION -->
+        <div class="space-y-4 reveal">
+          <p class="text-xs uppercase tracking-widest font-bold text-center mb-2" style="color:var(--gold);">Fase 2: Integracion</p>
+          <div class="glass p-5 uc-card">
+            <div class="flex items-center gap-3 mb-2"><i data-lucide="calendar" class="w-5 h-5" style="color:var(--gold);"></i><h4 class="font-heading font-bold text-sm" style="color:var(--text-primary);">Gestor de Agenda</h4></div>
+            <div class="uc-expand"><p class="text-xs" style="color:var(--text-secondary);">Optimice bloques de tiempo, prepare contexto pre-reunion y genere minutas automaticas post-reunion.</p></div>
+          </div>
+          <div class="glass p-5 uc-card">
+            <div class="flex items-center gap-3 mb-2"><i data-lucide="search" class="w-5 h-5" style="color:var(--gold);"></i><h4 class="font-heading font-bold text-sm" style="color:var(--text-primary);">Investigador de Mercado</h4></div>
+            <div class="uc-expand"><p class="text-xs" style="color:var(--text-secondary);">Deep research automatizado: competidores, tendencias, regulacion. Resultados resumidos y accionables.</p></div>
+          </div>
+          <div class="glass p-5 uc-card">
+            <div class="flex items-center gap-3 mb-2"><i data-lucide="git-branch" class="w-5 h-5" style="color:var(--gold);"></i><h4 class="font-heading font-bold text-sm" style="color:var(--text-primary);">Coordinador de Proyectos</h4></div>
+            <div class="uc-expand"><p class="text-xs" style="color:var(--text-secondary);">Seguimiento de hitos, alertas de riesgo y dashboards de avance generados desde sus herramientas actuales.</p></div>
+          </div>
+        </div>
+
+        <!-- MASTERY -->
+        <div class="space-y-4 reveal">
+          <p class="text-xs uppercase tracking-widest font-bold text-center mb-2" style="color:var(--gold);">Fase 3: Maestria</p>
+          <div class="glass p-5 uc-card">
+            <div class="flex items-center gap-3 mb-2"><i data-lucide="bar-chart-3" class="w-5 h-5" style="color:var(--gold);"></i><h4 class="font-heading font-bold text-sm" style="color:var(--text-primary);">Analista Financiero</h4></div>
+            <div class="uc-expand"><p class="text-xs" style="color:var(--text-secondary);">Modelos de proyeccion, analisis de escenarios y alertas sobre desviaciones presupuestarias.</p></div>
+          </div>
+          <div class="glass p-5 uc-card">
+            <div class="flex items-center gap-3 mb-2"><i data-lucide="megaphone" class="w-5 h-5" style="color:var(--gold);"></i><h4 class="font-heading font-bold text-sm" style="color:var(--text-primary);">Estratega de Comunicacion</h4></div>
+            <div class="uc-expand"><p class="text-xs" style="color:var(--text-secondary);">Contenido para stakeholders, presentaciones ejecutivas y narrativas de cambio adaptadas a cada audiencia.</p></div>
+          </div>
+          <div class="glass p-5 uc-card">
+            <div class="flex items-center gap-3 mb-2"><i data-lucide="zap" class="w-5 h-5" style="color:var(--gold);"></i><h4 class="font-heading font-bold text-sm" style="color:var(--text-primary);">Agente Pristino (Capstone)</h4></div>
+            <div class="uc-expand"><p class="text-xs" style="color:var(--text-secondary);">Su agente personal orquesta todos los asistentes. Open source, local, auditable. Suyo para siempre.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S8: MODALIDADES COMPARATOR
+       ================================================================ -->
+  <section id="modalidades" class="section-pad" style="background:var(--bg-primary);">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--gold);">Elija su formato</p>
+        <h2 class="font-heading font-bold mb-3" style="color:var(--text-primary);font-size:clamp(1.5rem,3.5vw,2.25rem);">Modalidades del CAO Bootcamp</h2>
+        <div class="gold-divider"></div>
+        <p class="text-sm mt-4" style="color:var(--text-secondary);">Mismo precio ($1,490 Creyentes / $1,990 Academico). Diferente dinamica.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 modal-grid reveal">
+        <!-- Solo -->
+        <div class="glass p-7 text-center">
+          <div class="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center" style="background:rgba(255,215,0,0.1);"><i data-lucide="user" class="w-6 h-6" style="color:var(--gold);"></i></div>
+          <h3 class="font-heading font-bold text-lg mb-2" style="color:var(--text-primary);">Solo</h3>
+          <p class="text-xs uppercase tracking-wider font-semibold mb-3" style="color:var(--gold);">1:1 con facilitador</p>
+          <ul class="text-sm space-y-2 text-left" style="color:var(--text-secondary);">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--green);"></i>Atencion 100% personalizada</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--green);"></i>Ritmo flexible a su agenda</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--green);"></i>Confidencialidad total</li>
+          </ul>
+        </div>
+        <!-- Dupla -->
+        <div class="glass p-7 text-center">
+          <div class="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center" style="background:rgba(255,215,0,0.1);"><i data-lucide="users" class="w-6 h-6" style="color:var(--gold);"></i></div>
+          <h3 class="font-heading font-bold text-lg mb-2" style="color:var(--text-primary);">Dupla</h3>
+          <p class="text-xs uppercase tracking-wider font-semibold mb-3" style="color:var(--gold);">2 directivos</p>
+          <ul class="text-sm space-y-2 text-left" style="color:var(--text-secondary);">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--green);"></i>Aprendizaje colaborativo</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--green);"></i>Casos cruzados enriquecen</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--green);"></i>Accountability mutua</li>
+          </ul>
+        </div>
+        <!-- Terna -->
+        <div class="glass p-7 text-center">
+          <div class="w-14 h-14 rounded-full mx-auto mb-4 flex items-center justify-center" style="background:rgba(255,215,0,0.1);"><i data-lucide="users-2" class="w-6 h-6" style="color:var(--gold);"></i></div>
+          <h3 class="font-heading font-bold text-lg mb-2" style="color:var(--text-primary);">Terna</h3>
+          <p class="text-xs uppercase tracking-wider font-semibold mb-3" style="color:var(--gold);">3 directivos</p>
+          <ul class="text-sm space-y-2 text-left" style="color:var(--text-secondary);">
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--green);"></i>Red de apoyo inmediata</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--green);"></i>Diversidad de perspectivas</li>
+            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:var(--green);"></i>Dinamica de mastermind</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S9: PRISTINO — Agent Section
+       ================================================================ -->
+  <section id="pristino" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center pristino-grid">
+        <div class="reveal flex justify-center">
+          <div class="relative">
+            <div class="w-64 h-64 rounded-3xl flex items-center justify-center"
+                 style="background:linear-gradient(135deg,rgba(0,200,255,0.08),rgba(255,215,0,0.06));box-shadow: 0 0 60px rgba(0,200,255,0.12), 0 0 120px rgba(255,215,0,0.06);">
+              <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                <circle cx="60" cy="60" r="50" stroke="url(#pristGrad)" stroke-width="2" fill="none"/>
+                <defs><linearGradient id="pristGrad"><stop offset="0%" stop-color="#00C8FF"/><stop offset="100%" stop-color="#FFD700"/></linearGradient></defs>
+                <circle cx="60" cy="45" r="16" fill="rgba(255,215,0,0.15)" stroke="#FFD700" stroke-width="1.5"/>
+                <path d="M35 85c0-14 11-25 25-25s25 11 25 25" stroke="#FFD700" stroke-width="1.5" fill="none"/>
+                <circle cx="42" cy="60" r="3" fill="#00C8FF"/><circle cx="78" cy="60" r="3" fill="#00C8FF"/>
+                <circle cx="60" cy="75" r="3" fill="#FFD700"/>
+              </svg>
+            </div>
+            <div class="absolute inset-0 rounded-3xl" style="border:1px solid rgba(255,215,0,0.15);"></div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--gold);">Su Agente Personal</p>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4" style="color:var(--text-primary);">Pristino</h2>
+          <div class="gold-divider" style="margin:0 0 1.5rem 0;"></div>
+          <p class="text-base leading-relaxed mb-6" style="color:var(--text-secondary);">
+            Open Source, auditable, sin cajas negras. Corre en local. Suyo para siempre. Se instala en el Workshop Zero Risk y se personaliza a profundidad en el CAO Bootcamp. Lee sus documentos, prepara reportes, ejecuta analisis &mdash; todo bajo su control.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 rounded-full text-sm font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Open Source</span>
+            <span class="px-4 py-2 rounded-full text-sm font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Local</span>
+            <span class="px-4 py-2 rounded-full text-sm font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Auditable</span>
+            <span class="px-4 py-2 rounded-full text-sm font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Suyo para siempre</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S10: ROI CALCULATOR
+       ================================================================ -->
+  <section id="roi" class="section-pad" style="background:var(--bg-primary);">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-10 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--gold);">Retorno Proyectado</p>
+        <h2 class="font-heading font-bold mb-3" style="color:var(--text-primary);font-size:clamp(1.5rem,3.5vw,2.25rem);">Calculadora de ROI</h2>
+        <div class="gold-divider"></div>
+        <p class="text-xs mt-3" style="color:var(--text-muted);">(proyeccion ilustrativa &mdash; resultados varian segun perfil)</p>
+      </div>
+
+      <div class="glass p-8 glow-border reveal">
+        <!-- Slider: Hours -->
+        <div class="mb-8">
+          <div class="flex justify-between items-baseline mb-2">
+            <label class="text-sm font-semibold" style="color:var(--text-primary);">Horas operativas recuperadas/semana</label>
+            <span class="font-heading font-bold text-lg gold-text" id="roi-hours-val">18</span>
+          </div>
+          <input type="range" min="5" max="30" value="18" class="roi-slider" id="roi-hours" oninput="updateROI()">
+          <div class="flex justify-between text-xs mt-1" style="color:var(--text-muted);"><span>5h</span><span>30h</span></div>
+        </div>
+
+        <!-- Slider: Rate -->
+        <div class="mb-8">
+          <div class="flex justify-between items-baseline mb-2">
+            <label class="text-sm font-semibold" style="color:var(--text-primary);">Valor hora directiva (USD)</label>
+            <span class="font-heading font-bold text-lg gold-text" id="roi-rate-val">$60</span>
+          </div>
+          <input type="range" min="20" max="200" value="60" step="5" class="roi-slider" id="roi-rate" oninput="updateROI()">
+          <div class="flex justify-between text-xs mt-1" style="color:var(--text-muted);"><span>$20</span><span>$200</span></div>
+        </div>
+
+        <!-- Results -->
+        <div class="grid grid-cols-3 gap-4 mb-6">
+          <div class="glass p-5 text-center">
+            <div class="font-heading font-bold text-2xl gold-text" id="roi-monthly">$4,320</div>
+            <p class="text-xs mt-1" style="color:var(--text-muted);">Valor mensual</p>
+          </div>
+          <div class="glass p-5 text-center">
+            <div class="font-heading font-bold text-2xl gold-text" id="roi-payback">~10 dias</div>
+            <p class="text-xs mt-1" style="color:var(--text-muted);">Payback</p>
+          </div>
+          <div class="glass p-5 text-center">
+            <div class="font-heading font-bold text-2xl gold-text" id="roi-annual">$51,840</div>
+            <p class="text-xs mt-1" style="color:var(--text-muted);">Valor anual</p>
+          </div>
+        </div>
+
+        <!-- Bar chart -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-xs w-20 text-right" style="color:var(--text-muted);">Inversion</span>
+            <div class="roi-bar" id="roi-bar-inv" style="width:8%;background:var(--border-color);"></div>
+            <span class="text-xs" style="color:var(--text-muted);" id="roi-bar-inv-label">$1,490</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-xs w-20 text-right" style="color:var(--text-muted);">Mes 1</span>
+            <div class="roi-bar" id="roi-bar-m1" style="width:22%;background:linear-gradient(90deg,var(--gold),var(--gold-dark));"></div>
+            <span class="text-xs" style="color:var(--gold);" id="roi-bar-m1-label">$4,320</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-xs w-20 text-right" style="color:var(--text-muted);">Anual</span>
+            <div class="roi-bar" id="roi-bar-yr" style="width:90%;background:linear-gradient(90deg,var(--gold),var(--gold-dark));"></div>
+            <span class="text-xs" style="color:var(--gold);" id="roi-bar-yr-label">$51,840</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S11: COMPETENCIA TABLE
+       ================================================================ -->
+  <section id="competencia" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--gold);">Comparativa de mercado</p>
+        <h2 class="font-heading font-bold mb-3" style="color:var(--text-primary);font-size:clamp(1.5rem,3.5vw,2.25rem);">MetodologIA vs. Alternativas</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="overflow-x-auto reveal">
+        <table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border-color);">
+              <th style="padding:0.75rem;text-align:left;color:var(--text-muted);font-weight:600;"></th>
+              <th style="padding:0.75rem;text-align:center;color:var(--gold);font-weight:700;">MetodologIA</th>
+              <th style="padding:0.75rem;text-align:center;color:var(--text-muted);font-weight:600;">IDE / Plataforma</th>
+              <th style="padding:0.75rem;text-align:center;color:var(--text-muted);font-weight:600;">Universidad Local</th>
+              <th style="padding:0.75rem;text-align:center;color:var(--text-muted);font-weight:600;">Big 4 Consulting</th>
+              <th style="padding:0.75rem;text-align:center;color:var(--text-muted);font-weight:600;">Coursera / EdTech</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;color:var(--text-secondary);font-weight:600;">Precio</td>
+              <td style="padding:0.75rem;text-align:center;color:var(--gold);font-weight:700;">$1,490</td>
+              <td style="padding:0.75rem;text-align:center;color:var(--text-secondary);">$0-$20/mes</td>
+              <td style="padding:0.75rem;text-align:center;color:var(--text-secondary);">$3,000-$8,000</td>
+              <td style="padding:0.75rem;text-align:center;color:var(--text-secondary);">$15,000+</td>
+              <td style="padding:0.75rem;text-align:center;color:var(--text-secondary);">$49-$79/mes</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;color:var(--text-secondary);font-weight:600;">Duracion</td>
+              <td style="padding:0.75rem;text-align:center;color:var(--gold);font-weight:700;">3-6 semanas</td>
+              <td style="padding:0.75rem;text-align:center;color:var(--text-secondary);">Autodirigido</td>
+              <td style="padding:0.75rem;text-align:center;color:var(--text-secondary);">6-12 meses</td>
+              <td style="padding:0.75rem;text-align:center;color:var(--text-secondary);">8-16 semanas</td>
+              <td style="padding:0.75rem;text-align:center;color:var(--text-secondary);">4-8 semanas</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;color:var(--text-secondary);font-weight:600;">Entregable al cierre</td>
+              <td style="padding:0.75rem;text-align:center;"><i data-lucide="check-circle-2" class="w-4 h-4 inline" style="color:var(--green);"></i> <span style="color:var(--gold);font-weight:600;">Sistema agenticoo operando</span></td>
+              <td style="padding:0.75rem;text-align:center;color:var(--text-secondary);">Herramienta sin contexto</td>
+              <td style="padding:0.75rem;text-align:center;color:var(--text-secondary);">Certificado</td>
+              <td style="padding:0.75rem;text-align:center;color:var(--text-secondary);">Reporte + factura</td>
+              <td style="padding:0.75rem;text-align:center;color:var(--text-secondary);">Certificado</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color);">
+              <td style="padding:0.75rem;color:var(--text-secondary);font-weight:600;">Personalizado</td>
+              <td style="padding:0.75rem;text-align:center;"><i data-lucide="check-circle-2" class="w-4 h-4 inline" style="color:var(--green);"></i></td>
+              <td style="padding:0.75rem;text-align:center;"><i data-lucide="x-circle" class="w-4 h-4 inline" style="color:var(--red);"></i></td>
+              <td style="padding:0.75rem;text-align:center;"><i data-lucide="x-circle" class="w-4 h-4 inline" style="color:var(--red);"></i></td>
+              <td style="padding:0.75rem;text-align:center;"><i data-lucide="check-circle-2" class="w-4 h-4 inline" style="color:var(--green);"></i></td>
+              <td style="padding:0.75rem;text-align:center;"><i data-lucide="x-circle" class="w-4 h-4 inline" style="color:var(--red);"></i></td>
+            </tr>
+            <tr>
+              <td style="padding:0.75rem;color:var(--text-secondary);font-weight:600;">Agente propio incluido</td>
+              <td style="padding:0.75rem;text-align:center;"><i data-lucide="check-circle-2" class="w-4 h-4 inline" style="color:var(--green);"></i></td>
+              <td style="padding:0.75rem;text-align:center;"><i data-lucide="x-circle" class="w-4 h-4 inline" style="color:var(--red);"></i></td>
+              <td style="padding:0.75rem;text-align:center;"><i data-lucide="x-circle" class="w-4 h-4 inline" style="color:var(--red);"></i></td>
+              <td style="padding:0.75rem;text-align:center;"><i data-lucide="x-circle" class="w-4 h-4 inline" style="color:var(--red);"></i></td>
+              <td style="padding:0.75rem;text-align:center;"><i data-lucide="x-circle" class="w-4 h-4 inline" style="color:var(--red);"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S12: OBJECTIONS ACCORDION
+       ================================================================ -->
+  <section id="objeciones" class="section-pad" style="background:var(--bg-primary);">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-10 reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-3" style="color:var(--gold);">Transparencia</p>
+        <h2 class="font-heading font-bold mb-3" style="color:var(--text-primary);font-size:clamp(1.5rem,3.5vw,2.25rem);">Lo que probablemente esta pensando</h2>
+        <div class="gold-divider"></div>
+      </div>
+
+      <div class="reveal">
+        <div class="acc-item">
+          <div class="acc-trigger" onclick="toggleAcc(this)">
+            <div class="flex items-center gap-3">
+              <i data-lucide="clock" class="w-5 h-5 flex-shrink-0" style="color:var(--gold);"></i>
+              <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">"No tengo tiempo"</span>
+            </div>
+            <i data-lucide="chevron-down" class="w-4 h-4 acc-chevron" style="color:var(--text-muted);"></i>
+          </div>
+          <div class="acc-body"><p class="text-sm pb-4 leading-relaxed" style="color:var(--text-secondary);">Son 2 horas por semana donde construimos su sistema EN VIVO. No hay trabajo extra: usted llega, co-creamos, y lo que se construye en sesion es lo que opera despues. Si no tuviera tiempo, seria exactamente la persona que mas lo necesita.</p></div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-trigger" onclick="toggleAcc(this)">
+            <div class="flex items-center gap-3">
+              <i data-lucide="refresh-ccw" class="w-5 h-5 flex-shrink-0" style="color:var(--gold);"></i>
+              <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">"Ya probe IA y no funciono"</span>
+            </div>
+            <i data-lucide="chevron-down" class="w-4 h-4 acc-chevron" style="color:var(--text-muted);"></i>
+          </div>
+          <div class="acc-body"><p class="text-sm pb-4 leading-relaxed" style="color:var(--text-secondary);">La mayoria de ejecutivos prueban herramientas aisladas. El CAO Bootcamp no le da herramientas &mdash; le instala un sistema integrado donde 13 asistentes + 1 agente + 1 segundo cerebro trabajan coordinados con su contexto real.</p></div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-trigger" onclick="toggleAcc(this)">
+            <div class="flex items-center gap-3">
+              <i data-lucide="shield-question" class="w-5 h-5 flex-shrink-0" style="color:var(--gold);"></i>
+              <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">"No soy tecnico"</span>
+            </div>
+            <i data-lucide="chevron-down" class="w-4 h-4 acc-chevron" style="color:var(--text-muted);"></i>
+          </div>
+          <div class="acc-body"><p class="text-sm pb-4 leading-relaxed" style="color:var(--text-secondary);">Este programa esta disenado para directivos, no para ingenieros. Si sabe usar correo electronico y participar en una videollamada, tiene las habilidades tecnicas suficientes.</p></div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-trigger" onclick="toggleAcc(this)">
+            <div class="flex items-center gap-3">
+              <i data-lucide="banknote" class="w-5 h-5 flex-shrink-0" style="color:var(--gold);"></i>
+              <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">"Es muy caro"</span>
+            </div>
+            <i data-lucide="chevron-down" class="w-4 h-4 acc-chevron" style="color:var(--text-muted);"></i>
+          </div>
+          <div class="acc-body"><p class="text-sm pb-4 leading-relaxed" style="color:var(--text-secondary);">$1,490 con payback en ~10 dias. El valor separado de los componentes supera los $4,511. Ademas, 100% de devolucion si no cumple expectativas antes de las primeras 4 horas. Pago fraccionado: 50% despues de 4h + 50% al cierre. 10% descuento pago anticipado.</p></div>
+        </div>
+
+        <div class="acc-item">
+          <div class="acc-trigger" onclick="toggleAcc(this)">
+            <div class="flex items-center gap-3">
+              <i data-lucide="users" class="w-5 h-5 flex-shrink-0" style="color:var(--gold);"></i>
+              <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">"Mi equipo lo necesita, no yo"</span>
+            </div>
+            <i data-lucide="chevron-down" class="w-4 h-4 acc-chevron" style="color:var(--text-muted);"></i>
+          </div>
+          <div class="acc-body"><p class="text-sm pb-4 leading-relaxed" style="color:var(--text-secondary);">Exacto. Por eso existe el Programa de Empoderamiento ($1,490, 16 semanas). Pero la adopcion agenticoa en una organizacion empieza desde arriba. Si usted no lidera con el ejemplo, su equipo no seguira. El CAO Bootcamp lo prepara para ser ese ejemplo.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S13: AMBASSADOR PROGRAM
+       ================================================================ -->
+  <section style="padding:4rem 0;background:var(--bg-secondary);">
+    <div class="max-w-3xl mx-auto px-6 reveal">
+      <div class="glass p-8 ambassador-glow rounded-2xl">
+        <div class="flex items-center gap-3 mb-4">
+          <i data-lucide="award" class="w-6 h-6" style="color:var(--gold);"></i>
+          <h3 class="font-heading font-bold text-xl" style="color:var(--text-primary);">Programa Embajador MetodologIA</h3>
+        </div>
+        <p class="text-sm leading-relaxed mb-4" style="color:var(--text-secondary);">
+          Al graduarse del CAO Bootcamp, tiene la opcion de certificarse como Embajador MetodologIA. 50% de descuento en programas para embajadores. Co-cree entornos de abundancia y genere ingresos facilitando programas en su red.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">50% descuento embajador</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Ruta de graduado</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background:rgba(255,215,0,0.1);color:var(--gold);">Habilitador de servicios</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S14: WORKSHOP + COUNTDOWN
+       ================================================================ -->
+  <section id="workshop" class="section-pad" style="background:var(--bg-primary);">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="glass p-10 text-center glow-border reveal">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold mb-6"
+          style="background:rgba(255,215,0,0.1);border:1px solid rgba(255,215,0,0.2);color:var(--gold);">
+          <i data-lucide="gift" class="w-3.5 h-3.5"></i> Zero Risk
+        </div>
+
+        <h2 class="font-heading font-bold mb-4" style="color:var(--text-primary);font-size:clamp(1.5rem,3.5vw,2.25rem);">De Ocupado a Productivo con Agentes de IA</h2>
+        <div class="gold-divider"></div>
+
+        <!-- Countdown -->
+        <div class="flex justify-center gap-6 mt-6 mb-6" id="countdown">
+          <div class="cd-block"><span class="cd-val gold-text" id="cd-days">--</span><span class="cd-unit">Dias</span></div>
+          <div class="cd-block"><span class="cd-val gold-text" id="cd-hours">--</span><span class="cd-unit">Horas</span></div>
+          <div class="cd-block"><span class="cd-val gold-text" id="cd-mins">--</span><span class="cd-unit">Min</span></div>
+          <div class="cd-block"><span class="cd-val gold-text" id="cd-secs">--</span><span class="cd-unit">Seg</span></div>
+        </div>
+
+        <p class="text-base mb-4 max-w-xl mx-auto" style="color:var(--text-secondary);">Zero Risk significa exactamente eso: cero exposicion economica para usted. Solo 3 horas donde construimos algo real con IA &mdash; juntos.</p>
+
+        <!-- 3 reasons -->
+        <div class="grid grid-cols-3 gap-4 mb-6 text-center">
+          <div><i data-lucide="shield" class="w-5 h-5 mx-auto mb-1" style="color:var(--gold);"></i><p class="text-xs" style="color:var(--text-secondary);">Cero riesgo economico</p></div>
+          <div><i data-lucide="zap" class="w-5 h-5 mx-auto mb-1" style="color:var(--gold);"></i><p class="text-xs" style="color:var(--text-secondary);">Resultado tangible en 3h</p></div>
+          <div><i data-lucide="user" class="w-5 h-5 mx-auto mb-1" style="color:var(--gold);"></i><p class="text-xs" style="color:var(--text-secondary);">Javier Montanio facilita</p></div>
+        </div>
+
+        <!-- Agenda mini -->
+        <div class="glass p-4 mb-6 text-left text-sm max-w-md mx-auto" style="color:var(--text-secondary);">
+          <p class="font-bold mb-2" style="color:var(--text-primary);">Agenda</p>
+          <p>0:00 - 0:30 &mdash; Contexto y objetivos</p>
+          <p>0:30 - 1:30 &mdash; Construccion de agente en dupla</p>
+          <p>1:30 - 2:30 &mdash; Segundo cerebro digital</p>
+          <p>2:30 - 3:00 &mdash; Integracion y proximos pasos</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-4">
+          <span class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);"><i data-lucide="calendar" class="w-4 h-4" style="color:var(--gold);"></i> Domingo de Pascua, 5 Abril 2026</span>
+          <span class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);"><i data-lucide="clock" class="w-4 h-4" style="color:var(--gold);"></i> 3h</span>
+          <span class="flex items-center gap-2 text-sm" style="color:var(--text-secondary);"><i data-lucide="users" class="w-4 h-4" style="color:var(--gold);"></i> 13 plazas</span>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40metodologia.info"
+             target="_blank" rel="noopener" class="btn-gold">
+            <i data-lucide="calendar-plus" class="w-4 h-4"></i> Confirmar mi asistencia
+          </a>
+          <a href="mailto:contacto@metodologia.info?subject=Pregunta%20Workshop%20Zero%20Risk" class="btn-ghost">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> Tengo una pregunta
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       S15: FINAL CTA
+       ================================================================ -->
+  <section id="final" class="section-pad" style="background:var(--bg-secondary);">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <div class="reveal">
+        <p class="text-xs uppercase tracking-widest font-bold mb-4" style="color:var(--gold);">Quito 2026</p>
+        <h2 class="font-heading font-bold mb-4" style="color:var(--text-primary);font-size:clamp(2rem,5vw,3.5rem);">
+          5 directivos.<br>1 (r)evolucion.<br>Quito 2026.
+        </h2>
+        <div class="gold-divider"></div>
+        <p class="text-lg mb-8 mt-4" style="color:var(--text-secondary);">El primer paso no cuesta nada. Solo requiere que se presente.</p>
+
+        <!-- Payment mini -->
+        <div class="glass p-6 mb-8 max-w-lg mx-auto text-left rounded-xl">
+          <p class="text-xs font-semibold mb-3" style="color:var(--gold);">Formas de Pago</p>
+          <div class="space-y-2 text-sm" style="color:var(--text-secondary);">
+            <p>50% despues de 4h + 50% al cierre. 10% descuento pago anticipado.</p>
+            <p>PayPal o acuerdo puntual.</p>
+            <p style="color:var(--text-primary);font-weight:600;">Garantia: Devolucion del 100% si el servicio no cumple expectativas antes de completar las primeras 4 horas. Unica condicion: 1 hora de retroalimentacion estructurada.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="mailto:contacto@metodologia.info?subject=Reserva%20CAO%20Bootcamp%20%E2%80%94%20Edici%C3%B3n%20Creyentes%20Quito%202026"
+             class="btn-gold" style="padding:1rem 2.5rem;">
+            <i data-lucide="rocket" class="w-5 h-5"></i> Reservar Plaza
+          </a>
+          <a href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=Njd2Y2ZnM2E0MDhvbW9vbTV0ZWc0NHBocWIgY29udGFjdG9AbWV0b2RvbG9naWEuaW5mbw&tmsrc=contacto%40metodologia.info"
+             target="_blank" rel="noopener" class="btn-ghost" style="padding:1rem 2.5rem;">
+            <i data-lucide="play-circle" class="w-5 h-5"></i> Asistir al Taller
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer style="padding:3rem 0;background:var(--bg-primary);border-top:1px solid var(--border-color);">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-2">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+            <defs><linearGradient id="lg3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0A122A"/><stop offset="100%" stop-color="#1E293B"/></linearGradient></defs>
+            <rect width="36" height="36" rx="10" fill="url(#lg3)"/>
+            <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+            <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+          </svg>
+          <span class="font-heading font-bold text-sm" style="color:var(--text-primary);">Metodolog<span class="gold-text">IA</span></span>
+        </div>
+
+        <div class="text-center">
+          <p class="text-xs" style="color:var(--text-muted);">contacto@metodologia.info</p>
+          <p class="text-xs mt-1" style="color:var(--text-muted);">Construido por profesionales, potenciado por la red agenticoa de MetodologIA.</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-x-5 gap-y-2">
+          <a href="https://metodologia.info" target="_blank" rel="noopener" class="text-xs flex items-center gap-1 hover:opacity-80 transition" style="color:var(--text-muted);text-decoration:none;"><i data-lucide="globe" class="w-3 h-3"></i> Web</a>
+          <a href="mailto:contacto@metodologia.info" class="text-xs flex items-center gap-1 hover:opacity-80 transition" style="color:var(--text-muted);text-decoration:none;"><i data-lucide="mail" class="w-3 h-3"></i> Contacto</a>
+        </div>
+      </div>
+
+      <p class="text-xs text-center mt-6 leading-relaxed" style="color:var(--text-muted);">
+        Innovation Mode: este documento fue generado con asistencia de IA y revisado por humanos. Los precios y condiciones estan sujetos a confirmacion final. Todos los precios en USD.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ================================================================
+       JAVASCRIPT
+       ================================================================ -->
+  <script>
+  /* ── STATE ── */
+  let currentLang = 'es';
+
+  /* ── i18n DICTIONARIES ── */
+  const i18n = {
+    es: {
+      'nav.journey': 'Journey',
+      'nav.programa': 'Programa',
+      'nav.roi': 'ROI',
+      'nav.reservar': 'Reservar',
+      'nav.cta': 'Reservar',
+      'hero.badge': 'Convocatoria Creyentes \u00b7 Solo 5 Plazas \u00b7 Quito',
+      'hero.sub': 'Chief Agentic Officer',
+      'hero.body': 'Su semana esta llena de reuniones, reportes, seguimiento y correos. La IA puede ejecutar el 60% de eso por usted. Este bootcamp le instala un sistema operativo agenticoo personal, disenado a su medida, que trabaja mientras usted decide, negocia y lidera.',
+      'hero.kpi1': 'Contenido intensivo',
+      'hero.kpi2': 'Asistentes IA',
+      'hero.kpi3': 'Agente Propio',
+      'hero.kpi4': 'Semanas',
+      'hero.cta1': 'Reservar Plaza',
+      'hero.cta2': 'Asistir al Taller',
+      'hero.punchline': 'Conozca la convocatoria',
+    },
+    en: {
+      'nav.journey': 'Journey',
+      'nav.programa': 'Program',
+      'nav.roi': 'ROI',
+      'nav.reservar': 'Reserve',
+      'nav.cta': 'Reserve',
+      'hero.badge': 'Believers Call \u00b7 Only 5 Seats \u00b7 Quito',
+      'hero.sub': 'Chief Agentic Officer',
+      'hero.body': 'Your week is full of meetings, reports, follow-ups and emails. AI can execute 60% of that for you. This bootcamp installs a personal agentic operating system, tailored to you, that works while you decide, negotiate and lead.',
+      'hero.kpi1': 'Intensive content',
+      'hero.kpi2': 'AI Assistants',
+      'hero.kpi3': 'Your Own Agent',
+      'hero.kpi4': 'Weeks',
+      'hero.cta1': 'Reserve Seat',
+      'hero.cta2': 'Attend Workshop',
+      'hero.punchline': 'Read the invitation',
+    }
+  };
+
+  /* ── LANGUAGE SWITCH ── */
+  function switchLang(lang) {
+    currentLang = lang;
+    document.getElementById('lang-es').classList.toggle('active', lang === 'es');
+    document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (i18n[lang] && i18n[lang][key]) el.textContent = i18n[lang][key];
+    });
+  }
+
+  /* ── THEME TOGGLE ── */
+  function toggleTheme() {
+    const html = document.documentElement;
+    const isLight = html.classList.toggle('light');
+    html.classList.toggle('dark', !isLight);
+    document.getElementById('theme-dark').classList.toggle('active', !isLight);
+    document.getElementById('theme-light').classList.toggle('active', isLight);
+  }
+
+  /* ── SCROLL PROGRESS ── */
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    document.getElementById('scroll-progress').style.width = progress + '%';
+  });
+
+  /* ── REVEAL ON SCROLL ── */
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Trigger counter animation for KPI cards
+        const counters = entry.target.querySelectorAll('[data-counter]');
+        counters.forEach(card => animateCounter(card));
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  /* ── COUNTER ANIMATION ── */
+  function animateCounter(card) {
+    const target = parseInt(card.dataset.counter);
+    const valEl = card.querySelector('.counter-val');
+    if (!valEl || valEl.dataset.done) return;
+    valEl.dataset.done = '1';
+    let current = 0;
+    const step = Math.max(1, Math.floor(target / 30));
+    const interval = setInterval(() => {
+      current += step;
+      if (current >= target) { current = target; clearInterval(interval); }
+      valEl.textContent = current;
+    }, 40);
+  }
+
+  /* ── SIDEBAR NAV HIGHLIGHT ── */
+  const sideLinks = document.querySelectorAll('#side-nav a');
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        sideLinks.forEach(l => l.classList.remove('active'));
+        const id = entry.target.id;
+        const link = document.querySelector(`#side-nav a[data-section="${id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('section[id]').forEach(s => sectionObserver.observe(s));
+
+  /* ── ACCORDION ── */
+  function toggleAcc(trigger) {
+    const body = trigger.nextElementSibling;
+    const chevron = trigger.querySelector('.acc-chevron');
+    const isOpen = body.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.acc-body').forEach(b => b.classList.remove('open'));
+    document.querySelectorAll('.acc-chevron').forEach(c => c.classList.remove('open'));
+    if (!isOpen) {
+      body.classList.add('open');
+      chevron.classList.add('open');
+    }
+  }
+
+  /* ── ROI CALCULATOR ── */
+  function updateROI() {
+    const hours = parseInt(document.getElementById('roi-hours').value);
+    const rate = parseInt(document.getElementById('roi-rate').value);
+    const monthly = hours * rate * 4;
+    const annual = monthly * 12;
+    const paybackDays = Math.max(1, Math.round(1490 / (monthly / 30)));
+
+    document.getElementById('roi-hours-val').textContent = hours;
+    document.getElementById('roi-rate-val').textContent = '$' + rate;
+    document.getElementById('roi-monthly').textContent = '$' + monthly.toLocaleString();
+    document.getElementById('roi-payback').textContent = '~' + paybackDays + ' dias';
+    document.getElementById('roi-annual').textContent = '$' + annual.toLocaleString();
+
+    // Update bars
+    const maxVal = annual;
+    document.getElementById('roi-bar-inv').style.width = Math.max(4, (1490 / maxVal) * 100) + '%';
+    document.getElementById('roi-bar-m1').style.width = Math.max(4, (monthly / maxVal) * 100) + '%';
+    document.getElementById('roi-bar-yr').style.width = '90%';
+    document.getElementById('roi-bar-inv-label').textContent = '$1,490';
+    document.getElementById('roi-bar-m1-label').textContent = '$' + monthly.toLocaleString();
+    document.getElementById('roi-bar-yr-label').textContent = '$' + annual.toLocaleString();
+  }
+
+  /* ── COUNTDOWN to April 5 2026 ── */
+  function updateCountdown() {
+    const target = new Date('2026-04-05T09:00:00-05:00').getTime();
+    const now = Date.now();
+    const diff = target - now;
+    if (diff <= 0) {
+      document.getElementById('cd-days').textContent = '0';
+      document.getElementById('cd-hours').textContent = '0';
+      document.getElementById('cd-mins').textContent = '0';
+      document.getElementById('cd-secs').textContent = '0';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cd-days').textContent = d;
+    document.getElementById('cd-hours').textContent = h;
+    document.getElementById('cd-mins').textContent = m;
+    document.getElementById('cd-secs').textContent = s;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  /* ── INIT LUCIDE ── */
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+    updateROI();
+  });
+  </script>
+</body>
+</html>

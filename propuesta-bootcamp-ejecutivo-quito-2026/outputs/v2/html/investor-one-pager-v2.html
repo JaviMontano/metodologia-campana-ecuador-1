@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetodologIA Ecuador — Investor Brief v2</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='10' fill='%230A122A'/><path d='M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z' fill='white'/><circle cx='18' cy='8' r='2' fill='%23FFD700'/></svg>" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ── RESET ── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* ── BASE ── */
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      line-height: 1.45;
+      background: #0B2545;
+      color: #F0F4F8;
+    }
+
+    /* ── PAGE CONTAINER ── */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      max-height: 297mm;
+      margin: 0 auto;
+      padding: 14mm 16mm 10mm 16mm;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #FFD700;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header-left h1 {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .header-left h1 span { color: #FFD700; }
+    .header-sub {
+      font-size: 11px;
+      font-weight: 600;
+      color: #A0B4CC;
+      letter-spacing: 0.04em;
+    }
+    .badge {
+      font-size: 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #FFD700;
+      border: 1px solid #FFD700;
+      border-radius: 3px;
+      padding: 2px 8px;
+      white-space: nowrap;
+    }
+
+    /* ── SECTION TITLES ── */
+    .st {
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #FFD700;
+      margin-bottom: 3px;
+    }
+
+    /* ── GRID HELPERS ── */
+    .row { display: flex; gap: 12px; margin-bottom: 8px; }
+    .col { flex: 1; }
+    .col-2 { flex: 2; }
+    .col-3 { flex: 3; }
+
+    /* ── PROBLEM + SOLUTION ── */
+    .ps-text {
+      font-size: 11px;
+      color: #A0B4CC;
+      line-height: 1.4;
+    }
+    .ps-text strong { color: #F0F4F8; }
+
+    /* ── KPI ROW ── */
+    .kpi-row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+    .kpi {
+      flex: 1;
+      text-align: center;
+      background: rgba(255,215,0,0.06);
+      border: 1px solid rgba(255,215,0,0.15);
+      border-radius: 5px;
+      padding: 5px 4px;
+    }
+    .kpi .val {
+      font-size: 20px;
+      font-weight: 800;
+      color: #FFD700;
+      line-height: 1.1;
+    }
+    .kpi .lbl {
+      font-size: 8px;
+      color: #6B8AB0;
+      margin-top: 1px;
+      line-height: 1.2;
+    }
+    .market-sub {
+      font-size: 9px;
+      color: #6B8AB0;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    /* ── PRODUCTS ── */
+    .products {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .prod-card {
+      flex: 1;
+      background: rgba(255,215,0,0.04);
+      border: 1px solid rgba(255,215,0,0.12);
+      border-radius: 5px;
+      padding: 5px 8px;
+    }
+    .prod-card .prod-name {
+      font-size: 10px;
+      font-weight: 700;
+      color: #F0F4F8;
+      margin-bottom: 1px;
+    }
+    .prod-card .prod-price {
+      font-size: 13px;
+      font-weight: 800;
+      color: #FFD700;
+    }
+    .prod-card .prod-desc {
+      font-size: 8px;
+      color: #6B8AB0;
+      line-height: 1.3;
+    }
+
+    /* ── REVENUE SPLIT BAR ── */
+    .split-bar {
+      display: flex;
+      border-radius: 4px;
+      overflow: hidden;
+      height: 22px;
+      margin: 4px 0;
+      font-size: 8px;
+      font-weight: 700;
+    }
+    .split-bar div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0B2545;
+    }
+    .s-coach { width: 50%; background: #FFD700; }
+    .s-franchise { width: 20%; background: #FFA000; }
+    .s-ip { width: 10%; background: #FFE44D; }
+    .s-commercial { width: 20%; background: #D4A017; }
+
+    /* ── TABLES ── */
+    table { width: 100%; border-collapse: collapse; font-size: 10px; }
+    th {
+      text-align: left;
+      font-size: 8px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #FFD700;
+      padding: 3px 5px;
+      border-bottom: 1px solid rgba(255,215,0,0.2);
+    }
+    td {
+      padding: 2px 5px;
+      color: #A0B4CC;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    tr:last-child td { border-bottom: none; }
+    .r-right { text-align: right; }
+    .bold-row td { font-weight: 700; color: #F0F4F8; }
+    .alt-row { background: rgba(255,255,255,0.02); }
+
+    /* ── FINANCIAL SUMMARY ── */
+    .fin-table th { background: rgba(255,215,0,0.06); }
+
+    /* ── MOAT PILLARS ── */
+    .moat-grid {
+      display: flex;
+      gap: 8px;
+      margin-top: 3px;
+    }
+    .moat-pill {
+      flex: 1;
+      background: rgba(255,215,0,0.05);
+      border-left: 3px solid #FFD700;
+      border-radius: 0 4px 4px 0;
+      padding: 4px 7px;
+    }
+    .moat-pill .moat-title {
+      font-size: 9px;
+      font-weight: 700;
+      color: #F0F4F8;
+      margin-bottom: 1px;
+    }
+    .moat-pill .moat-desc {
+      font-size: 8px;
+      color: #6B8AB0;
+      line-height: 1.3;
+    }
+
+    /* ── SCALING + TEAM + ASK ── */
+    .scaling-line {
+      font-size: 10px;
+      color: #A0B4CC;
+      background: rgba(255,215,0,0.04);
+      border-left: 3px solid #FFD700;
+      border-radius: 0 4px 4px 0;
+      padding: 4px 8px;
+      margin-bottom: 6px;
+    }
+    .scaling-line strong { color: #F0F4F8; }
+
+    .team-item {
+      font-size: 10px;
+      margin-bottom: 2px;
+    }
+    .team-item strong { color: #F0F4F8; }
+    .team-item .pct { color: #FFD700; font-weight: 700; }
+    .team-item span { color: #6B8AB0; }
+
+    .ask-box {
+      background: rgba(255,215,0,0.06);
+      border: 1px solid rgba(255,215,0,0.2);
+      border-radius: 5px;
+      padding: 6px 10px;
+      margin-bottom: 6px;
+    }
+    .ask-box p {
+      font-size: 10px;
+      color: #A0B4CC;
+      line-height: 1.4;
+    }
+    .ask-box strong { color: #F0F4F8; }
+    .ask-box .ask-amount {
+      font-size: 14px;
+      font-weight: 800;
+      color: #FFD700;
+    }
+    .ask-box .ask-equity {
+      color: #FFD700;
+      font-weight: 600;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      position: absolute;
+      bottom: 10mm;
+      left: 16mm;
+      right: 16mm;
+      padding-top: 5px;
+      border-top: 1px solid rgba(255,215,0,0.15);
+    }
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-contact {
+      font-size: 10px;
+      font-weight: 600;
+      color: #A0B4CC;
+    }
+    .footer-conf {
+      font-size: 8px;
+      color: #6B8AB0;
+    }
+    .footer-tagline {
+      font-size: 9px;
+      color: #6B8AB0;
+      text-align: center;
+      margin-top: 2px;
+    }
+    .footer-disclaimer {
+      font-size: 7px;
+      color: #4A6A8C;
+      text-align: center;
+      margin-top: 2px;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,215,0,0.1);
+      margin: 6px 0;
+    }
+
+    /* ══════════════════════════════════════ */
+    /* ── PRINT STYLES ── */
+    /* ══════════════════════════════════════ */
+    @media print {
+      html, body {
+        background: #fff;
+        color: #1a1a1a;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
+      }
+      .page {
+        padding: 10mm 14mm 8mm 14mm;
+        width: 100%;
+      }
+      .header {
+        border-bottom-color: #B8860B;
+      }
+      .header-left h1 span { color: #B8860B; }
+      .header-sub { color: #555; }
+      .badge { color: #B8860B; border-color: #B8860B; }
+      .st { color: #B8860B; }
+      .ps-text { color: #444; }
+      .ps-text strong { color: #1a1a1a; }
+      .kpi {
+        background: #fdf8e8;
+        border-color: #ddd;
+      }
+      .kpi .val { color: #B8860B; }
+      .kpi .lbl { color: #666; }
+      .market-sub { color: #666; }
+      .prod-card {
+        background: #fdf8e8;
+        border-color: #ddd;
+      }
+      .prod-card .prod-name { color: #1a1a1a; }
+      .prod-card .prod-price { color: #B8860B; }
+      .prod-card .prod-desc { color: #666; }
+      .split-bar div { color: #fff; }
+      th { color: #B8860B; }
+      td { color: #444; }
+      .bold-row td { color: #1a1a1a; }
+      .alt-row { background: #f8f8f8; }
+      .fin-table th { background: #fdf8e8; }
+      .moat-pill {
+        background: #fdf8e8;
+        border-left-color: #B8860B;
+      }
+      .moat-pill .moat-title { color: #1a1a1a; }
+      .moat-pill .moat-desc { color: #555; }
+      .scaling-line {
+        background: #fdf8e8;
+        border-left-color: #B8860B;
+        color: #444;
+      }
+      .scaling-line strong { color: #1a1a1a; }
+      .team-item strong { color: #1a1a1a; }
+      .team-item .pct { color: #B8860B; }
+      .team-item span { color: #555; }
+      .ask-box {
+        background: #fdf8e8;
+        border-color: #ddd;
+      }
+      .ask-box p { color: #444; }
+      .ask-box strong { color: #1a1a1a; }
+      .ask-box .ask-amount { color: #B8860B; }
+      .ask-box .ask-equity { color: #B8860B; }
+      .footer { border-top-color: #ddd; }
+      .footer-contact { color: #444; }
+      .footer-conf { color: #888; }
+      .footer-tagline { color: #888; }
+      .footer-disclaimer { color: #aaa; }
+      .divider { border-top-color: #e0e0e0; }
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ══ 1. HEADER ══ -->
+    <div class="header">
+      <div class="header-left">
+        <svg width="34" height="34" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+          <rect width="36" height="36" rx="10" fill="#0A122A"/>
+          <path d="M10 12h3v12h-3V12zm6 0h3v8h-3v-8zm0 10h3v2h-3v-2zm6-10h3v6h-3v-6zm0 8h3v4h-3v-4z" fill="white"/>
+          <circle cx="18" cy="8" r="2" fill="#FFD700"/>
+        </svg>
+        <div>
+          <h1><span>MetodologIA</span> Ecuador</h1>
+          <div class="header-sub">Investor Brief &mdash; Abril 2026</div>
+        </div>
+      </div>
+      <div class="badge">Confidencial</div>
+    </div>
+
+    <!-- ══ 2. PROBLEM + SOLUTION ══ -->
+    <div class="row">
+      <div class="col">
+        <div class="st">El Problema</div>
+        <p class="ps-text">Ejecutivos en LatAm saben que necesitan IA pero no saben como operarla. El mercado de formacion ejecutiva en IA en Ecuador es <strong>virgen</strong> &mdash; sin operadores serios pese a un TAM de $89M.</p>
+      </div>
+      <div class="col">
+        <div class="st">La (R)Evolucion</div>
+        <p class="ps-text">Instalamos <strong>sistemas agénticos personales</strong> para directivos: agente propio + 13 asistentes IA + segundo cerebro digital. No ensenamos IA &mdash; instalamos un <strong>sistema operativo</strong> que trabaja mientras el ejecutivo lidera.</p>
+      </div>
+    </div>
+
+    <!-- ══ 3. MARKET ══ -->
+    <div class="st">Mercado</div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="val">$89M</div>
+        <div class="lbl">TAM Ecuador</div>
+      </div>
+      <div class="kpi">
+        <div class="val">$14.9M</div>
+        <div class="lbl">SAM</div>
+      </div>
+      <div class="kpi">
+        <div class="val">$136K</div>
+        <div class="lbl">SOM Year 1</div>
+      </div>
+      <div class="kpi">
+        <div class="val">27-40x</div>
+        <div class="lbl">LTV/CAC</div>
+      </div>
+    </div>
+    <div class="market-sub">Global AI Corp Training: $1.5B &rarr; $10.4B by 2033 &nbsp;|&nbsp; LatAm: 7.7% ($280M) &nbsp;|&nbsp; Ecuador: mercado virgen</div>
+
+    <!-- ══ 4. PRODUCTS ══ -->
+    <div class="st">Productos</div>
+    <div class="products">
+      <div class="prod-card">
+        <div class="prod-name">Taller Zero Risk</div>
+        <div class="prod-price">Gratis</div>
+        <div class="prod-desc">Funnel de entrada. Demostracion del sistema agéntico en vivo.</div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-name">CAO Bootcamp</div>
+        <div class="prod-price">$1,490 &ndash; $1,990</div>
+        <div class="prod-desc">Puerta Cerrada (anual, $1,490) + Calendario Académico (bimestral, $1,990).</div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-name">Empoderamiento</div>
+        <div class="prod-price">$1,490</div>
+        <div class="prod-desc">Programa de profundizacion por persona. Expansion post-CAO.</div>
+      </div>
+    </div>
+
+    <!-- ══ 5. BUSINESS MODEL ══ -->
+    <div class="row">
+      <div class="col">
+        <div class="st">Modelo de Negocio</div>
+        <p style="font-size:9px;color:#A0B4CC;margin-bottom:3px">Revenue share por cierre &mdash; cero salarios, cero costos fijos:</p>
+        <div class="split-bar">
+          <div class="s-coach">Coach 50%</div>
+          <div class="s-franchise">Franquicia 20%</div>
+          <div class="s-ip">IP 10%</div>
+          <div class="s-commercial">Comercial 20%</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="st">4 Flujos de Revenue</div>
+        <table>
+          <tr><th>Segmento</th><th class="r-right">Y1</th><th class="r-right">Y2</th></tr>
+          <tr><td>B2C (CAO + Emp + Asistentes)</td><td class="r-right">$86,849</td><td class="r-right">$150,000</td></tr>
+          <tr class="alt-row"><td>B2B (grupos corp)</td><td class="r-right">$13,200</td><td class="r-right">$98,400</td></tr>
+          <tr><td>B2B2B Cobrand (4x ticket)</td><td class="r-right">$36,000</td><td class="r-right">$96,000</td></tr>
+          <tr class="alt-row"><td>White Label</td><td class="r-right">$0</td><td class="r-right">$90,500</td></tr>
+          <tr class="bold-row"><td>Total</td><td class="r-right">$136,049</td><td class="r-right">$434,900</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- ══ 6. FINANCIAL SUMMARY ══ -->
+    <div class="st">Resumen Financiero</div>
+    <table class="fin-table">
+      <tr><th>Metrica</th><th class="r-right">Year 1</th><th class="r-right">Year 2</th><th class="r-right">24 Meses</th></tr>
+      <tr><td>Revenue</td><td class="r-right">$136,049</td><td class="r-right">$434,900</td><td class="r-right">$570,949</td></tr>
+      <tr class="alt-row"><td>Costos</td><td class="r-right">$9,756</td><td class="r-right">~$15,000</td><td class="r-right">~$25,000</td></tr>
+      <tr class="bold-row"><td>Net Income</td><td class="r-right">~$126,293</td><td class="r-right">~$420,000</td><td class="r-right">~$546,000</td></tr>
+      <tr class="alt-row"><td>Ejecutivos atendidos</td><td class="r-right">52</td><td class="r-right">150+</td><td class="r-right">200+</td></tr>
+    </table>
+    <p style="font-size:8px;color:#6B8AB0;margin-top:2px">Burn mensual: $813 &nbsp;|&nbsp; Break-even: Mes 1 (1 cierre) &nbsp;|&nbsp; Si el operador hace todo: 90% para el</p>
+
+    <hr class="divider">
+
+    <!-- ══ 7. COMPETITIVE MOAT ══ -->
+    <div class="st">Ventaja Competitiva</div>
+    <div class="moat-grid">
+      <div class="moat-pill">
+        <div class="moat-title">Entregable Funcional</div>
+        <div class="moat-desc">Unico programa que entrega un agente IA funcional, no solo teoria. El graduado sale con sistema operativo instalado.</div>
+      </div>
+      <div class="moat-pill">
+        <div class="moat-title">Spanish-First, LatAm</div>
+        <div class="moat-desc">Contenido nativo en espanol con contexto de negocios latinoamericano. Sin traduccion, sin friccion cultural.</div>
+      </div>
+      <div class="moat-pill">
+        <div class="moat-title">Flywheel Embajadores</div>
+        <div class="moat-desc">Cada graduado es facilitador potencial certificado. Motor de escalamiento organico a costo cero.</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ══ 8. SCALING ══ -->
+    <div class="st">Escalamiento</div>
+    <div class="scaling-line">
+      Flywheel: <strong>33 graduados Y1 &rarr; 15-20 embajadores activos &rarr; 12+ cierres adicionales Y2.</strong> Mas graduados &rarr; mas embajadores &rarr; mas programas &rarr; mas graduados.
+    </div>
+
+    <!-- ══ 9. TEAM + 10. ASK ══ -->
+    <div class="row">
+      <div class="col">
+        <div class="st">Equipo</div>
+        <div class="team-item"><strong>Javier Montano</strong> <span class="pct">(19%)</span> &mdash; <span>Creador del metodo. 27 GPTs, agente Pristino (OSS), 180+ prompts. Lead facilitator.</span></div>
+        <div class="team-item"><strong>Cristian Jarrin</strong> <span class="pct">(51%)</span> &mdash; <span>Co-Founder Ecuador. Operador territorial. Titular de franquicia.</span></div>
+        <div class="team-item"><strong>MetodologIA Holding</strong> <span class="pct">(30%)</span> &mdash; <span>IP, marca, metodo, licenciamiento.</span></div>
+      </div>
+      <div class="col">
+        <div class="st">The Ask</div>
+        <div class="ask-box">
+          <p><strong>Autosuficiente desde el Mes 1.</strong> $813 burn vs $10,430 revenue M1.</p>
+          <p style="margin-top:3px">Opcional: <span class="ask-amount">$25K &ndash; $50K</span> seed a <span class="ask-equity">[POR CONFIRMAR]%</span> equity para aceleracion (equipo comercial, expansion multi-ciudad, marketing).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ 11. FOOTER ══ -->
+    <div class="footer">
+      <div class="footer-row">
+        <div class="footer-contact">contacto@metodologia.info &nbsp;&middot;&nbsp; metodologia.info</div>
+        <div class="footer-conf">Documento Confidencial &mdash; Prohibida su distribucion sin autorizacion</div>
+      </div>
+      <div class="footer-tagline">MetodologIA &mdash; Formacion ejecutiva en IA. (R)Evolucion, con intencion.</div>
+      <div class="footer-disclaimer">Innovation Mode &middot; Todos los precios en USD &middot; Proyecciones ilustrativas &mdash; resultados dependen de ejecucion</div>
+    </div>
+
+  </div>
+</body>
+</html>

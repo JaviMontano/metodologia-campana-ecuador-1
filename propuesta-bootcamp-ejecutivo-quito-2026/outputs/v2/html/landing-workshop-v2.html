@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>De Ocupado a Productivo con Agentes de IA — MetodologIA Quito 2026</title>
+  <meta name="description" content="Taller gratuito de 3 horas. Construimos un agente IA con su contexto laboral real. 13 plazas. Domingo de Pascua, 5 de abril 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0B2545;
+      --navy-deep: #071A33;
+      --navy-dark: #020617;
+      --gold: #FFD700;
+      --gold-dark: #FFA000;
+      --gold-soft: #FFE44D;
+      --blue: #137DC5;
+      --white: #FFFFFF;
+      --light: #F8F9FC;
+      --gray: #94A3B8;
+      --text-primary: #F1F5F9;
+      --text-secondary: #94A3B8;
+      --bg-primary: #020617;
+      --bg-card: rgba(15, 23, 42, 0.6);
+      --border: rgba(255, 215, 0, 0.15);
+      --glass: rgba(15, 23, 42, 0.4);
+      --radius: 12px;
+      --font-display: 'Poppins', Arial, sans-serif;
+      --font-body: 'Trebuchet MS', Arial, sans-serif;
+    }
+
+    html.light {
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --bg-primary: #F8FAFC;
+      --bg-card: rgba(255, 255, 255, 0.8);
+      --border: rgba(184, 134, 11, 0.2);
+      --glass: rgba(255, 255, 255, 0.6);
+      --gold: #B8860B;
+      --gold-dark: #8B6914;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- NAV --- */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 20px;
+      background: var(--glass);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .logo { font-family: var(--font-display); font-weight: 700; font-size: 14px; color: var(--text-primary); }
+    nav .logo span { color: var(--gold); }
+    nav .controls { display: flex; gap: 12px; align-items: center; }
+    nav button {
+      background: none; border: 1px solid var(--border); border-radius: 8px;
+      padding: 6px 10px; cursor: pointer; font-size: 13px;
+      color: var(--text-secondary); transition: all 0.2s;
+    }
+    nav button:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* --- SCROLL PROGRESS --- */
+    .scroll-progress {
+      position: fixed; top: 56px; left: 0; height: 2px; z-index: 99;
+      background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+      width: 0; transition: width 0.1s;
+    }
+
+    /* --- SECTIONS --- */
+    section { padding: 80px 20px; max-width: 720px; margin: 0 auto; }
+    .mt-nav { margin-top: 56px; }
+
+    /* --- HERO --- */
+    .hero {
+      text-align: center;
+      padding: 120px 20px 80px;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(255,215,0,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero .badge {
+      display: inline-block;
+      font-family: var(--font-display); font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 2px;
+      color: var(--gold); border: 1px solid var(--border);
+      padding: 6px 16px; border-radius: 20px; margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(28px, 6vw, 44px);
+      line-height: 1.15; margin-bottom: 16px;
+    }
+    .hero h1 .gold { color: var(--gold); }
+    .hero .subtitle {
+      font-size: 18px; color: var(--text-secondary);
+      margin-bottom: 32px; max-width: 540px; margin-left: auto; margin-right: auto;
+    }
+
+    /* --- COUNTDOWN --- */
+    .countdown {
+      display: flex; justify-content: center; gap: 16px;
+      margin-bottom: 40px;
+    }
+    .countdown .unit {
+      text-align: center;
+    }
+    .countdown .number {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: 36px; color: var(--gold);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      width: 72px; height: 72px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .countdown .label {
+      font-size: 11px; color: var(--text-secondary);
+      text-transform: uppercase; letter-spacing: 1px;
+      margin-top: 6px;
+    }
+
+    /* --- KPI STRIP --- */
+    .kpi-strip {
+      display: flex; justify-content: center; gap: 32px;
+      flex-wrap: wrap; margin-bottom: 40px;
+    }
+    .kpi-strip .kpi {
+      text-align: center;
+    }
+    .kpi-strip .kpi-value {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: 28px; color: var(--gold);
+    }
+    .kpi-strip .kpi-label {
+      font-size: 12px; color: var(--text-secondary);
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+
+    /* --- CTA --- */
+    .cta-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-display); font-weight: 600; font-size: 14px;
+      padding: 14px 28px; border-radius: var(--radius);
+      text-decoration: none; cursor: pointer; transition: all 0.2s;
+      border: none;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: #0B2545;
+    }
+    .btn-gold:hover { box-shadow: 0 8px 30px rgba(255,215,0,0.3); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent; border: 1px solid var(--border);
+      color: var(--text-primary);
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* --- CARDS --- */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    }
+    .card h3 {
+      font-family: var(--font-display); font-weight: 600;
+      font-size: 18px; margin-bottom: 8px;
+    }
+    .card p { color: var(--text-secondary); font-size: 15px; }
+    .card .icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px; font-size: 20px;
+      background: rgba(255,215,0,0.1); color: var(--gold);
+    }
+
+    .cards-grid {
+      display: grid; gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    /* --- AGENDA --- */
+    .agenda-item {
+      display: flex; gap: 20px; padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .agenda-item:last-child { border-bottom: none; }
+    .agenda-time {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: 14px; color: var(--gold);
+      min-width: 60px;
+    }
+    .agenda-title {
+      font-family: var(--font-display); font-weight: 600;
+      font-size: 16px; margin-bottom: 4px;
+    }
+    .agenda-desc { font-size: 14px; color: var(--text-secondary); }
+
+    /* --- QUOTE --- */
+    .quote-section {
+      text-align: center; padding: 60px 20px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .quote-text {
+      font-family: var(--font-display); font-size: 20px;
+      font-weight: 600; font-style: italic;
+      color: var(--text-primary); max-width: 500px;
+      margin: 0 auto 12px;
+    }
+    .quote-attr { font-size: 13px; color: var(--text-secondary); }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center; padding: 60px 20px 40px;
+      border-top: 1px solid var(--border);
+    }
+    footer h2 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: clamp(22px, 4vw, 32px);
+      margin-bottom: 8px;
+    }
+    footer h2 .gold { color: var(--gold); }
+    footer .sub { color: var(--text-secondary); font-size: 15px; margin-bottom: 32px; }
+    footer .meta {
+      font-size: 11px; color: var(--text-secondary);
+      margin-top: 40px; line-height: 1.8;
+    }
+
+    /* --- SHARE --- */
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--font-display); font-weight: 600; font-size: 13px;
+      padding: 10px 20px; border-radius: 8px;
+      background: #25D366; color: white;
+      border: none; cursor: pointer; text-decoration: none;
+      transition: all 0.2s;
+    }
+    .share-btn:hover { opacity: 0.9; }
+
+    /* --- REVEAL ANIMATION --- */
+    .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 480px) {
+      .countdown .number { width: 56px; height: 56px; font-size: 28px; }
+      .kpi-strip { gap: 20px; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+
+    /* --- PRINT --- */
+    @media print {
+      nav, .scroll-progress, .share-btn { display: none; }
+      body { background: white; color: #1a1a1a; }
+      .card { border: 1px solid #ddd; background: #fafafa; }
+      .hero::before { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">Metodolog<span>IA</span></div>
+    <div class="controls">
+      <button onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema">
+        <span id="theme-icon">&#9790;</span>
+      </button>
+      <button onclick="toggleLang()" id="lang-btn">EN</button>
+    </div>
+  </nav>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="progress"></div>
+
+  <!-- HERO -->
+  <section class="hero mt-nav">
+    <div class="badge" data-i18n="hero.badge">Taller Gratuito</div>
+    <h1>
+      <span data-i18n="hero.title1">De Ocupado a Productivo</span><br>
+      <span class="gold" data-i18n="hero.title2">con Agentes de IA</span>
+    </h1>
+    <p class="subtitle" data-i18n="hero.subtitle">
+      3 horas. Construimos un agente IA con su contexto laboral real. Sin inversion economica. Solo 13 plazas.
+    </p>
+
+    <!-- COUNTDOWN -->
+    <div class="countdown" id="countdown">
+      <div class="unit">
+        <div class="number" id="cd-days">--</div>
+        <div class="label" data-i18n="cd.days">Dias</div>
+      </div>
+      <div class="unit">
+        <div class="number" id="cd-hours">--</div>
+        <div class="label" data-i18n="cd.hours">Horas</div>
+      </div>
+      <div class="unit">
+        <div class="number" id="cd-mins">--</div>
+        <div class="label" data-i18n="cd.mins">Min</div>
+      </div>
+      <div class="unit">
+        <div class="number" id="cd-secs">--</div>
+        <div class="label" data-i18n="cd.secs">Seg</div>
+      </div>
+    </div>
+
+    <!-- KPIs -->
+    <div class="kpi-strip">
+      <div class="kpi">
+        <div class="kpi-value">3h</div>
+        <div class="kpi-label" data-i18n="kpi.duration">Duracion</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">13</div>
+        <div class="kpi-label" data-i18n="kpi.spots">Plazas</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">$0</div>
+        <div class="kpi-label" data-i18n="kpi.price">Inversion</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">1</div>
+        <div class="kpi-label" data-i18n="kpi.agent">Agente IA</div>
+      </div>
+    </div>
+
+    <!-- CTAs -->
+    <div class="cta-group">
+      <a href="mailto:contacto@metodologia.info?subject=Reserva%20Taller%20De%20Ocupado%20a%20Productivo%20—%20Quito%202026" class="btn btn-gold" data-i18n="cta.reserve">Reservar Plaza Gratis</a>
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Taller+De+Ocupado+a+Productivo&dates=20260405T140000Z/20260405T170000Z&details=Taller+gratuito+de+3+horas.+Construimos+un+agente+IA+con+tu+contexto+laboral+real.&location=Online" target="_blank" class="btn btn-outline" data-i18n="cta.calendar">Agregar al Calendario</a>
+    </div>
+  </section>
+
+  <!-- 3 REASONS -->
+  <section class="reveal">
+    <h2 style="font-family:var(--font-display);font-weight:700;font-size:24px;margin-bottom:24px;text-align:center;" data-i18n="reasons.title">3 razones para asistir</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="icon">&#9881;</div>
+        <h3 data-i18n="reasons.1.title">Agente funcional en 3 horas</h3>
+        <p data-i18n="reasons.1.desc">No es teoria. Construimos un agente con su contexto laboral real. Se lo lleva funcionando.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#9201;</div>
+        <h3 data-i18n="reasons.2.title">Recupere 18h/semana</h3>
+        <p data-i18n="reasons.2.desc">El sistema agentico ejecuta el 60% de tareas operativas: correos, reportes, seguimiento, agenda.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#9733;</div>
+        <h3 data-i18n="reasons.3.title">Cero competidores en Ecuador</h3>
+        <p data-i18n="reasons.3.desc">Primer programa ejecutivo agentico en el pais. Early access antes que su competencia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENDA -->
+  <section class="reveal">
+    <h2 style="font-family:var(--font-display);font-weight:700;font-size:24px;margin-bottom:24px;" data-i18n="agenda.title">Agenda</h2>
+    <div class="card">
+      <div class="agenda-item">
+        <div class="agenda-time">0:00</div>
+        <div>
+          <div class="agenda-title" data-i18n="agenda.1.title">Contexto y diagnostico</div>
+          <div class="agenda-desc" data-i18n="agenda.1.desc">Evaluamos como trabaja hoy. Identificamos las 3 tareas que mas tiempo consumen. Definimos el perfil de su agente.</div>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">1:00</div>
+        <div>
+          <div class="agenda-title" data-i18n="agenda.2.title">Construccion del agente</div>
+          <div class="agenda-desc" data-i18n="agenda.2.desc">Configuramos Pristino con su contexto real: documentos, correos, calendario. En vivo, con asistencia del facilitador.</div>
+        </div>
+      </div>
+      <div class="agenda-item">
+        <div class="agenda-time">2:00</div>
+        <div>
+          <div class="agenda-title" data-i18n="agenda.3.title">Prueba y proximos pasos</div>
+          <div class="agenda-desc" data-i18n="agenda.3.desc">Ejecutamos el agente con una tarea real. Medimos resultado. Presentamos la ruta CAO Bootcamp para quienes quieran profundizar.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <div class="quote-section reveal">
+    <p class="quote-text" data-i18n="quote.text">"No es hacer mas cosas. Es hacer que las cosas que haces, importen."</p>
+    <p class="quote-attr" data-i18n="quote.attr">MetodologIA — Intencion sobre Intensidad</p>
+  </div>
+
+  <!-- WHAT'S NEXT -->
+  <section class="reveal">
+    <h2 style="font-family:var(--font-display);font-weight:700;font-size:24px;margin-bottom:24px;text-align:center;" data-i18n="next.title">Despues del taller</h2>
+    <div class="cards-grid" style="grid-template-columns:1fr 1fr;">
+      <div class="card">
+        <div style="font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;" data-i18n="next.cao.badge">Recomendado</div>
+        <h3 data-i18n="next.cao.title">CAO Bootcamp</h3>
+        <p style="font-size:24px;font-family:var(--font-display);font-weight:700;color:var(--gold);margin:8px 0;" data-i18n="next.cao.price">$1,490 USD</p>
+        <p data-i18n="next.cao.desc">20 horas en 4-10 semanas. Agente Pristino + 13 asistentes + segundo cerebro digital. Solo 5 plazas en la Edicion Creyentes (abril).</p>
+      </div>
+      <div class="card">
+        <div style="font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;" data-i18n="next.emp.badge">Para equipos</div>
+        <h3 data-i18n="next.emp.title">Empoderamiento</h3>
+        <p style="font-size:24px;font-family:var(--font-display);font-weight:700;color:var(--blue);margin:8px 0;" data-i18n="next.emp.price">$1,490 USD</p>
+        <p data-i18n="next.emp.desc">16 semanas. Para gerentes y mandos medios con 7+ anios de experiencia. Grupos de hasta 13. Desde mayo 2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHARE + FINAL CTA -->
+  <footer class="reveal">
+    <h2>
+      <span data-i18n="footer.title1">13 plazas.</span><br>
+      <span class="gold" data-i18n="footer.title2">1 oportunidad. Quito 2026.</span>
+    </h2>
+    <p class="sub" data-i18n="footer.sub">Las plazas son limitadas. La oportunidad, tambien.</p>
+
+    <div class="cta-group" style="margin-bottom:20px;">
+      <a href="mailto:contacto@metodologia.info?subject=Reserva%20Taller%20De%20Ocupado%20a%20Productivo%20—%20Quito%202026" class="btn btn-gold" data-i18n="cta.reserve">Reservar Plaza Gratis</a>
+    </div>
+
+    <button class="share-btn" onclick="shareWhatsApp()" data-i18n="cta.share">Compartir por WhatsApp</button>
+
+    <div class="meta">
+      <p>contacto@metodologia.info | metodologia.info</p>
+      <p style="margin-top:12px;font-size:10px;max-width:500px;margin-left:auto;margin-right:auto;" data-i18n="footer.disclaimer">Esta es una propuesta de diseno de servicio personalizado. Los precios indicados son indicativos y se confirman antes de la firma del acuerdo de servicios. Este documento no constituye un compromiso de entrega ni un contrato.</p>
+      <p style="margin-top:8px;font-style:italic;font-size:10px;" data-i18n="footer.tagline">Construido por profesionales, potenciado por la red agentica de MetodologIA.</p>
+    </div>
+  </footer>
+
+  <script>
+    // --- COUNTDOWN ---
+    (function countdown() {
+      const target = new Date('2026-04-05T09:00:00-05:00').getTime();
+      function update() {
+        const now = Date.now();
+        const diff = target - now;
+        if (diff <= 0) {
+          document.getElementById('cd-days').textContent = '0';
+          document.getElementById('cd-hours').textContent = '0';
+          document.getElementById('cd-mins').textContent = '0';
+          document.getElementById('cd-secs').textContent = '0';
+          return;
+        }
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('cd-days').textContent = d;
+        document.getElementById('cd-hours').textContent = h;
+        document.getElementById('cd-mins').textContent = String(m).padStart(2, '0');
+        document.getElementById('cd-secs').textContent = String(s).padStart(2, '0');
+      }
+      update();
+      setInterval(update, 1000);
+    })();
+
+    // --- SCROLL PROGRESS ---
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      const p = (window.scrollY / h) * 100;
+      document.getElementById('progress').style.width = p + '%';
+    });
+
+    // --- REVEAL ON SCROLL ---
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // --- THEME TOGGLE ---
+    function toggleTheme() {
+      document.documentElement.classList.toggle('light');
+      document.documentElement.classList.toggle('dark');
+      const icon = document.getElementById('theme-icon');
+      icon.textContent = document.documentElement.classList.contains('light') ? '\u2600' : '\u263E';
+    }
+
+    // --- i18n ---
+    let currentLang = 'es';
+    const i18n = {
+      en: {
+        'hero.badge': 'Free Workshop',
+        'hero.title1': 'From Busy to Productive',
+        'hero.title2': 'with AI Agents',
+        'hero.subtitle': '3 hours. We build an AI agent with your real work context. No economic investment. Only 13 spots.',
+        'cd.days': 'Days', 'cd.hours': 'Hours', 'cd.mins': 'Min', 'cd.secs': 'Sec',
+        'kpi.duration': 'Duration', 'kpi.spots': 'Spots', 'kpi.price': 'Investment', 'kpi.agent': 'AI Agent',
+        'cta.reserve': 'Reserve Free Spot',
+        'cta.calendar': 'Add to Calendar',
+        'reasons.title': '3 reasons to attend',
+        'reasons.1.title': 'Functional agent in 3 hours',
+        'reasons.1.desc': 'Not theory. We build an agent with your real work context. You take it home working.',
+        'reasons.2.title': 'Reclaim 18h/week',
+        'reasons.2.desc': 'The agentic system executes 60% of operational tasks: emails, reports, follow-ups, agenda.',
+        'reasons.3.title': 'Zero competitors in Ecuador',
+        'reasons.3.desc': 'First executive agentic program in the country. Early access before your competition.',
+        'agenda.title': 'Agenda',
+        'agenda.1.title': 'Context and diagnostic',
+        'agenda.1.desc': 'We assess how you work today. Identify the 3 most time-consuming tasks. Define your agent profile.',
+        'agenda.2.title': 'Agent building',
+        'agenda.2.desc': 'We configure Pristino with your real context: documents, emails, calendar. Live, with facilitator assistance.',
+        'agenda.3.title': 'Test and next steps',
+        'agenda.3.desc': 'We run the agent with a real task. Measure results. Present the CAO Bootcamp path for those who want to go deeper.',
+        'quote.text': '"It\'s not about doing more things. It\'s about making the things you do, matter."',
+        'quote.attr': 'MetodologIA — Intention over Intensity',
+        'next.title': 'After the workshop',
+        'next.cao.badge': 'Recommended',
+        'next.cao.title': 'CAO Bootcamp',
+        'next.cao.price': '$1,490 USD',
+        'next.cao.desc': '20 hours over 4-10 weeks. Pristino Agent + 13 assistants + digital second brain. Only 5 spots in the Believers Edition (April).',
+        'next.emp.badge': 'For teams',
+        'next.emp.title': 'Empowerment',
+        'next.emp.price': '$1,490 USD',
+        'next.emp.desc': '16 weeks. For managers and middle management with 7+ years experience. Groups up to 13. From May 2026.',
+        'footer.title1': '13 spots.',
+        'footer.title2': '1 opportunity. Quito 2026.',
+        'footer.sub': 'Spots are limited. The opportunity, too.',
+        'cta.share': 'Share via WhatsApp',
+        'footer.disclaimer': 'This is a customized service design proposal. The indicated prices are indicative and are confirmed before signing the service agreement. This document does not constitute a delivery commitment or a contract.',
+        'footer.tagline': 'Built by professionals, powered by MetodologIA\'s agentic network.'
+      }
+    };
+    const originals = {};
+    document.querySelectorAll('[data-i18n]').forEach(el => { originals[el.getAttribute('data-i18n')] = el.textContent; });
+
+    function toggleLang() {
+      currentLang = currentLang === 'es' ? 'en' : 'es';
+      document.getElementById('lang-btn').textContent = currentLang === 'es' ? 'EN' : 'ES';
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        el.textContent = currentLang === 'en' ? (i18n.en[key] || originals[key]) : originals[key];
+      });
+    }
+
+    // --- WHATSAPP SHARE ---
+    function shareWhatsApp() {
+      const text = currentLang === 'en'
+        ? 'Free workshop: From Busy to Productive with AI Agents. 3 hours, Easter Sunday, Quito 2026. Only 13 spots. Contact: contacto@metodologia.info'
+        : 'Taller gratuito: De Ocupado a Productivo con Agentes de IA. 3 horas, Domingo de Pascua, Quito 2026. Solo 13 plazas. Contacto: contacto@metodologia.info';
+      window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+    }
+  </script>
+
+</body>
+</html>
