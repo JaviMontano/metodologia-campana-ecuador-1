@@ -44,7 +44,7 @@ Your week is full. Meetings, reports, follow-ups, emails. AI can execute 60% of 
 ### Level 0 — "From Busy to Productive" Workshop (Free)
 - 3 hours, Tuesday April 7, 7:00 PM (April 7)
 - We build an agent with your real work context
-- 13 spots. No economic investment
+- 13 spots. No economic investment. Also available Saturday: 9AM-12PM or 2PM-5PM
 - **Function:** Funnel entry point. Fit validation
 
 ### Level 2 — CAO Bootcamp (Recommended)

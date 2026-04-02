@@ -44,7 +44,7 @@ Su semana esta llena. Reuniones, reportes, seguimiento, correos. La IA puede eje
 ### Nivel 0 — Taller "De Ocupado a Productivo" (Gratis)
 - 3 horas, Martes 7 de abril, 7:00 PM (7 de abril)
 - Construimos un agente con su contexto laboral real
-- 13 plazas. Sin inversion economica
+- 13 plazas. Sin inversion economica. Tambien disponible sabado: 9:00-12:00 o 14:00-17:00
 - **Funcion:** Punto de entrada al funnel. Validacion de fit
 
 ### Nivel 2 — CAO Bootcamp (Recomendado)
