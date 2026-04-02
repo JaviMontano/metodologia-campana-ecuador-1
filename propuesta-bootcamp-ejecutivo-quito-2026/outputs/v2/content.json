@@ -52,7 +52,9 @@
         { "es": "2 bibliotecas de prompts (Biblioteca Universal para cualquier profesional + Biblioteca Ejecutiva con prompts de estrategia, decision, delegacion y comunicacion directiva)", "en": "2 prompt libraries (Universal Library for any professional + Executive Library with strategy, decision-making, delegation and executive communication prompts)" },
         { "es": "1 segundo cerebro digital (Instalamos NotebookLM como su memoria externa: organiza documentos, conecta ideas, recupera conocimiento. Disponible 24/7)", "en": "1 digital second brain (We install NotebookLM as your external memory: organizes documents, connects ideas, retrieves knowledge. Available 24/7)" },
         { "es": "9 sesiones de co-creacion (2 horas cada una con facilitador. No es clase magistral: construimos juntos, con su contexto laboral real)", "en": "9 co-creation sessions (2 hours each with facilitator. Not a lecture: we build together, with your real work context)" },
-        { "es": "1 acceso al Campus Virtual MetodologIA (Plataforma con recursos, actualizaciones y comunidad. 1 mes incluido, renovacion opcional)", "en": "1 access to MetodologIA Virtual Campus (Platform with resources, updates and community. 1 month included, optional renewal)" }
+        { "es": "1 acceso al Campus Virtual MetodologIA (Plataforma con recursos, actualizaciones y comunidad. 1 mes incluido, renovacion opcional)", "en": "1 access to MetodologIA Virtual Campus (Platform with resources, updates and community. 1 month included, optional renewal)" },
+        { "es": "Acceso a sesiones de comunidad (1 domingo al mes: workshops de actualizacion. 1 sabado al mes: clinicas de IA en vivo para resolver enredos del dia a dia)", "en": "Access to community sessions (1 Sunday/month: update workshops. 1 Saturday/month: live AI clinics to solve day-to-day tangles)" },
+        { "es": "Acceso opcional a Masterclass 'IA: que esta pasando y como sacarle provecho' (Lunes de Pascua, 6 abril, 7PM. 2 horas. Panorama actual de la IA para directivos)", "en": "Optional access to Masterclass 'AI: what is happening and how to take advantage' (Easter Monday, April 6, 7PM. 2 hours. Current AI landscape for executives)" }
       ],
       "cta_label": { "es": "Reservar Plaza Creyentes", "en": "Reserve Believers Spot" }
     },
@@ -109,6 +111,15 @@
     }
   ],
   "timeline": [
+    {
+      "date": "2026-04-06",
+      "event": { "es": "Masterclass: IA, que esta pasando y como sacarle provecho", "en": "Masterclass: AI, what is happening and how to take advantage" },
+      "description": { "es": "Lunes de Pascua, 6 de abril, 7:00 PM. Acceso opcional. Panorama actual de la IA y como un directivo puede sacarle provecho sin depender de tecnicos.", "en": "Easter Monday, April 6, 7:00 PM. Optional access. Current AI landscape and how an executive can take advantage without depending on technicians." },
+      "audience": { "es": "Directivos + managers", "en": "Executives + managers" },
+      "product_ref": "masterclass",
+      "status": "confirmed",
+      "optional": true
+    },
     {
       "date": "2026-04-07",
       "event": { "es": "Taller De Ocupado a Productivo", "en": "From Busy to Productive Workshop" },

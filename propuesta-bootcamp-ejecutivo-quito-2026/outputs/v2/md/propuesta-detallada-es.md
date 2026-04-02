@@ -46,6 +46,8 @@ El CAO Bootcamp no ensena IA — instala un **sistema de trabajo agentico a medi
 | 5 | **1 segundo cerebro digital** | Instalamos NotebookLM como su memoria externa: organiza documentos, conecta ideas, recupera conocimiento. Disponible 24/7. |
 | 6 | **9 sesiones de co-creacion** | 2 horas cada una con facilitador. No es clase magistral: construimos juntos, con su contexto laboral real. |
 | 7 | **1 acceso al Campus Virtual** | Plataforma MetodologIA con recursos, actualizaciones y comunidad. 1 mes incluido, renovacion opcional. |
+| 8 | **Sesiones de comunidad** | 1 domingo al mes: workshops de actualizacion. 1 sabado al mes: clinicas de IA en vivo para resolver enredos del dia a dia. |
+| 9 | **Masterclass opcional** | "IA: que esta pasando y como sacarle provecho". Lunes de Pascua (6 abril), 7PM. 2 horas. Panorama actual para directivos. |
 
 ### Que NO es
 - No es un curso teorico sobre IA
@@ -60,16 +62,25 @@ El CAO Bootcamp no ensena IA — instala un **sistema de trabajo agentico a medi
 
 ### 4 Niveles de Profundidad
 
+**Estructura de horas: hasta 25h totales**
+- 2h Masterclass (opcional) + 3h Taller (experiencia gratuita) + 20h CAO Bootcamp (para quienes continuen)
+
 | Nivel | Producto | Precio | Duracion | Formato | Audiencia |
 |-------|----------|--------|----------|---------|-----------|
+| — | Masterclass "IA: que esta pasando y como sacarle provecho" | Gratis | 2 horas | Abierto | Directivos + managers |
 | 0 | Taller "De Ocupado a Productivo" | Gratis | 3 horas | Grupo (hasta 13) | Directivos + managers |
 | 2 | CAO Bootcamp - Edicion Creyentes | $1,490 USD | 20h en 4-10 sem | Solo/Dupla/Terna | Directivos C-level (5 de 13) |
 | 2b | CAO Bootcamp - Calendario Academico | $1,990 USD | 20h en 4-10 sem | Solo/Dupla/Terna | Directivos C-level |
 | 3 | Programa de Empoderamiento | $1,490 USD/persona | 16 semanas | Grupo (hasta 13) | Managers 7+ anios exp |
 
+### Masterclass — "IA: que esta pasando y como sacarle provecho" (Opcional, Gratis)
+**Fecha:** Lunes de Pascua, 6 de abril, 7:00 PM
+**Formato:** 2 horas, acceso abierto
+**Funcion:** Panorama actual de la IA y como un directivo puede sacarle provecho sin depender de tecnicos. Acceso opcional — no es requisito para el Taller ni para el CAO.
+
 ### Nivel 0 — Taller "De Ocupado a Productivo" (Gratis)
-**Fecha:** Martes 7 de abril, 7:00 PM, 7 de abril de 2026
-**Formato:** 3 horas, grupo de hasta 13 personas
+**Fecha:** Martes 7 de abril, 7:00 PM
+**Formato:** 3 horas, grupo de hasta 13 personas. Tambien disponible sabado: 9:00-12:00 o 14:00-17:00
 **Funcion:** Punto de entrada al funnel. En vivo, construimos un agente con el contexto laboral real de cada asistente. Sin inversion economica. Validacion mutua de fit.
 
 ### Nivel 2 — CAO Bootcamp

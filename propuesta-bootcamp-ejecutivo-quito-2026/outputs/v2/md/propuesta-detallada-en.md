@@ -46,6 +46,8 @@ The CAO Bootcamp does not teach AI — it installs a **custom agentic work syste
 | 5 | **1 digital second brain** | We install NotebookLM as your external memory: organizes documents, connects ideas, retrieves knowledge. Available 24/7. |
 | 6 | **9 co-creation sessions** | 2 hours each with facilitator. Not a lecture: we build together, with your real work context. |
 | 7 | **1 Virtual Campus access** | MetodologIA platform with resources, updates and community. 1 month included, optional renewal. |
+| 8 | **Community sessions** | 1 Sunday/month: update workshops. 1 Saturday/month: live AI clinics to solve day-to-day tangles. |
+| 9 | **Optional Masterclass** | "AI: what is happening and how to take advantage". Easter Monday (April 6), 7PM. 2 hours. Current landscape for executives. |
 
 ### What It Is NOT
 - Not a theory course on AI
@@ -60,16 +62,25 @@ The CAO Bootcamp does not teach AI — it installs a **custom agentic work syste
 
 ### 4 Levels of Depth
 
+**Hour structure: up to 25h total**
+- 2h Masterclass (optional) + 3h Workshop (free experience) + 20h CAO Bootcamp (for those who continue)
+
 | Level | Product | Price | Duration | Format | Audience |
 |-------|---------|-------|----------|--------|----------|
+| — | Masterclass "AI: what is happening and how to take advantage" | Free | 2 hours | Open | Executives + managers |
 | 0 | Workshop "From Busy to Productive" | Free | 3 hours | Group (up to 13) | Executives + managers |
 | 2 | CAO Bootcamp - Believers Edition | $1,490 USD | 20h over 4-10 wks | Solo/Duo/Trio | C-level executives (5 of 13) |
 | 2b | CAO Bootcamp - Academic Calendar | $1,990 USD | 20h over 4-10 wks | Solo/Duo/Trio | C-level executives |
 | 3 | Empowerment Program | $1,490 USD/person | 16 weeks | Group (up to 13) | Managers 7+ yrs exp |
 
+### Masterclass — "AI: what is happening and how to take advantage" (Optional, Free)
+**Date:** Easter Monday, April 6, 7:00 PM
+**Format:** 2 hours, open access
+**Purpose:** Current AI landscape and how an executive can take advantage without depending on technicians. Optional — not a requirement for the Workshop or CAO.
+
 ### Level 0 — Workshop "From Busy to Productive" (Free)
-**Date:** Tuesday April 7, 7:00 PM, April 7, 2026
-**Format:** 3 hours, group of up to 13 people
+**Date:** Tuesday April 7, 7:00 PM
+**Format:** 3 hours, group of up to 13 people. Also available Saturday: 9AM-12PM or 2PM-5PM
 **Purpose:** Funnel entry point. Live, we build an agent with each attendee's real work context. No financial investment. Mutual fit validation.
 
 ### Level 2 — CAO Bootcamp

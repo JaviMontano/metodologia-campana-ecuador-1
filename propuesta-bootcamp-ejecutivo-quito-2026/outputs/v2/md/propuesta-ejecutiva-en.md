@@ -31,8 +31,10 @@ Your week is full. Meetings, reports, follow-ups, emails. AI can execute 60% of 
 | 5 | **1 digital second brain** | NotebookLM as your 24/7 external memory |
 | 6 | **9 co-creation sessions** | 2h each, we build together with your real context |
 | 7 | **1 Virtual Campus** | Resources, updates, community (1 month included) |
+| 8 | **Community sessions** | 1 Sunday/month: update workshops. 1 Saturday/month: live AI clinics |
+| 9 | **Optional Masterclass** | "AI: what is happening and how to take advantage" (Monday April 6, 7PM, 2h) |
 
-**Format:** Solo (1:1), Duo (2) or Trio (3). **Duration:** 20h over 4-10 weeks.
+**Format:** Solo (1:1), Duo (2) or Trio (3). **Total duration:** up to 25h (2h masterclass + 3h workshop + 20h CAO).
 
 ### What It Is NOT
 
