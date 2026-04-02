@@ -1,113 +1,139 @@
-# Due Diligence -- Bootcamp Ejecutivo Quito 2026
+# Due Diligence — Bootcamp Ejecutivo Quito 2026
 
 | Campo | Valor |
 |-------|-------|
-| Version | 2.0 |
-| Fecha | 2026-04-01 |
+| Version | 2.1 |
+| Fecha | 2026-04-02 |
 | Fuente | content.json v2.0 |
-| Autor | MetodologIA -- Red Agentica |
-| Estado | Borrador v2 |
+| Estado | Elevado — con scoring de riesgo, exit scenarios, IP protection |
 
 ---
 
-## 1. Aliado local confirmado
+## 1. Aliado local
 
 | Dimension | Detalle | Evidencia |
 |-----------|---------|-----------|
 | Nombre | Cristian Jarrin | [DOC] |
-| Rol | Co-fundador Ecuador (7% participacion) | [DOC] |
-| Funcion operativa | Representacion legal local, gestion de alianzas, logistica in-country | [INFERENCIA] |
-| Nota importante | Cristian NO es facilitador del programa; su rol es estrategico y operativo | [DOC] |
-| Estado de relacion | Confirmado y activo | [DOC] |
+| Rol | Socio Ano 2 (7% equity, entry fee $2,900 dinamico) | [DOC] |
+| Funcion | Representacion local, alianzas, logistica, convocatoria | [DOC] |
+| Restriccion | NO es facilitador del programa — rol estrategico/operativo | [DOC] |
+| Entry fee | $2,900 inicial. Se recalcula al valorar empresa conjuntamente | [DOC] |
 
 ---
 
-## 2. Timeline actualizado (Abril -- Mayo 2026)
+## 2. Equity y estructura
 
-| Fase | Periodo | Actividad | Formato | Evidencia |
-|------|---------|-----------|---------|-----------|
-| Pre-lanzamiento | Abril 2026 (Semana Santa) | Taller Gratuito -- gancho de convocatoria | 100% online | [DOC] |
-| Early access | Abril 2026 (post-taller) | CAO Believers Edition -- 5 de 13 casos | 100% online | [DOC] |
-| Lanzamiento abierto | Mayo 2026 | CAO Academico -- 13 casos completos | 100% online | [DOC] |
-| Programa paralelo | Mayo 2026 | Programa de Empoderamiento | 100% online | [DOC] |
+| Socio | % | Rol | Evidencia |
+|-------|---|-----|-----------|
+| Javier Montano | 51% | Fundador, metodo, IP | [DOC] |
+| German | 19% | Cofundador, aceleradores | [DOC] |
+| Daniel | 13% | Cofundador, red fundadores | [DOC] |
+| Katherin Oquendo | 10% | Cofundadora, operaciones | [DOC] |
+| Cristian Jarrin | 7% | Socio Ano 2, operador Ecuador | [DOC] |
 
-Nota: La primera fase completa es 100% online. La evaluacion de formato presencial o hibrido queda diferida a la segunda cohorte, sujeta a resultados de la primera. [DOC]
-
----
-
-## 3. Opciones de venue (diferidas)
-
-| Venue | Tipo | Capacidad | Estado | Evidencia |
-|-------|------|-----------|--------|-----------|
-| IDE Business School | Campus ejecutivo | 30-50 | Contacto pendiente (segunda fase) | [SUPUESTO] |
-| CCQ Salones | Auditorio gremial | 50-100 | Contacto pendiente (segunda fase) | [SUPUESTO] |
-| Hotel JW Marriott Quito | Salon corporativo | 20-40 | Opcion premium (segunda fase) | [SUPUESTO] |
-| Swissotel Quito | Centro de convenciones | 30-80 | Opcion alternativa (segunda fase) | [SUPUESTO] |
-
-Nota: Los primeros 5 casos del CAO Believers Edition se entregan 100% online. Las opciones de venue aplican unicamente para futuras ediciones presenciales o hibridas. [DOC]
+**Estructura legal sugerida:** SAS (Sociedad por Acciones Simplificada) en Ecuador. RUC activo requerido para facturacion electronica via SRI. [SUPUESTO]
 
 ---
 
-## 4. Evaluacion de riesgos
+## 3. Timeline
 
-| Riesgo | Probabilidad | Impacto | Mitigacion | Evidencia |
-|--------|-------------|---------|------------|-----------|
-| Baja conversion del taller gratuito al programa pagado | Media | Alto | Diseno del taller como preview irresistible; seguimiento personalizado post-taller; embudo de 13 invitados como mecanismo de urgencia | [INFERENCIA] |
-| Percepcion de precio alto para mercado ecuatoriano | Media | Medio | Believers Edition a $1,490 como ancla; plan de cuotas; ROI tangible en el pitch | [INFERENCIA] |
-| Dependencia excesiva del aliado local | Baja | Alto | Contrato formal con Cristian Jarrin (7% socio, entra Ano 2); roles y responsabilidades documentados | [DOC] |
-| Problemas de conectividad para formato online | Baja | Medio | Sesiones grabadas como respaldo; plataforma con bajo consumo de ancho de banda; horarios flexibles | [INFERENCIA] |
-| Competencia de programas de IA ejecutivos locales | Media | Medio | Diferenciacion por metodologia propietaria (no solo herramientas); enfoque en (R)Evolucion, no en tutoriales | [INFERENCIA] |
-| Retencion fiscal inesperada sobre pagos internacionales | Baja | Medio | Facturacion via entidad local de Cristian Jarrin; asesoria tributaria previa al lanzamiento | [SUPUESTO] |
-| Incumplimiento de cupo minimo para viabilidad | Media | Alto | Break-even calculado; politica de cancelacion con reembolso; fecha limite de decision go/no-go | [INFERENCIA] |
+| Fase | Cuando | Actividad | Formato | Evidencia |
+|------|--------|-----------|---------|-----------|
+| Masterclass | Lun 6 abril 7PM | Charla abierta IA | Online | [DOC] |
+| Taller | Mar 7 abril 7PM + sabado | De Ocupado a Productivo | Online | [DOC] |
+| CAO Creyentes | Abril | 5 de 13 invitados | Online | [DOC] |
+| CAO Abierto + Empoderamiento | Mayo | Convocatoria general | Online | [DOC] |
+| Presencial | Diferido a cohorte 2+ | Sujeto a resultados primera fase | [SUPUESTO] |
 
 ---
 
-## 5. Requisitos operativos del Programa de Embajadores
+## 4. Risk Scoring (7 riesgos, ponderados)
+
+| # | Riesgo | Prob | Impacto | Score | Mitigacion | Evidencia |
+|---|--------|------|---------|-------|-----------|-----------|
+| 1 | Baja conversion taller → pago | Media | Alto | **8** | Taller como preview irresistible + funnel 13 + seguimiento 1:1 | [INFERENCIA] |
+| 2 | Precio alto para mercado Ecuador | Media | Medio | **6** | Creyentes $1,490 como ancla + cuotas + ROI tangible | [INFERENCIA] |
+| 3 | Dependencia de Cristian | Baja | Alto | **6** | Contrato formal + roles documentados + IP en MetodologIA | [DOC] |
+| 4 | Conectividad online | Baja | Medio | **3** | Sesiones grabadas + plataforma low-bandwidth | [INFERENCIA] |
+| 5 | Competencia local emerge | Media | Medio | **6** | Ventaja de first mover + IP propietaria + comunidad | [INFERENCIA] |
+| 6 | Retencion fiscal inesperada | Baja | Medio | **3** | Facturar via entidad local + asesoria tributaria pre-lanzamiento | [SUPUESTO] |
+| 7 | No alcanza cupo minimo | Media | Alto | **8** | Break-even en 1 cierre + go/no-go deadline + reembolso | [INFERENCIA] |
+
+**Score:** Prob x Impacto (1-3 cada uno, max 9). Riesgos >6 requieren mitigacion activa.
+
+---
+
+## 5. Exit Scenarios
+
+| Escenario | Trigger | Accion | Impacto |
+|-----------|---------|--------|---------|
+| Cristian no cumple | <2 cierres en 6 meses | Operar via embajadores + otro aliado local | Medio — retraso, no bloqueo |
+| Mercado no responde | <3 inscritos en taller | Pivotar a B2B directo (corporativo) | Alto — cambio de estrategia |
+| Regulatorio bloquea | IVA sube o retencion prohibitiva | Facturar desde fuera como exportacion de servicios | Bajo — solucion tecnica |
+| Conflicto de socios | Desacuerdo operativo | Clausula de arbitraje en contrato SAS | Medio — mediacion |
+| Cristian quiere salir | Post Ano 1 | Recompra de 7% a valoracion conjunta | Bajo — mecanismo predefinido |
+
+[SUPUESTO: scenarios basados en patrones de franquicias B2B en LatAm]
+
+---
+
+## 6. Proteccion de IP
+
+| Activo | Proteccion | Estado | Evidencia |
+|--------|-----------|--------|-----------|
+| Metodo MetodologIA | Know-how documentado, no patentable | Protegido por secreto comercial | [DOC] |
+| Agente Pristino | Open Source (licencia MIT) | Codigo publico, marca protegida | [DOC] |
+| 13 asistentes | Configuracion propietaria sobre plataformas publicas | Protegido por acceso controlado | [INFERENCIA] |
+| Bibliotecas de prompts | Contenido propietario | Distribuido solo a participantes activos | [DOC] |
+| Playbook "Dirigir en Era IA" | Contenido original | Copyright MetodologIA | [SUPUESTO] |
+| Marca MetodologIA | Nombre + logo + "(R)Evolucion" | Registro pendiente en Ecuador | [POR CONFIRMAR] |
+
+**Riesgo clave:** Pristino es Open Source — cualquiera puede clonar el agente. La barrera es el metodo, los asistentes, la comunidad y el soporte. El software es el vehiculo, no el moat. [INFERENCIA]
+
+---
+
+## 7. Protocolo de escalacion
+
+| Nivel | Situacion | Accion | Responsable | Tiempo |
+|-------|-----------|--------|-------------|--------|
+| 1 | Queja de participante | Respuesta en <24h + sesion de feedback | Cristian | Inmediato |
+| 2 | Solicitud de reembolso (dentro de garantia) | Devolucion 100% + sesion de 1h | Javier | <48h |
+| 3 | Conflicto con Cristian | Mediacion directa Javier-Cristian | Javier | <1 semana |
+| 4 | Bloqueo regulatorio | Asesoria legal + facturacion alternativa | Legal externo | <2 semanas |
+| 5 | Falla critica de plataforma | Sesion reprogramada + compensacion | Tech | <24h |
+
+---
+
+## 8. Embajadores — requisitos operativos
 
 | Dimension | Detalle | Evidencia |
 |-----------|---------|-----------|
-| Elegibilidad | Graduados del CAO (Believers o Academico) o Programa de Empoderamiento | [DOC] |
-| Beneficio principal | 50% de descuento sobre precio regular en proximas cohortes | [DOC] |
-| Mecanismo de tracking | Codigo de referencia unico por embajador | [SUPUESTO] |
-| Infraestructura requerida | Sistema de codigos de descuento en plataforma de pago | [SUPUESTO] |
-| KPIs de embajador | Numero de referidos, tasa de conversion de referidos, NPS del embajador | [INFERENCIA] |
-| Comunicacion | Kit de embajador: mensajes pre-redactados, assets graficos, calendario de sharing | [INFERENCIA] |
-| Vigencia del beneficio | A definir -- recomendado 12 meses post-graduacion | [SUPUESTO] |
-| Riesgo operativo | Abuso de codigos; mitigacion: limite de usos por codigo, validacion manual | [INFERENCIA] |
+| Elegibilidad | Graduado CAO o Empoderamiento | [DOC] |
+| Beneficio | 50% descuento sobre precio regular | [DOC] |
+| Tracking | Codigo de referencia unico | [SUPUESTO] |
+| KPIs | Referidos, conversion, NPS | [INFERENCIA] |
+| Vigencia | 12 meses (renovable si activo) | [SUPUESTO] |
+| Anti-abuso | Limite de usos por codigo + validacion manual | [INFERENCIA] |
 
 ---
 
-## 6. Estructura societaria Ecuador
-
-| Elemento | Detalle | Evidencia |
-|----------|---------|-----------|
-| Forma legal sugerida | SAS (Sociedad por Acciones Simplificada) o representacion comercial | [SUPUESTO] |
-| Participacion Cristian Jarrin | 7% (socio, entra Ano 2, entry fee $2,900) | [DOC] |
-| Participacion MetodologIA | 49% | [INFERENCIA] |
-| Domicilio fiscal | Quito, Ecuador | [INFERENCIA] |
-| Requisito SRI | RUC activo para emision de facturas electronicas | [INFERENCIA] |
-| Cuenta bancaria | Cuenta corporativa en USD (banco local) | [INFERENCIA] |
-
----
-
-## 7. Checklist de due diligence pre-lanzamiento
+## 9. Checklist pre-lanzamiento
 
 | Item | Estado | Responsable | Evidencia |
 |------|--------|-------------|-----------|
-| Contrato de co-fundacion con Cristian Jarrin | Por formalizar | Legal | [POR CONFIRMAR] |
-| Constitucion de entidad local (si aplica) | Pendiente | Cristian Jarrin + Legal | [POR CONFIRMAR] |
-| Cuenta bancaria corporativa | Pendiente | Cristian Jarrin | [POR CONFIRMAR] |
-| Pasarela de pago configurada | Pendiente | Operaciones | [POR CONFIRMAR] |
+| Contrato de sociedad con Cristian | Por formalizar | Legal | [POR CONFIRMAR] |
+| Constitucion SAS Ecuador (si aplica) | Pendiente | Cristian + Legal | [POR CONFIRMAR] |
+| Cuenta bancaria corporativa USD | Pendiente | Cristian | [POR CONFIRMAR] |
+| Pasarela de pago (Stripe/PayPhone) | Pendiente | Operaciones | [POR CONFIRMAR] |
 | Asesoria tributaria (IVA + retenciones) | Pendiente | Contador local | [POR CONFIRMAR] |
-| Plataforma de entrega online configurada | Pendiente | Tech | [POR CONFIRMAR] |
-| Sistema de codigos de embajador | Pendiente | Tech + Operaciones | [POR CONFIRMAR] |
-| Material de marketing para taller gratuito | Pendiente | Marketing | [POR CONFIRMAR] |
-| Fecha go/no-go para Believers Edition | Por definir | Javier + Cristian | [POR CONFIRMAR] |
+| Plataforma de entrega online | Pendiente | Tech | [POR CONFIRMAR] |
+| Sistema codigos embajador | Pendiente | Tech | [POR CONFIRMAR] |
+| Material marketing taller | Pendiente | Marketing | [POR CONFIRMAR] |
+| Registro marca Ecuador | Pendiente | Legal | [POR CONFIRMAR] |
+| Fecha go/no-go Creyentes | Por definir | Javier + Cristian | [POR CONFIRMAR] |
 
 ---
 
-> **Disclaimer -- Innovation Mode**: Este documento fue generado en modo de innovacion agentica. Los datos marcados con [INFERENCIA], [SUPUESTO] o [POR CONFIRMAR] requieren validacion con stakeholders locales antes de comprometer decisiones operativas, legales o financieras.
+> **Innovation Mode**: Datos con [INFERENCIA], [SUPUESTO] o [POR CONFIRMAR] requieren validacion con stakeholders antes de decisiones operativas, legales o financieras.
 
----
-
-Construido por profesionales, potenciado por la red agentica de MetodologIA.
+*Construido por profesionales, potenciado por la red agentica de MetodologIA.*

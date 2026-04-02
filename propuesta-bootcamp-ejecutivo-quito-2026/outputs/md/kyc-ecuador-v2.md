@@ -1,120 +1,162 @@
-# KYC Ecuador -- Bootcamp Ejecutivo Quito 2026
+# KYC Ecuador — Bootcamp Ejecutivo Quito 2026
 
 | Campo | Valor |
 |-------|-------|
-| Version | 2.0 |
-| Fecha | 2026-04-01 |
+| Version | 2.1 |
+| Fecha | 2026-04-02 |
 | Fuente | content.json v2.0 |
-| Autor | MetodologIA -- Red Agentica |
-| Estado | Borrador v2 |
+| Estado | Elevado — con barreras, madurez digital, fricciones |
 
 ---
 
-## 1. Perfil demografico del mercado objetivo
+## 1. Perfil demografico
 
 | Dimension | Detalle | Evidencia |
 |-----------|---------|-----------|
 | Cargo | C-level, VP, Director General, Gerente Senior | [DOC] |
-| Rango etario | 35--55 anos | [INFERENCIA] |
-| Tamano de empresa | USD 1M -- USD 50M facturacion anual | [INFERENCIA] |
-| Geografia | Quito metropolitano (primera fase); Guayaquil y Cuenca (expansion futura) | [DOC] |
-| Idioma operativo | Espanol (contenido y facilitacion 100% en espanol) | [DOC] |
-| Experiencia gerencial minima | 5+ anos (ideal 7+) para Programa de Empoderamiento | [DOC] |
+| Edad | 35-55 anios | [INFERENCIA] |
+| Empresa | $1M-$50M facturacion anual, 50-500+ empleados | [INFERENCIA] |
+| Geografia | Quito metropolitano (fase 1); Guayaquil, Cuenca (expansion) | [DOC] |
+| Idioma | Espanol 100% (contenido y facilitacion) | [DOC] |
+| Experiencia minima | 5+ anios gestion (ideal 7+) para Empoderamiento | [DOC] |
 
 ---
 
-## 2. Segmentacion de audiencia por programa
+## 2. Segmentacion por programa
 
-| Programa | Audiencia primaria | Requisito de ingreso | Precio (USD) | Formato | Evidencia |
-|----------|--------------------|----------------------|-------------|---------|-----------|
-| Taller Gratuito (Martes 7 Abril, 7PM) | C-level y gerentes curiosos por IA | Registro abierto | $0 | 100% online | [DOC] |
-| CAO Believers Edition (Abril, early access) | C-level con vision de (R)Evolucion | Invitacion directa (5 de 13 cupos) | $1,490 | 100% online | [DOC] |
-| CAO Academico (Mayo, apertura) | C-level general | Registro abierto post-lanzamiento | $1,990 | 100% online | [DOC] |
-| Programa de Empoderamiento (Mayo) | Gerentes con 5+ anos de experiencia gerencial (ideal 7+) | Validacion de experiencia | $1,490 | 100% online | [DOC] |
-| Asistentes Personalizados (add-on) | Participantes de cualquier programa | Inscripcion en programa base | $347 | 100% online | [DOC] |
+| Programa | Audiencia | Requisito | Precio | Evidencia |
+|----------|-----------|-----------|--------|-----------|
+| Masterclass (Lun 6 abril 7PM) | Cualquier directivo curioso | Ninguno | Gratis | [DOC] |
+| Taller (Mar 7 abril 7PM + sabado) | Directivos + managers | Registro | Gratis | [DOC] |
+| CAO Creyentes (abril) | C-level con vision | Invitacion (5 de 13) | $1,490 | [DOC] |
+| CAO Abierto (mayo) | C-level general | Registro | $1,990 | [DOC] |
+| Empoderamiento (mayo) | Gerentes 7+ anios exp | Validacion exp | $1,490/persona | [DOC] |
+| Asistentes a Medida | Cualquier participante | Inscripcion previa | $347/unidad | [DOC] |
 
-Nota: El concepto de 13 invitados se mantiene como embudo de exclusividad. Believers Edition ofrece acceso anticipado a 5 de los 13 casos del CAO completo. [DOC]
+**Funnel:** 13 invitados → 5 Creyentes → 8 preferentes mayo (grupo 10, 2 publicas) → Embajadores [DOC]
 
 ---
 
-## 3. Perfil del Embajador (programa post-graduacion)
+## 3. Barreras de adopcion por sector
+
+| Sector | Barrera principal | Severidad | Mitigacion | Evidencia |
+|--------|-----------------|-----------|-----------|-----------|
+| Tecnologia | "Ya usamos IA" (herramientas aisladas) | Baja | Mostrar diferencia sistema vs herramienta | [INFERENCIA] |
+| Banca | Compliance, restricciones de datos | Alta | Pristino corre local, auditable, no sube datos | [INFERENCIA] |
+| Retail | Prioridad en ventas, no en productividad | Media | ROI tangible: $4,320/mes recuperado | [SUPUESTO] |
+| Manufactura | "IA es para oficina, no para planta" | Media | Casos de uso en gestion, no en produccion | [INFERENCIA] |
+| Servicios Prof. | Escepticismo intelectual: "ya se gestionar" | Alta | Taller Zero Risk como prueba sin compromiso | [INFERENCIA] |
+| Telecom | Presupuesto tech ya asignado a otras prioridades | Media | Posicionar como inversion personal, no corporativa | [SUPUESTO] |
+| Sector Publico | Burocracia para aprobar capacitaciones | Alta | Factura B2C personal, no licitacion publica | [INFERENCIA] |
+
+---
+
+## 4. Madurez digital del mercado
+
+| Indicador | Dato | Fuente |
+|-----------|------|--------|
+| Penetracion smartphone | 85%+ en segmento ejecutivo | [INFERENCIA] |
+| Uso WhatsApp profesional | 95%+ (canal #1 para negocios B2B en Ecuador) | [INFERENCIA] |
+| Uso email corporativo | 70% (resto usa Gmail personal) | [SUPUESTO] |
+| Familiaridad con Google Workspace | 40-50% (muchos en Microsoft) | [SUPUESTO] |
+| Han probado ChatGPT | 60-70% lo han probado; <15% lo usan regularmente | [SUPUESTO] |
+| Confianza en IA para decisiones | Baja — "la IA no entiende mi contexto" | [INFERENCIA] |
+
+**Implicacion:** El taller debe demostrar valor con SU contexto real en 3 horas. La teoria no convence en este mercado. [INFERENCIA]
+
+---
+
+## 5. Preferencia de canal: WhatsApp vs Email
+
+| Canal | Uso | Tasa apertura | Mejor para | Evidencia |
+|-------|-----|--------------|-----------|-----------|
+| WhatsApp | 95% ejecutivos ecuatorianos | >80% | Invitacion, seguimiento, confirmacion | [INFERENCIA] |
+| Email | 70% revisan diario | 15-25% | Dossier formal, documentos adjuntos | [INFERENCIA] |
+| LinkedIn | 50% activos | 5-10% | Credibilidad, no conversion directa | [SUPUESTO] |
+| Llamada | Efectiva pero intrusiva | N/A | Solo post-interes confirmado | [INFERENCIA] |
+
+**Decision:** Primer contacto via WhatsApp con link a landing. Dossier formal via email solo si lo solicita. [INFERENCIA]
+
+---
+
+## 6. Friccion de pago
+
+| Friccion | Severidad | Mitigacion | Evidencia |
+|----------|-----------|-----------|-----------|
+| $1,490 es "mucho" para pago unico | Media | Pago diferido 2-3 cuotas (comun en Ecuador B2B) | [SUPUESTO] |
+| No tiene PayPal | Baja | Transferencia bancaria local USD (preferido) | [INFERENCIA] |
+| Necesita factura corporativa | Media | Facturacion electronica via SRI disponible | [DOC] |
+| IVA 15% no explicito | Alta | SIEMPRE comunicar si precio incluye/excluye IVA | [DOC] |
+| Desconfianza en pago anticipado total | Media | Garantia 100% antes de 4h elimina riesgo percibido | [DOC] |
+
+---
+
+## 7. Sectores prioritarios (ordenados por probabilidad de conversion)
+
+| # | Sector | Probabilidad | Ticket prom | Canal de acceso | Evidencia |
+|---|--------|-------------|-------------|----------------|-----------|
+| 1 | Tecnologia/Software | Alta | $1,490-$1,990 | AESOFT, StartupEC | [INFERENCIA] |
+| 2 | Servicios Profesionales | Alta | $1,490 | CCQ, YPO/EO | [INFERENCIA] |
+| 3 | Banca/Finanzas | Media-Alta | $1,990 (corporativo) | Contacto directo | [INFERENCIA] |
+| 4 | Retail/Comercio | Media | $1,490 | CCQ | [INFERENCIA] |
+| 5 | Telecom | Media | $1,990 | Contacto directo | [SUPUESTO] |
+| 6 | Manufactura | Media-Baja | $1,490 | Camara de Industrias | [SUPUESTO] |
+| 7 | Sector Publico | Baja | $1,490 (B2C) | Conquito | [SUPUESTO] |
+
+---
+
+## 8. Ecosistema de aliados
+
+| Organizacion | Tipo | Rol | Prioridad | Evidencia |
+|-------------|------|-----|-----------|-----------|
+| CCQ (20K+ afiliados) | Gremio | Canal principal de convocatoria | P1 | [DOC] |
+| YPO/EO Quito | Red ejecutiva | Acceso directo a C-level con poder de decision | P1 | [DOC] |
+| AESOFT | Gremio tech | Early adopters, tech-savvy | P1 | [DOC] |
+| StartupEC / Buen Trip Hub | Comunidad | Fundadores, CTOs | P2 | [DOC] |
+| IDE / USFQ | Academia | Credibilidad, co-certificacion futura | P3 | [DOC] |
+| Conquito | Agencia publica | Ecosistema emprendedor | P3 | [DOC] |
+
+---
+
+## 9. Perfil del Embajador
 
 | Dimension | Detalle | Evidencia |
 |-----------|---------|-----------|
-| Requisito | Graduado de cualquier programa CAO o Empoderamiento | [DOC] |
-| Beneficio | 50% de descuento sobre precio regular para proximas cohortes | [DOC] |
-| Rol esperado | Promotor organico en su red ejecutiva y sectorial | [INFERENCIA] |
-| Perfil ideal | Ejecutivo activo en CCQ, YPO, EO o asociaciones gremiales | [INFERENCIA] |
-| Mecanismo de activacion | Codigo de referencia unico post-graduacion | [SUPUESTO] |
+| Requisito | Graduado CAO o Empoderamiento | [DOC] |
+| Beneficio | 50% descuento sobre precio regular | [DOC] |
+| Perfil ideal | Ejecutivo activo en CCQ, YPO, EO | [INFERENCIA] |
+| Activacion | Codigo de referencia post-graduacion | [SUPUESTO] |
+| Conversion esperada | 2-3 referidos por embajador, 40% conversion | [INFERENCIA] |
+| Validez sugerida | 12 meses (renovable si activo) | [SUPUESTO] |
 
 ---
 
-## 4. Sectores prioritarios
-
-| Sector | Justificacion | Evidencia |
-|--------|---------------|-----------|
-| Tecnologia | Adopcion temprana, alta propension a pago | [INFERENCIA] |
-| Banca y Servicios Financieros | Presupuesto de innovacion, regulacion como driver | [INFERENCIA] |
-| Retail y Comercio | Presion competitiva por digitalizacion | [INFERENCIA] |
-| Manufactura | Necesidad de optimizacion operativa con IA | [INFERENCIA] |
-| Servicios Profesionales | Consultoras, firmas legales, contables -- alto valor percibido | [INFERENCIA] |
-| Telecomunicaciones | Infraestructura digital, presupuesto tech existente | [INFERENCIA] |
-| Sector Publico | Modernizacion estatal, licitaciones de innovacion | [INFERENCIA] |
-
----
-
-## 5. Ecosistema de aliados y canales de difusion
-
-| Organizacion | Tipo | Rol potencial | Evidencia |
-|--------------|------|---------------|-----------|
-| Camara de Comercio de Quito (CCQ) | Gremio | Canal de convocatoria, co-branding eventos | [DOC] |
-| Conquito | Agencia publica | Ecosistema emprendedor, promocion institucional | [DOC] |
-| StartupEC | Comunidad | Red de fundadores y CTOs | [DOC] |
-| AESOFT | Gremio tech | Acceso a empresas de software ecuatorianas | [DOC] |
-| IDE Business School | Academia | Co-certificacion, audiencia ejecutiva | [DOC] |
-| USFQ | Universidad | Audiencia academica-ejecutiva, credibilidad | [DOC] |
-| YPO / EO Quito Chapter | Red ejecutiva | Acceso directo a C-level con poder de decision | [DOC] |
-
----
-
-## 6. Contexto regulatorio y fiscal
+## 10. Regulatorio y fiscal
 
 | Factor | Detalle | Evidencia |
 |--------|---------|-----------|
-| Moneda | USD (dolarizado desde 2000) | [DOC] |
-| Riesgo cambiario | Cero -- operaciones 100% en dolares | [DOC] |
+| Moneda | USD (dolarizado, 0 riesgo cambiario) | [DOC] |
 | IVA | 15% sobre servicios de capacitacion | [DOC] |
-| Retencion en la fuente | Posible retencion del 2% sobre pagos a proveedores extranjeros | [DOC] |
-| Facturacion electronica | Obligatoria via SRI para operaciones locales | [INFERENCIA] |
-| Implicacion para pricing | Los precios publicados deben indicar si incluyen o excluyen IVA | [INFERENCIA] |
+| Retencion fuente | 2% posible sobre pagos a proveedor extranjero | [DOC] |
+| Facturacion | Electronica obligatoria via SRI para operaciones locales | [INFERENCIA] |
+| Deduccion fiscal | Capacitacion es gasto deducible para empresas ecuatorianas | [INFERENCIA] |
+
+**Decision de pricing:** Publicar precios SIN IVA + nota "(+ IVA 15% si aplica)". Simplifica comparacion internacional. [INFERENCIA]
 
 ---
 
-## 7. Metodos de pago aceptados
+## 11. Metodos de pago
 
-| Metodo | Viabilidad | Evidencia |
-|--------|-----------|-----------|
-| Transferencia bancaria local (USD) | Alta -- metodo preferido por empresas | [INFERENCIA] |
-| Tarjeta de credito (Visa/MC) | Alta -- via pasarela Stripe o PayPhone | [INFERENCIA] |
-| PayPal | Media -- no todos los ejecutivos lo usan en Ecuador | [INFERENCIA] |
-| Pago diferido (2-3 cuotas) | Alta -- practica comun en B2B ecuatoriano | [SUPUESTO] |
-| Factura corporativa | Alta -- requerido por empresas grandes para deduccion fiscal | [INFERENCIA] |
-
----
-
-## 8. Consideraciones clave para la campana
-
-- Ecuador opera en USD, lo cual elimina friccion cambiaria para un proveedor que factura en dolares. [DOC]
-- El 15% de IVA debe ser transparente en toda comunicacion de precios. [DOC]
-- La exclusividad de 13 cupos es un mecanismo de posicionamiento, no una limitacion real de capacidad. [DOC]
-- El programa Believers Edition funciona como early access con precio preferencial ($500 menos que el academico). [DOC]
-- El Programa de Empoderamiento apunta a un segmento diferente: gerencia media-alta con experiencia operativa, no necesariamente C-suite. [DOC]
-- El programa de Embajadores crea un ciclo de recompra y referencia organica con 50% de descuento. [DOC]
+| Metodo | Viabilidad | Friccion | Evidencia |
+|--------|-----------|----------|-----------|
+| Transferencia bancaria USD | Alta (preferido B2B) | Baja | [INFERENCIA] |
+| Tarjeta credito (Visa/MC) | Alta (via Stripe/PayPhone) | Baja | [INFERENCIA] |
+| Pago diferido 2-3 cuotas | Alta (practica comun) | Media | [SUPUESTO] |
+| Factura corporativa | Alta (empresas grandes) | Media (burocracia) | [INFERENCIA] |
+| PayPal | Media (no todos lo usan) | Media | [INFERENCIA] |
 
 ---
 
-> **Disclaimer -- Innovation Mode**: Este documento fue generado en modo de innovacion agentica. Los datos marcados con [INFERENCIA] o [SUPUESTO] requieren validacion con stakeholders locales antes de comprometer decisiones operativas o financieras.
+> **Innovation Mode**: Datos con [INFERENCIA] o [SUPUESTO] requieren validacion con stakeholders locales antes de decisiones operativas o financieras.
 
----
-
-Construido por profesionales, potenciado por la red agentica de MetodologIA.
+*Construido por profesionales, potenciado por la red agentica de MetodologIA.*
