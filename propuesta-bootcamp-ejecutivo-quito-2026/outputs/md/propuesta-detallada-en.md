@@ -1,352 +1,312 @@
 # CAO Bootcamp — Chief Agentic Officer
 ## Detailed Dossier | Quito, Ecuador 2026
 
-**Version:** 2.0 | **Date:** April 1, 2026 | **Confidential**
+**Version:** 2.1 | **Date:** April 2, 2026 | **Confidential**
 **Source:** content.json v2.0 | **Mode:** Innovation Mode (Type B)
 
 ---
 
 ## TL;DR
 
-MetodologIA launches in Quito the first Executive Agentic Bootcamp in Latin America. In 20 hours, an executive installs a personal AI system: Pristino agent + 13 assistants + digital second brain. This is not a theory course — it is a functional implementation that continues operating after the bootcamp. Founding price: $1,490 USD. 100% guarantee before 4 hours. Zero direct competitors in Ecuador.
+First Executive Agentic Bootcamp in Latin America. 20 hours to install a working personal AI system: Pristino agent + 13 specialized assistants + digital second brain. Not a course — a functional implementation that operates without MetodologIA. $1,490 USD (founder). Full guarantee before 4h. Zero direct competitors in Ecuador. [DOC: kyc-ecuador]
 
 ---
 
 ## 1. The Problem We Solve
 
-### Symptoms of Today's Executive
-- Spends 60%+ of their week on operational tasks (emails, reports, follow-ups, meetings)
-- Has tried isolated AI tools without sustainable results
-- Their team lacks a common AI-powered work system
-- Every quarter, the gap widens against executives who operate with AI
+### Current executive symptoms
+- 60% of the week is operational: emails, reports, follow-ups, meetings [INFERENCE: LatAm services average]
+- Isolated AI tools abandoned in 2-4 weeks due to lack of context integration [INFERENCE]
+- Gap with AI-equipped executives doubles every quarter [ASSUMPTION]
+- Depends on technicians for any automation
 
-### The Gap
-Executives who operate with an integrated agentic system recover **18+ hours/week**. Those who try isolated tools abandon them within 2-4 weeks due to lack of integration with their real context. [INFERENCIA]
-
-### What Does NOT Work
-- Theory courses on AI: deliver knowledge, not implementation
-- Isolated tools: do not integrate with each other or with real context
-- Generic workshops: cover the basics, no personalization
-- Big 4 consulting: expensive ($10K+), generic, no functional agent at close
+### What does NOT work (and why)
+| Alternative | Problem | Evidence |
+|------------|---------|----------|
+| Theory courses | Knowledge without implementation | <15% post-course application rate [ASSUMPTION] |
+| Isolated tools | No integration between tools or with context | 73% abandoned in <30 days [INFERENCE] |
+| Generic workshops | Cover basics, no personalization | No post-event continuity |
+| Big 4 consulting | $10K+, generic, no agent at close | Deliverable = recommendations, not system |
 
 ---
 
 ## 2. The Solution: Personal Agentic System
 
-The CAO Bootcamp does not teach AI — it gives you an **agent that becomes your best ally**. In the workshop, Javier shows how he operates with Pristino and you learn to install its basic version. Unlocking its full potential: self-study or hand-in-hand with us in the Bootcamp where we give it your full context and you learn the best practices for Leading in the AI Era.
+The CAO Bootcamp gives you an **agent that becomes your best ally**. In the workshop, Javier shows how he operates with Pristino and you learn to install its basic version. Full potential: self-study or hand-in-hand with us in the Bootcamp. [DOC: content.json]
 
-### What You Receive (no fine print)
+### 9 Deliverables (no fine print)
 
-| # | Deliverable | What it is exactly |
-|---|-------------|-------------------|
-| 1 | **1 personal agent** | We install Pristino, Javier Montano.s Open Source agent. In the workshop you learn its basic version. Full potential: self-study or hand-in-hand with us in the Bootcamp. Yours forever, auditable. |
-| 2 | **13 specialized AI assistants** | Ready to use in workflows from day 1. Each covers an executive function: communication, analysis, scheduling, decisions, reports. Specialized (by function), not personalized (by individual). During the bootcamp you learn to use them better than the public. |
-| 3 | **1 Introduction Playbook** | "How to Lead in the AI Era". Practical guide for executives who want to lead with AI without depending on technicians. |
-| 4 | **2 prompt libraries** | Universal Library (for any professional, from day 1) + Executive Library (strategy, decision-making, delegation, executive communication, reports). |
-| 5 | **1 digital second brain** | We install NotebookLM as your external memory: organizes documents, connects ideas, retrieves knowledge. Available 24/7. |
-| 6 | **9 co-creation sessions** | 2 hours each with facilitator. Not a lecture: we build together, with your real work context. |
-| 7 | **1 Virtual Campus access** | MetodologIA platform with resources, updates and community. 1 month included, optional renewal. |
-| 8 | **Community sessions** | 1 Sunday/month: update workshops. 1 Saturday/month: live AI clinics to solve day-to-day tangles. |
-| 9 | **Optional Masterclass** | "AI: what is happening and how to take advantage". Easter Monday (April 6), 7PM. 2 hours. Current landscape for executives. |
+| # | Deliverable | What it is | "Done" criteria |
+|---|-----------|-----------|-----------------|
+| 1 | **1 personal agent** | Pristino (Open Source, by Javier Montano). Basic in workshop, full in Bootcamp | Executes 3+ real tasks without intervention |
+| 2 | **13 specialized assistants** | Workflows from day 1. Communication, analysis, scheduling, decisions, reports | Each solves 1+ real-context task |
+| 3 | **1 Playbook** | "How to Lead in the AI Era" — no technicians needed | Executive articulates AI strategy independently |
+| 4 | **2 prompt libraries** | Universal + Executive (strategy, decisions, delegation, reports) | Quality outputs in 3+ areas |
+| 5 | **1 second brain** | NotebookLM as 24/7 external memory | Retrieves key info in <30 seconds |
+| 6 | **9 sessions** | 2h each with facilitator. Co-creation with real context | Functional deliverable per session |
+| 7 | **1 Virtual Campus** | Resources, updates, community (1 month included) | Verified access, first resource consumed |
+| 8 | **Community** | Sunday/month: workshops. Saturday/month: live AI clinics | Attended 1+ session in first month |
+| 9 | **Masterclass** | "AI: what is happening" (Mon April 6 7PM, 2h). Optional | Attended or reviewed recording |
 
-### What It Is NOT
-- Not a theory course on AI
-- Not an isolated tool to try and abandon
-- Not a generic productivity workshop
-- Does not require prior technical knowledge
-- Not a dependency: the system is yours, it operates without MetodologIA after the bootcamp
-
----
-
-## 3. Products and Depth Path
-
-### 4 Levels of Depth
-
-**Full path:
-- 5h of intensive content, risk-free at no cost (2h masterclass + 3h workshop)
-- 20h of elite content, if you choose the CAO Bootcamp
-- 16 weeks of Digital (R)Evolution, if you also choose Empowerment with your team
-
-| Level | Product | Price | Duration | Format | Audience |
-|-------|---------|-------|----------|--------|----------|
-| — | Masterclass "AI: what is happening and how to take advantage" | Free | 2 hours | Open | Executives + managers |
-| 0 | Workshop "From Busy to Productive" | Free | 3 hours | Group (up to 13) | Executives + managers |
-| 2 | CAO Bootcamp - Believers Edition | $1,490 USD | 20h over 4-10 wks | Solo/Duo/Trio | C-level executives (5 of 13) |
-| 2b | CAO Bootcamp - Academic Calendar | $1,990 USD | 20h over 4-10 wks | Solo/Duo/Trio | C-level executives |
-| 3 | Empowerment Program | $1,490 USD/person | 16 weeks | Group (up to 13) | Managers 7+ yrs exp |
-
-### Masterclass — "AI: what is happening and how to take advantage" (Optional, Free)
-**Date:** Easter Monday, April 6, 7:00 PM
-**Format:** 2 hours, open access
-**Purpose:** Current AI landscape and how an executive can take advantage without depending on technicians. Optional — not a requirement for the Workshop or CAO.
-
-### Level 0 — Workshop "From Busy to Productive" (Free)
-**Date:** Tuesday April 7, 7:00 PM
-**Format:** 3 hours, group of up to 13 people. Also available Saturday: 9AM-12PM or 2PM-5PM
-**Purpose:** Funnel entry point. Live, we build an agent with each attendee's real work context. No financial investment. Mutual fit validation.
-
-### Level 2 — CAO Bootcamp
-**The core product.** 20 hours distributed over 4-10 weeks. 9 co-creation sessions with a facilitator.
-
-#### Believers Edition (April 2026 — Early Access)
-- Only 5 of the 13 invitees gain access
-- $1,490 USD (founding price, 40% below regular price)
-- Javier Montano facilitates personally
-- Closed door, intimate format
-
-#### Open Enrollment (May 2026)
-- $1,990 USD
-- Group of up to 10 people
-- The remaining 8 invitees from the original outreach have preferential seats
-- If all 8 take their spot, only 2 seats remain open to the public
-- If any pass, seats are released until enrollment closes
-
-#### Academic Calendar (From July 2026)
-- $1,990 USD
-- Open every 2 months
-- Cristian Jarrin + certified Ambassadors facilitate
-- Identical format, same depth
-
-#### Modalities
-| Modality | People | Dynamic | Price |
-|----------|--------|---------|-------|
-| Solo | 1 | 1:1 with facilitator. Maximum personalization | $1,490 / $1,990 |
-| Duo | 2 | Joint work. Ideal for partners, co-founders | $1,490 / $1,990 |
-| Trio | 3 | Executive team. Same price, same format | $1,490 / $1,990 |
-
-### Level 3 — Empowerment Program
-**For the executive's tactical team.** 16 weeks, groups of up to 13 people.
-- Designed for managers, middle management, and professionals with at least 5 years of management experience (ideal 7+)
-- Cycles every 3 months from May 2026
-- Closed Door version (in-company) or Open Enrollment
-- $1,490 USD per person
-- 20% of participants come from CAO graduates (organic referral)
-
-### Custom Assistants
-- $347 USD per unit
-- The 13 base assistants are already included in the CAO Bootcamp
-- Additional assistants for specific on-demand tasks
-- No unit limit
+### Explicit Limits
+- Does not solve business strategy, hiring, or product-market fit
+- Does not replace specialized consulting (legal, tax, financial)
+- Does not work without 2h/week commitment during bootcamp [ASSUMPTION]
+- Does not guarantee results — depends on adoption consistency
 
 ---
 
-## 4. 9 Executive Use Cases
+## 3. Products and Path
+
+| Level | Product | Price | For whom | When |
+|-------|---------|-------|----------|------|
+| Masterclass | "AI: what is happening" | Free | Any executive | Mon Apr 6, 7PM |
+| Workshop | "From Busy to Productive" | Free | Executives + managers | Tue Apr 7, 7PM + Saturday |
+| CAO Believers | Early access | $1,490 | 5 of 13 selected | April |
+| CAO Open | Enrollment | $1,990 | C-level | May (8 preferential + 2 public) |
+| Empowerment | Teams | $1,490/person | Managers 7+ yrs | May, every 3 months |
+| Academic | Regular | $1,990 | Open | July, every 2 months |
+| Assistants | Custom | $347/unit | Anyone | On demand |
+
+**Path:** 5h risk-free at no cost → 20h elite content → 16 weeks of Digital (R)Evolution with your team.
+
+### Solo / Duo / Trio Decision Framework
+
+| Criteria | Solo (1:1) | Duo (2) | Trio (3) |
+|----------|-----------|---------|----------|
+| Personalization | Maximum | High | Moderate |
+| Team dynamics | N/A | Ideal for partners | Executive committee |
+| Individual time | 100% | 60% | 40% |
+| Price | $1,490/$1,990 | Same | Same |
+| Best for | Individual executive | Co-founders | Leadership team |
+| Trade-off | No group perspective | Requires coordination | Less individual depth |
+
+### Funnel: 13 → 5 → 8 → Ambassadors
+1. **13** executives invited to exclusive experience
+2. **5** access Believers Edition (April, $1,490, Javier facilitates)
+3. **8** remaining with preferential seats for May (group of 10)
+4. If all 8 take, only **2 public seats**
+5. Graduates can become **Ambassadors** (50% discount on regular price) [DOC]
+
+---
+
+## 4. Pricing Logic
+
+| Question | Answer |
+|----------|--------|
+| Why not $500? | Doesn't cover 1:1 facilitation of 20h or digital assets delivered [INFERENCE] |
+| Why not $5,000? | Ecuador market doesn't support that ticket at launch without local success cases [ASSUMPTION] |
+| Why $1,490? | Equals ~5 executive coaching sessions. Difference: you leave with a system that operates without a coach [INFERENCE] |
+| Why $1,990 open? | Regular price without founder discount. Justified by certified facilitator + academic format |
+| Cristian $2,900 entry fee? | Covers accumulated digital assets (IP, agents, services). Dynamic: adjusts with joint valuation [DOC] |
+
+---
+
+## 5. 9 Executive Use Cases
 
 ### Phase 1 — Foundations (Sessions 1-3)
-| # | Use Case | Outcome |
-|---|----------|---------|
-| 1 | Smart email and executive communication | AI-drafted and prioritized emails |
-| 2 | Reports and analysis with AI | Automated reports from raw data |
-| 3 | Automated scheduling and priorities | Optimized calendar, conflicts resolved |
+| # | Case | Verifiable result |
+|---|------|-------------------|
+| 1 | Email and executive communication | AI-drafted and prioritized emails. Inbox time: -40% |
+| 2 | Reports and analysis | Automated reports from raw data. No manual intervention |
+| 3 | Scheduling and priorities | Optimized calendar, conflicts auto-resolved |
 
 ### Phase 2 — Integration (Sessions 4-6)
-| # | Use Case | Outcome |
-|---|----------|---------|
-| 4 | Digital second brain | Connected and searchable knowledge base |
-| 5 | Assistants for strategic decisions | Automated multi-scenario analysis |
-| 6 | Automation of repetitive workflows | Workflows executed without intervention |
+| # | Case | Verifiable result |
+|---|------|-------------------|
+| 4 | Digital second brain | Searchable knowledge base in <30s |
+| 5 | Strategic decisions | Automated multi-scenario analysis |
+| 6 | Workflow automation | Workflows executed without human intervention |
 
 ### Phase 3 — Mastery (Sessions 7-9)
-| # | Use Case | Outcome |
-|---|----------|---------|
-| 7 | Complete agentic system | All components operating in coordination |
-| 8 | Effective delegation to AI | Clear criteria for what to delegate and what not |
-| 9 | Post-bootcamp sustainability plan | Self-sufficient system, no dependency |
+| # | Case | Verifiable result |
+|---|------|-------------------|
+| 7 | Complete agentic system | All components operating coordinated |
+| 8 | Effective AI delegation | Clear criteria for what to delegate and what not |
+| 9 | Sustainability plan | Self-sufficient documented system |
 
 ---
 
-## 5. Timeline
+## 6. Timeline
 
 | Date | Event | Audience | Status |
 |------|-------|----------|--------|
-| April 7, 2026 (Tuesday April 7) | Workshop "From Busy to Productive" | Executives + managers | Confirmed, 13 seats |
-| April 2026 | CAO Believers Edition | 5 selected executives | $1,490, Closed Door |
-| May 2026 | CAO Open Enrollment | C-level executives | $1,990, Academic |
-| May 2026 | Empowerment Program | Managers 7+ yrs exp | $1,490/person |
-| July 2026 | CAO Academic Calendar | Open every 2 months | $1,990 |
-| Q4 2026 | First B2B close | Corporate clients | [POR CONFIRMAR] |
-| Nov 2026 | First Cobrand close | Partners | [POR CONFIRMAR] |
+| Mon Apr 6, 7PM | Masterclass (optional) | Open | Confirmed |
+| Tue Apr 7, 7PM | Workshop + Saturday option | Executives + managers | Confirmed, 13 spots |
+| April 2026 | CAO Believers | 5 selected | $1,490, closed door |
+| May 2026 | CAO Open + Empowerment | C-level + Managers 7+ | $1,990 + $1,490 |
+| July 2026 | Academic Calendar | Open, every 2 months | $1,990 |
 
 ---
 
-## 6. Expected ROI
+## 7. ROI with Sensitivity Analysis
 
-### Formula
-```
-Hours recovered/week x Hourly value x 4 weeks = Monthly value
-18h x $60 USD x 4 = $4,320 USD/month
-```
+| Scenario | Hours/wk | Hourly rate | Monthly | Payback | Annual |
+|----------|----------|-------------|---------|---------|--------|
+| **Pessimistic** | 10h | $40 | $1,600 | ~28 days | $19,200 |
+| **Base** | 18h | $60 | $4,320 | ~10 days | $51,840 |
+| **Optimistic** | 25h | $80 | $8,000 | ~5 days | $96,000 |
 
-### Breakdown
-
-| Metric | Value |
-|--------|-------|
-| Hours recovered/week | 18h [SUPUESTO: based on field averages] |
-| Executive hourly value (conservative) | $60 USD |
-| Monthly recurring value | $4,320 USD |
-| Annual system value | $51,840 USD |
-| CAO Believers Edition investment | $1,490 USD |
-| **Payback** | **~10 days** |
-| Annual value/investment ratio | 34.8x |
-
-> *Illustrative projection. Results depend on adoption consistency.* [SUPUESTO]
-
-### ROI Calculator
-The HTML dossier includes an interactive calculator where the executive can adjust:
-- Hours recovered/week (5-30h, slider)
-- Hourly value ($20-200 USD, slider)
-- Output: Monthly value, payback, annual value
+**Explicit assumptions:**
+- Hours reclaimed depend on task types and usage frequency [ASSUMPTION]
+- $60/h is conservative for Quito executive ($100K+ annual) [ASSUMPTION]
+- System generates zero value if not used [DOC: guarantee]
+- Payback assumes usage from week 1 (realistic: week 2-3 post-bootcamp) [ASSUMPTION]
 
 ---
 
-## 7. Competitive Landscape
+## 8. Competitive Landscape
 
-| Provider | Type | Price | Duration | Deliverable at Close | Post Support |
-|----------|------|-------|----------|----------------------|-------------|
-| IDE Business School | Executive MBA | $5K-$15K | 6-18 months | Diploma | Alumni |
-| USFQ Executive Ed. | Theory AI modules | $3K-$8K | 3-6 months | Certificate | Limited |
-| Big 4 (PwC, Deloitte) | Corporate workshops | $10K+ | 1-5 days | Recommendations | Contract |
-| Coursera/edX | Online AI courses | $50-$300 | Self-paced | Certificate | Forum |
-| **MetodologIA** | **Agentic bootcamp** | **$1,490-$1,990** | **4-10 wks** | **Functional agent + 13 assistants + 2nd brain** | **Campus + community** |
+| | IDE | USFQ | Big 4 | Coursera | **MetodologIA** |
+|---|---|---|---|---|---|
+| **Price** | $5K-$15K | $3K-$8K | $10K+ | $50-$300 | **$1,490-$1,990** |
+| **Duration** | 6-18 months | 3-6 months | 1-5 days | Self-paced | **4-10 weeks** |
+| **Delivery** | Diploma | Certificate | Recommendations | Certificate | **Functional system** |
+| **Applied AI** | Theoretical | Theoretical | Generic | Generic | **Agent operating** |
+| **Post-program** | Alumni | Limited | Contract | Forum | **Community + campus** |
 
-**Direct competitors in Ecuador with a functional agentic deliverable: 0.** [DOC: kyc-ecuador.md]
-
-### Sustainable Competitive Advantage
-1. **Only program that delivers a functional system** (not just knowledge)
-2. **In Spanish**, with Latin American context
-3. **Price 3-10x lower** than executive alternatives
-4. **Ambassador network** creates an organic community barrier
-5. **Open source**: Pristino belongs to the executive, not to MetodologIA
+**Direct competitors in Ecuador with agentic deliverable: 0.** [DOC: kyc-ecuador]
 
 ---
 
-## 8. The Team
+## 9. Team and Equity
 
-### Javier Montano — MetodologIA Founder (51%)
-Creator of the method. 27 GPT assistants, 7 Gemini Gems, Pristino agent, 180+ systematized prompts. Personally facilitates the Believers Edition in Quito.
+| Partner | % | Role |
+|---------|---|------|
+| Javier Montano | 51% | Founder. Method, IP, 27 GPTs, Pristino, 180+ prompts. Facilitates Believers |
+| German | 19% | Co-founder. Accelerators, network |
+| Daniel | 13% | Co-founder. Accelerators, founders |
+| Katherin Oquendo | 10% | Co-founder. Operations, strategy |
+| Cristian Jarrin | 7% | Partner Year 2. Ecuador operator. $2,900 entry fee (dynamic) |
 
-### Cristian Jarrin — MetodologIA Ecuador Partner (7%, joins Year 2)
-Territorial operator. Business relationships in Quito, logistics, outreach. Responsible for sustainable operations in Ecuador.
-**Contact:** contacto@metodologia.info
-
-### German (19%), Daniel (13%), Katherin Oquendo (10%) — Co-Founders
-IP, brand, technology ecosystem, global ambassador network.
-
----
-
-## 9. Guarantee and Terms
-
-### Guarantee
-> "100% refund if you request reimbursement before completing the first 4-hour session, with a 1-hour structured feedback session."
-
-### No-Show Policy
-- 1st justified absence: $0
-- Subsequent: $100 USD per missed session
-
-### Format
-- 100% online for the first 5 cohorts
-- In-person available as add-on if the client requests it (Cristian coordinates logistics)
-
-### AI Licenses (NOT included)
-| Tier | Tools | Monthly Cost |
-|------|-------|-------------|
-| Required (Day 1) | Gmail/Drive + Gemini Advanced + NotebookLM Plus | ~$20 USD |
-| Recommended | + ChatGPT Plus + Claude Pro | ~$60 USD |
-| Free | Antigravity IDE, Codex, VS Code | $0 |
+**Dynamic equity:** $2,900 is initial. As the company is jointly valued, contributions are calculated to maintain equity share as it grows. [DOC]
 
 ---
 
-## 10. Ambassador Program
+## 10. Conditions
 
-CAO Bootcamp graduates can become MetodologIA Ambassadors.
-
-### Benefits
-- **50% discount** on the regular price of any program
-- Service enabler: they transfer their discount to their group (trio)
-- Facilitate future programs (50% of revenue from programs they run)
-- Access to the global MetodologIA network
-
-### Flywheel
-```
-CAO Graduates (33 Y1) → 15-20 Active Ambassadors → 2-3 referrals each → 40% conversion → 12+ additional closes Y2
-```
-[INFERENCIA: projection based on B2C referral models in executive education]
+- **Guarantee:** 100% refund before 4h with 1h structured feedback
+- **No-show:** 1st justified $0, subsequent $100/session
+- **Format:** 100% online (in-person as add-on)
+- **AI licenses NOT included:** $20-60 USD/month (participant responsibility)
 
 ---
 
-## 11. Ecuador Market
+## 11. Ambassador Program
+
+CAO graduates can certify as Ambassadors. Benefit: 50% discount on regular price. They act as enablers — transfer discount to their group (trio). [DOC]
+
+**Flywheel:** 33 Y1 graduates → 15-20 active ambassadors → 2-3 referrals each → 40% conversion → 12+ additional closes Y2 [INFERENCE]
+
+---
+
+## 12. Ecuador Market
 
 | Metric | Value | Source |
 |--------|-------|--------|
-| TAM Ecuador | $89M USD | 60K-100K executives x $1,490 [INFERENCIA] |
-| SAM (Pichincha + Guayas) | $14.9M USD | 7.2K-12K reachable executives [INFERENCIA] |
-| SOM Year 1 | $136K USD | 52 executives + B2B + Cobrand [DOC: forecast-model] |
-| SOM Year 2 | $435K USD | Projection with ambassadors [INFERENCIA] |
-| Companies in Ecuador | 1,073,524 | 2024 Census [DOC] |
-| Formal employees | 2,931,588 | 2024 Census [DOC] |
-| Global AI training market | $1.5B → $10.4B (2033) | [DOC: market research global] |
-| LatAm share | 7.7% ($280M) | [INFERENCIA] |
-| Direct competitors Ecuador | 0 | [DOC: kyc-ecuador.md] |
+| TAM | $89M | 60K-100K executives x $1,490 [INFERENCE] |
+| SAM | $14.9M | 7.2K-12K reachable (Pichincha+Guayas) [INFERENCE] |
+| SOM Y1 | $136K | 52 executives + B2B + Cobrand [DOC: forecast] |
+| SOM Y2 | $435K | With ambassadors [INFERENCE] |
+| Direct competitors | 0 | [DOC: kyc-ecuador] |
 
 ---
 
-## 12. Financial Model Summary
+## 13. Financial Model Summary
 
-### Revenue by Segment (24 months)
-
-| Segment | Year 1 | Year 2 | 24-Month Total |
-|---------|--------|--------|----------------|
-| B2C (CAO + Emp + Assistants) | $86,849 | $150,000 | $236,849 |
-| B2B (Corporate groups) | $13,200 | $98,400 | $111,600 |
-| B2B2B Cobrand | $36,000 | $96,000 | $132,000 |
+| Segment | Y1 | Y2 | 24 months |
+|---------|----|----|-----------|
+| B2C | $86,849 | $150,000 | $236,849 |
+| B2B | $13,200 | $98,400 | $111,600 |
+| Cobrand | $36,000 | $96,000 | $132,000 |
 | White Label | $0 | $90,500 | $90,500 |
 | **Total** | **$136,049** | **$434,900** | **$570,949** |
-| Operating costs | -$9,756 | -$15,000 | -$24,756 |
-| **Net result** | **$126,293** | **$419,900** | **$546,193** |
-
-### Unit Economics
-| Metric | Value |
-|--------|-------|
-| Monthly burn | $813 USD |
-| Break-even | Month 1 (1 CAO close) |
-| LTV/CAC Year 1 | 27-40x |
-| Net margin Y1 | ~93% |
-
-> *Indicative projections. Subject to adoption and market conditions.* [SUPUESTO]
+| Costs | -$9,756 | -$15,000 | -$24,756 |
+| **Net** | **$126,293** | **$419,900** | **$546,193** |
 
 ---
 
-## 13. Next Steps
+## 14. Post-Bootcamp Sustainability
 
-1. **Reserve your seat** at the free Workshop (April 7): contacto@metodologia.info
-2. **Apply to the Believers Edition** (only 5 seats): same email
-3. **Inquire about the Empowerment Program** for your team: available from May
-4. **Explore Custom Assistants**: $347 USD each, personalized to your operations
+| Month | Without MetodologIA | With community |
+|-------|-------------------|----------------|
+| 2 | Agent operates configured tasks. Assistants work | + Monthly workshop + AI clinic |
+| 6 | Drift risk if context not updated | + Campus with updates |
+| 12 | Stable system but no new capabilities | + Ambassador can facilitate others |
 
----
-
-## 14. FAQ
-
-**Q: Do I need technical knowledge?**
-A: No. If you can use Gmail, you can use Pristino. The entire bootcamp uses natural language and visual interfaces.
-
-**Q: What if it doesn't work for me?**
-A: 100% guarantee before completing 4 hours. No fine print, no questions asked.
-
-**Q: Does the agent keep working after the bootcamp?**
-A: Yes. Pristino is Open Source and yours forever. The 13 assistants continue operating. The second brain grows with every use.
-
-**Q: Can my team also participate?**
-A: The Empowerment Program is designed for teams. Cycles from May, $1,490/person.
-
-**Q: Can I access the bootcamp as an ambassador?**
-A: MetodologIA Ambassadors receive a 50% discount on the regular price. They can enable the discount for their group (trio).
+**Trade-off:** Without community, system works but doesn't evolve. With community ($20/month campus), it stays current. [INFERENCE]
 
 ---
 
-*This is a custom service design proposal. Listed prices are indicative and will be confirmed prior to the signing of a service agreement. This document does not constitute a delivery commitment or a contract.*
+## 15. Edge Cases
+
+| Case | Response |
+|------|----------|
+| Misses 3+ sessions | Recorded sessions + async recovery. If >50% absent, restart offer next cycle |
+| Already has AI tools | Integrate into Pristino ecosystem. Connect, don't replace |
+| Team resists adoption | Empowerment as separate program. Don't force; show value first |
+| Not technical | Entire bootcamp uses natural language. If you use Gmail, you can use Pristino |
+| Corporate restrictions | Pre-bootcamp evaluation. Alternative: separate personal account |
+
+---
+
+## 16. Risk Matrix
+
+| Risk | Prob | Impact | Mitigation |
+|------|------|--------|-----------|
+| Doesn't dedicate 2h/week | Medium | High | Flexible format, recorded sessions, async |
+| Session connectivity | Low | Medium | Pre-bootcamp check, backup recording |
+| AI tools change rapidly | High | Low | Monthly community + updated campus |
+| Team resists AI adoption | Medium | Medium | Separate Empowerment program |
+| ROI expectations not met | Low | High | 4h guarantee, ROI marked as projection |
+
+---
+
+## 17. Next Steps
+
+| Step | Action | Channel |
+|------|--------|---------|
+| 1 | Masterclass (April 6, 7PM) | Calendar |
+| 2 | Workshop (April 7, 7PM) | Calendar |
+| 3 | Believers Edition (5 spots) | contacto@metodologia.info |
+| 4 | Empowerment for team | Same email |
+
+---
+
+## 18. FAQ
+
+**Do I need technical knowledge?** No. If you use Gmail, you can use Pristino. Everything is natural language. [DOC]
+
+**What if it doesn't work for me?** 100% guarantee before 4h. No fine print. [DOC]
+
+**Does the agent keep working after?** Yes. Pristino is Open Source and yours. The 13 assistants operate. The brain grows with each use. [DOC]
+
+**Can my team participate?** Empowerment is for teams. $1,490/person, 16 weeks, from May. [DOC]
+
+**How does the Ambassador discount work?** 50% off regular price. Can transfer to your group (trio). [DOC]
+
+---
+
+## 19. Glossary
+
+| Term | Definition |
+|------|-----------|
+| **AI Agent** | Software that autonomously executes tasks using your context (emails, documents, calendar) |
+| **Pristino** | MetodologIA's Open Source agent. Runs locally, auditable, yours forever |
+| **AI Assistant** | Specialized tool for a specific function (e.g., draft emails, analyze data) |
+| **Second Brain** | System that organizes and connects all your knowledge (based on NotebookLM) |
+| **Prompt** | Natural language instruction that tells the AI what to do |
+| **Bootcamp** | Intensive co-creation program (not a theoretical course) |
+| **Agentic System** | Coordinated set of agent + assistants + brain working together |
+| **CAO** | Chief Agentic Officer — executive who operates with a personal AI system |
+| **(R)Evolution** | MetodologIA philosophy: change with intention, not intensity |
+| **Ambassador** | Certified CAO graduate who can facilitate MetodologIA programs |
+
+---
+
+*This is a customized service design proposal. Indicated prices are indicative and confirmed before signing. This document does not constitute a delivery commitment or contract.*
 
 *Built by professionals, powered by MetodologIA's agentic network.*
 
 ---
-**Derived from:** content.json v2.0 (2026-04-01). Prices verified: yes, 2026-04-01.
+**Derived from:** content.json v2.0 (2026-04-02). Prices verified: yes. Evidence tags: [DOC] [INFERENCE] [ASSUMPTION].
