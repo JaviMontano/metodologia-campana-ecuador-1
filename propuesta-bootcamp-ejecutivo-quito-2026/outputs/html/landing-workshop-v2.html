@@ -269,9 +269,62 @@
       .cards-grid { grid-template-columns: 1fr; }
     }
 
+    /* --- MODAL --- */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(6px);
+      display: none; align-items: center; justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 16px; padding: 32px; max-width: 480px; width: 100%;
+      backdrop-filter: blur(16px); position: relative;
+    }
+    .modal h3 {
+      font-family: var(--font-display); font-weight: 700; font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .modal .modal-sub {
+      font-size: 14px; color: var(--text-secondary); margin-bottom: 24px;
+    }
+    .modal-close {
+      position: absolute; top: 16px; right: 16px;
+      background: none; border: none; font-size: 20px;
+      color: var(--text-secondary); cursor: pointer;
+    }
+    .option-card {
+      display: flex; align-items: center; gap: 16px;
+      padding: 16px; border: 1px solid var(--border); border-radius: var(--radius);
+      margin-bottom: 12px; cursor: pointer; transition: all 0.2s;
+      background: transparent;
+    }
+    .option-card:hover { border-color: var(--gold); background: rgba(255,215,0,0.05); }
+    .option-card .opt-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0;
+    }
+    .option-card .opt-icon.gold-bg { background: rgba(255,215,0,0.15); color: var(--gold); }
+    .option-card .opt-icon.blue-bg { background: rgba(19,125,197,0.15); color: var(--blue); }
+    .option-card .opt-title {
+      font-family: var(--font-display); font-weight: 600; font-size: 15px;
+    }
+    .option-card .opt-meta {
+      font-size: 12px; color: var(--text-secondary); margin-top: 2px;
+    }
+    .option-card .opt-badge {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.5px; padding: 2px 8px; border-radius: 4px;
+      display: inline-block; margin-top: 4px;
+    }
+    .badge-free { background: rgba(39,174,96,0.15); color: #27AE60; }
+    .badge-new { background: rgba(255,215,0,0.15); color: var(--gold); }
+
     /* --- PRINT --- */
     @media print {
-      nav, .scroll-progress, .share-btn { display: none; }
+      nav, .scroll-progress, .share-btn, .modal-overlay { display: none; }
       body { background: white; color: #1a1a1a; }
       .card { border: 1px solid #ddd; background: #fafafa; }
       .hero::before { display: none; }
@@ -347,8 +400,7 @@
 
     <!-- CTAs -->
     <div class="cta-group">
-      <a href="mailto:contacto@metodologia.info?subject=Reserva%20Taller%20De%20Ocupado%20a%20Productivo%20—%20Quito%202026" class="btn btn-gold" data-i18n="cta.reserve">Reservar Plaza Gratis</a>
-      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Taller+De+Ocupado+a+Productivo&dates=20260407T000000Z/20260407T020000Z&details=Taller+gratuito+de+3+horas.+Construimos+un+agente+IA+con+tu+contexto+laboral+real.&location=Online" target="_blank" class="btn btn-outline" data-i18n="cta.calendar">Agregar al Calendario</a>
+      <button onclick="openModal()" class="btn btn-gold" data-i18n="cta.reserve">Agendar mi Plaza Gratis</button>
     </div>
   </section>
 
@@ -436,7 +488,7 @@
     <p class="sub" data-i18n="footer.sub">Las plazas son limitadas. La oportunidad, tambien.</p>
 
     <div class="cta-group" style="margin-bottom:20px;">
-      <a href="mailto:contacto@metodologia.info?subject=Reserva%20Taller%20De%20Ocupado%20a%20Productivo%20—%20Quito%202026" class="btn btn-gold" data-i18n="cta.reserve">Reservar Plaza Gratis</a>
+      <button onclick="openModal()" class="btn btn-gold" data-i18n="cta.reserve">Agendar mi Plaza Gratis</button>
     </div>
 
     <button class="share-btn" onclick="shareWhatsApp()" data-i18n="cta.share">Compartir por WhatsApp</button>
@@ -448,7 +500,65 @@
     </div>
   </footer>
 
+  <!-- ================================================================
+       MODAL: Agendar Plaza
+       ================================================================ -->
+  <div class="modal-overlay" id="modal-agendar" onclick="if(event.target===this)closeModal()">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <h3 data-i18n="modal.title">Elija su experiencia</h3>
+      <p class="modal-sub" data-i18n="modal.sub">Seleccione la sesion que mejor se ajuste a su agenda. Todas son gratuitas, con plazas limitadas a 13 personas.</p>
+
+      <!-- Option 1: Masterclass -->
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Masterclass%3A+IA%2C+que+esta+pasando+y+como+sacarle+provecho&dates=20260407T000000Z/20260407T020000Z&details=Charla+abierta+de+2+horas.+Panorama+actual+de+la+IA+para+directivos.+13+plazas.+Sin+costo.+MetodologIA+Quito+2026.&location=Online+(enlace+se+envia+al+confirmar)" target="_blank" class="option-card" style="text-decoration:none;color:inherit;">
+        <div class="opt-icon gold-bg">&#9733;</div>
+        <div>
+          <div class="opt-title" data-i18n="modal.mc.title">Masterclass: IA, que esta pasando</div>
+          <div class="opt-meta" data-i18n="modal.mc.meta">Lunes 6 abril &middot; 7:00 - 9:00 PM &middot; Online</div>
+          <span class="opt-badge badge-new" data-i18n="modal.mc.badge">Nuevo &middot; 13 plazas</span>
+        </div>
+      </a>
+
+      <!-- Option 2: Taller nocturno -->
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Taller%3A+De+Ocupado+a+Productivo+con+Agentes+de+IA&dates=20260408T000000Z/20260408T030000Z&details=3+horas.+Construimos+un+agente+IA+con+su+contexto+laboral+real.+13+plazas.+Sin+costo.+MetodologIA+Quito+2026.&location=Online+(enlace+se+envia+al+confirmar)" target="_blank" class="option-card" style="text-decoration:none;color:inherit;">
+        <div class="opt-icon gold-bg">&#9790;</div>
+        <div>
+          <div class="opt-title" data-i18n="modal.noche.title">Taller: De Ocupado a Productivo</div>
+          <div class="opt-meta" data-i18n="modal.noche.meta">Martes 7 abril &middot; 7:00 - 10:00 PM &middot; Online</div>
+          <span class="opt-badge badge-free" data-i18n="modal.noche.badge">Recomendado &middot; 13 plazas</span>
+        </div>
+      </a>
+
+      <!-- Option 3: Taller sábado mañana -->
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Taller%3A+De+Ocupado+a+Productivo+(Sabado+Manana)&dates=20260411T140000Z/20260411T170000Z&details=3+horas.+Construimos+un+agente+IA+con+su+contexto+laboral+real.+13+plazas.+Sin+costo.+MetodologIA+Quito+2026.&location=Online+(enlace+se+envia+al+confirmar)" target="_blank" class="option-card" style="text-decoration:none;color:inherit;">
+        <div class="opt-icon blue-bg">&#9728;</div>
+        <div>
+          <div class="opt-title" data-i18n="modal.sam.title">Taller: Sabado Manana</div>
+          <div class="opt-meta" data-i18n="modal.sam.meta">Sabado 11 abril &middot; 9:00 AM - 12:00 PM &middot; Online</div>
+          <span class="opt-badge badge-free" data-i18n="modal.sam.badge">Alternativa &middot; 13 plazas</span>
+        </div>
+      </a>
+
+      <!-- Option 4: Taller sábado tarde -->
+      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Taller%3A+De+Ocupado+a+Productivo+(Sabado+Tarde)&dates=20260411T190000Z/20260411T220000Z&details=3+horas.+Construimos+un+agente+IA+con+su+contexto+laboral+real.+13+plazas.+Sin+costo.+MetodologIA+Quito+2026.&location=Online+(enlace+se+envia+al+confirmar)" target="_blank" class="option-card" style="text-decoration:none;color:inherit;">
+        <div class="opt-icon blue-bg">&#9789;</div>
+        <div>
+          <div class="opt-title" data-i18n="modal.sat.title">Taller: Sabado Tarde</div>
+          <div class="opt-meta" data-i18n="modal.sat.meta">Sabado 11 abril &middot; 2:00 - 5:00 PM &middot; Online</div>
+          <span class="opt-badge badge-free" data-i18n="modal.sat.badge">Alternativa &middot; 13 plazas</span>
+        </div>
+      </a>
+
+      <p style="font-size:11px;color:var(--text-secondary);margin-top:16px;text-align:center;" data-i18n="modal.note">Al agendar recibira confirmacion y enlace de acceso en menos de 24 horas.</p>
+    </div>
+  </div>
+
   <script>
+    // --- MODAL ---
+    function openModal() { document.getElementById('modal-agendar').classList.add('open'); }
+    function closeModal() { document.getElementById('modal-agendar').classList.remove('open'); }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
     // --- COUNTDOWN ---
     (function countdown() {
       const target = new Date('2026-04-06T19:00:00-05:00').getTime();
@@ -506,8 +616,22 @@
         'hero.subtitle': '3 hours. We build an AI agent with your real work context. No economic investment. Only 13 spots. Also available Saturday: 9AM-12PM or 2-5PM.',
         'cd.days': 'Days', 'cd.hours': 'Hours', 'cd.mins': 'Min', 'cd.secs': 'Sec',
         'kpi.duration': 'Duration', 'kpi.spots': 'Spots', 'kpi.price': 'Investment', 'kpi.agent': 'AI Agent',
-        'cta.reserve': 'Reserve Free Spot',
-        'cta.calendar': 'Add to Calendar',
+        'cta.reserve': 'Book My Free Spot',
+        'modal.title': 'Choose your experience',
+        'modal.sub': 'Select the session that best fits your schedule. All are free, with seats limited to 13 people.',
+        'modal.mc.title': 'Masterclass: AI, what is happening',
+        'modal.mc.meta': 'Monday April 6 \u00b7 7:00 - 9:00 PM \u00b7 Online',
+        'modal.mc.badge': 'New \u00b7 13 spots',
+        'modal.noche.title': 'Workshop: From Busy to Productive',
+        'modal.noche.meta': 'Tuesday April 7 \u00b7 7:00 - 10:00 PM \u00b7 Online',
+        'modal.noche.badge': 'Recommended \u00b7 13 spots',
+        'modal.sam.title': 'Workshop: Saturday Morning',
+        'modal.sam.meta': 'Saturday April 11 \u00b7 9:00 AM - 12:00 PM \u00b7 Online',
+        'modal.sam.badge': 'Alternative \u00b7 13 spots',
+        'modal.sat.title': 'Workshop: Saturday Afternoon',
+        'modal.sat.meta': 'Saturday April 11 \u00b7 2:00 - 5:00 PM \u00b7 Online',
+        'modal.sat.badge': 'Alternative \u00b7 13 spots',
+        'modal.note': 'Upon booking you will receive confirmation and access link within 24 hours.',
         'reasons.title': '3 reasons to attend',
         'reasons.1.title': 'Functional agent in 3 hours',
         'reasons.1.desc': 'Not theory. We build an agent with your real work context. You take it home working.',
