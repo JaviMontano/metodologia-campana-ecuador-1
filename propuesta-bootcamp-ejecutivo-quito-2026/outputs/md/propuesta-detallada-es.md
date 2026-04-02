@@ -62,8 +62,10 @@ El CAO Bootcamp no ensena IA — le da un **agente que se vuelve su mejor aliado
 
 ### 4 Niveles de Profundidad
 
-**Estructura de horas: hasta 25h totales**
-- 2h Masterclass (opcional) + 3h Taller (experiencia gratuita) + 20h CAO Bootcamp (para quienes continuen)
+**Ruta completa:
+- 5h de contenido intensivo, sin riesgo ni costo (2h masterclass + 3h taller)
+- 20h de contenido de elite, si elige hacer el CAO Bootcamp
+- 16 semanas de (R)Evolucion Digital, si escoge tambien el Empoderamiento con su equipo
 
 | Nivel | Producto | Precio | Duracion | Formato | Audiencia |
 |-------|----------|--------|----------|---------|-----------|

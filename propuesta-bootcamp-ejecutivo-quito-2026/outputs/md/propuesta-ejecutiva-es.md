@@ -34,7 +34,7 @@ Su semana esta llena. Reuniones, reportes, seguimiento, correos. La IA puede eje
 | 8 | **Sesiones de comunidad** | 1 domingo/mes: workshops de actualizacion. 1 sabado/mes: clinicas de IA en vivo |
 | 9 | **Masterclass opcional** | "IA: que esta pasando y como sacarle provecho" (lunes 6 abril, 7PM, 2h) |
 
-**Formato:** Solo (1:1), Dupla (2) o Terna (3). **Duracion total:** hasta 25h (2h masterclass + 3h taller + 20h CAO).
+**Formato:** Solo (1:1), Dupla (2) o Terna (3). **Ruta completa: 5h sin riesgo ni costo (masterclass + taller) → 20h de elite (CAO Bootcamp) → 16 semanas de (R)Evolucion Digital (Empoderamiento).
 
 ### Que NO es
 

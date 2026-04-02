@@ -34,7 +34,7 @@ Your week is full. Meetings, reports, follow-ups, emails. AI can execute 60% of 
 | 8 | **Community sessions** | 1 Sunday/month: update workshops. 1 Saturday/month: live AI clinics |
 | 9 | **Optional Masterclass** | "AI: what is happening and how to take advantage" (Monday April 6, 7PM, 2h) |
 
-**Format:** Solo (1:1), Duo (2) or Trio (3). **Total duration:** up to 25h (2h masterclass + 3h workshop + 20h CAO).
+**Format:** Solo (1:1), Duo (2) or Trio (3). **Full path: 5h risk-free at no cost (masterclass + workshop) → 20h elite content (CAO Bootcamp) → 16 weeks of Digital (R)Evolution (Empowerment).
 
 ### What It Is NOT
 

@@ -62,8 +62,10 @@ The CAO Bootcamp does not teach AI — it gives you an **agent that becomes your
 
 ### 4 Levels of Depth
 
-**Hour structure: up to 25h total**
-- 2h Masterclass (optional) + 3h Workshop (free experience) + 20h CAO Bootcamp (for those who continue)
+**Full path:
+- 5h of intensive content, risk-free at no cost (2h masterclass + 3h workshop)
+- 20h of elite content, if you choose the CAO Bootcamp
+- 16 weeks of Digital (R)Evolution, if you also choose Empowerment with your team
 
 | Level | Product | Price | Duration | Format | Audience |
 |-------|---------|-------|----------|--------|----------|
