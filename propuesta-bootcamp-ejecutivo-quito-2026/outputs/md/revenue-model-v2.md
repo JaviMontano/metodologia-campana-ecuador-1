@@ -41,7 +41,7 @@ Todos los calculos son [DOC] basados en la estructura de revenue share definida 
 
 ## 3. Escenarios de participacion de Cristian
 
-Cristian (51% equity) puede ocupar multiples roles simultaneamente [DOC]. Dependiendo de su nivel de involucramiento, su ingreso por cierre cambia:
+Cristian (7% equity, entra Ano 2) puede ocupar multiples roles simultaneamente [DOC]. Dependiendo de su nivel de involucramiento, su ingreso por cierre cambia:
 
 ### Escenario A: Cristian hace todo (Coach + Franchise + Commercial)
 
@@ -202,11 +202,13 @@ El descuento del 50% no es un costo sino una inversion con retorno positivo de 5
 
 | Socio | Equity | Rol |
 |-------|--------|-----|
-| Cristian | 51% | Operador principal, coach, franchise [DOC] |
-| Javier | 19% | Arquitectura, IP, estrategia, red agentica [DOC] |
-| Holding | 30% | Reserva para expansion, nuevos socios, reinversion [DOC] |
+| Javier | 51% | Fundador, arquitectura, IP, metodo, red agentica [DOC] |
+| Katherin | 14% | Cofundadora, operaciones, estrategia [DOC] |
+| Daniel | 14% | Cofundador, aceleradores, red de fundadores [DOC] |
+| German | 14% | Cofundador, aceleradores, soporte [DOC] |
+| Cristian | 7% | Socio Ano 2, operador Ecuador, entry fee $2,900 [DOC] |
 
-La distribucion de equity es independiente del revenue share por cierre [DOC]. Cristian puede acumular hasta 90% del revenue share por cierre (Escenario A) mientras mantiene 51% del equity. El equity define la propiedad del negocio; el revenue share define la compensacion por actividad [INFERENCIA].
+La distribucion de equity es independiente del revenue share por cierre [DOC]. Cristian puede acumular hasta 90% del revenue share por cierre (Escenario A) mientras mantiene 7% del equity. El equity define la propiedad del negocio; el revenue share define la compensacion por actividad [INFERENCIA].
 
 ---
 

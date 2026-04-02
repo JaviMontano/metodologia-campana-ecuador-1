@@ -115,13 +115,13 @@ Gratis    Creyentes     Abierto      ramiento      Academico
 
 ## 7. El Equipo
 
-**Javier Montano** — Cofundador MetodologIA (19%)
+**Javier Montano — Fundador MetodologIA (51%)
 Creador del metodo. 27 asistentes GPT, 7 Gemini Gems, agente Pristino, 180+ prompts sistematizados. Facilita personalmente la Edicion Creyentes.
 
-**Cristian Jarrin** — Cofundador MetodologIA Ecuador (51%)
+**Cristian Jarrin — Socio MetodologIA Ecuador (7%, entra Ano 2)
 Operador territorial. Relaciones empresariales en Quito, logistica, convocatoria. Contacto: contacto@metodologia.info
 
-**MetodologIA Holding** — Entidad corporativa (30%)
+**Katherin Oquendo (14%), Daniel (14%), German (14%) — Cofundadores
 IP, marca, ecosistema tecnologico, red de embajadores.
 
 ---

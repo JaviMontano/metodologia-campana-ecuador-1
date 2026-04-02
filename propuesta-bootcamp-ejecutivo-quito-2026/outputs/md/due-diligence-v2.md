@@ -54,7 +54,7 @@ Nota: Los primeros 5 casos del CAO Believers Edition se entregan 100% online. La
 |--------|-------------|---------|------------|-----------|
 | Baja conversion del taller gratuito al programa pagado | Media | Alto | Diseno del taller como preview irresistible; seguimiento personalizado post-taller; embudo de 13 invitados como mecanismo de urgencia | [INFERENCIA] |
 | Percepcion de precio alto para mercado ecuatoriano | Media | Medio | Believers Edition a $1,490 como ancla; plan de cuotas; ROI tangible en el pitch | [INFERENCIA] |
-| Dependencia excesiva del aliado local | Baja | Alto | Contrato formal con Cristian Jarrin (51% co-fundador); roles y responsabilidades documentados | [DOC] |
+| Dependencia excesiva del aliado local | Baja | Alto | Contrato formal con Cristian Jarrin (7% socio, entra Ano 2); roles y responsabilidades documentados | [DOC] |
 | Problemas de conectividad para formato online | Baja | Medio | Sesiones grabadas como respaldo; plataforma con bajo consumo de ancho de banda; horarios flexibles | [INFERENCIA] |
 | Competencia de programas de IA ejecutivos locales | Media | Medio | Diferenciacion por metodologia propietaria (no solo herramientas); enfoque en (R)Evolucion, no en tutoriales | [INFERENCIA] |
 | Retencion fiscal inesperada sobre pagos internacionales | Baja | Medio | Facturacion via entidad local de Cristian Jarrin; asesoria tributaria previa al lanzamiento | [SUPUESTO] |
@@ -82,7 +82,7 @@ Nota: Los primeros 5 casos del CAO Believers Edition se entregan 100% online. La
 | Elemento | Detalle | Evidencia |
 |----------|---------|-----------|
 | Forma legal sugerida | SAS (Sociedad por Acciones Simplificada) o representacion comercial | [SUPUESTO] |
-| Participacion Cristian Jarrin | 51% (co-fundador local) | [DOC] |
+| Participacion Cristian Jarrin | 7% (socio, entra Ano 2, entry fee $2,900) | [DOC] |
 | Participacion MetodologIA | 49% | [INFERENCIA] |
 | Domicilio fiscal | Quito, Ecuador | [INFERENCIA] |
 | Requisito SRI | RUC activo para emision de facturas electronicas | [INFERENCIA] |

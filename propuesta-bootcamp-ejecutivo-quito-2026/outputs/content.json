@@ -169,8 +169,8 @@
     {
       "name": "Javier Montano",
       "role": { "es": "Cofundador MetodologIA", "en": "MetodologIA Co-Founder" },
-      "equity_pct": 19,
-      "entity": "MetodologIA (personal)",
+      "equity_pct": 51,
+      "entity": "MetodologIA",
       "contact": null,
       "bio": {
         "es": "Creador del metodo. 27 asistentes GPT, 7 Gemini Gems, agente Pristino, 180+ prompts sistematizados.",
@@ -179,28 +179,52 @@
       "responsibilities": { "es": "Metodo, marca, red agentica, facilitador primer CAO", "en": "Method, brand, agentic network, first CAO facilitator" }
     },
     {
+      "name": "Katherin Oquendo",
+      "role": { "es": "Cofundadora MetodologIA", "en": "MetodologIA Co-Founder" },
+      "equity_pct": 14,
+      "entity": "MetodologIA",
+      "contact": null,
+      "bio": { "es": "Cofundadora. Operaciones y estrategia.", "en": "Co-founder. Operations and strategy." },
+      "responsibilities": { "es": "Operaciones, estrategia", "en": "Operations, strategy" }
+    },
+    {
+      "name": "Daniel",
+      "role": { "es": "Cofundador MetodologIA", "en": "MetodologIA Co-Founder" },
+      "equity_pct": 14,
+      "entity": "MetodologIA",
+      "contact": null,
+      "bio": { "es": "Cofundador. Aceleradores y red de fundadores.", "en": "Co-founder. Accelerators and founders network." },
+      "responsibilities": { "es": "Aceleradores, red de fundadores", "en": "Accelerators, founders network" }
+    },
+    {
+      "name": "German",
+      "role": { "es": "Cofundador MetodologIA", "en": "MetodologIA Co-Founder" },
+      "equity_pct": 14,
+      "entity": "MetodologIA",
+      "contact": null,
+      "bio": { "es": "Cofundador. Aceleradores y soporte de fundadores.", "en": "Co-founder. Accelerators and founders support." },
+      "responsibilities": { "es": "Aceleradores, soporte fundadores", "en": "Accelerators, founders support" }
+    },
+    {
       "name": "Cristian Jarrin",
-      "role": { "es": "Cofundador MetodologIA Ecuador", "en": "MetodologIA Ecuador Co-Founder" },
-      "equity_pct": 51,
+      "role": { "es": "Socio MetodologIA Ecuador (entra 1 ano despues)", "en": "MetodologIA Ecuador Partner (joins 1 year later)" },
+      "equity_pct": 7,
       "entity": "MetodologIA Ecuador",
       "contact": "contacto@metodologia.info",
+      "entry_fee": 2900,
+      "entry_fee_mechanism": {
+        "es": "Entry fee de $2,900. Despues de un due diligence conjunto, se valora la empresa. Cristian paga via reinversion parcial (50%) de sus comisiones por el equity acumulado: activos digitales, IP, servicios validados, asistentes y agentes funcionando.",
+        "en": "Entry fee of $2,900. After a joint due diligence, the company is valued. Cristian pays via partial reinvestment (50%) of his commissions for accumulated equity: digital assets, IP, validated services, working assistants and agents."
+      },
+      "commitment": {
+        "es": "Vivir el proceso de directivo IA + recomendacion de hacer el programa de Empoderamiento con Javier.",
+        "en": "Live the AI executive process + recommendation to do the Empowerment program with Javier."
+      },
       "bio": {
         "es": "Operador territorial. Relaciones empresariales en Quito, logistica, convocatoria.",
         "en": "Territorial operator. Business relationships in Quito, logistics, outreach."
       },
       "responsibilities": { "es": "Territorio Ecuador, convocatoria, relaciones, logistica", "en": "Ecuador territory, outreach, relationships, logistics" }
-    },
-    {
-      "name": "MetodologIA Holding",
-      "role": { "es": "Entidad corporativa", "en": "Corporate entity" },
-      "equity_pct": 30,
-      "entity": "MetodologIA",
-      "contact": null,
-      "bio": {
-        "es": "IP, marca, ecosistema tecnologico, red de embajadores.",
-        "en": "IP, brand, tech ecosystem, ambassador network."
-      },
-      "responsibilities": { "es": "IP, marca, ecosistema, red global", "en": "IP, brand, ecosystem, global network" }
     }
   ],
   "market": {

@@ -115,13 +115,13 @@ Free      Believers      Open          ment         Calendar
 
 ## 7. The Team
 
-**Javier Montano** — MetodologIA Co-Founder (19%)
+**Javier Montano — MetodologIA Founder (51%)
 Method creator. 27 GPT assistants, 7 Gemini Gems, Pristino agent, 180+ systematized prompts. Personally facilitates the Believers Edition.
 
-**Cristian Jarrin** — MetodologIA Ecuador Co-Founder (51%)
+**Cristian Jarrin — MetodologIA Ecuador Partner (7%, joins Year 2)
 Territorial operator. Business relationships in Quito, logistics, outreach. Contact: contacto@metodologia.info
 
-**MetodologIA Holding** — Corporate entity (30%)
+**Katherin Oquendo (14%), Daniel (14%), German (14%) — Co-Founders
 IP, brand, tech ecosystem, ambassador network.
 
 ---

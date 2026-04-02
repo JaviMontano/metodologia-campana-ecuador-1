@@ -172,8 +172,10 @@
       width: 100%; height: 100%; border-radius: 50%;
       background: conic-gradient(
         #FFD700 0deg 183.6deg,
-        #60A5FA 183.6deg 252deg,
-        #A78BFA 252deg 360deg
+        #60A5FA 183.6deg 234deg,
+        #A78BFA 234deg 284.4deg,
+        #34D399 284.4deg 334.8deg,
+        #2DD4BF 334.8deg 360deg
       );
       mask: radial-gradient(circle, transparent 60%, black 61%);
       -webkit-mask: radial-gradient(circle, transparent 60%, black 61%);
@@ -396,8 +398,8 @@
           <div class="text-sm leading-relaxed space-y-3" style="color:var(--text-secondary);">
             <p data-lang="es" style="color:var(--text-primary);font-weight:600;">Llevas meses evaluando. La ventana no se abre &mdash; se cierra.</p>
             <p data-lang="en" style="color:var(--text-primary);font-weight:600;">You have been evaluating for months. The window does not open &mdash; it closes.</p>
-            <p data-lang="es"><strong style="color:var(--text-primary);">51% es tuyo.</strong> La mayor&iacute;a. Ecuador es tu operaci&oacute;n. Yo pongo el m&eacute;todo, la marca y la red. T&uacute; pones la ejecuci&oacute;n en territorio.</p>
-            <p data-lang="en"><strong style="color:var(--text-primary);">51% is yours.</strong> The majority. Ecuador is your operation. I bring the method, the brand and the network. You bring the execution on the ground.</p>
+            <p data-lang="es"><strong style="color:var(--text-primary);">Ser socio de MetodologIA.</strong> 7% de la empresa con un entry fee de $2,900. Entras un a&ntilde;o despu&eacute;s que los dem&aacute;s fundadores. Yo tengo el 51%, Katherin, Daniel y Germ&aacute;n el 14% cada uno. Tu compromiso: vivir el proceso de directivo IA y la recomendaci&oacute;n de hacer el programa de Empoderamiento conmigo.</p>
+            <p data-lang="en"><strong style="color:var(--text-primary);">Become a MetodologIA partner.</strong> 7% of the company with a $2,900 entry fee. You join one year after the other founders. I hold 51%, Katherin, Daniel and Germ&aacute;n each hold 14%. Your commitment: live the AI executive process and the recommendation to do the Empowerment program with me.</p>
             <p data-lang="es">He construido MetodologIA con 27 asistentes GPT, 7 Gems, un agente Open Source, 180+ prompts. Todo eso es tuyo en la franquicia.</p>
             <p data-lang="en">I have built MetodologIA with 27 GPT assistants, 7 Gems, an Open Source agent, 180+ prompts. All of that is yours in the franchise.</p>
             <p data-lang="es">Este dossier contiene el caso de negocio completo: financieros, roadmap operativo, modelo de embajadores, unit economics y FAQ. L&eacute;elo completo antes de decidir.</p>
@@ -509,31 +511,35 @@
         <div id="donutChart" class="donut-wrap mb-6">
           <div class="donut-ring"></div>
           <div class="donut-center">
-            <p class="font-heading font-black text-2xl gold-text">51%</p>
+            <p class="font-heading font-black text-2xl" style="color:#2DD4BF;">7%</p>
             <p class="text-xs font-bold" style="color:var(--text-primary);">Cristian</p>
           </div>
         </div>
-        <div class="grid gap-4" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
+        <div class="grid gap-3" style="grid-template-columns: repeat(5, 1fr);">
           <div class="glass p-3 rounded-xl text-center">
-            <span class="inline-flex w-10 h-10 rounded-full items-center justify-center text-sm font-bold mb-1" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#020617;">51%</span>
-            <p class="font-heading text-xs font-bold" style="color:var(--text-primary);">Cristian</p>
-            <p class="text-xs mt-0.5" style="color:var(--text-muted);">
-              <span data-lang="es">Operaci&oacute;n Ecuador</span><span data-lang="en">Ecuador Operations</span>
-            </p>
+            <span class="inline-flex w-9 h-9 rounded-full items-center justify-center text-xs font-bold mb-1" style="background:linear-gradient(135deg,#FFD700,#FFA000);color:#020617;">51%</span>
+            <p class="font-heading text-[10px] font-bold" style="color:var(--text-primary);">Javier</p>
+            <p class="text-[10px]" style="color:var(--text-muted);">Fundador</p>
           </div>
           <div class="glass p-3 rounded-xl text-center">
-            <span class="inline-flex w-10 h-10 rounded-full items-center justify-center text-sm font-bold mb-1" style="background:linear-gradient(135deg,#60A5FA,#3B82F6);color:#020617;">19%</span>
-            <p class="font-heading text-xs font-bold" style="color:var(--text-primary);">Javier</p>
-            <p class="text-xs mt-0.5" style="color:var(--text-muted);">
-              <span data-lang="es">M&eacute;todo, marca, red</span><span data-lang="en">Method, brand, network</span>
-            </p>
+            <span class="inline-flex w-9 h-9 rounded-full items-center justify-center text-xs font-bold mb-1" style="background:linear-gradient(135deg,#60A5FA,#3B82F6);color:#020617;">14%</span>
+            <p class="font-heading text-[10px] font-bold" style="color:var(--text-primary);">Katherin</p>
+            <p class="text-[10px]" style="color:var(--text-muted);">Cofundadora</p>
           </div>
           <div class="glass p-3 rounded-xl text-center">
-            <span class="inline-flex w-10 h-10 rounded-full items-center justify-center text-sm font-bold mb-1" style="background:linear-gradient(135deg,#A78BFA,#7C3AED);color:#fff;">30%</span>
-            <p class="font-heading text-xs font-bold" style="color:var(--text-primary);">Holding</p>
-            <p class="text-xs mt-0.5" style="color:var(--text-muted);">
-              <span data-lang="es">Reinversi&oacute;n y crecimiento</span><span data-lang="en">Reinvestment and growth</span>
-            </p>
+            <span class="inline-flex w-9 h-9 rounded-full items-center justify-center text-xs font-bold mb-1" style="background:linear-gradient(135deg,#A78BFA,#7C3AED);color:#fff;">14%</span>
+            <p class="font-heading text-[10px] font-bold" style="color:var(--text-primary);">Daniel</p>
+            <p class="text-[10px]" style="color:var(--text-muted);">Cofundador</p>
+          </div>
+          <div class="glass p-3 rounded-xl text-center">
+            <span class="inline-flex w-9 h-9 rounded-full items-center justify-center text-xs font-bold mb-1" style="background:linear-gradient(135deg,#34D399,#10B981);color:#020617;">14%</span>
+            <p class="font-heading text-[10px] font-bold" style="color:var(--text-primary);">German</p>
+            <p class="text-[10px]" style="color:var(--text-muted);">Cofundador</p>
+          </div>
+          <div class="glass p-3 rounded-xl text-center">
+            <span class="inline-flex w-9 h-9 rounded-full items-center justify-center text-xs font-bold mb-1" style="background:linear-gradient(135deg,#2DD4BF,#14B8A6);color:#020617;">7%</span>
+            <p class="font-heading text-[10px] font-bold" style="color:var(--text-primary);">Cristian</p>
+            <p class="text-[10px]" style="color:var(--text-muted);">Socio (A&ntilde;o 2)</p>
           </div>
         </div>
       </div>
@@ -815,7 +821,7 @@
               <tbody>
                 <tr><td><span data-lang="es">Revenue bruto</span><span data-lang="en">Gross revenue</span></td><td style="text-align:right;">$136,049</td></tr>
                 <tr><td><span data-lang="es">Costos operativos anuales</span><span data-lang="en">Annual operating costs</span></td><td style="text-align:right;">- $9,756</td></tr>
-                <tr><td>Holding (30% de IP 10%)</td><td style="text-align:right;">- $3,849</td></tr>
+                <tr><td>MetodologIA IP (10%)</td><td style="text-align:right;">- $3,849</td></tr>
                 <tr class="highlight-row"><td><strong><span data-lang="es">Neto para Cristian</span><span data-lang="en">Net to Cristian</span></strong></td><td style="text-align:right;"><span class="gold-text font-heading">$122,444</span></td></tr>
               </tbody>
             </table>

@@ -147,7 +147,7 @@ Financiamiento externo seria unicamente acelerador, no requisito de supervivenci
 | Break-even | Mes 1 [DOC] |
 | Net Y1 | USD 126,293 [DOC] |
 | Net Y2 | USD 419,900 [DOC] |
-| Equity split | Cristian 51% / Javier 19% / Holding 30% [DOC] |
+| Equity split | Javier 51% / Katherin 14% / Daniel 14% / German 14% / Cristian 7% [DOC] |
 
 ---
 
