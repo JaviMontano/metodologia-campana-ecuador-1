@@ -10,9 +10,9 @@ const fs = require('fs');
 const path = require('path');
 const PptxGenJS = require('pptxgenjs');
 
-const V2_DIR = path.resolve(__dirname, '..', 'v2');
-const EXPORT_DIR = path.join(V2_DIR, 'export');
-const CONTENT_PATH = path.join(V2_DIR, 'content.json');
+const OUTPUT_DIR = path.resolve(__dirname, '..');
+const EXPORT_DIR = path.join(OUTPUT_DIR, 'export');
+const CONTENT_PATH = path.join(OUTPUT_DIR, 'content.json');
 
 const C = { navy: '0B2545', navyDark: '071A33', gold: 'FFD700', goldDark: 'FFA000', white: 'FFFFFF', gray: '94A3B8', light: 'F8F9FC' };
 

@@ -15,9 +15,9 @@ const fs = require('fs');
 const path = require('path');
 
 const SCRIPT_DIR = __dirname;
-const V2_DIR = path.join(SCRIPT_DIR, '..', 'v2');
-const EXPORT_DIR = path.join(V2_DIR, 'export');
-const CONTENT_PATH = path.join(V2_DIR, 'content.json');
+const OUTPUT_DIR = path.join(SCRIPT_DIR, '..');
+const EXPORT_DIR = path.join(OUTPUT_DIR, 'export');
+const CONTENT_PATH = path.join(OUTPUT_DIR, 'content.json');
 
 // Brand tokens
 const NAVY = 'FF0B2545';

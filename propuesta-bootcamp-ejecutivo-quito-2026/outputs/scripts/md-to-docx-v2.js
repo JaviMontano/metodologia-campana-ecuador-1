@@ -12,9 +12,9 @@ const { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType,
         Table, TableRow, TableCell, WidthType, ShadingType,
         Header, Footer, PageNumber, NumberFormat } = require('docx');
 
-const V2_DIR = path.resolve(__dirname, '..', 'v2');
-const MD_DIR = path.join(V2_DIR, 'md');
-const EXPORT_DIR = path.join(V2_DIR, 'export');
+const OUTPUT_DIR = path.resolve(__dirname, '..');
+const MD_DIR = path.join(OUTPUT_DIR, 'md');
+const EXPORT_DIR = path.join(OUTPUT_DIR, 'export');
 
 const B = {
     navy: '0B2545', gold: 'FFD700', goldDark: 'FFA000',

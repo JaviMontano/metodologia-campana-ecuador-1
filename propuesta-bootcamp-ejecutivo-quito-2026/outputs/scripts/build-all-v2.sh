@@ -11,9 +11,9 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
-V2_DIR="$ROOT_DIR/outputs/v2"
-EXPORT_DIR="$V2_DIR/export"
-MD_DIR="$V2_DIR/md"
+OUTPUT_DIR="$ROOT_DIR/outputs"
+EXPORT_DIR="$OUTPUT_DIR/export"
+MD_DIR="$OUTPUT_DIR/md"
 
 echo "=========================================="
 echo " MetodologIA Proposal Build Pipeline v2"
@@ -63,5 +63,5 @@ echo ""
 echo "Source MDs in $MD_DIR:"
 ls "$MD_DIR"/*.md 2>/dev/null | xargs -I {} basename {}
 echo ""
-echo "HTMLs in $V2_DIR/html:"
-ls "$V2_DIR"/html/*.html 2>/dev/null | xargs -I {} basename {}
+echo "HTMLs in $OUTPUT_DIR/html:"
+ls "$OUTPUT_DIR"/html/*.html 2>/dev/null | xargs -I {} basename {}
