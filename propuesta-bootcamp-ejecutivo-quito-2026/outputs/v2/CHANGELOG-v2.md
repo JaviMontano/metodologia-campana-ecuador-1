@@ -29,7 +29,7 @@ Upgrade completo del ecosistema documental. 29+ archivos generados desde un Sing
 ### Timeline actualizado
 | v1.1 | v2.0 |
 |------|------|
-| Abril = Taller + CAO | Abril = Taller (Pascua) + CAO Creyentes (early access, 5 de 13) |
+| Abril = Taller + CAO | Abril = Taller (martes 7 de abril) + CAO Creyentes (early access, 5 de 13) |
 | Mayo = Empoderamiento | Mayo = CAO abierto ($1,990) + Empoderamiento |
 | Julio = Calendario Academico | Julio = Calendario Academico (cada 2 meses) |
 
@@ -71,7 +71,7 @@ Upgrade completo del ecosistema documental. 29+ archivos generados desde un Sing
 ### HTMLs (9 archivos, ~10,000+ lineas)
 | Archivo | Lineas | Tipo | Innovaciones |
 |---------|--------|------|-------------|
-| landing-workshop-v2.html | 566 | Landing taller Pascua | Countdown, WhatsApp share |
+| landing-workshop-v2.html | 566 | Landing taller martes 7 de abril | Countdown, WhatsApp share |
 | invitation-mobile-v2.html | ~1,200 | Invitacion mobile | Progress ring, timeline horizontal |
 | invitation-desktop-v2.html | 1,347 | Invitacion desktop | Sticky sidebar, ROI calculator, competencia |
 | dossier-cao-v2.html | 1,881 | Dossier completo | 4 vistas, configurador, datos dashboard |

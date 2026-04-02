@@ -27,7 +27,7 @@
 
 | Programa | Audiencia primaria | Requisito de ingreso | Precio (USD) | Formato | Evidencia |
 |----------|--------------------|----------------------|-------------|---------|-----------|
-| Taller Gratuito (Pascua, Abril) | C-level y gerentes curiosos por IA | Registro abierto | $0 | 100% online | [DOC] |
+| Taller Gratuito (Martes 7 Abril, 7PM) | C-level y gerentes curiosos por IA | Registro abierto | $0 | 100% online | [DOC] |
 | CAO Believers Edition (Abril, early access) | C-level con vision de (R)Evolucion | Invitacion directa (5 de 13 cupos) | $1,490 | 100% online | [DOC] |
 | CAO Academico (Mayo, apertura) | C-level general | Registro abierto post-lanzamiento | $1,990 | 100% online | [DOC] |
 | Programa de Empoderamiento (Mayo) | Gerentes con 5+ anos de experiencia gerencial (ideal 7+) | Validacion de experiencia | $1,490 | 100% online | [DOC] |

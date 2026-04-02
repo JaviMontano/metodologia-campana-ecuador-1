@@ -108,9 +108,9 @@
   ],
   "timeline": [
     {
-      "date": "2026-04-05",
+      "date": "2026-04-07",
       "event": { "es": "Taller De Ocupado a Productivo", "en": "From Busy to Productive Workshop" },
-      "description": { "es": "Domingo de Pascua. 3 horas. Construimos un agente con su contexto laboral real. 13 plazas. Gratis.", "en": "Easter Sunday. 3 hours. We build an agent with your real work context. 13 spots. Free." },
+      "description": { "es": "Martes 7 de abril, 7:00 PM. 3 horas. Construimos un agente con su contexto laboral real. 13 plazas. Gratis.", "en": "Tuesday April 7, 7:00 PM. 3 hours. We build an agent with your real work context. 13 spots. Free." },
       "audience": { "es": "Directivos + managers", "en": "Executives + managers" },
       "product_ref": "taller-doap",
       "status": "confirmed"
@@ -371,7 +371,7 @@
     "por_confirmar": [
       { "id": "PC-PAYMENT", "item": { "es": "Metodo de pago exacto para Ecuador", "en": "Exact payment method for Ecuador" }, "responsible": "Cristian Jarrin" },
       { "id": "PC-TAX", "item": { "es": "Estructura fiscal (retenciones, IVA)", "en": "Tax structure (withholdings, VAT)" }, "responsible": "Asesor fiscal Ecuador" },
-      { "id": "PC-WORKSHOP-DATE", "item": { "es": "Fecha exacta del taller en Semana Santa", "en": "Exact workshop date in Easter week" }, "responsible": "Cristian Jarrin" }
+      { "id": "PC-WORKSHOP-DATE", "item": { "es": "CONFIRMADO: Martes 7 de abril, 7:00 PM", "en": "CONFIRMED: Tuesday April 7, 7:00 PM" }, "responsible": "Cristian Jarrin", "status": "resolved" }
     ]
   },
   "brand": {

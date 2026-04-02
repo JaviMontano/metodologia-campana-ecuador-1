@@ -73,7 +73,7 @@ The CAO Bootcamp does not teach AI — it installs a **custom agentic work syste
 | 3 | Empowerment Program | $1,490 USD/person | 16 weeks | Group (up to 13) | Managers 7+ yrs exp |
 
 ### Level 0 — Workshop "From Busy to Productive" (Free)
-**Date:** Easter Sunday, April 5, 2026
+**Date:** Tuesday April 7, 7:00 PM, April 7, 2026
 **Format:** 3 hours, group of up to 13 people
 **Purpose:** Funnel entry point. Live, we build an agent with each attendee's real work context. No financial investment. Mutual fit validation.
 
@@ -151,7 +151,7 @@ The CAO Bootcamp does not teach AI — it installs a **custom agentic work syste
 
 | Date | Event | Audience | Status |
 |------|-------|----------|--------|
-| April 5, 2026 (Easter) | Workshop "From Busy to Productive" | Executives + managers | Confirmed, 13 seats |
+| April 7, 2026 (Tuesday April 7) | Workshop "From Busy to Productive" | Executives + managers | Confirmed, 13 seats |
 | April 2026 | CAO Believers Edition | 5 selected executives | $1,490, Closed Door |
 | May 2026 | CAO Open Enrollment | C-level executives | $1,990, Academic |
 | May 2026 | Empowerment Program | Managers 7+ yrs exp | $1,490/person |
@@ -310,7 +310,7 @@ CAO Graduates (33 Y1) → 15-20 Active Ambassadors → 2-3 referrals each → 40
 
 ## 13. Next Steps
 
-1. **Reserve your seat** at the free Workshop (April 5): contacto@metodologia.info
+1. **Reserve your seat** at the free Workshop (April 7): contacto@metodologia.info
 2. **Apply to the Believers Edition** (only 5 seats): same email
 3. **Inquire about the Empowerment Program** for your team: available from May
 4. **Explore Custom Assistants**: $347 USD each, personalized to your operations

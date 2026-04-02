@@ -42,7 +42,7 @@ Su semana esta llena. Reuniones, reportes, seguimiento, correos. La IA puede eje
 ## 3. Productos y Ruta
 
 ### Nivel 0 — Taller "De Ocupado a Productivo" (Gratis)
-- 3 horas, Domingo de Pascua (5 de abril)
+- 3 horas, Martes 7 de abril, 7:00 PM (7 de abril)
 - Construimos un agente con su contexto laboral real
 - 13 plazas. Sin inversion economica
 - **Funcion:** Punto de entrada al funnel. Validacion de fit
@@ -134,7 +134,7 @@ Los graduados del CAO Bootcamp pueden convertirse en Embajadores MetodologIA. Be
 
 ## 10. Proximos Pasos
 
-1. **Reservar plaza** en el Taller gratuito (5 de abril): contacto@metodologia.info
+1. **Reservar plaza** en el Taller gratuito (7 de abril): contacto@metodologia.info
 2. **Aplicar a la Edicion Creyentes** (solo 5 plazas): mismo correo
 3. **Consultar Empoderamiento** para su equipo: disponible desde mayo
 

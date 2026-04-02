@@ -42,7 +42,7 @@ Your week is full. Meetings, reports, follow-ups, emails. AI can execute 60% of 
 ## 3. Products and Journey
 
 ### Level 0 — "From Busy to Productive" Workshop (Free)
-- 3 hours, Easter Sunday (April 5)
+- 3 hours, Tuesday April 7, 7:00 PM (April 7)
 - We build an agent with your real work context
 - 13 spots. No economic investment
 - **Function:** Funnel entry point. Fit validation
@@ -134,7 +134,7 @@ CAO Bootcamp graduates can become MetodologIA Ambassadors. Benefit: **50% discou
 
 ## 10. Next Steps
 
-1. **Reserve a spot** at the free Workshop (April 5): contacto@metodologia.info
+1. **Reserve a spot** at the free Workshop (April 7): contacto@metodologia.info
 2. **Apply for the Believers Edition** (only 5 spots): same email
 3. **Inquire about Empowerment** for your team: available from May
 

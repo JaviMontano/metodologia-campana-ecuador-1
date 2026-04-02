@@ -73,7 +73,7 @@ El CAO Bootcamp no ensena IA — instala un **sistema de trabajo agentico a medi
 | 3 | Programa de Empoderamiento | $1,490 USD/persona | 16 semanas | Grupo (hasta 13) | Managers 7+ anios exp |
 
 ### Nivel 0 — Taller "De Ocupado a Productivo" (Gratis)
-**Fecha:** Domingo de Pascua, 5 de abril de 2026
+**Fecha:** Martes 7 de abril, 7:00 PM, 7 de abril de 2026
 **Formato:** 3 horas, grupo de hasta 13 personas
 **Funcion:** Punto de entrada al funnel. En vivo, construimos un agente con el contexto laboral real de cada asistente. Sin inversion economica. Validacion mutua de fit.
 
@@ -151,7 +151,7 @@ El CAO Bootcamp no ensena IA — instala un **sistema de trabajo agentico a medi
 
 | Fecha | Evento | Audiencia | Status |
 |-------|--------|-----------|--------|
-| 5 abril 2026 (Pascua) | Taller "De Ocupado a Productivo" | Directivos + managers | Confirmado, 13 plazas |
+| 5 abril 2026 (martes 7 de abril) | Taller "De Ocupado a Productivo" | Directivos + managers | Confirmado, 13 plazas |
 | Abril 2026 | CAO Edicion Creyentes | 5 directivos seleccionados | $1,490, Puerta Cerrada |
 | Mayo 2026 | CAO Convocatoria Abierta | Directivos C-level | $1,990, Academico |
 | Mayo 2026 | Programa de Empoderamiento | Managers 7+ anios exp | $1,490/persona |
@@ -310,7 +310,7 @@ Graduados CAO (33 Y1) → 15-20 Embajadores activos → 2-3 referidos cada uno �
 
 ## 13. Proximos Pasos
 
-1. **Reservar plaza** en el Taller gratuito (5 de abril): contacto@metodologia.info
+1. **Reservar plaza** en el Taller gratuito (7 de abril): contacto@metodologia.info
 2. **Aplicar a la Edicion Creyentes** (solo 5 plazas): mismo correo
 3. **Consultar Empoderamiento** para su equipo: disponible desde mayo
 4. **Explorar Asistentes a Medida**: $347 USD c/u, personalizados a su operacion
