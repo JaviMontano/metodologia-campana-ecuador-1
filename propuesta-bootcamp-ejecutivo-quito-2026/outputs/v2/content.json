@@ -46,12 +46,13 @@
         { "slug": "terna", "name": { "es": "Terna", "en": "Trio" }, "people": 3, "description": { "es": "3 ejecutivos, mismo precio", "en": "3 executives, same price" } }
       ],
       "deliverables": [
-        { "es": "Agente Pristino personalizado", "en": "Personalized Pristino Agent" },
-        { "es": "13 asistentes IA especializados (disponibles desde el dia 1, para flujos de trabajo)", "en": "13 specialized AI assistants (available from day 1, for workflows)" },
-        { "es": "Biblioteca Universal de Prompts + Biblioteca de Prompts para Directivos", "en": "Universal Prompt Library + Executive Prompt Library" },
-        { "es": "Segundo cerebro digital (NotebookLM)", "en": "Digital second brain (NotebookLM)" },
-        { "es": "9 sesiones de co-creacion", "en": "9 co-creation sessions" },
-        { "es": "Campus virtual (1 mes incluido)", "en": "Virtual campus (1 month included)" }
+        { "es": "1 agente propio (Instalamos a Pristino, agente Open Source desarrollado y mantenido por MetodologIA, obra de Javier Montano. Suyo para siempre, auditable, corre en local)", "en": "1 personal agent (We install Pristino, an Open Source agent developed and maintained by MetodologIA, Javier Montano's work. Yours forever, auditable, runs locally)" },
+        { "es": "13 asistentes IA especializados (Listos para usar en flujos de trabajo desde el dia 1. Cada uno cubre una funcion ejecutiva: comunicacion, analisis, agenda, decisiones, reportes. Durante el bootcamp aprende a usarlos mejor que el publico)", "en": "13 specialized AI assistants (Ready to use in workflows from day 1. Each one covers an executive function: communication, analysis, scheduling, decisions, reports. During the bootcamp you learn to use them better than the public)" },
+        { "es": "1 Playbook de Introduccion a como Dirigir en la Era de la IA (Guia practica para directivos que quieren liderar con IA sin depender de tecnicos)", "en": "1 Introduction Playbook: How to Lead in the AI Era (Practical guide for executives who want to lead with AI without depending on technicians)" },
+        { "es": "2 bibliotecas de prompts (Biblioteca Universal para cualquier profesional + Biblioteca Ejecutiva con prompts de estrategia, decision, delegacion y comunicacion directiva)", "en": "2 prompt libraries (Universal Library for any professional + Executive Library with strategy, decision-making, delegation and executive communication prompts)" },
+        { "es": "1 segundo cerebro digital (Instalamos NotebookLM como su memoria externa: organiza documentos, conecta ideas, recupera conocimiento. Disponible 24/7)", "en": "1 digital second brain (We install NotebookLM as your external memory: organizes documents, connects ideas, retrieves knowledge. Available 24/7)" },
+        { "es": "9 sesiones de co-creacion (2 horas cada una con facilitador. No es clase magistral: construimos juntos, con su contexto laboral real)", "en": "9 co-creation sessions (2 hours each with facilitator. Not a lecture: we build together, with your real work context)" },
+        { "es": "1 acceso al Campus Virtual MetodologIA (Plataforma con recursos, actualizaciones y comunidad. 1 mes incluido, renovacion opcional)", "en": "1 access to MetodologIA Virtual Campus (Platform with resources, updates and community. 1 month included, optional renewal)" }
       ],
       "cta_label": { "es": "Reservar Plaza Creyentes", "en": "Reserve Believers Spot" }
     },
@@ -315,34 +316,29 @@
   "deliverables_system": {
     "pristino": {
       "name": "Pristino",
-      "type": { "es": "Agente IA personal", "en": "Personal AI agent" },
-      "tags": [
-        { "es": "Open Source", "en": "Open Source" },
-        { "es": "Local", "en": "Local" },
-        { "es": "Suyo para siempre", "en": "Yours forever" }
-      ]
+      "headline": {
+        "es": "1 agente propio — Instalamos a Pristino, agente Open Source desarrollado y mantenido por MetodologIA, obra de Javier Montano. Suyo para siempre, auditable, corre en local.",
+        "en": "1 personal agent — We install Pristino, an Open Source agent developed and maintained by MetodologIA, Javier Montano's work. Yours forever, auditable, runs locally."
+      },
+      "tags": ["Open Source", "Local", "Auditable", "Suyo para siempre"]
     },
     "assistants": {
       "count": 13,
-      "type": { "es": "Especializados por funcion (no personalizados)", "en": "Specialized by function (not personalized)" },
-      "availability": "day-1",
-      "description": {
-        "es": "13 asistentes IA especializados para usar en flujos de trabajo desde el dia 1. Cada uno cubre una funcion ejecutiva distinta. Durante el bootcamp se entregan y se explica como usarlos mejor que el publico general.",
-        "en": "13 specialized AI assistants for use in workflows from day 1. Each one covers a distinct executive function. During the bootcamp they are delivered and explained how to use them better than the general public."
-      },
-      "clarification": {
-        "es": "Los asistentes son especializados (por funcion), no personalizados (por individuo). La personalizacion ocurre con Pristino (agente personal).",
-        "en": "The assistants are specialized (by function), not personalized (by individual). Personalization happens with Pristino (personal agent)."
+      "headline": {
+        "es": "13 asistentes IA especializados — Listos para usar en flujos de trabajo desde el dia 1. Cada uno cubre una funcion ejecutiva: comunicacion, analisis, agenda, decisiones, reportes. Especializados (por funcion), no personalizados (por individuo). Durante el bootcamp aprende a usarlos mejor que el publico.",
+        "en": "13 specialized AI assistants — Ready to use in workflows from day 1. Each covers an executive function: communication, analysis, scheduling, decisions, reports. Specialized (by function), not personalized (by individual). During the bootcamp you learn to use them better than the public."
+      }
+    },
+    "playbook": {
+      "headline": {
+        "es": "1 Playbook de Introduccion a como Dirigir en la Era de la IA — Guia practica para directivos que quieren liderar con IA sin depender de tecnicos.",
+        "en": "1 Introduction Playbook: How to Lead in the AI Era — Practical guide for executives who want to lead with AI without depending on technicians."
       }
     },
     "prompt_libraries": {
-      "universal": {
-        "name": { "es": "Biblioteca Universal de Prompts", "en": "Universal Prompt Library" },
-        "description": { "es": "Coleccion de prompts para cualquier profesional. Acceso desde el dia 1.", "en": "Prompt collection for any professional. Access from day 1." }
-      },
-      "executive": {
-        "name": { "es": "Biblioteca de Prompts para Directivos y Managers", "en": "Executive & Manager Prompt Library" },
-        "description": { "es": "Prompts especializados para funciones directivas: estrategia, decision, delegacion, comunicacion ejecutiva, reportes.", "en": "Specialized prompts for executive functions: strategy, decision-making, delegation, executive communication, reports." }
+      "headline": {
+        "es": "2 bibliotecas de prompts — Biblioteca Universal (cualquier profesional, dia 1) + Biblioteca Ejecutiva (estrategia, decision, delegacion, comunicacion directiva, reportes).",
+        "en": "2 prompt libraries — Universal Library (any professional, day 1) + Executive Library (strategy, decision-making, delegation, executive communication, reports)."
       }
     },
     "second_brain": {

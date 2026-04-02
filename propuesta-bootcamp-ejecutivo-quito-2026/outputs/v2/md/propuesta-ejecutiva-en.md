@@ -22,13 +22,17 @@ Your week is full. Meetings, reports, follow-ups, emails. AI can execute 60% of 
 
 ## 2. The Solution: CAO Bootcamp
 
-| Aspect | Detail |
-|--------|--------|
-| **What you receive** | Pristino Agent + 13 AI assistants + digital second brain (NotebookLM) |
-| **Duration** | 20 hours over 4-10 weeks |
-| **Format** | Solo (1:1), Duo (2 people) or Trio (3 people) |
-| **Sessions** | 9 co-creation sessions with facilitator |
-| **Outcome** | Functional agentic system, operating with your real work context |
+| # | What you take home | What it is exactly |
+|---|-------------------|-------------------|
+| 1 | **1 personal agent** | Pristino: Open Source, Javier Montano's work, yours forever |
+| 2 | **13 specialized AI assistants** | For workflows from day 1. Learn to use them better than the public |
+| 3 | **1 Playbook** | "How to Lead in the AI Era". Practical guide, no technicians needed |
+| 4 | **2 prompt libraries** | Universal + Executive (strategy, decisions, delegation, reports) |
+| 5 | **1 digital second brain** | NotebookLM as your 24/7 external memory |
+| 6 | **9 co-creation sessions** | 2h each, we build together with your real context |
+| 7 | **1 Virtual Campus** | Resources, updates, community (1 month included) |
+
+**Format:** Solo (1:1), Duo (2) or Trio (3). **Duration:** 20h over 4-10 weeks.
 
 ### What It Is NOT
 

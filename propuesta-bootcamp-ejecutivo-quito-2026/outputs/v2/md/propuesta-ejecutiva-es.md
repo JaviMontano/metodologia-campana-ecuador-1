@@ -22,13 +22,17 @@ Su semana esta llena. Reuniones, reportes, seguimiento, correos. La IA puede eje
 
 ## 2. La Solucion: CAO Bootcamp
 
-| Aspecto | Detalle |
-|---------|---------|
-| **Que recibe** | Agente Pristino + 13 asistentes IA + segundo cerebro digital (NotebookLM) |
-| **Duracion** | 20 horas en 4-10 semanas |
-| **Formato** | Solo (1:1), Dupla (2 personas) o Terna (3 personas) |
-| **Sesiones** | 9 sesiones de co-creacion con facilitador |
-| **Resultado** | Sistema agentico funcional, operando con su contexto laboral real |
+| # | Que se lleva | Que es exactamente |
+|---|-------------|-------------------|
+| 1 | **1 agente propio** | Pristino: Open Source, obra de Javier Montano, suyo para siempre |
+| 2 | **13 asistentes IA especializados** | Para flujos de trabajo desde el dia 1. Aprende a usarlos mejor que el publico |
+| 3 | **1 Playbook** | "Como Dirigir en la Era de la IA". Guia practica sin depender de tecnicos |
+| 4 | **2 bibliotecas de prompts** | Universal + Ejecutiva (estrategia, decision, delegacion, reportes) |
+| 5 | **1 segundo cerebro digital** | NotebookLM como memoria externa 24/7 |
+| 6 | **9 sesiones de co-creacion** | 2h cada una, construimos juntos con su contexto real |
+| 7 | **1 Campus Virtual** | Recursos, actualizaciones, comunidad (1 mes incluido) |
+
+**Formato:** Solo (1:1), Dupla (2) o Terna (3). **Duracion:** 20h en 4-10 semanas.
 
 ### Que NO es
 

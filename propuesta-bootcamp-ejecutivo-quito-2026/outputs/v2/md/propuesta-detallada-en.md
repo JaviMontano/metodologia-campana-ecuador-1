@@ -33,29 +33,19 @@ Executives who operate with an integrated agentic system recover **18+ hours/wee
 
 ## 2. The Solution: Personal Agentic System
 
-The CAO Bootcamp does not teach AI — it installs a **custom agentic work system**. By the end of the 20 hours, the executive operates with:
+The CAO Bootcamp does not teach AI — it installs a **custom agentic work system**. By the end of the 20 hours, the executive takes home:
 
-### Pristino — Your Personal Agent
-- AI agent configured with your real work context
-- Open Source, local, yours forever
-- Connected to your work ecosystem (Gmail, Calendar, Drive)
-- Auditable: the executive sees exactly what it does and why
+### What You Receive (no fine print)
 
-### 13 Specialized AI Assistants
-- Available from day 1 for use in workflows
-- Specialized by function (communication, analysis, scheduling, decisions, reports...), not personalized by individual
-- During the bootcamp they are delivered and explained how to use them better than the general public
-- Base set included in the bootcamp; additional assistants available at $347 USD each
-
-### Prompt Libraries
-- **Universal Prompt Library**: collection for any professional, access from day 1
-- **Executive & Manager Prompt Library**: specialized prompts for strategy, decision-making, delegation, executive communication, reports
-
-### Digital Second Brain
-- Powered by NotebookLM
-- Organizes, connects, and retrieves accumulated knowledge
-- Fed with the executive's documents, meetings, and decisions
-- Available 24/7, with no memory limits
+| # | Deliverable | What it is exactly |
+|---|-------------|-------------------|
+| 1 | **1 personal agent** | We install Pristino, an Open Source agent developed and maintained by MetodologIA, Javier Montano's work. Yours forever, auditable, runs locally. Connected to Gmail, Calendar and Drive. |
+| 2 | **13 specialized AI assistants** | Ready to use in workflows from day 1. Each covers an executive function: communication, analysis, scheduling, decisions, reports. Specialized (by function), not personalized (by individual). During the bootcamp you learn to use them better than the public. |
+| 3 | **1 Introduction Playbook** | "How to Lead in the AI Era". Practical guide for executives who want to lead with AI without depending on technicians. |
+| 4 | **2 prompt libraries** | Universal Library (for any professional, from day 1) + Executive Library (strategy, decision-making, delegation, executive communication, reports). |
+| 5 | **1 digital second brain** | We install NotebookLM as your external memory: organizes documents, connects ideas, retrieves knowledge. Available 24/7. |
+| 6 | **9 co-creation sessions** | 2 hours each with facilitator. Not a lecture: we build together, with your real work context. |
+| 7 | **1 Virtual Campus access** | MetodologIA platform with resources, updates and community. 1 month included, optional renewal. |
 
 ### What It Is NOT
 - Not a theory course on AI

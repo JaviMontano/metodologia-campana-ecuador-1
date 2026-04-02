@@ -33,29 +33,19 @@ Los directivos que operan con un sistema agentico integrado recuperan **18+ hora
 
 ## 2. La Solucion: Sistema Agentico Personal
 
-El CAO Bootcamp no ensena IA — instala un **sistema de trabajo agentico a medida**. Al cerrar las 20 horas, el directivo opera con:
+El CAO Bootcamp no ensena IA — instala un **sistema de trabajo agentico a medida**. Al cerrar las 20 horas, el directivo se lleva:
 
-### Pristino — Su Agente Personal
-- Agente IA configurado con su contexto laboral real
-- Open Source, local, suyo para siempre
-- Conectado a su ecosistema de trabajo (Gmail, Calendar, Drive)
-- Auditable: el ejecutivo ve exactamente que hace y por que
+### Lo que recibe (sin letra chica)
 
-### 13 Asistentes IA Especializados
-- Disponibles desde el dia 1 para usar en flujos de trabajo
-- Especializados por funcion (comunicacion, analisis, agenda, decisiones, reportes...), no personalizados por individuo
-- Durante el bootcamp se entregan y se explica como usarlos mejor que el publico general
-- Base incluida en el bootcamp; asistentes adicionales disponibles a $347 USD c/u
-
-### Bibliotecas de Prompts
-- **Biblioteca Universal de Prompts**: coleccion para cualquier profesional, acceso desde el dia 1
-- **Biblioteca de Prompts para Directivos y Managers**: prompts especializados para estrategia, decision, delegacion, comunicacion ejecutiva, reportes
-
-### Segundo Cerebro Digital
-- Basado en NotebookLM
-- Organiza, conecta y recupera conocimiento acumulado
-- Alimentado con documentos, reuniones, decisiones del ejecutivo
-- Disponible 24/7, sin limites de memoria
+| # | Entregable | Que es exactamente |
+|---|------------|-------------------|
+| 1 | **1 agente propio** | Instalamos a Pristino, agente Open Source desarrollado y mantenido por MetodologIA, obra de Javier Montano. Suyo para siempre, auditable, corre en local. Conectado a Gmail, Calendar y Drive. |
+| 2 | **13 asistentes IA especializados** | Listos para usar en flujos de trabajo desde el dia 1. Cada uno cubre una funcion ejecutiva: comunicacion, analisis, agenda, decisiones, reportes. Son especializados (por funcion), no personalizados (por individuo). Durante el bootcamp aprende a usarlos mejor que el publico. |
+| 3 | **1 Playbook de Introduccion** | "Como Dirigir en la Era de la IA". Guia practica para directivos que quieren liderar con IA sin depender de tecnicos. |
+| 4 | **2 bibliotecas de prompts** | Biblioteca Universal (para cualquier profesional, desde el dia 1) + Biblioteca Ejecutiva (estrategia, decision, delegacion, comunicacion directiva, reportes). |
+| 5 | **1 segundo cerebro digital** | Instalamos NotebookLM como su memoria externa: organiza documentos, conecta ideas, recupera conocimiento. Disponible 24/7. |
+| 6 | **9 sesiones de co-creacion** | 2 horas cada una con facilitador. No es clase magistral: construimos juntos, con su contexto laboral real. |
+| 7 | **1 acceso al Campus Virtual** | Plataforma MetodologIA con recursos, actualizaciones y comunidad. 1 mes incluido, renovacion opcional. |
 
 ### Que NO es
 - No es un curso teorico sobre IA
