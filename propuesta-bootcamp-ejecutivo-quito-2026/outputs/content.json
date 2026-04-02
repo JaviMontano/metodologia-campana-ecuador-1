@@ -181,7 +181,7 @@
     {
       "name": "Katherin Oquendo",
       "role": { "es": "Cofundadora MetodologIA", "en": "MetodologIA Co-Founder" },
-      "equity_pct": 14,
+      "equity_pct": 10,
       "entity": "MetodologIA",
       "contact": null,
       "bio": { "es": "Cofundadora. Operaciones y estrategia.", "en": "Co-founder. Operations and strategy." },
@@ -190,7 +190,7 @@
     {
       "name": "Daniel",
       "role": { "es": "Cofundador MetodologIA", "en": "MetodologIA Co-Founder" },
-      "equity_pct": 14,
+      "equity_pct": 13,
       "entity": "MetodologIA",
       "contact": null,
       "bio": { "es": "Cofundador. Aceleradores y red de fundadores.", "en": "Co-founder. Accelerators and founders network." },
@@ -199,7 +199,7 @@
     {
       "name": "German",
       "role": { "es": "Cofundador MetodologIA", "en": "MetodologIA Co-Founder" },
-      "equity_pct": 14,
+      "equity_pct": 19,
       "entity": "MetodologIA",
       "contact": null,
       "bio": { "es": "Cofundador. Aceleradores y soporte de fundadores.", "en": "Co-founder. Accelerators and founders support." },
@@ -213,8 +213,8 @@
       "contact": "contacto@metodologia.info",
       "entry_fee": 2900,
       "entry_fee_mechanism": {
-        "es": "Entry fee de $2,900. Despues de un due diligence conjunto, se valora la empresa. Cristian paga via reinversion parcial (50%) de sus comisiones por el equity acumulado: activos digitales, IP, servicios validados, asistentes y agentes funcionando.",
-        "en": "Entry fee of $2,900. After a joint due diligence, the company is valued. Cristian pays via partial reinvestment (50%) of his commissions for accumulated equity: digital assets, IP, validated services, working assistants and agents."
+        "es": "Entry fee inicial de $2,900. Al valorar la empresa de comun acuerdo, se ira calculando el valor de aporte necesario para asegurar que la proporcion accionaria (7%) se mantiene conforme la empresa crece. Mecanismo: reinversion parcial (50%) de comisiones + aportes calculados post-valoracion. El equity acumulado incluye: activos digitales, IP, servicios validados, asistentes y agentes funcionando.",
+        "en": "Initial entry fee of $2,900. As the company is jointly valued, the required contribution will be calculated to ensure the equity share (7%) is maintained as the company grows. Mechanism: partial reinvestment (50%) of commissions + contributions calculated post-valuation. Accumulated equity includes: digital assets, IP, validated services, working assistants and agents."
       },
       "commitment": {
         "es": "Vivir el proceso de directivo IA + recomendacion de hacer el programa de Empoderamiento con Javier.",

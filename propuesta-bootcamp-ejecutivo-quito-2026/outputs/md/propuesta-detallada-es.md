@@ -229,7 +229,7 @@ Creador del metodo. 27 asistentes GPT, 7 Gemini Gems, agente Pristino, 180+ prom
 Operador territorial. Relaciones empresariales en Quito, logistica, convocatoria. Responsable de la operacion sostenible en Ecuador.
 **Contacto:** contacto@metodologia.info
 
-### Katherin Oquendo (14%), Daniel (14%), German (14%) — Cofundadores
+### German (19%), Daniel (13%), Katherin Oquendo (10%) — Cofundadores
 IP, marca, ecosistema tecnologico, red global de embajadores.
 
 ---

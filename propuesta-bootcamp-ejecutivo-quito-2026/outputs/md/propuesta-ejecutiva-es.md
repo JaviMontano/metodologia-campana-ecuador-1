@@ -121,7 +121,7 @@ Creador del metodo. 27 asistentes GPT, 7 Gemini Gems, agente Pristino, 180+ prom
 **Cristian Jarrin — Socio MetodologIA Ecuador (7%, entra Ano 2)
 Operador territorial. Relaciones empresariales en Quito, logistica, convocatoria. Contacto: contacto@metodologia.info
 
-**Katherin Oquendo (14%), Daniel (14%), German (14%) — Cofundadores
+**German (19%), Daniel (13%), Katherin Oquendo (10%) — Cofundadores
 IP, marca, ecosistema tecnologico, red de embajadores.
 
 ---

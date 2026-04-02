@@ -203,9 +203,9 @@ El descuento del 50% no es un costo sino una inversion con retorno positivo de 5
 | Socio | Equity | Rol |
 |-------|--------|-----|
 | Javier | 51% | Fundador, arquitectura, IP, metodo, red agentica [DOC] |
-| Katherin | 14% | Cofundadora, operaciones, estrategia [DOC] |
-| Daniel | 14% | Cofundador, aceleradores, red de fundadores [DOC] |
-| German | 14% | Cofundador, aceleradores, soporte [DOC] |
+| German | 19% | Cofundador, aceleradores, soporte [DOC] |
+| Daniel | 13% | Cofundador, aceleradores, red de fundadores [DOC] |
+| Katherin | 10% | Cofundadora, operaciones, estrategia [DOC] |
 | Cristian | 7% | Socio Ano 2, operador Ecuador, entry fee $2,900 [DOC] |
 
 La distribucion de equity es independiente del revenue share por cierre [DOC]. Cristian puede acumular hasta 90% del revenue share por cierre (Escenario A) mientras mantiene 7% del equity. El equity define la propiedad del negocio; el revenue share define la compensacion por actividad [INFERENCIA].

@@ -121,7 +121,7 @@ Method creator. 27 GPT assistants, 7 Gemini Gems, Pristino agent, 180+ systemati
 **Cristian Jarrin — MetodologIA Ecuador Partner (7%, joins Year 2)
 Territorial operator. Business relationships in Quito, logistics, outreach. Contact: contacto@metodologia.info
 
-**Katherin Oquendo (14%), Daniel (14%), German (14%) — Co-Founders
+**German (19%), Daniel (13%), Katherin Oquendo (10%) — Co-Founders
 IP, brand, tech ecosystem, ambassador network.
 
 ---
