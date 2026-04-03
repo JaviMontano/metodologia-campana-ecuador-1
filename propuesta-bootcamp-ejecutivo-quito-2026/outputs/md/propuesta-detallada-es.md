@@ -65,7 +65,7 @@ El CAO Bootcamp le da un **agente que se vuelve su mejor aliado**. En el taller,
 | Taller | "De Ocupado a Productivo" | Gratis | Directivos + managers | Mar 7 abril, 7PM + sabado |
 | CAO Creyentes | Early access | $1,490 | 5 de 13 seleccionados | Abril |
 | CAO Abierto | Convocatoria | $1,990 | C-level | Mayo (8 preferentes + 2 publicas) |
-| Empoderamiento | Equipos | $1,490/persona | Managers 7+ anios exp | Mayo, cada 3 meses |
+| Empoderamiento | Equipos | $1,490/persona | Managers 7+ años exp | Mayo, cada 3 meses |
 | Academico | Regular | $1,990 | Abierto | Julio, cada 2 meses |
 | Asistentes | A medida | $347/unidad | Cualquiera | Bajo demanda |
 

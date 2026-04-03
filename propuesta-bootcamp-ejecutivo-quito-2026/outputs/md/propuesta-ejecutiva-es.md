@@ -55,7 +55,7 @@ El 60% de la semana ejecutiva es operativa: correos, reportes, seguimiento, reun
 | Taller | "De Ocupado a Productivo" | Gratis | Directivos + managers | Mar 7 abril, 7PM (+ sabado 9-12 / 14-17) |
 | CAO Creyentes | Bootcamp early access | $1,490 | 5 de 13 directivos seleccionados | Abril (Javier facilita) |
 | CAO Abierto | Bootcamp convocatoria | $1,990 | Directivos C-level | Mayo (8 preferentes + 2 publicas) |
-| Empoderamiento | Programa equipos | $1,490/persona | Managers 7+ anios experiencia | Mayo (ciclos cada 3 meses) |
+| Empoderamiento | Programa equipos | $1,490/persona | Managers 7+ años experiencia | Mayo (ciclos cada 3 meses) |
 | Academico | Calendario regular | $1,990 | Abierto | Julio (cada 2 meses) |
 | Asistentes | A medida | $347/unidad | Cualquiera | Bajo demanda |
 

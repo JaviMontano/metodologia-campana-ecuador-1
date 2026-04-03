@@ -35,7 +35,7 @@ Upgrade completo del ecosistema documental. 29+ archivos generados desde un Sing
 
 ### Audiencia Empoderamiento
 - **v1.1**: "gerentes y mandos medios"
-- **v2.0**: "gerentes, mandos medios y profesionales con al menos 5 anios de experiencia en gestion (ideal 7+)"
+- **v2.0**: "gerentes, mandos medios y profesionales con al menos 5 años de experiencia en gestion (ideal 7+)"
 
 ### Programa de Embajadores
 - **NUEVO**: Documentado en content.json y todos los deliverables

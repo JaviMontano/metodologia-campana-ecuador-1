@@ -88,7 +88,7 @@
       "format": { "es": "Grupo cerrado", "en": "Closed group" },
       "capacity": 13,
       "audience": {
-        "es": "Gerentes, mandos medios y profesionales con al menos 5 anios de experiencia en gestion e idealmente 7+ anios de experiencia profesional general",
+        "es": "Gerentes, mandos medios y profesionales con al menos 5 años de experiencia en gestion e idealmente 7+ años de experiencia profesional general",
         "en": "Managers, middle management and professionals with at least 5 years of management experience and ideally 7+ years of general professional experience"
       },
       "duration_hours": null,
@@ -127,7 +127,7 @@
     {
       "date": "2026-04-07",
       "event": { "es": "Taller De Ocupado a Productivo", "en": "From Busy to Productive Workshop" },
-      "description": { "es": "Martes 7 de abril, 7:00 PM. 3 horas. Construimos un agente con su contexto laboral real. 13 plazas. Gratis. Tambien disponible sabado: 9:00-12:00 o 14:00-17:00.", "en": "Tuesday April 7, 7:00 PM. 3 hours. We build an agent with your real work context. 13 spots. Free. Also available Saturday: 9AM-12PM or 2PM-5PM." },
+      "description": { "es": "Martes 7 de abril, 7:00 PM. 3 horas. Construimos un agente con retos de su contexto laboral real. 13 plazas. Gratis. Tambien disponible sabado: 9:00-12:00 o 14:00-17:00.", "en": "Tuesday April 7, 7:00 PM. 3 hours. We build an agent with real work context challenges. 13 spots. Free. Also available Saturday: 9AM-12PM or 2PM-5PM." },
       "audience": { "es": "Directivos + managers", "en": "Executives + managers" },
       "product_ref": "taller-doap",
       "status": "confirmed"
@@ -151,7 +151,7 @@
     {
       "date": "2026-05",
       "event": { "es": "Programa de Empoderamiento", "en": "Empowerment Program" },
-      "description": { "es": "Version Creyentes para equipos tacticos. Managers con 7+ anios de experiencia. $1,490 USD.", "en": "Believers Edition for tactical teams. Managers with 7+ years experience. $1,490 USD." },
+      "description": { "es": "Version Creyentes para equipos tacticos. Managers con 7+ años de experiencia. $1,490 USD.", "en": "Believers Edition for tactical teams. Managers with 7+ years experience. $1,490 USD." },
       "audience": { "es": "Managers y profesionales con experiencia", "en": "Managers and experienced professionals" },
       "product_ref": "empoderamiento",
       "status": "planned"

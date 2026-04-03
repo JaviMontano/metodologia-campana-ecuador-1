@@ -14,11 +14,11 @@
 | Dimension | Detalle | Evidencia |
 |-----------|---------|-----------|
 | Cargo | C-level, VP, Director General, Gerente Senior | [DOC] |
-| Edad | 35-55 anios | [INFERENCIA] |
+| Edad | 35-55 años | [INFERENCIA] |
 | Empresa | $1M-$50M facturacion anual, 50-500+ empleados | [INFERENCIA] |
 | Geografia | Quito metropolitano (fase 1); Guayaquil, Cuenca (expansion) | [DOC] |
 | Idioma | Espanol 100% (contenido y facilitacion) | [DOC] |
-| Experiencia minima | 5+ anios gestion (ideal 7+) para Empoderamiento | [DOC] |
+| Experiencia minima | 5+ años gestion (ideal 7+) para Empoderamiento | [DOC] |
 
 ---
 
@@ -30,7 +30,7 @@
 | Taller (Mar 7 abril 7PM + sabado) | Directivos + managers | Registro | Gratis | [DOC] |
 | CAO Creyentes (abril) | C-level con vision | Invitacion (5 de 13) | $1,490 | [DOC] |
 | CAO Abierto (mayo) | C-level general | Registro | $1,990 | [DOC] |
-| Empoderamiento (mayo) | Gerentes 7+ anios exp | Validacion exp | $1,490/persona | [DOC] |
+| Empoderamiento (mayo) | Gerentes 7+ años exp | Validacion exp | $1,490/persona | [DOC] |
 | Asistentes a Medida | Cualquier participante | Inscripcion previa | $347/unidad | [DOC] |
 
 **Funnel:** 13 invitados → 5 Creyentes → 8 preferentes mayo (grupo 10, 2 publicas) → Embajadores [DOC]
