@@ -12,7 +12,7 @@
 
 ## 1. Stack tecnologico por tier
 
-### Tier 1 -- Entrada (recomendado minimo)
+### Tier 1 -- Entrada (recomendado mínimo)
 
 | Herramienta | Costo mensual (USD) | Uso principal | Evidencia |
 |-------------|---------------------|---------------|-----------|
@@ -22,8 +22,8 @@
 
 | Herramienta | Costo mensual (USD) | Uso principal | Evidencia |
 |-------------|---------------------|---------------|-----------|
-| ChatGPT Plus (OpenAI) | $20/mes | GPT-4o, GPTs personalizados, analisis de datos | [DOC] |
-| Claude Pro (Anthropic) | $20/mes | Razonamiento extendido, analisis de documentos largos, Projects | [DOC] |
+| ChatGPT Plus (OpenAI) | $20/mes | GPT-4o, GPTs personalizados, análisis de datos | [DOC] |
+| Claude Pro (Anthropic) | $20/mes | Razonamiento extendido, análisis de documentos largos, Projects | [DOC] |
 | Total Tier 2 | $40/mes | Cobertura multi-modelo para casos avanzados | [DOC] |
 
 ### Tier 3 -- Herramientas complementarias (gratuitas)
@@ -31,7 +31,7 @@
 | Herramienta | Costo | Uso principal | Evidencia |
 |-------------|-------|---------------|-----------|
 | Cursor / Windsurf | Free tier disponible | IDE con IA integrada para casos técnicos | [DOC] |
-| Replit | Free tier disponible | Prototipado rapido, entorno cloud | [INFERENCIA] |
+| Replit | Free tier disponible | Prototipado rápido, entorno cloud | [INFERENCIA] |
 | Google Colab | Gratuito | Notebooks para demostraciones de datos | [INFERENCIA] |
 
 ---
@@ -56,7 +56,7 @@ Las licencias de software NO estan incluidas en el precio del bootcamp. [DOC]
 | Componente | Descripcion | Requisito técnico | Evidencia |
 |------------|-------------|-------------------|-----------|
 | Agente Pristino | Agente orquestador central de MetodologIA; coordina los 13 asistentes del CAO | Acceso a API de modelos (Gemini, GPT-4o, Claude); runtime agéntico propio | [DOC] |
-| 13 Asistentes personalizados | Un asistente por cada caso del CAO, entrenado con contexto especifico del caso | Configuracion en plataforma de GPTs o equivalente; prompts y knowledge base por caso | [DOC] |
+| 13 Asistentes personalizados | Un asistente por cada caso del CAO, entrenado con contexto específico del caso | Configuracion en plataforma de GPTs o equivalente; prompts y knowledge base por caso | [DOC] |
 | Plataforma de entrega | Entorno donde los participantes interactuan con Pristino y los asistentes | Web app o integración con Workspace; SSO opcional | [SUPUESTO] |
 | Persistencia de contexto | Cada asistente mantiene memoria del progreso del participante en su caso | Storage de sesiones; integración con sistema de tracking de progreso | [INFERENCIA] |
 | Escalabilidad | Soporte para multiples participantes concurrentes en la misma cohorte | Rate limits de APIs; cola de solicitudes si es necesario | [INFERENCIA] |
@@ -65,7 +65,7 @@ Las licencias de software NO estan incluidas en el precio del bootcamp. [DOC]
 
 | Requisito | Detalle | Evidencia |
 |-----------|---------|-----------|
-| Configuracion por participante | Asistente fine-tuned al contexto de negocio especifico del participante | [DOC] |
+| Configuracion por participante | Asistente fine-tuned al contexto de negocio específico del participante | [DOC] |
 | Tiempo de setup estimado | 2-4 horas por asistente personalizado | [SUPUESTO] |
 | Entrega | Asistente operativo en la plataforma elegida (GPTs, Claude Projects, o equivalente) | [INFERENCIA] |
 | Soporte post-entrega | 30 dias de ajustes incluidos | [SUPUESTO] |
@@ -115,7 +115,7 @@ Las licencias de software NO estan incluidas en el precio del bootcamp. [DOC]
 |--------|-------------|---------|------------|-----------|
 | Participante no contrata licencia minima (Tier 1) | Media | Alto | Requisito explicito en terminos de inscripcion; verificacion en onboarding | [INFERENCIA] |
 | Cambio de precios de proveedores de IA durante el programa | Baja | Medio | Comúnicar que precios de terceros son variables; anclar solo precio del bootcamp | [INFERENCIA] |
-| Caida de servicio de proveedor critico (OpenAI, Google, Anthropic) | Baja | Alto | Stack multi-proveedor por diseno; ningun caso depende de un solo modelo | [INFERENCIA] |
+| Caida de servicio de proveedor critico (OpenAI, Google, Anthropic) | Baja | Alto | Stack multi-proveedor por diseño; ningun caso depende de un solo modelo | [INFERENCIA] |
 | Limitaciones de API rate limits con multiples participantes | Media | Medio | Arquitectura de cola en Pristino; sesiones asincronas como fallback | [SUPUESTO] |
 | Participante confunde costo de licencias con costo del bootcamp | Alta | Medio | Comúnicacion clara en landing page, email de bienvenida y sesión de onboarding | [INFERENCIA] |
 
@@ -131,7 +131,7 @@ Las licencias de software NO estan incluidas en el precio del bootcamp. [DOC]
 | NotebookLM | Medio | Medio (contenido exportable, workflow no) | Notion AI, Obsidian | [INFERENCIA] |
 | Pristino (Open Source) | **Cero** | Cero (suyo, local, sin dependencia) | N/A — es suyo | [DOC] |
 
-**Decisión de diseno:** Pristino como orquestador es la pieza cero-lock-in. Si un participante cambia de ChatGPT a Claude, Pristino sigue operando. [DOC]
+**Decisión de diseño:** Pristino como orquestador es la pieza cero-lock-in. Si un participante cambia de ChatGPT a Claude, Pristino sigue operando. [DOC]
 
 ---
 
@@ -139,12 +139,12 @@ Las licencias de software NO estan incluidas en el precio del bootcamp. [DOC]
 
 | Herramienta | Free tier incluye | Limite critico | Que pasa al exceder | Evidencia |
 |-------------|------------------|----------------|---------------------|-----------|
-| Google Gemini (sin Premium) | 15 msgs/dia modelo basico | Sin Gemini Advanced | Calidad de respuestas cae 60%+ | [INFERENCIA] |
+| Google Gemini (sin Premium) | 15 msgs/dia modelo básico | Sin Gemini Advanced | Calidad de respuestas cae 60%+ | [INFERENCIA] |
 | ChatGPT Free | GPT-4o limitado a 10 msgs/3h | Sin GPTs custom | No puede usar asistentes configurados | [DOC] |
 | Claude Free | 10-15 msgs/dia | Sin Projects | No puede subir documentos largos | [INFERENCIA] |
 | NotebookLM Free | 5 notebooks, 50 fuentes | Sin podcast/audio | Funcionalidad base intacta | [INFERENCIA] |
 
-**Riesgo:** Participante que no contrata Tier 1 no puede seguir el programa. Solucion: hacer Tier 1 requisito de inscripcion, verificar en onboarding dia 1. [INFERENCIA]
+**Riesgo:** Participante que no contrata Tier 1 no puede seguir el programa. Solucion: hacer Tier 1 requisito de inscripcion, verificar en onboarding día 1. [INFERENCIA]
 
 ---
 

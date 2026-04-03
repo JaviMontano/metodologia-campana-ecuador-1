@@ -15,8 +15,8 @@
 |-----------|---------|-----------|
 | Nombre | Cristian Jarrin | [DOC] |
 | Rol | Socio Ano 2 (7% equity, entry fee $2,900 dinamico) | [DOC] |
-| Funcion | Representación local, alianzas, logistica, convocatoria | [DOC] |
-| Restriccion | NO es facilitador del programa — rol estrategico/operativo | [DOC] |
+| Funcion | Representación local, alianzas, logística, convocatoria | [DOC] |
+| Restriccion | NO es facilitador del programa — rol estratégico/operativo | [DOC] |
 | Entry fee | $2,900 inicial. Se recalcula al valorar empresa conjuntamente | [DOC] |
 
 ---
@@ -40,7 +40,7 @@
 | Fase | Cuando | Actividad | Formato | Evidencia |
 |------|--------|-----------|---------|-----------|
 | Masterclass | Lun 6 abril 7PM | Charla abierta IA | Online | [DOC] |
-| Taller | Mar 7 abril 7PM + sabado | De Ocupado a Productivo | Online | [DOC] |
+| Taller | Mar 7 abril 7PM + sábado | De Ocupado a Productivo | Online | [DOC] |
 | CAO Creyentes | Abril | 5 de 13 invitados | Online | [DOC] |
 | CAO Abierto + Empoderamiento | Mayo | Convocatoria general | Online | [DOC] |
 | Presencial | Diferido a cohorte 2+ | Sujeto a resultados primera fase | [SUPUESTO] |
@@ -57,7 +57,7 @@
 | 4 | Conectividad online | Baja | Medio | **3** | Sesiónes grabadas + plataforma low-bandwidth | [INFERENCIA] |
 | 5 | Competencia local emerge | Media | Medio | **6** | Ventaja de first mover + IP propietaria + comunidad | [INFERENCIA] |
 | 6 | Retencion fiscal inesperada | Baja | Medio | **3** | Facturar via entidad local + asesoria tributaria pre-lanzamiento | [SUPUESTO] |
-| 7 | No alcanza cupo minimo | Media | Alto | **8** | Break-even en 1 cierre + go/no-go deadline + reembolso | [INFERENCIA] |
+| 7 | No alcanza cupo mínimo | Media | Alto | **8** | Break-even en 1 cierre + go/no-go deadline + reembolso | [INFERENCIA] |
 
 **Score:** Prob x Impacto (1-3 cada uno, max 9). Riesgos >6 requieren mitigación activa.
 
@@ -82,8 +82,8 @@
 | Activo | Proteccion | Estado | Evidencia |
 |--------|-----------|--------|-----------|
 | Método MetodologIA | Know-how documentado, no patentable | Protegido por secreto comercial | [DOC] |
-| Agente Pristino | Open Source (licencia MIT) | Codigo publico, marca protegida | [DOC] |
-| 13 asistentes | Configuracion propietaria sobre plataformas publicas | Protegido por acceso controlado | [INFERENCIA] |
+| Agente Pristino | Open Source (licencia MIT) | Codigo público, marca protegida | [DOC] |
+| 13 asistentes | Configuracion propietaria sobre plataformas públicas | Protegido por acceso controlado | [INFERENCIA] |
 | Bibliotecas de prompts | Contenido propietario | Distribuido solo a participantes activos | [DOC] |
 | Playbook "Dirigir en Era IA" | Contenido original | Copyright MetodologIA | [SUPUESTO] |
 | Marca MetodologIA | Nombre + logo + "(R)Evolucion" | Registro pendiente en Ecuador | [POR CONFIRMAR] |

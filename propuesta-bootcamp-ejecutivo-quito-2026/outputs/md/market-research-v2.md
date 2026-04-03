@@ -132,7 +132,7 @@ Descuento Ambassador: 50% sobre precio regular [DOC].
 | Capital inicial requerido | -- | Minimo (modelo comision-first) [DOC] |
 | Break-even | Mes 1 (1 cierre CAO) | [DOC] |
 
-El modelo de MetodologIA elimina la necesidad de financiamiento externo significativo. El burn rate de USD 813/mes cubre herramientas, plataforma y costos operativos basicos [DOC]. Con un solo cierre de CAO Believers (USD 1,490), el proyecto alcanza break-even [DOC].
+El modelo de MetodologIA elimina la necesidad de financiamiento externo significativo. El burn rate de USD 813/mes cubre herramientas, plataforma y costos operativos básicos [DOC]. Con un solo cierre de CAO Believers (USD 1,490), el proyecto alcanza break-even [DOC].
 
 Financiamiento externo seria únicamente acelerador, no requisito de supervivencia [INFERENCIA].
 
@@ -184,7 +184,7 @@ Financiamiento externo seria únicamente acelerador, no requisito de supervivenc
 | Bottom-up (SOM Y1 x factor de escala) | $136K x 650 = $88M | Media — alineado con top-down | [INFERENCIA] |
 | Benchmark regional (Colombia, Peru bootcamps ejecutivos) | $50M-$120M Ecuador | Media — ajustado por PIB relativo | [SUPUESTO] |
 
-**Conclusion:** TAM de $89M es consistente cross-método pero asume mercado maduro. SAM de $14.9M (20% awareness) es mas accionable. SOM de $136K Y1 es conservador y alcanzable. [INFERENCIA]
+**Conclusion:** TAM de $89M es consistente cross-método pero asume mercado maduro. SAM de $14.9M (20% awareness) es más accionable. SOM de $136K Y1 es conservador y alcanzable. [INFERENCIA]
 
 ---
 
@@ -197,10 +197,10 @@ Financiamiento externo seria únicamente acelerador, no requisito de supervivenc
 | SAM resultante | $7.5M | $14.9M | $26.3M |
 | SOM Y1 (1% penetracion SAM) | $75K | $136K | $263K |
 
-**Trade-off:** Ser agresivo en SOM requiere mas inversión en marketing (salir del $813/mes burn). Ser conservador ($136K) es autosuficiente desde M1. [INFERENCIA]
+**Trade-off:** Ser agresivo en SOM requiere más inversión en marketing (salir del $813/mes burn). Ser conservador ($136K) es autosuficiente desde M1. [INFERENCIA]
 
 ---
 
-> **Innovation Mode**: Proyecciones indicativas. Datos de mercado basados en fuentes publicas y estimaciones propias. No constituye asesoria financiera.
+> **Innovation Mode**: Proyecciones indicativas. Datos de mercado basados en fuentes públicas y estimaciones propias. No constituye asesoria financiera.
 
 *Construido por profesionales, potenciado por la red agéntica de MetodologIA.*

@@ -101,7 +101,7 @@ Total Y2: 6 cierres corporativos [DOC].
 
 #### Supuestos White Label
 
-- Requiere IP documentada y probada (minimo 4 ciclos CAO) [SUPUESTO]
+- Requiere IP documentada y probada (mínimo 4 ciclos CAO) [SUPUESTO]
 - Ticket alto, ciclo largo (6-9 meses) [SUPUESTO]
 - Target: instituciones educativas regionales, corporativos multinacionales con presencia LatAm [INFERENCIA]
 - Ingreso por licencia incluye fee inicial + royalty recurrente [POR CONFIRMAR]
@@ -247,7 +247,7 @@ Todos los escenarios son [INFERENCIA] basados en variaciones porcentuales sobre 
 | Net Y2 | $289,430 | $419,900 | $550,370 |
 | Break-even | Mes 1-2 | Mes 1 | Mes 1 |
 
-**Supuesto critico:** Pesimista asume 30% menos cierres (4 CAO ciclos en vez de 6, 0 B2B Y1). Optimista asume 30% mas cierres + ambassador flywheel acelerado. [SUPUESTO]
+**Supuesto critico:** Pesimista asume 30% menos cierres (4 CAO ciclos en vez de 6, 0 B2B Y1). Optimista asume 30% más cierres + ambassador flywheel acelerado. [SUPUESTO]
 
 ---
 

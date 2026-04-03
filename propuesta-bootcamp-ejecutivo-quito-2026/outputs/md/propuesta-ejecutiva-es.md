@@ -26,14 +26,14 @@ El 60% de la semana ejecutiva es operativa: correos, reportes, seguimiento, reun
 
 | # | Entregable | Que es | Criterio de "listo" |
 |---|-----------|--------|---------------------|
-| 1 | **1 agente propio** | Pristino (Open Source, de Javier Montano). En el taller lo instala basico; en el Bootcamp le da todo su contexto | El agente ejecuta 3+ tareas reales del directivo sin intervencion |
-| 2 | **13 asistentes especializados** | Flujos de trabajo desde dia 1. Comúnicacion, analisis, agenda, decisiones, reportes | Cada asistente resuelve al menos 1 tarea del contexto real |
+| 1 | **1 agente propio** | Pristino (Open Source, de Javier Montano). En el taller lo instala básico; en el Bootcamp le da todo su contexto | El agente ejecuta 3+ tareas reales del directivo sin intervencion |
+| 2 | **13 asistentes especializados** | Flujos de trabajo desde día 1. Comúnicacion, análisis, agenda, decisiones, reportes | Cada asistente resuelve al menos 1 tarea del contexto real |
 | 3 | **1 Playbook** | "Como Dirigir en la Era de la IA" — guia práctica sin depender de técnicos | Directivo articula su estrategia IA sin ayuda externa |
 | 4 | **2 bibliotecas de prompts** | Universal (cualquier profesional) + Ejecutiva (estrategia, decisión, delegación) | Directivo genera outputs de calidad en 3+ areas usando prompts |
 | 5 | **1 segundo cerebro** | NotebookLM como memoria externa 24/7 | Recupera información clave en <30 segundos |
 | 6 | **9 sesiones** | 2h cada una con facilitador. Co-creación con contexto real | Entregable funciónal por sesión |
 | 7 | **1 Campus Virtual** | Recursos, actualizaciónes, comunidad (1 mes incluido) | Acceso verificado y primer recurso consumido |
-| 8 | **Comunidad** | Domingo/mes: workshops de actualización. Sabado/mes: clinicas IA en vivo | Asistio a 1+ sesión en primer mes |
+| 8 | **Comunidad** | Domingo/mes: workshops de actualización. Sábado/mes: clínicas IA en vivo | Asistio a 1+ sesión en primer mes |
 | 9 | **Masterclass** | "IA: que esta pasando" (lunes 6 abril, 7PM, 2h). Opcional | Asistio o reviso grabacion |
 
 **Ruta:** 5h sin riesgo ni costo → 20h de contenido de elite (CAO) → 16 semanas de (R)Evolucion Digital (Empoderamiento con equipo).
@@ -52,16 +52,16 @@ El 60% de la semana ejecutiva es operativa: correos, reportes, seguimiento, reun
 | Nivel | Producto | Precio | Para quien | Cuando |
 |-------|----------|--------|-----------|--------|
 | Masterclass | "IA: que esta pasando" | Gratis | Cualquier directivo curioso | Lun 6 abril, 7PM |
-| Taller | "De Ocupado a Productivo" | Gratis | Directivos + managers | Mar 7 abril, 7PM (+ sabado 9-12 / 14-17) |
+| Taller | "De Ocupado a Productivo" | Gratis | Directivos + managers | Mar 7 abril, 7PM (+ sábado 9-12 / 14-17) |
 | CAO Creyentes | Bootcamp early access | $1,490 | 5 de 13 directivos seleccionados | Abril (Javier facilita) |
-| CAO Abierto | Bootcamp convocatoria | $1,990 | Directivos C-level | Mayo (8 preferentes + 2 publicas) |
+| CAO Abierto | Bootcamp convocatoria | $1,990 | Directivos C-level | Mayo (8 preferentes + 2 públicas) |
 | Empoderamiento | Programa equipos | $1,490/persona | Managers 7+ años experiencia | Mayo (ciclos cada 3 meses) |
 | Académico | Calendario regular | $1,990 | Abierto | Julio (cada 2 meses) |
 | Asistentes | A medida | $347/unidad | Cualquiera | Bajo demanda |
 
 **Modalidades CAO:** Solo (maxima personalizacion) | Dupla (ideal socios/cofundadores) | Terna (equipo directivo). Mismo precio. Trade-off: Solo = profundidad maxima; Terna = dinamica de equipo pero menos tiempo individual. [INFERENCIA]
 
-**Funnel:** 13 invitados → 5 Creyentes (abril, $1,490) → 8 con cupo preferente mayo (grupo 10, si todos toman solo 2 publicas) → graduados pueden ser Embajadores (50% descuento). [DOC: content.json]
+**Funnel:** 13 invitados → 5 Creyentes (abril, $1,490) → 8 con cupo preferente mayo (grupo 10, si todos toman solo 2 públicas) → graduados pueden ser Embajadores (50% descuento). [DOC: content.json]
 
 ---
 
@@ -130,13 +130,13 @@ El 60% de la semana ejecutiva es operativa: correos, reportes, seguimiento, reun
 |--------|------|---------|-----------|
 | Directivo no dedica 2h/semana | Media | Alto | Formato flexible, sesiones grabadas |
 | Conectividad en sesiones online | Baja | Medio | Verificar pre-bootcamp, grabacion backup |
-| Herramientas de IA cambian rapido | Alta | Bajo | Comunidad mensual + actualizaciónes campus |
+| Herramientas de IA cambian rápido | Alta | Bajo | Comunidad mensual + actualizaciónes campus |
 | Equipo del directivo resiste adopción | Media | Medio | Empoderamiento como programa separado |
 | Expectativas de ROI no se cumplen | Baja | Alto | Garantia 4h, ROI marcado como proyección |
 
 ---
 
-*Esta es una propuesta de diseno de servicio personalizado. Los precios indicados son indicativos y se confirman antes de la firma del acuerdo. Este documento no constituye un compromiso de entrega ni un contrato.*
+*Esta es una propuesta de diseño de servicio personalizado. Los precios indicados son indicativos y se confirman antes de la firma del acuerdo. Este documento no constituye un compromiso de entrega ni un contrato.*
 
 *Construido por profesionales, potenciado por la red agéntica de MetodologIA.*
 

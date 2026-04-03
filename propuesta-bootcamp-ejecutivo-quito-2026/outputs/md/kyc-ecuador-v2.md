@@ -27,13 +27,13 @@
 | Programa | Audiencia | Requisito | Precio | Evidencia |
 |----------|-----------|-----------|--------|-----------|
 | Masterclass (Lun 6 abril 7PM) | Cualquier directivo curioso | Ninguno | Gratis | [DOC] |
-| Taller (Mar 7 abril 7PM + sabado) | Directivos + managers | Registro | Gratis | [DOC] |
+| Taller (Mar 7 abril 7PM + sábado) | Directivos + managers | Registro | Gratis | [DOC] |
 | CAO Creyentes (abril) | C-level con vision | Invitacion (5 de 13) | $1,490 | [DOC] |
 | CAO Abierto (mayo) | C-level general | Registro | $1,990 | [DOC] |
 | Empoderamiento (mayo) | Gerentes 7+ años exp | Validacion exp | $1,490/persona | [DOC] |
 | Asistentes a Medida | Cualquier participante | Inscripcion previa | $347/unidad | [DOC] |
 
-**Funnel:** 13 invitados → 5 Creyentes → 8 preferentes mayo (grupo 10, 2 publicas) → Embajadores [DOC]
+**Funnel:** 13 invitados → 5 Creyentes → 8 preferentes mayo (grupo 10, 2 públicas) → Embajadores [DOC]
 
 ---
 
@@ -47,7 +47,7 @@
 | Manufactura | "IA es para oficina, no para planta" | Media | Casos de uso en gestion, no en produccion | [INFERENCIA] |
 | Servicios Prof. | Escepticismo intelectual: "ya se gestionar" | Alta | Taller Zero Risk como prueba sin compromiso | [INFERENCIA] |
 | Telecom | Presupuesto tech ya asignado a otras prioridades | Media | Posicionar como inversión personal, no corporativa | [SUPUESTO] |
-| Sector Publico | Burocracia para aprobar capacitaciones | Alta | Factura B2C personal, no licitacion publica | [INFERENCIA] |
+| Sector Publico | Burocracia para aprobar capacitaciones | Alta | Factura B2C personal, no licitacion pública | [INFERENCIA] |
 
 ---
 
@@ -114,7 +114,7 @@
 | AESOFT | Gremio tech | Early adopters, tech-savvy | P1 | [DOC] |
 | StartupEC / Buen Trip Hub | Comunidad | Fundadores, CTOs | P2 | [DOC] |
 | IDE / USFQ | Academia | Credibilidad, co-certificacion futura | P3 | [DOC] |
-| Conquito | Agencia publica | Ecosistema emprendedor | P3 | [DOC] |
+| Conquito | Agencia pública | Ecosistema emprendedor | P3 | [DOC] |
 
 ---
 
@@ -150,7 +150,7 @@
 | Método | Viabilidad | Friccion | Evidencia |
 |--------|-----------|----------|-----------|
 | Transferencia bancaria USD | Alta (preferido B2B) | Baja | [INFERENCIA] |
-| Tarjeta credito (Visa/MC) | Alta (via Stripe/PayPhone) | Baja | [INFERENCIA] |
+| Tarjeta crédito (Visa/MC) | Alta (via Stripe/PayPhone) | Baja | [INFERENCIA] |
 | Pago diferido 2-3 cuotas | Alta (práctica comun) | Media | [SUPUESTO] |
 | Factura corporativa | Alta (empresas grandes) | Media (burocracia) | [INFERENCIA] |
 | PayPal | Media (no todos lo usan) | Media | [INFERENCIA] |

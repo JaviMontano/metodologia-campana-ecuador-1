@@ -21,7 +21,7 @@ MetodologIA opera con un modelo de comisiones puras [DOC]. No hay salarios fijos
 | Componente | Porcentaje | Rol | Descripcion |
 |------------|-----------|-----|-------------|
 | Coach | 50% | Entrega del programa | Facilitacion, coaching 1:1, seguimiento [DOC] |
-| Franchise | 20% | Operacion local | Gestion comercial, logistica, relaciones locales [DOC] |
+| Franchise | 20% | Operacion local | Gestion comercial, logística, relaciones locales [DOC] |
 | IP / Brand | 10% | Propiedad intelectual | Licencia de metodologia, marca, contenido [DOC] |
 | Commercial | 20% | Cierre de venta | Generacion de leads, negociacion, cierre [DOC] |
 | **Total** | **100%** | | |
@@ -108,7 +108,7 @@ El modelo de comisiones elimina salarios fijos [DOC]. Todos los participantes (c
 | Metrica | Valor |
 |---------|-------|
 | Costo mensual | USD 813 [DOC] |
-| Precio minimo producto (Assistants) | USD 347 [DOC] |
+| Precio mínimo producto (Assistants) | USD 347 [DOC] |
 | Precio CAO Believers | USD 1,490 [DOC] |
 | Cierres para break-even mensual | 1 CAO (o 3 Assistants) [INFERENCIA] |
 | Margen sobre 1 CAO Believers | USD 1,490 - USD 813 = USD 677 (antes de revenue share) [INFERENCIA] |
@@ -286,10 +286,10 @@ Un LTV/CAC de 27-40x indica un modelo extremadamente eficiente en adquisicion [D
 |----------|---------------|----------------|-----------|-----------|
 | CAO participantes | <10% (abandonos) | Falta de tiempo, expectativas desalineadas | Garantia 4h, formato flexible | [SUPUESTO] |
 | Empoderamiento | 15-20% | Resistencia del equipo, manager pierde sponsor | Compromiso del sponsor C-level pre-inscripcion | [SUPUESTO] |
-| Campus Virtual (post-bootcamp) | 40-60% no renuevan | Perciben que "ya aprendieron" | Contenido nuevo mensual, clinicas de valor | [SUPUESTO] |
-| Ambassadors | 30% inactivos en 6 meses | Pierden motivacion sin cierres | Kit de activation, recognition publica, comision por referido | [INFERENCIA] |
+| Campus Virtual (post-bootcamp) | 40-60% no renuevan | Perciben que "ya aprendieron" | Contenido nuevo mensual, clínicas de valor | [SUPUESTO] |
+| Ambassadors | 30% inactivos en 6 meses | Pierden motivacion sin cierres | Kit de activation, recognition pública, comision por referido | [INFERENCIA] |
 
-**Insight:** El churn mas costoso no es de participantes (protegidos por garantia) sino de ambassadors inactivos. Sin flywheel activo, el crecimiento organico se frena. [INFERENCIA]
+**Insight:** El churn más costoso no es de participantes (protegidos por garantia) sino de ambassadors inactivos. Sin flywheel activo, el crecimiento organico se frena. [INFERENCIA]
 
 ---
 

@@ -25,27 +25,27 @@ Primer Bootcamp Ejecutivo Agéntico de Latinoamerica. 20 horas para instalar un 
 |------------|---------|-----------|
 | Cursos teoricos | Dan conocimiento, no implementacion | Tasa de aplicacion <15% post-curso [SUPUESTO] |
 | Herramientas aisladas | No se integran entre si ni con el contexto | 73% abandonadas en <30 dias [INFERENCIA] |
-| Workshops genericos | Cubren lo basico, no personalizan | Sin continuidad post-evento |
+| Workshops genericos | Cubren lo básico, no personalizan | Sin continuidad post-evento |
 | Consultorias Big 4 | $10K+, genericas, sin agente al cierre | Entregable = recomendaciónes, no sistema |
 
 ---
 
 ## 2. La Solucion: Sistema Agéntico Personal
 
-El CAO Bootcamp le da un **agente que se vuelve su mejor aliado**. En el taller, Javier muestra como opera con Pristino y usted aprende a instalarlo en su versión basica. Sacarle todo el potencial: auto-estudio o de la mano de nosotros en el Bootcamp. [DOC: content.json]
+El CAO Bootcamp le da un **agente que se vuelve su mejor aliado**. En el taller, Javier muestra como opera con Pristino y usted aprende a instalarlo en su versión básica. Sacarle todo el potencial: auto-estudio o de la mano de nosotros en el Bootcamp. [DOC: content.json]
 
 ### 9 Entregables (sin letra chica)
 
 | # | Entregable | Que es | Criterio de "listo" |
 |---|-----------|--------|---------------------|
 | 1 | **1 agente propio** | Pristino (Open Source, de Javier Montano). Basico en taller, potencial completo en Bootcamp | Ejecuta 3+ tareas reales sin intervencion |
-| 2 | **13 asistentes especializados** | Flujos de trabajo desde dia 1. Comúnicacion, analisis, agenda, decisiones, reportes | Cada asistente resuelve 1+ tarea del contexto real |
+| 2 | **13 asistentes especializados** | Flujos de trabajo desde día 1. Comúnicacion, análisis, agenda, decisiones, reportes | Cada asistente resuelve 1+ tarea del contexto real |
 | 3 | **1 Playbook** | "Como Dirigir en la Era de la IA" — sin depender de técnicos | Directivo articula estrategia IA sin ayuda externa |
 | 4 | **2 bibliotecas de prompts** | Universal + Ejecutiva (estrategia, decisión, delegación, reportes) | Genera outputs de calidad en 3+ areas |
 | 5 | **1 segundo cerebro** | NotebookLM como memoria externa 24/7 | Recupera info clave en <30 segundos |
 | 6 | **9 sesiones** | 2h c/u con facilitador. Co-creación con contexto real | Entregable funciónal por sesión |
 | 7 | **1 Campus Virtual** | Recursos, actualizaciónes, comunidad (1 mes incluido) | Acceso verificado, primer recurso consumido |
-| 8 | **Comunidad** | Domingo/mes: workshops. Sabado/mes: clinicas IA en vivo | Asistio a 1+ sesión en primer mes |
+| 8 | **Comunidad** | Domingo/mes: workshops. Sábado/mes: clínicas IA en vivo | Asistio a 1+ sesión en primer mes |
 | 9 | **Masterclass** | "IA: que esta pasando" (lunes 6 abril 7PM, 2h). Opcional | Asistio o reviso grabacion |
 
 ### Que NO resuelve (limites explicitos)
@@ -62,9 +62,9 @@ El CAO Bootcamp le da un **agente que se vuelve su mejor aliado**. En el taller,
 | Nivel | Producto | Precio | Para quien | Cuando |
 |-------|----------|--------|-----------|--------|
 | Masterclass | "IA: que esta pasando" | Gratis | Cualquier directivo | Lun 6 abril, 7PM |
-| Taller | "De Ocupado a Productivo" | Gratis | Directivos + managers | Mar 7 abril, 7PM + sabado |
+| Taller | "De Ocupado a Productivo" | Gratis | Directivos + managers | Mar 7 abril, 7PM + sábado |
 | CAO Creyentes | Early access | $1,490 | 5 de 13 seleccionados | Abril |
-| CAO Abierto | Convocatoria | $1,990 | C-level | Mayo (8 preferentes + 2 publicas) |
+| CAO Abierto | Convocatoria | $1,990 | C-level | Mayo (8 preferentes + 2 públicas) |
 | Empoderamiento | Equipos | $1,490/persona | Managers 7+ años exp | Mayo, cada 3 meses |
 | Académico | Regular | $1,990 | Abierto | Julio, cada 2 meses |
 | Asistentes | A medida | $347/unidad | Cualquiera | Bajo demanda |
@@ -88,7 +88,7 @@ El CAO Bootcamp le da un **agente que se vuelve su mejor aliado**. En el taller,
 1. **13 directivos** convocados a experiencia exclusiva
 2. **5** acceden a Edicion Creyentes (abril, $1,490, Javier facilita)
 3. **8** restantes con cupo preferente para mayo (grupo de 10)
-4. Si los 8 toman, solo **2 sillas publicas**
+4. Si los 8 toman, solo **2 sillas públicas**
 5. Graduados pueden ser **Embajadores** (50% descuento sobre precio regular) [DOC]
 
 ---
@@ -111,14 +111,14 @@ El CAO Bootcamp le da un **agente que se vuelve su mejor aliado**. En el taller,
 | # | Caso | Resultado verificable |
 |---|------|----------------------|
 | 1 | Email y comúnicación ejecutiva | Correos redactados y priorizados por IA. Tiempo de bandeja: -40% |
-| 2 | Reportes y analisis | Reportes automaticos desde datos crudos. Sin intervencion manual |
-| 3 | Agenda y prioridades | Calendario optimizado, conflictos resueltos automaticamente |
+| 2 | Reportes y análisis | Reportes automáticos desde datos crudos. Sin intervencion manual |
+| 3 | Agenda y prioridades | Calendario optimizado, conflictos resueltos automáticamente |
 
 ### Fase 2 — Integracion (Sesiónes 4-6)
 | # | Caso | Resultado verificable |
 |---|------|----------------------|
 | 4 | Segundo cerebro digital | Base de conocimiento buscable en <30s |
-| 5 | Decisiónes estrategicas | Analisis multi-escenario automatizado |
+| 5 | Decisiónes estratégicas | Analisis multi-escenario automatizado |
 | 6 | Automatizacion de flujos | Workflows ejecutados sin intervencion humana |
 
 ### Fase 3 — Maestria (Sesiónes 7-9)
@@ -135,7 +135,7 @@ El CAO Bootcamp le da un **agente que se vuelve su mejor aliado**. En el taller,
 | Fecha | Evento | Audiencia | Status |
 |-------|--------|-----------|--------|
 | Lun 6 abril, 7PM | Masterclass (opcional) | Abierto | Confirmado |
-| Mar 7 abril, 7PM | Taller + sabado opcion | Directivos + managers | Confirmado, 13 plazas |
+| Mar 7 abril, 7PM | Taller + sábado opcion | Directivos + managers | Confirmado, 13 plazas |
 | Abril 2026 | CAO Creyentes | 5 seleccionados | $1,490, puerta cerrada |
 | Mayo 2026 | CAO Abierto + Empoderamiento | C-level + Managers 7+ | $1,990 + $1,490 |
 | Julio 2026 | Calendario Académico | Abierto, cada 2 meses | $1,990 |
@@ -244,7 +244,7 @@ Graduados CAO pueden certificarse como Embajadores. Beneficio: 50% descuento sob
 
 | Mes | Sin MetodologIA | Con comunidad |
 |-----|----------------|---------------|
-| 2 | Agente opera tareas configuradas. Asistentes funciónan | + Workshop mensual + clinica IA |
+| 2 | Agente opera tareas configuradas. Asistentes funciónan | + Workshop mensual + clínica IA |
 | 6 | Riesgo de drift si no actualiza contexto | + Campus con actualizaciónes |
 | 12 | Sistema estable pero sin nuevas capacidades | + Embajador puede facilitar a otros |
 
@@ -318,7 +318,7 @@ Graduados CAO pueden certificarse como Embajadores. Beneficio: 50% descuento sob
 
 ---
 
-*Esta es una propuesta de diseno de servicio personalizado. Los precios indicados son indicativos y se confirman antes de la firma del acuerdo. Este documento no constituye un compromiso de entrega ni un contrato.*
+*Esta es una propuesta de diseño de servicio personalizado. Los precios indicados son indicativos y se confirman antes de la firma del acuerdo. Este documento no constituye un compromiso de entrega ni un contrato.*
 
 *Construido por profesionales, potenciado por la red agéntica de MetodologIA.*
 
