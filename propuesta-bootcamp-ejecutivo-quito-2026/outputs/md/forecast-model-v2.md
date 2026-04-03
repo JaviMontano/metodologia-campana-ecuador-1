@@ -2,15 +2,15 @@
 
 | Campo | Valor |
 |-------|-------|
-| Version | 2.0 |
+| Versión | 2.0 |
 | Fecha | 2026-04-01 |
 | Fuente | content.json v2.0 |
 | Marca | MetodologIA |
-| Clasificacion | Indicativo, sujeto a consistencia de adopcion |
+| Clasificacion | Indicativo, sujeto a consistencia de adopción |
 
 ---
 
-## 1. Resumen de proyeccion a 24 meses
+## 1. Resumen de proyección a 24 meses
 
 | Periodo | Ingresos | Costos | Neto |
 |---------|----------|--------|------|
@@ -41,8 +41,8 @@ Total planificado: 6 ciclos CAO en Y1 [DOC]. El mix de Assistants (USD 347) aume
 
 #### Supuestos B2C
 
-- Conversion taller gratuito a CAO: 15-25% [SUPUESTO]
-- Conversion Assistants a CAO/Empowerment: 10-15% [SUPUESTO]
+- Conversión taller gratuito a CAO: 15-25% [SUPUESTO]
+- Conversión Assistants a CAO/Empowerment: 10-15% [SUPUESTO]
 - Retencion para segundo producto: 30-40% [SUPUESTO]
 - Efecto Ambassador en Y2: multiplica alcance 2-3x [INFERENCIA]
 
@@ -94,7 +94,7 @@ Total Y2: 6 cierres corporativos [DOC].
 
 | Periodo | Estado | Detalle |
 |---------|--------|---------|
-| Y1 Q1-Q3 | Sin actividad | Foco en B2C y validacion [DOC] |
+| Y1 Q1-Q3 | Sin actividad | Foco en B2C y validación [DOC] |
 | Y1 Q4 | Conversaciones iniciales | Post resultados CAO + Cobrand [DOC] |
 | Y2 Q1-Q2 | Negociacion | 1-2 prospectos en pipeline [INFERENCIA] |
 | Y2 Q3-Q4 | Cierres | USD 90,500 acumulado [DOC] |
@@ -132,11 +132,11 @@ Nota: Los montos mensuales son estimados para ilustrar la estacionalidad. El tot
 | Fecha | Evento | Impacto en forecast |
 |-------|--------|---------------------|
 | Abril 2026 (Semana Santa) | Taller gratuito = Dia 1 | Generacion de leads, primer funnel [DOC] |
-| Abril 2026 | CAO Believers -- primera cohorte | Primeros ingresos, validacion de precio y formato [DOC] |
+| Abril 2026 | CAO Believers -- primera cohorte | Primeros ingresos, validación de precio y formato [DOC] |
 | Mayo 2026 | CAO Open (mercado abierto) + Empowerment | Expansion B2C, segundo producto [DOC] |
-| Julio 2026 | CAO Academic -- inicio calendario academico | Mayor volumen, precio premium (USD 1,990) [DOC] |
+| Julio 2026 | CAO Academic -- inicio calendario académico | Mayor volumen, precio premium (USD 1,990) [DOC] |
 | Q4 2026 | Primer cierre B2B + primer Cobrand | Diversificacion de ingresos [DOC] |
-| Q1-Q2 2027 | Ambassador flywheel activo + White Label pipeline | Escala sin incremento proporcional de costo [INFERENCIA] |
+| Q1-Q2 2027 | Ambassador flywheel activo + White Label pipeline | Escala sin incremento proporciónal de costo [INFERENCIA] |
 
 ---
 
@@ -150,7 +150,7 @@ El flywheel de Ambassadors es el motor de crecimiento organico de MetodologIA [D
 Taller gratuito (funnel)
     |
     v
-CAO Believers / Open / Academic (conversion 15-25%)
+CAO Believers / Open / Academic (conversión 15-25%)
     |
     v
 33 graduados CAO Y1 [INFERENCIA]
@@ -165,7 +165,7 @@ CAO Believers / Open / Academic (conversion 15-25%)
 30-60 leads calificados adicionales
     |
     v
-15-25% conversion = 5-15 nuevos estudiantes
+15-25% conversión = 5-15 nuevos estudiantes
     |
     v
 Ciclo se repite con base ampliada
@@ -179,7 +179,7 @@ Ciclo se repite con base ampliada
 | Ambassadors activos | 15-20 | 40-60 [INFERENCIA] |
 | Referidos por Ambassador | 2-3 | 2-3 [DOC] |
 | Leads generados por flywheel | 30-60 | 80-180 [INFERENCIA] |
-| Conversion a pago | 5-15 | 20-45 [INFERENCIA] |
+| Conversión a pago | 5-15 | 20-45 [INFERENCIA] |
 
 El descuento Ambassador (50% off) reduce el ticket promedio pero incrementa volumen y genera efecto de red [DOC]. Los Ambassadors dentro de empresas son el canal principal para abrir pipeline B2B [INFERENCIA].
 
@@ -227,7 +227,7 @@ Todos los escenarios son [INFERENCIA] basados en variaciones porcentuales sobre 
 |---------|-----------|-----------|------------------------|
 | Estudiantes CAO activos | 33+ | 80-100 | Mensual |
 | NPS post-programa | >70 | >75 | Por cohorte |
-| Tasa de conversion taller a CAO | >15% | >20% | Por ciclo |
+| Tasa de conversión taller a CAO | >15% | >20% | Por ciclo |
 | Ambassadors activos | 15-20 | 40-60 | Trimestral |
 | Referidos por Ambassador | 2-3 | 2-3 | Trimestral |
 | Cierres B2B | 1 | 6 | Trimestral |
@@ -258,7 +258,7 @@ Todos los escenarios son [INFERENCIA] basados en variaciones porcentuales sobre 
 | Abril | $7,450 | 5 Creyentes x $1,490 | $7,450 |
 | Mayo | $19,900 | 10 CAO abierto x $1,990 | $27,350 |
 | Mayo | $8,940 | 6 Empoderamiento x $1,490 | $36,290 |
-| Julio | $9,950 | 5 CAO Academico | $46,240 |
+| Julio | $9,950 | 5 CAO Académico | $46,240 |
 | Q4 | $13,200 | 1 B2B closing | $59,440 |
 | Nov | $36,000 | 1 Cobrand closing | $95,440 |
 
@@ -273,7 +273,7 @@ Todos los escenarios son [INFERENCIA] basados en variaciones porcentuales sobre 
 | Enero-Febrero | Vacaciones, presupuestos nuevos | Bajo (-30%) | No programar lanzamientos |
 | Marzo-Abril | Pre-Semana Santa, presupuesto aprobado | Alto (+20%) | Timing ideal para Creyentes |
 | Mayo-Junio | Estable | Base | CAO abierto + Empoderamiento |
-| Julio-Agosto | Feriado agosto, vacacones sierra | Medio (-15%) | Academico con descuento early bird |
+| Julio-Agosto | Feriado agosto, vacacones sierra | Medio (-15%) | Académico con descuento early bird |
 | Sept-Oct | Regreso a actividades, Q4 planning | Alto (+15%) | B2B y Cobrand closings |
 | Nov-Dic | Cierre fiscal, presupuesto sobrante | Alto (+25%) | Push de B2B, White Label |
 
@@ -283,4 +283,4 @@ Todos los escenarios son [INFERENCIA] basados en variaciones porcentuales sobre 
 
 > **Innovation Mode**: Proyecciones indicativas. Los escenarios de sensibilidad no constituyen promesas de rendimiento. No es asesoria financiera.
 
-*Construido por profesionales, potenciado por la red agentica de MetodologIA.*
+*Construido por profesionales, potenciado por la red agéntica de MetodologIA.*

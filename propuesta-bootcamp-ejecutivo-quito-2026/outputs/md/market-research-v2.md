@@ -2,11 +2,11 @@
 
 | Campo | Valor |
 |-------|-------|
-| Version | 2.0 |
+| Versión | 2.0 |
 | Fecha | 2026-04-01 |
 | Fuente | content.json v2.0 |
 | Marca | MetodologIA |
-| Clasificacion | Indicativo, sujeto a consistencia de adopcion |
+| Clasificacion | Indicativo, sujeto a consistencia de adopción |
 
 ---
 
@@ -42,7 +42,7 @@ Ecuador presenta una economia con base empresarial diversificada, donde el 94% d
 
 **USD 89,000,000** [DOC]
 
-Incluye el universo de formacion en IA, automatizacion y competencias digitales para profesionales y empresas en Ecuador. Calculado como porcion del mercado LatAm ajustado por tamano de economia ecuatoriana.
+Incluye el universo de formacion en IA, automatización y competencias digitales para profesionales y empresas en Ecuador. Calculado como porcion del mercado LatAm ajustado por tamano de economia ecuatoriana.
 
 ### 3.2 SAM (Serviceable Addressable Market)
 
@@ -83,17 +83,17 @@ El SOM Y1 asume 1 cierre de CAO para break-even en Mes 1 [DOC]. La progresion a 
 | Competidor | Tipo | Fortaleza | Debilidad vs MetodologIA | Precio rango |
 |------------|------|-----------|--------------------------|--------------|
 | IDE Business School | MBA / Educacion ejecutiva | Brand recognition, alumni network | Curricula generalista, ciclos largos, sin enfoque IA aplicada | USD 5,000-25,000 [INFERENCIA] |
-| USFQ (Escuela de Negocios) | Universidad privada | Acreditacion internacional, infraestructura | Rigidez academica, adopcion lenta de IA generativa | USD 3,000-15,000 [INFERENCIA] |
-| Big 4 (Deloitte, PwC, EY, KPMG) | Consultoria + Formacion | Marca global, acceso C-suite | Precios premium, no especializados en formacion practica IA | USD 10,000-50,000 por engagement [INFERENCIA] |
+| USFQ (Escuela de Negocios) | Universidad privada | Acreditacion internacional, infraestructura | Rigidez academica, adopción lenta de IA generativa | USD 3,000-15,000 [INFERENCIA] |
+| Big 4 (Deloitte, PwC, EY, KPMG) | Consultoria + Formacion | Marca global, acceso C-suite | Precios premium, no especializados en formacion práctica IA | USD 10,000-50,000 por engagement [INFERENCIA] |
 | Platzi / Coursera / edX | Plataformas online | Escala, precio bajo, contenido amplio | Sin acompanamiento local, sin coaching 1:1, sin red de negocios | USD 50-500 [DOC] |
-| **MetodologIA** | Bootcamp ejecutivo + coaching | Metodologia propia, coaching 1:1, red agentica, IP transferible, modelo Ambassador | Marca nueva en Ecuador, dependencia de early adopters | USD 347-1,990 [DOC] |
+| **MetodologIA** | Bootcamp ejecutivo + coaching | Metodologia propia, coaching 1:1, red agéntica, IP transferible, modelo Ambassador | Marca nueva en Ecuador, dependencia de early adopters | USD 347-1,990 [DOC] |
 
 ### Diferenciadores clave de MetodologIA
 
 1. **Modelo basado en comisiones** -- sin costos fijos de nomina, break-even desde Mes 1 [DOC]
-2. **Red agentica** -- los graduates se convierten en Ambassadors que generan referidos [DOC]
+2. **Red agéntica** -- los graduates se convierten en Ambassadors que generan referidos [DOC]
 3. **IP transferible** -- White Label y Cobrand permiten escalar sin incrementar headcount [DOC]
-4. **Precio accesible** -- 5-10x menor que alternativas institucionales, con mayor profundidad practica [INFERENCIA]
+4. **Precio accesible** -- 5-10x menor que alternativas institucionales, con mayor profundidad práctica [INFERENCIA]
 5. **(R)Evolucion, no solo formacion** -- enfoque en cambio de mentalidad y aplicacion inmediata [DOC]
 
 ---
@@ -104,7 +104,7 @@ El SOM Y1 asume 1 cierre de CAO para break-even en Mes 1 [DOC]. La progresion a 
 |----------|--------|--------|----------------|
 | Taller introductorio | Gratuito | Leads, awareness | Abril 2026 [DOC] |
 | CAO Believers | USD 1,490 | Early adopters, evangelistas | Abril 2026 [DOC] |
-| CAO Academic | USD 1,990 | Profesionales, ejecutivos | Julio 2026+ (calendario academico) [DOC] |
+| CAO Academic | USD 1,990 | Profesionales, ejecutivos | Julio 2026+ (calendario académico) [DOC] |
 | Empowerment | USD 1,490 | Lideres de equipo, gerentes | Mayo 2026 [DOC] |
 | Assistants | USD 347 | Adopcion masiva, complemento | Mayo 2026 [DOC] |
 
@@ -118,7 +118,7 @@ Descuento Ambassador: 50% sobre precio regular [DOC].
 |-----|------|----------|
 | Abril 2026 | Taller introductorio (Semana Santa = Dia 1) + CAO Believers primera cohorte | B2C [DOC] |
 | Mayo 2026 | Apertura CAO mercado abierto + lanzamiento Empowerment | B2C + B2B pipeline [DOC] |
-| Julio 2026 | Inicio calendario academico -- CAO Academic | B2C + B2B [DOC] |
+| Julio 2026 | Inicio calendario académico -- CAO Academic | B2C + B2B [DOC] |
 | Q4 2026 | Primer cierre B2B corporativo, primer Cobrand activo | B2B + Cobrand [INFERENCIA] |
 | Q1 2027 | Conversaciones White Label, Ambassador flywheel activo | White Label [DOC] |
 
@@ -134,7 +134,7 @@ Descuento Ambassador: 50% sobre precio regular [DOC].
 
 El modelo de MetodologIA elimina la necesidad de financiamiento externo significativo. El burn rate de USD 813/mes cubre herramientas, plataforma y costos operativos basicos [DOC]. Con un solo cierre de CAO Believers (USD 1,490), el proyecto alcanza break-even [DOC].
 
-Financiamiento externo seria unicamente acelerador, no requisito de supervivencia [INFERENCIA].
+Financiamiento externo seria únicamente acelerador, no requisito de supervivencia [INFERENCIA].
 
 ---
 
@@ -156,7 +156,7 @@ Financiamiento externo seria unicamente acelerador, no requisito de supervivenci
 | Riesgo | Probabilidad | Impacto | Mitigacion |
 |--------|-------------|---------|------------|
 | Adopcion lenta de early adopters | Media | Alto | Taller gratuito como funnel, descuento Ambassador 50% [INFERENCIA] |
-| Competencia institucional baja precios | Baja | Medio | Diferenciacion por coaching 1:1 y red agentica [INFERENCIA] |
+| Competencia institucional baja precios | Baja | Medio | Diferenciacion por coaching 1:1 y red agéntica [INFERENCIA] |
 | Regulacion educativa restrictiva | Baja | Alto | Modelo bootcamp no requiere acreditacion formal [SUPUESTO] |
 | Dependencia de un solo mercado (Quito) | Media | Medio | Cobrand y White Label permiten expansion geografica sin presencia fisica [DOC] |
 | Tipo de cambio / dolarizacion | Baja | Bajo | Ecuador dolarizado, sin riesgo cambiario directo [DOC] |
@@ -172,19 +172,19 @@ Financiamiento externo seria unicamente acelerador, no requisito de supervivenci
 | Presupuesto corporativo 2026 | Asignado Q1, ejecutable Q2-Q4 | Abril-mayo es timing optimo (pre-cierre presupuestal) | [INFERENCIA] |
 | Competidores potenciales | IDE, USFQ podrian lanzar modulos IA en 6-12 meses | First mover advantage es real pero temporal | [SUPUESTO] |
 
-**Decision:** Lanzar en abril 2026 es el momento optimo. Antes = mercado no listo. Despues = competidores emergen. [INFERENCIA]
+**Decisión:** Lanzar en abril 2026 es el momento optimo. Antes = mercado no listo. Despues = competidores emergen. [INFERENCIA]
 
 ---
 
 ## Validacion de TAM
 
-| Metodo | Resultado | Confianza | Evidencia |
+| Método | Resultado | Confianza | Evidencia |
 |--------|-----------|-----------|-----------|
 | Top-down (60K-100K ejecutivos x $1,490) | $89M | Baja — supone penetracion 100% | [INFERENCIA] |
 | Bottom-up (SOM Y1 x factor de escala) | $136K x 650 = $88M | Media — alineado con top-down | [INFERENCIA] |
 | Benchmark regional (Colombia, Peru bootcamps ejecutivos) | $50M-$120M Ecuador | Media — ajustado por PIB relativo | [SUPUESTO] |
 
-**Conclusion:** TAM de $89M es consistente cross-metodo pero asume mercado maduro. SAM de $14.9M (20% awareness) es mas accionable. SOM de $136K Y1 es conservador y alcanzable. [INFERENCIA]
+**Conclusion:** TAM de $89M es consistente cross-método pero asume mercado maduro. SAM de $14.9M (20% awareness) es mas accionable. SOM de $136K Y1 es conservador y alcanzable. [INFERENCIA]
 
 ---
 
@@ -197,10 +197,10 @@ Financiamiento externo seria unicamente acelerador, no requisito de supervivenci
 | SAM resultante | $7.5M | $14.9M | $26.3M |
 | SOM Y1 (1% penetracion SAM) | $75K | $136K | $263K |
 
-**Trade-off:** Ser agresivo en SOM requiere mas inversion en marketing (salir del $813/mes burn). Ser conservador ($136K) es autosuficiente desde M1. [INFERENCIA]
+**Trade-off:** Ser agresivo en SOM requiere mas inversión en marketing (salir del $813/mes burn). Ser conservador ($136K) es autosuficiente desde M1. [INFERENCIA]
 
 ---
 
 > **Innovation Mode**: Proyecciones indicativas. Datos de mercado basados en fuentes publicas y estimaciones propias. No constituye asesoria financiera.
 
-*Construido por profesionales, potenciado por la red agentica de MetodologIA.*
+*Construido por profesionales, potenciado por la red agéntica de MetodologIA.*

@@ -1,24 +1,24 @@
 # CAO Bootcamp — Chief Agentic Officer
 ## Propuesta Ejecutiva | Quito, Ecuador 2026
 
-**Version:** 2.1 | **Fecha:** 2 de abril de 2026 | **Confidencial**
+**Versión:** 2.1 | **Fecha:** 2 de abril de 2026 | **Confidencial**
 **Fuente:** content.json v2.0 | **Modo:** Innovation Mode (Type B)
 
 ---
 
 ## TL;DR
 
-Primer Bootcamp Ejecutivo Agentico de Latinoamerica. 20 horas para instalar un sistema de IA personal operativo: agente Pristino + 13 asistentes especializados + segundo cerebro digital. No es curso — es implementacion funcional que sigue operando sin MetodologIA. $1,490 USD (precio fundador). Garantia total antes de 4 horas. Cero competidores directos en Ecuador. [DOC: kyc-ecuador]
+Primer Bootcamp Ejecutivo Agéntico de Latinoamerica. 20 horas para instalar un sistema de IA personal operativo: agente Pristino + 13 asistentes especializados + segundo cerebro digital. No es curso — es implementacion funciónal que sigue operando sin MetodologIA. $1,490 USD (precio fundador). Garantia total antes de 4 horas. Cero competidores directos en Ecuador. [DOC: kyc-ecuador]
 
 ---
 
 ## 1. El Problema (y por que ahora)
 
-El 60% de la semana ejecutiva es operativa: correos, reportes, seguimiento, reuniones [INFERENCIA: promedio sector servicios LatAm]. La IA puede ejecutar esas tareas, pero herramientas aisladas se abandonan en 2-4 semanas por falta de integracion con el contexto real del directivo [INFERENCIA].
+El 60% de la semana ejecutiva es operativa: correos, reportes, seguimiento, reuniones [INFERENCIA: promedio sector servicios LatAm]. La IA puede ejecutar esas tareas, pero herramientas aisladas se abandonan en 2-4 semanas por falta de integración con el contexto real del directivo [INFERENCIA].
 
-**La brecha se duplica cada trimestre.** Directivos con sistema agentico recuperan 18h/semana [SUPUESTO: basado en campo, no medicion formal]. Los que no, compiten en desventaja creciente.
+**La brecha se duplica cada trimestre.** Directivos con sistema agéntico recuperan 18h/semana [SUPUESTO: basado en campo, no medicion formal]. Los que no, compiten en desventaja creciente.
 
-**Ventana de oportunidad Ecuador:** Adopcion IA en fase temprana, 0 competidores directos con entregable agentico funcional. Primer operador define reglas. [DOC: kyc-ecuador]
+**Ventana de oportunidad Ecuador:** Adopcion IA en fase temprana, 0 competidores directos con entregable agéntico funciónal. Primer operador define reglas. [DOC: kyc-ecuador]
 
 ---
 
@@ -27,13 +27,13 @@ El 60% de la semana ejecutiva es operativa: correos, reportes, seguimiento, reun
 | # | Entregable | Que es | Criterio de "listo" |
 |---|-----------|--------|---------------------|
 | 1 | **1 agente propio** | Pristino (Open Source, de Javier Montano). En el taller lo instala basico; en el Bootcamp le da todo su contexto | El agente ejecuta 3+ tareas reales del directivo sin intervencion |
-| 2 | **13 asistentes especializados** | Flujos de trabajo desde dia 1. Comunicacion, analisis, agenda, decisiones, reportes | Cada asistente resuelve al menos 1 tarea del contexto real |
-| 3 | **1 Playbook** | "Como Dirigir en la Era de la IA" — guia practica sin depender de tecnicos | Directivo articula su estrategia IA sin ayuda externa |
-| 4 | **2 bibliotecas de prompts** | Universal (cualquier profesional) + Ejecutiva (estrategia, decision, delegacion) | Directivo genera outputs de calidad en 3+ areas usando prompts |
-| 5 | **1 segundo cerebro** | NotebookLM como memoria externa 24/7 | Recupera informacion clave en <30 segundos |
-| 6 | **9 sesiones** | 2h cada una con facilitador. Co-creacion con contexto real | Entregable funcional por sesion |
-| 7 | **1 Campus Virtual** | Recursos, actualizaciones, comunidad (1 mes incluido) | Acceso verificado y primer recurso consumido |
-| 8 | **Comunidad** | Domingo/mes: workshops de actualizacion. Sabado/mes: clinicas IA en vivo | Asistio a 1+ sesion en primer mes |
+| 2 | **13 asistentes especializados** | Flujos de trabajo desde dia 1. Comúnicacion, analisis, agenda, decisiones, reportes | Cada asistente resuelve al menos 1 tarea del contexto real |
+| 3 | **1 Playbook** | "Como Dirigir en la Era de la IA" — guia práctica sin depender de técnicos | Directivo articula su estrategia IA sin ayuda externa |
+| 4 | **2 bibliotecas de prompts** | Universal (cualquier profesional) + Ejecutiva (estrategia, decisión, delegación) | Directivo genera outputs de calidad en 3+ areas usando prompts |
+| 5 | **1 segundo cerebro** | NotebookLM como memoria externa 24/7 | Recupera información clave en <30 segundos |
+| 6 | **9 sesiones** | 2h cada una con facilitador. Co-creación con contexto real | Entregable funciónal por sesión |
+| 7 | **1 Campus Virtual** | Recursos, actualizaciónes, comunidad (1 mes incluido) | Acceso verificado y primer recurso consumido |
+| 8 | **Comunidad** | Domingo/mes: workshops de actualización. Sabado/mes: clinicas IA en vivo | Asistio a 1+ sesión en primer mes |
 | 9 | **Masterclass** | "IA: que esta pasando" (lunes 6 abril, 7PM, 2h). Opcional | Asistio o reviso grabacion |
 
 **Ruta:** 5h sin riesgo ni costo → 20h de contenido de elite (CAO) → 16 semanas de (R)Evolucion Digital (Empoderamiento con equipo).
@@ -42,8 +42,8 @@ El 60% de la semana ejecutiva es operativa: correos, reportes, seguimiento, reun
 
 - No resuelve problemas de estrategia de negocio, hiring o product-market fit
 - No reemplaza consultoria especializada (legal, fiscal, financiera)
-- No funciona si el directivo no dedica 2h/semana durante el bootcamp [SUPUESTO]
-- No garantiza resultados — depende de consistencia de adopcion
+- No funcióna si el directivo no dedica 2h/semana durante el bootcamp [SUPUESTO]
+- No garantiza resultados — depende de consistencia de adopción
 
 ---
 
@@ -56,7 +56,7 @@ El 60% de la semana ejecutiva es operativa: correos, reportes, seguimiento, reun
 | CAO Creyentes | Bootcamp early access | $1,490 | 5 de 13 directivos seleccionados | Abril (Javier facilita) |
 | CAO Abierto | Bootcamp convocatoria | $1,990 | Directivos C-level | Mayo (8 preferentes + 2 publicas) |
 | Empoderamiento | Programa equipos | $1,490/persona | Managers 7+ años experiencia | Mayo (ciclos cada 3 meses) |
-| Academico | Calendario regular | $1,990 | Abierto | Julio (cada 2 meses) |
+| Académico | Calendario regular | $1,990 | Abierto | Julio (cada 2 meses) |
 | Asistentes | A medida | $347/unidad | Cualquiera | Bajo demanda |
 
 **Modalidades CAO:** Solo (maxima personalizacion) | Dupla (ideal socios/cofundadores) | Terna (equipo directivo). Mismo precio. Trade-off: Solo = profundidad maxima; Terna = dinamica de equipo pero menos tiempo individual. [INFERENCIA]
@@ -82,8 +82,8 @@ El 60% de la semana ejecutiva es operativa: correos, reportes, seguimiento, reun
 | | IDE | USFQ | Big 4 | **MetodologIA** |
 |---|---|---|---|---|
 | **Precio** | $5K-$15K | $3K-$8K | $10K+ | **$1,490-$1,990** |
-| **Duracion** | 6-18 meses | 3-6 meses | 1-5 dias | **4-10 semanas** |
-| **Entrega** | Diploma | Certificado | Recomendaciones | **Sistema funcional** |
+| **Duración** | 6-18 meses | 3-6 meses | 1-5 dias | **4-10 semanas** |
+| **Entrega** | Diploma | Certificado | Recomendaciones | **Sistema funciónal** |
 | **Post-programa** | Alumni | Limitado | Contrato | **Comunidad + campus** |
 | **IA aplicada** | Modulos teoricos | Teorica | Generica | **Agente personal operando** |
 
@@ -95,7 +95,7 @@ El 60% de la semana ejecutiva es operativa: correos, reportes, seguimiento, reun
 
 | Socio | % | Rol |
 |-------|---|-----|
-| Javier Montano | 51% | Fundador. Metodo, IP, 27 GPTs, Pristino, 180+ prompts |
+| Javier Montano | 51% | Fundador. Método, IP, 27 GPTs, Pristino, 180+ prompts |
 | German | 19% | Cofundador. Aceleradores, red |
 | Daniel | 13% | Cofundador. Aceleradores, fundadores |
 | Katherin Oquendo | 10% | Cofundadora. Operaciones, estrategia |
@@ -105,8 +105,8 @@ El 60% de la semana ejecutiva es operativa: correos, reportes, seguimiento, reun
 
 ## 7. Condiciones clave
 
-- **Garantia:** 100% devolucion antes de completar 4h (con 1h de feedback estructurado)
-- **No-show:** 1ra justificada $0, siguientes $100/sesion
+- **Garantia:** 100% devolución antes de completar 4h (con 1h de feedback estructurado)
+- **No-show:** 1ra justificada $0, siguientes $100/sesión
 - **Formato:** 100% online. Presencial como add-on si el cliente lo solicita
 - **Licencias IA NO incluidas:** $20-60 USD/mes (responsabilidad del participante)
 - **Embajadores:** Graduados CAO pueden certificarse. 50% descuento sobre precio regular
@@ -124,21 +124,21 @@ El 60% de la semana ejecutiva es operativa: correos, reportes, seguimiento, reun
 
 ---
 
-## 9. Riesgos y mitigaciones
+## 9. Riesgos y mitigaciónes
 
 | Riesgo | Prob | Impacto | Mitigacion |
 |--------|------|---------|-----------|
 | Directivo no dedica 2h/semana | Media | Alto | Formato flexible, sesiones grabadas |
 | Conectividad en sesiones online | Baja | Medio | Verificar pre-bootcamp, grabacion backup |
-| Herramientas de IA cambian rapido | Alta | Bajo | Comunidad mensual + actualizaciones campus |
-| Equipo del directivo resiste adopcion | Media | Medio | Empoderamiento como programa separado |
-| Expectativas de ROI no se cumplen | Baja | Alto | Garantia 4h, ROI marcado como proyeccion |
+| Herramientas de IA cambian rapido | Alta | Bajo | Comunidad mensual + actualizaciónes campus |
+| Equipo del directivo resiste adopción | Media | Medio | Empoderamiento como programa separado |
+| Expectativas de ROI no se cumplen | Baja | Alto | Garantia 4h, ROI marcado como proyección |
 
 ---
 
 *Esta es una propuesta de diseno de servicio personalizado. Los precios indicados son indicativos y se confirman antes de la firma del acuerdo. Este documento no constituye un compromiso de entrega ni un contrato.*
 
-*Construido por profesionales, potenciado por la red agentica de MetodologIA.*
+*Construido por profesionales, potenciado por la red agéntica de MetodologIA.*
 
 ---
 **Derivado de:** content.json v2.0 (2026-04-02). Precios verificados: si. Evidence tags: [DOC] [INFERENCIA] [SUPUESTO].

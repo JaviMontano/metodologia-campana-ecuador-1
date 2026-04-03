@@ -1,7 +1,7 @@
 # CAO Bootcamp — Chief Agentic Officer
 ## Detailed Dossier | Quito, Ecuador 2026
 
-**Version:** 2.1 | **Date:** April 2, 2026 | **Confidential**
+**Versión:** 2.1 | **Date:** April 2, 2026 | **Confidential**
 **Source:** content.json v2.0 | **Mode:** Innovation Mode (Type B)
 
 ---
@@ -32,16 +32,16 @@ First Executive Agentic Bootcamp in Latin America. 20 hours to install a working
 
 ## 2. The Solution: Personal Agentic System
 
-The CAO Bootcamp gives you an **agent that becomes your best ally**. In the workshop, Javier shows how he operates with Pristino and you learn to install its basic version. Full potential: self-study or hand-in-hand with us in the Bootcamp. [DOC: content.json]
+The CAO Bootcamp gives you an **agent that becomes your best ally**. In the workshop, Javier shows how he operates with Pristino and you learn to install its basic versión. Full potential: self-study or hand-in-hand with us in the Bootcamp. [DOC: content.json]
 
 ### 9 Deliverables (no fine print)
 
 | # | Deliverable | What it is | "Done" criteria |
 |---|-----------|-----------|-----------------|
 | 1 | **1 personal agent** | Pristino (Open Source, by Javier Montano). Basic in workshop, full in Bootcamp | Executes 3+ real tasks without intervention |
-| 2 | **13 specialized assistants** | Workflows from day 1. Communication, analysis, scheduling, decisions, reports | Each solves 1+ real-context task |
+| 2 | **13 specialized assistants** | Workflows from day 1. Commúnication, analysis, scheduling, decisións, reports | Each solves 1+ real-context task |
 | 3 | **1 Playbook** | "How to Lead in the AI Era" — no technicians needed | Executive articulates AI strategy independently |
-| 4 | **2 prompt libraries** | Universal + Executive (strategy, decisions, delegation, reports) | Quality outputs in 3+ areas |
+| 4 | **2 prompt libraries** | Universal + Executive (strategy, decisións, delegation, reports) | Quality outputs in 3+ areas |
 | 5 | **1 second brain** | NotebookLM as 24/7 external memory | Retrieves key info in <30 seconds |
 | 6 | **9 sessions** | 2h each with facilitator. Co-creation with real context | Functional deliverable per session |
 | 7 | **1 Virtual Campus** | Resources, updates, community (1 month included) | Verified access, first resource consumed |
@@ -70,7 +70,7 @@ The CAO Bootcamp gives you an **agent that becomes your best ally**. In the work
 
 **Path:** 5h risk-free at no cost → 20h elite content → 16 weeks of Digital (R)Evolution with your team.
 
-### Solo / Duo / Trio Decision Framework
+### Solo / Duo / Trio Decisión Framework
 
 | Criteria | Solo (1:1) | Duo (2) | Trio (3) |
 |----------|-----------|---------|----------|
@@ -107,7 +107,7 @@ The CAO Bootcamp gives you an **agent that becomes your best ally**. In the work
 ### Phase 1 — Foundations (Sessions 1-3)
 | # | Case | Verifiable result |
 |---|------|-------------------|
-| 1 | Email and executive communication | AI-drafted and prioritized emails. Inbox time: -40% |
+| 1 | Email and executive commúnication | AI-drafted and prioritized emails. Inbox time: -40% |
 | 2 | Reports and analysis | Automated reports from raw data. No manual intervention |
 | 3 | Scheduling and priorities | Optimized calendar, conflicts auto-resolved |
 
@@ -115,7 +115,7 @@ The CAO Bootcamp gives you an **agent that becomes your best ally**. In the work
 | # | Case | Verifiable result |
 |---|------|-------------------|
 | 4 | Digital second brain | Searchable knowledge base in <30s |
-| 5 | Strategic decisions | Automated multi-scenario analysis |
+| 5 | Strategic decisións | Automated multi-scenario analysis |
 | 6 | Workflow automation | Workflows executed without human intervention |
 
 ### Phase 3 — Mastery (Sessions 7-9)
@@ -196,7 +196,7 @@ The CAO Bootcamp gives you an **agent that becomes your best ally**. In the work
 
 CAO graduates can certify as Ambassadors. Benefit: 50% discount on regular price. They act as enablers — transfer discount to their group (trio). [DOC]
 
-**Flywheel:** 33 Y1 graduates → 15-20 active ambassadors → 2-3 referrals each → 40% conversion → 12+ additional closes Y2 [INFERENCE]
+**Flywheel:** 33 Y1 graduates → 15-20 active ambassadors → 2-3 referrals each → 40% conversión → 12+ additional closes Y2 [INFERENCE]
 
 ---
 

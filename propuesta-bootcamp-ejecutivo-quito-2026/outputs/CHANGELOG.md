@@ -31,7 +31,7 @@ Upgrade completo del ecosistema documental. 29+ archivos generados desde un Sing
 |------|------|
 | Abril = Taller + CAO | Abril = Taller (martes 7 de abril) + CAO Creyentes (early access, 5 de 13) |
 | Mayo = Empoderamiento | Mayo = CAO abierto ($1,990) + Empoderamiento |
-| Julio = Calendario Academico | Julio = Calendario Academico (cada 2 meses) |
+| Julio = Calendario Académico | Julio = Calendario Académico (cada 2 meses) |
 
 ### Audiencia Empoderamiento
 - **v1.1**: "gerentes y mandos medios"
@@ -111,7 +111,7 @@ Upgrade completo del ecosistema documental. 29+ archivos generados desde un Sing
 | DOCX sin paginacion | DOCX con header/footer + page numbers |
 | Sin XLSX | XLSX con 2 archivos, 8 sheets, brand tokens |
 | PPTX 8 slides | PPTX 12 slides + competencia + flywheel |
-| Sin SSOT | content.json como fuente unica |
+| Sin SSOT | content.json como fuente única |
 
 ---
 
@@ -128,4 +128,4 @@ Upgrade completo del ecosistema documental. 29+ archivos generados desde un Sing
 
 ---
 
-*Construido por profesionales, potenciado por la red agentica de MetodologIA.*
+*Construido por profesionales, potenciado por la red agéntica de MetodologIA.*

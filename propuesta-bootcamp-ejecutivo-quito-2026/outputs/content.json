@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "2.0",
+    "versión": "2.0",
     "date": "2026-04-01",
     "project": "Bootcamp Ejecutivo Quito 2026",
     "brand_mode": "own",
@@ -22,11 +22,11 @@
       "duration_hours": 3,
       "duration_weeks": null,
       "deliverables": [
-        { "es": "Agente funcional con contexto real (operativo para tareas basicas desde el dia 1)", "en": "Functional agent with real context (operational for basic tasks from day 1)" }
+        { "es": "Agente funciónal con contexto real (operativo para tareas basicas desde el dia 1)", "en": "Functional agent with real context (operational for basic tasks from day 1)" }
       ],
       "experience": {
-        "es": "En el taller, Javier muestra como opera con Pristino configurado y totalmente funcional con su contexto real. Usted ve el potencial. Luego, aprende a instalar y usar Pristino en su version basica. Sacarle todo el potencial es posible auto-estudiando, o yendo de la mano de nosotros en el Bootcamp: le damos todo su contexto, lo conectamos a su ecosistema y lo volvemos su mejor aliado. Aprende las best practices del Directivo en la Era de la IA. Y si quiere ir mas a fondo: empodere a su equipo o profundice usted mismo.",
-        "en": "In the workshop, Javier shows how he operates with Pristino fully configured with his real context. You see the potential. Then, you learn to install and use Pristino in its basic version. Unlocking its full potential is possible self-studying, or going hand-in-hand with us in the Bootcamp: we give it your full context, connect it to your ecosystem and turn it into your best ally. Learn the best practices for Leading in the AI Era. Want to go deeper? Empower your team or deepen your own mastery."
+        "es": "En el taller, Javier muestra como opera con Pristino configurado y totalmente funciónal con su contexto real. Usted ve el potencial. Luego, aprende a instalar y usar Pristino en su versión basica. Sacarle todo el potencial es posible auto-estudiando, o yendo de la mano de nosotros en el Bootcamp: le damos todo su contexto, lo conectamos a su ecosistema y lo volvemos su mejor aliado. Aprende las best practices del Directivo en la Era de la IA. Y si quiere ir mas a fondo: empodere a su equipo o profundice usted mismo.",
+        "en": "In the workshop, Javier shows how he operates with Pristino fully configured with his real context. You see the potential. Then, you learn to install and use Pristino in its basic versión. Unlocking its full potential is possible self-studying, or going hand-in-hand with us in the Bootcamp: we give it your full context, connect it to your ecosystem and turn it into your best ally. Learn the best practices for Leading in the AI Era. Want to go deeper? Empower your team or deepen your own mastery."
       },
       "cta_label": { "es": "Reservar Plaza Gratis", "en": "Reserve Free Spot" }
     },
@@ -50,21 +50,21 @@
         { "slug": "terna", "name": { "es": "Terna", "en": "Trio" }, "people": 3, "description": { "es": "3 ejecutivos, mismo precio", "en": "3 executives, same price" } }
       ],
       "deliverables": [
-        { "es": "1 agente propio (Instalamos a Pristino, agente Open Source de Javier Montano. En el taller aprende a usarlo en su version basica. Sacarle todo el potencial: auto-estudio o de la mano de nosotros en el Bootcamp. Suyo para siempre, auditable)", "en": "1 personal agent (We install Pristino, Javier Montano's Open Source agent. In the workshop you learn to use its basic version. Unlock its full potential: self-study or hand-in-hand with us in the Bootcamp. Yours forever, auditable)" },
-        { "es": "13 asistentes IA especializados (Listos para usar en flujos de trabajo desde el dia 1. Cada uno cubre una funcion ejecutiva: comunicacion, analisis, agenda, decisiones, reportes. Durante el bootcamp aprende a usarlos mejor que el publico)", "en": "13 specialized AI assistants (Ready to use in workflows from day 1. Each one covers an executive function: communication, analysis, scheduling, decisions, reports. During the bootcamp you learn to use them better than the public)" },
-        { "es": "1 Playbook de Introduccion a como Dirigir en la Era de la IA (Guia practica para directivos que quieren liderar con IA sin depender de tecnicos)", "en": "1 Introduction Playbook: How to Lead in the AI Era (Practical guide for executives who want to lead with AI without depending on technicians)" },
-        { "es": "2 bibliotecas de prompts (Biblioteca Universal para cualquier profesional + Biblioteca Ejecutiva con prompts de estrategia, decision, delegacion y comunicacion directiva)", "en": "2 prompt libraries (Universal Library for any professional + Executive Library with strategy, decision-making, delegation and executive communication prompts)" },
+        { "es": "1 agente propio (Instalamos a Pristino, agente Open Source de Javier Montano. En el taller aprende a usarlo en su versión basica. Sacarle todo el potencial: auto-estudio o de la mano de nosotros en el Bootcamp. Suyo para siempre, auditable)", "en": "1 personal agent (We install Pristino, Javier Montano's Open Source agent. In the workshop you learn to use its basic versión. Unlock its full potential: self-study or hand-in-hand with us in the Bootcamp. Yours forever, auditable)" },
+        { "es": "13 asistentes IA especializados (Listos para usar en flujos de trabajo desde el dia 1. Cada uno cubre una función ejecutiva: comúnicación, analisis, agenda, decisiones, reportes. Durante el bootcamp aprende a usarlos mejor que el publico)", "en": "13 specialized AI assistants (Ready to use in workflows from day 1. Each one covers an executive function: commúnication, analysis, scheduling, decisións, reports. During the bootcamp you learn to use them better than the public)" },
+        { "es": "1 Playbook de Introduccion a como Dirigir en la Era de la IA (Guia práctica para directivos que quieren liderar con IA sin depender de técnicos)", "en": "1 Introduction Playbook: How to Lead in the AI Era (Practical guide for executives who want to lead with AI without depending on technicians)" },
+        { "es": "2 bibliotecas de prompts (Biblioteca Universal para cualquier profesional + Biblioteca Ejecutiva con prompts de estrategia, decisión, delegación y comúnicación directiva)", "en": "2 prompt libraries (Universal Library for any professional + Executive Library with strategy, decisión-making, delegation and executive commúnication prompts)" },
         { "es": "1 segundo cerebro digital (Instalamos NotebookLM como su memoria externa: organiza documentos, conecta ideas, recupera conocimiento. Disponible 24/7)", "en": "1 digital second brain (We install NotebookLM as your external memory: organizes documents, connects ideas, retrieves knowledge. Available 24/7)" },
-        { "es": "9 sesiones de co-creacion (2 horas cada una con facilitador. No es clase magistral: construimos juntos, con su contexto laboral real)", "en": "9 co-creation sessions (2 hours each with facilitator. Not a lecture: we build together, with your real work context)" },
-        { "es": "1 acceso al Campus Virtual MetodologIA (Plataforma con recursos, actualizaciones y comunidad. 1 mes incluido, renovacion opcional)", "en": "1 access to MetodologIA Virtual Campus (Platform with resources, updates and community. 1 month included, optional renewal)" },
-        { "es": "Acceso a sesiones de comunidad (1 domingo al mes: workshops de actualizacion. 1 sabado al mes: clinicas de IA en vivo para resolver enredos del dia a dia)", "en": "Access to community sessions (1 Sunday/month: update workshops. 1 Saturday/month: live AI clinics to solve day-to-day tangles)" },
+        { "es": "9 sesiones de co-creación (2 horas cada una con facilitador. No es clase magistral: construimos juntos, con su contexto laboral real)", "en": "9 co-creation sessions (2 hours each with facilitator. Not a lecture: we build together, with your real work context)" },
+        { "es": "1 acceso al Campus Virtual MetodologIA (Plataforma con recursos, actualizaciónes y comunidad. 1 mes incluido, renovacion opcional)", "en": "1 access to MetodologIA Virtual Campus (Platform with resources, updates and community. 1 month included, optional renewal)" },
+        { "es": "Acceso a sesiones de comunidad (1 domingo al mes: workshops de actualización. 1 sabado al mes: clinicas de IA en vivo para resolver enredos del dia a dia)", "en": "Access to community sessions (1 Sunday/month: update workshops. 1 Saturday/month: live AI clinics to solve day-to-day tangles)" },
         { "es": "Acceso opcional a Masterclass 'IA: que esta pasando y como sacarle provecho' (Lunes de Pascua, 6 abril, 7PM. 2 horas. Panorama actual de la IA para directivos)", "en": "Optional access to Masterclass 'AI: what is happening and how to take advantage' (Easter Monday, April 6, 7PM. 2 hours. Current AI landscape for executives)" }
       ],
       "cta_label": { "es": "Reservar Plaza Creyentes", "en": "Reserve Believers Spot" }
     },
     {
-      "slug": "cao-bootcamp-academico",
-      "name": { "es": "CAO Bootcamp - Calendario Academico", "en": "CAO Bootcamp - Academic Calendar" },
+      "slug": "cao-bootcamp-académico",
+      "name": { "es": "CAO Bootcamp - Calendario Académico", "en": "CAO Bootcamp - Academic Calendar" },
       "tagline": { "es": "Chief Agentic Officer - Convocatoria Abierta", "en": "Chief Agentic Officer - Open Enrollment" },
       "price_special": null,
       "price_regular": 1990,
@@ -94,7 +94,7 @@
       "duration_hours": null,
       "duration_weeks": "16",
       "deliverables": [
-        { "es": "Sistema agentico de equipo", "en": "Team agentic system" },
+        { "es": "Sistema agéntico de equipo", "en": "Team agentic system" },
         { "es": "Workflows automatizados", "en": "Automated workflows" },
         { "es": "Networking cross-industry", "en": "Cross-industry networking" }
       ],
@@ -118,7 +118,7 @@
     {
       "date": "2026-04-06",
       "event": { "es": "Masterclass: IA, que esta pasando y como sacarle provecho", "en": "Masterclass: AI, what is happening and how to take advantage" },
-      "description": { "es": "Lunes de Pascua, 6 de abril, 7:00 PM. Acceso opcional. Panorama actual de la IA y como un directivo puede sacarle provecho sin depender de tecnicos.", "en": "Easter Monday, April 6, 7:00 PM. Optional access. Current AI landscape and how an executive can take advantage without depending on technicians." },
+      "description": { "es": "Lunes de Pascua, 6 de abril, 7:00 PM. Acceso opcional. Panorama actual de la IA y como un directivo puede sacarle provecho sin depender de técnicos.", "en": "Easter Monday, April 6, 7:00 PM. Optional access. Current AI landscape and how an executive can take advantage without depending on technicians." },
       "audience": { "es": "Directivos + managers", "en": "Executives + managers" },
       "product_ref": "masterclass",
       "status": "confirmed",
@@ -127,7 +127,7 @@
     {
       "date": "2026-04-07",
       "event": { "es": "Taller De Ocupado a Productivo", "en": "From Busy to Productive Workshop" },
-      "description": { "es": "Martes 7 de abril, 7:00 PM. 3 horas. Construimos un agente con retos de su contexto laboral real. 13 plazas. Gratis. Tambien disponible sabado: 9:00-12:00 o 14:00-17:00.", "en": "Tuesday April 7, 7:00 PM. 3 hours. We build an agent with real work context challenges. 13 spots. Free. Also available Saturday: 9AM-12PM or 2PM-5PM." },
+      "description": { "es": "Martes 7 de abril, 7:00 PM. 3 horas. Construimos un agente con retos de su contexto laboral real. 13 plazas. Gratis. También disponible sabado: 9:00-12:00 o 14:00-17:00.", "en": "Tuesday April 7, 7:00 PM. 3 hours. We build an agent with real work context challenges. 13 spots. Free. Also available Saturday: 9AM-12PM or 2PM-5PM." },
       "audience": { "es": "Directivos + managers", "en": "Executives + managers" },
       "product_ref": "taller-doap",
       "status": "confirmed"
@@ -143,25 +143,25 @@
     {
       "date": "2026-05",
       "event": { "es": "CAO Convocatoria Abierta", "en": "CAO Open Enrollment" },
-      "description": { "es": "Primer ciclo del Calendario Academico. Abierto a directivos. $1,990 USD.", "en": "First Academic Calendar cycle. Open to executives. $1,990 USD." },
+      "description": { "es": "Primer ciclo del Calendario Académico. Abierto a directivos. $1,990 USD.", "en": "First Academic Calendar cycle. Open to executives. $1,990 USD." },
       "audience": { "es": "Directivos C-level", "en": "C-level executives" },
-      "product_ref": "cao-bootcamp-academico",
+      "product_ref": "cao-bootcamp-académico",
       "status": "planned"
     },
     {
       "date": "2026-05",
       "event": { "es": "Programa de Empoderamiento", "en": "Empowerment Program" },
-      "description": { "es": "Version Creyentes para equipos tacticos. Managers con 7+ años de experiencia. $1,490 USD.", "en": "Believers Edition for tactical teams. Managers with 7+ years experience. $1,490 USD." },
+      "description": { "es": "Versión Creyentes para equipos tacticos. Managers con 7+ años de experiencia. $1,490 USD.", "en": "Believers Edition for tactical teams. Managers with 7+ years experience. $1,490 USD." },
       "audience": { "es": "Managers y profesionales con experiencia", "en": "Managers and experienced professionals" },
       "product_ref": "empoderamiento",
       "status": "planned"
     },
     {
       "date": "2026-07",
-      "event": { "es": "Calendario Academico CAO - Ciclo Regular", "en": "CAO Academic Calendar - Regular Cycle" },
+      "event": { "es": "Calendario Académico CAO - Ciclo Regular", "en": "CAO Academic Calendar - Regular Cycle" },
       "description": { "es": "Cada 2 meses. Cristian + Embajadores certificados facilitan. $1,990 USD.", "en": "Every 2 months. Cristian + Certified Ambassadors facilitate. $1,990 USD." },
       "audience": { "es": "Directivos (abierto)", "en": "Executives (open)" },
-      "product_ref": "cao-bootcamp-academico",
+      "product_ref": "cao-bootcamp-académico",
       "status": "planned"
     }
   ],
@@ -173,10 +173,10 @@
       "entity": "MetodologIA",
       "contact": null,
       "bio": {
-        "es": "Creador del metodo. 27 asistentes GPT, 7 Gemini Gems, agente Pristino, 180+ prompts sistematizados.",
+        "es": "Creador del método. 27 asistentes GPT, 7 Gemini Gems, agente Pristino, 180+ prompts sistematizados.",
         "en": "Method creator. 27 GPT assistants, 7 Gemini Gems, Pristino agent, 180+ systematized prompts."
       },
-      "responsibilities": { "es": "Metodo, marca, red agentica, facilitador primer CAO", "en": "Method, brand, agentic network, first CAO facilitator" }
+      "responsibilities": { "es": "Método, marca, red agéntica, facilitador primer CAO", "en": "Method, brand, agentic network, first CAO facilitator" }
     },
     {
       "name": "Katherin Oquendo",
@@ -213,11 +213,11 @@
       "contact": "contacto@metodologia.info",
       "entry_fee": 2900,
       "entry_fee_mechanism": {
-        "es": "Entry fee inicial de $2,900. Al valorar la empresa de comun acuerdo, se ira calculando el valor de aporte necesario para asegurar que la proporcion accionaria (7%) se mantiene conforme la empresa crece. Mecanismo: reinversion parcial (50%) de comisiones + aportes calculados post-valoracion. El equity acumulado incluye: activos digitales, IP, servicios validados, asistentes y agentes funcionando.",
+        "es": "Entry fee inicial de $2,900. Al valorar la empresa de comun acuerdo, se ira calculando el valor de aporte necesario para asegurar que la proporción accionaria (7%) se mantiene conforme la empresa crece. Mecanismo: reinversión parcial (50%) de comisiones + aportes calculados post-valoración. El equity acumulado incluye: activos digitales, IP, servicios validados, asistentes y agentes funciónando.",
         "en": "Initial entry fee of $2,900. As the company is jointly valued, the required contribution will be calculated to ensure the equity share (7%) is maintained as the company grows. Mechanism: partial reinvestment (50%) of commissions + contributions calculated post-valuation. Accumulated equity includes: digital assets, IP, validated services, working assistants and agents."
       },
       "commitment": {
-        "es": "Vivir el proceso de directivo IA + recomendacion de hacer el programa de Empoderamiento con Javier.",
+        "es": "Vivir el proceso de directivo IA + recomendación de hacer el programa de Empoderamiento con Javier.",
         "en": "Live the AI executive process + recommendation to do the Empowerment program with Javier."
       },
       "bio": {
@@ -299,17 +299,17 @@
   "objections": [
     {
       "question": { "es": "No tengo tiempo", "en": "I don't have time" },
-      "answer": { "es": "El sistema trabaja 24/7 despues de instalarse. 2h/semana de inversion durante el bootcamp. 18h/semana de valor recurrente despues.", "en": "The system works 24/7 after installation. 2h/week investment during bootcamp. 18h/week of recurring value after." },
+      "answer": { "es": "El sistema trabaja 24/7 despues de instalarse. 2h/semana de inversión durante el bootcamp. 18h/semana de valor recurrente despues.", "en": "The system works 24/7 after installation. 2h/week investment during bootcamp. 18h/week of recurring value after." },
       "icon": "clock"
     },
     {
-      "question": { "es": "Ya probe herramientas de IA y no funcionaron", "en": "I already tried AI tools and they didn't work" },
+      "question": { "es": "Ya probe herramientas de IA y no funciónaron", "en": "I already tried AI tools and they didn't work" },
       "answer": { "es": "La mayoria de ejecutivos prueban herramientas aisladas. El CAO Bootcamp instala un sistema integrado: 13 asistentes + 1 agente + 1 segundo cerebro trabajando coordinados con su contexto real.", "en": "Most executives try isolated tools. The CAO Bootcamp installs an integrated system: 13 assistants + 1 agent + 1 second brain working coordinated with your real context." },
       "icon": "refresh-cw"
     },
     {
-      "question": { "es": "No soy tecnico", "en": "I'm not technical" },
-      "answer": { "es": "El bootcamp no requiere conocimiento tecnico. Usamos lenguaje natural y herramientas con interfaz visual. Si sabe usar Gmail, puede usar Pristino.", "en": "The bootcamp requires no technical knowledge. We use natural language and visual interface tools. If you can use Gmail, you can use Pristino." },
+      "question": { "es": "No soy técnico", "en": "I'm not technical" },
+      "answer": { "es": "El bootcamp no requiere conocimiento técnico. Usamos lenguaje natural y herramientas con interfaz visual. Si sabe usar Gmail, puede usar Pristino.", "en": "The bootcamp requires no technical knowledge. We use natural language and visual interface tools. If you can use Gmail, you can use Pristino." },
       "icon": "shield"
     },
     {
@@ -318,7 +318,7 @@
       "icon": "dollar-sign"
     },
     {
-      "question": { "es": "Mi equipo tambien necesita aprender IA", "en": "My team also needs to learn AI" },
+      "question": { "es": "Mi equipo también necesita aprender IA", "en": "My team also needs to learn AI" },
       "answer": { "es": "El Programa de Empoderamiento esta disenado exactamente para eso. Puerta cerrada (in-company) o convocatoria abierta. Ciclos cada 3 meses desde mayo.", "en": "The Empowerment Program is designed exactly for that. Closed door (in-company) or open enrollment. Cycles every 3 months from May." },
       "icon": "users"
     }
@@ -328,7 +328,7 @@
       "name": { "es": "Fundamentos", "en": "Foundations" },
       "sessions": "1-3",
       "cases": [
-        { "es": "Email inteligente y comunicacion ejecutiva", "en": "Smart email and executive communication" },
+        { "es": "Email inteligente y comúnicación ejecutiva", "en": "Smart email and executive commúnication" },
         { "es": "Reportes y analisis con IA", "en": "Reports and analysis with AI" },
         { "es": "Agenda y prioridades automatizadas", "en": "Automated agenda and priorities" }
       ]
@@ -338,7 +338,7 @@
       "sessions": "4-6",
       "cases": [
         { "es": "Segundo cerebro digital", "en": "Digital second brain" },
-        { "es": "Asistentes para decisiones estrategicas", "en": "Strategic decision assistants" },
+        { "es": "Asistentes para decisiones estrategicas", "en": "Strategic decisión assistants" },
         { "es": "Automatizacion de flujos repetitivos", "en": "Repetitive workflow automation" }
       ]
     },
@@ -346,7 +346,7 @@
       "name": { "es": "Maestria", "en": "Mastery" },
       "sessions": "7-9",
       "cases": [
-        { "es": "Sistema agentico completo", "en": "Complete agentic system" },
+        { "es": "Sistema agéntico completo", "en": "Complete agentic system" },
         { "es": "Delegacion efectiva a IA", "en": "Effective delegation to AI" },
         { "es": "Plan de sostenibilidad post-bootcamp", "en": "Post-bootcamp sustainability plan" }
       ]
@@ -364,20 +364,20 @@
     "assistants": {
       "count": 13,
       "headline": {
-        "es": "13 asistentes IA especializados — Listos para usar en flujos de trabajo desde el dia 1. Cada uno cubre una funcion ejecutiva: comunicacion, analisis, agenda, decisiones, reportes. Especializados (por funcion), no personalizados (por individuo). Durante el bootcamp aprende a usarlos mejor que el publico.",
-        "en": "13 specialized AI assistants — Ready to use in workflows from day 1. Each covers an executive function: communication, analysis, scheduling, decisions, reports. Specialized (by function), not personalized (by individual). During the bootcamp you learn to use them better than the public."
+        "es": "13 asistentes IA especializados — Listos para usar en flujos de trabajo desde el dia 1. Cada uno cubre una función ejecutiva: comúnicación, analisis, agenda, decisiones, reportes. Especializados (por función), no personalizados (por individuo). Durante el bootcamp aprende a usarlos mejor que el publico.",
+        "en": "13 specialized AI assistants — Ready to use in workflows from day 1. Each covers an executive function: commúnication, analysis, scheduling, decisións, reports. Specialized (by function), not personalized (by individual). During the bootcamp you learn to use them better than the public."
       }
     },
     "playbook": {
       "headline": {
-        "es": "1 Playbook de Introduccion a como Dirigir en la Era de la IA — Guia practica para directivos que quieren liderar con IA sin depender de tecnicos.",
+        "es": "1 Playbook de Introduccion a como Dirigir en la Era de la IA — Guia práctica para directivos que quieren liderar con IA sin depender de técnicos.",
         "en": "1 Introduction Playbook: How to Lead in the AI Era — Practical guide for executives who want to lead with AI without depending on technicians."
       }
     },
     "prompt_libraries": {
       "headline": {
-        "es": "2 bibliotecas de prompts — Biblioteca Universal (cualquier profesional, dia 1) + Biblioteca Ejecutiva (estrategia, decision, delegacion, comunicacion directiva, reportes).",
-        "en": "2 prompt libraries — Universal Library (any professional, day 1) + Executive Library (strategy, decision-making, delegation, executive communication, reports)."
+        "es": "2 bibliotecas de prompts — Biblioteca Universal (cualquier profesional, dia 1) + Biblioteca Ejecutiva (estrategia, decisión, delegación, comúnicación directiva, reportes).",
+        "en": "2 prompt libraries — Universal Library (any professional, day 1) + Executive Library (strategy, decisión-making, delegation, executive commúnication, reports)."
       }
     },
     "second_brain": {
@@ -416,16 +416,16 @@
       "en": "This is a customized service design proposal. The indicated prices are indicative and are confirmed before signing the service agreement. This document does not constitute a delivery commitment or a contract."
     },
     "guarantee": {
-      "es": "100% de devolucion si solicitas el reembolso antes de completar la primera sesion de 4h, con una sesion de retroalimentacion estructurada de 1h.",
+      "es": "100% de devolución si solicitas el reembolso antes de completar la primera sesión de 4h, con una sesión de retroalimentacion estructurada de 1h.",
       "en": "100% refund if requested before completing the first 4-hour session, with a 1-hour structured feedback session."
     },
     "licenses_not_included": {
-      "es": "Las licencias de IA (Google One AI Premium, ChatGPT Plus, Claude Pro) NO estan incluidas en el precio del bootcamp. Inversion estimada: $20-60 USD/mes.",
+      "es": "Las licencias de IA (Google One AI Premium, ChatGPT Plus, Claude Pro) NO estan incluidas en el precio del bootcamp. Inversión estimada: $20-60 USD/mes.",
       "en": "AI licenses (Google One AI Premium, ChatGPT Plus, Claude Pro) are NOT included in the bootcamp price. Estimated investment: $20-60 USD/month."
     },
     "por_confirmar": [
-      { "id": "PC-PAYMENT", "item": { "es": "Metodo de pago exacto para Ecuador", "en": "Exact payment method for Ecuador" }, "responsible": "Cristian Jarrin" },
-      { "id": "PC-TAX", "item": { "es": "Estructura fiscal (retenciones, IVA)", "en": "Tax structure (withholdings, VAT)" }, "responsible": "Asesor fiscal Ecuador" },
+      { "id": "PC-PAYMENT", "item": { "es": "Método de pago exacto para Ecuador", "en": "Exact payment method for Ecuador" }, "responsible": "Cristian Jarrin" },
+      { "id": "PC-TAX", "item": { "es": "Estructura fiscal (retenciónes, IVA)", "en": "Tax structure (withholdings, VAT)" }, "responsible": "Asesor fiscal Ecuador" },
       { "id": "PC-WORKSHOP-DATE", "item": { "es": "CONFIRMADO: Martes 7 de abril, 7:00 PM", "en": "CONFIRMED: Tuesday April 7, 7:00 PM" }, "responsible": "Cristian Jarrin", "status": "resolved" }
     ]
   },
@@ -447,7 +447,7 @@
       "mono": "Courier New, monospace"
     },
     "tagline_footer": {
-      "es": "Construido por profesionales, potenciado por la red agentica de MetodologIA.",
+      "es": "Construido por profesionales, potenciado por la red agéntica de MetodologIA.",
       "en": "Built by professionals, powered by MetodologIA's agentic network."
     },
     "contact_email": "contacto@metodologia.info",
@@ -479,9 +479,9 @@
     }
   },
   "competition": [
-    { "name": "IDE Business School", "type": { "es": "MBA ejecutivo tradicional", "en": "Traditional executive MBA" }, "price_range": "$5,000-$15,000", "weakness": { "es": "Teorico, sin agente funcional al cierre", "en": "Theoretical, no functional agent at close" } },
-    { "name": "USFQ Executive Education", "type": { "es": "Modulos IA teoricos", "en": "Theoretical AI modules" }, "price_range": "$3,000-$8,000", "weakness": { "es": "Academico, sin implementacion practica", "en": "Academic, no practical implementation" } },
+    { "name": "IDE Business School", "type": { "es": "MBA ejecutivo tradicional", "en": "Traditional executive MBA" }, "price_range": "$5,000-$15,000", "weakness": { "es": "Teorico, sin agente funciónal al cierre", "en": "Theoretical, no functional agent at close" } },
+    { "name": "USFQ Executive Education", "type": { "es": "Modulos IA teoricos", "en": "Theoretical AI modules" }, "price_range": "$3,000-$8,000", "weakness": { "es": "Académico, sin implementacion práctica", "en": "Academic, no práctical implementation" } },
     { "name": "Big 4 (PwC, Deloitte, EY, KPMG)", "type": { "es": "Workshops corporativos", "en": "Corporate workshops" }, "price_range": "$10,000+", "weakness": { "es": "Costoso, generico, sin personalizacion", "en": "Expensive, generic, no personalization" } },
-    { "name": "MetodologIA", "type": { "es": "Bootcamp agentico ejecutivo", "en": "Executive agentic bootcamp" }, "price_range": "$1,490-$1,990", "strength": { "es": "Unico programa que entrega agente funcional + 13 asistentes + segundo cerebro al cierre", "en": "Only program delivering functional agent + 13 assistants + second brain at close" } }
+    { "name": "MetodologIA", "type": { "es": "Bootcamp agéntico ejecutivo", "en": "Executive agentic bootcamp" }, "price_range": "$1,490-$1,990", "strength": { "es": "Unico programa que entrega agente funciónal + 13 asistentes + segundo cerebro al cierre", "en": "Only program delivering functional agent + 13 assistants + second brain at close" } }
   ]
 }

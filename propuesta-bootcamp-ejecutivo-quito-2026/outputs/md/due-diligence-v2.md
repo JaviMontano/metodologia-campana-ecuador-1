@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |-------|-------|
-| Version | 2.1 |
+| Versión | 2.1 |
 | Fecha | 2026-04-02 |
 | Fuente | content.json v2.0 |
 | Estado | Elevado — con scoring de riesgo, exit scenarios, IP protection |
@@ -15,7 +15,7 @@
 |-----------|---------|-----------|
 | Nombre | Cristian Jarrin | [DOC] |
 | Rol | Socio Ano 2 (7% equity, entry fee $2,900 dinamico) | [DOC] |
-| Funcion | Representacion local, alianzas, logistica, convocatoria | [DOC] |
+| Funcion | Representación local, alianzas, logistica, convocatoria | [DOC] |
 | Restriccion | NO es facilitador del programa — rol estrategico/operativo | [DOC] |
 | Entry fee | $2,900 inicial. Se recalcula al valorar empresa conjuntamente | [DOC] |
 
@@ -25,13 +25,13 @@
 
 | Socio | % | Rol | Evidencia |
 |-------|---|-----|-----------|
-| Javier Montano | 51% | Fundador, metodo, IP | [DOC] |
+| Javier Montano | 51% | Fundador, método, IP | [DOC] |
 | German | 19% | Cofundador, aceleradores | [DOC] |
 | Daniel | 13% | Cofundador, red fundadores | [DOC] |
-| Katherin Oquendo | 10% | Cofundadora, operaciones | [DOC] |
+| Katherin Oquendo | 10% | Cofundadora, operaciónes | [DOC] |
 | Cristian Jarrin | 7% | Socio Ano 2, operador Ecuador | [DOC] |
 
-**Estructura legal sugerida:** SAS (Sociedad por Acciones Simplificada) en Ecuador. RUC activo requerido para facturacion electronica via SRI. [SUPUESTO]
+**Estructura legal sugerida:** SAS (Sociedad por Acciones Simplificada) en Ecuador. RUC activo requerido para facturación electrónica via SRI. [SUPUESTO]
 
 ---
 
@@ -51,15 +51,15 @@
 
 | # | Riesgo | Prob | Impacto | Score | Mitigacion | Evidencia |
 |---|--------|------|---------|-------|-----------|-----------|
-| 1 | Baja conversion taller → pago | Media | Alto | **8** | Taller como preview irresistible + funnel 13 + seguimiento 1:1 | [INFERENCIA] |
+| 1 | Baja conversión taller → pago | Media | Alto | **8** | Taller como preview irresistible + funnel 13 + seguimiento 1:1 | [INFERENCIA] |
 | 2 | Precio alto para mercado Ecuador | Media | Medio | **6** | Creyentes $1,490 como ancla + cuotas + ROI tangible | [INFERENCIA] |
 | 3 | Dependencia de Cristian | Baja | Alto | **6** | Contrato formal + roles documentados + IP en MetodologIA | [DOC] |
-| 4 | Conectividad online | Baja | Medio | **3** | Sesiones grabadas + plataforma low-bandwidth | [INFERENCIA] |
+| 4 | Conectividad online | Baja | Medio | **3** | Sesiónes grabadas + plataforma low-bandwidth | [INFERENCIA] |
 | 5 | Competencia local emerge | Media | Medio | **6** | Ventaja de first mover + IP propietaria + comunidad | [INFERENCIA] |
 | 6 | Retencion fiscal inesperada | Baja | Medio | **3** | Facturar via entidad local + asesoria tributaria pre-lanzamiento | [SUPUESTO] |
 | 7 | No alcanza cupo minimo | Media | Alto | **8** | Break-even en 1 cierre + go/no-go deadline + reembolso | [INFERENCIA] |
 
-**Score:** Prob x Impacto (1-3 cada uno, max 9). Riesgos >6 requieren mitigacion activa.
+**Score:** Prob x Impacto (1-3 cada uno, max 9). Riesgos >6 requieren mitigación activa.
 
 ---
 
@@ -69,9 +69,9 @@
 |-----------|---------|--------|---------|
 | Cristian no cumple | <2 cierres en 6 meses | Operar via embajadores + otro aliado local | Medio — retraso, no bloqueo |
 | Mercado no responde | <3 inscritos en taller | Pivotar a B2B directo (corporativo) | Alto — cambio de estrategia |
-| Regulatorio bloquea | IVA sube o retencion prohibitiva | Facturar desde fuera como exportacion de servicios | Bajo — solucion tecnica |
+| Regulatorio bloquea | IVA sube o retención prohibitiva | Facturar desde fuera como exportacion de servicios | Bajo — solución técnica |
 | Conflicto de socios | Desacuerdo operativo | Clausula de arbitraje en contrato SAS | Medio — mediacion |
-| Cristian quiere salir | Post Ano 1 | Recompra de 7% a valoracion conjunta | Bajo — mecanismo predefinido |
+| Cristian quiere salir | Post Ano 1 | Recompra de 7% a valoración conjunta | Bajo — mecanismo predefinido |
 
 [SUPUESTO: scenarios basados en patrones de franquicias B2B en LatAm]
 
@@ -81,14 +81,14 @@
 
 | Activo | Proteccion | Estado | Evidencia |
 |--------|-----------|--------|-----------|
-| Metodo MetodologIA | Know-how documentado, no patentable | Protegido por secreto comercial | [DOC] |
+| Método MetodologIA | Know-how documentado, no patentable | Protegido por secreto comercial | [DOC] |
 | Agente Pristino | Open Source (licencia MIT) | Codigo publico, marca protegida | [DOC] |
 | 13 asistentes | Configuracion propietaria sobre plataformas publicas | Protegido por acceso controlado | [INFERENCIA] |
 | Bibliotecas de prompts | Contenido propietario | Distribuido solo a participantes activos | [DOC] |
 | Playbook "Dirigir en Era IA" | Contenido original | Copyright MetodologIA | [SUPUESTO] |
 | Marca MetodologIA | Nombre + logo + "(R)Evolucion" | Registro pendiente en Ecuador | [POR CONFIRMAR] |
 
-**Riesgo clave:** Pristino es Open Source — cualquiera puede clonar el agente. La barrera es el metodo, los asistentes, la comunidad y el soporte. El software es el vehiculo, no el moat. [INFERENCIA]
+**Riesgo clave:** Pristino es Open Source — cualquiera puede clonar el agente. La barrera es el método, los asistentes, la comunidad y el soporte. El software es el vehiculo, no el moat. [INFERENCIA]
 
 ---
 
@@ -96,11 +96,11 @@
 
 | Nivel | Situacion | Accion | Responsable | Tiempo |
 |-------|-----------|--------|-------------|--------|
-| 1 | Queja de participante | Respuesta en <24h + sesion de feedback | Cristian | Inmediato |
-| 2 | Solicitud de reembolso (dentro de garantia) | Devolucion 100% + sesion de 1h | Javier | <48h |
+| 1 | Queja de participante | Respuesta en <24h + sesión de feedback | Cristian | Inmediato |
+| 2 | Solicitud de reembolso (dentro de garantia) | Devolucion 100% + sesión de 1h | Javier | <48h |
 | 3 | Conflicto con Cristian | Mediacion directa Javier-Cristian | Javier | <1 semana |
-| 4 | Bloqueo regulatorio | Asesoria legal + facturacion alternativa | Legal externo | <2 semanas |
-| 5 | Falla critica de plataforma | Sesion reprogramada + compensacion | Tech | <24h |
+| 4 | Bloqueo regulatorio | Asesoria legal + facturación alternativa | Legal externo | <2 semanas |
+| 5 | Falla critica de plataforma | Sesión reprogramada + compensacion | Tech | <24h |
 
 ---
 
@@ -111,9 +111,9 @@
 | Elegibilidad | Graduado CAO o Empoderamiento | [DOC] |
 | Beneficio | 50% descuento sobre precio regular | [DOC] |
 | Tracking | Codigo de referencia unico | [SUPUESTO] |
-| KPIs | Referidos, conversion, NPS | [INFERENCIA] |
+| KPIs | Referidos, conversión, NPS | [INFERENCIA] |
 | Vigencia | 12 meses (renovable si activo) | [SUPUESTO] |
-| Anti-abuso | Limite de usos por codigo + validacion manual | [INFERENCIA] |
+| Anti-abuso | Limite de usos por código + validación manual | [INFERENCIA] |
 
 ---
 
@@ -125,15 +125,15 @@
 | Constitucion SAS Ecuador (si aplica) | Pendiente | Cristian + Legal | [POR CONFIRMAR] |
 | Cuenta bancaria corporativa USD | Pendiente | Cristian | [POR CONFIRMAR] |
 | Pasarela de pago (Stripe/PayPhone) | Pendiente | Operaciones | [POR CONFIRMAR] |
-| Asesoria tributaria (IVA + retenciones) | Pendiente | Contador local | [POR CONFIRMAR] |
+| Asesoria tributaria (IVA + retenciónes) | Pendiente | Contador local | [POR CONFIRMAR] |
 | Plataforma de entrega online | Pendiente | Tech | [POR CONFIRMAR] |
-| Sistema codigos embajador | Pendiente | Tech | [POR CONFIRMAR] |
+| Sistema códigos embajador | Pendiente | Tech | [POR CONFIRMAR] |
 | Material marketing taller | Pendiente | Marketing | [POR CONFIRMAR] |
 | Registro marca Ecuador | Pendiente | Legal | [POR CONFIRMAR] |
 | Fecha go/no-go Creyentes | Por definir | Javier + Cristian | [POR CONFIRMAR] |
 
 ---
 
-> **Innovation Mode**: Datos con [INFERENCIA], [SUPUESTO] o [POR CONFIRMAR] requieren validacion con stakeholders antes de decisiones operativas, legales o financieras.
+> **Innovation Mode**: Datos con [INFERENCIA], [SUPUESTO] o [POR CONFIRMAR] requieren validación con stakeholders antes de decisiones operativas, legales o financieras.
 
-*Construido por profesionales, potenciado por la red agentica de MetodologIA.*
+*Construido por profesionales, potenciado por la red agéntica de MetodologIA.*

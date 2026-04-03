@@ -2,7 +2,7 @@
 
 | Campo | Valor |
 |-------|-------|
-| Version | 2.0 |
+| Versión | 2.0 |
 | Fecha | 2026-04-01 |
 | Fuente | content.json v2.0 |
 | Autor | MetodologIA -- Red Agentica |
@@ -16,7 +16,7 @@
 
 | Herramienta | Costo mensual (USD) | Uso principal | Evidencia |
 |-------------|---------------------|---------------|-----------|
-| Google One AI Premium | $19.99/mes | Gemini Advanced, acceso a modelos de ultima generacion, integracion con Workspace | [DOC] |
+| Google One AI Premium | $19.99/mes | Gemini Advanced, acceso a modelos de ultima generacion, integración con Workspace | [DOC] |
 
 ### Tier 2 -- Intermedio (recomendado para aprovechamiento completo)
 
@@ -30,7 +30,7 @@
 
 | Herramienta | Costo | Uso principal | Evidencia |
 |-------------|-------|---------------|-----------|
-| Cursor / Windsurf | Free tier disponible | IDE con IA integrada para casos tecnicos | [DOC] |
+| Cursor / Windsurf | Free tier disponible | IDE con IA integrada para casos técnicos | [DOC] |
 | Replit | Free tier disponible | Prototipado rapido, entorno cloud | [INFERENCIA] |
 | Google Colab | Gratuito | Notebooks para demostraciones de datos | [INFERENCIA] |
 
@@ -46,19 +46,19 @@ Las licencias de software NO estan incluidas en el precio del bootcamp. [DOC]
 | Responsabilidad | Cada participante gestiona y paga sus propias licencias | [DOC] |
 | Recomendacion minima | Tier 1 (Google One AI Premium, $19.99/mes) | [DOC] |
 | Recomendacion optima | Tier 1 + Tier 2 ($59.99/mes) | [INFERENCIA] |
-| Comunicacion requerida | Indicar claramente en materiales de venta que las licencias son costo adicional | [DOC] |
-| Soporte de onboarding | Guia de configuracion incluida en el programa; no soporte tecnico de licencias | [INFERENCIA] |
+| Comúnicacion requerida | Indicar claramente en materiales de venta que las licencias son costo adicional | [DOC] |
+| Soporte de onboarding | Guia de configuración incluida en el programa; no soporte técnico de licencias | [INFERENCIA] |
 
 ---
 
-## 3. Infraestructura agentica -- Pristino + 13 Asistentes
+## 3. Infraestructura agéntica -- Pristino + 13 Asistentes
 
-| Componente | Descripcion | Requisito tecnico | Evidencia |
+| Componente | Descripcion | Requisito técnico | Evidencia |
 |------------|-------------|-------------------|-----------|
-| Agente Pristino | Agente orquestador central de MetodologIA; coordina los 13 asistentes del CAO | Acceso a API de modelos (Gemini, GPT-4o, Claude); runtime agentico propio | [DOC] |
+| Agente Pristino | Agente orquestador central de MetodologIA; coordina los 13 asistentes del CAO | Acceso a API de modelos (Gemini, GPT-4o, Claude); runtime agéntico propio | [DOC] |
 | 13 Asistentes personalizados | Un asistente por cada caso del CAO, entrenado con contexto especifico del caso | Configuracion en plataforma de GPTs o equivalente; prompts y knowledge base por caso | [DOC] |
-| Plataforma de entrega | Entorno donde los participantes interactuan con Pristino y los asistentes | Web app o integracion con Workspace; SSO opcional | [SUPUESTO] |
-| Persistencia de contexto | Cada asistente mantiene memoria del progreso del participante en su caso | Storage de sesiones; integracion con sistema de tracking de progreso | [INFERENCIA] |
+| Plataforma de entrega | Entorno donde los participantes interactuan con Pristino y los asistentes | Web app o integración con Workspace; SSO opcional | [SUPUESTO] |
+| Persistencia de contexto | Cada asistente mantiene memoria del progreso del participante en su caso | Storage de sesiones; integración con sistema de tracking de progreso | [INFERENCIA] |
 | Escalabilidad | Soporte para multiples participantes concurrentes en la misma cohorte | Rate limits de APIs; cola de solicitudes si es necesario | [INFERENCIA] |
 
 ### Requisitos de infraestructura para Asistentes Personalizados ($347 add-on)
@@ -78,7 +78,7 @@ Las licencias de software NO estan incluidas en el precio del bootcamp. [DOC]
 | Concepto | Costo (USD) | Frecuencia | Incluido en bootcamp | Evidencia |
 |----------|-------------|-----------|---------------------|-----------|
 | CAO Believers Edition | $1,490 | Unico | Si -- es el programa | [DOC] |
-| CAO Academico | $1,990 | Unico | Si -- es el programa | [DOC] |
+| CAO Académico | $1,990 | Unico | Si -- es el programa | [DOC] |
 | Programa de Empoderamiento | $1,490 | Unico | Si -- es el programa | [DOC] |
 | Asistentes Personalizados | $347 | Unico (add-on) | No -- opcional | [DOC] |
 | Licencias Tier 1 | $19.99/mes | Mensual | No -- responsabilidad del participante | [DOC] |
@@ -94,7 +94,7 @@ Las licencias de software NO estan incluidas en el precio del bootcamp. [DOC]
 | Google Workspace + Gemini | Ecosistema integrado; familiaridad en mercado ecuatoriano | Limitaciones en agentes custom avanzados | Tier 1 obligatorio | [INFERENCIA] |
 | OpenAI (ChatGPT + API) | GPTs custom potentes; ecosistema maduro | Costo acumulativo de API; dependencia de vendor unico | Tier 2 complementario | [INFERENCIA] |
 | Anthropic (Claude + API) | Razonamiento superior en documentos largos; Projects | Menor ecosistema de plugins vs OpenAI | Tier 2 complementario | [INFERENCIA] |
-| Cursor / Windsurf | IDE con IA nativo; ideal para casos tecnicos | Solo aplica a participantes con perfil tecnico | Tier 3 opcional | [INFERENCIA] |
+| Cursor / Windsurf | IDE con IA nativo; ideal para casos técnicos | Solo aplica a participantes con perfil técnico | Tier 3 opcional | [INFERENCIA] |
 
 ---
 
@@ -102,9 +102,9 @@ Las licencias de software NO estan incluidas en el precio del bootcamp. [DOC]
 
 | Perfil del participante | Stack recomendado | Costo mensual adicional | Evidencia |
 |-------------------------|-------------------|------------------------|-----------|
-| CEO / CFO (no tecnico) | Tier 1 unicamente | $19.99/mes | [INFERENCIA] |
-| CTO / CIO (perfil tecnico) | Tier 1 + Tier 2 + Tier 3 | $59.99/mes | [INFERENCIA] |
-| Gerente de operaciones | Tier 1 + ChatGPT Plus | $39.99/mes | [INFERENCIA] |
+| CEO / CFO (no técnico) | Tier 1 únicamente | $19.99/mes | [INFERENCIA] |
+| CTO / CIO (perfil técnico) | Tier 1 + Tier 2 + Tier 3 | $59.99/mes | [INFERENCIA] |
+| Gerente de operaciónes | Tier 1 + ChatGPT Plus | $39.99/mes | [INFERENCIA] |
 | Gerente de marketing | Tier 1 + Claude Pro | $39.99/mes | [INFERENCIA] |
 
 ---
@@ -114,10 +114,10 @@ Las licencias de software NO estan incluidas en el precio del bootcamp. [DOC]
 | Riesgo | Probabilidad | Impacto | Mitigacion | Evidencia |
 |--------|-------------|---------|------------|-----------|
 | Participante no contrata licencia minima (Tier 1) | Media | Alto | Requisito explicito en terminos de inscripcion; verificacion en onboarding | [INFERENCIA] |
-| Cambio de precios de proveedores de IA durante el programa | Baja | Medio | Comunicar que precios de terceros son variables; anclar solo precio del bootcamp | [INFERENCIA] |
+| Cambio de precios de proveedores de IA durante el programa | Baja | Medio | Comúnicar que precios de terceros son variables; anclar solo precio del bootcamp | [INFERENCIA] |
 | Caida de servicio de proveedor critico (OpenAI, Google, Anthropic) | Baja | Alto | Stack multi-proveedor por diseno; ningun caso depende de un solo modelo | [INFERENCIA] |
 | Limitaciones de API rate limits con multiples participantes | Media | Medio | Arquitectura de cola en Pristino; sesiones asincronas como fallback | [SUPUESTO] |
-| Participante confunde costo de licencias con costo del bootcamp | Alta | Medio | Comunicacion clara en landing page, email de bienvenida y sesion de onboarding | [INFERENCIA] |
+| Participante confunde costo de licencias con costo del bootcamp | Alta | Medio | Comúnicacion clara en landing page, email de bienvenida y sesión de onboarding | [INFERENCIA] |
 
 ---
 
@@ -131,7 +131,7 @@ Las licencias de software NO estan incluidas en el precio del bootcamp. [DOC]
 | NotebookLM | Medio | Medio (contenido exportable, workflow no) | Notion AI, Obsidian | [INFERENCIA] |
 | Pristino (Open Source) | **Cero** | Cero (suyo, local, sin dependencia) | N/A — es suyo | [DOC] |
 
-**Decision de diseno:** Pristino como orquestador es la pieza cero-lock-in. Si un participante cambia de ChatGPT a Claude, Pristino sigue operando. [DOC]
+**Decisión de diseno:** Pristino como orquestador es la pieza cero-lock-in. Si un participante cambia de ChatGPT a Claude, Pristino sigue operando. [DOC]
 
 ---
 
@@ -159,6 +159,6 @@ Las licencias de software NO estan incluidas en el precio del bootcamp. [DOC]
 
 ---
 
-> **Innovation Mode**: Datos con [INFERENCIA] o [SUPUESTO] requieren validacion con proveedores antes de decisiones de procurement.
+> **Innovation Mode**: Datos con [INFERENCIA] o [SUPUESTO] requieren validación con proveedores antes de decisiones de procurement.
 
-*Construido por profesionales, potenciado por la red agentica de MetodologIA.*
+*Construido por profesionales, potenciado por la red agéntica de MetodologIA.*

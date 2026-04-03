@@ -2,11 +2,11 @@
 
 | Campo | Valor |
 |-------|-------|
-| Version | 2.0 |
+| Versión | 2.0 |
 | Fecha | 2026-04-01 |
 | Fuente | content.json v2.0 |
 | Marca | MetodologIA |
-| Clasificacion | Indicativo, sujeto a consistencia de adopcion |
+| Clasificacion | Indicativo, sujeto a consistencia de adopción |
 
 ---
 
@@ -65,7 +65,7 @@ Este es el escenario de arranque (Abril-Julio). Cristian concentra Coach (50%) +
 | CAO Believers | USD 1,490 | USD 1,043 | USD 298 | USD 149 |
 | CAO Academic | USD 1,990 | USD 1,393 | USD 398 | USD 199 |
 
-Se activa cuando se incorpora un closer comercial dedicado. Cristian se enfoca en entrega y operacion [INFERENCIA].
+Se activa cuando se incorpora un closer comercial dedicado. Cristian se enfoca en entrega y operación [INFERENCIA].
 
 ### Escenario C: Cristian solo como Franchise
 
@@ -87,13 +87,13 @@ Escenario de escala maxima. Cristian delega coaching y ventas a terceros. Su ing
 | Concepto | Mensual | Anual |
 |----------|---------|-------|
 | Plataforma / herramientas SaaS | USD 250 | USD 3,000 [INFERENCIA] |
-| Comunicaciones / marketing digital | USD 200 | USD 2,400 [INFERENCIA] |
+| Comúnicaciones / marketing digital | USD 200 | USD 2,400 [INFERENCIA] |
 | Infraestructura (hosting, dominio, email) | USD 100 | USD 1,200 [INFERENCIA] |
 | Miscelaneos operativos | USD 163 | USD 1,956 [INFERENCIA] |
 | Espacio fisico / coworking | USD 100 | USD 1,200 [INFERENCIA] |
 | **Total** | **USD 813** | **USD 9,756** [DOC] |
 
-Nota: El desglose por concepto es [INFERENCIA]. El total de USD 813/mes y USD 9,756/ano esta confirmado en content.json v2.0 [DOC]. En Y2, los costos suben a USD 15,000/ano (USD 1,250/mes) por expansion de herramientas y operaciones [DOC].
+Nota: El desglose por concepto es [INFERENCIA]. El total de USD 813/mes y USD 9,756/ano esta confirmado en content.json v2.0 [DOC]. En Y2, los costos suben a USD 15,000/ano (USD 1,250/mes) por expansion de herramientas y operaciónes [DOC].
 
 ### Sin costos de nomina
 
@@ -194,7 +194,7 @@ Un Ambassador que paga USD 745 (50% de CAO Believers) y refiere 2 personas a pre
 | **Total generado por 1 Ambassador** | **USD 3,725** |
 | **ROI del descuento** | 5x sobre el descuento otorgado [INFERENCIA] |
 
-El descuento del 50% no es un costo sino una inversion con retorno positivo de 5x cuando el Ambassador genera los referidos esperados [INFERENCIA].
+El descuento del 50% no es un costo sino una inversión con retorno positivo de 5x cuando el Ambassador genera los referidos esperados [INFERENCIA].
 
 ---
 
@@ -202,10 +202,10 @@ El descuento del 50% no es un costo sino una inversion con retorno positivo de 5
 
 | Socio | Equity | Rol |
 |-------|--------|-----|
-| Javier | 51% | Fundador, arquitectura, IP, metodo, red agentica [DOC] |
+| Javier | 51% | Fundador, arquitectura, IP, método, red agéntica [DOC] |
 | German | 19% | Cofundador, aceleradores, soporte [DOC] |
 | Daniel | 13% | Cofundador, aceleradores, red de fundadores [DOC] |
-| Katherin | 10% | Cofundadora, operaciones, estrategia [DOC] |
+| Katherin | 10% | Cofundadora, operaciónes, estrategia [DOC] |
 | Cristian | 7% | Socio Ano 2, operador Ecuador, entry fee $2,900 [DOC] |
 
 La distribucion de equity es independiente del revenue share por cierre [DOC]. Cristian puede acumular hasta 90% del revenue share por cierre (Escenario A) mientras mantiene 7% del equity. El equity define la propiedad del negocio; el revenue share define la compensacion por actividad [INFERENCIA].
@@ -220,7 +220,7 @@ La distribucion de equity es independiente del revenue share por cierre [DOC]. C
 | CAC estimado | USD 37-55 | Basado en marketing digital + tiempo de taller gratuito [INFERENCIA] |
 | LTV estimado | USD 1,490-2,200 | Primer producto + probabilidad de segundo producto [INFERENCIA] |
 
-Un LTV/CAC de 27-40x indica un modelo extremadamente eficiente en adquisicion [DOC]. La inversion en adquisicion se recupera multiples veces con cada cliente. El taller gratuito como herramienta de conversion mantiene el CAC bajo [INFERENCIA].
+Un LTV/CAC de 27-40x indica un modelo extremadamente eficiente en adquisicion [DOC]. La inversión en adquisicion se recupera multiples veces con cada cliente. El taller gratuito como herramienta de conversión mantiene el CAC bajo [INFERENCIA].
 
 ---
 
@@ -247,7 +247,7 @@ Un LTV/CAC de 27-40x indica un modelo extremadamente eficiente en adquisicion [D
 | Tiempo a break-even | Mes 1-2 | Mes 1 | Mes 1 |
 | Margen neto primer cierre | $290 | $677 | $1,177 |
 
-**Insight:** El modelo es anti-fragil — incluso en escenario pesimista con burn 50% mayor, 1 solo cierre cubre. El riesgo real no es financiero sino de conversion (0 cierres). [INFERENCIA]
+**Insight:** El modelo es anti-fragil — incluso en escenario pesimista con burn 50% mayor, 1 solo cierre cubre. El riesgo real no es financiero sino de conversión (0 cierres). [INFERENCIA]
 
 ---
 
@@ -264,16 +264,16 @@ Un LTV/CAC de 27-40x indica un modelo extremadamente eficiente en adquisicion [D
 
 ---
 
-## Ambassador Conversion Funnel
+## Ambassador Conversión Funnel
 
-| Etapa | Cantidad | Conversion | Evidencia |
+| Etapa | Cantidad | Conversión | Evidencia |
 |-------|---------|-----------|-----------|
 | Graduados CAO Y1 | 33 | 100% (terminan) | [DOC] |
 | Interesados en ser Embajador | 20-25 | 60-75% interes | [SUPUESTO] |
 | Certificados activos | 15-20 | 45-60% del total | [SUPUESTO] |
 | Que generan referidos | 10-15 | 30-45% activamente refieren | [SUPUESTO] |
 | Referidos por embajador activo | 2-3 | En 6 meses | [SUPUESTO] |
-| Referidos que cierran | 8-15 | 40% conversion (mayor que organico) | [INFERENCIA] |
+| Referidos que cierran | 8-15 | 40% conversión (mayor que organico) | [INFERENCIA] |
 | Revenue adicional Y2 por ambassadors | $12K-$30K | A $1,990/cierre | [INFERENCIA] |
 
 **ROI del descuento ambassador:** Dar 50% descuento ($995 foregone por embajador) genera 2-3 referidos a full price ($1,990 c/u). ROI: 2-4x por cada descuento otorgado. [INFERENCIA]
@@ -295,4 +295,4 @@ Un LTV/CAC de 27-40x indica un modelo extremadamente eficiente en adquisicion [D
 
 > **Innovation Mode**: Proyecciones indicativas. Revenue share y escenarios son estructuras propuestas, no contratos ejecutados. No es asesoria financiera.
 
-*Construido por profesionales, potenciado por la red agentica de MetodologIA.*
+*Construido por profesionales, potenciado por la red agéntica de MetodologIA.*

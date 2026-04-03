@@ -1,7 +1,7 @@
 # CAO Bootcamp — Chief Agentic Officer
 ## Executive Proposal | Quito, Ecuador 2026
 
-**Version:** 2.1 | **Date:** April 2, 2026 | **Confidential**
+**Versión:** 2.1 | **Date:** April 2, 2026 | **Confidential**
 **Source:** content.json v2.0 | **Mode:** Innovation Mode (Type B)
 
 ---
@@ -27,9 +27,9 @@ First Executive Agentic Bootcamp in Latin America. 20 hours to install a working
 | # | Deliverable | What it is | "Done" criteria |
 |---|-----------|-----------|-----------------|
 | 1 | **1 personal agent** | Pristino (Open Source, by Javier Montano). Basic install in workshop; full context in Bootcamp | Agent executes 3+ real tasks without intervention |
-| 2 | **13 specialized assistants** | Workflows from day 1. Communication, analysis, scheduling, decisions, reports | Each assistant solves at least 1 real-context task |
-| 3 | **1 Playbook** | "How to Lead in the AI Era" — practical guide, no technicians needed | Executive articulates AI strategy without external help |
-| 4 | **2 prompt libraries** | Universal (any professional) + Executive (strategy, decisions, delegation) | Quality outputs in 3+ areas using prompts |
+| 2 | **13 specialized assistants** | Workflows from day 1. Commúnication, analysis, scheduling, decisións, reports | Each assistant solves at least 1 real-context task |
+| 3 | **1 Playbook** | "How to Lead in the AI Era" — práctical guide, no technicians needed | Executive articulates AI strategy without external help |
+| 4 | **2 prompt libraries** | Universal (any professional) + Executive (strategy, decisións, delegation) | Quality outputs in 3+ areas using prompts |
 | 5 | **1 second brain** | NotebookLM as 24/7 external memory | Retrieves key information in <30 seconds |
 | 6 | **9 sessions** | 2h each with facilitator. Co-creation with real context | Functional deliverable per session |
 | 7 | **1 Virtual Campus** | Resources, updates, community (1 month included) | Verified access and first resource consumed |

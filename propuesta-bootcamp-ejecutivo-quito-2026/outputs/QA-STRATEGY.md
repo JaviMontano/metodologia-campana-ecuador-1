@@ -1,5 +1,5 @@
 # Estrategia QA — Campana Ecuador Quito 2026
-## MetodologIA Bootcamp Ejecutivo Agentico
+## MetodologIA Bootcamp Ejecutivo Agéntico
 
 **Version:** 1.0 | **Fecha:** 2 de abril de 2026
 **Alcance:** Ecosistema documental completo (34 archivos finales)
@@ -75,8 +75,8 @@ Estrategia de aseguramiento de calidad para el ecosistema documental del Bootcam
 |-----------|-----------|--------|
 | **CRITICO** | Dato incorrecto que causa confusion comercial o legal | Bloquea entrega. Corregir inmediatamente. |
 | **ALTO** | Inconsistencia que un directivo notaria | Corregir antes de enviar. |
-| **MEDIO** | Error menor, no afecta decision del cliente | Corregir en siguiente iteracion. |
-| **BAJO** | Mejora estetica o tecnica | Backlog. |
+| **MEDIO** | Error menor, no afecta decisión del cliente | Corregir en siguiente iteracion. |
+| **BAJO** | Mejora estetica o técnica | Backlog. |
 
 ---
 
@@ -153,4 +153,4 @@ Un archivo esta "listo para entregar" cuando:
 
 ---
 
-*Construido por profesionales, potenciado por la red agentica de MetodologIA.*
+*Construido por profesionales, potenciado por la red agéntica de MetodologIA.*
