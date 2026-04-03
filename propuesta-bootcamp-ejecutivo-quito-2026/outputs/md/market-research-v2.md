@@ -163,8 +163,44 @@ Financiamiento externo seria unicamente acelerador, no requisito de supervivenci
 
 ---
 
-> **Disclaimer Innovation Mode**: Todas las proyecciones son indicativas, sujetas a consistencia de adopcion. Los datos de mercado se basan en fuentes publicas y estimaciones propias. Este documento no constituye asesoria financiera ni garantia de resultados.
+## Market Timing Analysis
+
+| Factor | Estado | Implicacion | Evidencia |
+|--------|--------|------------|-----------|
+| Adopcion IA en Ecuador | Fase temprana (early majority) | Ventana de 12-18 meses antes de competidores serios | [INFERENCIA] |
+| ChatGPT awareness | 60-70% lo han probado, <15% uso regular | Mercado educado pero no activado — ideal para bootcamp | [SUPUESTO] |
+| Presupuesto corporativo 2026 | Asignado Q1, ejecutable Q2-Q4 | Abril-mayo es timing optimo (pre-cierre presupuestal) | [INFERENCIA] |
+| Competidores potenciales | IDE, USFQ podrian lanzar modulos IA en 6-12 meses | First mover advantage es real pero temporal | [SUPUESTO] |
+
+**Decision:** Lanzar en abril 2026 es el momento optimo. Antes = mercado no listo. Despues = competidores emergen. [INFERENCIA]
 
 ---
 
-Construido por profesionales, potenciado por la red agentica de MetodologIA.
+## Validacion de TAM
+
+| Metodo | Resultado | Confianza | Evidencia |
+|--------|-----------|-----------|-----------|
+| Top-down (60K-100K ejecutivos x $1,490) | $89M | Baja — supone penetracion 100% | [INFERENCIA] |
+| Bottom-up (SOM Y1 x factor de escala) | $136K x 650 = $88M | Media — alineado con top-down | [INFERENCIA] |
+| Benchmark regional (Colombia, Peru bootcamps ejecutivos) | $50M-$120M Ecuador | Media — ajustado por PIB relativo | [SUPUESTO] |
+
+**Conclusion:** TAM de $89M es consistente cross-metodo pero asume mercado maduro. SAM de $14.9M (20% awareness) es mas accionable. SOM de $136K Y1 es conservador y alcanzable. [INFERENCIA]
+
+---
+
+## Sensibilidad del SAM
+
+| Variable | Escenario pesimista | Base | Optimista |
+|----------|-------------------|------|-----------|
+| Ejecutivos alcanzables | 5,000 | 9,600 | 15,000 |
+| Awareness de IA ejecutiva | 10% | 20% | 35% |
+| SAM resultante | $7.5M | $14.9M | $26.3M |
+| SOM Y1 (1% penetracion SAM) | $75K | $136K | $263K |
+
+**Trade-off:** Ser agresivo en SOM requiere mas inversion en marketing (salir del $813/mes burn). Ser conservador ($136K) es autosuficiente desde M1. [INFERENCIA]
+
+---
+
+> **Innovation Mode**: Proyecciones indicativas. Datos de mercado basados en fuentes publicas y estimaciones propias. No constituye asesoria financiera.
+
+*Construido por profesionales, potenciado por la red agentica de MetodologIA.*

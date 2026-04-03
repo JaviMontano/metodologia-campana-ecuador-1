@@ -237,8 +237,62 @@ Un LTV/CAC de 27-40x indica un modelo extremadamente eficiente en adquisicion [D
 
 ---
 
-> **Disclaimer Innovation Mode**: Todas las proyecciones son indicativas, sujetas a consistencia de adopcion. El modelo de revenue share y los escenarios de participacion son estructuras propuestas, no contratos ejecutados. Este documento no constituye asesoria financiera ni garantia de resultados.
+## Break-even Sensitivity
+
+| Variable | Pesimista | Base | Optimista |
+|----------|----------|------|-----------|
+| Precio CAO | $1,490 | $1,490 | $1,990 |
+| Burn mensual | $1,200 | $813 | $813 |
+| Cierres para break-even | 1 cierre | 1 cierre | 1 cierre |
+| Tiempo a break-even | Mes 1-2 | Mes 1 | Mes 1 |
+| Margen neto primer cierre | $290 | $677 | $1,177 |
+
+**Insight:** El modelo es anti-fragil — incluso en escenario pesimista con burn 50% mayor, 1 solo cierre cubre. El riesgo real no es financiero sino de conversion (0 cierres). [INFERENCIA]
 
 ---
 
-Construido por profesionales, potenciado por la red agentica de MetodologIA.
+## Capacidad de Cristian (ceiling analysis)
+
+| Escenario | Cierres/mes | Horas/mes dedicadas | Revenue/mes | Sostenible? |
+|-----------|------------|--------------------|-----------|----|
+| Solo coaching | 2-3 | 40-60h | $2,980-$4,470 | Si (part-time) |
+| Coaching + convocatoria | 4-5 | 80-100h | $5,960-$7,450 | Si (full-time) |
+| Todo (coaching + convoc + admin) | 5-6 | 100-120h | $7,450-$8,940 | Limite — necesita embajadores |
+| Con 2 embajadores activos | 8-10 | 60h (Cristian) + 80h (embajadores) | $11,920-$14,900 | Si — escalable |
+
+**Ceiling:** Sin embajadores, Cristian satura en 5-6 cierres/mes (100-120h). Con embajadores, la capacidad se multiplica sin costo fijo adicional. [INFERENCIA]
+
+---
+
+## Ambassador Conversion Funnel
+
+| Etapa | Cantidad | Conversion | Evidencia |
+|-------|---------|-----------|-----------|
+| Graduados CAO Y1 | 33 | 100% (terminan) | [DOC] |
+| Interesados en ser Embajador | 20-25 | 60-75% interes | [SUPUESTO] |
+| Certificados activos | 15-20 | 45-60% del total | [SUPUESTO] |
+| Que generan referidos | 10-15 | 30-45% activamente refieren | [SUPUESTO] |
+| Referidos por embajador activo | 2-3 | En 6 meses | [SUPUESTO] |
+| Referidos que cierran | 8-15 | 40% conversion (mayor que organico) | [INFERENCIA] |
+| Revenue adicional Y2 por ambassadors | $12K-$30K | A $1,990/cierre | [INFERENCIA] |
+
+**ROI del descuento ambassador:** Dar 50% descuento ($995 foregone por embajador) genera 2-3 referidos a full price ($1,990 c/u). ROI: 2-4x por cada descuento otorgado. [INFERENCIA]
+
+---
+
+## Churn Risk
+
+| Segmento | Churn esperado | Causa principal | Mitigacion | Evidencia |
+|----------|---------------|----------------|-----------|-----------|
+| CAO participantes | <10% (abandonos) | Falta de tiempo, expectativas desalineadas | Garantia 4h, formato flexible | [SUPUESTO] |
+| Empoderamiento | 15-20% | Resistencia del equipo, manager pierde sponsor | Compromiso del sponsor C-level pre-inscripcion | [SUPUESTO] |
+| Campus Virtual (post-bootcamp) | 40-60% no renuevan | Perciben que "ya aprendieron" | Contenido nuevo mensual, clinicas de valor | [SUPUESTO] |
+| Ambassadors | 30% inactivos en 6 meses | Pierden motivacion sin cierres | Kit de activation, recognition publica, comision por referido | [INFERENCIA] |
+
+**Insight:** El churn mas costoso no es de participantes (protegidos por garantia) sino de ambassadors inactivos. Sin flywheel activo, el crecimiento organico se frena. [INFERENCIA]
+
+---
+
+> **Innovation Mode**: Proyecciones indicativas. Revenue share y escenarios son estructuras propuestas, no contratos ejecutados. No es asesoria financiera.
+
+*Construido por profesionales, potenciado por la red agentica de MetodologIA.*

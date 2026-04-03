@@ -236,8 +236,51 @@ Todos los escenarios son [INFERENCIA] basados en variaciones porcentuales sobre 
 
 ---
 
-> **Disclaimer Innovation Mode**: Todas las proyecciones son indicativas, sujetas a consistencia de adopcion. Los escenarios de sensibilidad no constituyen promesas de rendimiento. Este documento no es asesoria financiera.
+## Sensitivity: 3 Escenarios de Revenue Total
+
+| Variable | Pesimista (70%) | Base (100%) | Optimista (130%) |
+|----------|----------------|-------------|-------------------|
+| Revenue Y1 | $95,234 | $136,049 | $176,864 |
+| Revenue Y2 | $304,430 | $434,900 | $565,370 |
+| Revenue 24mo | $399,664 | $570,949 | $742,234 |
+| Net Y1 | $85,478 | $126,293 | $167,108 |
+| Net Y2 | $289,430 | $419,900 | $550,370 |
+| Break-even | Mes 1-2 | Mes 1 | Mes 1 |
+
+**Supuesto critico:** Pesimista asume 30% menos cierres (4 CAO ciclos en vez de 6, 0 B2B Y1). Optimista asume 30% mas cierres + ambassador flywheel acelerado. [SUPUESTO]
 
 ---
 
-Construido por profesionales, potenciado por la red agentica de MetodologIA.
+## Cash Flow Timing
+
+| Mes | Ingresos esperados | Fuente | Acumulado |
+|-----|-------------------|--------|-----------|
+| Abril | $7,450 | 5 Creyentes x $1,490 | $7,450 |
+| Mayo | $19,900 | 10 CAO abierto x $1,990 | $27,350 |
+| Mayo | $8,940 | 6 Empoderamiento x $1,490 | $36,290 |
+| Julio | $9,950 | 5 CAO Academico | $46,240 |
+| Q4 | $13,200 | 1 B2B closing | $59,440 |
+| Nov | $36,000 | 1 Cobrand closing | $95,440 |
+
+**Riesgo de cash flow:** Cobrand y B2B se cierran tarde (Q4). Los primeros 6 meses dependen 100% de B2C. Si B2C falla, no hay runway para B2B. [INFERENCIA]
+
+---
+
+## Estacionalidad Ecuador
+
+| Periodo | Efecto | Impacto en ventas | Mitigacion |
+|---------|--------|--------------------|-----------|
+| Enero-Febrero | Vacaciones, presupuestos nuevos | Bajo (-30%) | No programar lanzamientos |
+| Marzo-Abril | Pre-Semana Santa, presupuesto aprobado | Alto (+20%) | Timing ideal para Creyentes |
+| Mayo-Junio | Estable | Base | CAO abierto + Empoderamiento |
+| Julio-Agosto | Feriado agosto, vacacones sierra | Medio (-15%) | Academico con descuento early bird |
+| Sept-Oct | Regreso a actividades, Q4 planning | Alto (+15%) | B2B y Cobrand closings |
+| Nov-Dic | Cierre fiscal, presupuesto sobrante | Alto (+25%) | Push de B2B, White Label |
+
+[INFERENCIA: basado en patrones de compra B2B Ecuador]
+
+---
+
+> **Innovation Mode**: Proyecciones indicativas. Los escenarios de sensibilidad no constituyen promesas de rendimiento. No es asesoria financiera.
+
+*Construido por profesionales, potenciado por la red agentica de MetodologIA.*
